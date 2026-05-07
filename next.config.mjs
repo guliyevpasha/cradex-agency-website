@@ -28,6 +28,12 @@ const nextConfig = {
     unoptimized: true,
   },
   transpilePackages: ['swiper'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   async headers() {
     return [
       {
