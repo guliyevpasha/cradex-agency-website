@@ -1,0 +1,415 @@
+{
+  "services": [
+    {
+      "id": "svc-1",
+      "slug": "digital-marketing",
+      "nameKey": "services.digitalMarketing.name",
+      "descriptionKey": "services.digitalMarketing.description",
+      "shortDescKey": "services.digitalMarketing.shortDesc",
+      "icon": "TrendingUp",
+      "coverImage": "/images/services/digital-marketing/cover.webp",
+      "benefits": [
+        { "icon": "Search", "title": "SEO Optimizasiyası", "description": "Axtarış motorlarında yüksək sıralanma" },
+        { "icon": "MousePointer", "title": "PPC Reklamlar", "description": "Hədəfli ödənişli reklam kampaniyaları" },
+        { "icon": "Mail", "title": "E-poçt Marketinqi", "description": "Effektiv e-poçt kampaniyaları" },
+        { "icon": "BarChart2", "title": "Analitika", "description": "Ətraflı performans hesabatları" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Audit", "description": "Mövcud vəziyyətin təhlili" },
+        { "step": 2, "title": "Strategiya", "description": "Fərdi marketinq planının hazırlanması" },
+        { "step": 3, "title": "Tətbiq", "description": "Kampaniyaların işə salınması" },
+        { "step": 4, "title": "Optimallaşdırma", "description": "Nəticələrə əsasən tənzimləmə" },
+        { "step": 5, "title": "Hesabat", "description": "Aylıq performans hesabatı" }
+      ],
+      "portfolioIds": ["port-1", "port-2"],
+      "metaTitleKey": "services.digitalMarketing.metaTitle",
+      "metaDescriptionKey": "services.digitalMarketing.metaDescription",
+      "pricing": {
+        "baseMin": 250,
+        "baseMax": 500,
+        "durationMultiplier": { "1m": 1, "3m": 2.7, "6m": 5.0, "12m": 9.0 },
+        "factors": {
+          "channels": {
+            "label": "Reklam kanalları",
+            "options": [
+              { "value": "meta", "label": "Meta Ads (FB/IG)", "addMin": 0, "addMax": 0 },
+              { "value": "google", "label": "Google Ads", "addMin": 50, "addMax": 100 },
+              { "value": "tiktok", "label": "TikTok Ads", "addMin": 50, "addMax": 100 },
+              { "value": "linkedin", "label": "LinkedIn Ads", "addMin": 100, "addMax": 200 }
+            ],
+            "multiSelect": true
+          },
+          "adBudget": {
+            "label": "Aylıq reklam büdcəsi",
+            "options": [
+              { "value": "low", "label": "100–300 AZN", "multiplier": 1.0 },
+              { "value": "mid", "label": "300–700 AZN", "multiplier": 1.2 },
+              { "value": "high", "label": "700–1500 AZN", "multiplier": 1.4 },
+              { "value": "enterprise", "label": "1500+ AZN", "multiplier": 1.6 }
+            ],
+            "multiSelect": false
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-2",
+      "slug": "traditional-marketing",
+      "nameKey": "services.traditionalMarketing.name",
+      "descriptionKey": "services.traditionalMarketing.description",
+      "shortDescKey": "services.traditionalMarketing.shortDesc",
+      "icon": "Tv",
+      "coverImage": "/images/services/traditional-marketing/cover.webp",
+      "benefits": [
+        { "icon": "Radio", "title": "Radio Reklamları", "description": "Geniş auditoriyaya çatma" },
+        { "icon": "Newspaper", "title": "Çap Mediası", "description": "Qəzet və jurnal reklamları" },
+        { "icon": "MapPin", "title": "Outdoor Reklam", "description": "Billboard və banner reklamları" },
+        { "icon": "Users", "title": "Geniş Əhatə", "description": "Rəqəmsal olmayan auditoriyaya çatma" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Hədəf Analizi", "description": "Hədəf auditoriya müəyyənləşdirilməsi" },
+        { "step": 2, "title": "Kanal Seçimi", "description": "Uyğun media kanallarının seçilməsi" },
+        { "step": 3, "title": "Kreativ", "description": "Reklam materiallarının hazırlanması" },
+        { "step": 4, "title": "Yerləşdirmə", "description": "Reklamların media kanallarında yerləşdirilməsi" },
+        { "step": 5, "title": "Ölçüm", "description": "Kampaniya effektivliyinin qiymətləndirilməsi" }
+      ],
+      "portfolioIds": ["port-3"],
+      "metaTitleKey": "services.traditionalMarketing.metaTitle",
+      "metaDescriptionKey": "services.traditionalMarketing.metaDescription",
+      "pricing": {
+        "baseMin": 400,
+        "baseMax": 900,
+        "durationMultiplier": { "1m": 1, "3m": 2.7, "6m": 5.0, "12m": 9.0 },
+        "factors": {
+          "channels": {
+            "label": "Media kanalları",
+            "options": [
+              { "value": "outdoor", "label": "Outdoor / Billboard", "addMin": 0, "addMax": 0 },
+              { "value": "print", "label": "Çap mediası", "addMin": 100, "addMax": 200 },
+              { "value": "radio", "label": "Radio", "addMin": 150, "addMax": 300 },
+              { "value": "tv", "label": "Televiziya", "addMin": 500, "addMax": 1500 }
+            ],
+            "multiSelect": true
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-3",
+      "slug": "smm",
+      "nameKey": "services.smm.name",
+      "descriptionKey": "services.smm.description",
+      "shortDescKey": "services.smm.shortDesc",
+      "icon": "Share2",
+      "coverImage": "/images/services/smm/cover.webp",
+      "benefits": [
+        { "icon": "Instagram", "title": "Instagram İdarəetməsi", "description": "Peşəkar Instagram hesab idarəetməsi" },
+        { "icon": "Facebook", "title": "Facebook Marketinqi", "description": "Facebook səhifə və reklam idarəetməsi" },
+        { "icon": "Video", "title": "TikTok Məzmunu", "description": "Viral TikTok video məzmunu" },
+        { "icon": "MessageCircle", "title": "Cəmiyyət İdarəetməsi", "description": "İzləyici ilə aktiv ünsiyyət" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Audit", "description": "Mövcud sosial media hesablarının təhlili" },
+        { "step": 2, "title": "Strategiya", "description": "Məzmun strategiyasının hazırlanması" },
+        { "step": 3, "title": "Məzmun Planı", "description": "Aylıq məzmun təqviminin yaradılması" },
+        { "step": 4, "title": "Nəşr", "description": "Müntəzəm məzmun nəşri" },
+        { "step": 5, "title": "Analiz", "description": "Performans analizi və hesabat" }
+      ],
+      "portfolioIds": ["port-4", "port-5"],
+      "metaTitleKey": "services.smm.metaTitle",
+      "metaDescriptionKey": "services.smm.metaDescription",
+      "pricing": {
+        "baseMin": 200,
+        "baseMax": 450,
+        "durationMultiplier": { "1m": 1, "3m": 2.7, "6m": 5.0, "12m": 9.0 },
+        "platformMultiplier": { "1": 1, "2": 1.7, "3": 2.3 },
+        "factors": {
+          "postCount": {
+            "label": "Aylıq post sayı",
+            "options": [
+              { "value": "8", "label": "8 post/ay", "multiplier": 1.0 },
+              { "value": "12", "label": "12 post/ay", "multiplier": 1.2 },
+              { "value": "20", "label": "20 post/ay", "multiplier": 1.5 },
+              { "value": "30", "label": "30 post/ay", "multiplier": 1.9 }
+            ],
+            "multiSelect": false
+          },
+          "reels": {
+            "label": "Reels / Video məzmun",
+            "options": [
+              { "value": "none", "label": "Yoxdur", "addMin": 0, "addMax": 0 },
+              { "value": "2", "label": "2 reels/ay", "addMin": 80, "addMax": 150 },
+              { "value": "4", "label": "4 reels/ay", "addMin": 150, "addMax": 280 }
+            ],
+            "multiSelect": false
+          },
+          "ads": {
+            "label": "Ödənişli reklam idarəetməsi",
+            "options": [
+              { "value": "no", "label": "Yoxdur", "addMin": 0, "addMax": 0 },
+              { "value": "yes", "label": "Var (+reklam idarəetməsi)", "addMin": 100, "addMax": 200 }
+            ],
+            "multiSelect": false
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-4",
+      "slug": "graphic-motion-design",
+      "nameKey": "services.graphicMotionDesign.name",
+      "descriptionKey": "services.graphicMotionDesign.description",
+      "shortDescKey": "services.graphicMotionDesign.shortDesc",
+      "icon": "Palette",
+      "coverImage": "/images/services/graphic-motion-design/cover.webp",
+      "benefits": [
+        { "icon": "PenTool", "title": "Logo Dizaynı", "description": "Unikal və yadda qalan logo" },
+        { "icon": "Layout", "title": "Brend Kimliyi", "description": "Tam vizual kimlik paketi" },
+        { "icon": "Film", "title": "Motion Dizayn", "description": "Animasiyalı qrafik məzmun" },
+        { "icon": "Image", "title": "Çap Materialları", "description": "Vizit kartı, broşür, banner" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Brief", "description": "Müştəri tələblərinin toplanması" },
+        { "step": 2, "title": "Konsept", "description": "İlkin dizayn konseptlərinin hazırlanması" },
+        { "step": 3, "title": "Dizayn", "description": "Seçilmiş konseptin inkişaf etdirilməsi" },
+        { "step": 4, "title": "Düzəliş", "description": "Müştəri rəyinə əsasən düzəlişlər" },
+        { "step": 5, "title": "Təhvil", "description": "Final faylların təhvil verilməsi" }
+      ],
+      "portfolioIds": ["port-6", "port-7"],
+      "metaTitleKey": "services.graphicMotionDesign.metaTitle",
+      "metaDescriptionKey": "services.graphicMotionDesign.metaDescription",
+      "pricing": {
+        "baseMin": 150,
+        "baseMax": 400,
+        "durationMultiplier": { "1m": 1, "3m": 2.5, "6m": 4.5, "12m": 8.0 },
+        "factors": {
+          "type": {
+            "label": "Dizayn növü",
+            "options": [
+              { "value": "graphic", "label": "Qrafik dizayn (statik)", "multiplier": 1.0 },
+              { "value": "motion", "label": "Motion dizayn (animasiya)", "multiplier": 1.8 },
+              { "value": "both", "label": "Hər ikisi", "multiplier": 2.5 }
+            ],
+            "multiSelect": false
+          },
+          "quantity": {
+            "label": "Material sayı",
+            "options": [
+              { "value": "1-3", "label": "1–3 material", "multiplier": 1.0 },
+              { "value": "4-8", "label": "4–8 material", "multiplier": 1.6 },
+              { "value": "9+", "label": "9+ material", "multiplier": 2.2 }
+            ],
+            "multiSelect": false
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-5",
+      "slug": "photo-video",
+      "nameKey": "services.photoVideo.name",
+      "descriptionKey": "services.photoVideo.description",
+      "shortDescKey": "services.photoVideo.shortDesc",
+      "icon": "Camera",
+      "coverImage": "/images/services/photo-video/cover.webp",
+      "benefits": [
+        { "icon": "Camera", "title": "Kommersiya Foto", "description": "Peşəkar məhsul və korporativ foto" },
+        { "icon": "Video", "title": "Reklam Videosu", "description": "Yüksək keyfiyyətli reklam videoları" },
+        { "icon": "Film", "title": "Korporativ Video", "description": "Şirkət tanıtım videoları" },
+        { "icon": "Edit", "title": "Post-produksiya", "description": "Peşəkar montaj və rəng korreksiyası" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Konsepsiya", "description": "Çəkiliş konsepsiyasının müəyyənləşdirilməsi" },
+        { "step": 2, "title": "Hazırlıq", "description": "Lokasiya, rekvizit, komanda hazırlığı" },
+        { "step": 3, "title": "Çəkiliş", "description": "Peşəkar foto/video çəkilişi" },
+        { "step": 4, "title": "Montaj", "description": "Material seçimi və montaj" },
+        { "step": 5, "title": "Təhvil", "description": "Final materialların təhvil verilməsi" }
+      ],
+      "portfolioIds": ["port-8"],
+      "metaTitleKey": "services.photoVideo.metaTitle",
+      "metaDescriptionKey": "services.photoVideo.metaDescription",
+      "pricing": {
+        "baseMin": 300,
+        "baseMax": 700,
+        "durationMultiplier": { "1m": 1, "3m": 2.5, "6m": 4.5, "12m": 8.0 },
+        "factors": {
+          "type": {
+            "label": "Çəkiliş növü",
+            "options": [
+              { "value": "photo", "label": "Yalnız foto çəkiliş", "multiplier": 1.0 },
+              { "value": "video", "label": "Yalnız video çəkiliş", "multiplier": 1.4 },
+              { "value": "both", "label": "Foto + Video", "multiplier": 1.9 }
+            ],
+            "multiSelect": false
+          },
+          "duration": {
+            "label": "Çəkiliş müddəti",
+            "options": [
+              { "value": "half", "label": "Yarım gün (4 saat)", "multiplier": 1.0 },
+              { "value": "full", "label": "Tam gün (8 saat)", "multiplier": 1.7 },
+              { "value": "multi", "label": "Çox günlük", "multiplier": 2.5 }
+            ],
+            "multiSelect": false
+          },
+          "extras": {
+            "label": "Əlavə xidmətlər",
+            "options": [
+              { "value": "drone", "label": "Drone çəkilişi", "addMin": 150, "addMax": 300 },
+              { "value": "actor", "label": "Aktyor/Model", "addMin": 100, "addMax": 250 },
+              { "value": "color", "label": "Rəng korreksiyası", "addMin": 80, "addMax": 150 }
+            ],
+            "multiSelect": true
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-6",
+      "slug": "branding",
+      "nameKey": "services.branding.name",
+      "descriptionKey": "services.branding.description",
+      "shortDescKey": "services.branding.shortDesc",
+      "icon": "Award",
+      "coverImage": "/images/services/branding/cover.webp",
+      "benefits": [
+        { "icon": "Target", "title": "Brend Strategiyası", "description": "Uzunmüddətli brend inkişaf planı" },
+        { "icon": "Eye", "title": "Vizual Kimlik", "description": "Logo, rənglər, tipografiya sistemi" },
+        { "icon": "BookOpen", "title": "Üslub Bələdçisi", "description": "Brend istifadə qaydaları sənədi" },
+        { "icon": "Layers", "title": "Brend Materialları", "description": "Bütün brend tətbiqetmə materialları" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Kəşf", "description": "Brend dəyərləri və hədəf auditoriya analizi" },
+        { "step": 2, "title": "Strategiya", "description": "Brend mövqeləndirmə strategiyası" },
+        { "step": 3, "title": "Vizual Kimlik", "description": "Logo və vizual sistem yaradılması" },
+        { "step": 4, "title": "Üslub Bələdçisi", "description": "Brend qaydaları sənədinin hazırlanması" },
+        { "step": 5, "title": "Tətbiq", "description": "Brendin bütün kanallarda tətbiqi" }
+      ],
+      "portfolioIds": ["port-9", "port-10"],
+      "metaTitleKey": "services.branding.metaTitle",
+      "metaDescriptionKey": "services.branding.metaDescription",
+      "pricing": {
+        "baseMin": 400,
+        "baseMax": 900,
+        "durationMultiplier": { "1m": 1, "3m": 1.0, "6m": 1.0, "12m": 1.0 },
+        "factors": {
+          "package": {
+            "label": "Brendinq paketi",
+            "options": [
+              { "value": "logo", "label": "Loqo dizaynı", "multiplier": 1.0, "priceMin": 200, "priceMax": 450 },
+              { "value": "identity", "label": "Brend kimliyi (loqo + rənglər + şrift)", "multiplier": 1.0, "priceMin": 500, "priceMax": 1200 },
+              { "value": "full", "label": "Tam brendinq (kimlik + brand book + materiallar)", "multiplier": 1.0, "priceMin": 1200, "priceMax": 3000 },
+              { "value": "naming", "label": "Adlandırma + loqo", "multiplier": 1.0, "priceMin": 400, "priceMax": 900 }
+            ],
+            "multiSelect": false,
+            "overridePrice": true
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-7",
+      "slug": "copywriting",
+      "nameKey": "services.copywriting.name",
+      "descriptionKey": "services.copywriting.description",
+      "shortDescKey": "services.copywriting.shortDesc",
+      "icon": "FileText",
+      "coverImage": "/images/services/copywriting/cover.webp",
+      "benefits": [
+        { "icon": "ShoppingCart", "title": "Satış Mətnləri", "description": "Konversiyaya yönəlmiş mətnlər" },
+        { "icon": "Search", "title": "SEO Məzmun", "description": "Axtarış motorları üçün optimallaşdırılmış məzmun" },
+        { "icon": "Globe", "title": "Veb Məzmunu", "description": "Veb-sayt üçün cəlbedici mətnlər" },
+        { "icon": "Mail", "title": "E-poçt Məzmunu", "description": "Effektiv e-poçt kampaniya mətnləri" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Brief", "description": "Hədəf auditoriya və məqsəd müəyyənləşdirilməsi" },
+        { "step": 2, "title": "Tədqiqat", "description": "Sahə və rəqib analizi" },
+        { "step": 3, "title": "Yazı", "description": "Mətnlərin yazılması" },
+        { "step": 4, "title": "Redaktə", "description": "Mətnlərin redaktəsi və optimallaşdırılması" },
+        { "step": 5, "title": "Təhvil", "description": "Final mətnlərin təhvil verilməsi" }
+      ],
+      "portfolioIds": ["port-11"],
+      "metaTitleKey": "services.copywriting.metaTitle",
+      "metaDescriptionKey": "services.copywriting.metaDescription",
+      "pricing": {
+        "baseMin": 100,
+        "baseMax": 300,
+        "durationMultiplier": { "1m": 1, "3m": 2.5, "6m": 4.5, "12m": 8.0 },
+        "factors": {
+          "volume": {
+            "label": "Mətn həcmi",
+            "options": [
+              { "value": "small", "label": "1–5 mətn / ay", "multiplier": 1.0 },
+              { "value": "medium", "label": "6–15 mətn / ay", "multiplier": 1.8 },
+              { "value": "large", "label": "16+ mətn / ay", "multiplier": 2.8 }
+            ],
+            "multiSelect": false
+          },
+          "type": {
+            "label": "Mətn növü",
+            "options": [
+              { "value": "social", "label": "Sosial media mətnləri", "addMin": 0, "addMax": 0 },
+              { "value": "seo", "label": "SEO məqalələri", "addMin": 50, "addMax": 100 },
+              { "value": "sales", "label": "Satış / landing mətnləri", "addMin": 80, "addMax": 150 }
+            ],
+            "multiSelect": false
+          }
+        }
+      }
+    },
+    {
+      "id": "svc-8",
+      "slug": "web-mobile-dev",
+      "nameKey": "services.webMobileDev.name",
+      "descriptionKey": "services.webMobileDev.description",
+      "shortDescKey": "services.webMobileDev.shortDesc",
+      "icon": "Code",
+      "coverImage": "/images/services/web-mobile-dev/cover.webp",
+      "benefits": [
+        { "icon": "Zap", "title": "Sürətli Performans", "description": "Core Web Vitals optimallaşdırılması" },
+        { "icon": "Smartphone", "title": "Mobil Uyğunluq", "description": "Bütün cihazlarda mükəmməl görünüş" },
+        { "icon": "Shield", "title": "Təhlükəsizlik", "description": "Müasir təhlükəsizlik standartları" },
+        { "icon": "Globe", "title": "SEO Hazır", "description": "Axtarış motorları üçün optimallaşdırılmış" }
+      ],
+      "processSteps": [
+        { "step": 1, "title": "Tələblər", "description": "Layihə tələblərinin toplanması" },
+        { "step": 2, "title": "Dizayn", "description": "UI/UX dizaynın hazırlanması" },
+        { "step": 3, "title": "İnkişaf", "description": "Frontend və backend inkişafı" },
+        { "step": 4, "title": "Test", "description": "Keyfiyyət yoxlaması və test" },
+        { "step": 5, "title": "Buraxılış", "description": "Canlı mühitə yerləşdirmə" }
+      ],
+      "portfolioIds": ["port-12", "port-13"],
+      "metaTitleKey": "services.webMobileDev.metaTitle",
+      "metaDescriptionKey": "services.webMobileDev.metaDescription",
+      "pricing": {
+        "baseMin": 400,
+        "baseMax": 900,
+        "durationMultiplier": { "1m": 1, "3m": 1.0, "6m": 1.0, "12m": 1.0 },
+        "factors": {
+          "projectType": {
+            "label": "Layihə növü",
+            "options": [
+              { "value": "landing", "label": "Landing page (1 səhifə)", "multiplier": 1.0, "priceMin": 400, "priceMax": 700 },
+              { "value": "corporate", "label": "Korporativ sayt (5–10 səhifə)", "multiplier": 1.0, "priceMin": 700, "priceMax": 1800 },
+              { "value": "ecommerce", "label": "Onlayn mağaza", "multiplier": 1.0, "priceMin": 1500, "priceMax": 4000 },
+              { "value": "blog", "label": "Şəxsi bloq / portfolio", "multiplier": 1.0, "priceMin": 400, "priceMax": 900 },
+              { "value": "mobile", "label": "Mobil tətbiq (iOS/Android)", "multiplier": 1.0, "priceMin": 2000, "priceMax": 6000 },
+              { "value": "mobile_both", "label": "Mobil tətbiq (hər iki platforma)", "multiplier": 1.0, "priceMin": 3000, "priceMax": 9000 }
+            ],
+            "multiSelect": false,
+            "overridePrice": true
+          },
+          "extras": {
+            "label": "Əlavə xüsusiyyətlər",
+            "options": [
+              { "value": "multilang", "label": "Çoxdilli dəstək", "addMin": 150, "addMax": 300 },
+              { "value": "admin", "label": "Admin panel", "addMin": 200, "addMax": 500 },
+              { "value": "seo", "label": "SEO optimallaşdırması", "addMin": 100, "addMax": 250 },
+              { "value": "payment", "label": "Ödəniş sistemi inteqrasiyası", "addMin": 200, "addMax": 400 }
+            ],
+            "multiSelect": true
+          }
+        }
+      }
+    }
+  ]
+}

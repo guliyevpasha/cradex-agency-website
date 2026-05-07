@@ -1,0 +1,276 @@
+{
+  "authors": [
+    {
+      "id": "author-1",
+      "name": "Əli Həsənov",
+      "avatarUrl": "/images/authors/ali-hasanov.webp",
+      "role": "Rəqəmsal Marketinq Mütəxəssisi"
+    },
+    {
+      "id": "author-2",
+      "name": "Leyla Məmmədova",
+      "avatarUrl": "/images/authors/leyla-mammadova.webp",
+      "role": "SMM Mütəxəssisi"
+    },
+    {
+      "id": "author-3",
+      "name": "Rauf Əliyev",
+      "avatarUrl": "/images/authors/rauf-aliyev.webp",
+      "role": "Veb İnkişaf Mütəxəssisi"
+    }
+  ],
+  "articles": [
+    {
+      "id": "art-1",
+      "slug": "seo-2024-guide",
+      "titleKey": "2024-cü ildə SEO: Tam Bələdçi",
+      "excerptKey": "Axtarış motoru optimallaşdırmasının ən son tendensiyaları və effektiv strategiyalar haqqında ətraflı məlumat.",
+      "contentKey": "SEO (Search Engine Optimization) rəqəmsal marketinqin əsas sütunlarından biridir. 2024-cü ildə Google alqoritmi əhəmiyyətli dəyişikliklərə məruz qaldı...\n\n## Əsas SEO Tendensiyaları\n\n### 1. E-E-A-T Siqnalları\nGoogle-un Experience, Expertise, Authoritativeness, Trustworthiness (E-E-A-T) çərçivəsi getdikcə daha vacib olur.\n\n### 2. Core Web Vitals\nLCP, FID/INP və CLS göstəriciləri sıralanmada mühüm rol oynayır.\n\n### 3. AI Məzmun\nSun'i intellekt ilə yaradılan məzmunun keyfiyyəti vacibdir.\n\n## Nəticə\nSEO uğuru üçün keyfiyyətli məzmun, texniki optimallaşdırma və istifadəçi təcrübəsi birlikdə nəzərə alınmalıdır.",
+      "category": "seo",
+      "author": {
+        "id": "author-1",
+        "name": "Əli Həsənov",
+        "avatarUrl": "/images/authors/ali-hasanov.webp",
+        "role": "Rəqəmsal Marketinq Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/seo-2024-guide/cover.webp",
+      "publishedAt": "2024-04-15",
+      "readingTimeMinutes": 8,
+      "tags": ["SEO", "Google", "Rəqəmsal Marketinq"],
+      "metaTitleKey": "2024-cü ildə SEO: Tam Bələdçi | Cradex Journal",
+      "metaDescriptionKey": "Axtarış motoru optimallaşdırmasının ən son tendensiyaları və effektiv strategiyalar haqqında ətraflı məlumat.",
+      "ogImage": "/images/journal/seo-2024-guide/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "2024-cü ildə SEO: Tam Bələdçi",
+        "author": { "@type": "Person", "name": "Əli Həsənov" },
+        "datePublished": "2024-04-15",
+        "image": "/images/journal/seo-2024-guide/og.webp"
+      }
+    },
+    {
+      "id": "art-2",
+      "slug": "instagram-reels-strategy",
+      "titleKey": "Instagram Reels ilə Brendinizi Böyüdün",
+      "excerptKey": "Instagram Reels-in gücündən istifadə edərək brendinizin görünürlüyünü artırmaq üçün praktik strategiyalar.",
+      "contentKey": "Instagram Reels 2020-ci ildə tətbiq edildiindən bəri sosial media marketinqinin ən güclü alətlərindən birinə çevrildi...\n\n## Effektiv Reels Strategiyası\n\n### Məzmun Növləri\n- Təhsil verici məzmun\n- Pərdə arxası görüntülər\n- Məhsul nümayişi\n- Trend audio ilə yaradıcı məzmun\n\n### Optimal Uzunluq\n15-30 saniyəlik Reels ən yüksək engagement göstərir.\n\n## Nəticə\nMüntəzəm, keyfiyyətli Reels məzmunu izləyici bazanızı sürətlə artıra bilər.",
+      "category": "smm",
+      "author": {
+        "id": "author-2",
+        "name": "Leyla Məmmədova",
+        "avatarUrl": "/images/authors/leyla-mammadova.webp",
+        "role": "SMM Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/instagram-reels-strategy/cover.webp",
+      "publishedAt": "2024-04-01",
+      "readingTimeMinutes": 6,
+      "tags": ["Instagram", "SMM", "Sosial Media"],
+      "metaTitleKey": "Instagram Reels ilə Brendinizi Böyüdün | Cradex Journal",
+      "metaDescriptionKey": "Instagram Reels-in gücündən istifadə edərək brendinizin görünürlüyünü artırmaq üçün praktik strategiyalar.",
+      "ogImage": "/images/journal/instagram-reels-strategy/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "Instagram Reels ilə Brendinizi Böyüdün",
+        "author": { "@type": "Person", "name": "Leyla Məmmədova" },
+        "datePublished": "2024-04-01",
+        "image": "/images/journal/instagram-reels-strategy/og.webp"
+      }
+    },
+    {
+      "id": "art-3",
+      "slug": "brand-identity-essentials",
+      "titleKey": "Güclü Brend Kimliyi Yaratmağın 5 Əsas Prinsipi",
+      "excerptKey": "Yadda qalan və effektiv brend kimliyi yaratmaq üçün bilməli olduğunuz əsas prinsiplər.",
+      "contentKey": "Güclü brend kimliyi müştərilərin şirkətinizi tanımasını, xatırlamasını və seçməsini asanlaşdırır...\n\n## 5 Əsas Prinsip\n\n### 1. Tutarlılıq\nBütün kanallarda eyni vizual dil istifadə edin.\n\n### 2. Sadəlik\nSadə dizaynlar daha yadda qalır.\n\n### 3. Fərqlilik\nRəqiblərdən fərqlənin.\n\n### 4. Uyğunluq\nHədəf auditoriyaya uyğun dizayn seçin.\n\n### 5. Çeviklik\nMüxtəlif formatlarda işləyən dizayn yaradın.",
+      "category": "branding",
+      "author": {
+        "id": "author-1",
+        "name": "Əli Həsənov",
+        "avatarUrl": "/images/authors/ali-hasanov.webp",
+        "role": "Rəqəmsal Marketinq Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/brand-identity-essentials/cover.webp",
+      "publishedAt": "2024-03-20",
+      "readingTimeMinutes": 5,
+      "tags": ["Brendinq", "Dizayn", "Marketinq"],
+      "metaTitleKey": "Güclü Brend Kimliyi Yaratmağın 5 Əsas Prinsipi | Cradex Journal",
+      "metaDescriptionKey": "Yadda qalan və effektiv brend kimliyi yaratmaq üçün bilməli olduğunuz əsas prinsiplər.",
+      "ogImage": "/images/journal/brand-identity-essentials/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "Güclü Brend Kimliyi Yaratmağın 5 Əsas Prinsipi",
+        "author": { "@type": "Person", "name": "Əli Həsənov" },
+        "datePublished": "2024-03-20",
+        "image": "/images/journal/brand-identity-essentials/og.webp"
+      }
+    },
+    {
+      "id": "art-4",
+      "slug": "nextjs-web-performance",
+      "titleKey": "Next.js ilə Yüksək Performanslı Veb-sayt Qurmaq",
+      "excerptKey": "Next.js 14 App Router ilə Core Web Vitals göstəricilərini optimallaşdırmaq üçün praktik tövsiyələr.",
+      "contentKey": "Next.js müasir veb inkişafının ən populyar çərçivələrindən biridir. App Router ilə server-side rendering imkanları əhəmiyyətli dərəcədə genişləndi...\n\n## Performans Optimallaşdırması\n\n### Image Optimization\nnext/image komponenti avtomatik WebP/AVIF formatına çevirir.\n\n### Font Optimization\nnext/font ilə şriftlər self-hosted edilir.\n\n### Code Splitting\nHər route avtomatik code-split edilir.\n\n## Nəticə\nDüzgün konfiqurasiya ilə Lighthouse skoru 95+ əldə etmək mümkündür.",
+      "category": "web-dev",
+      "author": {
+        "id": "author-3",
+        "name": "Rauf Əliyev",
+        "avatarUrl": "/images/authors/rauf-aliyev.webp",
+        "role": "Veb İnkişaf Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/nextjs-web-performance/cover.webp",
+      "publishedAt": "2024-03-10",
+      "readingTimeMinutes": 10,
+      "tags": ["Next.js", "Performans", "Veb İnkişaf"],
+      "metaTitleKey": "Next.js ilə Yüksək Performanslı Veb-sayt Qurmaq | Cradex Journal",
+      "metaDescriptionKey": "Next.js 14 App Router ilə Core Web Vitals göstəricilərini optimallaşdırmaq üçün praktik tövsiyələr.",
+      "ogImage": "/images/journal/nextjs-web-performance/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "Next.js ilə Yüksək Performanslı Veb-sayt Qurmaq",
+        "author": { "@type": "Person", "name": "Rauf Əliyev" },
+        "datePublished": "2024-03-10",
+        "image": "/images/journal/nextjs-web-performance/og.webp"
+      }
+    },
+    {
+      "id": "art-5",
+      "slug": "copywriting-conversion-tips",
+      "titleKey": "Konversiyanı Artıran Mətn Yazarlığının Sirləri",
+      "excerptKey": "Oxucuları müştəriyə çevirmək üçün effektiv copywriting texnikaları.",
+      "contentKey": "Effektiv copywriting sadəcə gözəl yazmaq deyil — oxucunu hərəkətə sövq etməkdir...\n\n## Əsas Texnikalar\n\n### AIDA Modeli\nAttention, Interest, Desire, Action — klassik copywriting çərçivəsi.\n\n### Fayda vs Xüsusiyyət\nXüsusiyyətlər deyil, faydalar satır.\n\n### Sosial Sübut\nMüştəri rəyləri və statistikalar inandırıcılığı artırır.\n\n### CTA Optimallaşdırması\nAydın, fəal feil ilə başlayan CTA-lar daha effektivdir.",
+      "category": "copywriting",
+      "author": {
+        "id": "author-1",
+        "name": "Əli Həsənov",
+        "avatarUrl": "/images/authors/ali-hasanov.webp",
+        "role": "Rəqəmsal Marketinq Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/copywriting-conversion-tips/cover.webp",
+      "publishedAt": "2024-02-25",
+      "readingTimeMinutes": 7,
+      "tags": ["Copywriting", "Konversiya", "Marketinq"],
+      "metaTitleKey": "Konversiyanı Artıran Mətn Yazarlığının Sirləri | Cradex Journal",
+      "metaDescriptionKey": "Oxucuları müştəriyə çevirmək üçün effektiv copywriting texnikaları.",
+      "ogImage": "/images/journal/copywriting-conversion-tips/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "Konversiyanı Artıran Mətn Yazarlığının Sirləri",
+        "author": { "@type": "Person", "name": "Əli Həsənov" },
+        "datePublished": "2024-02-25",
+        "image": "/images/journal/copywriting-conversion-tips/og.webp"
+      }
+    },
+    {
+      "id": "art-6",
+      "slug": "digital-marketing-strategy-2024",
+      "titleKey": "2024-cü il Rəqəmsal Marketinq Strategiyası",
+      "excerptKey": "Rəqəmsal marketinqdə uğur qazanmaq üçün 2024-cü ilin ən effektiv strategiyaları.",
+      "contentKey": "Rəqəmsal marketinq mühiti sürətlə dəyişir. 2024-cü ildə uğurlu olmaq üçün bir neçə əsas strategiyaya diqqət yetirmək lazımdır...\n\n## Əsas Strategiyalar\n\n### Omnichannel Yanaşma\nBütün kanallarda ardıcıl müştəri təcrübəsi yaradın.\n\n### Birinci Tərəf Məlumatları\nCookie-lərin aradan qalxması ilə birinci tərəf məlumatları daha vacib olur.\n\n### Video Marketinq\nQısa video məzmunu ən yüksək engagement göstərir.\n\n### Süni İntellekt\nAI alətlərindən məzmun yaradılması və optimallaşdırma üçün istifadə edin.",
+      "category": "marketing-strategy",
+      "author": {
+        "id": "author-1",
+        "name": "Əli Həsənov",
+        "avatarUrl": "/images/authors/ali-hasanov.webp",
+        "role": "Rəqəmsal Marketinq Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/digital-marketing-strategy-2024/cover.webp",
+      "publishedAt": "2024-02-10",
+      "readingTimeMinutes": 9,
+      "tags": ["Marketinq Strategiyası", "Rəqəmsal Marketinq", "2024"],
+      "metaTitleKey": "2024-cü il Rəqəmsal Marketinq Strategiyası | Cradex Journal",
+      "metaDescriptionKey": "Rəqəmsal marketinqdə uğur qazanmaq üçün 2024-cü ilin ən effektiv strategiyaları.",
+      "ogImage": "/images/journal/digital-marketing-strategy-2024/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "2024-cü il Rəqəmsal Marketinq Strategiyası",
+        "author": { "@type": "Person", "name": "Əli Həsənov" },
+        "datePublished": "2024-02-10",
+        "image": "/images/journal/digital-marketing-strategy-2024/og.webp"
+      }
+    },
+    {
+      "id": "art-7",
+      "slug": "ui-ux-design-trends",
+      "titleKey": "2024-cü ildə UI/UX Dizayn Tendensiyaları",
+      "excerptKey": "İstifadəçi interfeysi dizaynında ən son tendensiyalar və onların tətbiqi.",
+      "contentKey": "UI/UX dizayn sahəsi daim inkişaf edir. 2024-cü ildə bir neçə əsas tendensiya öndə gəlir...\n\n## Əsas Tendensiyalar\n\n### Glassmorphism\nŞüşəvari, yarı-şəffaf dizayn elementləri populyarlığını qoruyur.\n\n### Dark Mode\nİstifadəçilərin 80%-i dark mode seçir.\n\n### Mikro-animasiyalar\nKiçik animasiyalar istifadəçi təcrübəsini əhəmiyyətli dərəcədə yaxşılaşdırır.\n\n### Əlçatanlıq\nWCAG 2.1 AA standartlarına uyğunluq artıq standart tələbdir.",
+      "category": "design",
+      "author": {
+        "id": "author-3",
+        "name": "Rauf Əliyev",
+        "avatarUrl": "/images/authors/rauf-aliyev.webp",
+        "role": "Veb İnkişaf Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/ui-ux-design-trends/cover.webp",
+      "publishedAt": "2024-01-30",
+      "readingTimeMinutes": 6,
+      "tags": ["UI/UX", "Dizayn", "Tendensiyalar"],
+      "metaTitleKey": "2024-cü ildə UI/UX Dizayn Tendensiyaları | Cradex Journal",
+      "metaDescriptionKey": "İstifadəçi interfeysi dizaynında ən son tendensiyalar və onların tətbiqi.",
+      "ogImage": "/images/journal/ui-ux-design-trends/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "2024-cü ildə UI/UX Dizayn Tendensiyaları",
+        "author": { "@type": "Person", "name": "Rauf Əliyev" },
+        "datePublished": "2024-01-30",
+        "image": "/images/journal/ui-ux-design-trends/og.webp"
+      }
+    },
+    {
+      "id": "art-8",
+      "slug": "tiktok-marketing-guide",
+      "titleKey": "TikTok Marketinqi: Başlanğıc Bələdçisi",
+      "excerptKey": "TikTok platformasında brendinizi effektiv şəkildə tanıtmaq üçün addım-addım bələdçi.",
+      "contentKey": "TikTok dünya üzrə 1 milyard aktiv istifadəçisi ilə ən sürətli böyüyən sosial media platformasıdır...\n\n## TikTok Marketinqinə Başlamaq\n\n### Hesab Optimallaşdırması\nBio, profil şəkli və link düzgün konfiqurasiya edilməlidir.\n\n### Məzmun Strategiyası\nTrend audio, challenge-lər və duet-lər istifadə edin.\n\n### Yayım Vaxtı\nHədəf auditoriyaya görə optimal yayım vaxtını müəyyənləşdirin.\n\n### TikTok Ads\nIn-feed ads, branded hashtag challenge-lər effektivdir.",
+      "category": "smm",
+      "author": {
+        "id": "author-2",
+        "name": "Leyla Məmmədova",
+        "avatarUrl": "/images/authors/leyla-mammadova.webp",
+        "role": "SMM Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/tiktok-marketing-guide/cover.webp",
+      "publishedAt": "2024-01-15",
+      "readingTimeMinutes": 7,
+      "tags": ["TikTok", "SMM", "Sosial Media"],
+      "metaTitleKey": "TikTok Marketinqi: Başlanğıc Bələdçisi | Cradex Journal",
+      "metaDescriptionKey": "TikTok platformasında brendinizi effektiv şəkildə tanıtmaq üçün addım-addım bələdçi.",
+      "ogImage": "/images/journal/tiktok-marketing-guide/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "TikTok Marketinqi: Başlanğıc Bələdçisi",
+        "author": { "@type": "Person", "name": "Leyla Məmmədova" },
+        "datePublished": "2024-01-15",
+        "image": "/images/journal/tiktok-marketing-guide/og.webp"
+      }
+    },
+    {
+      "id": "art-9",
+      "slug": "local-seo-azerbaijan",
+      "titleKey": "Azərbaycanda Lokal SEO: Biznesinizi Xəritəyə Qoyun",
+      "excerptKey": "Lokal axtarış nəticələrində görünmək üçün Azərbaycan bazarına uyğun SEO strategiyaları.",
+      "contentKey": "Lokal SEO kiçik və orta bizneslərin ən güclü rəqəmsal marketinq alətlərindən biridir...\n\n## Lokal SEO Əsasları\n\n### Google Business Profile\nTam doldurulmuş profil lokal sıralanmada kritik rol oynayır.\n\n### NAP Tutarlılığı\nAd, ünvan, telefon məlumatları bütün platformalarda eyni olmalıdır.\n\n### Lokal Açar Sözlər\n'Bakıda [xidmət]' kimi lokal açar sözlər hədəflənməlidir.\n\n### Müştəri Rəyləri\nGoogle rəyləri lokal sıralanmada əhəmiyyətli faktor hesab olunur.",
+      "category": "seo",
+      "author": {
+        "id": "author-1",
+        "name": "Əli Həsənov",
+        "avatarUrl": "/images/authors/ali-hasanov.webp",
+        "role": "Rəqəmsal Marketinq Mütəxəssisi"
+      },
+      "coverImage": "/images/journal/local-seo-azerbaijan/cover.webp",
+      "publishedAt": "2024-01-05",
+      "readingTimeMinutes": 8,
+      "tags": ["Lokal SEO", "Azərbaycan", "Google"],
+      "metaTitleKey": "Azərbaycanda Lokal SEO | Cradex Journal",
+      "metaDescriptionKey": "Lokal axtarış nəticələrində görünmək üçün Azərbaycan bazarına uyğun SEO strategiyaları.",
+      "ogImage": "/images/journal/local-seo-azerbaijan/og.webp",
+      "jsonLd": {
+        "@type": "Article",
+        "headline": "Azərbaycanda Lokal SEO: Biznesinizi Xəritəyə Qoyun",
+        "author": { "@type": "Person", "name": "Əli Həsənov" },
+        "datePublished": "2024-01-05",
+        "image": "/images/journal/local-seo-azerbaijan/og.webp"
+      }
+    }
+  ]
+}

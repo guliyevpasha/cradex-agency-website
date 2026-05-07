@@ -1,0 +1,657 @@
+{
+  "common": {
+    "cta": {
+      "whatsapp": "WhatsApp ile İletişim",
+      "getQuote": "Teklif Al",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "learnMore": "Daha Fazla",
+      "viewAll": "Tümünü Gör",
+      "sendMessage": "Gönder",
+      "startProject": "Projeye Başla",
+      "orderService": "Bu hizmeti sipariş et"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımızda",
+      "services": "Hizmetler",
+      "journal": "Dergi",
+      "calculator": "Hesaplayıcı",
+      "portfolio": "Portföy",
+      "contact": "İletişim"
+    },
+    "errors": {
+      "required": "Bu alan zorunludur",
+      "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+      "serverError": "Bir hata oluştu, lütfen tekrar deneyin",
+      "minService": "Lütfen en az bir hizmet seçin",
+      "notFound": "Sayfa bulunamadı"
+    },
+    "language": {
+      "az": "Azərbaycan",
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Cradex Agency ile Markanızı Büyütün",
+      "subtitle": "zamanında, şeffaf fiyatlarla.",
+      "subtitleAccent": "sonuç odaklı strateji, ölçülebilir büyüme.",
+      "cta": "Ücretsiz danışmanlık al",
+      "secondaryCta": "Hizmetlerimiz",
+      "socialProof": "Bakü'de 100'den fazla marka bizi seçti.",
+      "socialProofSub": "Çünkü biz sadece söz vermiyoruz — sonuç veriyoruz.",
+      "googleReviews": "Google Yorumları",
+      "verifiedPartner": "Onaylı İş Ortağı",
+      "googleVerified": "Google Onaylı",
+      "whatsappText": "Merhaba! Ücretsiz danışmanlık almak istiyorum."
+    },
+    "stats": {
+      "projects": "Tamamlanan Proje",
+      "clients": "Mutlu Müşteri",
+      "experience": "Yıl Deneyim",
+      "awards": "Ödül"
+    },
+    "partners": {
+      "tagline": "Bizi seçen ortaklardan biri de siz olun."
+    },
+    "statistics": {
+      "sectionLabel": "Sonuçlarımız",
+      "heading": "Bizim sonuçlar,",
+      "headingAccent": "sizin büyüme.",
+      "stats": [
+        { "value": 350, "suffix": "+", "label": "Başarılı Proje" },
+        { "value": 100, "suffix": "+", "label": "Mutlu Müşteri" },
+        { "value": 4, "suffix": " yıl+", "label": "Ajans Deneyimi" },
+        { "value": 98, "suffix": "%", "label": "Müşteri Memnuniyeti" },
+        { "value": 100, "suffix": "%", "label": "Zamanında Teslimat" },
+        { "value": 24, "suffix": "/7", "label": "Teknik Destek" }
+      ]
+    },
+    "advantages": {
+      "sectionLabel": "Avantajlarımız",
+      "heading": "Neden bizi",
+      "headingAccent": "seçiyorlar?",
+      "items": [
+        { "emoji": "😎", "title": "Profesyonel Deneyim", "desc": "Ekibimiz dijital pazarlamada 4+ yıllık gerçek proje deneyimine sahiptir." },
+        { "emoji": "⏰", "title": "Zamanında Teslimat", "desc": "Her projeyi kararlaştırılan sürede tamamlıyoruz. Gecikme bizim sözlüğümüzde yok." },
+        { "emoji": "📈", "title": "Ölçülebilir Sonuçlar", "desc": "Her kampanya için KPI belirliyor, aylık raporlarla sonuçları kanıtlıyoruz." },
+        { "emoji": "💎", "title": "Şeffaf Fiyatlar", "desc": "Gizli ücret yok. Her hizmet için dürüst ve net fiyat teklifleri sunuyoruz." },
+        { "emoji": "🤝", "title": "Uzun Vadeli Ortaklık", "desc": "Sizin başarınız bizim başarımızdır. Kalıcı işbirliği için çalışıyoruz." },
+        { "emoji": "💬", "title": "Dürüst İletişim", "desc": "Müşterilerle açık ve şeffaf iletişim bizim temel standardımızdır." }
+      ]
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "subtitle": "Markanızın büyümesi için kapsamlı dijital çözümler"
+    },
+    "portfolio": {
+      "title": "Son Çalışmalarımız",
+      "subtitle": "Müşterilerimiz için hayata geçirdiğimiz projeler"
+    },
+    "testimonials": {
+      "title": "Müşteri Yorumları",
+      "subtitle": "Bizimle çalışan müşterilerimiz ne diyor"
+    },
+    "process": {
+      "sectionLabel": "Sürecimiz",
+      "title": "Nasıl çalışıyoruz?",
+      "subtitle": "Her projeyi 4 adımda hayata geçiriyoruz",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Tanışma ve Brifing",
+          "desc": "Sizinle buluşuyor, işinizi, hedeflerinizi ve beklentilerinizi öğreniyoruz. Bireysel bir yaklaşımla başlıyoruz."
+        },
+        {
+          "number": "02",
+          "title": "Analiz ve Strateji",
+          "desc": "Pazarı, rakipleri ve hedef kitleyi analiz ederek ihtiyaçlarınıza özel bir strateji geliştiriyoruz."
+        },
+        {
+          "number": "03",
+          "title": "Uygulama ve İcra",
+          "desc": "Kararlaştırılan plana göre işi zamanında ve yüksek kalitede hayata geçiriyoruz."
+        },
+        {
+          "number": "04",
+          "title": "Raporlama ve Optimizasyon",
+          "desc": "Aylık detaylı raporlar sunuyor, sonuçları birlikte analiz ediyor ve stratejiyi sürekli geliştiriyoruz."
+        }
+      ]
+    },
+    "lead": {
+      "subtitle": "Markanızı bir sonraki seviyeye taşımaya hazırız",
+      "button": "Bizimle İletişime Geçin"
+    },
+    "faq": {
+      "sectionLabel": "İşbirliğine başlamadan önce",
+      "title": "En çok sorulan",
+      "titleAccent": "sorular.",
+      "description": "Cevap bulamazsanız WhatsApp üzerinden bizimle iletişime geçin.",
+      "ctaButton": "Soru sor",
+      "items": [
+        {
+          "q": "Sonuçları ne zaman görürüm?",
+          "a": "Bu, hizmetin türüne bağlıdır. SMM'de ilk sonuçlar — takipçi artışı, etkileşim ve başvurular — 4–6 hafta içinde görünmeye başlar. SEO'da ise ilk sıralama iyileşmeleri 2–3 ayda, önemli sonuçlar ise 4–6 ayda elde edilir. Her ay detaylı rapor sunarak ilerlemeyi birlikte takip ederiz."
+        },
+        {
+          "q": "SEO hizmeti neden gereklidir?",
+          "a": "SEO (Arama Motoru Optimizasyonu), web sitenizin Google gibi arama motorlarında üst sıralarda görünmesini sağlar. İnsanların büyük çoğunluğu yalnızca arama sonuçlarının ilk sayfasına bakar. SEO olmadan potansiyel müşterileriniz sizi bulamaz. Doğru SEO stratejisiyle sitenize ücretsiz, hedefli trafik çekebilir, marka güvenilirliğinizi artırabilir ve uzun vadeli rekabet avantajı kazanabilirsiniz."
+        },
+        {
+          "q": "Sosyal medya pazarlaması (SMM) neden önemlidir?",
+          "a": "Azerbaycan'da milyonlarca insan her gün Instagram, Facebook ve TikTok'ta vakit geçiriyor. SMM aracılığıyla markanızı bu kitleye tanıtabilir, müşterilerle doğrudan ilişki kurabilir ve satışlarınızı artırabilirsiniz. Profesyonel SMM yönetimi — doğru içerik stratejisi, zamanında paylaşımlar, hedefli reklamlar ve aktif iletişimle — markanızın çevrimiçi itibarını güçlendirir."
+        },
+        {
+          "q": "Hizmetleriniz için minimum bütçe ne kadardır?",
+          "a": "Bütçe, hizmetin türüne, kapsamına ve süresine göre değişir. Her işletmenin farklı ihtiyaçları vardır — bu nedenle bireysel bir yaklaşım uyguluyoruz. Hesaplayıcımızdan tahmini fiyatı hesaplayabilir veya size en uygun paket hakkında bilgi almak için bizimle iletişime geçebilirsiniz."
+        },
+        {
+          "q": "Proje tamamlandıktan sonra destek veriyor musunuz?",
+          "a": "Evet, proje tamamlandıktan sonra da yanınızdayız. Teknik destek, içerik güncellemeleri ve web sitesi yönetimi için çeşitli destek paketlerimiz mevcuttur. Uzun vadeli ortaklık bizim için önceliktir."
+        },
+        {
+          "q": "Hangi ödeme koşullarını uyguluyorsunuz?",
+          "a": "Genellikle projenin başında %50 avans, tamamlandığında kalan %50 ödenir. Büyük projeler için taksitli ödeme planı da uygulanabilir. Banka havalesi, nakit ve online ödeme sistemleri kabul edilmektedir."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Cradex Agency — dijital pazarlamada güvenilir ortağınız",
+    "story": {
+      "title": "Hikayemiz",
+      "content": "Cradex Agency, 2020 yılında Azerbaycan'da kurulmuş, müşterilerin dijital dünyada güçlü bir konum edinmesine yardımcı olan tam hizmet pazarlama ajansıdır."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "content": "Her ölçekteki işletmeye dünya standartlarında dijital pazarlama hizmetleri sunmak."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "innovation": "İnovasyon",
+      "quality": "Kalite",
+      "transparency": "Şeffaflık",
+      "results": "Sonuç"
+    },
+    "team": {
+      "title": "Ekibimiz"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Markanızın ihtiyaçlarına göre kapsamlı çözümler",
+    "digitalMarketing": {
+      "name": "Dijital Pazarlama",
+      "shortDesc": "SEO, PPC, e-posta pazarlaması",
+      "description": "Arama motoru sıralamaları, ücretli reklamlar ve e-posta kampanyaları aracılığıyla çevrimiçi görünürlüğünüzü artırıyoruz.",
+      "metaTitle": "Dijital Pazarlama Hizmetleri | Cradex Agency",
+      "metaDescription": "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
+    },
+    "traditionalMarketing": {
+      "name": "Geleneksel Pazarlama",
+      "shortDesc": "Baskı, açık hava, medya planlaması",
+      "description": "Televizyon, radyo, basılı medya ve açık hava reklamları aracılığıyla geniş kitlelere ulaşıyoruz.",
+      "metaTitle": "Geleneksel Pazarlama Hizmetleri | Cradex Agency",
+      "metaDescription": "TV, radyo ve basılı medya aracılığıyla markanızı geniş kitlelere tanıtın."
+    },
+    "smm": {
+      "name": "Sosyal Medya Pazarlaması",
+      "shortDesc": "Instagram, Facebook, TikTok yönetimi",
+      "description": "Sosyal medya platformlarında ilgi çekici içerikler oluşturuyor, topluluklar kuruyor ve markanızın çevrimiçi itibarını artırıyoruz.",
+      "metaTitle": "SMM Hizmetleri | Cradex Agency",
+      "metaDescription": "Instagram, Facebook, TikTok ve diğer platformlarda profesyonel sosyal medya yönetimi."
+    },
+    "graphicMotionDesign": {
+      "name": "Grafik Tasarım / Motion Tasarım",
+      "shortDesc": "Logo, marka kimliği, animasyon",
+      "description": "Markanızın görsel dilini oluşturuyor, animasyonlu içerikler ve grafik materyaller hazırlıyoruz.",
+      "metaTitle": "Grafik Tasarım Hizmetleri | Cradex Agency",
+      "metaDescription": "Logo, marka kimliği, motion tasarım ve grafik materyaller için profesyonel tasarım hizmetleri."
+    },
+    "photoVideo": {
+      "name": "Profesyonel Fotoğraf ve Video",
+      "shortDesc": "Ticari fotoğraf, reklam videosu",
+      "description": "Markanızı en iyi şekilde sergileyen profesyonel fotoğraf ve video çekimleri gerçekleştiriyoruz.",
+      "metaTitle": "Fotoğraf ve Video Hizmetleri | Cradex Agency",
+      "metaDescription": "Ticari fotoğrafçılık, reklam videosu ve kurumsal video prodüksiyon hizmetleri."
+    },
+    "branding": {
+      "name": "Markalama",
+      "shortDesc": "Marka stratejisi, kimlik, stil rehberi",
+      "description": "Marka stratejinizi, görsel kimliğinizi ve stil rehberinizi geliştiriyoruz.",
+      "metaTitle": "Markalama Hizmetleri | Cradex Agency",
+      "metaDescription": "Marka stratejisi, görsel kimlik ve stil rehberi ile güçlü bir marka oluşturun."
+    },
+    "copywriting": {
+      "name": "Metin Yazarlığı",
+      "shortDesc": "Satış metinleri, SEO içeriği",
+      "description": "Hedef kitlenizi çeken, satış odaklı profesyonel metinler yazıyoruz.",
+      "metaTitle": "Metin Yazarlığı Hizmetleri | Cradex Agency",
+      "metaDescription": "Satış metinleri, SEO içeriği ve kurumsal iletişim için profesyonel metin yazarlığı."
+    },
+    "webMobileDev": {
+      "name": "Web Sitesi ve Mobil Uygulama",
+      "shortDesc": "Next.js, React Native, UI/UX",
+      "description": "Modern teknolojilerle hızlı, güvenli ve güzel web siteleri ve mobil uygulamalar geliştiriyoruz.",
+      "metaTitle": "Web Sitesi Geliştirme | Cradex Agency",
+      "metaDescription": "Next.js ve React Native ile modern web sitesi ve mobil uygulama geliştirme hizmetleri."
+    },
+    "benefits": "Avantajlar",
+    "process": "Sürecimiz",
+    "relatedWork": "İlgili Çalışmalar"
+  },
+  "calculator": {
+    "title": "Hizmet Fiyatını Hesapla",
+    "subtitle": "İhtiyaçlarınıza uygun hizmetleri seçin",
+    "tabs": {
+      "videoEditing": "Video Montaj",
+      "videoShooting": "Video Çekimi",
+      "socialMediaDesign": "Sosyal Medya Tasarım"
+    },
+    "selectServices": "Hizmet Seçin",
+    "parameters": "Parametreler",
+    "duration": {
+      "label": "Süre",
+      "1m": "1 ay",
+      "3m": "3 ay",
+      "6m": "6 ay",
+      "12m": "12 ay"
+    },
+    "platforms": {
+      "label": "Platform sayısı",
+      "1": "1 platform",
+      "2": "2 platform",
+      "3": "3+ platform"
+    },
+    "priceRange": "{min} – {max} AZN",
+    "selectedServices": "Seçilen hizmetler",
+    "totalPrice": "Tahmini fiyat",
+    "getQuote": "Teklif Al",
+    "noSelection": "Lütfen en az bir hizmet seçin",
+    "whatsappMessage": "Merhaba! Hesaplayıcıda seçtiğim hizmetler: {services}. Tahmini fiyat: {price} AZN.",
+    "videoEditing": {
+      "title": "Video Montaj",
+      "videoType": "Video Türü",
+      "shortVideo": "Kısa Video (Reels/Shorts)",
+      "longVideo": "Uzun Video (YouTube)",
+      "basePrice": "Temel fiyat",
+      "freeDuration": "ücretsiz",
+      "videoDuration": "Video Süresi",
+      "firstMinuteFree": "İlk 1 dakika ücretsiz",
+      "next15SecFor3AZN": "Sonraki her 15 saniye için 3 AZN",
+      "first10MinFree": "İlk 10 dakika ücretsiz",
+      "next5MinFor6AZN": "Sonraki her 5 dakika için 6 AZN",
+      "includedServices": "Dahil olan hizmetler",
+      "basicServices": {
+        "editing": "Kesim ve montaj",
+        "transitions": "Ritme uygun geçişler",
+        "basicColor": "Temel renk düzeltme",
+        "music": "Müzik ekleme",
+        "export1080p": "1080P çıktı",
+        "delivery24h": "24 saat içinde teslimat",
+        "separateFiles": "Video ve ses dosyalarının ayrı teslimi",
+        "oneRevision": "1 revizyon hakkı",
+        "twoRevisions": "2 revizyon hakkı"
+      },
+      "subtitleOptions": "Altyazı Seçenekleri",
+      "basicSubtitle": "Altyazı ekleme",
+      "dynamicSubtitle": "Dinamik altyazı (renkli, animasyonlu)",
+      "soundDesign": "Ses Tasarımı",
+      "transitionSounds": "Geçiş sesleri",
+      "cinematicEffects": "Sinematik efektler",
+      "ambience": "Ortam sesleri",
+      "bassHits": "Bass vuruşları",
+      "motionGraphics": "Hareketli Grafik / Animasyon",
+      "logoAnimation": "Logo animasyonu",
+      "infoTexts": "Bilgi yazıları",
+      "otherServices": "Diğer Hizmetler",
+      "colorGrading": "Profesyonel renk düzeltme (Color Grading)",
+      "additionalOptions": "Ek Seçenekler",
+      "thumbnailCreation": "Thumbnail hazırlama",
+      "fastDelivery8h": "8 saat içinde teslimat",
+      "export4K": "4K çıktı",
+      "presenterSelection": "Sunucu (spiker) seçimi",
+      "shortsFromLong": "Uzun Videodan Kısa Videolar",
+      "shortsCount": "adet shorts",
+      "per1MinShort": "Her 1 dakikalık shorts için 5 AZN",
+      "extraRevisions": "Ek Revizyonlar",
+      "extraRevision": "ek revizyon",
+      "perExtraRevision": "Her ek revizyon için 3 AZN (1 revizyon ücretsiz dahil)",
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahildir",
+      "discount": "İndirim",
+      "orderNow": "Sipariş Ver",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Kupon kodu yanlış!",
+      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
+      "fileRequirements": "📁 Dosya Gereksinimleri",
+      "videoMaterials": "Video materyaller: MP4, MOV, AVI formatında",
+      "images": "Görseller: JPG, PNG (minimum 1920×1080 px)",
+      "logo": "Logo: SVG veya PNG (şeffaf arka plan)",
+      "music": "Müzik: MP3, WAV formatında (lisanslı)",
+      "text": "Metin: Word belgesi veya Google Docs",
+      "colorCode": "Renk kodu: HEX veya RGB formatında",
+      "faq": "❓ Sık Sorulan Sorular",
+      "faqQ1": "Video kaç günde hazır olur?",
+      "faqA1": "Standart siparişler 24 saat içinde tamamlanır. Acil sipariş (8 saat) seçerseniz, ek ödeme gerekir.",
+      "faqQ2": "Hangi formatta dosya teslim edilir?",
+      "faqA2": "Standart olarak 1080P MP4 formatında teslim edilir. 4K export için ek ödeme mevcuttur.",
+      "faqQ3": "Düzeltme hakkı var mı?",
+      "faqA3": "Evet, her siparişe 1 ücretsiz düzeltme dahildir. Ek düzeltmeler 3 AZN'dir.",
+      "seconds": "saniye",
+      "minutes": "dakika",
+      "min": "dk",
+      "sec": "sn"
+    },
+    "videoShooting": {
+      "title": "Video Çekimi",
+      "videoType": "Video Türü",
+      "shortVideoShooting": "Kısa Video Çekimi (Reels/Shorts)",
+      "longVideoShooting": "Uzun Video Çekimi (YouTube)",
+      "basePrice": "Temel fiyat",
+      "upTo1HourIncluded": "1 saate kadar çekim dahildir",
+      "shootingDuration": "Çekim Süresi",
+      "first1HourIncluded": "İlk 1 saat dahildir",
+      "nextHourFor25AZN": "Sonraki her saat için 25 AZN",
+      "nextHourFor35AZN": "Sonraki her saat için 35 AZN",
+      "includedServices": "Dahil olan hizmetler",
+      "basicServices": {
+        "iphoneShooting": "iPhone 17 Pro ile çekim",
+        "framePlanning": "Kadraj planlaması",
+        "basicLighting": "Temel ışık kurulumu",
+        "stableVideo": "Sabit görüntü çekimi",
+        "quality1080p": "1080P görüntü kalitesi",
+        "multipleAngles": "Çeşitli açılar",
+        "stabilizer": "Stabilizatör kullanımı",
+        "basicMic": "Temel mikrofon",
+        "socialFormat": "Sosyal medya uyumlu format",
+        "oneLocation": "1 mekanda çekim",
+        "oneOperator": "1 operatör",
+        "twoVideoEdits": "2 video montaj (1dk'ya kadar)"
+      },
+      "additionalOptions": "Ek Seçenekler",
+      "options": {
+        "4k_shooting": "Profesyonel kamera ile 4K çekim",
+        "cinematic_effects": "Sinematik görsel efekt ayarlamaları",
+        "professional_lighting": "Profesyonel ışık kurulumu",
+        "rgb_lighting": "RGB ışık efektleri",
+        "professional_mic": "Profesyonel mikrofon",
+        "audio_setup": "Ses temizleme için audio setup",
+        "script_preparation": "Çekim senaryosu hazırlanması",
+        "video_planning": "Video fikir planlaması",
+        "studio_shooting": "Stüdyoda çekim",
+        "extra_location": "Ek mekanda çekim",
+        "same_day_shooting": "Aynı gün çekim",
+        "video_editing": "Çekilen videoların montajı",
+        "presenter_selection": "Sunucu (spiker) seçimi"
+      },
+      "fileDelivery": "Dosya Teslimi",
+      "delivery": {
+        "google_drive": "Google Drive",
+        "wetransfer": "WeTransfer",
+        "ssd_flash": "SSD / Flash kart"
+      },
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahildir",
+      "orderNow": "Sipariş Ver",
+      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
+      "fileRequirements": "📁 Dosya Gereksinimleri",
+      "requirements": {
+        "logoElements": "Logo ve marka öğeleri: SVG veya PNG formatında",
+        "transparentBg": "Şeffaf (transparent) arka plan tercih edilir",
+        "locationAddress": "Mekan adresi",
+        "shootingPurpose": "Çekim amacı (reklam, içerik, YouTube vb.)",
+        "targetAudience": "Hedef kitle bilgisi"
+      },
+      "faq": "❓ Sık Sorulan Sorular",
+      "faqQ1": "Çekim kaç günde tamamlanır?",
+      "faqA1": "Standart çekimler sipariş sonrası 2-3 iş günü içinde planlanır ve gerçekleştirilir.",
+      "faqQ2": "Hangi ekipmanlarla çekim yapılır?",
+      "faqA2": "iPhone 17 Pro, profesyonel stabilizatör, ışık kurulumu ve mikrofon sistemi kullanılır. Ek ödeme ile profesyonel ekipmanlar seçebilirsiniz.",
+      "faqQ3": "Çekim sırasında neler dahildir?",
+      "faqA3": "Kadraj planlaması, temel ışık kurulumu, çeşitli açılar ve 2 adet 1 dakikalık montajlanmış video dahildir.",
+      "minutes": "dakika",
+      "hours": "saat",
+      "min": "dk"
+    },
+    "socialMediaDesign": {
+      "title": "Sosyal Medya Tasarım",
+      "generalRules": "Genel Kurallar",
+      "oneDesignOneContent": "1 tasarım = 1 içerik",
+      "revisionOneFree": "Revizyon: 1 kez ücretsiz",
+      "delivery24h": "Teslimat: 24 saat (standart)",
+      "platformSelection": "Sosyal Medya Platform Seçimi",
+      "designTypes": "Tasarım Türleri",
+      "designCount": "Tasarım Sayısı (1-100)",
+      "pieces": "adet",
+      "additionalServices": "Ek Hizmetler",
+      "extraRevisions": "Ek Revizyonlar",
+      "extraRevision": "ek revizyon",
+      "perExtraRevision": "Her ek revizyon için 5 AZN (1 tasarım için).",
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahildir",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Kupon kodu yanlış!",
+      "orderNow": "Sipariş Ver",
+      "fileRequirements": "Dosya Gereksinimleri",
+      "faq": "Sık Sorulan Sorular",
+      "platforms": {
+        "instagram": {
+          "content": "Instagram içerik (1080×1350)",
+          "reels_cover": "Reels video kapak tasarımı",
+          "story": "Instagram hikaye (1080×1920)",
+          "highlights": "Instagram öne çıkanlar (seçilmiş hikayeler)",
+          "carousel": "Carousel içerik (5–10 slayt)"
+        },
+        "facebook": {
+          "post": "Facebook paylaşım resmi (1200×630)",
+          "ad": "Facebook reklam tasarımı (1200×628)",
+          "event_cover": "Facebook etkinlik kapak resmi (1920×1080)",
+          "cover": "Facebook kapak resmi (851×315)"
+        },
+        "linkedin": {
+          "post": "LinkedIn post (1200×1200)",
+          "banner": "LinkedIn banner (1584×396)",
+          "article_cover": "LinkedIn makale kapağı",
+          "single_ad": "LinkedIn tek resim reklam (1200×627)"
+        },
+        "pinterest": {
+          "carousel_ad": "Carousel Pinterest reklamı (1000×1500)",
+          "pin": "Pinterest pin tasarımı (2:3 oran)"
+        },
+        "tiktok": {
+          "video_cover": "Video kapak tasarımı (1080×1920)"
+        },
+        "youtube": {
+          "channel_cover": "Kanal kapak resmi (2560×1440)",
+          "thumbnail": "YouTube thumbnail (1280×720)"
+        },
+        "twitter": {
+          "cover": "Kapak resmi (1500×500)",
+          "content": "İçerik tasarımı (1600×900)"
+        }
+      },
+      "services": {
+        "custom_icons": "Özel ikonlar/illüstrasyonlar",
+        "copywriting": "Metin yazarlığı",
+        "template_files": "Tasarım şablon dosyaları (PSD, Canva)",
+        "rush_delivery": "Acil teslimat 8 saat"
+      },
+      "packagePrice": "Paket fiyat",
+      "perDesign": "(tasarım başına)",
+      "fileRequirementsItems": {
+        "visualMaterials": "Görsel materyaller: JPG veya PNG formatında, minimum 1080px veya daha yüksek kalite",
+        "textMaterials": "Metin materyalleri: Word belgesi veya Google Docs formatında",
+        "brandElements": "Marka öğeleri: Marka renk kodları (HEX veya RGB), Font adları",
+        "logoIdentity": "Logo ve kimlik: SVG (vektör) veya PNG formatında, şeffaf arka plan tercih edilir",
+        "referenceMaterials": "Referans materyaller: Benzer tasarım örnekleri, istenen stil ve görsel yön"
+      },
+      "faqItems": {
+        "q1": "Tasarım kaç günde hazır olur?",
+        "a1": "Standart siparişler 24 saat içinde tamamlanır. Acil siparişler 8 saat içinde hazırlanır.",
+        "q2": "Hangi formatta dosya teslim edilir?",
+        "a2": "PNG, JPG formatlarında teslim edilir. Talep edilirse PSD veya Canva şablonları da gönderilebilir.",
+        "q3": "Düzeltme hakkım var mı?",
+        "a3": "Evet, her tasarım için 1 kez ücretsiz düzeltme hakkınız var."
+      }
+    }
+  },
+  "contact": {
+    "title": "Bizimle İletişime Geçin",
+    "subtitle": "Projeniz hakkında konuşalım",
+    "leadForm": {
+      "sectionLabel": "Online büyümeye hazır mısınız?",
+      "heading": "Projenizi bize",
+      "headingAccent": "emanet edin.",
+      "founderName": "Paşa Quliyev",
+      "founderRole": "Kurucu",
+      "founderStatus": "🟢 Şu an çevrimiçi",
+      "whatsappCta": "WhatsApp'tan Yazın",
+      "formTitle": "Ücretsiz danışmanlık alın",
+      "formSubtitle": "24 saat içinde yanıt veriyoruz",
+      "fields": {
+        "name": "Adınız",
+        "email": "E-posta",
+        "phone": "Telefon numarası",
+        "phonePlaceholder": "+994 50 000 00 00",
+        "namePlaceholder": "Adınız",
+        "emailPlaceholder": "siz@sirket.com",
+        "message": "Projeniz hakkında detaylı yazın...",
+        "serviceLabel": "Hangi hizmete ihtiyacınız var?",
+        "budgetLabel": "Bütçe aralığı"
+      },
+      "trustBadges": {
+        "response": "24 saat yanıt",
+        "confidential": "Gizlilik",
+        "free": "Ücretsiz danışmanlık"
+      },
+      "services": [
+        "SMM", "SEO", "Web Sitesi", "Markalama",
+        "Grafik Tasarım", "Fotoğraf/Video", "Metin Yazarlığı", "Diğer"
+      ],
+      "budgets": [
+        "500₼'den az", "500–1500₼", "1500–4000₼",
+        "4000–10000₼", "10000₼'den fazla"
+      ],
+      "submit": "Mesaj Gönder",
+      "submitting": "Gönderiliyor...",
+      "successTitle": "Mesajınız gönderildi!",
+      "successMessage": "En kısa sürede sizinle iletişime geçeceğiz.",
+      "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "form": {
+      "fullName": "Ad Soyad",
+      "namePlaceholder": "Adınız",
+      "emailPlaceholder": "siz@sirket.com",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "service": "Hizmet seçin",
+      "serviceOptions": {
+        "digital-marketing": "Dijital Pazarlama",
+        "traditional-marketing": "Geleneksel Pazarlama",
+        "smm": "Sosyal Medya Pazarlaması",
+        "graphic-motion-design": "Grafik / Motion Tasarım",
+        "photo-video": "Fotoğraf ve Video Çekimi",
+        "branding": "Markalama",
+        "copywriting": "Metin Yazarlığı",
+        "web-mobile-dev": "Web Sitesi / Mobil Uygulama",
+        "other": "Diğer"
+      },
+      "message": "Mesajınız",
+      "messagePlaceholder": "Projeniz hakkında detaylı bilgi verin...",
+      "submit": "Gönder",
+      "success": "Mesajınız alındı, en kısa sürede sizinle iletişime geçeceğiz",
+      "error": "Bir hata oluştu, lütfen tekrar deneyin",
+      "sending": "Gönderiliyor..."
+    },
+    "info": {
+      "title": "İletişim Bilgileri",
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "whatsapp": "WhatsApp",
+      "workingHours": "Çalışma Saatleri",
+      "workingHoursValue": "Pzt – Cum: 09:00 – 18:00"
+    }
+  },
+  "journal": {
+    "title": "Dergi",
+    "subtitle": "Dijital pazarlama dünyasından makaleler",
+    "readingTime": "{minutes} dk okuma",
+    "readMore": "Devamını Oku",
+    "by": "Yazar:",
+    "publishedAt": "Yayın tarihi:",
+    "categories": {
+      "all": "Tümü",
+      "seo": "SEO",
+      "smm": "SMM",
+      "branding": "Markalama",
+      "design": "Tasarım",
+      "copywriting": "Metin Yazarlığı",
+      "web-dev": "Web Geliştirme",
+      "marketing-strategy": "Pazarlama Stratejisi"
+    },
+    "pagination": {
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "page": "Sayfa"
+    },
+    "noArticles": "Bu kategoride makale bulunamadı"
+  },
+  "portfolio": {
+    "title": "Portföy",
+    "subtitle": "Tamamladığımız projeler",
+    "viewProject": "Portföyü Gör",
+    "client": "Müşteri",
+    "category": "Kategori",
+    "tools": "Kullanılan araçlar",
+    "results": "Sonuçlar",
+    "gallery": "Galeri",
+    "foundCount": "{count} proje bulundu",
+    "filterLabel": "Kategoriye göre filtrele",
+    "categories": {
+      "all": "Tümü",
+      "digital-marketing": "SEO / Dijital",
+      "traditional-marketing": "Geleneksel Pazarlama",
+      "smm": "SMM",
+      "graphic-motion-design": "Grafik Tasarım",
+      "photo-video": "Fotoğraf / Video",
+      "branding": "Markalama",
+      "copywriting": "Metin Yazarlığı",
+      "web-mobile-dev": "Web Sitesi"
+    },
+    "noItems": "Bu kategoride proje bulunamadı"
+  },
+  "notFound": {
+    "title": "404 — Sayfa Bulunamadı",
+    "subtitle": "Aradığınız sayfa mevcut değil",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "footer": {
+    "description": "Cradex Agency — dijital pazarlama, tasarım ve teknoloji alanında güvenilir ortağınız.",
+    "navigation": "Navigasyon",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "rights": "Tüm hakları saklıdır",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları"
+  },
+  "popup": {
+    "title": "Rakipleriniz zaten önde.",
+    "subtitle": "Her gecikme, kaybedilen bir müşteri demektir. Ücretsiz danışmanlık alın, stratejinizi birlikte kuralım.",
+    "cta": "WhatsApp'tan yazın",
+    "dismiss": "Şimdilik ilgilenmiyorum",
+    "whatsappText": "Merhaba! Ücretsiz pazarlama danışmanlığı almak istiyorum."
+  }
+}

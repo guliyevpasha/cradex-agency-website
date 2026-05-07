@@ -1,0 +1,53 @@
+{
+  "name": "cradex-agency",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@sanity/image-url": "^1.2.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.2.0",
+    "lucide-react": "^0.378.0",
+    "next": "14.2.35",
+    "next-intl": "^3.14.0",
+    "next-sanity": "^5.5.11",
+    "react": "^18",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.0",
+    "react-intersection-observer": "^10.0.3",
+    "resend": "^3.2.0",
+    "sanity": "^5.23.0",
+    "swiper": "^11.2.10",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.0",
+    "@playwright/test": "^1.44.0",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^15.0.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@vitejs/plugin-react": "^4.3.0",
+    "axe-core": "^4.9.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "fast-check": "^3.19.0",
+    "jsdom": "^24.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "vitest": "^1.6.0"
+  }
+}

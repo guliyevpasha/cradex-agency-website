@@ -1,0 +1,471 @@
+{
+  "portfolio": [
+    {
+      "id": "port-1",
+      "slug": "techaz-digital-marketing",
+      "titleKey": "TechAZ Rəqəmsal Marketinq Kampaniyası",
+      "title": {
+        "az": "TechAZ Rəqəmsal Marketinq Kampaniyası",
+        "en": "TechAZ Digital Marketing Campaign",
+        "ru": "Кампания цифрового маркетинга TechAZ",
+        "tr": "TechAZ Dijital Pazarlama Kampanyası"
+      },
+      "clientName": "TechAZ",
+      "serviceCategory": "digital-marketing",
+      "tags": ["SEO", "PPC", "Google Ads"],
+      "coverImage": "/images/portfolio/techaz-digital-marketing/cover.webp",
+      "gallery": [
+        "/images/portfolio/techaz-digital-marketing/1.webp",
+        "/images/portfolio/techaz-digital-marketing/2.webp"
+      ],
+      "descriptionKey": "TechAZ üçün hərtərəfli rəqəmsal marketinq kampaniyası həyata keçirildi. SEO optimallaşdırması və Google Ads kampaniyaları vasitəsilə üzvi trafik 3 ay ərzində 180% artırıldı.",
+      "description": {
+        "az": "TechAZ üçün hərtərəfli rəqəmsal marketinq kampaniyası həyata keçirildi. SEO optimallaşdırması və Google Ads kampaniyaları vasitəsilə üzvi trafik 3 ay ərzində 180% artırıldı.",
+        "en": "A comprehensive digital marketing campaign was executed for TechAZ. Organic traffic increased by 180% within 3 months through SEO optimisation and Google Ads campaigns.",
+        "ru": "Для TechAZ была реализована комплексная кампания цифрового маркетинга. Органический трафик вырос на 180% за 3 месяца благодаря SEO-оптимизации и кампаниям Google Ads.",
+        "tr": "TechAZ için kapsamlı bir dijital pazarlama kampanyası yürütüldü. SEO optimizasyonu ve Google Ads kampanyaları sayesinde organik trafik 3 ayda %180 arttı."
+      },
+      "tools": ["Google Analytics", "Google Ads", "SEMrush", "Ahrefs"],
+      "resultsKey": "Üzvi trafik 180% artdı, konversiya dərəcəsi 4.2%-ə çatdı",
+      "results": {
+        "az": "Üzvi trafik 180% artdı, konversiya dərəcəsi 4.2%-ə çatdı",
+        "en": "Organic traffic grew by 180%, conversion rate reached 4.2%",
+        "ru": "Органический трафик вырос на 180%, коэффициент конверсии достиг 4,2%",
+        "tr": "Organik trafik %180 arttı, dönüşüm oranı %4,2'ye ulaştı"
+      },
+      "publishedAt": "2024-03-15",
+      "featured": true
+    },
+    {
+      "id": "port-2",
+      "slug": "baku-store-seo",
+      "titleKey": "Baku Store SEO Layihəsi",
+      "title": {
+        "az": "Baku Store SEO Layihəsi",
+        "en": "Baku Store SEO Project",
+        "ru": "SEO-проект Baku Store",
+        "tr": "Baku Store SEO Projesi"
+      },
+      "clientName": "Baku Store",
+      "serviceCategory": "digital-marketing",
+      "tags": ["SEO", "Məzmun Marketinqi"],
+      "coverImage": "/images/portfolio/baku-store-seo/cover.webp",
+      "gallery": [
+        "/images/portfolio/baku-store-seo/1.webp"
+      ],
+      "descriptionKey": "E-ticarət saytı üçün tam SEO auditi və optimallaşdırma layihəsi.",
+      "description": {
+        "az": "E-ticarət saytı üçün tam SEO auditi və optimallaşdırma layihəsi.",
+        "en": "A full SEO audit and optimisation project for an e-commerce website.",
+        "ru": "Полный SEO-аудит и проект оптимизации для сайта электронной коммерции.",
+        "tr": "Bir e-ticaret web sitesi için tam SEO denetimi ve optimizasyon projesi."
+      },
+      "tools": ["Google Search Console", "Screaming Frog", "Ahrefs"],
+      "resultsKey": "Axtarış nəticələrindəki mövqe 6 ay ərzində ortalama 35 pillə yüksəldi",
+      "results": {
+        "az": "Axtarış nəticələrindəki mövqe 6 ay ərzində ortalama 35 pillə yüksəldi",
+        "en": "Search rankings improved by an average of 35 positions within 6 months",
+        "ru": "Позиции в поисковой выдаче улучшились в среднем на 35 позиций за 6 месяцев",
+        "tr": "Arama sıralamaları 6 ay içinde ortalama 35 sıra yükseldi"
+      },
+      "publishedAt": "2024-01-20",
+      "featured": false
+    },
+    {
+      "id": "port-3",
+      "slug": "azerfood-traditional-campaign",
+      "titleKey": "AzerFood Ənənəvi Marketinq Kampaniyası",
+      "title": {
+        "az": "AzerFood Ənənəvi Marketinq Kampaniyası",
+        "en": "AzerFood Traditional Marketing Campaign",
+        "ru": "Традиционная маркетинговая кампания AzerFood",
+        "tr": "AzerFood Geleneksel Pazarlama Kampanyası"
+      },
+      "clientName": "AzerFood",
+      "serviceCategory": "traditional-marketing",
+      "tags": ["TV Reklam", "Outdoor", "Radio"],
+      "coverImage": "/images/portfolio/azerfood-traditional-campaign/cover.webp",
+      "gallery": [
+        "/images/portfolio/azerfood-traditional-campaign/1.webp",
+        "/images/portfolio/azerfood-traditional-campaign/2.webp"
+      ],
+      "descriptionKey": "AzerFood üçün televiziya, radio və outdoor reklamları əhatə edən 360° marketinq kampaniyası.",
+      "description": {
+        "az": "AzerFood üçün televiziya, radio və outdoor reklamları əhatə edən 360° marketinq kampaniyası.",
+        "en": "A 360° marketing campaign for AzerFood covering television, radio and outdoor advertising.",
+        "ru": "Кампания 360° для AzerFood, охватывающая телевидение, радио и наружную рекламу.",
+        "tr": "AzerFood için televizyon, radyo ve açık hava reklamlarını kapsayan 360° pazarlama kampanyası."
+      },
+      "tools": ["Adobe Premiere", "After Effects", "Photoshop"],
+      "resultsKey": "Brend tanınırlığı 45% artdı, satışlar 28% yüksəldi",
+      "results": {
+        "az": "Brend tanınırlığı 45% artdı, satışlar 28% yüksəldi",
+        "en": "Brand awareness increased by 45%, sales rose by 28%",
+        "ru": "Узнаваемость бренда выросла на 45%, продажи увеличились на 28%",
+        "tr": "Marka bilinirliği %45 arttı, satışlar %28 yükseldi"
+      },
+      "publishedAt": "2023-11-10",
+      "featured": true
+    },
+    {
+      "id": "port-4",
+      "slug": "fashionbaku-smm",
+      "titleKey": "FashionBaku SMM İdarəetməsi",
+      "title": {
+        "az": "FashionBaku SMM İdarəetməsi",
+        "en": "FashionBaku SMM Management",
+        "ru": "SMM-управление FashionBaku",
+        "tr": "FashionBaku SMM Yönetimi"
+      },
+      "clientName": "FashionBaku",
+      "serviceCategory": "smm",
+      "tags": ["Instagram", "TikTok", "Məzmun"],
+      "coverImage": "/images/portfolio/fashionbaku-smm/cover.webp",
+      "gallery": [
+        "/images/portfolio/fashionbaku-smm/1.webp",
+        "/images/portfolio/fashionbaku-smm/2.webp",
+        "/images/portfolio/fashionbaku-smm/3.webp"
+      ],
+      "descriptionKey": "Moda brendinin Instagram və TikTok hesablarının tam idarəetməsi. Aylıq 50+ post, reels və story.",
+      "description": {
+        "az": "Moda brendinin Instagram və TikTok hesablarının tam idarəetməsi. Aylıq 50+ post, reels və story.",
+        "en": "Full management of a fashion brand's Instagram and TikTok accounts. 50+ posts, reels and stories per month.",
+        "ru": "Полное управление аккаунтами модного бренда в Instagram и TikTok. 50+ постов, reels и stories в месяц.",
+        "tr": "Bir moda markasının Instagram ve TikTok hesaplarının tam yönetimi. Aylık 50'den fazla gönderi, reels ve hikaye."
+      },
+      "tools": ["Canva", "CapCut", "Later", "Meta Business Suite"],
+      "resultsKey": "İzləyici sayı 12K-dan 85K-ya çatdı, engagement rate 8.5%-ə yüksəldi",
+      "results": {
+        "az": "İzləyici sayı 12K-dan 85K-ya çatdı, engagement rate 8.5%-ə yüksəldi",
+        "en": "Follower count grew from 12K to 85K, engagement rate rose to 8.5%",
+        "ru": "Количество подписчиков выросло с 12K до 85K, уровень вовлечённости достиг 8,5%",
+        "tr": "Takipçi sayısı 12K'dan 85K'ya ulaştı, etkileşim oranı %8,5'e yükseldi"
+      },
+      "publishedAt": "2024-02-01",
+      "featured": true
+    },
+    {
+      "id": "port-5",
+      "slug": "cafeplus-social-media",
+      "titleKey": "CafePlus Sosial Media Kampaniyası",
+      "title": {
+        "az": "CafePlus Sosial Media Kampaniyası",
+        "en": "CafePlus Social Media Campaign",
+        "ru": "Кампания в социальных сетях CafePlus",
+        "tr": "CafePlus Sosyal Medya Kampanyası"
+      },
+      "clientName": "CafePlus",
+      "serviceCategory": "smm",
+      "tags": ["Facebook", "Instagram", "Reklam"],
+      "coverImage": "/images/portfolio/cafeplus-social-media/cover.webp",
+      "gallery": [
+        "/images/portfolio/cafeplus-social-media/1.webp"
+      ],
+      "descriptionKey": "Restoran zənciri üçün sosial media marketinq kampaniyası.",
+      "description": {
+        "az": "Restoran zənciri üçün sosial media marketinq kampaniyası.",
+        "en": "A social media marketing campaign for a restaurant chain.",
+        "ru": "Кампания маркетинга в социальных сетях для сети ресторанов.",
+        "tr": "Bir restoran zinciri için sosyal medya pazarlama kampanyası."
+      },
+      "tools": ["Meta Ads Manager", "Canva", "Hootsuite"],
+      "resultsKey": "Onlayn rezervasiyalar 65% artdı",
+      "results": {
+        "az": "Onlayn rezervasiyalar 65% artdı",
+        "en": "Online reservations increased by 65%",
+        "ru": "Онлайн-бронирования выросли на 65%",
+        "tr": "Çevrimiçi rezervasyonlar %65 arttı"
+      },
+      "publishedAt": "2023-12-05",
+      "featured": false
+    },
+    {
+      "id": "port-6",
+      "slug": "nextech-brand-identity",
+      "titleKey": "NexTech Brend Kimliyi",
+      "title": {
+        "az": "NexTech Brend Kimliyi",
+        "en": "NexTech Brand Identity",
+        "ru": "Фирменный стиль NexTech",
+        "tr": "NexTech Marka Kimliği"
+      },
+      "clientName": "NexTech",
+      "serviceCategory": "graphic-motion-design",
+      "tags": ["Logo", "Brend Kimliyi", "Motion"],
+      "coverImage": "/images/portfolio/nextech-brand-identity/cover.webp",
+      "gallery": [
+        "/images/portfolio/nextech-brand-identity/1.webp",
+        "/images/portfolio/nextech-brand-identity/2.webp",
+        "/images/portfolio/nextech-brand-identity/3.webp"
+      ],
+      "descriptionKey": "Texnologiya startapı üçün tam brend kimliyi paketi: logo, rəng palitrasası, tipografiya sistemi və motion dizayn elementləri.",
+      "description": {
+        "az": "Texnologiya startapı üçün tam brend kimliyi paketi: logo, rəng palitrasası, tipografiya sistemi və motion dizayn elementləri.",
+        "en": "A complete brand identity package for a technology startup: logo, colour palette, typography system and motion design elements.",
+        "ru": "Полный пакет фирменного стиля для технологического стартапа: логотип, цветовая палитра, система типографики и элементы моушн-дизайна.",
+        "tr": "Bir teknoloji girişimi için eksiksiz marka kimliği paketi: logo, renk paleti, tipografi sistemi ve motion tasarım öğeleri."
+      },
+      "tools": ["Figma", "Adobe Illustrator", "After Effects"],
+      "resultsKey": "Brend tutarlılığı bütün kanallarda 100% təmin edildi",
+      "results": {
+        "az": "Brend tutarlılığı bütün kanallarda 100% təmin edildi",
+        "en": "Brand consistency achieved 100% across all channels",
+        "ru": "Согласованность бренда обеспечена на 100% по всем каналам",
+        "tr": "Tüm kanallarda marka tutarlılığı %100 sağlandı"
+      },
+      "publishedAt": "2024-04-10",
+      "featured": true
+    },
+    {
+      "id": "port-7",
+      "slug": "greenlife-packaging-design",
+      "titleKey": "GreenLife Qablaşdırma Dizaynı",
+      "title": {
+        "az": "GreenLife Qablaşdırma Dizaynı",
+        "en": "GreenLife Packaging Design",
+        "ru": "Дизайн упаковки GreenLife",
+        "tr": "GreenLife Ambalaj Tasarımı"
+      },
+      "clientName": "GreenLife",
+      "serviceCategory": "graphic-motion-design",
+      "tags": ["Qablaşdırma", "Qrafik Dizayn"],
+      "coverImage": "/images/portfolio/greenlife-packaging-design/cover.webp",
+      "gallery": [
+        "/images/portfolio/greenlife-packaging-design/1.webp"
+      ],
+      "descriptionKey": "Ekoloji məhsul brendinin qablaşdırma dizaynı.",
+      "description": {
+        "az": "Ekoloji məhsul brendinin qablaşdırma dizaynı.",
+        "en": "Packaging design for an eco-friendly product brand.",
+        "ru": "Дизайн упаковки для экологичного бренда продуктов.",
+        "tr": "Çevre dostu bir ürün markası için ambalaj tasarımı."
+      },
+      "tools": ["Adobe Illustrator", "Photoshop"],
+      "resultsKey": "Məhsul satışları yeni dizayndan sonra 40% artdı",
+      "results": {
+        "az": "Məhsul satışları yeni dizayndan sonra 40% artdı",
+        "en": "Product sales increased by 40% after the new design",
+        "ru": "Продажи продукта выросли на 40% после нового дизайна",
+        "tr": "Yeni tasarımın ardından ürün satışları %40 arttı"
+      },
+      "publishedAt": "2023-10-20",
+      "featured": false
+    },
+    {
+      "id": "port-8",
+      "slug": "luxuryaz-photo-video",
+      "titleKey": "LuxuryAZ Foto və Video Çəkiliş",
+      "title": {
+        "az": "LuxuryAZ Foto və Video Çəkiliş",
+        "en": "LuxuryAZ Photo & Video Production",
+        "ru": "Фото и видеосъёмка LuxuryAZ",
+        "tr": "LuxuryAZ Fotoğraf ve Video Çekimi"
+      },
+      "clientName": "LuxuryAZ",
+      "serviceCategory": "photo-video",
+      "tags": ["Kommersiya Foto", "Reklam Videosu"],
+      "coverImage": "/images/portfolio/luxuryaz-photo-video/cover.webp",
+      "gallery": [
+        "/images/portfolio/luxuryaz-photo-video/1.webp",
+        "/images/portfolio/luxuryaz-photo-video/2.webp"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "descriptionKey": "Lüks əşyalar brendinin məhsul foto çəkilişi və reklam videosu istehsalı.",
+      "description": {
+        "az": "Lüks əşyalar brendinin məhsul foto çəkilişi və reklam videosu istehsalı.",
+        "en": "Product photography and advertising video production for a luxury goods brand.",
+        "ru": "Предметная фотосъёмка и производство рекламного видео для бренда предметов роскоши.",
+        "tr": "Bir lüks ürün markası için ürün fotoğrafçılığı ve reklam videosu prodüksiyonu."
+      },
+      "tools": ["Sony A7IV", "DJI Ronin", "Adobe Premiere", "Lightroom"],
+      "resultsKey": "Reklam videosu 500K+ görüntülənmə topladı",
+      "results": {
+        "az": "Reklam videosu 500K+ görüntülənmə topladı",
+        "en": "The advertising video accumulated 500K+ views",
+        "ru": "Рекламное видео набрало более 500K просмотров",
+        "tr": "Reklam videosu 500K'dan fazla görüntüleme topladı"
+      },
+      "publishedAt": "2024-01-15",
+      "featured": true
+    },
+    {
+      "id": "port-9",
+      "slug": "azbank-rebranding",
+      "titleKey": "AzBank Rebrendinq Layihəsi",
+      "title": {
+        "az": "AzBank Rebrendinq Layihəsi",
+        "en": "AzBank Rebranding Project",
+        "ru": "Проект ребрендинга AzBank",
+        "tr": "AzBank Yeniden Markalama Projesi"
+      },
+      "clientName": "AzBank",
+      "serviceCategory": "branding",
+      "tags": ["Rebrendinq", "Korporativ Kimlik"],
+      "coverImage": "/images/portfolio/azbank-rebranding/cover.webp",
+      "gallery": [
+        "/images/portfolio/azbank-rebranding/1.webp",
+        "/images/portfolio/azbank-rebranding/2.webp",
+        "/images/portfolio/azbank-rebranding/3.webp"
+      ],
+      "descriptionKey": "Maliyyə qurumunun tam rebrendinq layihəsi: yeni logo, rəng sistemi, üslub bələdçisi və bütün tətbiqetmə materialları.",
+      "description": {
+        "az": "Maliyyə qurumunun tam rebrendinq layihəsi: yeni logo, rəng sistemi, üslub bələdçisi və bütün tətbiqetmə materialları.",
+        "en": "A full rebranding project for a financial institution: new logo, colour system, style guide and all application materials.",
+        "ru": "Полный проект ребрендинга финансового учреждения: новый логотип, цветовая система, стайлгайд и все материалы применения.",
+        "tr": "Bir finans kurumu için tam yeniden markalama projesi: yeni logo, renk sistemi, stil rehberi ve tüm uygulama materyalleri."
+      },
+      "tools": ["Figma", "Adobe Illustrator", "InDesign"],
+      "resultsKey": "Müştəri məmnuniyyəti 32% artdı, brend tanınırlığı 58% yüksəldi",
+      "results": {
+        "az": "Müştəri məmnuniyyəti 32% artdı, brend tanınırlığı 58% yüksəldi",
+        "en": "Customer satisfaction increased by 32%, brand recognition rose by 58%",
+        "ru": "Удовлетворённость клиентов выросла на 32%, узнаваемость бренда увеличилась на 58%",
+        "tr": "Müşteri memnuniyeti %32 arttı, marka bilinirliği %58 yükseldi"
+      },
+      "publishedAt": "2023-09-01",
+      "featured": true
+    },
+    {
+      "id": "port-10",
+      "slug": "startup-az-branding",
+      "titleKey": "StartupAZ Brend Yaradılması",
+      "title": {
+        "az": "StartupAZ Brend Yaradılması",
+        "en": "StartupAZ Brand Creation",
+        "ru": "Создание бренда StartupAZ",
+        "tr": "StartupAZ Marka Oluşturma"
+      },
+      "clientName": "StartupAZ",
+      "serviceCategory": "branding",
+      "tags": ["Brend Strategiyası", "Vizual Kimlik"],
+      "coverImage": "/images/portfolio/startup-az-branding/cover.webp",
+      "gallery": [
+        "/images/portfolio/startup-az-branding/1.webp"
+      ],
+      "descriptionKey": "Yeni startap üçün sıfırdan brend yaradılması.",
+      "description": {
+        "az": "Yeni startap üçün sıfırdan brend yaradılması.",
+        "en": "Brand creation from scratch for a new startup.",
+        "ru": "Создание бренда с нуля для нового стартапа.",
+        "tr": "Yeni bir girişim için sıfırdan marka oluşturma."
+      },
+      "tools": ["Figma", "Adobe Illustrator"],
+      "resultsKey": "İlk 3 ayda 500+ müştəri cəlb edildi",
+      "results": {
+        "az": "İlk 3 ayda 500+ müştəri cəlb edildi",
+        "en": "500+ customers acquired in the first 3 months",
+        "ru": "Привлечено более 500 клиентов за первые 3 месяца",
+        "tr": "İlk 3 ayda 500'den fazla müşteri kazanıldı"
+      },
+      "publishedAt": "2024-03-01",
+      "featured": false
+    },
+    {
+      "id": "port-11",
+      "slug": "ecommerce-az-copywriting",
+      "titleKey": "EcommerceAZ Məzmun Yazarlığı",
+      "title": {
+        "az": "EcommerceAZ Məzmun Yazarlığı",
+        "en": "EcommerceAZ Content Writing",
+        "ru": "Написание контента EcommerceAZ",
+        "tr": "EcommerceAZ İçerik Yazarlığı"
+      },
+      "clientName": "EcommerceAZ",
+      "serviceCategory": "copywriting",
+      "tags": ["SEO Məzmun", "Məhsul Təsviri"],
+      "coverImage": "/images/portfolio/ecommerce-az-copywriting/cover.webp",
+      "gallery": [
+        "/images/portfolio/ecommerce-az-copywriting/1.webp"
+      ],
+      "descriptionKey": "E-ticarət platforması üçün 500+ məhsul təsviri və SEO optimallaşdırılmış kateqoriya mətnlərinin yazılması.",
+      "description": {
+        "az": "E-ticarət platforması üçün 500+ məhsul təsviri və SEO optimallaşdırılmış kateqoriya mətnlərinin yazılması.",
+        "en": "Writing 500+ product descriptions and SEO-optimised category texts for an e-commerce platform.",
+        "ru": "Написание 500+ описаний товаров и SEO-оптимизированных текстов категорий для платформы электронной коммерции.",
+        "tr": "Bir e-ticaret platforması için 500'den fazla ürün açıklaması ve SEO optimize edilmiş kategori metinleri yazımı."
+      },
+      "tools": ["Surfer SEO", "Grammarly", "Google Docs"],
+      "resultsKey": "Üzvi trafik 90% artdı, ortalama səhifədə qalma müddəti 2.5 dəqiqəyə çatdı",
+      "results": {
+        "az": "Üzvi trafik 90% artdı, ortalama səhifədə qalma müddəti 2.5 dəqiqəyə çatdı",
+        "en": "Organic traffic grew by 90%, average time on page reached 2.5 minutes",
+        "ru": "Органический трафик вырос на 90%, среднее время на странице достигло 2,5 минуты",
+        "tr": "Organik trafik %90 arttı, sayfada ortalama kalma süresi 2,5 dakikaya ulaştı"
+      },
+      "publishedAt": "2023-11-25",
+      "featured": false
+    },
+    {
+      "id": "port-12",
+      "slug": "deliveryaz-web-app",
+      "titleKey": "DeliveryAZ Veb Tətbiqi",
+      "title": {
+        "az": "DeliveryAZ Veb Tətbiqi",
+        "en": "DeliveryAZ Web Application",
+        "ru": "Веб-приложение DeliveryAZ",
+        "tr": "DeliveryAZ Web Uygulaması"
+      },
+      "clientName": "DeliveryAZ",
+      "serviceCategory": "web-mobile-dev",
+      "tags": ["Next.js", "React", "UI/UX"],
+      "coverImage": "/images/portfolio/deliveryaz-web-app/cover.webp",
+      "gallery": [
+        "/images/portfolio/deliveryaz-web-app/1.webp",
+        "/images/portfolio/deliveryaz-web-app/2.webp"
+      ],
+      "descriptionKey": "Çatdırılma xidməti üçün tam funksional veb tətbiqinin hazırlanması. Next.js 14, TypeScript, Tailwind CSS ilə quruldu.",
+      "description": {
+        "az": "Çatdırılma xidməti üçün tam funksional veb tətbiqinin hazırlanması. Next.js 14, TypeScript, Tailwind CSS ilə quruldu.",
+        "en": "Development of a fully functional web application for a delivery service. Built with Next.js 14, TypeScript and Tailwind CSS.",
+        "ru": "Разработка полнофункционального веб-приложения для службы доставки. Создано на Next.js 14, TypeScript и Tailwind CSS.",
+        "tr": "Bir teslimat hizmeti için tam işlevsel bir web uygulaması geliştirme. Next.js 14, TypeScript ve Tailwind CSS ile oluşturuldu."
+      },
+      "tools": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Vercel"],
+      "resultsKey": "Lighthouse skoru 98/100, yükləmə vaxtı 1.2 saniyə",
+      "results": {
+        "az": "Lighthouse skoru 98/100, yükləmə vaxtı 1.2 saniyə",
+        "en": "Lighthouse score 98/100, load time 1.2 seconds",
+        "ru": "Оценка Lighthouse 98/100, время загрузки 1,2 секунды",
+        "tr": "Lighthouse skoru 98/100, yükleme süresi 1,2 saniye"
+      },
+      "publishedAt": "2024-04-20",
+      "featured": true
+    },
+    {
+      "id": "port-13",
+      "slug": "healthaz-mobile-app",
+      "titleKey": "HealthAZ Mobil Tətbiq",
+      "title": {
+        "az": "HealthAZ Mobil Tətbiq",
+        "en": "HealthAZ Mobile App",
+        "ru": "Мобильное приложение HealthAZ",
+        "tr": "HealthAZ Mobil Uygulama"
+      },
+      "clientName": "HealthAZ",
+      "serviceCategory": "web-mobile-dev",
+      "tags": ["React Native", "iOS", "Android"],
+      "coverImage": "/images/portfolio/healthaz-mobile-app/cover.webp",
+      "gallery": [
+        "/images/portfolio/healthaz-mobile-app/1.webp",
+        "/images/portfolio/healthaz-mobile-app/2.webp"
+      ],
+      "descriptionKey": "Sağlamlıq izləmə mobil tətbiqinin iOS və Android üçün hazırlanması.",
+      "description": {
+        "az": "Sağlamlıq izləmə mobil tətbiqinin iOS və Android üçün hazırlanması.",
+        "en": "Development of a health tracking mobile app for iOS and Android.",
+        "ru": "Разработка мобильного приложения для отслеживания здоровья для iOS и Android.",
+        "tr": "iOS ve Android için bir sağlık takip mobil uygulaması geliştirme."
+      },
+      "tools": ["React Native", "TypeScript", "Firebase", "Expo"],
+      "resultsKey": "App Store-da 4.8 reytinq, 10K+ yükləmə",
+      "results": {
+        "az": "App Store-da 4.8 reytinq, 10K+ yükləmə",
+        "en": "4.8 rating on the App Store, 10K+ downloads",
+        "ru": "Рейтинг 4,8 в App Store, более 10K загрузок",
+        "tr": "App Store'da 4,8 puan, 10K'dan fazla indirme"
+      },
+      "publishedAt": "2024-02-28",
+      "featured": true
+    }
+  ]
+}

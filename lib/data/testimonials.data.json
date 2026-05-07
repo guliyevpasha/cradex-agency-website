@@ -1,0 +1,386 @@
+[
+  {
+    "id": "t1",
+    "name": {
+      "az": "Kənan Əkbərli",
+      "en": "Kenan Akbarli",
+      "ru": "Кенан Акберли",
+      "tr": "Kənan Əkbərli"
+    },
+    "role": {
+      "az": "Təsisçi",
+      "en": "Founder",
+      "ru": "Основатель",
+      "tr": "Kurucu"
+    },
+    "company": "",
+    "photo": "/images/testimonials/kenan.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Cradex Agency ilə əməkdaşlıq gözləntilərimizi tam qarşıladı. Rəqəmsal marketinq kampaniyamız gözləntilərimizdən çox yüksək nəticələr verdi. Layihə müraciətlərimiz 3 ayda 2 dəfə artdı, brend tanınırlığımız isə əhəmiyyətli dərəcədə gücləndi.",
+      "en": "Our collaboration with Cradex Agency fully met our expectations. Our digital marketing campaign delivered results far beyond what we anticipated. Project inquiries doubled in 3 months and our brand recognition strengthened significantly.",
+      "ru": "Сотрудничество с Cradex Agency полностью оправдало наши ожидания. Наша кампания цифрового маркетинга дала результаты, значительно превзошедшие наши прогнозы. Количество обращений по проектам удвоилось за 3 месяца, а узнаваемость бренда существенно возросла.",
+      "tr": "Cradex Agency ile iş birliğimiz beklentilerimizi tam anlamıyla karşıladı. Dijital pazarlama kampanyamız öngördüğümüzün çok ötesinde sonuçlar verdi. Proje başvurularımız 3 ayda iki katına çıktı ve marka bilinirliğimiz önemli ölçüde güçlendi."
+    }
+  },
+  {
+    "id": "t2",
+    "name": {
+      "az": "Leyla Həsənova",
+      "en": "Leyla Hasanova",
+      "ru": "Лейла Гасанова",
+      "tr": "Leyla Hasanova"
+    },
+    "role": {
+      "az": "Satış Meneceri",
+      "en": "Sales Manager",
+      "ru": "Менеджер по продажам",
+      "tr": "Satış Müdürü"
+    },
+    "company": "",
+    "photo": "/images/testimonials/leyla.jpg",
+    "rating": 5,
+    "text": {
+      "az": "SMM xidmətləri sayəsində sosial mediada izləyici bazamız 6 ayda 7 dəfə artdı. Peşəkar komanda, vaxtında çatdırılma, əla nəticələr!",
+      "en": "Thanks to their SMM services, our social media following grew 7x in 6 months. Professional team, on-time delivery, excellent results!",
+      "ru": "Благодаря услугам SMM наша аудитория в социальных сетях выросла в 7 раз за 6 месяцев. Профессиональная команда, своевременная доставка, отличные результаты!",
+      "tr": "SMM hizmetleri sayesinde sosyal medya takipçi tabanımız 6 ayda 7 kat arttı. Profesyonel ekip, zamanında teslimat, mükemmel sonuçlar!"
+    }
+  },
+  {
+    "id": "t3",
+    "name": {
+      "az": "Naib Əliyev",
+      "en": "Naib Aliyev",
+      "ru": "Наиб Алиев",
+      "tr": "Naib Əliyev"
+    },
+    "role": {
+      "az": "Brend Meneceri",
+      "en": "Brand Manager",
+      "ru": "Бренд-менеджер",
+      "tr": "Marka Yöneticisi"
+    },
+    "company": "ABB bank",
+    "photo": "/images/testimonials/naib.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Rebrendinq layihəmiz mükəmməl həyata keçirildi. Cradex komandası hər detalı düşünür. Müştəri məmnuniyyəti 32% artdı, brend tanınırlığı isə 58% yüksəldi.",
+      "en": "Our rebranding project was executed perfectly. The Cradex team thinks through every detail. Customer satisfaction increased by 32%, brand recognition by 58%.",
+      "ru": "Наш проект ребрендинга был реализован безупречно. Команда Cradex продумывает каждую деталь. Удовлетворённость клиентов выросла на 32%, узнаваемость бренда — на 58%.",
+      "tr": "Yeniden markalama projemiz mükemmel şekilde hayata geçirildi. Cradex ekibi her detayı düşünüyor. Müşteri memnuniyeti %32, marka bilinirliği %58 arttı."
+    }
+  },
+  {
+    "id": "t4",
+    "name": {
+      "az": "Nigar Quliyeva",
+      "en": "Nigar Guliyeva",
+      "ru": "Нигяр Кулиева",
+      "tr": "Nigar Kuliyeva"
+    },
+    "role": {
+      "az": "Marketinq Mütəxəssisi",
+      "en": "Marketing Specialist",
+      "ru": "Специалист по маркетингу",
+      "tr": "Pazarlama Uzmanı"
+    },
+    "company": "Bakstone Construction",
+    "photo": "/images/testimonials/quliyeva.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Veb tətbiqimiz Next.js ilə quruldu və performansı əla səviyyədədir. Lighthouse skoru 98/100! Cradex Agency-ni hər kəsə tövsiyə edirəm.",
+      "en": "Our web app was built with Next.js and performance is excellent. Lighthouse score 98/100! I recommend Cradex Agency to everyone.",
+      "ru": "Наше веб-приложение было создано на Next.js, и производительность на высшем уровне. Оценка Lighthouse 98/100! Рекомендую Cradex Agency всем.",
+      "tr": "Web uygulamamız Next.js ile oluşturuldu ve performansı mükemmel. Lighthouse skoru 98/100! Cradex Agency'yi herkese tavsiye ediyorum."
+    }
+  },
+  {
+    "id": "t5",
+    "name": {
+      "az": "Nicat Misirli",
+      "en": "Nijat Misirli",
+      "ru": "Ниджат Мисирли",
+      "tr": "Nicat Misirli"
+    },
+    "role": {
+      "az": "Təhsil üzrə məsləhətçi",
+      "en": "Education Consultant",
+      "ru": "Консультант по образованию",
+      "tr": "Eğitim Danışmanı"
+    },
+    "company": "Xudafərin Xaricdə Təhsil Mərkəzi",
+    "photo": "/images/testimonials/nijat.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Qrafik dizayn xidmətləri sayəsində korporativ materiallarımız tamamilə yeniləndi. Tələbə qəbulu 40% artdı. Cradex komandası ilə işləmək həmişə xoşdur.",
+      "en": "Thanks to their graphic design services, our corporate materials were completely renewed. Student enrollment increased by 40%. Working with the Cradex team is always a pleasure.",
+      "ru": "Благодаря услугам графического дизайна наши корпоративные материалы были полностью обновлены. Набор студентов вырос на 40%. Работать с командой Cradex всегда приятно.",
+      "tr": "Grafik tasarım hizmetleri sayesinde kurumsal materyallerimiz tamamen yenilendi. Öğrenci kaydı %40 arttı. Cradex ekibiyle çalışmak her zaman keyifli."
+    }
+  },
+  {
+    "id": "t6",
+    "name": {
+      "az": "Asif Yusubov",
+      "en": "Asif Yusubov",
+      "ru": "Асиф Юсубов",
+      "tr": "Asif Yusubov"
+    },
+    "role": {
+      "az": "Rieltor",
+      "en": "Realtor",
+      "ru": "Риелтор",
+      "tr": "Emlakçı"
+    },
+    "company": "",
+    "photo": "/images/testimonials/asif.jpg",
+    "rating": 5,
+    "text": {
+      "az": "SEO strategiyası düzgün qurulmadıqda nəticə vermir. Bu komanda isə həm texniki, həm də strateji baxımdan prosesi peşəkar şəkildə idarə etdi. Google axtarış nəticələrində mövqelərimiz yüksəldi və brend etibarlılığı artdı.",
+      "en": "SEO strategy yields no results when not built correctly. This team managed the process professionally from both a technical and strategic perspective. Our rankings in Google search results improved and brand credibility increased.",
+      "ru": "SEO-стратегия не даёт результатов, если она выстроена неправильно. Эта команда профессионально управляла процессом как с технической, так и со стратегической точки зрения. Наши позиции в результатах поиска Google выросли, а доверие к бренду повысилось.",
+      "tr": "SEO stratejisi doğru kurulmadığında sonuç vermez. Bu ekip ise süreci hem teknik hem de stratejik açıdan profesyonelce yönetti. Google arama sonuçlarındaki sıralamalarımız yükseldi ve marka güvenilirliği arttı."
+    }
+  },
+  {
+    "id": "t7",
+    "name": {
+      "az": "Pərvin Məsimov",
+      "en": "Parvin Masimov",
+      "ru": "Парвин Масимов",
+      "tr": "Pərvin Məsimov"
+    },
+    "role": {
+      "az": "Vəkil",
+      "en": "Attorney",
+      "ru": "Адвокат",
+      "tr": "Avukat"
+    },
+    "company": "",
+    "photo": "/images/testimonials/parvin.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Sosial media idarəçiliyi sayəsində şəxsi vəkil brendimin onlayn görünürlüğü və etibarı gücləndi. Paylaşımların peşəkar üslubda hazırlanması, düzgün mesajlaşma və davamlı kommunikasiya müsbət nəticələr verdi. Strategiya və icra keyfiyyəti yüksək səviyyədə idi.",
+      "en": "Thanks to social media management, the online visibility and credibility of my personal attorney brand strengthened. The professional preparation of posts, accurate messaging and consistent communication delivered positive results. The quality of strategy and execution was at a high level.",
+      "ru": "Благодаря управлению социальными сетями онлайн-видимость и авторитет моего личного адвокатского бренда укрепились. Профессиональная подготовка публикаций, грамотный обмен сообщениями и последовательная коммуникация дали положительные результаты. Качество стратегии и исполнения было на высоком уровне.",
+      "tr": "Sosyal medya yönetimi sayesinde kişisel avukatlık markamın çevrimiçi görünürlüğü ve güvenilirliği güçlendi. Paylaşımların profesyonel üslupta hazırlanması, doğru mesajlaşma ve sürekli iletişim olumlu sonuçlar verdi. Strateji ve uygulama kalitesi yüksek düzeydeydi."
+    }
+  },
+  {
+    "id": "t8",
+    "name": {
+      "az": "Samir Kərimli",
+      "en": "Samir Karimli",
+      "ru": "Самир Керимли",
+      "tr": "Samir Kərimli"
+    },
+    "role": {
+      "az": "CEO",
+      "en": "CEO",
+      "ru": "Генеральный директор",
+      "tr": "CEO"
+    },
+    "company": "",
+    "photo": "/images/testimonials/samir.jpg",
+    "rating": 5,
+    "text": {
+      "az": "SEO strategiyası nəticə verdi – axtarış sistemlərində mövqelərimiz və orqanik trafikimiz artdı. Peşəkar yanaşma və ölçülə bilən nəticələr əməkdaşlıqdan məmnun qalmağımıza səbəb oldu.",
+      "en": "The SEO strategy delivered results — our rankings in search engines and organic traffic increased. The professional approach and measurable outcomes are the reason we are satisfied with this partnership.",
+      "ru": "SEO-стратегия дала результаты — наши позиции в поисковых системах и органический трафик выросли. Профессиональный подход и измеримые результаты стали причиной нашей удовлетворённости сотрудничеством.",
+      "tr": "SEO stratejisi sonuç verdi — arama motorlarındaki sıralamalarımız ve organik trafiğimiz arttı. Profesyonel yaklaşım ve ölçülebilir sonuçlar, bu iş birliğinden memnun kalmamızın nedeni oldu."
+    }
+  },
+  {
+    "id": "t9",
+    "name": {
+      "az": "Türkan Eyyub",
+      "en": "Turkan Eyyub",
+      "ru": "Тюркан Эйюб",
+      "tr": "Türkan Eyyub"
+    },
+    "role": {
+      "az": "Fərdi sahibkar",
+      "en": "Sole Proprietor",
+      "ru": "Индивидуальный предприниматель",
+      "tr": "Bireysel girişimci"
+    },
+    "company": "",
+    "photo": "/images/testimonials/turkan.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Çəkilişlər coffee bar-ımızın isti atmosferini və unikal üslubunu tam şəkildə əks etdirdi. Vizual kontent müştərilərin diqqətini cəlb etdi və brendimizi daha yadda qalan etdi.",
+      "en": "The shoots perfectly captured the warm atmosphere and unique style of our coffee bar. The visual content attracted customers' attention and made our brand more memorable.",
+      "ru": "Съёмки в полной мере отразили тёплую атмосферу и уникальный стиль нашего кофе-бара. Визуальный контент привлёк внимание клиентов и сделал наш бренд более запоминающимся.",
+      "tr": "Çekimler, coffee bar'ımızın sıcak atmosferini ve özgün tarzını tam anlamıyla yansıttı. Görsel içerik müşterilerin dikkatini çekti ve markamızı daha akılda kalıcı hale getirdi."
+    }
+  },
+  {
+    "id": "t10",
+    "name": {
+      "az": "Aydın Kərimov",
+      "en": "Aydin Karimov",
+      "ru": "Айдын Керимов",
+      "tr": "Aydın Kərimov"
+    },
+    "role": {
+      "az": "Marketinq Direktoru",
+      "en": "Marketing Director",
+      "ru": "Директор по маркетингу",
+      "tr": "Pazarlama Direktörü"
+    },
+    "company": "",
+    "photo": "/images/testimonials/aydin.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Veb sayt redaktə xidməti nəticəsində həm dizayn, həm də məzmun baxımından daha peşəkar və istifadəçi yönümlü bir platforma əldə etdik. Strukturun sadələşdirilməsi, mətnlərin optimallaşdırılması və texniki düzəlişlər saytın ümumi performansını əhəmiyyətli dərəcədə artırdı.",
+      "en": "As a result of the website editing service, we obtained a more professional and user-oriented platform in terms of both design and content. Simplifying the structure, optimising the texts and technical corrections significantly improved the overall performance of the site.",
+      "ru": "В результате услуги по редактированию веб-сайта мы получили более профессиональную и ориентированную на пользователя платформу как с точки зрения дизайна, так и содержания. Упрощение структуры, оптимизация текстов и технические исправления значительно повысили общую производительность сайта.",
+      "tr": "Web sitesi düzenleme hizmeti sonucunda hem tasarım hem de içerik açısından daha profesyonel ve kullanıcı odaklı bir platform elde ettik. Yapının sadeleştirilmesi, metinlerin optimize edilmesi ve teknik düzeltmeler sitenin genel performansını önemli ölçüde artırdı."
+    }
+  },
+  {
+    "id": "t11",
+    "name": {
+      "az": "Azər Daşdəmirov",
+      "en": "Azer Dashdamirov",
+      "ru": "Азер Дашдамиров",
+      "tr": "Azər Daşdəmirov"
+    },
+    "role": {
+      "az": "Mentor",
+      "en": "Mentor",
+      "ru": "Ментор",
+      "tr": "Mentor"
+    },
+    "company": "",
+    "photo": "/images/testimonials/azer.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Biznes konsaltinq sahəsinə uyğun olaraq reklamlar etibarlı, peşəkar və maarifləndirici formatda idarə edildi. Auditoriya ilə düzgün kommunikasiya quruldu və akademiyanın brend dəyəri gücləndi.",
+      "en": "In line with the business consulting field, the ads were managed in a credible, professional and educational format. The right communication with the audience was established and the brand value of the academy was strengthened.",
+      "ru": "В соответствии со сферой бизнес-консалтинга реклама велась в надёжном, профессиональном и просветительском формате. Была выстроена правильная коммуникация с аудиторией, и ценность бренда академии укрепилась.",
+      "tr": "İş danışmanlığı alanına uygun olarak reklamlar güvenilir, profesyonel ve eğitici bir formatta yönetildi. Hedef kitleyle doğru iletişim kuruldu ve akademinin marka değeri güçlendi."
+    }
+  },
+  {
+    "id": "t12",
+    "name": {
+      "az": "Elvin Məmmədov",
+      "en": "Elvin Mammadov",
+      "ru": "Эльвин Мамедов",
+      "tr": "Elvin Memmedov"
+    },
+    "role": {
+      "az": "Kiçik biznes sahibi",
+      "en": "Small Business Owner",
+      "ru": "Владелец малого бизнеса",
+      "tr": "Küçük işletme sahibi"
+    },
+    "company": "",
+    "photo": "/images/testimonials/elvin.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Əvvəlcə bir az şübhəli yanaşmışdım, amma əməkdaşlıq başlayandan sonra bu fikrim tam dəyişdi. SMM strategiyası düzgün quruldu, paylaşımlar vaxtında və peşəkar şəkildə hazırlandı. Nəticələr gözləntilərimi qarşıladı, ən əsası isə səhifəm istədiyim kimi inkişaf etdi.",
+      "en": "At first I was a little sceptical, but once the collaboration started, my opinion changed completely. The SMM strategy was set up correctly, posts were prepared on time and professionally. The results met my expectations, and most importantly, my page grew the way I wanted.",
+      "ru": "Сначала я немного сомневался, но как только сотрудничество началось, моё мнение полностью изменилось. SMM-стратегия была выстроена правильно, публикации готовились вовремя и профессионально. Результаты оправдали мои ожидания, а главное — моя страница развивалась так, как я хотел.",
+      "tr": "Başta biraz şüpheyle yaklaştım, ancak iş birliği başlayınca bu fikrim tamamen değişti. SMM stratejisi doğru kuruldu, paylaşımlar zamanında ve profesyonelce hazırlandı. Sonuçlar beklentilerimi karşıladı ve en önemlisi sayfam istediğim gibi gelişti."
+    }
+  },
+  {
+    "id": "t13",
+    "name": {
+      "az": "Aygün Rəhimzadə",
+      "en": "Aygun Rahimzada",
+      "ru": "Айгюн Рагимзаде",
+      "tr": "Aygün Rəhimzadə"
+    },
+    "role": {
+      "az": "Oftalmoloq",
+      "en": "Ophthalmologist",
+      "ru": "Офтальмолог",
+      "tr": "Oftalmolog"
+    },
+    "company": "",
+    "photo": "/images/testimonials/aygun.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Cradex Agency ilə əməkdaşlıq gözləntilərimizi tam doğrultdu. Sosial media strategiyası peşəkar şəkildə quruldu, paylaşımlar kreativ və vaxtında təqdim olundu. Qısa müddətdə həm izləyici artımı, həm də müştəri müraciətlərində ciddi irəliləyiş əldə etdik. Ən önəmlisi isə brendimiz sosial mediada daha güclü və etibarlı görünməyə başladı.",
+      "en": "Our collaboration with Cradex Agency fully lived up to our expectations. The social media strategy was built professionally, and posts were delivered creatively and on time. In a short period, we achieved significant progress in both follower growth and patient inquiries. Most importantly, our brand started appearing stronger and more credible on social media.",
+      "ru": "Сотрудничество с Cradex Agency полностью оправдало наши ожидания. Стратегия в социальных сетях была выстроена профессионально, публикации подавались креативно и своевременно. За короткое время мы добились значительного прогресса как в росте подписчиков, так и в обращениях пациентов. Самое главное — наш бренд стал выглядеть более сильным и надёжным в социальных сетях.",
+      "tr": "Cradex Agency ile iş birliğimiz beklentilerimizi tam olarak karşıladı. Sosyal medya stratejisi profesyonelce kuruldu, paylaşımlar yaratıcı ve zamanında sunuldu. Kısa sürede hem takipçi artışında hem de hasta başvurularında ciddi bir ilerleme kaydettik. En önemlisi, markamız sosyal medyada daha güçlü ve güvenilir görünmeye başladı."
+    }
+  },
+  {
+    "id": "t14",
+    "name": {
+      "az": "Nigar Təhməzova",
+      "en": "Nigar Tahmazova",
+      "ru": "Нигяр Тахмазова",
+      "tr": "Nigar Təhməzova"
+    },
+    "role": {
+      "az": "Allerqoloq",
+      "en": "Allergologist",
+      "ru": "Аллерголог",
+      "tr": "Allerji Uzmanı"
+    },
+    "company": "",
+    "photo": "/images/testimonials/nigar.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Cradex Agency ilə əməkdaşlıq müddətində sosial media hesablarımızın idarə olunmasında yüksək peşəkarlıq gördük. Paylaşımlar həm məlumatlandırıcı, həm də pasiyentlər üçün cəlbedici şəkildə hazırlanırdı. Düzgün strategiya və hədəfləmə sayəsində müraciət sayında artım müşahidə etdik. Ümumilikdə nəticələrdən çox razıyıq və əməkdaşlığı tövsiyə edirik.",
+      "en": "Throughout our collaboration with Cradex Agency, we observed a high level of professionalism in managing our social media accounts. Posts were prepared in a way that was both informative and engaging for patients. Thanks to the right strategy and targeting, we saw an increase in the number of inquiries. Overall, we are very satisfied with the results and recommend this partnership.",
+      "ru": "На протяжении всего сотрудничества с Cradex Agency мы наблюдали высокий профессионализм в управлении нашими аккаунтами в социальных сетях. Публикации готовились как информативными, так и привлекательными для пациентов. Благодаря правильной стратегии и таргетингу мы зафиксировали рост числа обращений. В целом мы очень довольны результатами и рекомендуем это сотрудничество.",
+      "tr": "Cradex Agency ile iş birliği süresince sosyal medya hesaplarımızın yönetiminde yüksek profesyonellik gördük. Paylaşımlar hem bilgilendirici hem de hastalar için ilgi çekici şekilde hazırlanıyordu. Doğru strateji ve hedefleme sayesinde başvuru sayısında artış gözlemledik. Genel olarak sonuçlardan çok memnunuz ve bu iş birliğini tavsiye ediyoruz."
+    }
+  },
+  {
+    "id": "t15",
+    "name": {
+      "az": "Xanım Adıgözəlova",
+      "en": "Khanim Adigozalova",
+      "ru": "Ханым Адыгёзалова",
+      "tr": "Xanım Adıgözəlova"
+    },
+    "role": {
+      "az": "Mama-ginekoloq",
+      "en": "Obstetrician-Gynaecologist",
+      "ru": "Акушер-гинеколог",
+      "tr": "Kadın Doğum Uzmanı"
+    },
+    "company": "",
+    "photo": "/images/testimonials/xanim.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Cradex Agency ilə əməkdaşlığımızdan olduqca razıyam. Sosial media hesabımın idarə olunmasında peşəkar və diqqətli yanaşma göstərdilər. Paylaşımlar həm məlumatlandırıcı, həm də pasiyentlər üçün etibarlı və cəlbedici şəkildə hazırlanırdı. Qısa müddətdə müraciət sayında artım müşahidə etdim. Sizi tanıdığıma və əməkdaşlıq etdiyimə çox məmnunam!",
+      "en": "I am extremely satisfied with our collaboration with Cradex Agency. They demonstrated a professional and attentive approach to managing my social media account. Posts were prepared in a way that was both informative and trustworthy and engaging for patients. In a short time, I noticed an increase in the number of inquiries. I am very glad to know you and to have worked together!",
+      "ru": "Я очень довольна нашим сотрудничеством с Cradex Agency. Они проявили профессиональный и внимательный подход к управлению моим аккаунтом в социальных сетях. Публикации готовились как информативными, так и надёжными и привлекательными для пациентов. За короткое время я заметила рост числа обращений. Очень рада, что познакомилась с вами и сотрудничала!",
+      "tr": "Cradex Agency ile iş birliğimizden son derece memnunum. Sosyal medya hesabımın yönetiminde profesyonel ve özenli bir yaklaşım sergilediler. Paylaşımlar hem bilgilendirici hem de hastalar için güvenilir ve ilgi çekici şekilde hazırlanıyordu. Kısa sürede başvuru sayısında artış gözlemledim. Sizi tanıdığıma ve birlikte çalıştığıma çok memnunum!"
+    }
+  },
+  {
+    "id": "t16",
+    "name": {
+      "az": "Vəfa Hüseynzadə",
+      "en": "Vafa Huseynzada",
+      "ru": "Вафа Гусейнзаде",
+      "tr": "Vəfa Hüseynzadə"
+    },
+    "role": {
+      "az": "Mama-ginekoloq",
+      "en": "Obstetrician-Gynaecologist",
+      "ru": "Акушер-гинеколог",
+      "tr": "Kadın Doğum Uzmanı"
+    },
+    "company": "Caspian International Hospital",
+    "photo": "/images/testimonials/vafa.jpg",
+    "rating": 5,
+    "text": {
+      "az": "Cradex Agency ilə işləmək mənim üçün çox düzgün qərar oldu. Sosial media hesabım daha sistemli və peşəkar şəkildə idarə olunmağa başladı. Kontentlər həm faydalı, həm də pasiyentlərin etibarını qazanacaq formada hazırlanırdı. Qısa müddətdə həm aktivlikdə, həm də müraciətlərdə artım hiss olundu. Ümumilikdə nəticələrdən çox məmnunam.",
+      "en": "Working with Cradex Agency turned out to be the right decision for me. My social media account started to be managed in a more systematic and professional way. Content was prepared in a format that was both useful and capable of earning patients' trust. In a short time, growth was felt both in engagement and in inquiries. Overall, I am very satisfied with the results.",
+      "ru": "Работа с Cradex Agency оказалась для меня очень правильным решением. Мой аккаунт в социальных сетях начал вестись более системно и профессионально. Контент готовился как полезным, так и в формате, способном завоевать доверие пациентов. За короткое время ощутился рост как в активности, так и в обращениях. В целом я очень довольна результатами.",
+      "tr": "Cradex Agency ile çalışmak benim için çok doğru bir karar oldu. Sosyal medya hesabım daha sistematik ve profesyonel şekilde yönetilmeye başlandı. İçerikler hem faydalı hem de hastaların güvenini kazanacak formatta hazırlanıyordu. Kısa sürede hem etkileşimde hem de başvurularda artış hissedildi. Genel olarak sonuçlardan çok memnunum."
+    }
+  }
+]

@@ -1,0 +1,739 @@
+{
+  "common": {
+    "cta": {
+      "whatsapp": "Contact via WhatsApp",
+      "getQuote": "Get a Quote",
+      "freeConsultation": "Free Consultation",
+      "learnMore": "Learn More",
+      "viewAll": "View All",
+      "sendMessage": "Send",
+      "startProject": "Start a Project",
+      "orderService": "Order this service"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "journal": "Journal",
+      "calculator": "Calculator",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "serverError": "An error occurred, please try again",
+      "minService": "Please select at least one service",
+      "notFound": "Page not found"
+    },
+    "language": {
+      "az": "Azərbaycan",
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Grow Your Brand with Cradex Agency",
+      "subtitle": "on time, with transparent pricing.",
+      "subtitleAccent": "results-driven strategy, measurable growth.",
+      "cta": "Get free consultation",
+      "secondaryCta": "Our Services",
+      "socialProof": "100+ brands in Baku chose us.",
+      "socialProofSub": "Because we don't just promise — we deliver.",
+      "googleReviews": "Google Reviews",
+      "verifiedPartner": "Verified Partner",
+      "googleVerified": "Google Verified",
+      "whatsappText": "Hello! I'd like to get a free consultation."
+    },
+    "stats": {
+      "projects": "Completed Projects",
+      "clients": "Happy Clients",
+      "experience": "Years of Experience",
+      "awards": "Awards"
+    },
+    "partners": {
+      "tagline": "Join the partners who chose us."
+    },
+    "statistics": {
+      "sectionLabel": "Our results",
+      "heading": "Our results,",
+      "headingAccent": "your growth.",
+      "stats": [
+        { "value": 350, "suffix": "+", "label": "Successful Projects" },
+        { "value": 100, "suffix": "+", "label": "Happy Clients" },
+        { "value": 4, "suffix": " yr+", "label": "Agency Experience" },
+        { "value": 98, "suffix": "%", "label": "Client Satisfaction" },
+        { "value": 100, "suffix": "%", "label": "On-Time Delivery" },
+        { "value": 24, "suffix": "/7", "label": "Technical Support" }
+      ]
+    },
+    "advantages": {
+      "sectionLabel": "Our advantages",
+      "heading": "Why they",
+      "headingAccent": "choose us?",
+      "items": [
+        { "emoji": "😎", "title": "Professional Experience", "desc": "Our team has 4+ years of real project experience in digital marketing." },
+        { "emoji": "⏰", "title": "On-Time Delivery", "desc": "We complete every project within the agreed deadline. Delays are not in our vocabulary." },
+        { "emoji": "📈", "title": "Measurable Results", "desc": "We set KPIs for every campaign and prove results with monthly reports." },
+        { "emoji": "💎", "title": "Transparent Pricing", "desc": "No hidden fees. We provide honest and clear price proposals for every service." },
+        { "emoji": "🤝", "title": "Long-Term Partnership", "desc": "Your success is our success. We strive for lasting collaboration." },
+        { "emoji": "💬", "title": "Honest Communication", "desc": "Open and transparent communication with clients is our core standard." }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive digital solutions for your brand's growth"
+    },
+    "portfolio": {
+      "title": "Recent Work",
+      "subtitle": "Projects we have delivered for our clients"
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "What our clients say about working with us"
+    },
+    "process": {
+      "sectionLabel": "Our process",
+      "title": "How do we work?",
+      "subtitle": "We deliver every project in 4 steps",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery & Brief",
+          "desc": "We meet with you, learn about your business, goals and expectations. We start with a personalised approach."
+        },
+        {
+          "number": "02",
+          "title": "Analysis & Strategy",
+          "desc": "We analyse the market, competitors and target audience, then develop a strategy tailored to your needs."
+        },
+        {
+          "number": "03",
+          "title": "Execution & Implementation",
+          "desc": "We carry out the work on time and to a high standard, based on the agreed plan."
+        },
+        {
+          "number": "04",
+          "title": "Reporting & Optimisation",
+          "desc": "We provide detailed monthly reports, analyse results together and continuously refine the strategy."
+        }
+      ]
+    },
+    "lead": {
+      "subtitle": "We are ready to take your brand to the next level",
+      "button": "Contact Us"
+    },
+    "faq": {
+      "sectionLabel": "Before we start working together",
+      "title": "Most frequently asked",
+      "titleAccent": "questions.",
+      "description": "If you can't find an answer, contact us via WhatsApp.",
+      "ctaButton": "Ask a question",
+      "items": [
+        {
+          "q": "When will I see results?",
+          "a": "This depends on the type of service. With SMM, the first results — follower growth, engagement and inquiries — begin to appear within 4–6 weeks. With SEO, the first ranking improvements are seen within 2–3 months, while significant results are achieved in 4–6 months. We provide detailed monthly reports so you can track progress together with us."
+        },
+        {
+          "q": "Why is SEO service necessary?",
+          "a": "SEO (Search Engine Optimisation) ensures your website appears at the top of search engines like Google. The vast majority of people only look at the first page of search results. Without SEO, potential customers simply cannot find you. With the right SEO strategy, you can attract free, targeted traffic to your site, increase brand credibility and gain a long-term competitive advantage."
+        },
+        {
+          "q": "Why is social media marketing (SMM) important?",
+          "a": "Millions of people in Azerbaijan spend time on Instagram, Facebook and TikTok every day. Through SMM, you can introduce your brand to this audience, build direct relationships with customers and increase your sales. Professional SMM management — with the right content strategy, timely posts, targeted ads and active communication — strengthens your brand's online reputation."
+        },
+        {
+          "q": "What is the minimum budget for your services?",
+          "a": "The budget varies depending on the type, scope and duration of the service. Every business has different needs — which is why we apply an individual approach. You can estimate the price using our calculator or contact us to learn about the package that suits you best."
+        },
+        {
+          "q": "Do you provide support after the project is completed?",
+          "a": "Yes, we are here for you even after the project is completed. We offer various support packages for technical assistance, content updates and website management. Long-term partnership is our priority."
+        },
+        {
+          "q": "What payment terms do you apply?",
+          "a": "Typically, 50% advance at the start of the project and the remaining 50% upon completion. An instalment payment plan can also be applied for larger projects. Bank transfer, cash and online payment systems are accepted."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Cradex Agency — your trusted partner in digital marketing",
+    "story": {
+      "title": "Our Story",
+      "content": "Cradex Agency was founded in 2020 in Azerbaijan as a full-service marketing agency helping clients establish a strong presence in the digital world."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide world-class digital marketing services to businesses of all sizes."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": "Innovation",
+      "quality": "Quality",
+      "transparency": "Transparency",
+      "results": "Results"
+    },
+    "team": {
+      "title": "Our Team"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions tailored to your brand's needs",
+    "digitalMarketing": {
+      "name": "Digital Marketing",
+      "shortDesc": "SEO, PPC, email marketing",
+      "description": "We boost your online visibility through search engine rankings, paid advertising, and email campaigns.",
+      "metaTitle": "Digital Marketing Services | Cradex Agency",
+      "metaDescription": "Increase your online visibility with SEO, PPC and email marketing. Achieve digital success with Cradex Agency."
+    },
+    "traditionalMarketing": {
+      "name": "Traditional Marketing",
+      "shortDesc": "Print, outdoor, media planning",
+      "description": "We reach wide audiences through television, radio, print media and outdoor advertising.",
+      "metaTitle": "Traditional Marketing Services | Cradex Agency",
+      "metaDescription": "Introduce your brand to a wide audience through TV, radio and print media."
+    },
+    "smm": {
+      "name": "Social Media Marketing",
+      "shortDesc": "Instagram, Facebook, TikTok management",
+      "description": "We create engaging content on social media platforms, build communities and grow your brand's online reputation.",
+      "metaTitle": "SMM Services | Cradex Agency",
+      "metaDescription": "Professional social media management on Instagram, Facebook, TikTok and other platforms."
+    },
+    "graphicMotionDesign": {
+      "name": "Graphic Design / Motion Design",
+      "shortDesc": "Logo, brand identity, animation",
+      "description": "We create your brand's visual language, animated content and graphic materials.",
+      "metaTitle": "Graphic Design Services | Cradex Agency",
+      "metaDescription": "Professional design services for logos, brand identity, motion design and graphic materials."
+    },
+    "photoVideo": {
+      "name": "Professional Photo & Video",
+      "shortDesc": "Commercial photo, advertising video",
+      "description": "We produce professional photo and video shoots that showcase your brand in the best light.",
+      "metaTitle": "Photo & Video Services | Cradex Agency",
+      "metaDescription": "Commercial photography, advertising video and corporate video production services."
+    },
+    "branding": {
+      "name": "Branding",
+      "shortDesc": "Brand strategy, identity, style guide",
+      "description": "We develop your brand strategy, visual identity and style guide.",
+      "metaTitle": "Branding Services | Cradex Agency",
+      "metaDescription": "Build a strong brand with brand strategy, visual identity and style guide."
+    },
+    "copywriting": {
+      "name": "Copywriting",
+      "shortDesc": "Sales copy, SEO content",
+      "description": "We write professional, sales-oriented copy that engages your target audience.",
+      "metaTitle": "Copywriting Services | Cradex Agency",
+      "metaDescription": "Professional copywriting for sales copy, SEO content and corporate communications."
+    },
+    "webMobileDev": {
+      "name": "Web & Mobile Development",
+      "shortDesc": "Next.js, React Native, UI/UX",
+      "description": "We build fast, secure and beautiful websites and mobile apps with modern technologies.",
+      "metaTitle": "Web Development Services | Cradex Agency",
+      "metaDescription": "Modern website and mobile app development services with Next.js and React Native."
+    },
+    "benefits": "Benefits",
+    "process": "Our Process",
+    "relatedWork": "Related Work"
+  },
+  "calculator": {
+    "title": "Calculate Service Price",
+    "subtitle": "Select the services you need and get an instant estimate",
+    "tabs": {
+      "videoEditing": "Video Editing",
+      "videoShooting": "Video Shooting",
+      "socialMediaDesign": "Social Media Design"
+    },
+    "selectServices": "Select Services",
+    "parameters": "Parameters",
+    "step1Label": "Choose service",
+    "step2Label": "Configure",
+    "step1Hint": "Select one or more services. You can configure each one afterwards.",
+    "selectedServicesLabel": "Selected services",
+    "configure": "Configure",
+    "backToServices": "Back to services",
+    "configureHint": "Choose the service type and any add-ons",
+    "subTypeLabel": "Service type",
+    "addonsLabel": "Add-ons",
+    "addonsCount": "add-ons",
+    "doneConfiguring": "Done",
+    "duration": {
+      "label": "Duration",
+      "1m": "1 month",
+      "3m": "3 months",
+      "6m": "6 months",
+      "12m": "12 months"
+    },
+    "platforms": {
+      "label": "Number of platforms",
+      "1": "1 platform",
+      "2": "2 platforms",
+      "3": "3+ platforms"
+    },
+    "priceRange": "{min} – {max} AZN",
+    "selectedServices": "Selected services",
+    "totalPrice": "Price estimate",
+    "estimatedTotal": "Estimated total",
+    "getQuote": "Get a Quote",
+    "whatsappCta": "Chat on WhatsApp",
+    "noSelection": "Please select at least one service",
+    "noSelectionHint": "Choose a service on the left",
+    "selectToSeePrice": "Select a service to see the price",
+    "packageDiscount": "Package discount -10%",
+    "saving": "Saving",
+    "discountApplied": "10% discount applied for selecting 2+ services",
+    "priceDisclaimer": "Prices are estimates. Contact us for an exact quote.",
+    "whatsappMessage": "Hello! Services I selected in the calculator: {services}. Estimated price: {price} AZN.",
+    "videoEditing": {
+      "title": "Video Editing",
+      "videoType": "Video Type",
+      "shortVideo": "Short Video (Reels/Shorts)",
+      "longVideo": "Long Video (YouTube)",
+      "basePrice": "Base price",
+      "freeDuration": "free",
+      "videoDuration": "Video Duration",
+      "firstMinuteFree": "First 1 minute free",
+      "next15SecFor3AZN": "Next every 15 seconds for 3 AZN",
+      "first10MinFree": "First 10 minutes free",
+      "next5MinFor6AZN": "Next every 5 minutes for 6 AZN",
+      "includedServices": "Included services",
+      "basicServices": {
+        "editing": "Cutting and editing",
+        "transitions": "Rhythm-appropriate transitions",
+        "basicColor": "Basic color correction",
+        "music": "Music addition",
+        "export1080p": "1080P export",
+        "delivery24h": "24-hour delivery",
+        "separateFiles": "Separate delivery of video and audio files",
+        "oneRevision": "1 revision included",
+        "twoRevisions": "2 revisions included"
+      },
+      "subtitleOptions": "Subtitle Options",
+      "basicSubtitle": "Subtitle addition",
+      "dynamicSubtitle": "Dynamic subtitles (colored, animated)",
+      "soundDesign": "Sound Design",
+      "transitionSounds": "Transition sounds",
+      "cinematicEffects": "Cinematic effects",
+      "ambience": "Ambience",
+      "bassHits": "Bass hits",
+      "motionGraphics": "Motion Graphics / Animation",
+      "logoAnimation": "Logo animation",
+      "infoTexts": "Info texts",
+      "otherServices": "Other Services",
+      "colorGrading": "Professional color correction (Color Grading)",
+      "additionalOptions": "Additional Options",
+      "thumbnailCreation": "Thumbnail creation",
+      "fastDelivery8h": "8-hour delivery",
+      "export4K": "4K export",
+      "presenterSelection": "Presenter (speaker) selection",
+      "shortsFromLong": "Shorts from Long Video",
+      "shortsCount": "shorts",
+      "per1MinShort": "5 AZN per 1-minute short",
+      "extraRevisions": "Extra Revisions",
+      "extraRevision": "extra revision",
+      "perExtraRevision": "3 AZN per extra revision (1 revision included free)",
+      "totalAmount": "Total Amount",
+      "taxIncluded": "* Tax included",
+      "discount": "Discount",
+      "orderNow": "Order Now",
+      "discountCoupon": "Discount Coupon",
+      "enterCouponCode": "Enter coupon code",
+      "applyCoupon": "Apply",
+      "cancelCoupon": "Cancel",
+      "invalidCoupon": "Invalid coupon code!",
+      "professionalTeam": "🚀 Quality results guaranteed with our professional team!",
+      "fileRequirements": "📁 File Requirements",
+      "videoMaterials": "Video materials: MP4, MOV, AVI format",
+      "images": "Images: JPG, PNG (minimum 1920×1080 px)",
+      "logo": "Logo: SVG or PNG (transparent background)",
+      "music": "Music: MP3, WAV format (licensed)",
+      "text": "Text: Word document or Google Docs",
+      "colorCode": "Color code: HEX or RGB format",
+      "faq": "❓ Frequently Asked Questions",
+      "faqQ1": "How many days does video take to complete?",
+      "faqA1": "Standard orders are completed within 24 hours. If you choose rush delivery (8 hours), additional payment is required.",
+      "faqQ2": "In what format is the file delivered?",
+      "faqA2": "Standard delivery is in 1080P MP4 format. Additional payment is available for 4K export.",
+      "faqQ3": "Is there a revision right?",
+      "faqA3": "Yes, 1 free revision is included with each order. Additional revisions are 3 AZN each.",
+      "seconds": "seconds",
+      "minutes": "minutes",
+      "min": "min",
+      "sec": "sec"
+    },
+    "videoShooting": {
+      "title": "Video Shooting",
+      "videoType": "Video Type",
+      "shortVideoShooting": "Short Video Shooting (Reels/Shorts)",
+      "longVideoShooting": "Long Video Shooting (YouTube)",
+      "basePrice": "Base price",
+      "upTo1HourIncluded": "Up to 1 hour shooting included",
+      "shootingDuration": "Shooting Duration",
+      "first1HourIncluded": "First 1 hour included",
+      "nextHourFor25AZN": "Next every hour for 25 AZN",
+      "nextHourFor35AZN": "Next every hour for 35 AZN",
+      "includedServices": "Included services",
+      "basicServices": {
+        "iphoneShooting": "iPhone 17 Pro shooting",
+        "framePlanning": "Frame planning",
+        "basicLighting": "Basic lighting setup",
+        "stableVideo": "Stable video recording",
+        "quality1080p": "1080P video quality",
+        "multipleAngles": "Multiple angles",
+        "stabilizer": "Stabilizer usage",
+        "basicMic": "Basic microphone",
+        "socialFormat": "Social media compatible format",
+        "oneLocation": "1 location shooting",
+        "oneOperator": "1 operator",
+        "twoVideoEdits": "2 video edits (up to 1min each)"
+      },
+      "additionalOptions": "Additional Options",
+      "options": {
+        "4k_shooting": "Professional camera 4K shooting",
+        "cinematic_effects": "Cinematic visual effect adjustments",
+        "professional_lighting": "Professional lighting setup",
+        "rgb_lighting": "RGB lighting effects",
+        "professional_mic": "Professional microphone",
+        "audio_setup": "Audio setup for sound cleaning",
+        "script_preparation": "Shooting script preparation",
+        "video_planning": "Video idea planning",
+        "studio_shooting": "Studio shooting",
+        "extra_location": "Additional location shooting",
+        "same_day_shooting": "Same day shooting",
+        "video_editing": "Shot video editing",
+        "presenter_selection": "Presenter (speaker) selection"
+      },
+      "fileDelivery": "File Delivery",
+      "delivery": {
+        "google_drive": "Google Drive",
+        "wetransfer": "WeTransfer",
+        "ssd_flash": "SSD / Flash card"
+      },
+      "totalAmount": "Total Amount",
+      "taxIncluded": "* Tax included",
+      "orderNow": "Order Now",
+      "professionalTeam": "🚀 Quality results guaranteed with our professional team!",
+      "fileRequirements": "📁 File Requirements",
+      "requirements": {
+        "logoElements": "Logo and brand elements: SVG or PNG format",
+        "transparentBg": "Transparent background preferred",
+        "locationAddress": "Location address",
+        "shootingPurpose": "Shooting purpose (advertising, content, YouTube, etc.)",
+        "targetAudience": "Target audience information"
+      },
+      "faq": "❓ Frequently Asked Questions",
+      "faqQ1": "How many days does shooting take to complete?",
+      "faqA1": "Standard shoots are planned and executed within 2-3 business days after order.",
+      "faqQ2": "What equipment is used for shooting?",
+      "faqA2": "iPhone 17 Pro, professional stabilizer, lighting setup and microphone system are used. You can select professional equipment with additional payment.",
+      "faqQ3": "What is included during shooting?",
+      "faqA3": "Frame planning, basic lighting setup, multiple angles and 2 edited videos of 1 minute each are included.",
+      "minutes": "minutes",
+      "hours": "hours",
+      "min": "min"
+    },
+    "socialMediaDesign": {
+      "title": "Social Media Design",
+      "generalRules": "General Rules",
+      "oneDesignOneContent": "1 design = 1 content",
+      "revisionOneFree": "Revision: 1 time free",
+      "delivery24h": "Delivery: 24 hours (standard)",
+      "platformSelection": "Social Media Platform Selection",
+      "designTypes": "Design Types",
+      "designCount": "Design Count (1-100)",
+      "pieces": "pieces",
+      "additionalServices": "Additional Services",
+      "extraRevisions": "Extra Revisions",
+      "extraRevision": "extra revision",
+      "perExtraRevision": "5 AZN per extra revision (1 design).",
+      "totalAmount": "Total Amount",
+      "taxIncluded": "* Tax included",
+      "discount": "Discount",
+      "discountCoupon": "Discount Coupon",
+      "enterCouponCode": "Enter coupon code",
+      "applyCoupon": "Apply",
+      "cancelCoupon": "Cancel",
+      "invalidCoupon": "Invalid coupon code!",
+      "orderNow": "Order Now",
+      "fileRequirements": "File Requirements",
+      "faq": "Frequently Asked Questions",
+      "platforms": {
+        "instagram": {
+          "content": "Instagram content (1080×1350)",
+          "reels_cover": "Reels video cover design",
+          "story": "Instagram story (1080×1920)",
+          "highlights": "Instagram highlights (selected stories)",
+          "carousel": "Carousel content (5–10 slides)"
+        },
+        "facebook": {
+          "post": "Facebook post image (1200×630)",
+          "ad": "Facebook ad design (1200×628)",
+          "event_cover": "Facebook event cover image (1920×1080)",
+          "cover": "Facebook cover image (851×315)"
+        },
+        "linkedin": {
+          "post": "LinkedIn post (1200×1200)",
+          "banner": "LinkedIn banner (1584×396)",
+          "article_cover": "LinkedIn article cover",
+          "single_ad": "LinkedIn single image ad (1200×627)"
+        },
+        "pinterest": {
+          "carousel_ad": "Carousel Pinterest ad (1000×1500)",
+          "pin": "Pinterest pin design (2:3 ratio)"
+        },
+        "tiktok": {
+          "video_cover": "Video cover design (1080×1920)"
+        },
+        "youtube": {
+          "channel_cover": "Channel cover image (2560×1440)",
+          "thumbnail": "YouTube thumbnail (1280×720)"
+        },
+        "twitter": {
+          "cover": "Cover image (1500×500)",
+          "content": "Content design (1600×900)"
+        }
+      },
+      "services": {
+        "custom_icons": "Custom icons/illustrations",
+        "copywriting": "Copywriting",
+        "template_files": "Design template files (PSD, Canva)",
+        "rush_delivery": "Rush delivery 8 hours"
+      },
+      "packagePrice": "Package price",
+      "perDesign": "(per design)",
+      "fileRequirementsItems": {
+        "visualMaterials": "Visual materials: JPG or PNG format, minimum 1080px or higher quality",
+        "textMaterials": "Text materials: Word document or Google Docs format",
+        "brandElements": "Brand elements: Brand color codes (HEX or RGB), Font names",
+        "logoIdentity": "Logo and identity: SVG (vector) or PNG format, transparent background preferred",
+        "referenceMaterials": "Reference materials: Similar design examples, desired style and visual direction"
+      },
+      "faqItems": {
+        "q1": "How many days does design take to complete?",
+        "a1": "Standard orders are completed within 24 hours. Rush orders are completed within 8 hours.",
+        "q2": "In what format is the file delivered?",
+        "a2": "Delivered in PNG, JPG formats. PSD or Canva templates can also be sent if requested.",
+        "q3": "Do I have revision rights?",
+        "a3": "Yes, you have 1 free revision right for each design."
+      }
+    },
+    "subTypes": {
+      "metaAds": "Meta Ads (Facebook/Instagram)",
+      "googleAds": "Google Ads",
+      "linkedinAds": "LinkedIn Ads",
+      "tiktokAds": "TikTok Ads",
+      "fullAdsPackage": "Full Ads Package (all channels)",
+      "billboardDesign": "Billboard / Outdoor Design",
+      "printMaterials": "Print Materials Design",
+      "mediaPlanning": "Media Planning Consultation",
+      "fullTraditionalCampaign": "Full Traditional Campaign",
+      "smmBasic": "Basic (1 platform, 8 posts/month)",
+      "smmStandard": "Standard (1 platform, 16 posts/month)",
+      "smmPremium": "Premium (2 platforms, 20 posts + reels/month)",
+      "socialTemplates": "Social Media Templates (10 templates)",
+      "bannerPoster": "Banner / Poster Design (per piece)",
+      "graphicRetainer": "Monthly Graphic Retainer (20 designs)",
+      "printDesign": "Print Materials (brochure, catalogue)",
+      "logoAnimation": "Logo Animation",
+      "shortAnimation": "Short Animation (15–30 sec)",
+      "explainerVideo": "Explainer Video (60 sec)",
+      "monthlyMotion": "Monthly Motion Content (4 videos)",
+      "productPhoto": "Product Photography (20 photos)",
+      "corporatePhoto": "Corporate Photo Session",
+      "promoVideo": "Promo Video (30–60 sec)",
+      "corporateVideo": "Corporate Video (2–3 min)",
+      "logoOnly": "Logo Only",
+      "brandIdentity": "Brand Identity (logo + colours + fonts + guidelines)",
+      "fullBrandbook": "Full Brand Book",
+      "naming": "Naming",
+      "websiteCopy": "Website Copy (5 pages)",
+      "seoArticles": "SEO Articles (per article)",
+      "monthlyContent": "Monthly Content (8 articles)",
+      "socialCopy": "Social Media Copy (monthly)",
+      "landingPage": "Landing Page (1 page)",
+      "corporateWebsite": "Corporate Website (5–15 pages)",
+      "ecommerce": "E-commerce Website",
+      "mobileAppSingle": "Mobile App (iOS or Android)",
+      "mobileAppBoth": "Mobile App (iOS + Android)"
+    },
+    "addons": {
+      "weeklyReport": "Weekly Reporting",
+      "landingPageAds": "Landing Page for Ads",
+      "creativeDesign": "Creative Design (monthly)",
+      "extraMaterials": "Extra Materials",
+      "rushDelivery": "Rush Delivery",
+      "paidAdsManagement": "Paid Ads Management",
+      "reelsVideo": "Reels / Video Content",
+      "dailyStories": "Daily Stories",
+      "extraRevisions": "Extra Revision Rounds",
+      "sourceFiles": "Source Files (AI, PSD)",
+      "droneShot": "Drone Footage",
+      "colorGrading": "Colour Grading",
+      "subtitles": "Subtitles",
+      "allFileFormats": "All File Formats",
+      "brandPresentation": "Brand Presentation",
+      "seoOptimization": "SEO Optimisation",
+      "multilingualContent": "Multilingual Content",
+      "extraArticles": "Extra Articles",
+      "cmsIntegration": "CMS Integration",
+      "multilingualSite": "Multilingual Website",
+      "seoPackage": "SEO Package",
+      "monthlyMaintenance": "Monthly Maintenance"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We are ready to discuss your project",
+    "leadForm": {
+      "sectionLabel": "Ready to grow online?",
+      "heading": "Trust your project",
+      "headingAccent": "to us.",
+      "founderName": "Pasha Guliyev",
+      "founderRole": "Founder",
+      "founderStatus": "🟢 Online now",
+      "whatsappCta": "Message on WhatsApp",
+      "formTitle": "Get a free consultation",
+      "formSubtitle": "We respond within 24 hours",
+      "fields": {
+        "name": "Your name",
+        "email": "Email",
+        "phone": "Phone number",
+        "phonePlaceholder": "+994 50 000 00 00",
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "you@company.com",
+        "message": "Tell us about your project in detail...",
+        "serviceLabel": "Which service do you need?",
+        "budgetLabel": "Budget range"
+      },
+      "trustBadges": {
+        "response": "24-hour response",
+        "confidential": "Confidential",
+        "free": "Free consultation"
+      },
+      "services": [
+        "SMM", "SEO", "Website", "Branding",
+        "Graphic Design", "Photo/Video", "Copywriting", "Other"
+      ],
+      "budgets": [
+        "Under ₼500", "₼500–1500", "₼1500–4000",
+        "₼4000–10000", "Over ₼10000"
+      ],
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent!",
+      "successMessage": "We will get back to you shortly.",
+      "errorMessage": "An error occurred. Please try again."
+    },
+    "form": {
+      "fullName": "Full Name",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "you@company.com",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Select a service",
+      "serviceOptions": {
+        "digital-marketing": "Digital Marketing",
+        "traditional-marketing": "Traditional Marketing",
+        "smm": "Social Media Marketing",
+        "graphic-motion-design": "Graphic / Motion Design",
+        "photo-video": "Photo & Video Production",
+        "branding": "Branding",
+        "copywriting": "Copywriting",
+        "web-mobile-dev": "Website / Mobile App",
+        "other": "Other"
+      },
+      "message": "Your Message",
+      "messagePlaceholder": "Please describe your project in detail...",
+      "submit": "Send",
+      "success": "Your message has been received, we will contact you shortly",
+      "error": "An error occurred, please try again",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "workingHours": "Working Hours",
+      "workingHoursValue": "Mon – Fri: 09:00 – 18:00"
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "subtitle": "Articles from the world of digital marketing",
+    "readingTime": "{minutes} min read",
+    "readMore": "Read More",
+    "by": "By:",
+    "publishedAt": "Published:",
+    "categories": {
+      "all": "All",
+      "seo": "SEO",
+      "smm": "SMM",
+      "branding": "Branding",
+      "design": "Design",
+      "copywriting": "Copywriting",
+      "web-dev": "Web Development",
+      "marketing-strategy": "Marketing Strategy"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    },
+    "noArticles": "No articles found in this category"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Projects we have completed",
+    "viewProject": "View Portfolio",
+    "client": "Client",
+    "category": "Category",
+    "tools": "Tools used",
+    "results": "Results",
+    "gallery": "Gallery",
+    "foundCount": "{count} projects found",
+    "filterLabel": "Filter by category",
+    "categories": {
+      "all": "All",
+      "digital-marketing": "SEO / Digital",
+      "traditional-marketing": "Traditional Marketing",
+      "smm": "SMM",
+      "graphic-motion-design": "Graphic Design",
+      "photo-video": "Photo / Video",
+      "branding": "Branding",
+      "copywriting": "Copywriting",
+      "web-mobile-dev": "Website"
+    },
+    "noItems": "No projects found in this category"
+  },
+  "notFound": {
+    "title": "404 — Page Not Found",
+    "subtitle": "The page you are looking for does not exist",
+    "backHome": "Back to Home"
+  },
+  "footer": {
+    "description": "Cradex Agency — your trusted partner in digital marketing, design and technology.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "popup": {
+    "title": "Your competitors are already ahead.",
+    "subtitle": "Every day of delay means a lost customer. Get a free consultation and let's build your strategy together.",
+    "cta": "Write on WhatsApp",
+    "dismiss": "Not interested for now",
+    "whatsappText": "Hello! I'd like to get a free marketing consultation."
+  }
+}
