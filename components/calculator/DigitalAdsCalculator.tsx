@@ -417,7 +417,7 @@ export default function DigitalAdsCalculator() {
             className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#25D366] text-white font-semibold text-sm"
           >
             <MessageCircle size={16} />
-            İndi Sifariş Ver
+            Sifariş verin
           </a>
         </div>
       </div>
@@ -493,7 +493,7 @@ export default function DigitalAdsCalculator() {
               style={{ background: 'linear-gradient(135deg, #25D366, #20bd5a)', boxShadow: '0 0 16px rgba(37,211,102,0.3)' }}
             >
               <MessageCircle size={16} />
-              İndi Sifariş Ver
+              Sifariş verin
             </a>
           </div>
         </div>
