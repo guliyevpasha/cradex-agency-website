@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight, Star, CheckCircle } from 'lucide-react'
 import { fadeInUp, staggerContainer } from '@/lib/animations/variants'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
-import { AnimatedRobot } from '@/components/ui/AnimatedRobot'
+
 
 // ─── Canvas particle animation ────────────────────────────────────────────────
 function TechBackground() {
@@ -191,13 +191,13 @@ export function HeroSection() {
 
       {/* ── Content ── */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Text Content */}
+        <div className="grid grid-cols-1 gap-8 items-center">
+          {/* Text Content */}
           <motion.div
             variants={prefersReduced ? undefined : staggerContainer}
             initial="hidden"
             animate="visible"
-            className="w-full max-w-2xl"
+            className="w-full max-w-2xl mx-auto text-center"
           >
             {/* Trust badges */}
             <motion.div
@@ -270,16 +270,6 @@ export function HeroSection() {
                 <ArrowUpRight size={16} />
               </a>
             </motion.div>
-          </motion.div>
-
-          {/* Right Column - Animated Robot */}
-          <motion.div
-            initial={prefersReduced ? false : { opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="hidden lg:flex justify-center items-center"
-          >
-            <AnimatedRobot />
           </motion.div>
         </div>
 
