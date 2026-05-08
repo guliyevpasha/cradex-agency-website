@@ -376,7 +376,7 @@ export default function DigitalAdsCalculator() {
                             </button>
                           </div>
                         ) : (
-                          <label className="flex items-center">
+                          <label className="flex items-center" onClick={(e) => e.stopPropagation()}>
                             <input
                               type="checkbox"
                               checked={additionalSelections[additionalService.id] > 0}
