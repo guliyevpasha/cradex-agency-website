@@ -248,6 +248,7 @@
     "title": "Hizmet Fiyatını Hesapla",
     "subtitle": "İhtiyaçlarınıza uygun hizmetleri seçin",
     "tabs": {
+      "digitalAds": "Dijital Reklam",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çekimi",
       "socialMediaDesign": "Sosyal Medya Tasarım"

@@ -248,6 +248,7 @@
     "title": "Calculate Service Price",
     "subtitle": "Select the services you need and get an instant estimate",
     "tabs": {
+      "digitalAds": "Digital Advertising",
       "videoEditing": "Video Editing",
       "videoShooting": "Video Shooting",
       "socialMediaDesign": "Social Media Design"
