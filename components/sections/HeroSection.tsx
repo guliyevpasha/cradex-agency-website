@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight, Star, CheckCircle } from 'lucide-react'
 import { fadeInUp, staggerContainer } from '@/lib/animations/variants'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
+import { AnimatedRobot } from '@/components/ui/AnimatedRobot'
 
 // ─── Canvas particle animation ────────────────────────────────────────────────
 function TechBackground() {
@@ -190,91 +191,104 @@ export function HeroSection() {
 
       {/* ── Content ── */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
-        <motion.div
-          variants={prefersReduced ? undefined : staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="w-full max-w-2xl"
-        >
-          {/* Trust badges */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Text Content */}
           <motion.div
-            variants={prefersReduced ? undefined : fadeInUp}
-            className="flex flex-wrap items-center gap-2 mb-5"
+            variants={prefersReduced ? undefined : staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="w-full max-w-2xl"
           >
-            {/* Google rating */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
-              <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shrink-0">
-                <span className="text-[10px] font-bold text-blue-600">G</span>
-              </div>
-              <div className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-1">
-                  <span className="text-white text-xs font-bold leading-none">5.0</span>
-                  <div className="flex">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={9} className="fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none">
-                  {t('googleReviews')}
-                </p>
-              </div>
-            </div>
-
-            {/* Verified partner */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
-              <CheckCircle size={14} className="text-accent-secondary shrink-0" />
-              <div className="flex flex-col gap-0.5">
-                <p className="text-white text-xs font-bold leading-none">{t('verifiedPartner')}</p>
-                <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none mt-0.5">
-                  {t('googleVerified')}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Main heading */}
-          <motion.h1
-            variants={prefersReduced ? undefined : fadeInUp}
-            className="font-display font-bold text-text-primary leading-[1.1] mb-3
-              text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-          >
-            {t('title')}
-          </motion.h1>
-
-          {/* Subtitle — rəqəmsal marketinq CTA */}
-          <motion.p
-            variants={prefersReduced ? undefined : fadeInUp}
-            className="text-text-secondary leading-relaxed mb-8 italic
-              text-base sm:text-lg md:text-xl"
-          >
-            {t('subtitleAccent')}
-          </motion.p>
-
-          {/* CTA button */}
-          <motion.div variants={prefersReduced ? undefined : fadeInUp}>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl
-                bg-gradient-to-r from-accent-primary to-accent-secondary
-                text-white font-semibold text-sm sm:text-base
-                hover:opacity-90 transition-all duration-300
-                shadow-[0_0_24px_rgba(108,99,255,0.5)]"
+            {/* Trust badges */}
+            <motion.div
+              variants={prefersReduced ? undefined : fadeInUp}
+              className="flex flex-wrap items-center gap-2 mb-5"
             >
-              {t('cta')}
-              <ArrowUpRight size={16} />
-            </a>
+              {/* Google rating */}
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
+                <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shrink-0">
+                  <span className="text-[10px] font-bold text-blue-600">G</span>
+                </div>
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex items-center gap-1">
+                    <span className="text-white text-xs font-bold leading-none">5.0</span>
+                    <div className="flex">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} size={9} className="fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none">
+                    {t('googleReviews')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Verified partner */}
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
+                <CheckCircle size={14} className="text-accent-secondary shrink-0" />
+                <div className="flex flex-col gap-0.5">
+                  <p className="text-white text-xs font-bold leading-none">{t('verifiedPartner')}</p>
+                  <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none mt-0.5">
+                    {t('googleVerified')}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Main heading */}
+            <motion.h1
+              variants={prefersReduced ? undefined : fadeInUp}
+              className="font-display font-bold text-text-primary leading-[1.1] mb-3
+                text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+            >
+              {t('title')}
+            </motion.h1>
+
+            {/* Subtitle — rəqəmsal marketinq CTA */}
+            <motion.p
+              variants={prefersReduced ? undefined : fadeInUp}
+              className="text-text-secondary leading-relaxed mb-8 italic
+                text-base sm:text-lg md:text-xl"
+            >
+              {t('subtitleAccent')}
+            </motion.p>
+
+            {/* CTA button */}
+            <motion.div variants={prefersReduced ? undefined : fadeInUp}>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl
+                  bg-gradient-to-r from-accent-primary to-accent-secondary
+                  text-white font-semibold text-sm sm:text-base
+                  hover:opacity-90 transition-all duration-300
+                  shadow-[0_0_24px_rgba(108,99,255,0.5)]"
+              >
+                {t('cta')}
+                <ArrowUpRight size={16} />
+              </a>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Column - Animated Robot */}
+          <motion.div
+            initial={prefersReduced ? false : { opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            <AnimatedRobot />
+          </motion.div>
+        </div>
 
         {/* Social proof — desktop only */}
         <motion.div
           initial={prefersReduced ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="absolute bottom-12 right-6 lg:right-12 hidden lg:block text-right max-w-xs"
+          className="absolute bottom-12 left-6 lg:left-12 hidden lg:block text-left max-w-xs"
         >
           <p className="text-text-secondary text-sm leading-relaxed mb-3">
             {t('socialProof')}<br />
@@ -282,7 +296,7 @@ export function HeroSection() {
               {t('socialProofSub')}
             </span>
           </p>
-          <div className="flex items-center justify-end">
+          <div className="flex items-center justify-start">
             {['#6C63FF', '#00D4FF', '#FF6B6B', '#22C55E'].map((color, i) => (
               <div
                 key={i}

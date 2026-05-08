@@ -94,6 +94,11 @@
       "title": "Müşteri Yorumları",
       "subtitle": "Bizimle çalışan müşterilerimiz ne diyor"
     },
+    "cta": {
+      "title": "Projenizi Başlayalım",
+      "subtitle": "Markanızın dijital dönüşümü için bizimle iletişime geçin ve ücretsiz danışmanlık alın.",
+      "button": "İletişime Geçin"
+    },
     "process": {
       "sectionLabel": "Sürecimiz",
       "title": "Nasıl çalışıyoruz?",

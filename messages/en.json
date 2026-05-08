@@ -94,6 +94,11 @@
       "title": "Client Testimonials",
       "subtitle": "What our clients say about working with us"
     },
+    "cta": {
+      "title": "Let's Start Your Project",
+      "subtitle": "Contact us for your brand's digital transformation and get a free consultation.",
+      "button": "Get In Touch"
+    },
     "process": {
       "sectionLabel": "Our process",
       "title": "How do we work?",
