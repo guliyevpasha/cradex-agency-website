@@ -324,8 +324,14 @@ export function VideoShootingCalculator() {
         {/* Price + CTA (mobile) */}
         <div className="xl:hidden rounded-2xl border border-accent-primary/30 bg-accent-primary/5 p-4 lg:p-5">
           <p className="text-text-muted text-xs mb-1">{t('totalAmount')}</p>
+          {appliedCoupon && (
+            <div className="mb-2">
+              <p className="text-sm text-text-secondary line-through">{totalPrice} AZN</p>
+              <p className="text-xs text-green-400">{t('discount')}: -{appliedCoupon.discount} AZN</p>
+            </div>
+          )}
           <p className="text-3xl font-display font-bold gradient-text mb-4">
-            {totalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
+            {finalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-4">{t('taxIncluded')}</p>
           <a
@@ -354,12 +360,53 @@ export function VideoShootingCalculator() {
         >
           <div className="h-0.5 w-full bg-gradient-to-r from-accent-primary to-accent-secondary rounded mb-4" />
           <p className="text-text-muted text-xs mb-1">{t('totalAmount')}</p>
+          {appliedCoupon && (
+            <div className="mb-2">
+              <p className="text-sm text-text-secondary line-through">{totalPrice} AZN</p>
+              <p className="text-xs text-green-400">{t('discount')}: -{appliedCoupon.discount} AZN</p>
+            </div>
+          )}
           <p className="font-display font-bold gradient-text mb-1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2rem)' }}>
-            {totalPrice}
+            {finalPrice}
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
           <p className="text-text-muted text-[10px] mb-4">{t('professionalTeam')}</p>
+          
+          {/* Coupon Section */}
+          <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
+            <label className="block text-text-muted text-xs font-semibold uppercase tracking-wider mb-2">
+              {t('discountCoupon')}
+            </label>
+            {appliedCoupon ? (
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-green-400 font-medium">{appliedCoupon.code}</span>
+                <button
+                  onClick={removeCoupon}
+                  className="text-xs text-red-400 hover:text-red-300 transition-colors"
+                >
+                  {t('cancelCoupon')}
+                </button>
+              </div>
+            ) : (
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={couponCode}
+                  onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
+                  placeholder={t('enterCouponCode')}
+                  className="flex-1 px-3 py-2 rounded-lg bg-bg-tertiary border border-white/10 text-text-primary text-xs placeholder-text-muted focus:border-accent-primary focus:outline-none"
+                />
+                <button
+                  onClick={applyCoupon}
+                  disabled={!couponCode.trim()}
+                  className="px-3 py-2 rounded-lg bg-accent-primary text-white text-xs font-medium hover:bg-accent-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  {t('applyCoupon')}
+                </button>
+              </div>
+            )}
+          </div>
           
           <div className="space-y-2">
             <a
