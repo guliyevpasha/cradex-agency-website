@@ -549,7 +549,8 @@ export function SocialMediaDesignCalculator() {
           <p className="text-3xl font-display font-bold gradient-text mb-2">
             {finalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
-          <p className="text-text-muted text-xs mb-4">{t('taxIncluded')}</p>
+          <p className="text-text-muted text-xs mb-2">* Vergi ödənişi daxildir</p>
+          <p className="text-text-muted text-xs mb-4">🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!</p>
           
           {/* Mobile Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
@@ -622,7 +623,8 @@ export function SocialMediaDesignCalculator() {
             {finalPrice}
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
-          <p className="text-text-muted text-[10px] mb-4">{t('taxIncluded')}</p>
+          <p className="text-text-muted text-[10px] mb-2">* Vergi ödənişi daxildir</p>
+          <p className="text-text-muted text-[10px] mb-4">🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!</p>
 
           
           {/* Coupon Section */}

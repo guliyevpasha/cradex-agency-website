@@ -409,7 +409,7 @@ export default function DigitalAdsCalculator() {
           <p className="text-3xl font-display font-bold gradient-text mb-4">
             {finalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
-          <p className="text-text-muted text-[10px] mb-4">aylıq ödəniş</p>
+          <p className="text-text-muted text-[10px] mb-4">* Vergi ödənişi daxildir</p>
           <a
             href={`https://wa.me/${whatsappNumber}?text=${msg}`}
             target="_blank"
@@ -446,8 +446,8 @@ export default function DigitalAdsCalculator() {
             {finalPrice}
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
-          <p className="text-text-muted text-[10px] mb-2">aylıq ödəniş</p>
-          <p className="text-text-muted text-[10px] mb-4">Peşəkar komanda ilə</p>
+          <p className="text-text-muted text-[10px] mb-2">* Vergi ödənişi daxildir</p>
+          <p className="text-text-muted text-[10px] mb-4">🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!</p>
           
           {/* Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
