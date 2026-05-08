@@ -463,7 +463,12 @@
       "faqA3": "Kadr planlaması, baza işıq quruluşu, müxtəlif rakurslar və 2 ədəd 1 dəqiqəlik montajlanmış video daxildir.",
       "minutes": "dəqiqə",
       "hours": "saat",
-      "min": "dəq"
+      "min": "dəq",
+      "discount": "Endirim",
+      "discountCoupon": "Endirim Kuponu",
+      "enterCouponCode": "Kupon kodunu daxil edin",
+      "applyCoupon": "Tətbiq et",
+      "cancelCoupon": "Ləğv et"
     },
     "socialMediaDesign": {
       "title": "Sosial Media Dizayn",

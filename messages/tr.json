@@ -420,7 +420,12 @@
       "faqA3": "Kadraj planlaması, temel ışık kurulumu, çeşitli açılar ve 2 adet 1 dakikalık montajlanmış video dahildir.",
       "minutes": "dakika",
       "hours": "saat",
-      "min": "dk"
+      "min": "dk",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal"
     },
     "socialMediaDesign": {
       "title": "Sosyal Medya Tasarım",

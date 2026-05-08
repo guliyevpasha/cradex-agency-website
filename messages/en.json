@@ -439,7 +439,12 @@
       "faqA3": "Frame planning, basic lighting setup, multiple angles and 2 edited videos of 1 minute each are included.",
       "minutes": "minutes",
       "hours": "hours",
-      "min": "min"
+      "min": "min",
+      "discount": "Discount",
+      "discountCoupon": "Discount Coupon",
+      "enterCouponCode": "Enter coupon code",
+      "applyCoupon": "Apply",
+      "cancelCoupon": "Cancel"
     },
     "socialMediaDesign": {
       "title": "Social Media Design",
