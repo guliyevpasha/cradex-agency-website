@@ -317,6 +317,7 @@
       "linkedinAdsName": "LinkedIn Reklamları",
       "linkedinAdsDescription": "LinkedIn B2B reklamları",
       "oneTime": "Tek seferlik",
+      "additionalPayments": "Ek ödemeler",
       "serviceRequirementsItems": {
         "companyInfo": "Şirket bilgileri ve logo",
         "targetAudience": "Hedef kitle bilgileri",

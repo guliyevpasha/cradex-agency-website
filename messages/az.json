@@ -360,6 +360,7 @@
       "linkedinAdsName": "LinkedIn Reklamları",
       "linkedinAdsDescription": "LinkedIn B2B reklamları",
       "oneTime": "Birdəfəlik",
+      "additionalPayments": "Əlavə ödənişlər",
       "serviceRequirementsItems": {
         "companyInfo": "Şirkət məlumatları və logo",
         "targetAudience": "Hədəf auditoriya məlumatları",

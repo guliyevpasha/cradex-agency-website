@@ -336,6 +336,7 @@
       "linkedinAdsName": "LinkedIn Ads",
       "linkedinAdsDescription": "LinkedIn B2B advertising",
       "oneTime": "One-time",
+      "additionalPayments": "Additional payments",
       "serviceRequirementsItems": {
         "companyInfo": "Company information and logo",
         "targetAudience": "Target audience information",

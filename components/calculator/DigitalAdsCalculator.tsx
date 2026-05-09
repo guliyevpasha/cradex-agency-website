@@ -252,7 +252,7 @@ export default function DigitalAdsCalculator() {
   }).join(', ')
   
   const msg = encodeURIComponent(
-    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${totals.oneTime > 0 ? `${t('oneTime')}: ${totals.oneTime} AZN. ` : ''}${t('monthly')}: ${finalMonthlyPrice} AZN. ${t('totalAmount')}: ${finalTotalPrice} AZN.`
+    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${totals.oneTime > 0 ? `${t('additionalPayments')}: ${totals.oneTime} AZN. ` : ''}${t('monthly')}: ${finalMonthlyPrice} AZN. ${t('totalAmount')}: ${finalTotalPrice} AZN.`
   )
 
   return (
@@ -406,7 +406,7 @@ export default function DigitalAdsCalculator() {
           )}
           {totals.oneTime > 0 && (
             <p className="text-sm text-text-secondary mb-1">
-              {t('oneTime')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+              {t('additionalPayments')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
             </p>
           )}
           <p className="text-sm text-text-secondary mb-1">
@@ -450,7 +450,7 @@ export default function DigitalAdsCalculator() {
           )}
           {totals.oneTime > 0 && (
             <p className="text-sm text-text-secondary mb-1">
-              {t('oneTime')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+              {t('additionalPayments')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
             </p>
           )}
           <p className="text-sm text-text-secondary mb-2">

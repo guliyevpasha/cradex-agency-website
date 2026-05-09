@@ -317,6 +317,7 @@
       "linkedinAdsName": "LinkedIn Реклама",
       "linkedinAdsDescription": "LinkedIn B2B реклама",
       "oneTime": "Единоразово",
+      "additionalPayments": "Дополнительные платежи",
       "serviceRequirementsItems": {
         "companyInfo": "Информация о компании и логотип",
         "targetAudience": "Информация о целевой аудитории",
