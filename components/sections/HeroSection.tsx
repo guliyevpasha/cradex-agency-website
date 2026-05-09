@@ -202,7 +202,7 @@ export function HeroSection() {
             {/* Trust badges */}
             <motion.div
               variants={prefersReduced ? undefined : fadeInUp}
-              className="flex flex-wrap items-center gap-2 mb-5"
+              className="flex flex-wrap items-center gap-2 mb-5 justify-start"
             >
               {/* Google rating */}
               <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
@@ -240,7 +240,7 @@ export function HeroSection() {
             <motion.h1
               variants={prefersReduced ? undefined : fadeInUp}
               className="font-display font-bold text-text-primary leading-[1.1] mb-3
-                text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-left"
             >
               {t('title')}
             </motion.h1>
@@ -249,7 +249,7 @@ export function HeroSection() {
             <motion.p
               variants={prefersReduced ? undefined : fadeInUp}
               className="text-text-secondary leading-relaxed mb-8 italic
-                text-base sm:text-lg md:text-xl"
+                text-base sm:text-lg md:text-xl text-left"
             >
               {t('subtitleAccent')}
             </motion.p>
