@@ -272,15 +272,20 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Social Proof */}
+          {/* Right Column - Social Proof at Bottom */}
           <motion.div
             initial={prefersReduced ? false : { opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="hidden lg:flex justify-center items-center"
+            className="hidden lg:flex justify-end items-end h-full"
           >
-            {/* Social proof moved to right column */}
-            <div className="text-right max-w-xs">
+            {/* Social proof positioned at bottom right */}
+            <motion.div
+              initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="text-right max-w-xs"
+            >
               <p className="text-text-secondary text-sm leading-relaxed mb-3">
                 {t('socialProof')}<br />
                 <span className="text-text-muted text-xs">
@@ -298,7 +303,7 @@ export function HeroSection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
