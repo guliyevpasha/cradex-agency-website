@@ -191,13 +191,13 @@ export function HeroSection() {
 
       {/* ── Content ── */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
-        <div className="grid grid-cols-1 gap-8 items-center">
-          {/* Text Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Text Content */}
           <motion.div
             variants={prefersReduced ? undefined : staggerContainer}
             initial="hidden"
             animate="visible"
-            className="w-full max-w-2xl mx-auto text-center"
+            className="w-full max-w-2xl"
           >
             {/* Trust badges */}
             <motion.div
@@ -270,6 +270,19 @@ export function HeroSection() {
                 <ArrowUpRight size={16} />
               </a>
             </motion.div>
+          </motion.div>
+
+          {/* Right Column - Empty Space */}
+          <motion.div
+            initial={prefersReduced ? false : { opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            {/* Empty space where robot was - can be used for future content */}
+            <div className="w-80 h-80 flex items-center justify-center">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 opacity-20" />
+            </div>
           </motion.div>
         </div>
 
