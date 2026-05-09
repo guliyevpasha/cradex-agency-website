@@ -272,45 +272,37 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Empty Space */}
+          {/* Right Column - Social Proof */}
           <motion.div
             initial={prefersReduced ? false : { opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className="hidden lg:flex justify-center items-center"
           >
-            {/* Empty space where robot was - can be used for future content */}
-            <div className="w-80 h-80 flex items-center justify-center">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 opacity-20" />
+            {/* Social proof moved to right column */}
+            <div className="text-right max-w-xs">
+              <p className="text-text-secondary text-sm leading-relaxed mb-3">
+                {t('socialProof')}<br />
+                <span className="text-text-muted text-xs">
+                  {t('socialProofSub')}
+                </span>
+              </p>
+              <div className="flex items-center justify-end">
+                {['#6C63FF', '#00D4FF', '#FF6B6B', '#22C55E'].map((color, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 rounded-full border-2 border-bg-primary flex items-center justify-center text-sm font-bold text-white"
+                    style={{ backgroundColor: color, marginLeft: i > 0 ? '-8px' : '0' }}
+                  >
+                    {['E', 'L', 'R', 'N'][i]}
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Social proof — desktop only */}
-        <motion.div
-          initial={prefersReduced ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="absolute bottom-12 left-6 lg:left-12 hidden lg:block text-left max-w-xs"
-        >
-          <p className="text-text-secondary text-sm leading-relaxed mb-3">
-            {t('socialProof')}<br />
-            <span className="text-text-muted text-xs">
-              {t('socialProofSub')}
-            </span>
-          </p>
-          <div className="flex items-center justify-start">
-            {['#6C63FF', '#00D4FF', '#FF6B6B', '#22C55E'].map((color, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 rounded-full border-2 border-bg-primary flex items-center justify-center text-sm font-bold text-white"
-                style={{ backgroundColor: color, marginLeft: i > 0 ? '-8px' : '0' }}
-              >
-                {['E', 'L', 'R', 'N'][i]}
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Social proof section removed from here - moved to right column */}
       </div>
       {/* Bottom fade — seamless transition to StatsSection */}
       <div
