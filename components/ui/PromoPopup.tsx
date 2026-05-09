@@ -53,132 +53,119 @@ export function PromoPopup() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="popup-title"
-            initial={{ opacity: 0, scale: 0.85, y: 32 }}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ type: 'spring', stiffness: 280, damping: 24 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className="fixed inset-0 z-[91] flex items-center justify-center p-4 pointer-events-none"
           >
-            <div className="relative w-full max-w-[420px] pointer-events-auto">
+            <div className="relative w-full max-w-md pointer-events-auto">
 
-              {/* Glow effect behind card */}
+              {/* Card with animated gradient background */}
               <div
-                className="absolute -inset-1 rounded-3xl opacity-60 blur-xl pointer-events-none"
-                style={{ background: 'linear-gradient(135deg, rgba(108,99,255,0.4), rgba(0,212,255,0.3))' }}
-              />
-
-              {/* Card */}
-              <div
-                className="relative rounded-3xl overflow-hidden"
+                className="relative rounded-3xl overflow-hidden shadow-2xl"
                 style={{
-                  background: 'linear-gradient(160deg, #0f0f1e 0%, #13132a 100%)',
-                  border: '1px solid rgba(108,99,255,0.3)',
-                  boxShadow: '0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05) inset',
+                  background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                  border: '1px solid rgba(255,255,255,0.1)',
                 }}
               >
-                {/* Top gradient bar */}
-                <div className="h-1 w-full bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary" />
+                {/* Animated gradient overlay */}
+                <motion.div
+                  className="absolute inset-0 opacity-30"
+                  animate={{
+                    background: [
+                      'linear-gradient(135deg, rgba(108,99,255,0.3) 0%, rgba(0,212,255,0.3) 100%)',
+                      'linear-gradient(135deg, rgba(0,212,255,0.3) 0%, rgba(108,99,255,0.3) 100%)',
+                      'linear-gradient(135deg, rgba(108,99,255,0.3) 0%, rgba(0,212,255,0.3) 100%)',
+                    ],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
 
                 {/* Close button */}
                 <button
                   onClick={dismiss}
                   aria-label="Bağla"
-                  className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
+                  className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all z-10 group"
                 >
-                  <X size={14} className="text-white/70" />
+                  <X size={16} className="text-white/70 group-hover:text-white transition-colors" />
                 </button>
 
                 {/* Content */}
-                <div className="px-6 pt-7 pb-6 sm:px-8 sm:pt-8 sm:pb-7">
+                <div className="relative px-8 pt-10 pb-8 text-center">
 
-                  {/* Icon + urgency badge */}
-                  <div className="flex items-start justify-between mb-5">
-                    <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
-                      style={{
-                        background: 'linear-gradient(135deg, #6C63FF, #00D4FF)',
-                        boxShadow: '0 0 28px rgba(108,99,255,0.5)',
-                      }}
-                    >
-                      <TrendingUp size={26} className="text-white" />
-                    </div>
-                    {/* Urgency pill */}
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-500/15 border border-red-500/30">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                      <span className="text-red-400 text-xs font-semibold">Məhdud təklif</span>
-                    </div>
-                  </div>
+                  {/* Logo/Icon */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                    className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #6C63FF, #00D4FF)',
+                      boxShadow: '0 8px 32px rgba(108,99,255,0.4)',
+                    }}
+                  >
+                    <TrendingUp size={32} className="text-white" />
+                  </motion.div>
 
                   {/* Heading */}
-                  <h2
+                  <motion.h2
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
                     id="popup-title"
-                    className="text-white font-display font-bold text-xl sm:text-2xl leading-tight mb-3"
+                    className="text-white font-display font-bold text-2xl leading-tight mb-3"
                   >
                     {t('title')}
-                  </h2>
+                  </motion.h2>
 
                   {/* Subtitle */}
-                  <p className="text-white/55 text-sm leading-relaxed mb-6">
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="text-white/60 text-sm leading-relaxed mb-8"
+                  >
                     {t('subtitle')}
-                  </p>
-
-                  {/* Trust badges */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center gap-1.5">
-                      <Clock size={13} className="text-accent-secondary shrink-0" />
-                      <span className="text-white/50 text-xs">15 dəqiqədə cavab</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Shield size={13} className="text-accent-secondary shrink-0" />
-                      <span className="text-white/50 text-xs">Pulsuz məsləhət</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-yellow-400 text-xs">★★★★★</span>
-                      <span className="text-white/50 text-xs">5.0</span>
-                    </div>
-                  </div>
+                  </motion.p>
 
                   {/* WhatsApp CTA */}
-                  <a
+                  <motion.a
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={dismiss}
-                    className="flex items-center justify-center gap-2.5 w-full py-4 rounded-xl text-white font-bold text-sm sm:text-base transition-all duration-300"
+                    className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl text-white font-bold text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                     style={{
                       background: 'linear-gradient(135deg, #25D366, #20bd5a)',
-                      boxShadow: '0 0 24px rgba(37,211,102,0.4), 0 4px 16px rgba(0,0,0,0.3)',
+                      boxShadow: '0 8px 32px rgba(37,211,102,0.4)',
                     }}
                   >
-                    <MessageCircle size={20} />
+                    <MessageCircle size={22} />
                     {t('cta')}
-                  </a>
-
-                  {/* Social proof */}
-                  <div className="flex items-center justify-center gap-2 mt-4 mb-1">
-                    <div className="flex -space-x-2">
-                      {['#6C63FF', '#00D4FF', '#FF6B6B', '#22C55E'].map((color, i) => (
-                        <div
-                          key={i}
-                          className="w-6 h-6 rounded-full border-2 border-[#13132a] flex items-center justify-center text-[9px] font-bold text-white"
-                          style={{ backgroundColor: color }}
-                        >
-                          {['E', 'L', 'R', 'N'][i]}
-                        </div>
-                      ))}
-                    </div>
-                    <span className="text-white/40 text-xs">100+ müştəri bizi seçdi</span>
-                  </div>
+                  </motion.a>
 
                   {/* Dismiss */}
-                  <div className="text-center mt-3">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="text-center mt-6"
+                  >
                     <button
                       onClick={dismiss}
-                      className="text-white/25 hover:text-white/50 text-xs transition-colors"
+                      className="text-white/30 hover:text-white/60 text-sm transition-colors"
                     >
                       {t('dismiss')}
                     </button>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
