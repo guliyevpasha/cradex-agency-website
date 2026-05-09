@@ -24,8 +24,21 @@ function PortfolioPreviewClient({ items }: { items: PortfolioItem[] }) {
   const locale = useLocale()
 
   return (
-    <section className="py-20 bg-bg-secondary/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-bg-secondary/50 relative">
+      {/* Diagonal grid background */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `
+            linear-gradient(45deg, currentColor 1px, transparent 1px),
+            linear-gradient(-45deg, currentColor 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 20px 20px',
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal animation="fadeInUp" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
             <h2 className="text-display-lg font-display font-bold text-text-primary mb-3">
