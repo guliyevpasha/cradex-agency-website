@@ -5,7 +5,7 @@ import { X, MessageCircle, TrendingUp, Clock, Shield } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 const STORAGE_KEY = 'cradex_popup_dismissed'
-const DELAY_MS = 4000
+const DELAY_MS = 2000 // 2 saniyə (test üçün azaldıldı)
 const RESHOW_DAYS = 3
 
 export function PromoPopup() {
