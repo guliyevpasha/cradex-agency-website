@@ -49,6 +49,9 @@ const AD_SERVICES: AdService[] = [
       { id: 'meta_reels', name: 'Reels montajı', price: 40, type: 'slider', min: 1, max: 10 },
       { id: 'meta_motion', name: 'Motion dizayn reklamı', price: 70, type: 'slider', min: 1, max: 10 },
       { id: 'meta_text', name: 'Reklam üçün mətn yazılması', price: 30, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_whatsapp_catalog', name: 'WhatsApp kataloq reklamı', price: 50, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_ecommerce_catalog', name: 'E-ticarət kataloq reklamı', price: 100, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_software_ad', name: 'Proqram təminatının reklamı', price: 100, type: 'fixed' },
       { id: 'meta_pixel', name: 'Meta Pixel qurulması', price: 120, type: 'fixed' },
       { id: 'meta_api', name: 'Conversion API inteqrasiyası', price: 180, type: 'fixed' },
       { id: 'meta_dm', name: 'DM cavablandırma xidməti', price: 250, type: 'monthly' },
@@ -168,10 +171,10 @@ export default function DigitalAdsCalculator() {
   }
 
   const calculateTotal = () => {
-    let total = 0
+    let oneTimeTotal = 0
     let monthlyTotal = 0
 
-    // Əsas xidmətlər
+    // Əsas xidmətlər (aylıq)
     selectedServices.forEach(serviceId => {
       const service = AD_SERVICES.find(s => s.id === serviceId)
       if (service) {
@@ -179,35 +182,42 @@ export default function DigitalAdsCalculator() {
       }
     })
 
-    // Əlavə xidmətlər
+    // Əlavə xidmətlər - DÜZƏLDİLDİ: İndi qiymətlər əlavə olunur
     Object.entries(additionalSelections).forEach(([serviceId, quantity]) => {
       if (quantity > 0) {
         AD_SERVICES.forEach(service => {
           const additionalService = service.additionalServices.find(as => as.id === serviceId)
           if (additionalService) {
             if (additionalService.type === 'monthly') {
+              // Aylıq xidmətlər
               monthlyTotal += additionalService.price * quantity
-            } else {
-              total += additionalService.price * quantity
+            } else if (additionalService.type === 'slider') {
+              // Slider xidmətlər (birdəfəlik)
+              oneTimeTotal += additionalService.price * quantity
+            } else if (additionalService.type === 'fixed') {
+              // Fixed xidmətlər (birdəfəlik)
+              oneTimeTotal += additionalService.price
             }
           }
         })
       }
     })
 
-    return { oneTime: total, monthly: monthlyTotal }
+    return { oneTime: oneTimeTotal, monthly: monthlyTotal, total: oneTimeTotal + monthlyTotal }
   }
 
   const totals = calculateTotal()
 
-  // Apply coupon discount
+  // Apply coupon discount (yalnız aylıq qiymətə tətbiq olunur)
   let discountAmount = 0
-  let finalPrice = totals.monthly
+  let finalMonthlyPrice = totals.monthly
+  let finalTotalPrice = totals.total
   
   if (appliedCoupon) {
     if (appliedCoupon.discount > 0) {
       discountAmount = appliedCoupon.discount
-      finalPrice = totals.monthly - discountAmount
+      finalMonthlyPrice = totals.monthly - discountAmount
+      finalTotalPrice = totals.oneTime + finalMonthlyPrice
     }
   }
 
@@ -240,7 +250,7 @@ export default function DigitalAdsCalculator() {
   }).join(', ')
   
   const msg = encodeURIComponent(
-    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalPrice} AZN (${t('monthly')}).`
+    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${totals.oneTime > 0 ? `Birdəfəlik: ${totals.oneTime} AZN. ` : ''}${t('monthly')}: ${finalMonthlyPrice} AZN. ${t('totalAmount')}: ${finalTotalPrice} AZN.`
   )
 
   return (
@@ -388,12 +398,20 @@ export default function DigitalAdsCalculator() {
           <p className="text-text-muted text-xs mb-1">{t('totalAmount')}</p>
           {appliedCoupon && (
             <div className="mb-2">
-              <p className="text-sm text-text-secondary line-through">{totals.monthly} AZN</p>
+              <p className="text-sm text-text-secondary line-through">{totals.total} AZN</p>
               <p className="text-xs text-green-400">{t('discount')}: -{appliedCoupon.discount} AZN</p>
             </div>
           )}
+          {totals.oneTime > 0 && (
+            <p className="text-sm text-text-secondary mb-1">
+              Birdəfəlik: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+            </p>
+          )}
+          <p className="text-sm text-text-secondary mb-1">
+            Aylıq: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
+          </p>
           <p className="text-3xl font-display font-bold gradient-text mb-4">
-            {finalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
+            {finalTotalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-4">{t('taxIncluded')}</p>
           <a
@@ -424,12 +442,20 @@ export default function DigitalAdsCalculator() {
           <p className="text-text-muted text-xs mb-1">{t('totalAmount')}</p>
           {appliedCoupon && (
             <div className="mb-2">
-              <p className="text-sm text-text-secondary line-through">{totals.monthly} AZN</p>
+              <p className="text-sm text-text-secondary line-through">{totals.total} AZN</p>
               <p className="text-xs text-green-400">{t('discount')}: -{appliedCoupon.discount} AZN</p>
             </div>
           )}
+          {totals.oneTime > 0 && (
+            <p className="text-sm text-text-secondary mb-1">
+              Birdəfəlik: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+            </p>
+          )}
+          <p className="text-sm text-text-secondary mb-2">
+            Aylıq: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
+          </p>
           <p className="font-display font-bold gradient-text mb-1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2rem)' }}>
-            {finalPrice}
+            {finalTotalPrice}
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
