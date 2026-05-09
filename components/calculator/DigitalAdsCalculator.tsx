@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Facebook, Instagram, Search, Video, Linkedin, Plus, Minus, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
@@ -28,113 +28,113 @@ interface AdditionalService {
 const AD_SERVICES: AdService[] = [
   {
     id: 'meta',
-    name: 'Meta Reklamları (Facebook & Instagram)',
+    name: 'metaAdsName',
     price: 350,
     icon: <Facebook className="w-6 h-6" />,
-    description: 'Facebook və Instagram reklamları',
+    description: 'metaAdsDescription',
     includes: [
-      'Meta Business Manager qurulması',
-      'Reklam hesabının yaradılması',
-      'Pixel bağlantısı',
-      '1 reklam kampaniyası',
-      'Auditoriya hədəflənməsi',
-      '3 reklam kreativi (video və ya şəkil)',
-      'Reklam mətnlərinin yazılması',
-      'Gündəlik optimizasiya',
-      'Aylıq hesabat'
+      'metaIncludes.businessManager',
+      'metaIncludes.adAccount',
+      'metaIncludes.pixelSetup',
+      'metaIncludes.campaign',
+      'metaIncludes.targeting',
+      'metaIncludes.creatives',
+      'metaIncludes.adCopy',
+      'metaIncludes.optimization',
+      'metaIncludes.report'
     ],
     additionalServices: [
-      { id: 'meta_campaign', name: 'Əlavə reklam kampaniyası', price: 80, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_creative', name: 'Əlavə reklam kreativi', price: 25, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_reels', name: 'Reels montajı', price: 40, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_motion', name: 'Motion dizayn reklamı', price: 70, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_text', name: 'Reklam üçün mətn yazılması', price: 30, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_whatsapp_catalog', name: 'WhatsApp kataloq reklamı', price: 50, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_ecommerce_catalog', name: 'E-ticarət kataloq reklamı', price: 100, type: 'slider', min: 1, max: 10 },
-      { id: 'meta_software_ad', name: 'Proqram təminatının reklamı', price: 100, type: 'fixed' },
-      { id: 'meta_pixel', name: 'Meta Pixel qurulması', price: 120, type: 'fixed' },
-      { id: 'meta_api', name: 'Conversion API inteqrasiyası', price: 180, type: 'fixed' },
-      { id: 'meta_dm', name: 'DM cavablandırma xidməti', price: 250, type: 'monthly' },
-      { id: 'meta_influencer', name: 'Influencer əməkdaşlıqlarının idarəsi', price: 150, type: 'fixed' },
-      { id: 'meta_ab', name: 'A/B test optimizasiyası', price: 100, type: 'fixed' }
+      { id: 'meta_campaign', name: 'metaAdditional.extraCampaign', price: 80, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_creative', name: 'metaAdditional.extraCreative', price: 25, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_reels', name: 'metaAdditional.reelsEditing', price: 40, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_motion', name: 'metaAdditional.motionDesign', price: 70, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_text', name: 'metaAdditional.adCopywriting', price: 30, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_whatsapp_catalog', name: 'metaAdditional.whatsappCatalog', price: 50, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_ecommerce_catalog', name: 'metaAdditional.ecommerceCatalog', price: 100, type: 'slider', min: 1, max: 10 },
+      { id: 'meta_software_ad', name: 'metaAdditional.softwareAd', price: 100, type: 'fixed' },
+      { id: 'meta_pixel', name: 'metaAdditional.pixelSetup', price: 120, type: 'fixed' },
+      { id: 'meta_api', name: 'metaAdditional.conversionApi', price: 180, type: 'fixed' },
+      { id: 'meta_dm', name: 'metaAdditional.dmService', price: 250, type: 'monthly' },
+      { id: 'meta_influencer', name: 'metaAdditional.influencerManagement', price: 150, type: 'fixed' },
+      { id: 'meta_ab', name: 'metaAdditional.abTesting', price: 100, type: 'fixed' }
     ]
   },
   {
     id: 'google',
-    name: 'Google Reklamları',
+    name: 'googleAdsName',
     price: 450,
     icon: <Search className="w-6 h-6" />,
-    description: 'Google Ads və Search reklamları',
+    description: 'googleAdsDescription',
     includes: [
-      'Google Ads hesabının qurulması',
-      'Search reklam kampaniyası',
-      'Açar söz araşdırması',
-      'Mənfi açar söz optimizasiyası',
-      '2 reklam qrupu',
-      'Reklam mətnlərinin hazırlanması',
-      'Conversion tracking',
-      'Aylıq optimizasiya və hesabat'
+      'googleIncludes.accountSetup',
+      'googleIncludes.searchCampaign',
+      'googleIncludes.keywordResearch',
+      'googleIncludes.negativeKeywords',
+      'googleIncludes.adGroups',
+      'googleIncludes.adCopy',
+      'googleIncludes.conversionTracking',
+      'googleIncludes.monthlyReport'
     ],
     additionalServices: [
-      { id: 'google_banner', name: 'Display reklam bannerləri', price: 40, type: 'slider', min: 1, max: 10 },
-      { id: 'google_tag', name: 'Google Tag Manager qurulması', price: 120, type: 'fixed' },
-      { id: 'google_conversion', name: 'Conversion tracking', price: 150, type: 'fixed' },
-      { id: 'google_analytics', name: 'Google Analytics 4 inteqrasiyası', price: 180, type: 'fixed' },
-      { id: 'google_youtube', name: 'YouTube reklam setup', price: 250, type: 'fixed' },
-      { id: 'google_remarketing', name: 'Remarketing kampaniyası', price: 140, type: 'fixed' },
-      { id: 'google_keywords', name: 'Açar söz araşdırması (geniş)', price: 100, type: 'fixed' },
-      { id: 'google_landing', name: 'Landing page analizi', price: 150, type: 'fixed' },
-      { id: 'google_seo', name: 'SEO audit', price: 300, type: 'fixed' }
+      { id: 'google_banner', name: 'googleAdditional.displayBanners', price: 40, type: 'slider', min: 1, max: 10 },
+      { id: 'google_tag', name: 'googleAdditional.tagManager', price: 120, type: 'fixed' },
+      { id: 'google_conversion', name: 'googleAdditional.conversionTracking', price: 150, type: 'fixed' },
+      { id: 'google_analytics', name: 'googleAdditional.analytics4', price: 180, type: 'fixed' },
+      { id: 'google_youtube', name: 'googleAdditional.youtubeSetup', price: 250, type: 'fixed' },
+      { id: 'google_remarketing', name: 'googleAdditional.remarketingCampaign', price: 140, type: 'fixed' },
+      { id: 'google_keywords', name: 'googleAdditional.keywordResearch', price: 100, type: 'fixed' },
+      { id: 'google_landing', name: 'googleAdditional.landingPageAnalysis', price: 150, type: 'fixed' },
+      { id: 'google_seo', name: 'googleAdditional.seoAudit', price: 300, type: 'fixed' }
     ]
   },
   {
     id: 'tiktok',
-    name: 'TikTok Reklamları',
+    name: 'tiktokAdsName',
     price: 400,
     icon: <Video className="w-6 h-6" />,
-    description: 'TikTok Ads və video reklamları',
+    description: 'tiktokAdsDescription',
     includes: [
-      'TikTok Ads hesabının qurulması',
-      'Pixel inteqrasiyası',
-      '1 reklam kampaniyası',
-      'Auditoriya analizi',
-      '3 video kreativ',
-      'Reklam optimizasiyası',
-      'Aylıq hesabat'
+      'tiktokIncludes.accountSetup',
+      'tiktokIncludes.pixelIntegration',
+      'tiktokIncludes.campaign',
+      'tiktokIncludes.audienceAnalysis',
+      'tiktokIncludes.videoCreatives',
+      'tiktokIncludes.optimization',
+      'tiktokIncludes.monthlyReport'
     ],
     additionalServices: [
-      { id: 'tiktok_video', name: 'TikTok video montajı', price: 50, type: 'slider', min: 1, max: 10 },
-      { id: 'tiktok_ugc', name: 'UGC kontent ssenarisi', price: 80, type: 'slider', min: 1, max: 10 },
-      { id: 'tiktok_viral', name: 'Viral kontent planlaması', price: 120, type: 'fixed' },
-      { id: 'tiktok_pixel', name: 'TikTok Pixel qurulması', price: 120, type: 'fixed' },
-      { id: 'tiktok_creator', name: 'Creator/influencer tapılması', price: 150, type: 'fixed' },
-      { id: 'tiktok_trend', name: 'Trend araşdırması', price: 70, type: 'fixed' },
-      { id: 'tiktok_shop', name: 'TikTok shop inteqrasiyası', price: 250, type: 'fixed' }
+      { id: 'tiktok_video', name: 'tiktokAdditional.videoEditing', price: 50, type: 'slider', min: 1, max: 10 },
+      { id: 'tiktok_ugc', name: 'tiktokAdditional.ugcScript', price: 80, type: 'slider', min: 1, max: 10 },
+      { id: 'tiktok_viral', name: 'tiktokAdditional.viralPlanning', price: 120, type: 'fixed' },
+      { id: 'tiktok_pixel', name: 'tiktokAdditional.pixelSetup', price: 120, type: 'fixed' },
+      { id: 'tiktok_creator', name: 'tiktokAdditional.creatorFinding', price: 150, type: 'fixed' },
+      { id: 'tiktok_trend', name: 'tiktokAdditional.trendResearch', price: 70, type: 'fixed' },
+      { id: 'tiktok_shop', name: 'tiktokAdditional.shopIntegration', price: 250, type: 'fixed' }
     ]
   },
   {
     id: 'linkedin',
-    name: 'LinkedIn Reklamları',
+    name: 'linkedinAdsName',
     price: 500,
     icon: <Linkedin className="w-6 h-6" />,
-    description: 'LinkedIn B2B reklamları',
+    description: 'linkedinAdsDescription',
     includes: [
-      'LinkedIn Campaign Manager qurulması',
-      'B2B auditoriya hədəflənməsi',
-      'Potensial Müştəri Toplama Kampaniyası',
-      'Sponsorlu post reklamları',
-      'Reklam mətnlərinin hazırlanması',
-      'Aylıq optimizasiya',
-      'Hesabat təqdimatı'
+      'linkedinIncludes.campaignManager',
+      'linkedinIncludes.b2bTargeting',
+      'linkedinIncludes.leadGenCampaign',
+      'linkedinIncludes.sponsoredPosts',
+      'linkedinIncludes.adCopy',
+      'linkedinIncludes.monthlyOptimization',
+      'linkedinIncludes.reportPresentation'
     ],
     additionalServices: [
-      { id: 'linkedin_optimization', name: 'LinkedIn şirkət səhifəsinin optimizasiyası', price: 180, type: 'fixed' },
-      { id: 'linkedin_b2b', name: 'B2B Potensial Müştəri Strategiyası', price: 250, type: 'fixed' },
-      { id: 'linkedin_text', name: 'Korporativ mətn', price: 50, type: 'fixed' },
-      { id: 'linkedin_employer', name: 'Şirkətin İşəgötürən İmic Strategiyası', price: 400, type: 'fixed' },
-      { id: 'linkedin_form', name: 'Potensial Müştəri Formasının Qurulması', price: 120, type: 'fixed' },
-      { id: 'linkedin_ceo', name: 'CEO Şəxsi Brend İdarəçiliyi', price: 500, type: 'monthly' },
-      { id: 'linkedin_content', name: 'LinkedIn kontent planı', price: 200, type: 'fixed' }
+      { id: 'linkedin_optimization', name: 'linkedinAdditional.pageOptimization', price: 180, type: 'fixed' },
+      { id: 'linkedin_b2b', name: 'linkedinAdditional.b2bLeadStrategy', price: 250, type: 'fixed' },
+      { id: 'linkedin_text', name: 'linkedinAdditional.corporateCopy', price: 50, type: 'fixed' },
+      { id: 'linkedin_employer', name: 'linkedinAdditional.employerBranding', price: 400, type: 'fixed' },
+      { id: 'linkedin_form', name: 'linkedinAdditional.leadFormSetup', price: 120, type: 'fixed' },
+      { id: 'linkedin_ceo', name: 'linkedinAdditional.ceoPersonalBrand', price: 500, type: 'monthly' },
+      { id: 'linkedin_content', name: 'linkedinAdditional.contentPlan', price: 200, type: 'fixed' }
     ]
   }
 ]
@@ -149,6 +149,8 @@ const COUPON_CODES = [
 
 export default function DigitalAdsCalculator() {
   const t = useTranslations('calculator.digitalAds')
+  const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
+  
   const [selectedServices, setSelectedServices] = useState<string[]>([])
   const [additionalSelections, setAdditionalSelections] = useState<Record<string, number>>({})
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -174,7 +176,7 @@ export default function DigitalAdsCalculator() {
     let oneTimeTotal = 0
     let monthlyTotal = 0
 
-    // Əsas xidmətlər (aylıq)
+    // Main services (monthly)
     selectedServices.forEach(serviceId => {
       const service = AD_SERVICES.find(s => s.id === serviceId)
       if (service) {
@@ -182,20 +184,20 @@ export default function DigitalAdsCalculator() {
       }
     })
 
-    // Əlavə xidmətlər - DÜZƏLDİLDİ: İndi qiymətlər əlavə olunur
+    // Additional services
     Object.entries(additionalSelections).forEach(([serviceId, quantity]) => {
       if (quantity > 0) {
         AD_SERVICES.forEach(service => {
           const additionalService = service.additionalServices.find(as => as.id === serviceId)
           if (additionalService) {
             if (additionalService.type === 'monthly') {
-              // Aylıq xidmətlər
+              // Monthly services
               monthlyTotal += additionalService.price * quantity
             } else if (additionalService.type === 'slider') {
-              // Slider xidmətlər (birdəfəlik)
+              // Slider services (one-time)
               oneTimeTotal += additionalService.price * quantity
             } else if (additionalService.type === 'fixed') {
-              // Fixed xidmətlər (birdəfəlik)
+              // Fixed services (one-time)
               oneTimeTotal += additionalService.price
             }
           }
@@ -208,7 +210,7 @@ export default function DigitalAdsCalculator() {
 
   const totals = calculateTotal()
 
-  // Apply coupon discount (yalnız aylıq qiymətə tətbiq olunur)
+  // Apply coupon discount (only applied to monthly price)
   let discountAmount = 0
   let finalMonthlyPrice = totals.monthly
   let finalTotalPrice = totals.total
@@ -246,11 +248,11 @@ export default function DigitalAdsCalculator() {
   const whatsappNumber = '994507786887'
   const selectedServiceNames = selectedServices.map(id => {
     const service = AD_SERVICES.find(s => s.id === id)
-    return service?.name
+    return service ? t(service.name) : ''
   }).join(', ')
   
   const msg = encodeURIComponent(
-    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${totals.oneTime > 0 ? `Birdəfəlik: ${totals.oneTime} AZN. ` : ''}${t('monthly')}: ${finalMonthlyPrice} AZN. ${t('totalAmount')}: ${finalTotalPrice} AZN.`
+    `${t('faqA1').split('.')[0]}! ${t('title')}: ${selectedServiceNames}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${totals.oneTime > 0 ? `${t('oneTime')}: ${totals.oneTime} AZN. ` : ''}${t('monthly')}: ${finalMonthlyPrice} AZN. ${t('totalAmount')}: ${finalTotalPrice} AZN.`
   )
 
   return (
@@ -287,9 +289,9 @@ export default function DigitalAdsCalculator() {
                   </div>
                   <div>
                     <h3 className="text-base font-semibold text-text-primary">
-                      {service.name}
+                      {t(service.name)}
                     </h3>
-                    <p className="text-text-secondary text-sm">{service.description}</p>
+                    <p className="text-text-secondary text-sm">{t(service.description)}</p>
                   </div>
                 </div>
                 <div className="text-right">
@@ -299,7 +301,7 @@ export default function DigitalAdsCalculator() {
                   )}>
                     {service.price}₼
                   </div>
-                  <div className="text-xs text-text-muted">aylıq</div>
+                  <div className="text-xs text-text-muted">{t('monthly')}</div>
                 </div>
               </div>
 
@@ -312,7 +314,7 @@ export default function DigitalAdsCalculator() {
                   {service.includes.map((item, index) => (
                     <div key={index} className="flex items-center text-xs text-text-secondary">
                       <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 shrink-0"></span>
-                      {item}
+                      {t(item)}
                     </div>
                   ))}
                 </div>
@@ -332,12 +334,12 @@ export default function DigitalAdsCalculator() {
                       <div key={additionalService.id} className="flex items-center justify-between p-3 bg-bg-tertiary/50 rounded-xl border border-white/10">
                         <div className="flex-1">
                           <span className="text-sm font-medium text-text-primary">
-                            {additionalService.name}
+                            {t(additionalService.name)}
                           </span>
                           <div className="text-xs text-text-secondary">
                             {additionalService.price}₼
                             {additionalService.type === 'monthly' && ` / ${t('monthly')}`}
-                            {additionalService.type === 'slider' && ' / ədəd'}
+                            {additionalService.type === 'slider' && ` / ${t('perUnit')}`}
                           </div>
                         </div>
                         
@@ -404,11 +406,11 @@ export default function DigitalAdsCalculator() {
           )}
           {totals.oneTime > 0 && (
             <p className="text-sm text-text-secondary mb-1">
-              Birdəfəlik: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+              {t('oneTime')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
             </p>
           )}
           <p className="text-sm text-text-secondary mb-1">
-            Aylıq: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
+            {t('monthly')}: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
           </p>
           <p className="text-3xl font-display font-bold gradient-text mb-4">
             {finalTotalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
@@ -448,11 +450,11 @@ export default function DigitalAdsCalculator() {
           )}
           {totals.oneTime > 0 && (
             <p className="text-sm text-text-secondary mb-1">
-              Birdəfəlik: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
+              {t('oneTime')}: <span className="font-semibold text-text-primary">{totals.oneTime} AZN</span>
             </p>
           )}
           <p className="text-sm text-text-secondary mb-2">
-            Aylıq: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
+            {t('monthly')}: <span className="font-semibold text-text-primary">{finalMonthlyPrice} AZN</span>
           </p>
           <p className="font-display font-bold gradient-text mb-1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2rem)' }}>
             {finalTotalPrice}
@@ -516,27 +518,27 @@ export default function DigitalAdsCalculator() {
           <ul className="space-y-1.5">
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Şirkət məlumatları və logo
+              {t('serviceRequirementsItems.companyInfo')}
             </li>
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Hədəf auditoriya məlumatları
+              {t('serviceRequirementsItems.targetAudience')}
             </li>
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Məhsul/xidmət şəkilləri
+              {t('serviceRequirementsItems.productImages')}
             </li>
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Reklam büdcəsi (minimum 300 AZN/ay)
+              {t('serviceRequirementsItems.adBudget')}
             </li>
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Veb sayt və ya landing page
+              {t('serviceRequirementsItems.website')}
             </li>
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
-              Əlaqə məlumatları və sosial media hesabları
+              {t('serviceRequirementsItems.contactInfo')}
             </li>
           </ul>
         </div>

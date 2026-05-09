@@ -290,6 +290,7 @@
       "additionalServices": "Ek Hizmetler",
       "totalAmount": "Toplam tutar",
       "monthly": "aylık",
+      "perUnit": "adet",
       "taxIncluded": "* Vergi dahildir",
       "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
       "orderNow": "Sipariş Ver",
@@ -306,7 +307,107 @@
       "faqQ2": "Reklam bütçesi ne kadar olmalıdır?",
       "faqA2": "Minimum reklam bütçesi günlük 10 AZN'dir. Optimal sonuçlar için günlük 30-50 AZN öneriyoruz.",
       "faqQ3": "Sonuçları nasıl takip edebilirim?",
-      "faqA3": "Aylık raporlar ve gerçek zamanlı istatistikler sunuyoruz. Ayrıca WhatsApp üzerinden günlük güncellemeler gönderiyoruz."
+      "faqA3": "Aylık raporlar ve gerçek zamanlı istatistikler sunuyoruz. Ayrıca WhatsApp üzerinden günlük güncellemeler gönderiyoruz.",
+      "metaAdsName": "Meta Reklamları (Facebook & Instagram)",
+      "metaAdsDescription": "Facebook ve Instagram reklamları",
+      "googleAdsName": "Google Reklamları",
+      "googleAdsDescription": "Google Ads ve Arama reklamları",
+      "tiktokAdsName": "TikTok Reklamları",
+      "tiktokAdsDescription": "TikTok Ads ve video reklamları",
+      "linkedinAdsName": "LinkedIn Reklamları",
+      "linkedinAdsDescription": "LinkedIn B2B reklamları",
+      "oneTime": "Tek seferlik",
+      "serviceRequirementsItems": {
+        "companyInfo": "Şirket bilgileri ve logo",
+        "targetAudience": "Hedef kitle bilgileri",
+        "productImages": "Ürün/hizmet görselleri",
+        "adBudget": "Reklam bütçesi (minimum 300 AZN/ay)",
+        "website": "Web sitesi veya landing page",
+        "contactInfo": "İletişim bilgileri ve sosyal medya hesapları"
+      },
+      "metaIncludes": {
+        "businessManager": "Meta Business Manager kurulumu",
+        "adAccount": "Reklam hesabı oluşturma",
+        "pixelSetup": "Pixel bağlantısı",
+        "campaign": "1 reklam kampanyası",
+        "targeting": "Hedef kitle belirleme",
+        "creatives": "3 reklam kreatifi (video veya görsel)",
+        "adCopy": "Reklam metni yazımı",
+        "optimization": "Günlük optimizasyon",
+        "report": "Aylık rapor"
+      },
+      "googleIncludes": {
+        "accountSetup": "Google Ads hesabı kurulumu",
+        "searchCampaign": "Arama reklam kampanyası",
+        "keywordResearch": "Anahtar kelime araştırması",
+        "negativeKeywords": "Negatif anahtar kelime optimizasyonu",
+        "adGroups": "2 reklam grubu",
+        "adCopy": "Reklam metni hazırlama",
+        "conversionTracking": "Dönüşüm takibi",
+        "monthlyReport": "Aylık optimizasyon ve rapor"
+      },
+      "tiktokIncludes": {
+        "accountSetup": "TikTok Ads hesabı kurulumu",
+        "pixelIntegration": "Pixel entegrasyonu",
+        "campaign": "1 reklam kampanyası",
+        "audienceAnalysis": "Hedef kitle analizi",
+        "videoCreatives": "3 video kreatif",
+        "optimization": "Reklam optimizasyonu",
+        "monthlyReport": "Aylık rapor"
+      },
+      "linkedinIncludes": {
+        "campaignManager": "LinkedIn Campaign Manager kurulumu",
+        "b2bTargeting": "B2B hedef kitle belirleme",
+        "leadGenCampaign": "Potansiyel Müşteri Toplama Kampanyası",
+        "sponsoredPosts": "Sponsorlu gönderi reklamları",
+        "adCopy": "Reklam metni hazırlama",
+        "monthlyOptimization": "Aylık optimizasyon",
+        "reportPresentation": "Rapor sunumu"
+      },
+      "metaAdditional": {
+        "extraCampaign": "Ek reklam kampanyası",
+        "extraCreative": "Ek reklam kreatifi",
+        "reelsEditing": "Reels montajı",
+        "motionDesign": "Motion tasarım reklamı",
+        "adCopywriting": "Reklam için metin yazımı",
+        "whatsappCatalog": "WhatsApp katalog reklamı",
+        "ecommerceCatalog": "E-ticaret katalog reklamı",
+        "softwareAd": "Yazılım reklamı",
+        "pixelSetup": "Meta Pixel kurulumu",
+        "conversionApi": "Conversion API entegrasyonu",
+        "dmService": "DM yanıtlama hizmeti",
+        "influencerManagement": "Influencer işbirliği yönetimi",
+        "abTesting": "A/B test optimizasyonu"
+      },
+      "googleAdditional": {
+        "displayBanners": "Display reklam bannerları",
+        "tagManager": "Google Tag Manager kurulumu",
+        "conversionTracking": "Dönüşüm takibi",
+        "analytics4": "Google Analytics 4 entegrasyonu",
+        "youtubeSetup": "YouTube reklam kurulumu",
+        "remarketingCampaign": "Remarketing kampanyası",
+        "keywordResearch": "Anahtar kelime araştırması (kapsamlı)",
+        "landingPageAnalysis": "Landing page analizi",
+        "seoAudit": "SEO denetimi"
+      },
+      "tiktokAdditional": {
+        "videoEditing": "TikTok video montajı",
+        "ugcScript": "UGC içerik senaryosu",
+        "viralPlanning": "Viral içerik planlaması",
+        "pixelSetup": "TikTok Pixel kurulumu",
+        "creatorFinding": "Creator/influencer bulma",
+        "trendResearch": "Trend araştırması",
+        "shopIntegration": "TikTok shop entegrasyonu"
+      },
+      "linkedinAdditional": {
+        "pageOptimization": "LinkedIn şirket sayfası optimizasyonu",
+        "b2bLeadStrategy": "B2B Potansiyel Müşteri Stratejisi",
+        "corporateCopy": "Kurumsal metin",
+        "employerBranding": "İşveren Markası Stratejisi",
+        "leadFormSetup": "Potansiyel Müşteri Formu Kurulumu",
+        "ceoPersonalBrand": "CEO Kişisel Marka Yönetimi",
+        "contentPlan": "LinkedIn içerik planı"
+      }
     },
     "videoEditing": {
       "title": "Video Montaj",

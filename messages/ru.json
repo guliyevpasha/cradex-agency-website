@@ -290,6 +290,7 @@
       "additionalServices": "Дополнительные Услуги",
       "totalAmount": "Общая сумма",
       "monthly": "ежемесячно",
+      "perUnit": "шт",
       "taxIncluded": "* Налог включен",
       "professionalTeam": "🚀 Качественный результат гарантирован нашей профессиональной командой!",
       "orderNow": "Заказать",
@@ -306,7 +307,107 @@
       "faqQ2": "Каким должен быть рекламный бюджет?",
       "faqA2": "Минимальный рекламный бюджет составляет 10 AZN в день. Для оптимальных результатов рекомендуем 30-50 AZN в день.",
       "faqQ3": "Как я могу отслеживать результаты?",
-      "faqA3": "Мы предоставляем ежемесячные отчеты и статистику в реальном времени. Также отправляем ежедневные обновления через WhatsApp."
+      "faqA3": "Мы предоставляем ежемесячные отчеты и статистику в реальном времени. Также отправляем ежедневные обновления через WhatsApp.",
+      "metaAdsName": "Meta Реклама (Facebook & Instagram)",
+      "metaAdsDescription": "Реклама в Facebook и Instagram",
+      "googleAdsName": "Google Реклама",
+      "googleAdsDescription": "Google Ads и поисковая реклама",
+      "tiktokAdsName": "TikTok Реклама",
+      "tiktokAdsDescription": "TikTok Ads и видеореклама",
+      "linkedinAdsName": "LinkedIn Реклама",
+      "linkedinAdsDescription": "LinkedIn B2B реклама",
+      "oneTime": "Единоразово",
+      "serviceRequirementsItems": {
+        "companyInfo": "Информация о компании и логотип",
+        "targetAudience": "Информация о целевой аудитории",
+        "productImages": "Изображения продуктов/услуг",
+        "adBudget": "Рекламный бюджет (минимум 300 AZN/месяц)",
+        "website": "Веб-сайт или лендинг",
+        "contactInfo": "Контактная информация и аккаунты в соцсетях"
+      },
+      "metaIncludes": {
+        "businessManager": "Настройка Meta Business Manager",
+        "adAccount": "Создание рекламного аккаунта",
+        "pixelSetup": "Подключение Pixel",
+        "campaign": "1 рекламная кампания",
+        "targeting": "Таргетинг аудитории",
+        "creatives": "3 рекламных креатива (видео или изображение)",
+        "adCopy": "Написание рекламных текстов",
+        "optimization": "Ежедневная оптимизация",
+        "report": "Ежемесячный отчет"
+      },
+      "googleIncludes": {
+        "accountSetup": "Настройка аккаунта Google Ads",
+        "searchCampaign": "Поисковая рекламная кампания",
+        "keywordResearch": "Исследование ключевых слов",
+        "negativeKeywords": "Оптимизация минус-слов",
+        "adGroups": "2 рекламные группы",
+        "adCopy": "Подготовка рекламных текстов",
+        "conversionTracking": "Отслеживание конверсий",
+        "monthlyReport": "Ежемесячная оптимизация и отчет"
+      },
+      "tiktokIncludes": {
+        "accountSetup": "Настройка аккаунта TikTok Ads",
+        "pixelIntegration": "Интеграция Pixel",
+        "campaign": "1 рекламная кампания",
+        "audienceAnalysis": "Анализ аудитории",
+        "videoCreatives": "3 видео креатива",
+        "optimization": "Оптимизация рекламы",
+        "monthlyReport": "Ежемесячный отчет"
+      },
+      "linkedinIncludes": {
+        "campaignManager": "Настройка LinkedIn Campaign Manager",
+        "b2bTargeting": "B2B таргетинг аудитории",
+        "leadGenCampaign": "Кампания по генерации лидов",
+        "sponsoredPosts": "Спонсируемые посты",
+        "adCopy": "Подготовка рекламных текстов",
+        "monthlyOptimization": "Ежемесячная оптимизация",
+        "reportPresentation": "Презентация отчета"
+      },
+      "metaAdditional": {
+        "extraCampaign": "Дополнительная рекламная кампания",
+        "extraCreative": "Дополнительный рекламный креатив",
+        "reelsEditing": "Монтаж Reels",
+        "motionDesign": "Моушн-дизайн реклама",
+        "adCopywriting": "Написание текста для рекламы",
+        "whatsappCatalog": "WhatsApp каталог реклама",
+        "ecommerceCatalog": "E-commerce каталог реклама",
+        "softwareAd": "Реклама программного обеспечения",
+        "pixelSetup": "Настройка Meta Pixel",
+        "conversionApi": "Интеграция Conversion API",
+        "dmService": "Служба ответов в DM",
+        "influencerManagement": "Управление сотрудничеством с инфлюенсерами",
+        "abTesting": "A/B тест оптимизация"
+      },
+      "googleAdditional": {
+        "displayBanners": "Медийные рекламные баннеры",
+        "tagManager": "Настройка Google Tag Manager",
+        "conversionTracking": "Отслеживание конверсий",
+        "analytics4": "Интеграция Google Analytics 4",
+        "youtubeSetup": "Настройка рекламы YouTube",
+        "remarketingCampaign": "Ремаркетинговая кампания",
+        "keywordResearch": "Исследование ключевых слов (расширенное)",
+        "landingPageAnalysis": "Анализ лендинга",
+        "seoAudit": "SEO аудит"
+      },
+      "tiktokAdditional": {
+        "videoEditing": "Монтаж видео TikTok",
+        "ugcScript": "Сценарий UGC контента",
+        "viralPlanning": "Планирование вирусного контента",
+        "pixelSetup": "Настройка TikTok Pixel",
+        "creatorFinding": "Поиск креатора/инфлюенсера",
+        "trendResearch": "Исследование трендов",
+        "shopIntegration": "Интеграция TikTok shop"
+      },
+      "linkedinAdditional": {
+        "pageOptimization": "Оптимизация страницы компании LinkedIn",
+        "b2bLeadStrategy": "B2B стратегия лидогенерации",
+        "corporateCopy": "Корпоративный текст",
+        "employerBranding": "Стратегия работодательского бренда",
+        "leadFormSetup": "Настройка формы лидогенерации",
+        "ceoPersonalBrand": "Управление личным брендом CEO",
+        "contentPlan": "Контент-план LinkedIn"
+      }
     },
     "videoEditing": {
       "title": "Видеомонтаж",

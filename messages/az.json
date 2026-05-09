@@ -333,6 +333,7 @@
       "additionalServices": "Əlavə Xidmətlər",
       "totalAmount": "Ümumi məbləğ",
       "monthly": "aylıq",
+      "perUnit": "ədəd",
       "taxIncluded": "* Vergi ödənişi daxildir",
       "professionalTeam": "🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!",
       "orderNow": "Sifariş verin",
@@ -349,7 +350,107 @@
       "faqQ2": "Reklam büdcəsi nə qədər olmalıdır?",
       "faqA2": "Minimum reklam büdcəsi günlük 10 AZN-dir. Optimal nəticələr üçün günlük 30-50 AZN tövsiyə edirik.",
       "faqQ3": "Nəticələri necə izləyə bilərəm?",
-      "faqA3": "Aylıq hesabat və real-vaxt statistika təqdim edirik. Həmçinin WhatsApp vasitəsilə günlük yeniliklər göndəririk."
+      "faqA3": "Aylıq hesabat və real-vaxt statistika təqdim edirik. Həmçinin WhatsApp vasitəsilə günlük yeniliklər göndəririk.",
+      "metaAdsName": "Meta Reklamları (Facebook & Instagram)",
+      "metaAdsDescription": "Facebook və Instagram reklamları",
+      "googleAdsName": "Google Reklamları",
+      "googleAdsDescription": "Google Ads və Search reklamları",
+      "tiktokAdsName": "TikTok Reklamları",
+      "tiktokAdsDescription": "TikTok Ads və video reklamları",
+      "linkedinAdsName": "LinkedIn Reklamları",
+      "linkedinAdsDescription": "LinkedIn B2B reklamları",
+      "oneTime": "Birdəfəlik",
+      "serviceRequirementsItems": {
+        "companyInfo": "Şirkət məlumatları və logo",
+        "targetAudience": "Hədəf auditoriya məlumatları",
+        "productImages": "Məhsul/xidmət şəkilləri",
+        "adBudget": "Reklam büdcəsi (minimum 300 AZN/ay)",
+        "website": "Veb sayt və ya landing page",
+        "contactInfo": "Əlaqə məlumatları və sosial media hesabları"
+      },
+      "metaIncludes": {
+        "businessManager": "Meta Business Manager qurulması",
+        "adAccount": "Reklam hesabının yaradılması",
+        "pixelSetup": "Pixel bağlantısı",
+        "campaign": "1 reklam kampaniyası",
+        "targeting": "Auditoriya hədəflənməsi",
+        "creatives": "3 reklam kreativi (video və ya şəkil)",
+        "adCopy": "Reklam mətnlərinin yazılması",
+        "optimization": "Gündəlik optimizasiya",
+        "report": "Aylıq hesabat"
+      },
+      "googleIncludes": {
+        "accountSetup": "Google Ads hesabının qurulması",
+        "searchCampaign": "Search reklam kampaniyası",
+        "keywordResearch": "Açar söz araşdırması",
+        "negativeKeywords": "Mənfi açar söz optimizasiyası",
+        "adGroups": "2 reklam qrupu",
+        "adCopy": "Reklam mətnlərinin hazırlanması",
+        "conversionTracking": "Conversion tracking",
+        "monthlyReport": "Aylıq optimizasiya və hesabat"
+      },
+      "tiktokIncludes": {
+        "accountSetup": "TikTok Ads hesabının qurulması",
+        "pixelIntegration": "Pixel inteqrasiyası",
+        "campaign": "1 reklam kampaniyası",
+        "audienceAnalysis": "Auditoriya analizi",
+        "videoCreatives": "3 video kreativ",
+        "optimization": "Reklam optimizasiyası",
+        "monthlyReport": "Aylıq hesabat"
+      },
+      "linkedinIncludes": {
+        "campaignManager": "LinkedIn Campaign Manager qurulması",
+        "b2bTargeting": "B2B auditoriya hədəflənməsi",
+        "leadGenCampaign": "Potensial Müştəri Toplama Kampaniyası",
+        "sponsoredPosts": "Sponsorlu post reklamları",
+        "adCopy": "Reklam mətnlərinin hazırlanması",
+        "monthlyOptimization": "Aylıq optimizasiya",
+        "reportPresentation": "Hesabat təqdimatı"
+      },
+      "metaAdditional": {
+        "extraCampaign": "Əlavə reklam kampaniyası",
+        "extraCreative": "Əlavə reklam kreativi",
+        "reelsEditing": "Reels montajı",
+        "motionDesign": "Motion dizayn reklamı",
+        "adCopywriting": "Reklam üçün mətn yazılması",
+        "whatsappCatalog": "WhatsApp kataloq reklamı",
+        "ecommerceCatalog": "E-ticarət kataloq reklamı",
+        "softwareAd": "Proqram təminatının reklamı",
+        "pixelSetup": "Meta Pixel qurulması",
+        "conversionApi": "Conversion API inteqrasiyası",
+        "dmService": "DM cavablandırma xidməti",
+        "influencerManagement": "Influencer əməkdaşlıqlarının idarəsi",
+        "abTesting": "A/B test optimizasiyası"
+      },
+      "googleAdditional": {
+        "displayBanners": "Display reklam bannerləri",
+        "tagManager": "Google Tag Manager qurulması",
+        "conversionTracking": "Conversion tracking",
+        "analytics4": "Google Analytics 4 inteqrasiyası",
+        "youtubeSetup": "YouTube reklam setup",
+        "remarketingCampaign": "Remarketing kampaniyası",
+        "keywordResearch": "Açar söz araşdırması (geniş)",
+        "landingPageAnalysis": "Landing page analizi",
+        "seoAudit": "SEO audit"
+      },
+      "tiktokAdditional": {
+        "videoEditing": "TikTok video montajı",
+        "ugcScript": "UGC kontent ssenarisi",
+        "viralPlanning": "Viral kontent planlaması",
+        "pixelSetup": "TikTok Pixel qurulması",
+        "creatorFinding": "Creator/influencer tapılması",
+        "trendResearch": "Trend araşdırması",
+        "shopIntegration": "TikTok shop inteqrasiyası"
+      },
+      "linkedinAdditional": {
+        "pageOptimization": "LinkedIn şirkət səhifəsinin optimizasiyası",
+        "b2bLeadStrategy": "B2B Potensial Müştəri Strategiyası",
+        "corporateCopy": "Korporativ mətn",
+        "employerBranding": "Şirkətin İşəgötürən İmic Strategiyası",
+        "leadFormSetup": "Potensial Müştəri Formasının Qurulması",
+        "ceoPersonalBrand": "CEO Şəxsi Brend İdarəçiliyi",
+        "contentPlan": "LinkedIn kontent planı"
+      }
     },
     "videoEditing": {
       "title": "Video Montaj",

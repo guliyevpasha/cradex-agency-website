@@ -309,6 +309,7 @@
       "additionalServices": "Additional Services",
       "totalAmount": "Total amount",
       "monthly": "monthly",
+      "perUnit": "per unit",
       "taxIncluded": "* Tax included",
       "professionalTeam": "🚀 Quality results guaranteed with our professional team!",
       "orderNow": "Order Now",
@@ -325,7 +326,107 @@
       "faqQ2": "How much should the advertising budget be?",
       "faqA2": "Minimum advertising budget is 10 AZN per day. We recommend 30-50 AZN per day for optimal results.",
       "faqQ3": "How can I track the results?",
-      "faqA3": "We provide monthly reports and real-time statistics. We also send daily updates via WhatsApp."
+      "faqA3": "We provide monthly reports and real-time statistics. We also send daily updates via WhatsApp.",
+      "metaAdsName": "Meta Ads (Facebook & Instagram)",
+      "metaAdsDescription": "Facebook and Instagram advertising",
+      "googleAdsName": "Google Ads",
+      "googleAdsDescription": "Google Ads and Search advertising",
+      "tiktokAdsName": "TikTok Ads",
+      "tiktokAdsDescription": "TikTok Ads and video advertising",
+      "linkedinAdsName": "LinkedIn Ads",
+      "linkedinAdsDescription": "LinkedIn B2B advertising",
+      "oneTime": "One-time",
+      "serviceRequirementsItems": {
+        "companyInfo": "Company information and logo",
+        "targetAudience": "Target audience information",
+        "productImages": "Product/service images",
+        "adBudget": "Advertising budget (minimum 300 AZN/month)",
+        "website": "Website or landing page",
+        "contactInfo": "Contact information and social media accounts"
+      },
+      "metaIncludes": {
+        "businessManager": "Meta Business Manager setup",
+        "adAccount": "Ad account creation",
+        "pixelSetup": "Pixel integration",
+        "campaign": "1 ad campaign",
+        "targeting": "Audience targeting",
+        "creatives": "3 ad creatives (video or image)",
+        "adCopy": "Ad copywriting",
+        "optimization": "Daily optimization",
+        "report": "Monthly report"
+      },
+      "googleIncludes": {
+        "accountSetup": "Google Ads account setup",
+        "searchCampaign": "Search ad campaign",
+        "keywordResearch": "Keyword research",
+        "negativeKeywords": "Negative keyword optimization",
+        "adGroups": "2 ad groups",
+        "adCopy": "Ad copy preparation",
+        "conversionTracking": "Conversion tracking",
+        "monthlyReport": "Monthly optimization and report"
+      },
+      "tiktokIncludes": {
+        "accountSetup": "TikTok Ads account setup",
+        "pixelIntegration": "Pixel integration",
+        "campaign": "1 ad campaign",
+        "audienceAnalysis": "Audience analysis",
+        "videoCreatives": "3 video creatives",
+        "optimization": "Ad optimization",
+        "monthlyReport": "Monthly report"
+      },
+      "linkedinIncludes": {
+        "campaignManager": "LinkedIn Campaign Manager setup",
+        "b2bTargeting": "B2B audience targeting",
+        "leadGenCampaign": "Lead Generation Campaign",
+        "sponsoredPosts": "Sponsored post ads",
+        "adCopy": "Ad copy preparation",
+        "monthlyOptimization": "Monthly optimization",
+        "reportPresentation": "Report presentation"
+      },
+      "metaAdditional": {
+        "extraCampaign": "Additional ad campaign",
+        "extraCreative": "Additional ad creative",
+        "reelsEditing": "Reels editing",
+        "motionDesign": "Motion design ad",
+        "adCopywriting": "Ad copywriting",
+        "whatsappCatalog": "WhatsApp catalog advertising",
+        "ecommerceCatalog": "E-commerce catalog advertising",
+        "softwareAd": "Software advertising",
+        "pixelSetup": "Meta Pixel setup",
+        "conversionApi": "Conversion API integration",
+        "dmService": "DM response service",
+        "influencerManagement": "Influencer collaboration management",
+        "abTesting": "A/B test optimization"
+      },
+      "googleAdditional": {
+        "displayBanners": "Display ad banners",
+        "tagManager": "Google Tag Manager setup",
+        "conversionTracking": "Conversion tracking",
+        "analytics4": "Google Analytics 4 integration",
+        "youtubeSetup": "YouTube ad setup",
+        "remarketingCampaign": "Remarketing campaign",
+        "keywordResearch": "Keyword research (extensive)",
+        "landingPageAnalysis": "Landing page analysis",
+        "seoAudit": "SEO audit"
+      },
+      "tiktokAdditional": {
+        "videoEditing": "TikTok video editing",
+        "ugcScript": "UGC content script",
+        "viralPlanning": "Viral content planning",
+        "pixelSetup": "TikTok Pixel setup",
+        "creatorFinding": "Creator/influencer finding",
+        "trendResearch": "Trend research",
+        "shopIntegration": "TikTok shop integration"
+      },
+      "linkedinAdditional": {
+        "pageOptimization": "LinkedIn company page optimization",
+        "b2bLeadStrategy": "B2B Lead Strategy",
+        "corporateCopy": "Corporate copywriting",
+        "employerBranding": "Employer Branding Strategy",
+        "leadFormSetup": "Lead Form Setup",
+        "ceoPersonalBrand": "CEO Personal Brand Management",
+        "contentPlan": "LinkedIn content plan"
+      }
     },
     "videoEditing": {
       "title": "Video Editing",
