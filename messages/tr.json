@@ -789,6 +789,87 @@
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları"
   },
+  "calculator": {
+    "tabs": {
+      "website": "Web Sitesi",
+      "digitalAds": "Dijital Reklamlar",
+      "videoEditing": "Video Montaj",
+      "videoShooting": "Video Çekim",
+      "socialMediaDesign": "SMM Tasarım"
+    },
+    "website": {
+      "title": "Web Sitesi Hesaplayıcı",
+      "corporateName": "Kurumsal Web Sitesi",
+      "corporateDescription": "İşletmeniz için profesyonel kurumsal web sitesi",
+      "ecommerceName": "E-ticaret Sitesi",
+      "ecommerceDescription": "Online mağaza ve e-ticaret çözümü",
+      "startingFrom": "başlangıç",
+      "includedServices": "Dahil",
+      "designComplexity": "Tasarım Karmaşıklığı",
+      "deliveryTime": "Teslimat Süresi",
+      "additionalServices": "Ek Hizmetler",
+      "totalAmount": "Toplam Tutar",
+      "discount": "İndirim",
+      "taxIncluded": "* Vergi dahil",
+      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
+      "discountCoupon": "İndirim Kodu",
+      "enterCouponCode": "Kodu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz indirim kodu",
+      "orderNow": "Şimdi Sipariş Ver",
+      "serviceRequirements": "Hizmet Gereksinimleri",
+      "faq": "SSS",
+      "monthlyPaymentOption": "Aylık Ödeme",
+      "initialPayment": "İlk ödeme",
+      "monthly": "Aylık",
+      "months": "ay",
+      "interestFree": "Faizsiz taksit",
+      "complexity": {
+        "simple": "Basit",
+        "professional": "Profesyonel",
+        "custom": "Özel"
+      },
+      "delivery": {
+        "standard": "Standart",
+        "fast": "Hızlı (14 gün)",
+        "urgent": "Acil (7 gün)"
+      },
+      "paymentOptions": {
+        "fullPayment": "Tam ödeme",
+        "3months": "3 aylık taksit (faizsiz)",
+        "6months": "6 aylık taksit (faizsiz)",
+        "12months": "12 aylık taksit (faizsiz)"
+      },
+      "unit": {
+        "language": "dil",
+        "article": "makale",
+        "page": "sayfa",
+        "products": "ürün"
+      },
+      "corporateIncludes": {},
+      "corporateAdditional": {},
+      "ecommerceIncludes": {},
+      "ecommerceAdditional": {},
+      "corporateRequirements": "Kurumsal web sitesi geliştirme için müşteri logo ve marka materyalleri, site metinleri ve medya dosyaları, iletişim bilgileri, sosyal medya bağlantıları ve gerekli teknik entegrasyon bilgilerini sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
+      "ecommerceRequirements": "E-ticaret sitesi geliştirme için müşteri ürün bilgileri (ad, fiyat, açıklama), ürün görselleri, logo ve marka materyalleri, teslimat ve ödeme bilgileri, iletişim ve sosyal medya bağlantılarını sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
+      "corporateFaqQ1": "Kurumsal web sitesi ne kadar sürede tamamlanır?",
+      "corporateFaqA1": "Standart teslimat süresi 21-30 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
+      "corporateFaqQ2": "Domain ve hosting hizmeti dahil mi?",
+      "corporateFaqA2": "Evet, 1 yıllık domain ve hosting hizmeti fiyata dahildir.",
+      "corporateFaqQ3": "Teknik destek nasıl çalışır?",
+      "corporateFaqA3": "3 aylık ücretsiz teknik destek dahildir. 1 yıllık destek ek olarak sipariş edilebilir.",
+      "ecommerceFaqQ1": "E-ticaret sitesi ne kadar sürede tamamlanır?",
+      "ecommerceFaqA1": "Standart teslimat süresi 30-45 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
+      "ecommerceFaqQ2": "Ödeme sistemleri entegre ediliyor mu?",
+      "ecommerceFaqA2": "Yerel banka, Paypal, Stripe ve diğer ödeme sistemleri ek hizmet olarak entegre edilebilir.",
+      "ecommerceFaqQ3": "Ürün sayısı artırılabilir mi?",
+      "ecommerceFaqA3": "Evet, ek ürün yerleştirme hizmeti ile istenen sayıda ürün eklenebilir."
+    },
+    "digitalAds": {
+      "title": "Dijital Reklam Hesaplayıcı"
+    }
+  },
   "popup": {
     "title": "Rakipleriniz zaten önde.",
     "subtitle": "Her gecikme, kaybedilen bir müşteri demektir. Ücretsiz danışmanlık alın, stratejinizi birlikte kuralım.",
