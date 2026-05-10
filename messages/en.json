@@ -1084,7 +1084,10 @@
       "monthlyPaymentOption": "Payment Option",
       "paymentOptions": {
         "fullPayment": "Full Payment",
-        "monthlyPayment": "Monthly Payment"
+        "monthlyPayment": "Monthly Payment",
+        "3months": "3 months",
+        "6months": "6 months",
+        "12months": "12 months"
       },
       "initialPayment": "Initial Payment",
       "months": "months",

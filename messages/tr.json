@@ -1001,7 +1001,10 @@
       "monthlyPaymentOption": "Ödeme Seçeneği",
       "paymentOptions": {
         "fullPayment": "Tam Ödeme",
-        "monthlyPayment": "Aylık Ödeme"
+        "monthlyPayment": "Aylık Ödeme",
+        "3months": "3 ay",
+        "6months": "6 ay",
+        "12months": "12 ay"
       },
       "initialPayment": "İlk Ödeme",
       "months": "ay",

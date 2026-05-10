@@ -54,7 +54,7 @@ export default function MobileAppCalculator() {
   const [screenCount, setScreenCount] = useState(5)
   const [designType, setDesignType] = useState<'custom' | 'premium'>('custom')
   const [supportPackage, setSupportPackage] = useState<string>('basic')
-  const [monthlyPayment, setMonthlyPayment] = useState(false)
+  const [monthlyPayment, setMonthlyPayment] = useState<3 | 6 | 12 | null>(null)
   const [selectedFeatures, setSelectedFeatures] = useState<Record<string, boolean>>({
     pushNotifications: true,
     socialLogin: true,
@@ -110,7 +110,7 @@ export default function MobileAppCalculator() {
 
   // Monthly payment calculation (only for base price, not support)
   const initialPayment = monthlyPayment ? Math.round(finalTotalPrice * 0.5) : 0
-  const monthlyAmount = monthlyPayment ? Math.round((finalTotalPrice - initialPayment) / 6) : 0
+  const monthlyAmount = monthlyPayment ? Math.round((finalTotalPrice - initialPayment) / monthlyPayment) : 0
 
   // Coupon application
   const applyCoupon = () => {
@@ -137,7 +137,7 @@ export default function MobileAppCalculator() {
   const whatsappNumber = '994507786887'
   
   const msg = encodeURIComponent(
-    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}${supportYearlyPrice > 0 ? ` (${supportYearlyPrice} AZN/${t('yearly')})` : ''}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.${monthlyPayment ? ` ${t('paymentOptions.monthlyPayment')}: 6 ${t('months')} (${t('initialPayment')}: ${initialPayment} AZN, ${t('monthly')}: ${monthlyAmount} AZN)` : ''}`
+    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}${supportYearlyPrice > 0 ? ` (${supportYearlyPrice} AZN/${t('yearly')})` : ''}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.${monthlyPayment ? ` ${t('monthlyPayment')}: ${monthlyPayment} ${t('months')} (${t('initialPayment')}: ${initialPayment} AZN, ${t('monthly')}: ${monthlyAmount} AZN)` : ''}`
   )
 
   return (
@@ -351,7 +351,7 @@ export default function MobileAppCalculator() {
           {monthlyPayment && (
             <div className="mb-2 text-sm text-text-secondary">
               <p>{t('initialPayment')}: <span className="font-semibold text-text-primary">{initialPayment} AZN</span></p>
-              <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN × 6 {t('months')}</span></p>
+              <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN × {monthlyPayment} {t('months')}</span></p>
             </div>
           )}
           <p className="text-text-muted text-[10px] mb-4">{t('taxIncluded')}</p>
@@ -400,30 +400,23 @@ export default function MobileAppCalculator() {
 
           {/* Monthly Payment Option */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
-            <div className="flex items-center gap-3">
-              <label className="flex items-center cursor-pointer flex-1">
-                <input
-                  type="radio"
-                  checked={!monthlyPayment}
-                  onChange={() => setMonthlyPayment(false)}
-                  className="w-4 h-4 text-accent-primary border-white/20 focus:ring-accent-primary bg-transparent"
-                />
-                <span className="ml-2 text-sm text-text-primary">{t('paymentOptions.fullPayment')}</span>
-              </label>
-              <label className="flex items-center cursor-pointer flex-1">
-                <input
-                  type="radio"
-                  checked={monthlyPayment}
-                  onChange={() => setMonthlyPayment(true)}
-                  className="w-4 h-4 text-accent-primary border-white/20 focus:ring-accent-primary bg-transparent"
-                />
-                <span className="ml-2 text-sm text-text-primary">{t('paymentOptions.monthlyPayment')}</span>
-              </label>
-            </div>
+            <label className="block text-text-muted text-xs font-semibold uppercase tracking-wider mb-2">
+              {t('monthlyPaymentOption')}
+            </label>
+            <select
+              value={monthlyPayment || ''}
+              onChange={(e) => setMonthlyPayment(e.target.value ? parseInt(e.target.value) as 3 | 6 | 12 : null)}
+              className="w-full px-3 py-2 rounded-lg bg-bg-tertiary border border-white/10 text-text-primary text-sm focus:border-accent-primary focus:outline-none"
+            >
+              <option value="">{t('paymentOptions.fullPayment')}</option>
+              <option value="3">{t('paymentOptions.3months')}</option>
+              <option value="6">{t('paymentOptions.6months')}</option>
+              <option value="12">{t('paymentOptions.12months')}</option>
+            </select>
             {monthlyPayment && (
-              <div className="mt-2 text-xs text-text-secondary space-y-1 pt-2 border-t border-white/10">
+              <div className="mt-2 text-xs text-text-secondary space-y-1">
                 <p>{t('initialPayment')}: <span className="font-semibold text-text-primary">{initialPayment} AZN</span> (50%)</p>
-                <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN</span> × 6 {t('months')}</p>
+                <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN</span> × {monthlyPayment} {t('months')}</p>
                 <p className="text-green-400">{t('interestFree')}</p>
               </div>
             )}

@@ -1001,7 +1001,10 @@
       "monthlyPaymentOption": "Вариант оплаты",
       "paymentOptions": {
         "fullPayment": "Полная оплата",
-        "monthlyPayment": "Ежемесячная оплата"
+        "monthlyPayment": "Ежемесячная оплата",
+        "3months": "3 месяца",
+        "6months": "6 месяцев",
+        "12months": "12 месяцев"
       },
       "initialPayment": "Первоначальный взнос",
       "months": "месяцев",

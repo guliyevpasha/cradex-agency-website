@@ -1108,7 +1108,10 @@
       "monthlyPaymentOption": "Ödəniş Seçimi",
       "paymentOptions": {
         "fullPayment": "Tam ödəniş",
-        "monthlyPayment": "Aylıq ödəniş"
+        "monthlyPayment": "Aylıq ödəniş",
+        "3months": "3 ay",
+        "6months": "6 ay",
+        "12months": "12 ay"
       },
       "initialPayment": "İlkin ödəniş",
       "months": "ay",
