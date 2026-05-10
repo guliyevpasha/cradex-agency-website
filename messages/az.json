@@ -899,6 +899,7 @@
   "calculator": {
     "tabs": {
       "website": "Veb Sayt",
+      "mobileApp": "Mobil Tətbiq",
       "digitalAds": "Rəqəmsal Reklam",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çəkiliş",
@@ -1079,6 +1080,82 @@
       "ecommerceFaqA2": "Yerli bank, Paypal, Stripe və digər ödəniş sistemləri əlavə xidmət olaraq inteqrasiya edilə bilər.",
       "ecommerceFaqQ3": "Məhsul sayı artırıla bilərmi?",
       "ecommerceFaqA3": "Bəli, əlavə məhsul yerləşdirilməsi xidməti ilə istənilən sayda məhsul əlavə edilə bilər."
+    },
+    "mobileApp": {
+      "title": "Mobil Tətbiq Kalkulyatoru",
+      "basePrice": "Baza qiyməti",
+      "screenCount": "Ekran Sayı",
+      "screens": "ekran",
+      "designComplexity": "Dizayn Mürəkkəbliyi",
+      "supportPackage": "Dəstək Paketi",
+      "features": "Xüsusiyyətlər",
+      "includedServices": "Daxil olan xidmətlər",
+      "additionalFeatures": "Əlavə Xüsusiyyətlər",
+      "totalAmount": "Ümumi Məbləğ",
+      "monthly": "aylıq",
+      "yearly": "illik",
+      "free": "Pulsuz",
+      "included": "Daxildir",
+      "taxIncluded": "* Vergi ödənişi daxildir",
+      "professionalTeam": "🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!",
+      "orderNow": "Sifariş verin",
+      "discount": "Endirim",
+      "discountCoupon": "Endirim Kodu",
+      "enterCouponCode": "Kodu daxil edin",
+      "applyCoupon": "Tətbiq et",
+      "cancelCoupon": "Ləğv et",
+      "invalidCoupon": "Yanlış endirim kodu",
+      "designOptions": {
+        "custom": "Xüsusi Dizayn (Pulsuz)",
+        "premium": "Premium Dizayn"
+      },
+      "supportPackages": {
+        "basic": "Əsas (Pulsuz)",
+        "standard": "Standart",
+        "professional": "Peşəkar",
+        "premium": "Premium"
+      },
+      "includedItems": {
+        "freeDomainHosting": "Pulsuz Domen və Hosting",
+        "support247": "24/7 Dəstək",
+        "warranty": "3-5 illik Zəmanət",
+        "pushNotifications": "Push Notifications",
+        "socialLogin": "Social Login",
+        "appAnalytics": "App Analytics"
+      },
+      "additionalFeaturesList": {
+        "pushNotifications": "Push Notifications",
+        "offlineMode": "Offline Mode",
+        "biometricLogin": "Biometric Login",
+        "inAppPurchase": "In-App Purchase",
+        "socialLogin": "Social Login",
+        "cameraIntegration": "Camera Integration",
+        "geolocation": "Geolocation",
+        "chatFeature": "Chat Feature",
+        "cloudSync": "Cloud Sync",
+        "appAnalytics": "App Analytics",
+        "appStoreSetup": "App Store Setup",
+        "googlePlaySetup": "Google Play Setup",
+        "appUpdatesYearly": "App Updates (illik)"
+      },
+      "serviceRequirements": "Xidmət Tələbləri",
+      "requirementsList": {
+        "appIdea": "Tətbiq ideyası və məqsəd",
+        "targetAudience": "Hədəf auditoriya məlumatları",
+        "designPreferences": "Dizayn üstünlükləri və brend materialları",
+        "contentMaterials": "Məzmun materialları (mətnlər, şəkillər, videolar)",
+        "apiDocumentation": "API sənədləşməsi (əgər inteqrasiya tələb olunursa)",
+        "accountCredentials": "App Store və Google Play hesab məlumatları"
+      },
+      "faq": "Tez-Tez Verilən Suallar",
+      "faqQ1": "Mobil tətbiq nə qədər müddətdə hazır olar?",
+      "faqA1": "Standart təslim müddəti tətbiqin mürəkkəbliyindən asılı olaraq 8-16 həftədir. Sadə tətbiqlər 8-10 həftə, mürəkkəb tətbiqlər 12-16 həftə ərzində hazır olur.",
+      "faqQ2": "iOS və Android üçün ayrı-ayrı ödəniş etməliyəm?",
+      "faqA2": "Xeyr, qiymət hər iki platform üçün cross-platform (React Native/Flutter) texnologiyası ilə hazırlanmış tətbiqi əhatə edir.",
+      "faqQ3": "Tətbiq mağazalarına yükləmə daxildirmi?",
+      "faqA3": "App Store Setup və Google Play Setup xidmətləri əlavə olaraq sifariş edilməlidir. Bu xidmətlər tətbiqin mağazalara yüklənməsini və qəbul edilməsini təmin edir.",
+      "faqQ4": "Texniki dəstək necə işləyir?",
+      "faqA4": "Seçdiyiniz dəstək paketindən asılı olaraq aylıq texniki dəstək təmin edilir. Əsas paket pulsuzdur və əsas xətaların düzəldilməsini əhatə edir."
     },
     "digitalAds": {
       "title": "Rəqəmsal Reklam",

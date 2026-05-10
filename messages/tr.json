@@ -792,6 +792,7 @@
   "calculator": {
     "tabs": {
       "website": "Web Sitesi",
+      "mobileApp": "Mobil Uygulama",
       "digitalAds": "Dijital Reklamlar",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çekim",
@@ -972,6 +973,82 @@
       "ecommerceFaqA2": "Yerel banka, Paypal, Stripe ve diğer ödeme sistemleri ek hizmet olarak entegre edilebilir.",
       "ecommerceFaqQ3": "Ürün sayısı artırılabilir mi?",
       "ecommerceFaqA3": "Evet, ek ürün yerleştirme hizmeti ile istenen sayıda ürün eklenebilir."
+    },
+    "mobileApp": {
+      "title": "Mobil Uygulama Hesaplayıcı",
+      "basePrice": "Temel Fiyat",
+      "screenCount": "Ekran Sayısı",
+      "screens": "ekran",
+      "designComplexity": "Tasarım Karmaşıklığı",
+      "supportPackage": "Destek Paketi",
+      "features": "Özellikler",
+      "includedServices": "Dahil Edilen Hizmetler",
+      "additionalFeatures": "Ek Özellikler",
+      "totalAmount": "Toplam Tutar",
+      "monthly": "aylık",
+      "yearly": "yıllık",
+      "free": "Ücretsiz",
+      "included": "Dahil",
+      "taxIncluded": "* Vergi dahildir",
+      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
+      "orderNow": "Sipariş Ver",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz kupon kodu",
+      "designOptions": {
+        "custom": "Özel Tasarım (Ücretsiz)",
+        "premium": "Premium Tasarım"
+      },
+      "supportPackages": {
+        "basic": "Temel (Ücretsiz)",
+        "standard": "Standart",
+        "professional": "Profesyonel",
+        "premium": "Premium"
+      },
+      "includedItems": {
+        "freeDomainHosting": "Ücretsiz Domain ve Hosting",
+        "support247": "24/7 Destek",
+        "warranty": "3-5 Yıl Garanti",
+        "pushNotifications": "Push Bildirimleri",
+        "socialLogin": "Sosyal Medya Girişi",
+        "appAnalytics": "Uygulama Analitiği"
+      },
+      "additionalFeaturesList": {
+        "pushNotifications": "Push Bildirimleri",
+        "offlineMode": "Çevrimdışı Mod",
+        "biometricLogin": "Biyometrik Giriş",
+        "inAppPurchase": "Uygulama İçi Satın Alma",
+        "socialLogin": "Sosyal Medya Girişi",
+        "cameraIntegration": "Kamera Entegrasyonu",
+        "geolocation": "Coğrafi Konum",
+        "chatFeature": "Sohbet Özelliği",
+        "cloudSync": "Bulut Senkronizasyonu",
+        "appAnalytics": "Uygulama Analitiği",
+        "appStoreSetup": "App Store Kurulumu",
+        "googlePlaySetup": "Google Play Kurulumu",
+        "appUpdatesYearly": "Uygulama Güncellemeleri (yıllık)"
+      },
+      "serviceRequirements": "Hizmet Gereksinimleri",
+      "requirementsList": {
+        "appIdea": "Uygulama fikri ve amacı",
+        "targetAudience": "Hedef kitle bilgileri",
+        "designPreferences": "Tasarım tercihleri ve marka materyalleri",
+        "contentMaterials": "İçerik materyalleri (metinler, görseller, videolar)",
+        "apiDocumentation": "API dokümantasyonu (entegrasyon gerekiyorsa)",
+        "accountCredentials": "App Store ve Google Play hesap bilgileri"
+      },
+      "faq": "Sık Sorulan Sorular",
+      "faqQ1": "Mobil uygulama geliştirme ne kadar sürer?",
+      "faqA1": "Standart teslimat süresi uygulamanın karmaşıklığına bağlı olarak 8-16 haftadır. Basit uygulamalar 8-10 hafta, karmaşık uygulamalar 12-16 hafta sürer.",
+      "faqQ2": "iOS ve Android için ayrı ödeme yapmam gerekir mi?",
+      "faqA2": "Hayır, fiyat her iki platform için cross-platform teknolojisi (React Native/Flutter) ile geliştirilmiş uygulamayı içerir.",
+      "faqQ3": "Uygulama mağazalarına yükleme dahil mi?",
+      "faqA3": "App Store Kurulumu ve Google Play Kurulumu hizmetleri ek olarak sipariş edilmelidir. Bu hizmetler uygulamanın mağazalara yüklenmesini ve onaylanmasını sağlar.",
+      "faqQ4": "Teknik destek nasıl çalışır?",
+      "faqA4": "Seçtiğiniz destek paketine bağlı olarak aylık teknik destek sağlanır. Temel paket ücretsizdir ve temel hata düzeltmelerini kapsar."
     },
     "digitalAds": {
       "title": "Dijital Reklamcılık",
