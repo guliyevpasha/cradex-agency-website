@@ -77,6 +77,12 @@ export default function MobileAppCalculator() {
   const calculateTotal = () => {
     let total = BASE_PRICE
 
+    // Add screen count price (for screens > 5, add 360 AZN per screen)
+    if (screenCount > 5) {
+      const additionalScreens = screenCount - 5
+      total += additionalScreens * 360
+    }
+
     // Add design price
     if (designType === 'premium') {
       total += PREMIUM_DESIGN_PRICE
