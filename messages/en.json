@@ -876,6 +876,7 @@
   "calculator": {
     "tabs": {
       "website": "Website",
+      "mobileApp": "Mobile App",
       "digitalAds": "Digital Ads",
       "videoEditing": "Video Editing",
       "videoShooting": "Video Shooting",
