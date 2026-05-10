@@ -903,7 +903,7 @@
       "digitalAds": "Rəqəmsal Reklam",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çəkiliş",
-      "socialMediaDesign": "SMM Dizayn"
+      "socialMediaDesign": "Sosial Media Dizayn"
     },
     "website": {
       "title": "Veb Sayt Kalkulyatoru",
@@ -1105,38 +1105,70 @@
       "applyCoupon": "Tətbiq et",
       "cancelCoupon": "Ləğv et",
       "invalidCoupon": "Yanlış endirim kodu",
+      "monthlyPaymentOption": "Ödəniş Seçimi",
+      "paymentOptions": {
+        "fullPayment": "Tam ödəniş",
+        "monthlyPayment": "Aylıq ödəniş"
+      },
+      "initialPayment": "İlkin ödəniş",
+      "months": "ay",
+      "interestFree": "Faizsiz",
       "designOptions": {
         "custom": "Xüsusi Dizayn (Pulsuz)",
         "premium": "Premium Dizayn"
       },
       "supportPackages": {
         "basic": "Əsas (Pulsuz)",
-        "standard": "Standart",
-        "professional": "Peşəkar",
-        "premium": "Premium"
+        "premium": "Premium (İllik 2500 AZN)"
       },
+      "basicSupportDetails": [
+        "3 aylıq texniki dəstək",
+        "Sistem yoxlanışı",
+        "Kiçik texniki düzəlişlər",
+        "Təhlükəsizlik nəzarəti",
+        "İstifadə təlimatı",
+        "E-mail dəstəyi",
+        "Əsas ehtiyat nüsxə xidməti",
+        "Əsas performans yoxlanışı"
+      ],
+      "premiumSupportDetails": [
+        "24/7 prioritet texniki dəstək",
+        "Tam texniki idarəetmə",
+        "Real-vaxt sistem monitorinqi",
+        "Gündəlik avtomatik ehtiyat nüsxə",
+        "Qabaqcıl təhlükəsizlik sistemi",
+        "Server və performans optimizasiyası",
+        "Verilənlər bazası optimizasiyası",
+        "Xəta və səhv monitorinqi",
+        "API və üçüncü tərəf inteqrasiyalarının idarəsi",
+        "SEO texniki nəzarəti",
+        "Aylıq texniki hesabat",
+        "Kiçik funksional yeniləmələr",
+        "Prioritet düzəliş xidməti",
+        "6-12 saat cavab müddəti"
+      ],
       "includedItems": {
         "freeDomainHosting": "Pulsuz Domen və Hosting",
         "support247": "24/7 Dəstək",
         "warranty": "3-5 illik Zəmanət",
-        "pushNotifications": "Push Notifications",
-        "socialLogin": "Social Login",
-        "appAnalytics": "App Analytics"
+        "pushNotifications": "Bildiriş Xidməti",
+        "socialLogin": "Sosial Media Girişi",
+        "appAnalytics": "Tətbiq Analitikası"
       },
       "additionalFeaturesList": {
-        "pushNotifications": "Push Notifications",
-        "offlineMode": "Offline Mode",
-        "biometricLogin": "Biometric Login",
-        "inAppPurchase": "In-App Purchase",
-        "socialLogin": "Social Login",
-        "cameraIntegration": "Camera Integration",
-        "geolocation": "Geolocation",
-        "chatFeature": "Chat Feature",
-        "cloudSync": "Cloud Sync",
-        "appAnalytics": "App Analytics",
-        "appStoreSetup": "App Store Setup",
-        "googlePlaySetup": "Google Play Setup",
-        "appUpdatesYearly": "App Updates (illik)"
+        "pushNotifications": "Bildiriş Xidməti",
+        "offlineMode": "Oflayn Rejim",
+        "biometricLogin": "Biometrik Giriş",
+        "inAppPurchase": "Tətbiq Daxili Alış",
+        "socialLogin": "Sosial Media Girişi",
+        "cameraIntegration": "Kamera İnteqrasiyası",
+        "geolocation": "Coğrafi Mövqe",
+        "chatFeature": "Söhbət Funksiyası",
+        "cloudSync": "Bulud Sinxronizasiyası",
+        "appAnalytics": "Tətbiq Analitikası",
+        "appStoreSetup": "App Store Quraşdırılması",
+        "googlePlaySetup": "Google Play Quraşdırılması",
+        "appUpdatesYearly": "İllik Tətbiq Yeniləmələri"
       },
       "serviceRequirements": "Xidmət Tələbləri",
       "requirementsList": {

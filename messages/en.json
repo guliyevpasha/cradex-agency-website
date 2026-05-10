@@ -879,7 +879,7 @@
       "digitalAds": "Digital Ads",
       "videoEditing": "Video Editing",
       "videoShooting": "Video Shooting",
-      "socialMediaDesign": "SMM Design"
+      "socialMediaDesign": "Social Media Design"
     },
     "website": {
       "title": "Website Calculator",
@@ -1081,16 +1081,48 @@
       "applyCoupon": "Apply",
       "cancelCoupon": "Cancel",
       "invalidCoupon": "Invalid coupon code",
+      "monthlyPaymentOption": "Payment Option",
+      "paymentOptions": {
+        "fullPayment": "Full Payment",
+        "monthlyPayment": "Monthly Payment"
+      },
+      "initialPayment": "Initial Payment",
+      "months": "months",
+      "interestFree": "Interest-free",
       "designOptions": {
         "custom": "Custom Design (Free)",
         "premium": "Premium Design"
       },
       "supportPackages": {
         "basic": "Basic (Free)",
-        "standard": "Standard",
-        "professional": "Professional",
-        "premium": "Premium"
+        "premium": "Premium (2500 AZN/year)"
       },
+      "basicSupportDetails": [
+        "3-month technical support",
+        "System check",
+        "Minor technical fixes",
+        "Security monitoring",
+        "User manual",
+        "Email support",
+        "Basic backup service",
+        "Basic performance check"
+      ],
+      "premiumSupportDetails": [
+        "24/7 priority technical support",
+        "Full technical management",
+        "Real-time system monitoring",
+        "Daily automatic backup",
+        "Advanced security system",
+        "Server and performance optimization",
+        "Database optimization",
+        "Crash and error monitoring",
+        "API and third-party integration management",
+        "SEO technical monitoring",
+        "Monthly technical report",
+        "Minor functional updates",
+        "Priority fix service",
+        "6-12 hour response time"
+      ],
       "includedItems": {
         "freeDomainHosting": "Free Domain & Hosting",
         "support247": "24/7 Support",

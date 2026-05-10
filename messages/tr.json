@@ -796,7 +796,7 @@
       "digitalAds": "Dijital Reklamlar",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çekim",
-      "socialMediaDesign": "SMM Tasarım"
+      "socialMediaDesign": "Sosyal Medya Tasarım"
     },
     "website": {
       "title": "Web Sitesi Hesaplayıcı",
@@ -998,16 +998,48 @@
       "applyCoupon": "Uygula",
       "cancelCoupon": "İptal",
       "invalidCoupon": "Geçersiz kupon kodu",
+      "monthlyPaymentOption": "Ödeme Seçeneği",
+      "paymentOptions": {
+        "fullPayment": "Tam Ödeme",
+        "monthlyPayment": "Aylık Ödeme"
+      },
+      "initialPayment": "İlk Ödeme",
+      "months": "ay",
+      "interestFree": "Faizsiz",
       "designOptions": {
         "custom": "Özel Tasarım (Ücretsiz)",
         "premium": "Premium Tasarım"
       },
       "supportPackages": {
         "basic": "Temel (Ücretsiz)",
-        "standard": "Standart",
-        "professional": "Profesyonel",
-        "premium": "Premium"
+        "premium": "Premium (Yıllık 2500 AZN)"
       },
+      "basicSupportDetails": [
+        "3 aylık teknik destek",
+        "Sistem kontrolü",
+        "Küçük teknik düzeltmeler",
+        "Güvenlik izleme",
+        "Kullanım kılavuzu",
+        "E-posta desteği",
+        "Temel yedekleme hizmeti",
+        "Temel performans kontrolü"
+      ],
+      "premiumSupportDetails": [
+        "7/24 öncelikli teknik destek",
+        "Tam teknik yönetim",
+        "Gerçek zamanlı sistem izleme",
+        "Günlük otomatik yedekleme",
+        "Gelişmiş güvenlik sistemi",
+        "Sunucu ve performans optimizasyonu",
+        "Veritabanı optimizasyonu",
+        "Çökme ve hata izleme",
+        "API ve üçüncü taraf entegrasyon yönetimi",
+        "SEO teknik izleme",
+        "Aylık teknik rapor",
+        "Küçük fonksiyonel güncellemeler",
+        "Öncelikli düzeltme hizmeti",
+        "6-12 saat yanıt süresi"
+      ],
       "includedItems": {
         "freeDomainHosting": "Ücretsiz Domain ve Hosting",
         "support247": "24/7 Destek",

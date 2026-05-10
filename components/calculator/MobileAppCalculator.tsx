@@ -34,9 +34,7 @@ const MOBILE_APP_FEATURES: MobileAppFeature[] = [
 // ── Support Packages ─────────────────────────────────────────────────────────
 const SUPPORT_PACKAGES = [
   { id: 'basic', name: 'supportPackages.basic', price: 0 },
-  { id: 'standard', name: 'supportPackages.standard', price: 200 },
-  { id: 'professional', name: 'supportPackages.professional', price: 425 },
-  { id: 'premium', name: 'supportPackages.premium', price: 680 },
+  { id: 'premium', name: 'supportPackages.premium', price: 2500 },
 ]
 
 // ── Coupon Codes ─────────────────────────────────────────────────────────────
@@ -56,6 +54,7 @@ export default function MobileAppCalculator() {
   const [screenCount, setScreenCount] = useState(5)
   const [designType, setDesignType] = useState<'custom' | 'premium'>('custom')
   const [supportPackage, setSupportPackage] = useState<string>('basic')
+  const [monthlyPayment, setMonthlyPayment] = useState(false)
   const [selectedFeatures, setSelectedFeatures] = useState<Record<string, boolean>>({
     pushNotifications: true,
     socialLogin: true,
@@ -83,13 +82,6 @@ export default function MobileAppCalculator() {
       total += PREMIUM_DESIGN_PRICE
     }
 
-    // Add support package price (monthly)
-    const support = SUPPORT_PACKAGES.find(p => p.id === supportPackage)
-    if (support && support.price > 0) {
-      // Support is monthly, so we don't add it to base price
-      // It will be shown separately
-    }
-
     // Add selected features
     MOBILE_APP_FEATURES.forEach(feature => {
       if (selectedFeatures[feature.id] && !feature.included) {
@@ -113,8 +105,12 @@ export default function MobileAppCalculator() {
     }
   }
 
-  // Support package monthly price
-  const supportMonthlyPrice = SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.price || 0
+  // Support package yearly price (only for premium)
+  const supportYearlyPrice = supportPackage === 'premium' ? 2500 : 0
+
+  // Monthly payment calculation (only for base price, not support)
+  const initialPayment = monthlyPayment ? Math.round(finalTotalPrice * 0.5) : 0
+  const monthlyAmount = monthlyPayment ? Math.round((finalTotalPrice - initialPayment) / 6) : 0
 
   // Coupon application
   const applyCoupon = () => {
@@ -141,7 +137,7 @@ export default function MobileAppCalculator() {
   const whatsappNumber = '994507786887'
   
   const msg = encodeURIComponent(
-    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}${supportMonthlyPrice > 0 ? ` (${supportMonthlyPrice} AZN/${t('monthly')})` : ''}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.`
+    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}${supportYearlyPrice > 0 ? ` (${supportYearlyPrice} AZN/${t('yearly')})` : ''}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.${monthlyPayment ? ` ${t('paymentOptions.monthlyPayment')}: 6 ${t('months')} (${t('initialPayment')}: ${initialPayment} AZN, ${t('monthly')}: ${monthlyAmount} AZN)` : ''}`
   )
 
   return (
@@ -187,6 +183,28 @@ export default function MobileAppCalculator() {
             </div>
           </div>
 
+          {/* Included Services - MOVED ABOVE DESIGN COMPLEXITY */}
+          <div className="mb-6 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <h4 className="font-medium text-green-400 text-sm mb-3 flex items-center gap-2">
+              ✅ {t('includedServices')}
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {[
+                'includedItems.freeDomainHosting',
+                'includedItems.support247',
+                'includedItems.warranty',
+                'includedItems.pushNotifications',
+                'includedItems.socialLogin',
+                'includedItems.appAnalytics',
+              ].map((item, index) => (
+                <div key={index} className="flex items-center text-xs text-text-secondary">
+                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 shrink-0"></span>
+                  {t(item)}
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Design Complexity */}
           <div className="mb-6">
             <h4 className="font-medium text-text-primary text-sm mb-3">{t('designComplexity')}:</h4>
@@ -217,7 +235,7 @@ export default function MobileAppCalculator() {
           {/* Support Package */}
           <div className="mb-6">
             <h4 className="font-medium text-text-primary text-sm mb-3">{t('supportPackage')}:</h4>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-3">
               {SUPPORT_PACKAGES.map((pkg) => (
                 <button
                   key={pkg.id}
@@ -234,34 +252,40 @@ export default function MobileAppCalculator() {
                     {pkg.price === 0 ? (
                       <span className="text-green-400">{t('free')}</span>
                     ) : (
-                      <span>{pkg.price} AZN/{t('monthly')}</span>
+                      <span>{pkg.price} AZN/{t('yearly')}</span>
                     )}
                   </div>
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Included Services */}
-          <div className="mb-6 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
-            <h4 className="font-medium text-green-400 text-sm mb-3 flex items-center gap-2">
-              ✅ {t('includedServices')}
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {[
-                'includedItems.freeDomainHosting',
-                'includedItems.support247',
-                'includedItems.warranty',
-                'includedItems.pushNotifications',
-                'includedItems.socialLogin',
-                'includedItems.appAnalytics',
-              ].map((item, index) => (
-                <div key={index} className="flex items-center text-xs text-text-secondary">
-                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 shrink-0"></span>
-                  {t(item)}
+            
+            {/* Support Package Details */}
+            {supportPackage && (
+              <div className="mt-3 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
+                <div className="space-y-1.5">
+                  {supportPackage === 'basic' && (
+                    <>
+                      {(t.raw('basicSupportDetails') as string[]).map((detail, index) => (
+                        <div key={index} className="flex items-start text-xs text-text-secondary">
+                          <span className="w-1.5 h-1.5 bg-accent-primary rounded-full mr-2 mt-1.5 shrink-0"></span>
+                          {detail}
+                        </div>
+                      ))}
+                    </>
+                  )}
+                  {supportPackage === 'premium' && (
+                    <>
+                      {(t.raw('premiumSupportDetails') as string[]).map((detail, index) => (
+                        <div key={index} className="flex items-start text-xs text-text-secondary">
+                          <span className="w-1.5 h-1.5 bg-accent-primary rounded-full mr-2 mt-1.5 shrink-0"></span>
+                          {detail}
+                        </div>
+                      ))}
+                    </>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
 
           {/* Additional Features */}
@@ -319,10 +343,16 @@ export default function MobileAppCalculator() {
           <p className="text-3xl font-display font-bold gradient-text mb-2">
             {finalTotalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
-          {supportMonthlyPrice > 0 && (
+          {supportYearlyPrice > 0 && (
             <p className="text-sm text-text-secondary mb-2">
-              + {supportMonthlyPrice} AZN/{t('monthly')} ({t('supportPackage')})
+              + {supportYearlyPrice} AZN/{t('yearly')} ({t('supportPackage')})
             </p>
+          )}
+          {monthlyPayment && (
+            <div className="mb-2 text-sm text-text-secondary">
+              <p>{t('initialPayment')}: <span className="font-semibold text-text-primary">{initialPayment} AZN</span></p>
+              <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN × 6 {t('months')}</span></p>
+            </div>
           )}
           <p className="text-text-muted text-[10px] mb-4">{t('taxIncluded')}</p>
           <a
@@ -362,11 +392,42 @@ export default function MobileAppCalculator() {
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           
-          {supportMonthlyPrice > 0 && (
+          {supportYearlyPrice > 0 && (
             <p className="text-sm text-text-secondary mb-3">
-              + {supportMonthlyPrice} AZN/{t('monthly')} ({t('supportPackage')})
+              + {supportYearlyPrice} AZN/{t('yearly')} ({t('supportPackage')})
             </p>
           )}
+
+          {/* Monthly Payment Option */}
+          <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
+            <div className="flex items-center gap-3">
+              <label className="flex items-center cursor-pointer flex-1">
+                <input
+                  type="radio"
+                  checked={!monthlyPayment}
+                  onChange={() => setMonthlyPayment(false)}
+                  className="w-4 h-4 text-accent-primary border-white/20 focus:ring-accent-primary bg-transparent"
+                />
+                <span className="ml-2 text-sm text-text-primary">{t('paymentOptions.fullPayment')}</span>
+              </label>
+              <label className="flex items-center cursor-pointer flex-1">
+                <input
+                  type="radio"
+                  checked={monthlyPayment}
+                  onChange={() => setMonthlyPayment(true)}
+                  className="w-4 h-4 text-accent-primary border-white/20 focus:ring-accent-primary bg-transparent"
+                />
+                <span className="ml-2 text-sm text-text-primary">{t('paymentOptions.monthlyPayment')}</span>
+              </label>
+            </div>
+            {monthlyPayment && (
+              <div className="mt-2 text-xs text-text-secondary space-y-1 pt-2 border-t border-white/10">
+                <p>{t('initialPayment')}: <span className="font-semibold text-text-primary">{initialPayment} AZN</span> (50%)</p>
+                <p>{t('monthly')}: <span className="font-semibold text-text-primary">{monthlyAmount} AZN</span> × 6 {t('months')}</p>
+                <p className="text-green-400">{t('interestFree')}</p>
+              </div>
+            )}
+          </div>
 
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
           <p className="text-text-muted text-[10px] mb-4">{t('professionalTeam')}</p>
