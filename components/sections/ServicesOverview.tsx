@@ -13,7 +13,15 @@ export function ServicesOverview() {
   const services = getAllServicesSync()
 
   return (
-    <section className="py-20">
+    <section className="py-20 relative overflow-hidden">
+      {/* Subtle grid */}
+      <div
+        className="absolute inset-0 pointer-events-none -z-10 opacity-[0.025]"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal animation="fadeInUp" className="text-center mb-16">
           <h2 className="text-display-lg font-display font-bold text-text-primary mb-4">
