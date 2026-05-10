@@ -88,6 +88,11 @@ export default function MobileAppCalculator() {
       total += PREMIUM_DESIGN_PRICE
     }
 
+    // Add support package price
+    if (supportPackage === 'premium') {
+      total += 2500
+    }
+
     // Add selected features
     MOBILE_APP_FEATURES.forEach(feature => {
       if (selectedFeatures[feature.id] && !feature.included) {
@@ -111,10 +116,7 @@ export default function MobileAppCalculator() {
     }
   }
 
-  // Support package yearly price (only for premium)
-  const supportYearlyPrice = supportPackage === 'premium' ? 2500 : 0
-
-  // Monthly payment calculation (only for base price, not support)
+  // Monthly payment calculation (includes support package)
   const initialPayment = monthlyPayment ? Math.round(finalTotalPrice * 0.5) : 0
   const monthlyAmount = monthlyPayment ? Math.round((finalTotalPrice - initialPayment) / monthlyPayment) : 0
 
@@ -143,7 +145,7 @@ export default function MobileAppCalculator() {
   const whatsappNumber = '994507786887'
   
   const msg = encodeURIComponent(
-    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}${supportYearlyPrice > 0 ? ` (${supportYearlyPrice} AZN/${t('yearly')})` : ''}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.${monthlyPayment ? ` ${t('monthlyPayment')}: ${monthlyPayment} ${t('months')} (${t('initialPayment')}: ${initialPayment} AZN, ${t('monthly')}: ${monthlyAmount} AZN)` : ''}`
+    `Salam! ${t('title')}: ${screenCount} ${t('screens')}. ${t('designComplexity')}: ${t(`designOptions.${designType}`)}. ${t('supportPackage')}: ${t(SUPPORT_PACKAGES.find(p => p.id === supportPackage)?.name || '')}. ${appliedCoupon ? `${t('discountCoupon')}: ${appliedCoupon.code} (-${appliedCoupon.discount} AZN). ` : ''}${t('totalAmount')}: ${finalTotalPrice} AZN.${monthlyPayment ? ` ${t('monthlyPayment')}: ${monthlyPayment} ${t('months')} (${t('initialPayment')}: ${initialPayment} AZN, ${t('monthly')}: ${monthlyAmount} AZN)` : ''}`
   )
 
   return (
@@ -349,11 +351,6 @@ export default function MobileAppCalculator() {
           <p className="text-3xl font-display font-bold gradient-text mb-2">
             {finalTotalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
-          {supportYearlyPrice > 0 && (
-            <p className="text-sm text-text-secondary mb-2">
-              + {supportYearlyPrice} AZN/{t('yearly')} ({t('supportPackage')})
-            </p>
-          )}
           {monthlyPayment && (
             <div className="mb-2 text-sm text-text-secondary">
               <p>{t('initialPayment')}: <span className="font-semibold text-text-primary">{initialPayment} AZN</span></p>
@@ -397,12 +394,6 @@ export default function MobileAppCalculator() {
             {finalTotalPrice}
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
-          
-          {supportYearlyPrice > 0 && (
-            <p className="text-sm text-text-secondary mb-3">
-              + {supportYearlyPrice} AZN/{t('yearly')} ({t('supportPackage')})
-            </p>
-          )}
 
           {/* Monthly Payment Option */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
