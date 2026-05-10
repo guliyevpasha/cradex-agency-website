@@ -868,6 +868,15 @@
     },
     "digitalAds": {
       "title": "Калькулятор цифровой рекламы"
+    },
+    "videoEditing": {
+      "title": "Калькулятор монтажа видео"
+    },
+    "videoShooting": {
+      "title": "Калькулятор видеосъёмки"
+    },
+    "socialMediaDesign": {
+      "title": "Калькулятор SMM дизайна"
     }
   },
   "popup": {

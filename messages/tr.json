@@ -868,6 +868,15 @@
     },
     "digitalAds": {
       "title": "Dijital Reklam Hesaplayıcı"
+    },
+    "videoEditing": {
+      "title": "Video Montaj Hesaplayıcı"
+    },
+    "videoShooting": {
+      "title": "Video Çekim Hesaplayıcı"
+    },
+    "socialMediaDesign": {
+      "title": "SMM Tasarım Hesaplayıcı"
     }
   },
   "popup": {

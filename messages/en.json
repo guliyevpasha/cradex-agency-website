@@ -1057,6 +1057,15 @@
     },
     "digitalAds": {
       "title": "Digital Ads Calculator"
+    },
+    "videoEditing": {
+      "title": "Video Editing Calculator"
+    },
+    "videoShooting": {
+      "title": "Video Shooting Calculator"
+    },
+    "socialMediaDesign": {
+      "title": "Social Media Design Calculator"
     }
   },
   "popup": {
