@@ -60,19 +60,6 @@ export function TestimonialsCarousel() {
 
   return (
     <section className="py-24 overflow-hidden relative">
-      {/* Diagonal grid background */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, currentColor 1px, transparent 1px),
-            linear-gradient(-45deg, currentColor 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 20px 20px',
-        }}
-      />
-      
       {/* Ambient background glow */}
       <div
         className="absolute inset-0 pointer-events-none -z-10"

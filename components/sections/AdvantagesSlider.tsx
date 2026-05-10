@@ -101,20 +101,7 @@ export function AdvantagesSlider() {
   const isCollapsing = phase === 'collapsing'
 
   return (
-    <section ref={sectionRef} className="py-20 overflow-hidden relative">
-      {/* Diagonal grid background */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, currentColor 1px, transparent 1px),
-            linear-gradient(-45deg, currentColor 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 20px 20px',
-        }}
-      />
-      
+    <section ref={sectionRef} className="py-20 overflow-hidden">
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
         <motion.div
