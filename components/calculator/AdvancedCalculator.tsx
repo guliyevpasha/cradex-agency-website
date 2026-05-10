@@ -6,9 +6,10 @@ import { VideoShootingCalculator } from './VideoShootingCalculator'
 import { SocialMediaDesignCalculator } from './SocialMediaDesignCalculator'
 import DigitalAdsCalculator from './DigitalAdsCalculator'
 import WebsiteCalculator from './WebsiteCalculator'
+import MobileAppCalculator from './MobileAppCalculator'
 import { cn } from '@/lib/utils/cn'
 
-type ServiceTab = 'video-editing' | 'video-shooting' | 'social-media-design' | 'digital-ads' | 'website'
+type ServiceTab = 'video-editing' | 'video-shooting' | 'social-media-design' | 'digital-ads' | 'website' | 'mobile-app'
 
 export function AdvancedCalculator() {
   const t = useTranslations('calculator')
@@ -16,7 +17,8 @@ export function AdvancedCalculator() {
 
   const TABS: { id: ServiceTab; labelKey: string; icon: string }[] = [
     { id: 'website', labelKey: 'website', icon: '🌐' },
-    { id: 'digital-ads', labelKey: 'digitalAds', icon: '📱' },
+    { id: 'mobile-app', labelKey: 'mobileApp', icon: '📱' },
+    { id: 'digital-ads', labelKey: 'digitalAds', icon: '📢' },
     { id: 'video-editing', labelKey: 'videoEditing', icon: '✂️' },
     { id: 'video-shooting', labelKey: 'videoShooting', icon: '🎬' },
     { id: 'social-media-design', labelKey: 'socialMediaDesign', icon: '🎨' },
@@ -45,6 +47,7 @@ export function AdvancedCalculator() {
 
       {/* Calculator content */}
       {activeTab === 'website' && <WebsiteCalculator />}
+      {activeTab === 'mobile-app' && <MobileAppCalculator />}
       {activeTab === 'digital-ads' && <DigitalAdsCalculator />}
       {activeTab === 'video-editing' && <VideoEditingCalculator />}
       {activeTab === 'video-shooting' && <VideoShootingCalculator />}
