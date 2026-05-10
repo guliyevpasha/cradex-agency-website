@@ -53,6 +53,19 @@ export function ProcessSection() {
 
   return (
     <section ref={sectionRef} className="py-24 relative overflow-hidden">
+      {/* Diagonal grid background - stronger pattern */}
+      <div 
+        className="absolute inset-0 pointer-events-none -z-10 opacity-[0.04]"
+        style={{
+          backgroundImage: `
+            linear-gradient(45deg, currentColor 1px, transparent 1px),
+            linear-gradient(-45deg, currentColor 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 20px 20px',
+        }}
+      />
+      
       {/* Background ambient glow */}
       <div
         className="absolute inset-0 pointer-events-none -z-10"
@@ -60,15 +73,7 @@ export function ProcessSection() {
           background: 'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(108,99,255,0.07) 0%, transparent 70%)',
         }}
       />
-      {/* Subtle grid */}
-      <div
-        className="absolute inset-0 pointer-events-none -z-10 opacity-[0.025]"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }}
-      />
-
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Heading ── */}
