@@ -273,7 +273,7 @@
     "process": "İş Prosesi",
     "relatedWork": "Əlaqəli İşlər"
   },
-  "calculator": {
+  "calculator_legacy": {
     "title": "Xidmət Qiymətini Hesabla",
     "subtitle": "Ehtiyaclarınıza uyğun xidmətləri seçin və dərhal qiymət alın",
     "tabs": {

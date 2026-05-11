@@ -249,7 +249,7 @@
     "process": "Our Process",
     "relatedWork": "Related Work"
   },
-  "calculator": {
+  "calculator_legacy": {
     "title": "Calculate Service Price",
     "subtitle": "Select the services you need and get an instant estimate",
     "tabs": {

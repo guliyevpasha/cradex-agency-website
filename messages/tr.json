@@ -249,7 +249,7 @@
     "process": "Sürecimiz",
     "relatedWork": "İlgili Çalışmalar"
   },
-  "calculator": {
+  "calculator_legacy": {
     "title": "Hizmet Fiyatını Hesapla",
     "subtitle": "İhtiyaçlarınıza uygun hizmetleri seçin",
     "tabs": {
