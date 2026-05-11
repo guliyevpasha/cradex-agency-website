@@ -1475,33 +1475,6 @@
       "enterCouponCode": "Kupon kodunu daxil edin",
       "applyCoupon": "Tətbiq et",
       "cancelCoupon": "Ləğv et"
-    },
-    "socialMediaDesign": {
-      "title": "Sosial Media Dizayn",
-      "generalRules": "Ümumi qaydalar",
-      "oneDesignOneContent": "1 dizayn = 1 kontent",
-      "revisionOneFree": "Dəyişiklik (revision): 1 dəfə pulsuz",
-      "delivery24h": "Çatdırılma: 24 saat (standart)",
-      "platformSelection": "Sosial Media Platforma Seçimi",
-      "designTypes": "Dizayn Növləri",
-      "designCount": "Dizayn Sayı (1-100)",
-      "pieces": "ədəd",
-      "additionalServices": "Əlavə Xidmətlər",
-      "extraRevisions": "Əlavə Düzəlişlər",
-      "extraRevision": "əlavə düzəliş",
-      "perExtraRevision": "Hər əlavə düzəliş üçün 5 AZN (1 dizayn üçün).",
-      "totalAmount": "Cəmi Məbləğ",
-      "taxIncluded": "* Vergi daxildir",
-      "discount": "Endirim",
-      "discountCoupon": "Endirim Kuponu",
-      "enterCouponCode": "Kupon kodunu daxil edin",
-      "applyCoupon": "Tətbiq et",
-      "cancelCoupon": "İptal",
-      "invalidCoupon": "Kupon kodu yanlış!",
-      "orderNow": "Sifariş verin",
-      "fileRequirements": "Fayl Tələbləri",
-      "faq": "Tez-tez Verilən Suallar",
-      "professionalTeam": "🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!"
     }
   },
   "popup": {
