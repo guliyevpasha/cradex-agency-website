@@ -1475,6 +1475,91 @@
       "enterCouponCode": "Kupon kodunu daxil edin",
       "applyCoupon": "Tətbiq et",
       "cancelCoupon": "Ləğv et"
+    },
+    "socialMediaDesign": {
+      "title": "Sosial Media Dizayn",
+      "generalRules": "Ümumi qaydalar",
+      "oneDesignOneContent": "1 dizayn = 1 kontent",
+      "revisionOneFree": "Dəyişiklik (revision): 1 dəfə pulsuz",
+      "delivery24h": "Çatdırılma: 24 saat (standart)",
+      "platformSelection": "Sosial Media Platforma Seçimi",
+      "designTypes": "Dizayn Növləri",
+      "designCount": "Dizayn Sayı (1-100)",
+      "pieces": "ədəd",
+      "additionalServices": "Əlavə Xidmətlər",
+      "extraRevisions": "Əlavə Düzəlişlər",
+      "extraRevision": "əlavə düzəliş",
+      "perExtraRevision": "Hər əlavə düzəliş üçün 5 AZN (1 dizayn üçün).",
+      "totalAmount": "Cəmi Məbləğ",
+      "taxIncluded": "* Vergi daxildir",
+      "discount": "Endirim",
+      "discountCoupon": "Endirim Kuponu",
+      "enterCouponCode": "Kupon kodunu daxil edin",
+      "applyCoupon": "Tətbiq et",
+      "cancelCoupon": "Ləğv et",
+      "invalidCoupon": "Kupon kodu yanlış!",
+      "orderNow": "Sifariş verin",
+      "fileRequirements": "Fayl Tələbləri",
+      "faq": "Tez-tez Verilən Suallar",
+      "platforms": {
+        "instagram": {
+          "content": "Instagram kontent (1080×1350)",
+          "reels_cover": "Reels video örtük dizaynı",
+          "story": "Instagram hekayə (1080×1920)",
+          "highlights": "Instagram highlights (seçilmiş hekayələr)",
+          "carousel": "Karusel kontent (5–10 slayd)"
+        },
+        "facebook": {
+          "post": "Facebook paylaşım şəkli (1200×630)",
+          "ad": "Facebook reklam dizaynı (1200×628)",
+          "event_cover": "Facebook tədbir örtük şəkli (1920×1080)",
+          "cover": "Facebook örtük şəkli (851×315)"
+        },
+        "linkedin": {
+          "post": "LinkedIn post (1200×1200)",
+          "banner": "LinkedIn banner (1584×396)",
+          "article_cover": "LinkedIn məqalə cover",
+          "single_ad": "LinkedIn tək şəkil reklam (1200×627)"
+        },
+        "pinterest": {
+          "carousel_ad": "Karusel Pinterest reklamı (1000×1500)",
+          "pin": "Pinterest pin dizaynı (2:3 nisbət)"
+        },
+        "tiktok": {
+          "video_cover": "Video örtük dizaynı (1080×1920)"
+        },
+        "youtube": {
+          "channel_cover": "Kanal örtük şəkli (2560×1440)",
+          "thumbnail": "YouTube thumbnail (1280×720)"
+        },
+        "twitter": {
+          "cover": "Örtük şəkli (1500×500)",
+          "content": "Kontent dizaynı (1600×900)"
+        }
+      },
+      "services": {
+        "custom_icons": "Xüsusi ikonlar/illustrasiyalar",
+        "copywriting": "Mətn yazılması",
+        "template_files": "Dizayn şablonun (PSD, Canva) göndərilməsi",
+        "rush_delivery": "Təcili hazırlanma 8 saat"
+      },
+      "packagePrice": "Paket qiymət",
+      "perDesign": "(1 dizayn üçün)",
+      "fileRequirementsItems": {
+        "visualMaterials": "Vizual materialllar: JPG və ya PNG formatında, minimum 1080px və ya daha yüksək keyfiyyət",
+        "textMaterials": "Mətn məlumatları: Word sənədi və ya Google Docs formatında",
+        "brandElements": "Brend elementləri: Brend rəng kodları (HEX və ya RGB), Font adları",
+        "logoIdentity": "Logo və identiklik: SVG (vektor) və ya PNG formatında, şəffaf arxa fon üstünlükdür",
+        "referenceMaterials": "Referans materiallar: Bənzər dizayn nümunələri, istədiyiniz stil və vizual istiqamət"
+      },
+      "faqItems": {
+        "q1": "Dizayn neçə gündə hazır olur?",
+        "a1": "Standart sifarişlər 24 saat ərzində tamamlanır. Təcili sifarişlər 8 saat ərzində hazırlanır.",
+        "q2": "Hansı formatda fayl təhvil verilir?",
+        "a2": "PNG, JPG formatlarında təhvil verilir. Tələb olunarsa PSD və ya Canva şablonları da göndərilə bilər.",
+        "q3": "Dəyişiklik hüququm varmı?",
+        "a3": "Bəli, hər dizayn üçün 1 dəfə pulsuz dəyişiklik hüququnuz var."
+      }
     }
   },
   "popup": {
