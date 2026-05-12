@@ -15,6 +15,10 @@ export async function PortfolioPreview() {
 }
 
 // Client-renderable inner component
+'use client'
+import { motion } from 'framer-motion'
+import { imageZoom } from '@/lib/animations/variants'
+import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 import type { PortfolioItem } from '@/types'
 
 function PortfolioPreviewClient({ items }: { items: PortfolioItem[] }) {
@@ -22,6 +26,7 @@ function PortfolioPreviewClient({ items }: { items: PortfolioItem[] }) {
   const tPortfolio = useTranslations('portfolio')
   const tCommon = useTranslations('common.cta')
   const locale = useLocale()
+  const prefersReducedMotion = useReducedMotion()
 
   return (
     <section className="py-20 bg-bg-secondary/50 relative overflow-hidden">
@@ -53,23 +58,35 @@ function PortfolioPreviewClient({ items }: { items: PortfolioItem[] }) {
             <ScrollReveal key={item.id} animation="scaleIn" delay={index * 100}>
               <Link
                 href={`/${locale}/portfolio/${item.slug}`}
-                className="group block relative overflow-hidden rounded-2xl aspect-[4/3] bg-bg-tertiary"
+                className="group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
-                  <span className="text-6xl opacity-30">🖼️</span>
-                </div>
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-6">
-                  <Badge variant="accent">{item.serviceCategory}</Badge>
-                  <h3 className="text-text-primary font-semibold text-center text-lg">
-                    {item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey}
-                  </h3>
-                  <p className="text-text-secondary text-sm text-center">{item.clientName}</p>
-                  <div className="flex items-center gap-2 text-accent-primary text-sm font-medium mt-2">
-                    <span>{tPortfolio('viewProject')}</span>
-                    <ArrowRight size={14} />
+                <motion.div
+                  className="block relative overflow-hidden rounded-2xl aspect-[4/3] bg-bg-tertiary"
+                  variants={prefersReducedMotion ? undefined : imageZoom}
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap="tap"
+                  style={{
+                    transformOrigin: 'center',
+                    willChange: 'transform',
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
+                    <span className="text-6xl opacity-30">🖼️</span>
                   </div>
-                </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-6">
+                    <Badge variant="accent">{item.serviceCategory}</Badge>
+                    <h3 className="text-text-primary font-semibold text-center text-lg">
+                      {item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey}
+                    </h3>
+                    <p className="text-text-secondary text-sm text-center">{item.clientName}</p>
+                    <div className="flex items-center gap-2 text-accent-primary text-sm font-medium mt-2">
+                      <span>{tPortfolio('viewProject')}</span>
+                      <ArrowRight size={14} />
+                    </div>
+                  </div>
+                </motion.div>
               </Link>
             </ScrollReveal>
           ))}

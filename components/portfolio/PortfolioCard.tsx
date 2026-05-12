@@ -1,8 +1,12 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/Badge'
+import { imageZoom } from '@/lib/animations/variants'
+import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 import type { PortfolioItem } from '@/types'
 
 interface PortfolioCardProps {
@@ -12,12 +16,24 @@ interface PortfolioCardProps {
 export function PortfolioCard({ item }: PortfolioCardProps) {
   const locale = useLocale()
   const t = useTranslations('portfolio')
+  const prefersReducedMotion = useReducedMotion()
 
   return (
     <Link
       href={`/${locale}/portfolio/${item.slug}`}
-      className="group block relative overflow-hidden rounded-2xl aspect-[4/3] bg-bg-tertiary"
+      className="group"
     >
+      <motion.div
+        className="block relative overflow-hidden rounded-2xl aspect-[4/3] bg-bg-tertiary"
+        variants={prefersReducedMotion ? undefined : imageZoom}
+        initial="initial"
+        whileHover="hover"
+        whileTap="tap"
+        style={{
+          transformOrigin: 'center',
+          willChange: 'transform',
+        }}
+      >
       {/* Cover image */}
       {item.coverImage ? (
         <Image
@@ -53,6 +69,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
           <span className="text-xs bg-accent-primary/90 text-white px-2 py-0.5 rounded-full">⭐</span>
         </div>
       )}
+      </motion.div>
     </Link>
   )
 }

@@ -91,3 +91,23 @@ export const mobileMenuVariants: Variants = {
     transition: { duration: 0.25, ease: easing },
   },
 }
+
+export const imageZoom: Variants = {
+  initial: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.1,
+    transition: {
+      duration: 0.2,
+      ease: easing,
+    },
+  },
+  tap: {
+    scale: 1.1,
+    transition: {
+      duration: 0.2,
+      ease: easing,
+    },
+  },
+}
