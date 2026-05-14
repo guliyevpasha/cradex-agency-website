@@ -1,4 +1,6 @@
-import { articleSchema } from './article'
-import { portfolioItemSchema } from './portfolioItem'
+import blog from './blog'
+import portfolio from './portfolio'
+import partner from './partner'
+import testimonial from './testimonial'
 
-export const schemaTypes = [articleSchema, portfolioItemSchema]
+export const schemaTypes = [blog, portfolio, partner, testimonial]

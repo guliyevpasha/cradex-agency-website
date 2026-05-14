@@ -1,0 +1,6 @@
+@echo off
+echo Starting Cradex Agency Studio...
+echo.
+echo Please wait, server is starting...
+echo.
+npm run dev

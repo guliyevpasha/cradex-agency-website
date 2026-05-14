@@ -1,17 +1,11 @@
 /**
  * Partner logos configuration.
  *
- * HOW TO ADD A NEW PARTNER:
- * 1. Place the logo file in `public/logos/` (PNG, SVG, WebP — any format)
- *    e.g. public/logos/mycompany.svg
- * 2. Add a new entry below with:
- *    - id: unique string
- *    - name: company name (shown as alt text and tooltip)
- *    - logo: path starting with /logos/  (e.g. "/logos/mycompany.svg")
- *    - logoB: (optional) alternate copy with unique IDs to avoid SVG conflicts
- *
- * That's it — no code changes needed anywhere else.
+ * Now fetches from Sanity CMS in production.
+ * Fallback to static data for development/testing.
  */
+
+import { getAllPartners as getSanityPartners, type Partner as SanityPartner } from '@/sanity/lib/queries'
 
 export interface PartnerLogo {
   id: string
@@ -22,7 +16,8 @@ export interface PartnerLogo {
   logoB?: string
 }
 
-export const partners: PartnerLogo[] = [
+// Static fallback data
+const staticPartners: PartnerLogo[] = [
   {
     id: 'p10',
     name: 'AzPrint',
@@ -137,3 +132,27 @@ export const partners: PartnerLogo[] = [
     logoB: '/logos/kangoaz-b.svg',
   },
 ]
+
+// Check if we should use Sanity (production) or static data (fallback)
+const USE_SANITY = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test'
+
+export async function getPartners(): Promise<PartnerLogo[]> {
+  if (USE_SANITY) {
+    try {
+      const sanityPartners = await getSanityPartners()
+      // Convert Sanity partners to PartnerLogo format
+      return sanityPartners.map((p: SanityPartner) => ({
+        id: p.id,
+        name: p.name,
+        logo: p.logo,
+        logoB: undefined, // Sanity doesn't have logoB
+      }))
+    } catch (error) {
+      console.error('Failed to fetch partners from Sanity, using fallback data:', error)
+    }
+  }
+  return staticPartners
+}
+
+// For backward compatibility
+export const partners: PartnerLogo[] = staticPartners

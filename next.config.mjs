@@ -14,26 +14,26 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https:",
+      "img-src 'self' data: blob: https: https://cdn.sanity.io",
       "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://api.resend.com",
+      "connect-src 'self' https://api.resend.com https://*.sanity.io https://*.sanity.studio",
+      "frame-src 'self' https://cradex-agency.sanity.studio",
     ].join('; ')
   },
 ]
 
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Removed 'output: export' to enable Sanity Studio (requires SSR)
+  // trailingSlash: true, // Not needed without static export
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
   },
-  transpilePackages: ['swiper'],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  transpilePackages: ['swiper', 'next-sanity', 'sanity'],
   async headers() {
     return [
       {
