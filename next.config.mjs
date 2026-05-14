@@ -1,7 +1,3 @@
-import createNextIntlPlugin from 'next-intl/plugin'
-
-const withNextIntl = createNextIntlPlugin('./i18n.ts')
-
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
@@ -50,4 +46,4 @@ const nextConfig = {
   },
 }
 
-export default withNextIntl(nextConfig)
+export default nextConfig
