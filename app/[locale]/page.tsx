@@ -14,17 +14,19 @@ import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'home' })
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'home' })
   return {
     title: 'Cradex Agency — Rəqəmsal Marketinq Agentliyi',
     description: t('hero.subtitle'),
   }
 }
 
-export default function HomePage({ params }: { params: { locale: string } }) {
-  unstable_setRequestLocale(params.locale)
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  unstable_setRequestLocale(locale)
   return (
     <>
       <HeroSection />
