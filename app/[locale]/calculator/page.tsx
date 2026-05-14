@@ -1,11 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
-import dynamic from 'next/dynamic'
-
-const AdvancedCalculator = dynamic(
-  () => import('@/components/calculator/AdvancedCalculator').then((m) => m.AdvancedCalculator),
-  { ssr: false, loading: () => <div className="h-96 animate-pulse bg-bg-secondary rounded-2xl" /> }
-)
+import { AdvancedCalculator } from '@/components/calculator/AdvancedCalculator'
 
 export async function generateMetadata({
   params,
