@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { AdvancedCalculator } from '@/components/calculator/AdvancedCalculator'
 
 export async function generateMetadata({
@@ -17,7 +17,7 @@ export async function generateMetadata({
 
 export default async function CalculatorPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  unstable_setRequestLocale(locale)
+  setRequestLocale(locale)
   return (
     <section className="pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

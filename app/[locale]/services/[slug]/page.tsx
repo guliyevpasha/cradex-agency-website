@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
 import { MessageCircle, ArrowRight } from 'lucide-react'
 import { getAllServices, getServiceBySlug } from '@/lib/data/services'
@@ -25,12 +25,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const service = await getServiceBySlug(params.slug)
+  const { locale, slug } = await params
+  const service = await getServiceBySlug(slug)
   if (!service) return {}
-  const t = await getTranslations({ locale: params.locale, namespace: 'services' })
-  const key = params.slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+  const t = await getTranslations({ locale, namespace: 'services' })
+  const key = slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
   return {
     title: t(`${key}.metaTitle` as any),
     description: t(`${key}.metaDescription` as any),
@@ -40,10 +41,11 @@ export async function generateMetadata({
 export default async function ServicePage({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }) {
-  unstable_setRequestLocale(params.locale)
-  const service = await getServiceBySlug(params.slug)
+  const { locale, slug } = await params
+  setRequestLocale(locale)
+  const service = await getServiceBySlug(slug)
   if (!service) notFound()
 
   const relatedPortfolio = await getPortfolioByCategory(service.slug)

@@ -874,6 +874,8 @@
     "terms": "Terms of Use"
   },
   "calculator": {
+    "title": "Calculate Service Price",
+    "subtitle": "Select the services you need and get an instant estimate",
     "tabs": {
       "website": "Website",
       "mobileApp": "Mobile App",

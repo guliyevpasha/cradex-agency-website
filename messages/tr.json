@@ -253,6 +253,8 @@
     "title": "Hizmet Fiyatını Hesapla",
     "subtitle": "İhtiyaçlarınıza uygun hizmetleri seçin",
     "tabs": {
+      "website": "Web Sitesi",
+      "mobileApp": "Mobil Uygulama",
       "digitalAds": "Dijital Reklam",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çekimi",
@@ -790,6 +792,8 @@
     "terms": "Kullanım Koşulları"
   },
   "calculator": {
+    "title": "Hizmet Fiyatını Hesaplayın",
+    "subtitle": "İhtiyacınız olan hizmetleri seçin ve anında fiyat teklifi alın",
     "tabs": {
       "website": "Web Sitesi",
       "mobileApp": "Mobil Uygulama",

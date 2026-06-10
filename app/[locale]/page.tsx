@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { ServicesOverview } from '@/components/sections/ServicesOverview'
 import { PortfolioPreview } from '@/components/sections/PortfolioPreview'
@@ -29,7 +29,7 @@ export async function generateMetadata({
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  unstable_setRequestLocale(locale)
+  setRequestLocale(locale)
   return (
     <>
       <HeroSection />

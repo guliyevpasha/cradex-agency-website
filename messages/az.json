@@ -278,6 +278,7 @@
     "subtitle": "Ehtiyaclarınıza uyğun xidmətləri seçin və dərhal qiymət alın",
     "tabs": {
       "website": "Veb Sayt",
+      "mobileApp": "Mobil Tətbiq",
       "digitalAds": "Rəqəmsal Reklam",
       "videoEditing": "Video Montaj",
       "videoShooting": "Video Çəkiliş",
@@ -897,6 +898,8 @@
     "terms": "İstifadə Şərtləri"
   },
   "calculator": {
+    "title": "Xidmət Qiymətini Hesablayın",
+    "subtitle": "Ehtiyacınız olan xidmətləri seçin və dərhal qiymət təklifi alın",
     "tabs": {
       "website": "Veb Sayt",
       "mobileApp": "Mobil Tətbiq",

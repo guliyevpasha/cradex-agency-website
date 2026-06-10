@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import { Clock, Calendar, ChevronRight } from 'lucide-react'
 import { getArticleBySlug, getArticleSlugs } from '@/lib/data/journal'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -24,9 +24,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug)
+  const { slug } = await params
+  const article = await getArticleBySlug(slug)
   if (!article) return {}
   return {
     title: article.metaTitleKey || article.titleKey,
@@ -44,10 +45,11 @@ export async function generateMetadata({
 export default async function ArticlePage({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }) {
-  unstable_setRequestLocale(params.locale)
-  const article = await getArticleBySlug(params.slug)
+  const { locale, slug } = await params
+  setRequestLocale(locale)
+  const article = await getArticleBySlug(slug)
   if (!article) notFound()
   return <ArticleContent article={article} />
 }

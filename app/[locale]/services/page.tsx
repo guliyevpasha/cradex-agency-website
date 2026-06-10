@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { GlassCard } from '@/components/ui/GlassCard'
@@ -21,7 +21,7 @@ export async function generateMetadata({
 }
 
 export default async function ServicesPage({ params }: { params: { locale: string } }) {
-  unstable_setRequestLocale(params.locale)
+  setRequestLocale(params.locale)
   const services = await getAllServices()
   return <ServicesContent services={services} locale={params.locale} />
 }

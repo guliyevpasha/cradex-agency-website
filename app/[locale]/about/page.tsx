@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { GlassCard } from '@/components/ui/GlassCard'
@@ -8,9 +8,10 @@ import { CtaSection } from '@/components/sections/CtaSection'
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'about' })
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'about' })
   return {
     title: t('title'),
     description: t('subtitle'),
@@ -31,8 +32,9 @@ const team = [
   { name: 'Nigar Quliyeva', role: 'Creative Director', avatar: '👩‍🎨' },
 ]
 
-export default function AboutPage({ params }: { params: { locale: string } }) {
-  unstable_setRequestLocale(params.locale)
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   return <AboutContent />
 }
 

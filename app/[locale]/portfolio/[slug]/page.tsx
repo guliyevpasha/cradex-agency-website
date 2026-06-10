@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import { ChevronRight } from 'lucide-react'
 import { getPortfolioBySlug, getPortfolioSlugs } from '@/lib/data/portfolio'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -43,7 +43,7 @@ export default async function PortfolioDetailPage({
 }: {
   params: { locale: string; slug: string }
 }) {
-  unstable_setRequestLocale(params.locale)
+  setRequestLocale(params.locale)
   const item = await getPortfolioBySlug(params.slug)
   if (!item) notFound()
   return <PortfolioDetailContent item={item} />

@@ -8,9 +8,6 @@ import { PortfolioGrid } from '@/components/portfolio/PortfolioGrid'
 import { getAllPortfolio } from '@/lib/data/portfolio'
 import type { PortfolioItem } from '@/types'
 
-// Enable ISR with 60 second revalidation
-export const revalidate = 60
-
 export default function PortfolioPage() {
   return <PortfolioContent />
 }

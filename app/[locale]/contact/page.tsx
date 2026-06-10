@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import { MessageCircle, Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { ContactForm } from '@/components/forms/ContactForm'
@@ -19,7 +19,7 @@ export async function generateMetadata({
 }
 
 export default function ContactPage({ params }: { params: { locale: string } }) {
-  unstable_setRequestLocale(params.locale)
+  setRequestLocale(params.locale)
   return <ContactContent />
 }
 

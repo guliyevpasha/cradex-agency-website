@@ -1,18 +1,12 @@
 import { getRequestConfig } from 'next-intl/server'
-import { notFound } from 'next/navigation'
 
 export const locales = ['az', 'en', 'ru', 'tr'] as const
 export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = 'az'
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  // This typically corresponds to the `[locale]` segment
-  let locale = await requestLocale
-
-  // Ensure that a valid locale is used
-  if (!locale || !locales.includes(locale as Locale)) {
-    locale = defaultLocale
-  }
+  // Await the locale from the request
+  const locale = (await requestLocale) ?? defaultLocale
 
   return {
     locale,
