@@ -5,5 +5,5 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: false, // Set to true in production for better performance
+  useCdn: false, // Required for ISR to fetch fresh data on revalidation
 })

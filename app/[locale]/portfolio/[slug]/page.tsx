@@ -11,6 +11,9 @@ import { Badge } from '@/components/ui/Badge'
 import { CtaSection } from '@/components/sections/CtaSection'
 import type { PortfolioItem } from '@/types'
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60
+
 const locales = ['az', 'en', 'ru', 'tr']
 
 export async function generateStaticParams() {

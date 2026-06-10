@@ -3,7 +3,8 @@ import journalData from './journal.data.json'
 import { getAllBlogPosts, getBlogPostBySlug, getBlogPostsByCategory, getPaginatedBlogPosts } from '@/sanity/lib/queries'
 
 // Check if we should use Sanity (production) or JSON (fallback)
-const USE_SANITY = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test'
+// Temporarily disabled Sanity, using JSON files instead
+const USE_SANITY = false // process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test'
 
 export async function getAllArticles(locale: string = 'az'): Promise<Article[]> {
   if (USE_SANITY) {

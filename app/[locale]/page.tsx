@@ -11,6 +11,9 @@ import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60
+
 export async function generateMetadata({
   params,
 }: {

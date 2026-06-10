@@ -8,6 +8,9 @@ import { Pagination } from '@/components/journal/Pagination'
 import { getPaginatedArticles } from '@/lib/data/journal'
 import type { Article, ArticleCategory } from '@/types'
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60
+
 // This will be server component wrapper
 export default function JournalPage() {
   return <JournalContent />

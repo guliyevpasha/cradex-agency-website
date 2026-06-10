@@ -13,6 +13,9 @@ import type { Article } from '@/types'
 
 const locales = ['az', 'en', 'ru', 'tr']
 
+// ISR: Revalidate every 60 seconds
+export const revalidate = 60
+
 export async function generateStaticParams() {
   const slugs = await getArticleSlugs()
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })))
