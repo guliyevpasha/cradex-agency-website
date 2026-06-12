@@ -3,11 +3,9 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { cn } from '@/lib/utils/cn'
-import { getAllServicesSync } from '@/lib/data/services'
-import { dropdownVariants } from '@/lib/animations/variants'
+import { ServicesMegaMenu } from './ServicesMegaMenu'
 
 // ─── NavLink with active dot indicator ───────────────────────────────────────
 function NavLink({ href, label, exactMatch = false }: { href: string; label: string; exactMatch?: boolean }) {
@@ -49,8 +47,6 @@ export function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const services = getAllServicesSync()
-  const tServices = useTranslations('services')
 
   const openDropdown = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current)
@@ -59,17 +55,6 @@ export function Navbar() {
 
   const closeDropdown = () => {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 120)
-  }
-
-  const serviceKeyMap: Record<string, string> = {
-    'digital-marketing': 'digitalMarketing',
-    'traditional-marketing': 'traditionalMarketing',
-    'smm': 'smm',
-    'graphic-motion-design': 'graphicMotionDesign',
-    'photo-video': 'photoVideo',
-    'branding': 'branding',
-    'copywriting': 'copywriting',
-    'web-mobile-dev': 'webMobileDev',
   }
 
   useEffect(() => {
@@ -110,7 +95,7 @@ export function Navbar() {
             'relative px-3 py-1.5 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1 whitespace-nowrap',
             isServicesActive ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'
           )}
-          aria-haspopup="true"
+          aria-haspopup="menu"
           aria-expanded={servicesOpen}
         >
           {t('services')}
@@ -130,35 +115,12 @@ export function Navbar() {
           />
         </button>
 
-        <AnimatePresence>
-          {servicesOpen && (
-            <motion.div
-              variants={dropdownVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              onMouseEnter={openDropdown}
-              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 rounded-2xl border border-white/15 bg-bg-secondary/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-2 z-50"
-              role="menu"
-            >
-              {services.map((service) => {
-                const key = serviceKeyMap[service.slug] ?? service.slug
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/${locale}/services/${service.slug}`}
-                    role="menuitem"
-                    onClick={() => setServicesOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-text-secondary hover:text-text-primary hover:bg-bg-tertiary transition-all duration-150 text-sm"
-                  >
-                    <span className="text-accent-primary text-xs">→</span>
-                    {tServices(`${key}.name` as any)}
-                  </Link>
-                )
-              })}
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <ServicesMegaMenu
+          isOpen={servicesOpen}
+          onMouseEnter={openDropdown}
+          onClose={() => setServicesOpen(false)}
+          locale={locale}
+        />
       </div>
 
       <NavLink href={`/${locale}/journal`} label={t('journal')} />

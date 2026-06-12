@@ -189,6 +189,34 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive solutions tailored to your brand's needs",
+    "megaMenu": {
+      "digitalMarketing": {
+        "title": "Digital Marketing",
+        "description": "SEO, Google Ads and digital strategy"
+      },
+      "socialMediaMarketing": {
+        "title": "Social Media Marketing",
+        "description": "Facebook, Instagram and TikTok marketing"
+      },
+      "webMobileDev": {
+        "title": "Web & Mobile Development",
+        "description": "Modern and functional web solutions"
+      },
+      "contentWriting": {
+        "title": "Content Writing",
+        "description": "SEO-focused and creative writing services"
+      },
+      "graphicMotionDesign": {
+        "title": "Graphic/Motion Design",
+        "description": "Logo, banner and animation design"
+      },
+      "branding": {
+        "title": "Branding",
+        "description": "Brand identity and strategy"
+      },
+      "viewAllServices": "View All Services",
+      "calculatePrice": "Calculate Price"
+    },
     "digitalMarketing": {
       "name": "Digital Marketing",
       "shortDesc": "SEO, PPC, email marketing",

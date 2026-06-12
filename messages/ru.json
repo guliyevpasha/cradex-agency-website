@@ -189,6 +189,34 @@
   "services": {
     "title": "Наши услуги",
     "subtitle": "Комплексные решения, адаптированные к потребностям вашего бренда",
+    "megaMenu": {
+      "digitalMarketing": {
+        "title": "Цифровой маркетинг",
+        "description": "SEO, Google Ads и цифровая стратегия"
+      },
+      "socialMediaMarketing": {
+        "title": "Маркетинг в соцсетях",
+        "description": "Маркетинг в Facebook, Instagram и TikTok"
+      },
+      "webMobileDev": {
+        "title": "Веб и мобильная разработка",
+        "description": "Современные и функциональные веб-решения"
+      },
+      "contentWriting": {
+        "title": "Написание контента",
+        "description": "SEO-ориентированные и креативные тексты"
+      },
+      "graphicMotionDesign": {
+        "title": "Графический/Моушн дизайн",
+        "description": "Логотип, баннер и анимационный дизайн"
+      },
+      "branding": {
+        "title": "Брендинг",
+        "description": "Айдентика и стратегия бренда"
+      },
+      "viewAllServices": "Посмотреть все услуги",
+      "calculatePrice": "Рассчитать цену"
+    },
     "digitalMarketing": {
       "name": "Цифровой маркетинг",
       "shortDesc": "SEO, PPC, email-маркетинг",

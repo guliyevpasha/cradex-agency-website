@@ -189,6 +189,34 @@
   "services": {
     "title": "Hizmetlerimiz",
     "subtitle": "Markanızın ihtiyaçlarına göre kapsamlı çözümler",
+    "megaMenu": {
+      "digitalMarketing": {
+        "title": "Dijital Pazarlama",
+        "description": "SEO, Google Ads ve dijital strateji"
+      },
+      "socialMediaMarketing": {
+        "title": "Sosyal Medya Pazarlaması",
+        "description": "Facebook, Instagram ve TikTok pazarlaması"
+      },
+      "webMobileDev": {
+        "title": "Web ve Mobil Geliştirme",
+        "description": "Modern ve fonksiyonel web çözümleri"
+      },
+      "contentWriting": {
+        "title": "İçerik Yazarlığı",
+        "description": "SEO odaklı ve yaratıcı yazım hizmetleri"
+      },
+      "graphicMotionDesign": {
+        "title": "Grafik/Motion Tasarım",
+        "description": "Logo, banner ve animasyon tasarımı"
+      },
+      "branding": {
+        "title": "Markalama",
+        "description": "Marka kimliği ve stratejisi"
+      },
+      "viewAllServices": "Tüm Hizmetleri Görüntüle",
+      "calculatePrice": "Fiyat Hesapla"
+    },
     "digitalMarketing": {
       "name": "Dijital Pazarlama",
       "shortDesc": "SEO, PPC, e-posta pazarlaması",

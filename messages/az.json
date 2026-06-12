@@ -213,6 +213,34 @@
   "services": {
     "title": "Xidmətlərimiz",
     "subtitle": "Brendinizin ehtiyaclarına uyğun hərtərəfli həllər",
+    "megaMenu": {
+      "digitalMarketing": {
+        "title": "Rəqəmsal Marketinq",
+        "description": "SEO, Google Ads və rəqəmsal strategiya"
+      },
+      "socialMediaMarketing": {
+        "title": "Sosial Media Marketinq",
+        "description": "Facebook, Instagram və TikTok marketinqi"
+      },
+      "webMobileDev": {
+        "title": "Veb sayt və Mobil Tətbiq",
+        "description": "Müasir və funksional veb həllər"
+      },
+      "contentWriting": {
+        "title": "Mətn Yazarlığı",
+        "description": "SEO-yönümlü və yaradıcı mətn xidmətləri"
+      },
+      "graphicMotionDesign": {
+        "title": "Qrafik/Motion Dizayn",
+        "description": "Logo, banner və animasiya dizaynı"
+      },
+      "branding": {
+        "title": "Brendinq",
+        "description": "Brend identiteti və strategiyası"
+      },
+      "viewAllServices": "Bütün xidmətlərə bax",
+      "calculatePrice": "Qiymət hesabla"
+    },
     "digitalMarketing": {
       "name": "Rəqəmsal Marketinq",
       "shortDesc": "SEO, PPC, e-poçt marketinqi",
