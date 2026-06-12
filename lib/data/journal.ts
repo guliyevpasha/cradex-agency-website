@@ -2,11 +2,13 @@ import type { Article, ArticleCategory } from '@/types'
 import journalData from './journal.data.json'
 import { getAllBlogPosts, getBlogPostBySlug, getBlogPostsByCategory, getPaginatedBlogPosts } from '@/sanity/lib/queries'
 
-// Check if we should use Sanity (production) or JSON (fallback)
-const USE_SANITY = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test'
+// Helper function to check if we should use Sanity (production) or JSON (fallback)
+function shouldUseSanity(): boolean {
+  return !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test')
+}
 
 export async function getAllArticles(locale: string = 'az'): Promise<Article[]> {
-  if (USE_SANITY) {
+  if (shouldUseSanity()) {
     try {
       return await getAllBlogPosts(locale)
     } catch (error) {
@@ -17,7 +19,7 @@ export async function getAllArticles(locale: string = 'az'): Promise<Article[]> 
 }
 
 export async function getArticleBySlug(slug: string, locale: string = 'az'): Promise<Article | null> {
-  if (USE_SANITY) {
+  if (shouldUseSanity()) {
     try {
       return await getBlogPostBySlug(slug, locale)
     } catch (error) {
@@ -28,7 +30,7 @@ export async function getArticleBySlug(slug: string, locale: string = 'az'): Pro
 }
 
 export async function getArticlesByCategory(category: ArticleCategory, locale: string = 'az'): Promise<Article[]> {
-  if (USE_SANITY) {
+  if (shouldUseSanity()) {
     try {
       return await getBlogPostsByCategory(category, locale)
     } catch (error) {
@@ -40,7 +42,7 @@ export async function getArticlesByCategory(category: ArticleCategory, locale: s
 }
 
 export async function getArticleSlugs(): Promise<string[]> {
-  if (USE_SANITY) {
+  if (shouldUseSanity()) {
     try {
       const articles = await getAllBlogPosts('az')
       return articles.map((a) => a.slug)
@@ -57,7 +59,7 @@ export async function getPaginatedArticles(
   category?: ArticleCategory,
   locale: string = 'az'
 ): Promise<{ articles: Article[]; total: number; totalPages: number }> {
-  if (USE_SANITY) {
+  if (shouldUseSanity()) {
     try {
       return await getPaginatedBlogPosts(page, perPage, category, locale)
     } catch (error) {
