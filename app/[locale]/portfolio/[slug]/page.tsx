@@ -24,9 +24,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const item = await getPortfolioBySlug(params.slug)
+  const { slug } = await params
+  const item = await getPortfolioBySlug(slug)
   if (!item) return {}
   return {
     title: item.titleKey,
@@ -41,10 +42,11 @@ export async function generateMetadata({
 export default async function PortfolioDetailPage({
   params,
 }: {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }) {
-  setRequestLocale(params.locale)
-  const item = await getPortfolioBySlug(params.slug)
+  const { locale, slug } = await params
+  setRequestLocale(locale)
+  const item = await getPortfolioBySlug(slug)
   if (!item) notFound()
   return <PortfolioDetailContent item={item} />
 }

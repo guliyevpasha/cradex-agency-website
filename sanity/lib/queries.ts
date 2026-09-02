@@ -1,4 +1,5 @@
 import { client } from './client'
+import { toArticle, toArticles, toPortfolioItem, toPortfolioItems } from './normalize'
 import type { Article, ArticleCategory, PortfolioItem, ServiceSlug } from '@/types'
 
 // ─── Blog Queries ────────────────────────────────────────────────────────────
@@ -16,7 +17,7 @@ export async function getAllBlogPosts(locale: string = 'az'): Promise<Article[]>
     "image": mainImage.asset->url
   }`
   
-  return client.fetch(query)
+  return toArticles(await client.fetch(query))
 }
 
 export async function getBlogPostBySlug(slug: string, locale: string = 'az') {
@@ -33,7 +34,7 @@ export async function getBlogPostBySlug(slug: string, locale: string = 'az') {
     "image": mainImage.asset->url
   }`
   
-  return client.fetch(query, { slug })
+  return toArticle(await client.fetch(query, { slug }))
 }
 
 export async function getBlogPostsByCategory(
@@ -52,7 +53,7 @@ export async function getBlogPostsByCategory(
     "image": mainImage.asset->url
   }`
   
-  return client.fetch(query, { category })
+  return toArticles(await client.fetch(query, { category }))
 }
 
 export async function getPaginatedBlogPosts(
@@ -83,10 +84,12 @@ export async function getPaginatedBlogPosts(
   
   const result = await client.fetch(query, { start, end })
   
+  const total = result?.total ?? 0
+
   return {
-    articles: result.posts,
-    total: result.total,
-    totalPages: Math.ceil(result.total / perPage),
+    articles: toArticles(result?.posts),
+    total,
+    totalPages: Math.ceil(total / perPage),
   }
 }
 
@@ -109,7 +112,7 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
     "featured": featured
   }`
   
-  return client.fetch(query)
+  return toPortfolioItems(await client.fetch(query))
 }
 
 export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
@@ -129,7 +132,7 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "featured": featured
   }`
   
-  return client.fetch(query, { slug })
+  return toPortfolioItem(await client.fetch(query, { slug }))
 }
 
 export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'): Promise<PortfolioItem[]> {
@@ -151,7 +154,7 @@ export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'
     "featured": featured
   }`
   
-  return client.fetch(query)
+  return toPortfolioItems(await client.fetch(query))
 }
 
 export async function getPortfolioByCategory(
@@ -174,7 +177,7 @@ export async function getPortfolioByCategory(
     "featured": featured
   }`
   
-  return client.fetch(query, { category })
+  return toPortfolioItems(await client.fetch(query, { category }))
 }
 
 // ─── Partner Queries ─────────────────────────────────────────────────────────

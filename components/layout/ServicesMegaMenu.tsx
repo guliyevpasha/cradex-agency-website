@@ -27,7 +27,8 @@
 
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { ServiceCard } from './ServiceCard'
@@ -51,6 +52,35 @@ export function ServicesMegaMenu({
 }: ServicesMegaMenuProps) {
   const t = useTranslations('services.megaMenu')
 
+  // Rendered through a portal: the header bar uses `backdrop-blur`, which makes
+  // it the containing block for fixed-position descendants. Left in place, the
+  // panel and its backdrop would be clipped to the header bar instead of the
+  // viewport.
+  const [container, setContainer] = useState<HTMLElement | null>(null)
+  useEffect(() => setContainer(document.body), [])
+
+  // Vertical anchor. The panel is positioned against the viewport rather than
+  // the narrow nav button, so it has to track the bottom edge of the fixed
+  // header — which changes height once the page is scrolled.
+  const [top, setTop] = useState(96)
+
+  useLayoutEffect(() => {
+    if (!isOpen) return
+
+    const measure = () => {
+      const header = document.querySelector('header')
+      setTop(header ? header.getBoundingClientRect().bottom + 8 : 96)
+    }
+
+    measure()
+    window.addEventListener('resize', measure)
+    window.addEventListener('scroll', measure, { passive: true })
+    return () => {
+      window.removeEventListener('resize', measure)
+      window.removeEventListener('scroll', measure)
+    }
+  }, [isOpen])
+
   // Keyboard navigation - Escape key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -63,7 +93,9 @@ export function ServicesMegaMenu({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
 
-  return (
+  if (!container) return null
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -85,11 +117,15 @@ export function ServicesMegaMenu({
             animate="visible"
             exit="exit"
             onMouseEnter={onMouseEnter}
+            style={{ top }}
             className={cn(
-              // Positioning
-              'absolute top-full left-1/2 -translate-x-1/2 mt-2',
+              // Positioning — anchored to the viewport and centred like the
+              // header bar. Centring uses `mx-auto`, not a transform, because
+              // Framer Motion owns the `transform` property on this element.
+              'fixed left-0 right-0 mx-auto',
               // Layout
-              'w-full max-w-[1200px]',
+              'w-[calc(100%-2rem)] max-w-6xl',
+              'max-h-[calc(100vh-7rem)] overflow-y-auto',
               'rounded-2xl border border-white/15',
               // Background
               'bg-bg-secondary/95 backdrop-blur-xl',
@@ -102,6 +138,7 @@ export function ServicesMegaMenu({
             )}
             role="menu"
             aria-label="Services mega menu"
+            data-mega-menu=""
           >
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6 mb-6">
@@ -121,6 +158,7 @@ export function ServicesMegaMenu({
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    container
   )
 }
