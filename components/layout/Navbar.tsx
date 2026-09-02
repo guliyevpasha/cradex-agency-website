@@ -59,13 +59,23 @@ export function Navbar() {
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      const target = e.target as Element | null
+      if (!dropdownRef.current || !target) return
+      // The mega menu renders in a portal on <body>, so it is not a descendant
+      // of dropdownRef — without this check a mousedown inside the panel would
+      // unmount it before the link's click event could fire.
+      if (target.closest?.('[data-mega-menu]')) return
+      if (!dropdownRef.current.contains(target)) {
         setServicesOpen(false)
       }
     }
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
   }, [])
+
+  // Close on navigation — clicking a card inside the panel no longer counts as
+  // an outside click, so nothing else dismisses the menu after a route change.
+  useEffect(() => { setServicesOpen(false) }, [pathname])
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setServicesOpen(false) }

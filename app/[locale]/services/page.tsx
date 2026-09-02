@@ -11,19 +11,21 @@ import { getAllServices } from '@/lib/data/services'
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'services' })
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'services' })
   return {
     title: t('title'),
     description: t('subtitle'),
   }
 }
 
-export default async function ServicesPage({ params }: { params: { locale: string } }) {
-  setRequestLocale(params.locale)
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const services = await getAllServices()
-  return <ServicesContent services={services} locale={params.locale} />
+  return <ServicesContent services={services} locale={locale} />
 }
 
 function ServicesContent({ services, locale: _locale }: { services: Awaited<ReturnType<typeof getAllServices>>; locale: string }) {
