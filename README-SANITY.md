@@ -105,13 +105,15 @@ Sanity hesabınızla daxil olun. İdarəetmə paneli açılacaq.
 Vercel Dashboard-da aşağıdakı environment variables əlavə edin:
 
 ```
-NEXT_PUBLIC_SANITY_PROJECT_ID = your_project_id
+NEXT_PUBLIC_SANITY_PROJECT_ID = 7ia9tt83
 NEXT_PUBLIC_SANITY_DATASET = production
 NEXT_PUBLIC_SANITY_API_VERSION = 2024-01-01
-RESEND_API_KEY = re_xxxx
-CONTACT_EMAIL = info@cradexagency.com
 NEXT_PUBLIC_WHATSAPP_NUMBER = 994507786887
+NEXT_PUBLIC_SITE_URL = https://cradexagency.com
+REVALIDATION_TOKEN = <gizli — Vercel-də saxlanılır>
 ```
+
+Tam siyahı, dəyişən tipləri və webhook konfiqurasiyası: **[VERCEL_ENV_SETUP.md](./VERCEL_ENV_SETUP.md)**.
 
 ---
 
