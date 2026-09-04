@@ -3,12 +3,13 @@ import { useTranslations, useLocale } from 'next-intl'
 import { Instagram, Facebook, Linkedin, Youtube, MessageCircle, MapPin, Phone, Mail } from 'lucide-react'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-// Searches for the business by name, which lands on the Google listing the
-// site already cites for its 5.0 rating. Swap in a place URL or coordinates
-// once there is a street address to point at.
+// Always the Azerbaijani spelling, whatever locale the visitor is on: this is
+// the string Maps geocodes, and the displayed text next to it is translated
+// separately. The city and country stay in so the query cannot land on a
+// same-named street elsewhere.
 const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=' +
-  encodeURIComponent('Cradex Agency, Bakı')
+  encodeURIComponent('Rəşid Behbudov küçəsi 55, Bakı, Azərbaycan')
 
 export function Footer() {
   const t = useTranslations('footer')
