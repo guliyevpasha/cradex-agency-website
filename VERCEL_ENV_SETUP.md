@@ -1,287 +1,173 @@
-# Vercel Dashboard-da Environment Variables Konfiqurasiyası
+# Vercel konfiqurasiyası
 
-Bu sənəd Vercel dashboard-da environment variables-lərin necə qurulacağını addım-addım izah edir.
+Bu sənəd `cradex-agency` layihəsinin Vercel-də necə qurulduğunu təsvir edir: environment variables, domen və Sanity inteqrasiyası.
 
-## 📋 İlkin Məlumat
-
-**Nə üçün lazımdır?**  
-Environment variables layihənizin konfiqurasiya məlumatlarını (API açarları, token-lər və s.) təhlükəsiz şəkildə saxlayır və production mühitində istifadə edilir.
-
-**Vacib:** Bu təlimatı izləyərkən `.env.local` faylınızdakı məlumatları Vercel-ə köçürəcəksiniz.
+> **Sirləri bu fayla yazma.** Real token və parollar yalnız `.env.local` (git-ə düşmür) və Vercel-in öz panelində saxlanılır. Aşağıdakı cədvəllərdə yalnız gizli olmayan dəyərlər göstərilib.
 
 ---
 
-## 🔗 Addım 1: Vercel Dashboard-a daxil olun
+## Environment variables
 
-1. Brauzerdə açın: **https://vercel.com/dashboard**
-2. Hesabınıza daxil olun (GitHub hesabı ilə login)
-3. Sol menyudan layihənizi tapın və açın: **`cradex-agency`** (və ya layihənizin adı)
+Layihənin oxuduğu **6 dəyişən** var. Kodda başqa dəyişən istifadə olunmur.
 
----
+| Dəyişən | Dəyər | Tip | Nə üçün |
+|---|---|---|---|
+| `NEXT_PUBLIC_SANITY_PROJECT_ID` | `7ia9tt83` | Config | Sanity layihəsi |
+| `NEXT_PUBLIC_SANITY_DATASET` | `production` | Config | Sanity dataset |
+| `NEXT_PUBLIC_SANITY_API_VERSION` | `2024-01-01` | Config | Sanity API versiyası |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | `994507786887` | Config | Əlaqə düyməsi |
+| `NEXT_PUBLIC_SITE_URL` | `https://cradexagency.com` | Config | `metadataBase`, OG şəkli, canonical |
+| `REVALIDATION_TOKEN` | *(gizli — `.env.local`-a bax)* | **Secret** | Sanity webhook autentifikasiyası |
 
-## ⚙️ Addım 2: Settings Bölməsinə Keçin
+### Config, yoxsa Secret?
 
-1. Layihə səhifəsində yuxarıdakı naviqasiyada **"Settings"** tabına klikləyin
-2. Sol menyudan **"Environment Variables"** seçin
+Vercel dəyişəni saxlayarkən iki tip təklif edir və **seçim geri qaytarılmır** — bir dəfə Secret olaraq saxlanan dəyişəni sonradan Config-ə çevirmək mümkün deyil, yalnız silib yenidən yaratmaqla.
 
-![Settings → Environment Variables yolu](https://vercel.com/docs/environment-variables)
+- **`NEXT_PUBLIC_` ilə başlayanlar → Config.** Bu dəyərlər build zamanı brauzerə göndərilən kodun içinə yazılır, yəni onsuz da gizli deyil. Config seçsən, dəyəri sonradan paneldə oxuya bilərsən.
+- **Qalanlar → Secret.** `REVALIDATION_TOKEN` server tərəfində oxunur və heç vaxt brauzerə düşmür.
 
----
+### Harada yerləşir
 
-## ➕ Addım 3: Environment Variables Əlavə Edin
+**Settings → Environments → Production → Environment Variables**
 
-Hər bir environment variable üçün aşağıdakı addımları təkrarlayın:
+(Köhnə interfeysdəki `Settings → Environment Variables` yolu artıq yoxdur.)
 
-### 3.1. Sanity CMS Variables
+### Toplu əlavə etmə
 
-#### Variable 1: `NEXT_PUBLIC_SANITY_PROJECT_ID`
-- **Name (Ad):** `NEXT_PUBLIC_SANITY_PROJECT_ID`
-- **Value (Dəyər):** `7ia9tt83`
-- **Environment (Mühit):** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
+**Add Environment Variable** → **Key** xanasına `.env` formatında bir neçə sətri birdən yapışdıra bilərsən, Vercel avtomatik ayırır:
 
-#### Variable 2: `NEXT_PUBLIC_SANITY_DATASET`
-- **Name:** `NEXT_PUBLIC_SANITY_DATASET`
-- **Value:** `production`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
-#### Variable 3: `NEXT_PUBLIC_SANITY_API_VERSION`
-- **Name:** `NEXT_PUBLIC_SANITY_API_VERSION`
-- **Value:** `2024-01-01`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.2. Contact Form (Resend) Variables
-
-#### Variable 4: `RESEND_API_KEY`
-- **Name:** `RESEND_API_KEY`
-- **Value:** `re_xxxxxxxxxxxxxxxxxxxx` (`.env.local` faylınızdan əsl açarı kopyalayın)
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
-#### Variable 5: `CONTACT_EMAIL`
-- **Name:** `CONTACT_EMAIL`
-- **Value:** `info@cradexagency.com`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.3. WhatsApp Variables
-
-#### Variable 6: `NEXT_PUBLIC_WHATSAPP_NUMBER`
-- **Name:** `NEXT_PUBLIC_WHATSAPP_NUMBER`
-- **Value:** `994507786887`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.4. Site URL Variables
-
-#### Variable 7: `NEXT_PUBLIC_SITE_URL`
-- **Name:** `NEXT_PUBLIC_SITE_URL`
-- **Value:** `https://cradexagency.com`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.5. Admin Panel Variables
-
-#### Variable 8: `ADMIN_PASSWORD`
-- **Name:** `ADMIN_PASSWORD`
-- **Value:** `Cradex2026Admin!` (və ya öz admin şifrəniz)
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.6. GitHub Integration Variables
-
-#### Variable 9: `GITHUB_TOKEN`
-- **Name:** `GITHUB_TOKEN`
-- **Value:** `.env.local` faylınızdan əsl GitHub token-ini kopyalayın (başlanğıcı `ghp_` ilə)
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
-**Qeyd:** GitHub Token-i yoxdursa, buradan yaradın:  
-https://github.com/settings/tokens → "Generate new token (classic)" → `repo` icazəsini seçin
-
-#### Variable 10: `GITHUB_REPO`
-- **Name:** `GITHUB_REPO`
-- **Value:** `guliyevpasha/cradex-agency-website`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
-#### Variable 11: `GITHUB_BRANCH`
-- **Name:** `GITHUB_BRANCH`
-- **Value:** `main`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
----
-
-### 3.7. Revalidation Token (ƏN VACİB!)
-
-Bu token Sanity webhook-unun Vercel API-ni təhlükəsiz şəkildə çağırması üçün lazımdır.
-
-#### Variable 12: `REVALIDATION_TOKEN`
-- **Name:** `REVALIDATION_TOKEN`
-- **Value:** `2c1c6a4b03ff9a518aca57d6ee06baf4e0b6927c2041f32c11cf62c4456593d7`
-- **Environment:** 
-  - ✅ Production
-  - ✅ Preview
-  - ✅ Development
-- **"Add"** düyməsinə klikləyin
-
-**⚠️ DİQQƏT:** Bu token-i Sanity webhook konfiqurasiyasında da istifadə edəcəksiniz!
-
----
-
-## ✅ Addım 4: Yoxlama və Tamamlama
-
-1. **Bütün 12 variable əlavə olunduğunu yoxlayın:**
-   - NEXT_PUBLIC_SANITY_PROJECT_ID ✅
-   - NEXT_PUBLIC_SANITY_DATASET ✅
-   - NEXT_PUBLIC_SANITY_API_VERSION ✅
-   - RESEND_API_KEY ✅
-   - CONTACT_EMAIL ✅
-   - NEXT_PUBLIC_WHATSAPP_NUMBER ✅
-   - NEXT_PUBLIC_SITE_URL ✅
-   - ADMIN_PASSWORD ✅
-   - GITHUB_TOKEN ✅
-   - GITHUB_REPO ✅
-   - GITHUB_BRANCH ✅
-   - REVALIDATION_TOKEN ✅
-
-2. **Hər variable üçün 3 mühitin də (Production, Preview, Development) seçildiyini təsdiqləyin**
-
-3. **Səhifəni yeniləyin** və environment variables-lərin siyahısını görün
-
----
-
-## 🔄 Addım 5: Redeploy (Yenidən Deploy)
-
-Environment variables dəyişdikdən sonra layihəni yenidən deploy etmək lazımdır:
-
-### Üsul 1: Vercel Dashboard-dan
-1. Layihənizin **"Deployments"** tabına gedin
-2. Ən son deployment-in sağ tərəfindəki **3 nöqtə (⋯)** düyməsinə klikləyin
-3. **"Redeploy"** seçin
-4. **"Redeploy"** düyməsini təsdiqləyin
-
-### Üsul 2: Git Push (Tövsiyə olunur)
-```bash
-# Terminaldə:
-git add .
-git commit -m "Update environment variables"
-git push origin main
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=7ia9tt83
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+NEXT_PUBLIC_WHATSAPP_NUMBER=994507786887
+NEXT_PUBLIC_SITE_URL=https://cradexagency.com
 ```
 
-Vercel avtomatik olaraq yeni deployment başladacaq.
+### Redeploy şərtdir
+
+Dəyişən əlavə etmək və ya dəyişmək **tək başına kifayət deyil** — mövcud deployment köhnə dəyərlərlə qalır.
+
+**Deployments** → ən üstdəki → `···` → **Redeploy**. "Use existing Build Cache" qutusunu **işarələmə** — `NEXT_PUBLIC_` dəyərləri build zamanı koda yazıldığı üçün keş köhnə dəyəri saxlaya bilər.
 
 ---
 
-## 📊 Addım 6: Deployment Status-u Yoxlayın
+## Domen
 
-1. **"Deployments"** tabında deployment statusunu izləyin
-2. Status **"Ready"** olduqda ✅ deployment uğurludur
-3. **"Visit"** düyməsinə klikləyərək canlı saytı açın və test edin
+| Domen | Rolu |
+|---|---|
+| `cradexagency.com` | Əsas (Production) |
+| `www.cradexagency.com` | 308 daimi yönləndirmə → apex |
+| `cradex-agency.vercel.app` | Vercel-in avtomatik ünvanı |
 
----
+### ⚠️ DNS Hostinger-dədir
 
-## 🔐 Təhlükəsizlik Qeydləri
+Domenin nameserver-ləri Hostinger-dədir (`ns1/ns2.dns-parking.com`) və **e-poçt da orada işləyir** (`mx1/mx2.hostinger.com`).
 
-1. **Heç vaxt environment variables-ləri publik yerlərdə paylaşmayın**
-2. **REVALIDATION_TOKEN** və **GITHUB_TOKEN** xüsusilə gizli saxlanmalıdır
-3. **ADMIN_PASSWORD** güclü və unikal olmalıdır
-4. Əgər token-lərdən biri sızdırılarsa, dərhal yeniləyin:
-   - GitHub Token: https://github.com/settings/tokens
-   - Resend API Key: https://resend.com/api-keys
-   - REVALIDATION_TOKEN: Yeni random token yaradın
+**Nameserver-ləri Vercel-ə köçürmə.** Vercel bunu təklif edir, amma qəbul etsən MX qeydləri itər və şirkətin e-poçtu dayanar.
 
----
+Doğru yol — Hostinger DNS zonasında yalnız veb qeydlərini dəyişmək:
 
-## 🆘 Troubleshooting
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `216.198.79.1` |
+| CNAME | `www` | `0eaaf8b1a4004081.vercel-dns-017.com` |
 
-### Problem: Deployment fail olur
-**Həll:** 
-- Environment variables-lərin adlarını yoxlayın (böyük/kiçik hərf duyarlıdır)
-- Value-lərdə əlavə boşluq olmadığından əmin olun
-- Vercel Logs-a baxın: Deployments → Failed deployment → "View Function Logs"
-
-### Problem: Sanity məlumatları yüklənmir
-**Həll:**
-- `NEXT_PUBLIC_SANITY_PROJECT_ID` düzgün olduğunu yoxlayın
-- Sanity dashboard-da project ID-ni təsdiqləyin: https://sanity.io/manage
-
-### Problem: Contact form işləmir
-**Həll:**
-- `RESEND_API_KEY` düzgün və aktiv olduğunu yoxlayın
-- Resend dashboard-da API key statusunu yoxlayın: https://resend.com/api-keys
+`MX` və `TXT` qeydlərinə toxunma. `AAAA` qeydi silinib — qalsaydı IPv6 istifadəçiləri köhnə hostinqə düşərdi.
 
 ---
 
-## 📚 Əlavə Resurlar
+## Sanity inteqrasiyası
 
-- **Vercel Environment Variables Dokumentasiyası:**  
-  https://vercel.com/docs/environment-variables
+### CORS
 
-- **Sanity Environment Setup:**  
-  https://www.sanity.io/docs/environment-variables
+Studio (`/studio`) brauzerdə işlədiyi üçün Sanity-də icazə tələb edir.
 
-- **Next.js Environment Variables:**  
-  https://nextjs.org/docs/basic-features/environment-variables
+**sanity.io/manage → `7ia9tt83` → API → CORS origins:**
+
+| Origin | Allow credentials |
+|---|---|
+| `https://cradexagency.com` | ✅ |
+| `https://www.cradexagency.com` | ✅ |
+| `http://localhost:3000` | ✅ |
+
+"Allow credentials" işarəsiz olsa, Studio səhifəsi açılar, amma giriş edə bilməzsən.
+
+### Revalidation webhook
+
+Sanity-də kontent dəyişəndə saytın avtomatik yenilənməsini təmin edir.
+
+**sanity.io/manage → API → Webhooks:**
+
+| Sahə | Dəyər |
+|---|---|
+| URL | `https://cradexagency.com/api/revalidate` |
+| Dataset | `production` |
+| Trigger on | Create, Update, Delete — **hər üçü** |
+| HTTP method | `POST` |
+| Filter | `_type in ["article","blog","portfolio","portfolioItem","testimonial","partner"]` |
+| Projection | `{"_type": _type, "slug": slug.current}` |
+| HTTP header | `Authorization: Bearer <REVALIDATION_TOKEN>` |
+| Drafts | ❌ söndürülü |
+| Versions | ❌ söndürülü |
+
+**Projection vacibdir.** Sanity-də `slug` obyektdir (`{current: "..."}`), `app/api/revalidate/route.ts` isə sadə mətn gözləyir.
+
+**Drafts söndürülü qalmalıdır.** Açıq olsa, Studio-da hər hərfə webhook işə düşər. Sayt onsuz da yalnız dərc edilmiş sənədləri oxuyur.
+
+**Trigger-lərin hamısını işarələ.** Yalnız `Create` seçilsə, mövcud məqalənin redaktəsi saytda görünməz.
+
+### Token dəyişdikdə
+
+`REVALIDATION_TOKEN` yeniləndikdə **iki yerdə** eyni anda dəyişməlidir: Vercel-də dəyişən, Sanity-də webhook başlığı. Biri köhnə qalsa, endpoint `401` qaytarar.
+
+Yeni token yaratmaq:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
 
 ---
 
-## ✨ Növbəti Addımlar
+## Yoxlama
 
-Environment variables konfiqurasiyasından sonra:
+```bash
+# Domen Vercel-ə baxır?
+curl -sI https://cradexagency.com | grep -i server
 
-1. ✅ **Task 3.4 tamamlandı** - Environment variables Vercel-də quruldu
-2. 🔜 **Task 3.5** - Sanity webhook-u konfiqurasiya edin
-3. 🔜 **Task 3.6** - Test edin: Sanity-də content dəyişikliyi → canlı saytda avtomatik yenilənmə
+# www apex-ə yönləndirir?
+curl -sI https://www.cradexagency.com | grep -i location
+
+# E-poçt qeydləri yerindədir?
+nslookup -type=MX cradexagency.com
+
+# Revalidation endpoint tokeni tanıyır?
+curl -s -X POST https://cradexagency.com/api/revalidate \
+  -H "Authorization: Bearer <TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{"_type":"article","slug":"test"}'
+```
+
+Sonuncu `{"success":true,...}` qaytarmalıdır. Tokensiz `401` gəlməlidir.
 
 ---
 
-**Müvəffəqiyyətlər! 🚀**
+## Problemlər
 
-Əgər sualınız varsa və ya köməyə ehtiyacınız varsa, development komandası ilə əlaqə saxlayın.
+**Deployment uğursuzdur** — dəyişən adlarında böyük/kiçik hərfə və dəyərlərdə artıq boşluğa bax. Deployments → uğursuz deploy → build loglarını oxu.
+
+**Sanity kontenti gəlmir** — `NEXT_PUBLIC_SANITY_PROJECT_ID` dəyərini `sanity.io/manage`-dəki ID ilə tutuşdur.
+
+**`/studio` açılır, amma qoşulmur** — CORS origin əlavə edilməyib və ya "Allow credentials" işarəsizdir.
+
+**Sanity-də dəyişiklik saytda görünmür** — webhook loglarına bax (API → Webhooks → webhook → delivery attempts). `401` görsənsə tokenlər uyğun gəlmir; heç nə görünmürsə trigger-lər və ya filter səhvdir.
+
+**OG şəkli və ya canonical səhv domeni göstərir** — `NEXT_PUBLIC_SITE_URL` dəyərini yoxla, sonra **keşsiz** redeploy et.
+
+---
+
+## Əlaqəli sənədlər
+
+- [SANITY_SETUP_GUIDE.md](./SANITY_SETUP_GUIDE.md) — Sanity layihəsinin qurulması
+- [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) — ümumi deploy prosesi
+- [.env.local.example](./.env.local.example) — lokal mühit şablonu
