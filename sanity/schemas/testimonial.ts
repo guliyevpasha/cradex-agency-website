@@ -1,4 +1,10 @@
+import { createElement } from 'react'
 import { defineField, defineType } from 'sanity'
+
+// Where photoPath entries are served from. Studio can only render assets it
+// stores itself, so a path like /images/testimonials/kenan.jpg needs an absolute
+// URL before it can be shown as a thumbnail.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://cradexagency.com'
 
 export default defineType({
   name: 'testimonial',
@@ -91,15 +97,27 @@ export default defineType({
       role: 'clientPosition.az',
       company: 'company',
       media: 'avatar',
+      photoPath: 'photoPath',
       rating: 'rating',
     },
-    prepare({ title, role, company, media, rating }) {
+    prepare({ title, role, company, media, photoPath, rating }) {
       // company is blank on most entries, so lead with the role and only add
       // the company when there is one.
       const subtitle = [role, company].filter(Boolean).join(' · ')
       return {
         title,
-        media,
+        // Without this the migrated entries show a blank document icon: their
+        // photo lives in the site's public/ folder, not in Sanity, so there is
+        // no asset for Studio to render. Fall back to fetching it over HTTP.
+        media:
+          media ||
+          (photoPath
+            ? createElement('img', {
+                src: `${SITE_URL}${photoPath}`,
+                alt: '',
+                style: { width: '100%', height: '100%', objectFit: 'cover' },
+              })
+            : undefined),
         subtitle: subtitle ? `${subtitle} — ${rating}⭐` : `${rating}⭐`,
       }
     },
