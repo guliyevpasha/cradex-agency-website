@@ -47,7 +47,7 @@ Yaradılan fayl: `app/api/revalidate/route.ts`
 - ✅ `.env.local.example` update edildi
 - ✅ `VERCEL_ENV_SETUP.md` təlimat yaradıldı (12 variable)
 
-**Token:** `2c1c6a4b03ff9a518aca57d6ee06baf4e0b6927c2041f32c11cf62c4456593d7`
+**Token:** `.env.local` faylında və Vercel-də saxlanılır — sənədə yazılmır.
 
 ---
 

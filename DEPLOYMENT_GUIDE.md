@@ -133,7 +133,7 @@ vercel --prod
 - **HTTP Headers:**
   ```
   Key: Authorization
-  Value: Bearer 2c1c6a4b03ff9a518aca57d6ee06baf4e0b6927c2041f32c11cf62c4456593d7
+  Value: Bearer <REVALIDATION_TOKEN>
   ```
   
   ⚠️ **DİQQƏT:** `Bearer` sözündən sonra boşluq qoyun və token-i yapışdırın!
@@ -293,7 +293,7 @@ vercel logs https://[vercel-production-url] --follow
 ```bash
 # /api/revalidate endpoint-ini test et
 curl -X POST https://[vercel-url]/api/revalidate \
-  -H "Authorization: Bearer 2c1c6a4b03ff9a518aca57d6ee06baf4e0b6927c2041f32c11cf62c4456593d7" \
+  -H "Authorization: Bearer <REVALIDATION_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"_type":"blog","slug":"test"}'
 ```
