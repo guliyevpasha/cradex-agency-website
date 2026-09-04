@@ -140,13 +140,18 @@ export async function getPartners(): Promise<PartnerLogo[]> {
   if (USE_SANITY) {
     try {
       const sanityPartners = await getSanityPartners()
-      // Convert Sanity partners to PartnerLogo format
-      return sanityPartners.map((p: SanityPartner) => ({
-        id: p.id,
-        name: p.name,
-        logo: p.logo,
-        logoB: undefined, // Sanity doesn't have logoB
-      }))
+      // An empty CMS should not leave the marquee blank.
+      if (sanityPartners.length > 0) {
+        return sanityPartners.map((p: SanityPartner) => ({
+          id: p.id,
+          name: p.name,
+          logo: p.logo,
+          // logoB only existed to give the second marquee copy a file with
+          // different internal SVG ids. The logos render through <img>, which
+          // scopes those ids per document, so one asset serves both copies.
+          logoB: undefined,
+        }))
+      }
     } catch (error) {
       console.error('Failed to fetch partners from Sanity, using fallback data:', error)
     }
