@@ -1,9 +1,7 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 
 const CARD_ACCENTS = [
   { bg: 'rgba(108,99,255,0.13)', border: 'rgba(108,99,255,0.4)', shadow: 'rgba(108,99,255,0.25)' },
@@ -14,104 +12,36 @@ const CARD_ACCENTS = [
   { bg: 'rgba(34,197,94,0.11)',  border: 'rgba(34,197,94,0.35)',  shadow: 'rgba(34,197,94,0.2)'  },
 ]
 
-// Phase of the animation cycle
-type Phase = 'stacked' | 'fanning' | 'sliding' | 'collapsing'
+// Three copies of the list. The track shifts left by exactly one third, which
+// is one whole copy, so the cards never visibly reset. Three rather than two
+// because a single copy of six cards is narrower than a wide desktop viewport.
+const COPIES = [0, 1, 2]
 
-const STACK_PAUSE   = 1200  // ms — how long cards stay stacked before fanning
-const FAN_DURATION  = 800   // ms — fan-out animation
-const SLIDE_SPEED   = 1.4   // px per frame
-const COLLAPSE_PAUSE = 600  // ms — pause before collapsing
+// Seconds for one copy to pass. Card widths change between breakpoints but the
+// shift is a percentage of the track, so the loop stays exact either way; only
+// the apparent speed differs slightly, which reads fine.
+const DURATION_S = 46
 
 export function AdvantagesSlider() {
   const t = useTranslations('home.advantages')
-  const prefersReduced = useReducedMotion()
   const items = t.raw('items') as Array<{ emoji: string; title: string; desc: string }>
 
-  const { ref: sectionRef, inView } = useInView({ triggerOnce: false, threshold: 0.25 })
-
-  const [phase, setPhase] = useState<Phase>('stacked')
-  const [slideX, setSlideX] = useState(0)
-  const animRef = useRef<number>()
-  const phaseRef = useRef<Phase>('stacked')
-  const slideXRef = useRef(0)
-
-  const CARD_W = 280
-  const GAP = 20
-  const TOTAL_SLIDE = items.length * (CARD_W + GAP)
-
-  // Keep refs in sync
-  useEffect(() => { phaseRef.current = phase }, [phase])
-  useEffect(() => { slideXRef.current = slideX }, [slideX])
-
-  useEffect(() => {
-    if (!inView || prefersReduced) {
-      cancelAnimationFrame(animRef.current!)
-      return
-    }
-
-    // Start the cycle
-    setPhase('stacked')
-    setSlideX(0)
-
-    const runCycle = () => {
-      // 1. Show stacked for a moment
-      setPhase('stacked')
-      setSlideX(0)
-
-      setTimeout(() => {
-        // 2. Fan out
-        setPhase('fanning')
-
-        setTimeout(() => {
-          // 3. Slide left
-          setPhase('sliding')
-
-          const slide = () => {
-            slideXRef.current += SLIDE_SPEED
-            setSlideX(slideXRef.current)
-
-            if (slideXRef.current >= TOTAL_SLIDE * 0.7) {
-              // 4. Collapse
-              cancelAnimationFrame(animRef.current!)
-              setPhase('collapsing')
-
-              setTimeout(() => {
-                slideXRef.current = 0
-                runCycle() // restart
-              }, COLLAPSE_PAUSE + 400)
-              return
-            }
-
-            animRef.current = requestAnimationFrame(slide)
-          }
-
-          animRef.current = requestAnimationFrame(slide)
-        }, FAN_DURATION + 200)
-      }, STACK_PAUSE)
-    }
-
-    runCycle()
-
-    return () => cancelAnimationFrame(animRef.current!)
-  }, [inView, prefersReduced, TOTAL_SLIDE])
-
-  const isStacked   = phase === 'stacked'
-  const isFanning   = phase === 'fanning'
-  const isSliding   = phase === 'sliding'
-  const isCollapsing = phase === 'collapsing'
+  const { ref: sectionRef, inView } = useInView({ triggerOnce: true, threshold: 0.15 })
 
   return (
-    <section ref={sectionRef} className="py-20 overflow-hidden relative">
+    <section ref={sectionRef} className="py-20 relative overflow-hidden">
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none -z-10 opacity-[0.025]"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
           backgroundSize: '48px 48px',
         }}
       />
+
       {/* Heading */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-14">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -127,89 +57,56 @@ export function AdvantagesSlider() {
         </motion.div>
       </div>
 
-      {/* Card stage */}
+      {/* Marquee. `group` drives the hover pause defined in globals.css. */}
       <div
-        className="relative h-72 sm:h-80"
-        style={{ perspective: '1200px' }}
+        className="marquee-viewport group relative overflow-hidden"
+        style={{
+          maskImage:
+            'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+        }}
       >
-        {items.map((item, i) => {
-          const accent = CARD_ACCENTS[i % CARD_ACCENTS.length]
-          const total = items.length
-
-          // ── Stacked state: cards overlap with slight rotation/offset ──
-          let x = 0, rotateZ = 0, scale = 1
-          const opacity = 1
-          let zIndex = i
-
-          if (isStacked || isCollapsing) {
-            // Stack: each card slightly offset and rotated
-            const offset = (i - Math.floor(total / 2)) * 18
-            x = offset
-            rotateZ = (i - Math.floor(total / 2)) * 3
-            scale = 1 - (total - 1 - i) * 0.03
-            zIndex = i
-          } else if (isFanning || isSliding) {
-            // Fanned/sliding: cards spread out horizontally
-            x = i * (CARD_W + GAP) - slideX
-            rotateZ = 0
-            scale = 1
-            zIndex = i
-          }
-
-          const transition = {
-            duration: isFanning ? FAN_DURATION / 1000 : isCollapsing ? 0.4 : 0,
-            ease: [0.22, 1, 0.36, 1] as any,
-            delay: isFanning ? i * 0.06 : isCollapsing ? (total - 1 - i) * 0.04 : 0,
-          }
-
-          return (
-            <motion.div
-              key={i}
-              animate={{
-                x: isSliding ? x : x,
-                rotateZ,
-                scale,
-                opacity,
-              }}
-              transition={isSliding ? { duration: 0 } : transition}
-              className="absolute top-0 left-8 sm:left-16 rounded-2xl p-6 flex flex-col gap-3 cursor-default"
-              style={{
-                width: `${CARD_W}px`,
-                height: '100%',
-                background: accent.bg,
-                border: `1px solid ${accent.border}`,
-                backdropFilter: 'blur(14px)',
-                WebkitBackdropFilter: 'blur(14px)',
-                boxShadow: `0 8px 32px ${accent.shadow}`,
-                zIndex,
-                willChange: 'transform',
-                transformOrigin: 'bottom center',
-              }}
-            >
-              <span className="text-4xl" aria-hidden="true">{item.emoji}</span>
-              <h3 className="text-text-primary font-display font-bold text-lg leading-snug">
-                {item.title}
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed line-clamp-3">
-                {item.desc}
-              </p>
-            </motion.div>
-          )
-        })}
-      </div>
-
-      {/* Phase indicator dots */}
-      <div className="flex justify-center gap-2 mt-8">
-        {(['stacked', 'fanning', 'sliding', 'collapsing'] as Phase[]).map((p) => (
-          <div
-            key={p}
-            className="w-1.5 h-1.5 rounded-full transition-all duration-300"
-            style={{
-              background: phase === p ? '#6C63FF' : 'rgba(255,255,255,0.2)',
-              boxShadow: phase === p ? '0 0 6px rgba(108,99,255,0.8)' : 'none',
-            }}
-          />
-        ))}
+        <ul
+          // No horizontal padding here: it would be added to the track width
+          // and the one-third shift would no longer equal one copy, putting a
+          // small jump in every loop. The edge mask already softens the ends.
+          className="marquee-track flex w-max items-stretch"
+          style={{
+            animation: `marquee-scroll-third ${DURATION_S}s linear infinite`,
+            willChange: 'transform',
+          }}
+        >
+          {COPIES.map((copy) =>
+            items.map((item, i) => {
+              const accent = CARD_ACCENTS[i % CARD_ACCENTS.length]
+              return (
+                <li
+                  key={`${copy}-${i}`}
+                  // Only the first copy is real content; the rest are visual
+                  // repeats and would otherwise be read out three times over.
+                  aria-hidden={copy > 0}
+                  className="shrink-0 w-[248px] sm:w-[288px] mr-4 sm:mr-5 rounded-2xl p-6 flex flex-col gap-3"
+                  style={{
+                    background: accent.bg,
+                    border: `1px solid ${accent.border}`,
+                    backdropFilter: 'blur(14px)',
+                    WebkitBackdropFilter: 'blur(14px)',
+                    boxShadow: `0 8px 32px ${accent.shadow}`,
+                  }}
+                >
+                  <span className="text-4xl leading-none" aria-hidden="true">
+                    {item.emoji}
+                  </span>
+                  <h3 className="text-text-primary font-display font-bold text-lg leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
+                </li>
+              )
+            })
+          )}
+        </ul>
       </div>
     </section>
   )

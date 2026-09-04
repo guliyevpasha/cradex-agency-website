@@ -145,6 +145,14 @@
   100% { transform: translateX(-50%); }
 }
 
+/* Three copies of the content: shifting by exactly one third lands on an
+   identical frame, so the loop has no seam. Used where one copy is too narrow
+   to cover a wide viewport on its own. */
+@keyframes marquee-scroll-third {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+
 /* Pause on hover — applied via the parent .group hovering */
 .group:hover .marquee-track {
   animation-play-state: paused;
@@ -154,6 +162,12 @@
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none !important;
+  }
+
+  /* With the animation stopped the track still overflows, so hand scrolling
+     back to the reader rather than clipping the rest of the cards away. */
+  .marquee-viewport {
+    overflow-x: auto;
   }
 }
 
