@@ -9,6 +9,6 @@ export default createMiddleware({
 })
 
 export const config = {
-  // Exclude /admin, /studio, /api, /static files, and Next.js internals from locale routing
-  matcher: ['/((?!api|admin|studio|_next|_vercel|.*\\..*).*)']
+  // Exclude /studio, /api, /static files, and Next.js internals from locale routing
+  matcher: ['/((?!api|studio|_next|_vercel|.*\\..*).*)']
 }
