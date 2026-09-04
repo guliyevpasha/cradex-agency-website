@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight, Star, CheckCircle } from 'lucide-react'
 import { fadeInUp, staggerContainer } from '@/lib/animations/variants'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
+import { HeroVisual } from '@/components/sections/HeroVisual'
 
 
 // ─── Canvas particle animation ────────────────────────────────────────────────
@@ -277,8 +278,10 @@ export function HeroSection() {
             initial={prefersReduced ? false : { opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="hidden lg:flex justify-end items-end h-full"
+            className="hidden lg:flex flex-col justify-between items-end gap-8 h-full"
           >
+            <HeroVisual />
+
             {/* Social proof positioned at bottom right */}
             <motion.div
               initial={prefersReduced ? false : { opacity: 0, y: 20 }}

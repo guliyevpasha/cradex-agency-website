@@ -40,6 +40,10 @@ const config: Config = {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        // Hero orbit rings. Deliberately slow: at these speeds the movement
+        // reads as drift rather than spin, and nothing competes with the copy.
+        'orbit-slow': 'spin 42s linear infinite',
+        'orbit-reverse': 'spin 64s linear infinite reverse',
       },
       keyframes: {
         float: {
