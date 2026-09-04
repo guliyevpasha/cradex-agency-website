@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import type { CalculatorSelection } from '@/types'
 import type { ExtendedCalculatorSelection, FactorSelection } from './calculatorUtils'
 import { getAllServicesSync } from '@/lib/data/services'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { cn } from '@/lib/utils/cn'
 
 interface ServiceSelectorProps {
@@ -12,11 +13,6 @@ interface ServiceSelectorProps {
 
 const durations = ['1m', '3m', '6m', '12m'] as const
 const platforms = [1, 2, 3] as const
-
-const iconMap: Record<string, string> = {
-  TrendingUp: '📈', Tv: '📺', Share2: '📱', Palette: '🎨',
-  Camera: '📷', Award: '🏆', FileText: '📝', Code: '💻',
-}
 
 export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) {
   const t = useTranslations('calculator')
@@ -113,7 +109,7 @@ export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) 
                   </svg>
                 )}
               </div>
-              <span className="text-2xl">{iconMap[service.icon] ?? '⚡'}</span>
+              <span className="text-accent-primary"><ServiceIcon name={service.icon} className="w-6 h-6" /></span>
               <div className="flex-1 min-w-0">
                 <p className="text-text-primary font-medium text-sm">
                   {tServices(`${key}.name` as any)}

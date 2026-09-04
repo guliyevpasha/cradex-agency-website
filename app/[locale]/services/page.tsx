@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { GlassCard } from '@/components/ui/GlassCard'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { getAllServices } from '@/lib/data/services'
@@ -33,10 +34,6 @@ function ServicesContent({ services, locale: _locale }: { services: Awaited<Retu
   const tCommon = useTranslations('common.cta')
   const locale = useLocale()
 
-  const iconMap: Record<string, string> = {
-    TrendingUp: '📈', Tv: '📺', Share2: '🔗', Palette: '🎨',
-    Camera: '📷', Award: '🏆', FileText: '📝', Code: '💻',
-  }
 
   return (
     <>
@@ -54,8 +51,8 @@ function ServicesContent({ services, locale: _locale }: { services: Awaited<Retu
               <ScrollReveal key={service.id} animation="fadeInUp" delay={index * 80}>
                 <Link href={`/${locale}/services/${service.slug}`}>
                   <GlassCard className="p-6 h-full flex flex-col group">
-                    <div className="w-14 h-14 rounded-xl bg-accent-primary/10 flex items-center justify-center mb-4 text-3xl group-hover:bg-accent-primary/20 transition-colors">
-                      {iconMap[service.icon] ?? '⚡'}
+                    <div className="w-14 h-14 rounded-xl bg-accent-primary/10 ring-1 ring-inset ring-accent-primary/15 text-accent-primary flex items-center justify-center mb-4 transition-colors group-hover:bg-accent-primary/20 group-hover:ring-accent-primary/30">
+                      <ServiceIcon name={service.icon} className="w-7 h-7" />
                     </div>
                     <h2 className="text-text-primary font-semibold text-lg mb-2 group-hover:text-accent-primary transition-colors">
                       {t(`${service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())}.name` as any)}
