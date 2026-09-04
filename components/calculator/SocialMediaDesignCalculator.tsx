@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { ChevronDown, ChevronUp, MessageCircle, ArrowRight, Instagram, Facebook, Linkedin, Youtube, Twitter } from 'lucide-react'
+import { ChevronDown, ChevronUp, MessageCircle, ArrowRight, Instagram, Facebook, Linkedin, Youtube, Twitter, Pin, FolderOpen, HelpCircle, Rocket } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 // ── Platform data with design types ──────────────────────────────────────────
@@ -308,7 +308,7 @@ export function SocialMediaDesignCalculator() {
 
         {/* General Rules */}
         <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-5">
-          <h3 className="text-text-primary font-semibold text-sm mb-3">📌 {t('generalRules')}</h3>
+          <h3 className="text-text-primary font-semibold text-sm mb-3 flex items-center gap-2"><Pin className="w-4 h-4 shrink-0 text-accent-primary" strokeWidth={1.75} aria-hidden="true" />{t('generalRules')}</h3>
           <ul className="space-y-1.5">
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
@@ -550,7 +550,7 @@ export function SocialMediaDesignCalculator() {
             {finalPrice} <span className="text-lg text-text-secondary font-normal">AZN</span>
           </p>
           <p className="text-text-muted text-xs mb-2">* Vergi ödənişi daxildir</p>
-          <p className="text-text-muted text-xs mb-4">🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!</p>
+          <p className="text-text-muted text-xs mb-4 flex items-center justify-center gap-1.5"><Rocket className="w-3.5 h-3.5 shrink-0" strokeWidth={1.75} aria-hidden="true" />{t('professionalTeam')}</p>
           
           {/* Mobile Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
@@ -624,7 +624,7 @@ export function SocialMediaDesignCalculator() {
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-2">* Vergi ödənişi daxildir</p>
-          <p className="text-text-muted text-[10px] mb-4">🚀 Peşəkar komandamızla keyfiyyətli nəticə təmin edilir!</p>
+          <p className="text-text-muted text-[10px] mb-4 flex items-center justify-center gap-1.5"><Rocket className="w-3 h-3 shrink-0" strokeWidth={1.75} aria-hidden="true" />{t('professionalTeam')}</p>
 
           
           {/* Coupon Section */}
@@ -679,7 +679,7 @@ export function SocialMediaDesignCalculator() {
 
         {/* File requirements */}
         <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-5">
-          <h3 className="text-text-primary font-semibold text-sm mb-3">📁 {t('fileRequirements')}</h3>
+          <h3 className="text-text-primary font-semibold text-sm mb-3 flex items-center gap-2"><FolderOpen className="w-4 h-4 shrink-0 text-accent-primary" strokeWidth={1.75} aria-hidden="true" />{t('fileRequirements')}</h3>
           <ul className="space-y-1.5">
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
@@ -706,7 +706,7 @@ export function SocialMediaDesignCalculator() {
 
         {/* FAQ */}
         <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-5">
-          <h3 className="text-text-primary font-semibold text-sm mb-3">❓ {t('faq')}</h3>
+          <h3 className="text-text-primary font-semibold text-sm mb-3 flex items-center gap-2"><HelpCircle className="w-4 h-4 shrink-0 text-accent-primary" strokeWidth={1.75} aria-hidden="true" />{t('faq')}</h3>
           <div className="space-y-2">
             <div className="border border-white/10 rounded-xl overflow-hidden">
               <button

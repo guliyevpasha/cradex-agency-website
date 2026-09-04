@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { ChevronDown, ChevronUp, MessageCircle, ArrowRight, Play, Clock, Zap } from 'lucide-react'
+import { ChevronDown, ChevronUp, MessageCircle, ArrowRight, Play, Clock, Zap, CheckCircle2, Rocket, FolderOpen, HelpCircle } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 // ── Video Types ──────────────────────────────────────────────────────────────
@@ -289,7 +289,8 @@ export function VideoEditingCalculator() {
         {/* Basic Services (Included) */}
         <div key={`basic-services-${videoType}`} className="rounded-2xl border border-green-500/20 bg-green-500/5 p-5">
           <h3 className="text-green-400 font-semibold text-sm mb-3 flex items-center gap-2">
-            ✅ {t('includedServices')}
+            <CheckCircle2 className="w-4 h-4 shrink-0" strokeWidth={2} aria-hidden="true" />
+            {t('includedServices')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {Object.keys(t.raw('basicServices')).filter(key => {
@@ -668,7 +669,7 @@ export function VideoEditingCalculator() {
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
-          <p className="text-text-muted text-[10px] mb-4">{t('professionalTeam')}</p>
+          <p className="text-text-muted text-[10px] mb-4 flex items-center justify-center gap-1.5"><Rocket className="w-3 h-3 shrink-0" strokeWidth={1.75} aria-hidden="true" />{t('professionalTeam')}</p>
           
           {/* Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
@@ -721,7 +722,7 @@ export function VideoEditingCalculator() {
 
         {/* File requirements */}
         <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-5">
-          <h3 className="text-text-primary font-semibold text-sm mb-3">{t('fileRequirements')}</h3>
+          <h3 className="text-text-primary font-semibold text-sm mb-3 flex items-center gap-2"><FolderOpen className="w-4 h-4 shrink-0 text-accent-primary" strokeWidth={1.75} aria-hidden="true" />{t('fileRequirements')}</h3>
           <ul className="space-y-1.5">
             <li className="flex items-start gap-2 text-xs text-text-secondary">
               <span className="text-accent-primary mt-0.5 shrink-0">•</span>
@@ -752,7 +753,7 @@ export function VideoEditingCalculator() {
 
         {/* FAQ */}
         <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-5">
-          <h3 className="text-text-primary font-semibold text-sm mb-3">{t('faq')}</h3>
+          <h3 className="text-text-primary font-semibold text-sm mb-3 flex items-center gap-2"><HelpCircle className="w-4 h-4 shrink-0 text-accent-primary" strokeWidth={1.75} aria-hidden="true" />{t('faq')}</h3>
           <div className="space-y-2">
             {[1, 2, 3].map((i) => (
               <div key={i} className="border border-white/10 rounded-xl overflow-hidden">

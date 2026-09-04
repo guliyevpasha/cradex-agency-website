@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Smartphone, Plus, Minus, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { Smartphone, Plus, Minus, MessageCircle, ChevronDown, ChevronUp, CheckCircle2, Rocket } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 // ── Mobile App Feature Types ─────────────────────────────────────────────────
@@ -194,7 +194,8 @@ export default function MobileAppCalculator() {
           {/* Included Services - MOVED ABOVE DESIGN COMPLEXITY */}
           <div className="mb-6 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
             <h4 className="font-medium text-green-400 text-sm mb-3 flex items-center gap-2">
-              ✅ {t('includedServices')}
+              <CheckCircle2 className="w-4 h-4 shrink-0" strokeWidth={2} aria-hidden="true" />
+              {t('includedServices')}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {[
@@ -420,7 +421,7 @@ export default function MobileAppCalculator() {
           </div>
 
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
-          <p className="text-text-muted text-[10px] mb-4">{t('professionalTeam')}</p>
+          <p className="text-text-muted text-[10px] mb-4 flex items-center justify-center gap-1.5"><Rocket className="w-3 h-3 shrink-0" strokeWidth={1.75} aria-hidden="true" />{t('professionalTeam')}</p>
           
           {/* Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">

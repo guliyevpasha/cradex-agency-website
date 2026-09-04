@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Facebook, Instagram, Search, Video, Linkedin, Plus, Minus, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { Facebook, Instagram, Search, Video, Linkedin, Plus, Minus, MessageCircle, ChevronDown, ChevronUp, CheckCircle2, Rocket } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 interface AdService {
@@ -308,7 +308,8 @@ export default function DigitalAdsCalculator() {
               {/* Included Services */}
               <div className="mb-4 p-3 rounded-xl bg-green-500/5 border border-green-500/20">
                 <h4 className="font-medium text-green-400 text-xs mb-2 flex items-center gap-2">
-                  ✅ {t('includedServices')}
+                  <CheckCircle2 className="w-4 h-4 shrink-0" strokeWidth={2} aria-hidden="true" />
+                  {t('includedServices')}
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
                   {service.includes.map((item, index) => (
@@ -461,7 +462,7 @@ export default function DigitalAdsCalculator() {
             <span className="text-base text-text-secondary font-normal ml-1">AZN</span>
           </p>
           <p className="text-text-muted text-[10px] mb-2">{t('taxIncluded')}</p>
-          <p className="text-text-muted text-[10px] mb-4">{t('professionalTeam')}</p>
+          <p className="text-text-muted text-[10px] mb-4 flex items-center justify-center gap-1.5"><Rocket className="w-3 h-3 shrink-0" strokeWidth={1.75} aria-hidden="true" />{t('professionalTeam')}</p>
           
           {/* Coupon Section */}
           <div className="mb-4 p-3 rounded-xl bg-bg-secondary/50 border border-white/10">
