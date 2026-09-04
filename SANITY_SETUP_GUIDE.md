@@ -32,21 +32,28 @@ http://localhost:3000/studio
 
 İlk dəfə açanda Sanity sizi Google hesabınızla daxil olmağa dəvət edəcək.
 
-### 2. API Token yaradın (Yazma icazəsi üçün)
+### 2. API Token — lazım deyil
 
-1. [https://sanity.io/manage](https://sanity.io/manage) ünvanına gedin
-2. "Cradex Agency" layihəsini seçin
-3. **Settings** → **API** → **Tokens** bölməsinə keçin
-4. **Add API token** düyməsinə basın
-5. Token adı: `Production Write Token`
-6. İcazələr: **Editor** seçin
-7. Token-i kopyalayın və `.env.local` faylına əlavə edin:
+Bu layihə Sanity yazma tokeni istifadə etmir və heç bir kod `SANITY_API_TOKEN` dəyişənini oxumur:
 
-```env
-SANITY_API_TOKEN=sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+- **Studio** (`/studio`) səni öz Sanity hesabınla autentifikasiya edir — token yox, sessiya işlədir
+- **Sayt** kontenti public read ilə çəkir (`sanity/lib/client.ts`)
 
-### 3. Test məlumatları əlavə edin
+Token yalnız Sanity-yə skript vasitəsilə toplu məlumat yazsan lazım olar. O halda token-i yalnız həmin skriptin mühitində saxla, Vercel-ə əlavə etmə.
+
+### 3. CORS origin əlavə edin
+
+Studio brauzerdə işlədiyi üçün Sanity-də icazə tələb edir. **Settings** → **API** → **CORS origins** bölməsində bunlar olmalıdır:
+
+| Origin | Allow credentials |
+|---|---|
+| `http://localhost:3000` | ✅ |
+| `https://cradexagency.com` | ✅ |
+| `https://www.cradexagency.com` | ✅ |
+
+"Allow credentials" işarəsiz olsa, Studio açılar, amma giriş edə bilməzsən.
+
+### 4. Test məlumatları əlavə edin
 
 Studio-da hər bir bölmə üçün test məlumatları əlavə edin:
 
@@ -114,28 +121,21 @@ Bu faylları yeniləmək üçün mənə deyin və mən onları Sanity sorğular�
 
 ## 🚀 Production-a Deploy
 
-### Vercel-də environment variables əlavə edin:
-
-1. [Vercel Dashboard](https://vercel.com) açın
-2. Layihənizi seçin
-3. **Settings** → **Environment Variables**
-4. Aşağıdakı dəyişənləri əlavə edin:
+Sanity ilə bağlı üç dəyişən Vercel-də olmalıdır:
 
 ```
 NEXT_PUBLIC_SANITY_PROJECT_ID=7ia9tt83
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
-SANITY_API_TOKEN=sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-5. **Save** düyməsinə basın
-6. Layihəni yenidən deploy edin
+Layihənin bütün dəyişənləri, onların tipi (Config / Secret), Vercel panelindəki yeri və revalidation webhook-unun qurulması **[VERCEL_ENV_SETUP.md](./VERCEL_ENV_SETUP.md)** sənədində təsvir olunub. Siyahını iki yerdə saxlamamaq üçün detallar orada tək nüsxədə qalır.
 
 ## 🔐 Təhlükəsizlik
 
-- **API Token-i heç vaxt GitHub-a yükləməyin**
-- Token yalnız `.env.local` faylında saxlanmalıdır
-- `.env.local` faylı `.gitignore`-da olmalıdır (artıq əlavə edilib)
+- **Sirləri heç vaxt repo-ya yükləməyin** — nə koda, nə sənədlərə
+- Gizli dəyərlər yalnız `.env.local` (git-ə düşmür) və Vercel panelində saxlanılır
+- `.env.local` faylı `.gitignore`-dadır (artıq əlavə edilib)
 
 ## 📞 Dəstək
 
