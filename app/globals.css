@@ -128,9 +128,12 @@
   border-radius: 4px;
 }
 
-/* Swiper slide opacity for non-active slides */
+/* Swiper slide opacity for non-active slides.
+   0.5 left the neighbouring quotes readable, so with eighteen testimonials the
+   ones flanking the active card read as overlapping blocks of text rather than
+   as background. Low enough now that they register as depth only. */
 .swiper-slide:not(.swiper-slide-active) {
-  opacity: 0.5;
+  opacity: 0.18;
   transition: opacity 0.4s ease;
 }
 
