@@ -43,6 +43,14 @@ const nextConfig = {
         source: '/:path*',
         headers: securityHeaders,
       },
+      // robots.txt asks crawlers not to fetch /studio, but a URL linked from
+      // anywhere else can still be indexed without being fetched. This header
+      // is the part search engines honour once they have the page. Access
+      // control is Sanity's: the Studio needs a project membership to log in.
+      ...['/studio', '/studio/:path*'].map((source) => ({
+        source,
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      })),
     ]
   },
   experimental: {
