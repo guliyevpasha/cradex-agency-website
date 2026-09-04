@@ -61,12 +61,36 @@
       "heading": "Наши результаты,",
       "headingAccent": "ваш рост.",
       "stats": [
-        { "value": 350, "suffix": "+", "label": "Успешных проектов" },
-        { "value": 100, "suffix": "+", "label": "Довольных клиентов" },
-        { "value": 4, "suffix": " г+", "label": "Опыт агентства" },
-        { "value": 98, "suffix": "%", "label": "Удовлетворённость" },
-        { "value": 100, "suffix": "%", "label": "Сдача в срок" },
-        { "value": 24, "suffix": "/7", "label": "Техподдержка" }
+        {
+          "value": 350,
+          "suffix": "+",
+          "label": "Успешных проектов"
+        },
+        {
+          "value": 100,
+          "suffix": "+",
+          "label": "Довольных клиентов"
+        },
+        {
+          "value": 4,
+          "suffix": " г+",
+          "label": "Опыт агентства"
+        },
+        {
+          "value": 98,
+          "suffix": "%",
+          "label": "Удовлетворённость"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Сдача в срок"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "Техподдержка"
+        }
       ]
     },
     "advantages": {
@@ -74,12 +98,36 @@
       "heading": "Почему выбирают",
       "headingAccent": "нас?",
       "items": [
-        { "emoji": "😎", "title": "Профессиональный опыт", "desc": "Наша команда имеет 4+ лет реального опыта в цифровом маркетинге." },
-        { "emoji": "⏰", "title": "Сдача в срок", "desc": "Мы завершаем каждый проект в согласованные сроки. Задержки — не наш стиль." },
-        { "emoji": "📈", "title": "Измеримые результаты", "desc": "Устанавливаем KPI для каждой кампании и доказываем результаты ежемесячными отчётами." },
-        { "emoji": "💎", "title": "Прозрачные цены", "desc": "Никаких скрытых платежей. Честные и понятные ценовые предложения." },
-        { "emoji": "🤝", "title": "Долгосрочное партнёрство", "desc": "Ваш успех — наш успех. Мы стремимся к долгосрочному сотрудничеству." },
-        { "emoji": "💬", "title": "Честная коммуникация", "desc": "Открытое и прозрачное общение с клиентами — наш главный стандарт." }
+        {
+          "emoji": "😎",
+          "title": "Профессиональный опыт",
+          "desc": "Наша команда имеет 4+ лет реального опыта в цифровом маркетинге."
+        },
+        {
+          "emoji": "⏰",
+          "title": "Сдача в срок",
+          "desc": "Мы завершаем каждый проект в согласованные сроки. Задержки — не наш стиль."
+        },
+        {
+          "emoji": "📈",
+          "title": "Измеримые результаты",
+          "desc": "Устанавливаем KPI для каждой кампании и доказываем результаты ежемесячными отчётами."
+        },
+        {
+          "emoji": "💎",
+          "title": "Прозрачные цены",
+          "desc": "Никаких скрытых платежей. Честные и понятные ценовые предложения."
+        },
+        {
+          "emoji": "🤝",
+          "title": "Долгосрочное партнёрство",
+          "desc": "Ваш успех — наш успех. Мы стремимся к долгосрочному сотрудничеству."
+        },
+        {
+          "emoji": "💬",
+          "title": "Честная коммуникация",
+          "desc": "Открытое и прозрачное общение с клиентами — наш главный стандарт."
+        }
       ]
     },
     "services": {
@@ -277,408 +325,6 @@
     "process": "Наш процесс",
     "relatedWork": "Связанные работы"
   },
-  "calculator_legacy": {
-    "title": "Рассчитать стоимость услуг",
-    "subtitle": "Выберите услуги, соответствующие вашим потребностям",
-    "tabs": {
-      "website": "Веб-сайт",
-      "mobileApp": "Мобильное приложение",
-      "digitalAds": "Цифровая Реклама",
-      "videoEditing": "Видеомонтаж",
-      "videoShooting": "Видеосъемка",
-      "socialMediaDesign": "Дизайн Соцсетей"
-    },
-    "selectServices": "Выбрать услуги",
-    "parameters": "Параметры",
-    "duration": {
-      "label": "Срок",
-      "1m": "1 месяц",
-      "3m": "3 месяца",
-      "6m": "6 месяцев",
-      "12m": "12 месяцев"
-    },
-    "platforms": {
-      "label": "Количество платформ",
-      "1": "1 платформа",
-      "2": "2 платформы",
-      "3": "3+ платформы"
-    },
-    "priceRange": "{min} – {max} AZN",
-    "selectedServices": "Выбранные услуги",
-    "totalPrice": "Ориентировочная стоимость",
-    "getQuote": "Получить предложение",
-    "noSelection": "Пожалуйста, выберите хотя бы одну услугу",
-    "whatsappMessage": "Здравствуйте! Услуги, выбранные в калькуляторе: {services}. Ориентировочная стоимость: {price} AZN.",
-    "digitalAds": {
-      "title": "Цифровая Реклама",
-      "platformSelection": "Выбор Платформы",
-      "metaAds": "Meta Реклама (Facebook & Instagram)",
-      "googleAds": "Google Реклама",
-      "tiktokAds": "TikTok Реклама",
-      "linkedinAds": "LinkedIn Реклама",
-      "includedServices": "Включенные услуги",
-      "additionalServices": "Дополнительные Услуги",
-      "totalAmount": "Общая сумма",
-      "monthly": "ежемесячно",
-      "perUnit": "шт",
-      "taxIncluded": "* Налог включен",
-      "professionalTeam": "🚀 Качественный результат гарантирован нашей профессиональной командой!",
-      "orderNow": "Заказать",
-      "discountCoupon": "Купон на Скидку",
-      "enterCouponCode": "Введите код купона",
-      "applyCoupon": "Применить",
-      "cancelCoupon": "Отменить",
-      "discount": "Скидка",
-      "invalidCoupon": "Неверный код купона!",
-      "serviceRequirements": "Требования к Услуге",
-      "faq": "Часто Задаваемые Вопросы",
-      "faqQ1": "За сколько дней запускается рекламная кампания?",
-      "faqA1": "Рекламные кампании запускаются в течение 24-48 часов. Для срочных кампаний требуется дополнительная оплата.",
-      "faqQ2": "Каким должен быть рекламный бюджет?",
-      "faqA2": "Минимальный рекламный бюджет составляет 10 AZN в день. Для оптимальных результатов рекомендуем 30-50 AZN в день.",
-      "faqQ3": "Как я могу отслеживать результаты?",
-      "faqA3": "Мы предоставляем ежемесячные отчеты и статистику в реальном времени. Также отправляем ежедневные обновления через WhatsApp.",
-      "metaAdsName": "Meta Реклама (Facebook & Instagram)",
-      "metaAdsDescription": "Реклама в Facebook и Instagram",
-      "googleAdsName": "Google Реклама",
-      "googleAdsDescription": "Google Ads и поисковая реклама",
-      "tiktokAdsName": "TikTok Реклама",
-      "tiktokAdsDescription": "TikTok Ads и видеореклама",
-      "linkedinAdsName": "LinkedIn Реклама",
-      "linkedinAdsDescription": "LinkedIn B2B реклама",
-      "oneTime": "Единоразово",
-      "additionalPayments": "Дополнительные платежи",
-      "serviceRequirementsItems": {
-        "companyInfo": "Информация о компании и логотип",
-        "targetAudience": "Информация о целевой аудитории",
-        "productImages": "Изображения продуктов/услуг",
-        "adBudget": "Рекламный бюджет (минимум 300 AZN/месяц)",
-        "website": "Веб-сайт или лендинг",
-        "contactInfo": "Контактная информация и аккаунты в соцсетях"
-      },
-      "metaIncludes": {
-        "businessManager": "Настройка Meta Business Manager",
-        "adAccount": "Создание рекламного аккаунта",
-        "pixelSetup": "Подключение Pixel",
-        "campaign": "1 рекламная кампания",
-        "targeting": "Таргетинг аудитории",
-        "creatives": "3 рекламных креатива (видео или изображение)",
-        "adCopy": "Написание рекламных текстов",
-        "optimization": "Ежедневная оптимизация",
-        "report": "Ежемесячный отчет"
-      },
-      "googleIncludes": {
-        "accountSetup": "Настройка аккаунта Google Ads",
-        "searchCampaign": "Поисковая рекламная кампания",
-        "keywordResearch": "Исследование ключевых слов",
-        "negativeKeywords": "Оптимизация минус-слов",
-        "adGroups": "2 рекламные группы",
-        "adCopy": "Подготовка рекламных текстов",
-        "conversionTracking": "Отслеживание конверсий",
-        "monthlyReport": "Ежемесячная оптимизация и отчет"
-      },
-      "tiktokIncludes": {
-        "accountSetup": "Настройка аккаунта TikTok Ads",
-        "pixelIntegration": "Интеграция Pixel",
-        "campaign": "1 рекламная кампания",
-        "audienceAnalysis": "Анализ аудитории",
-        "videoCreatives": "3 видео креатива",
-        "optimization": "Оптимизация рекламы",
-        "monthlyReport": "Ежемесячный отчет"
-      },
-      "linkedinIncludes": {
-        "campaignManager": "Настройка LinkedIn Campaign Manager",
-        "b2bTargeting": "B2B таргетинг аудитории",
-        "leadGenCampaign": "Кампания по генерации лидов",
-        "sponsoredPosts": "Спонсируемые посты",
-        "adCopy": "Подготовка рекламных текстов",
-        "monthlyOptimization": "Ежемесячная оптимизация",
-        "reportPresentation": "Презентация отчета"
-      },
-      "metaAdditional": {
-        "extraCampaign": "Дополнительная рекламная кампания",
-        "extraCreative": "Дополнительный рекламный креатив",
-        "reelsEditing": "Монтаж Reels",
-        "motionDesign": "Моушн-дизайн реклама",
-        "adCopywriting": "Написание текста для рекламы",
-        "whatsappCatalog": "WhatsApp каталог реклама",
-        "ecommerceCatalog": "E-commerce каталог реклама",
-        "softwareAd": "Реклама программного обеспечения",
-        "pixelSetup": "Настройка Meta Pixel",
-        "conversionApi": "Интеграция Conversion API",
-        "dmService": "Служба ответов в DM",
-        "influencerManagement": "Управление сотрудничеством с инфлюенсерами",
-        "abTesting": "A/B тест оптимизация"
-      },
-      "googleAdditional": {
-        "displayBanners": "Медийные рекламные баннеры",
-        "tagManager": "Настройка Google Tag Manager",
-        "conversionTracking": "Отслеживание конверсий",
-        "analytics4": "Интеграция Google Analytics 4",
-        "youtubeSetup": "Настройка рекламы YouTube",
-        "remarketingCampaign": "Ремаркетинговая кампания",
-        "keywordResearch": "Исследование ключевых слов (расширенное)",
-        "landingPageAnalysis": "Анализ лендинга",
-        "seoAudit": "SEO аудит"
-      },
-      "tiktokAdditional": {
-        "videoEditing": "Монтаж видео TikTok",
-        "ugcScript": "Сценарий UGC контента",
-        "viralPlanning": "Планирование вирусного контента",
-        "pixelSetup": "Настройка TikTok Pixel",
-        "creatorFinding": "Поиск креатора/инфлюенсера",
-        "trendResearch": "Исследование трендов",
-        "shopIntegration": "Интеграция TikTok shop"
-      },
-      "linkedinAdditional": {
-        "pageOptimization": "Оптимизация страницы компании LinkedIn",
-        "b2bLeadStrategy": "B2B стратегия лидогенерации",
-        "corporateCopy": "Корпоративный текст",
-        "employerBranding": "Стратегия работодательского бренда",
-        "leadFormSetup": "Настройка формы лидогенерации",
-        "ceoPersonalBrand": "Управление личным брендом CEO",
-        "contentPlan": "Контент-план LinkedIn"
-      }
-    },
-    "videoEditing": {
-      "title": "Видеомонтаж",
-      "videoType": "Тип видео",
-      "shortVideo": "Короткое видео (Reels/Shorts)",
-      "longVideo": "Длинное видео (YouTube)",
-      "basePrice": "Базовая цена",
-      "freeDuration": "бесплатно",
-      "videoDuration": "Длительность видео",
-      "firstMinuteFree": "Первая 1 минута бесплатно",
-      "next15SecFor3AZN": "Следующие каждые 15 секунд за 3 AZN",
-      "first10MinFree": "Первые 10 минут бесплатно",
-      "next5MinFor6AZN": "Следующие каждые 5 минут за 6 AZN",
-      "includedServices": "Включенные услуги",
-      "basicServices": {
-        "editing": "Нарезка и монтаж",
-        "transitions": "Переходы в ритм",
-        "basicColor": "Базовая цветокоррекция",
-        "music": "Добавление музыки",
-        "export1080p": "Экспорт 1080P",
-        "delivery24h": "Доставка в течение 24 часов",
-        "separateFiles": "Отдельная доставка видео и аудио файлов",
-        "oneRevision": "1 правка включена",
-        "twoRevisions": "2 правки включены"
-      },
-      "subtitleOptions": "Варианты субтитров",
-      "basicSubtitle": "Добавление субтитров",
-      "dynamicSubtitle": "Динамические субтитры (цветные, анимированные)",
-      "soundDesign": "Звуковой дизайн",
-      "transitionSounds": "Звуки переходов",
-      "cinematicEffects": "Кинематографические эффекты",
-      "ambience": "Фоновые звуки",
-      "bassHits": "Басовые удары",
-      "motionGraphics": "Моушн-графика / Анимация",
-      "logoAnimation": "Анимация логотипа",
-      "infoTexts": "Информационные тексты",
-      "otherServices": "Другие услуги",
-      "colorGrading": "Профессиональная цветокоррекция (Color Grading)",
-      "additionalOptions": "Дополнительные опции",
-      "thumbnailCreation": "Создание превью",
-      "fastDelivery8h": "Доставка в течение 8 часов",
-      "export4K": "Экспорт 4K",
-      "presenterSelection": "Выбор ведущего (спикера)",
-      "shortsFromLong": "Короткие видео из длинного",
-      "shortsCount": "шт. shorts",
-      "per1MinShort": "5 AZN за каждый 1-минутный shorts",
-      "extraRevisions": "Дополнительные правки",
-      "extraRevision": "дополнительная правка",
-      "perExtraRevision": "3 AZN за каждую дополнительную правку (1 правка бесплатно)",
-      "totalAmount": "Общая сумма",
-      "taxIncluded": "* Налог включен",
-      "discount": "Скидка",
-      "orderNow": "Заказать",
-      "discountCoupon": "Купон на скидку",
-      "enterCouponCode": "Введите код купона",
-      "applyCoupon": "Применить",
-      "cancelCoupon": "Отменить",
-      "invalidCoupon": "Неверный код купона!",
-      "professionalTeam": "🚀 Качественный результат гарантирован нашей профессиональной командой!",
-      "fileRequirements": "📁 Требования к файлам",
-      "videoMaterials": "Видеоматериалы: в формате MP4, MOV, AVI",
-      "images": "Изображения: JPG, PNG (минимум 1920×1080 px)",
-      "logo": "Логотип: SVG или PNG (прозрачный фон)",
-      "music": "Музыка: в формате MP3, WAV (лицензированная)",
-      "text": "Текст: документ Word или Google Docs",
-      "colorCode": "Цветовой код: в формате HEX или RGB",
-      "faq": "❓ Часто задаваемые вопросы",
-      "faqQ1": "За сколько дней готово видео?",
-      "faqA1": "Стандартные заказы выполняются в течение 24 часов. Если выберете срочный заказ (8 часов), требуется доплата.",
-      "faqQ2": "В каком формате доставляется файл?",
-      "faqA2": "Стандартно доставляется в формате 1080P MP4. За экспорт 4K доступна доплата.",
-      "faqQ3": "Есть ли право на правки?",
-      "faqA3": "Да, в каждый заказ включена 1 бесплатная правка. Дополнительные правки по 3 AZN.",
-      "seconds": "секунд",
-      "minutes": "минут",
-      "min": "мин",
-      "sec": "сек"
-    },
-    "videoShooting": {
-      "title": "Видеосъемка",
-      "videoType": "Тип видео",
-      "shortVideoShooting": "Короткое видео съемка (Reels/Shorts)",
-      "longVideoShooting": "Длинное видео съемка (YouTube)",
-      "basePrice": "Базовая цена",
-      "upTo1HourIncluded": "До 1 часа съемки включено",
-      "shootingDuration": "Длительность съемки",
-      "first1HourIncluded": "Первый 1 час включен",
-      "nextHourFor25AZN": "Следующий каждый час за 25 AZN",
-      "nextHourFor35AZN": "Следующий каждый час за 35 AZN",
-      "includedServices": "Включенные услуги",
-      "basicServices": {
-        "iphoneShooting": "Съемка на iPhone 17 Pro",
-        "framePlanning": "Планирование кадра",
-        "basicLighting": "Базовая установка света",
-        "stableVideo": "Стабильная видеосъемка",
-        "quality1080p": "Качество видео 1080P",
-        "multipleAngles": "Различные ракурсы",
-        "stabilizer": "Использование стабилизатора",
-        "basicMic": "Базовый микрофон",
-        "socialFormat": "Формат для соцсетей",
-        "oneLocation": "Съемка в 1 локации",
-        "oneOperator": "1 оператор",
-        "twoVideoEdits": "2 видеомонтажа (до 1мин каждый)"
-      },
-      "additionalOptions": "Дополнительные опции",
-      "options": {
-        "4k_shooting": "Профессиональная камера 4K съемка",
-        "cinematic_effects": "Кинематографические визуальные эффекты",
-        "professional_lighting": "Профессиональная установка света",
-        "rgb_lighting": "RGB световые эффекты",
-        "professional_mic": "Профессиональный микрофон",
-        "audio_setup": "Аудио установка для очистки звука",
-        "script_preparation": "Подготовка сценария съемки",
-        "video_planning": "Планирование видео идеи",
-        "studio_shooting": "Съемка в студии",
-        "extra_location": "Съемка в дополнительной локации",
-        "same_day_shooting": "Съемка в тот же день",
-        "video_editing": "Монтаж отснятых видео",
-        "presenter_selection": "Выбор ведущего (спикера)"
-      },
-      "fileDelivery": "Доставка файлов",
-      "delivery": {
-        "google_drive": "Google Drive",
-        "wetransfer": "WeTransfer",
-        "ssd_flash": "SSD / Flash карта"
-      },
-      "totalAmount": "Общая сумма",
-      "taxIncluded": "* Налог включен",
-      "orderNow": "Заказать",
-      "professionalTeam": "🚀 Качественный результат гарантирован нашей профессиональной командой!",
-      "fileRequirements": "📁 Требования к файлам",
-      "requirements": {
-        "logoElements": "Логотип и элементы бренда: в формате SVG или PNG",
-        "transparentBg": "Прозрачный фон предпочтителен",
-        "locationAddress": "Адрес локации",
-        "shootingPurpose": "Цель съемки (реклама, контент, YouTube и т.д.)",
-        "targetAudience": "Информация о целевой аудитории"
-      },
-      "faq": "❓ Часто задаваемые вопросы",
-      "faqQ1": "За сколько дней завершается съемка?",
-      "faqA1": "Стандартные съемки планируются и выполняются в течение 2-3 рабочих дней после заказа.",
-      "faqQ2": "Какое оборудование используется для съемки?",
-      "faqA2": "Используется iPhone 17 Pro, профессиональный стабилизатор, световая установка и микрофонная система. Вы можете выбрать профессиональное оборудование за дополнительную плату.",
-      "faqQ3": "Что включено во время съемки?",
-      "faqA3": "Планирование кадра, базовая световая установка, различные ракурсы и 2 смонтированных видео по 1 минуте каждое включены.",
-      "minutes": "минут",
-      "hours": "часов",
-      "min": "мин",
-      "discount": "Скидка",
-      "discountCoupon": "Купон на скидку",
-      "enterCouponCode": "Введите код купона",
-      "applyCoupon": "Применить",
-      "cancelCoupon": "Отменить"
-    },
-    "socialMediaDesign": {
-      "title": "Дизайн Соцсетей",
-      "generalRules": "Общие правила",
-      "oneDesignOneContent": "1 дизайн = 1 контент",
-      "revisionOneFree": "Правка: 1 раз бесплатно",
-      "delivery24h": "Доставка: 24 часа (стандарт)",
-      "platformSelection": "Выбор Платформы Соцсетей",
-      "designTypes": "Типы Дизайна",
-      "designCount": "Количество Дизайнов (1-100)",
-      "pieces": "шт",
-      "additionalServices": "Дополнительные Услуги",
-      "extraRevisions": "Дополнительные Правки",
-      "extraRevision": "дополнительная правка",
-      "perExtraRevision": "5 AZN за каждую дополнительную правку (1 дизайн).",
-      "totalAmount": "Общая Сумма",
-      "taxIncluded": "* Налог включен",
-      "discount": "Скидка",
-      "discountCoupon": "Купон на Скидку",
-      "enterCouponCode": "Введите код купона",
-      "applyCoupon": "Применить",
-      "cancelCoupon": "Отменить",
-      "invalidCoupon": "Неверный код купона!",
-      "orderNow": "Заказать",
-      "fileRequirements": "Требования к Файлам",
-      "faq": "Часто Задаваемые Вопросы",
-      "platforms": {
-        "instagram": {
-          "content": "Instagram контент (1080×1350)",
-          "reels_cover": "Дизайн обложки Reels видео",
-          "story": "Instagram история (1080×1920)",
-          "highlights": "Instagram актуальное (избранные истории)",
-          "carousel": "Карусель контент (5–10 слайдов)"
-        },
-        "facebook": {
-          "post": "Facebook изображение поста (1200×630)",
-          "ad": "Facebook дизайн рекламы (1200×628)",
-          "event_cover": "Facebook обложка события (1920×1080)",
-          "cover": "Facebook обложка (851×315)"
-        },
-        "linkedin": {
-          "post": "LinkedIn пост (1200×1200)",
-          "banner": "LinkedIn баннер (1584×396)",
-          "article_cover": "LinkedIn обложка статьи",
-          "single_ad": "LinkedIn реклама одним изображением (1200×627)"
-        },
-        "pinterest": {
-          "carousel_ad": "Карусель Pinterest реклама (1000×1500)",
-          "pin": "Pinterest пин дизайн (соотношение 2:3)"
-        },
-        "tiktok": {
-          "video_cover": "Дизайн обложки видео (1080×1920)"
-        },
-        "youtube": {
-          "channel_cover": "Обложка канала (2560×1440)",
-          "thumbnail": "YouTube превью (1280×720)"
-        },
-        "twitter": {
-          "cover": "Обложка (1500×500)",
-          "content": "Дизайн контента (1600×900)"
-        }
-      },
-      "services": {
-        "custom_icons": "Пользовательские иконки/иллюстрации",
-        "copywriting": "Копирайтинг",
-        "template_files": "Файлы шаблонов дизайна (PSD, Canva)",
-        "rush_delivery": "Срочная доставка 8 часов"
-      },
-      "packagePrice": "Пакетная цена",
-      "perDesign": "(за дизайн)",
-      "fileRequirementsItems": {
-        "visualMaterials": "Визуальные материалы: формат JPG или PNG, минимум 1080px или более высокое качество",
-        "textMaterials": "Текстовые материалы: документ Word или формат Google Docs",
-        "brandElements": "Элементы бренда: цветовые коды бренда (HEX или RGB), названия шрифтов",
-        "logoIdentity": "Логотип и идентичность: формат SVG (векторный) или PNG, предпочтителен прозрачный фон",
-        "referenceMaterials": "Справочные материалы: примеры похожих дизайнов, желаемый стиль и визуальное направление"
-      },
-      "faqItems": {
-        "q1": "За сколько дней готов дизайн?",
-        "a1": "Стандартные заказы выполняются в течение 24 часов. Срочные заказы готовятся в течение 8 часов.",
-        "q2": "В каком формате доставляется файл?",
-        "a2": "Доставляется в форматах PNG, JPG. По запросу также могут быть отправлены шаблоны PSD или Canva.",
-        "q3": "Есть ли у меня право на правки?",
-        "a3": "Да, у вас есть право на 1 бесплатную правку для каждого дизайна."
-      }
-    }
-  },
   "contact": {
     "title": "Свяжитесь с нами",
     "subtitle": "Мы готовы обсудить ваш проект",
@@ -709,12 +355,21 @@
         "free": "Бесплатная консультация"
       },
       "services": [
-        "SMM", "SEO", "Сайт", "Брендинг",
-        "Графический дизайн", "Фото/Видео", "Копирайтинг", "Другое"
+        "SMM",
+        "SEO",
+        "Сайт",
+        "Брендинг",
+        "Графический дизайн",
+        "Фото/Видео",
+        "Копирайтинг",
+        "Другое"
       ],
       "budgets": [
-        "До 500₼", "500–1500₼", "1500–4000₼",
-        "4000–10000₼", "Более 10000₼"
+        "До 500₼",
+        "500–1500₼",
+        "1500–4000₼",
+        "4000–10000₼",
+        "Более 10000₼"
       ],
       "submit": "Отправить сообщение",
       "submitting": "Отправка...",
@@ -1426,7 +1081,6 @@
       "orderNow": "Заказать сейчас",
       "fileRequirements": "Требования к файлам",
       "faq": "Часто задаваемые вопросы",
-      "professionalTeam": "🚀 Качественный результат гарантирован нашей профессиональной командой!",
       "platforms": {
         "instagram": {
           "content": "Instagram контент (1080×1350)",

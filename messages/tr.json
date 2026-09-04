@@ -61,12 +61,36 @@
       "heading": "Bizim sonuçlar,",
       "headingAccent": "sizin büyüme.",
       "stats": [
-        { "value": 350, "suffix": "+", "label": "Başarılı Proje" },
-        { "value": 100, "suffix": "+", "label": "Mutlu Müşteri" },
-        { "value": 4, "suffix": " yıl+", "label": "Ajans Deneyimi" },
-        { "value": 98, "suffix": "%", "label": "Müşteri Memnuniyeti" },
-        { "value": 100, "suffix": "%", "label": "Zamanında Teslimat" },
-        { "value": 24, "suffix": "/7", "label": "Teknik Destek" }
+        {
+          "value": 350,
+          "suffix": "+",
+          "label": "Başarılı Proje"
+        },
+        {
+          "value": 100,
+          "suffix": "+",
+          "label": "Mutlu Müşteri"
+        },
+        {
+          "value": 4,
+          "suffix": " yıl+",
+          "label": "Ajans Deneyimi"
+        },
+        {
+          "value": 98,
+          "suffix": "%",
+          "label": "Müşteri Memnuniyeti"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Zamanında Teslimat"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "Teknik Destek"
+        }
       ]
     },
     "advantages": {
@@ -74,12 +98,36 @@
       "heading": "Neden bizi",
       "headingAccent": "seçiyorlar?",
       "items": [
-        { "emoji": "😎", "title": "Profesyonel Deneyim", "desc": "Ekibimiz dijital pazarlamada 4+ yıllık gerçek proje deneyimine sahiptir." },
-        { "emoji": "⏰", "title": "Zamanında Teslimat", "desc": "Her projeyi kararlaştırılan sürede tamamlıyoruz. Gecikme bizim sözlüğümüzde yok." },
-        { "emoji": "📈", "title": "Ölçülebilir Sonuçlar", "desc": "Her kampanya için KPI belirliyor, aylık raporlarla sonuçları kanıtlıyoruz." },
-        { "emoji": "💎", "title": "Şeffaf Fiyatlar", "desc": "Gizli ücret yok. Her hizmet için dürüst ve net fiyat teklifleri sunuyoruz." },
-        { "emoji": "🤝", "title": "Uzun Vadeli Ortaklık", "desc": "Sizin başarınız bizim başarımızdır. Kalıcı işbirliği için çalışıyoruz." },
-        { "emoji": "💬", "title": "Dürüst İletişim", "desc": "Müşterilerle açık ve şeffaf iletişim bizim temel standardımızdır." }
+        {
+          "emoji": "😎",
+          "title": "Profesyonel Deneyim",
+          "desc": "Ekibimiz dijital pazarlamada 4+ yıllık gerçek proje deneyimine sahiptir."
+        },
+        {
+          "emoji": "⏰",
+          "title": "Zamanında Teslimat",
+          "desc": "Her projeyi kararlaştırılan sürede tamamlıyoruz. Gecikme bizim sözlüğümüzde yok."
+        },
+        {
+          "emoji": "📈",
+          "title": "Ölçülebilir Sonuçlar",
+          "desc": "Her kampanya için KPI belirliyor, aylık raporlarla sonuçları kanıtlıyoruz."
+        },
+        {
+          "emoji": "💎",
+          "title": "Şeffaf Fiyatlar",
+          "desc": "Gizli ücret yok. Her hizmet için dürüst ve net fiyat teklifleri sunuyoruz."
+        },
+        {
+          "emoji": "🤝",
+          "title": "Uzun Vadeli Ortaklık",
+          "desc": "Sizin başarınız bizim başarımızdır. Kalıcı işbirliği için çalışıyoruz."
+        },
+        {
+          "emoji": "💬",
+          "title": "Dürüst İletişim",
+          "desc": "Müşterilerle açık ve şeffaf iletişim bizim temel standardımızdır."
+        }
       ]
     },
     "services": {
@@ -277,408 +325,6 @@
     "process": "Sürecimiz",
     "relatedWork": "İlgili Çalışmalar"
   },
-  "calculator_legacy": {
-    "title": "Hizmet Fiyatını Hesapla",
-    "subtitle": "İhtiyaçlarınıza uygun hizmetleri seçin",
-    "tabs": {
-      "website": "Web Sitesi",
-      "mobileApp": "Mobil Uygulama",
-      "digitalAds": "Dijital Reklam",
-      "videoEditing": "Video Montaj",
-      "videoShooting": "Video Çekimi",
-      "socialMediaDesign": "Sosyal Medya Tasarım"
-    },
-    "selectServices": "Hizmet Seçin",
-    "parameters": "Parametreler",
-    "duration": {
-      "label": "Süre",
-      "1m": "1 ay",
-      "3m": "3 ay",
-      "6m": "6 ay",
-      "12m": "12 ay"
-    },
-    "platforms": {
-      "label": "Platform sayısı",
-      "1": "1 platform",
-      "2": "2 platform",
-      "3": "3+ platform"
-    },
-    "priceRange": "{min} – {max} AZN",
-    "selectedServices": "Seçilen hizmetler",
-    "totalPrice": "Tahmini fiyat",
-    "getQuote": "Teklif Al",
-    "noSelection": "Lütfen en az bir hizmet seçin",
-    "whatsappMessage": "Merhaba! Hesaplayıcıda seçtiğim hizmetler: {services}. Tahmini fiyat: {price} AZN.",
-    "digitalAds": {
-      "title": "Dijital Reklam",
-      "platformSelection": "Platform Seçimi",
-      "metaAds": "Meta Reklamları (Facebook & Instagram)",
-      "googleAds": "Google Reklamları",
-      "tiktokAds": "TikTok Reklamları",
-      "linkedinAds": "LinkedIn Reklamları",
-      "includedServices": "Dahil olan hizmetler",
-      "additionalServices": "Ek Hizmetler",
-      "totalAmount": "Toplam tutar",
-      "monthly": "aylık",
-      "perUnit": "adet",
-      "taxIncluded": "* Vergi dahildir",
-      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
-      "orderNow": "Sipariş Ver",
-      "discountCoupon": "İndirim Kuponu",
-      "enterCouponCode": "Kupon kodunu girin",
-      "applyCoupon": "Uygula",
-      "cancelCoupon": "İptal",
-      "discount": "İndirim",
-      "invalidCoupon": "Kupon kodu yanlış!",
-      "serviceRequirements": "Hizmet Gereksinimleri",
-      "faq": "Sık Sorulan Sorular",
-      "faqQ1": "Reklam kampanyası kaç günde başlar?",
-      "faqA1": "Reklam kampanyaları 24-48 saat içinde başlar. Acil kampanyalar için ek ödeme gereklidir.",
-      "faqQ2": "Reklam bütçesi ne kadar olmalıdır?",
-      "faqA2": "Minimum reklam bütçesi günlük 10 AZN'dir. Optimal sonuçlar için günlük 30-50 AZN öneriyoruz.",
-      "faqQ3": "Sonuçları nasıl takip edebilirim?",
-      "faqA3": "Aylık raporlar ve gerçek zamanlı istatistikler sunuyoruz. Ayrıca WhatsApp üzerinden günlük güncellemeler gönderiyoruz.",
-      "metaAdsName": "Meta Reklamları (Facebook & Instagram)",
-      "metaAdsDescription": "Facebook ve Instagram reklamları",
-      "googleAdsName": "Google Reklamları",
-      "googleAdsDescription": "Google Ads ve Arama reklamları",
-      "tiktokAdsName": "TikTok Reklamları",
-      "tiktokAdsDescription": "TikTok Ads ve video reklamları",
-      "linkedinAdsName": "LinkedIn Reklamları",
-      "linkedinAdsDescription": "LinkedIn B2B reklamları",
-      "oneTime": "Tek seferlik",
-      "additionalPayments": "Ek ödemeler",
-      "serviceRequirementsItems": {
-        "companyInfo": "Şirket bilgileri ve logo",
-        "targetAudience": "Hedef kitle bilgileri",
-        "productImages": "Ürün/hizmet görselleri",
-        "adBudget": "Reklam bütçesi (minimum 300 AZN/ay)",
-        "website": "Web sitesi veya landing page",
-        "contactInfo": "İletişim bilgileri ve sosyal medya hesapları"
-      },
-      "metaIncludes": {
-        "businessManager": "Meta Business Manager kurulumu",
-        "adAccount": "Reklam hesabı oluşturma",
-        "pixelSetup": "Pixel bağlantısı",
-        "campaign": "1 reklam kampanyası",
-        "targeting": "Hedef kitle belirleme",
-        "creatives": "3 reklam kreatifi (video veya görsel)",
-        "adCopy": "Reklam metni yazımı",
-        "optimization": "Günlük optimizasyon",
-        "report": "Aylık rapor"
-      },
-      "googleIncludes": {
-        "accountSetup": "Google Ads hesabı kurulumu",
-        "searchCampaign": "Arama reklam kampanyası",
-        "keywordResearch": "Anahtar kelime araştırması",
-        "negativeKeywords": "Negatif anahtar kelime optimizasyonu",
-        "adGroups": "2 reklam grubu",
-        "adCopy": "Reklam metni hazırlama",
-        "conversionTracking": "Dönüşüm takibi",
-        "monthlyReport": "Aylık optimizasyon ve rapor"
-      },
-      "tiktokIncludes": {
-        "accountSetup": "TikTok Ads hesabı kurulumu",
-        "pixelIntegration": "Pixel entegrasyonu",
-        "campaign": "1 reklam kampanyası",
-        "audienceAnalysis": "Hedef kitle analizi",
-        "videoCreatives": "3 video kreatif",
-        "optimization": "Reklam optimizasyonu",
-        "monthlyReport": "Aylık rapor"
-      },
-      "linkedinIncludes": {
-        "campaignManager": "LinkedIn Campaign Manager kurulumu",
-        "b2bTargeting": "B2B hedef kitle belirleme",
-        "leadGenCampaign": "Potansiyel Müşteri Toplama Kampanyası",
-        "sponsoredPosts": "Sponsorlu gönderi reklamları",
-        "adCopy": "Reklam metni hazırlama",
-        "monthlyOptimization": "Aylık optimizasyon",
-        "reportPresentation": "Rapor sunumu"
-      },
-      "metaAdditional": {
-        "extraCampaign": "Ek reklam kampanyası",
-        "extraCreative": "Ek reklam kreatifi",
-        "reelsEditing": "Reels montajı",
-        "motionDesign": "Motion tasarım reklamı",
-        "adCopywriting": "Reklam için metin yazımı",
-        "whatsappCatalog": "WhatsApp katalog reklamı",
-        "ecommerceCatalog": "E-ticaret katalog reklamı",
-        "softwareAd": "Yazılım reklamı",
-        "pixelSetup": "Meta Pixel kurulumu",
-        "conversionApi": "Conversion API entegrasyonu",
-        "dmService": "DM yanıtlama hizmeti",
-        "influencerManagement": "Influencer işbirliği yönetimi",
-        "abTesting": "A/B test optimizasyonu"
-      },
-      "googleAdditional": {
-        "displayBanners": "Display reklam bannerları",
-        "tagManager": "Google Tag Manager kurulumu",
-        "conversionTracking": "Dönüşüm takibi",
-        "analytics4": "Google Analytics 4 entegrasyonu",
-        "youtubeSetup": "YouTube reklam kurulumu",
-        "remarketingCampaign": "Remarketing kampanyası",
-        "keywordResearch": "Anahtar kelime araştırması (kapsamlı)",
-        "landingPageAnalysis": "Landing page analizi",
-        "seoAudit": "SEO denetimi"
-      },
-      "tiktokAdditional": {
-        "videoEditing": "TikTok video montajı",
-        "ugcScript": "UGC içerik senaryosu",
-        "viralPlanning": "Viral içerik planlaması",
-        "pixelSetup": "TikTok Pixel kurulumu",
-        "creatorFinding": "Creator/influencer bulma",
-        "trendResearch": "Trend araştırması",
-        "shopIntegration": "TikTok shop entegrasyonu"
-      },
-      "linkedinAdditional": {
-        "pageOptimization": "LinkedIn şirket sayfası optimizasyonu",
-        "b2bLeadStrategy": "B2B Potansiyel Müşteri Stratejisi",
-        "corporateCopy": "Kurumsal metin",
-        "employerBranding": "İşveren Markası Stratejisi",
-        "leadFormSetup": "Potansiyel Müşteri Formu Kurulumu",
-        "ceoPersonalBrand": "CEO Kişisel Marka Yönetimi",
-        "contentPlan": "LinkedIn içerik planı"
-      }
-    },
-    "videoEditing": {
-      "title": "Video Montaj",
-      "videoType": "Video Türü",
-      "shortVideo": "Kısa Video (Reels/Shorts)",
-      "longVideo": "Uzun Video (YouTube)",
-      "basePrice": "Temel fiyat",
-      "freeDuration": "ücretsiz",
-      "videoDuration": "Video Süresi",
-      "firstMinuteFree": "İlk 1 dakika ücretsiz",
-      "next15SecFor3AZN": "Sonraki her 15 saniye için 3 AZN",
-      "first10MinFree": "İlk 10 dakika ücretsiz",
-      "next5MinFor6AZN": "Sonraki her 5 dakika için 6 AZN",
-      "includedServices": "Dahil olan hizmetler",
-      "basicServices": {
-        "editing": "Kesim ve montaj",
-        "transitions": "Ritme uygun geçişler",
-        "basicColor": "Temel renk düzeltme",
-        "music": "Müzik ekleme",
-        "export1080p": "1080P çıktı",
-        "delivery24h": "24 saat içinde teslimat",
-        "separateFiles": "Video ve ses dosyalarının ayrı teslimi",
-        "oneRevision": "1 revizyon hakkı",
-        "twoRevisions": "2 revizyon hakkı"
-      },
-      "subtitleOptions": "Altyazı Seçenekleri",
-      "basicSubtitle": "Altyazı ekleme",
-      "dynamicSubtitle": "Dinamik altyazı (renkli, animasyonlu)",
-      "soundDesign": "Ses Tasarımı",
-      "transitionSounds": "Geçiş sesleri",
-      "cinematicEffects": "Sinematik efektler",
-      "ambience": "Ortam sesleri",
-      "bassHits": "Bass vuruşları",
-      "motionGraphics": "Hareketli Grafik / Animasyon",
-      "logoAnimation": "Logo animasyonu",
-      "infoTexts": "Bilgi yazıları",
-      "otherServices": "Diğer Hizmetler",
-      "colorGrading": "Profesyonel renk düzeltme (Color Grading)",
-      "additionalOptions": "Ek Seçenekler",
-      "thumbnailCreation": "Thumbnail hazırlama",
-      "fastDelivery8h": "8 saat içinde teslimat",
-      "export4K": "4K çıktı",
-      "presenterSelection": "Sunucu (spiker) seçimi",
-      "shortsFromLong": "Uzun Videodan Kısa Videolar",
-      "shortsCount": "adet shorts",
-      "per1MinShort": "Her 1 dakikalık shorts için 5 AZN",
-      "extraRevisions": "Ek Revizyonlar",
-      "extraRevision": "ek revizyon",
-      "perExtraRevision": "Her ek revizyon için 3 AZN (1 revizyon ücretsiz dahil)",
-      "totalAmount": "Toplam Tutar",
-      "taxIncluded": "* Vergi dahildir",
-      "discount": "İndirim",
-      "orderNow": "Sipariş Ver",
-      "discountCoupon": "İndirim Kuponu",
-      "enterCouponCode": "Kupon kodunu girin",
-      "applyCoupon": "Uygula",
-      "cancelCoupon": "İptal",
-      "invalidCoupon": "Kupon kodu yanlış!",
-      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
-      "fileRequirements": "📁 Dosya Gereksinimleri",
-      "videoMaterials": "Video materyaller: MP4, MOV, AVI formatında",
-      "images": "Görseller: JPG, PNG (minimum 1920×1080 px)",
-      "logo": "Logo: SVG veya PNG (şeffaf arka plan)",
-      "music": "Müzik: MP3, WAV formatında (lisanslı)",
-      "text": "Metin: Word belgesi veya Google Docs",
-      "colorCode": "Renk kodu: HEX veya RGB formatında",
-      "faq": "❓ Sık Sorulan Sorular",
-      "faqQ1": "Video kaç günde hazır olur?",
-      "faqA1": "Standart siparişler 24 saat içinde tamamlanır. Acil sipariş (8 saat) seçerseniz, ek ödeme gerekir.",
-      "faqQ2": "Hangi formatta dosya teslim edilir?",
-      "faqA2": "Standart olarak 1080P MP4 formatında teslim edilir. 4K export için ek ödeme mevcuttur.",
-      "faqQ3": "Düzeltme hakkı var mı?",
-      "faqA3": "Evet, her siparişe 1 ücretsiz düzeltme dahildir. Ek düzeltmeler 3 AZN'dir.",
-      "seconds": "saniye",
-      "minutes": "dakika",
-      "min": "dk",
-      "sec": "sn"
-    },
-    "videoShooting": {
-      "title": "Video Çekimi",
-      "videoType": "Video Türü",
-      "shortVideoShooting": "Kısa Video Çekimi (Reels/Shorts)",
-      "longVideoShooting": "Uzun Video Çekimi (YouTube)",
-      "basePrice": "Temel fiyat",
-      "upTo1HourIncluded": "1 saate kadar çekim dahildir",
-      "shootingDuration": "Çekim Süresi",
-      "first1HourIncluded": "İlk 1 saat dahildir",
-      "nextHourFor25AZN": "Sonraki her saat için 25 AZN",
-      "nextHourFor35AZN": "Sonraki her saat için 35 AZN",
-      "includedServices": "Dahil olan hizmetler",
-      "basicServices": {
-        "iphoneShooting": "iPhone 17 Pro ile çekim",
-        "framePlanning": "Kadraj planlaması",
-        "basicLighting": "Temel ışık kurulumu",
-        "stableVideo": "Sabit görüntü çekimi",
-        "quality1080p": "1080P görüntü kalitesi",
-        "multipleAngles": "Çeşitli açılar",
-        "stabilizer": "Stabilizatör kullanımı",
-        "basicMic": "Temel mikrofon",
-        "socialFormat": "Sosyal medya uyumlu format",
-        "oneLocation": "1 mekanda çekim",
-        "oneOperator": "1 operatör",
-        "twoVideoEdits": "2 video montaj (1dk'ya kadar)"
-      },
-      "additionalOptions": "Ek Seçenekler",
-      "options": {
-        "4k_shooting": "Profesyonel kamera ile 4K çekim",
-        "cinematic_effects": "Sinematik görsel efekt ayarlamaları",
-        "professional_lighting": "Profesyonel ışık kurulumu",
-        "rgb_lighting": "RGB ışık efektleri",
-        "professional_mic": "Profesyonel mikrofon",
-        "audio_setup": "Ses temizleme için audio setup",
-        "script_preparation": "Çekim senaryosu hazırlanması",
-        "video_planning": "Video fikir planlaması",
-        "studio_shooting": "Stüdyoda çekim",
-        "extra_location": "Ek mekanda çekim",
-        "same_day_shooting": "Aynı gün çekim",
-        "video_editing": "Çekilen videoların montajı",
-        "presenter_selection": "Sunucu (spiker) seçimi"
-      },
-      "fileDelivery": "Dosya Teslimi",
-      "delivery": {
-        "google_drive": "Google Drive",
-        "wetransfer": "WeTransfer",
-        "ssd_flash": "SSD / Flash kart"
-      },
-      "totalAmount": "Toplam Tutar",
-      "taxIncluded": "* Vergi dahildir",
-      "orderNow": "Sipariş Ver",
-      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti!",
-      "fileRequirements": "📁 Dosya Gereksinimleri",
-      "requirements": {
-        "logoElements": "Logo ve marka öğeleri: SVG veya PNG formatında",
-        "transparentBg": "Şeffaf (transparent) arka plan tercih edilir",
-        "locationAddress": "Mekan adresi",
-        "shootingPurpose": "Çekim amacı (reklam, içerik, YouTube vb.)",
-        "targetAudience": "Hedef kitle bilgisi"
-      },
-      "faq": "❓ Sık Sorulan Sorular",
-      "faqQ1": "Çekim kaç günde tamamlanır?",
-      "faqA1": "Standart çekimler sipariş sonrası 2-3 iş günü içinde planlanır ve gerçekleştirilir.",
-      "faqQ2": "Hangi ekipmanlarla çekim yapılır?",
-      "faqA2": "iPhone 17 Pro, profesyonel stabilizatör, ışık kurulumu ve mikrofon sistemi kullanılır. Ek ödeme ile profesyonel ekipmanlar seçebilirsiniz.",
-      "faqQ3": "Çekim sırasında neler dahildir?",
-      "faqA3": "Kadraj planlaması, temel ışık kurulumu, çeşitli açılar ve 2 adet 1 dakikalık montajlanmış video dahildir.",
-      "minutes": "dakika",
-      "hours": "saat",
-      "min": "dk",
-      "discount": "İndirim",
-      "discountCoupon": "İndirim Kuponu",
-      "enterCouponCode": "Kupon kodunu girin",
-      "applyCoupon": "Uygula",
-      "cancelCoupon": "İptal"
-    },
-    "socialMediaDesign": {
-      "title": "Sosyal Medya Tasarım",
-      "generalRules": "Genel Kurallar",
-      "oneDesignOneContent": "1 tasarım = 1 içerik",
-      "revisionOneFree": "Revizyon: 1 kez ücretsiz",
-      "delivery24h": "Teslimat: 24 saat (standart)",
-      "platformSelection": "Sosyal Medya Platform Seçimi",
-      "designTypes": "Tasarım Türleri",
-      "designCount": "Tasarım Sayısı (1-100)",
-      "pieces": "adet",
-      "additionalServices": "Ek Hizmetler",
-      "extraRevisions": "Ek Revizyonlar",
-      "extraRevision": "ek revizyon",
-      "perExtraRevision": "Her ek revizyon için 5 AZN (1 tasarım için).",
-      "totalAmount": "Toplam Tutar",
-      "taxIncluded": "* Vergi dahildir",
-      "discount": "İndirim",
-      "discountCoupon": "İndirim Kuponu",
-      "enterCouponCode": "Kupon kodunu girin",
-      "applyCoupon": "Uygula",
-      "cancelCoupon": "İptal",
-      "invalidCoupon": "Kupon kodu yanlış!",
-      "orderNow": "Sipariş Ver",
-      "fileRequirements": "Dosya Gereksinimleri",
-      "faq": "Sık Sorulan Sorular",
-      "platforms": {
-        "instagram": {
-          "content": "Instagram içerik (1080×1350)",
-          "reels_cover": "Reels video kapak tasarımı",
-          "story": "Instagram hikaye (1080×1920)",
-          "highlights": "Instagram öne çıkanlar (seçilmiş hikayeler)",
-          "carousel": "Carousel içerik (5–10 slayt)"
-        },
-        "facebook": {
-          "post": "Facebook paylaşım resmi (1200×630)",
-          "ad": "Facebook reklam tasarımı (1200×628)",
-          "event_cover": "Facebook etkinlik kapak resmi (1920×1080)",
-          "cover": "Facebook kapak resmi (851×315)"
-        },
-        "linkedin": {
-          "post": "LinkedIn post (1200×1200)",
-          "banner": "LinkedIn banner (1584×396)",
-          "article_cover": "LinkedIn makale kapağı",
-          "single_ad": "LinkedIn tek resim reklam (1200×627)"
-        },
-        "pinterest": {
-          "carousel_ad": "Carousel Pinterest reklamı (1000×1500)",
-          "pin": "Pinterest pin tasarımı (2:3 oran)"
-        },
-        "tiktok": {
-          "video_cover": "Video kapak tasarımı (1080×1920)"
-        },
-        "youtube": {
-          "channel_cover": "Kanal kapak resmi (2560×1440)",
-          "thumbnail": "YouTube thumbnail (1280×720)"
-        },
-        "twitter": {
-          "cover": "Kapak resmi (1500×500)",
-          "content": "İçerik tasarımı (1600×900)"
-        }
-      },
-      "services": {
-        "custom_icons": "Özel ikonlar/illüstrasyonlar",
-        "copywriting": "Metin yazarlığı",
-        "template_files": "Tasarım şablon dosyaları (PSD, Canva)",
-        "rush_delivery": "Acil teslimat 8 saat"
-      },
-      "packagePrice": "Paket fiyat",
-      "perDesign": "(tasarım başına)",
-      "fileRequirementsItems": {
-        "visualMaterials": "Görsel materyaller: JPG veya PNG formatında, minimum 1080px veya daha yüksek kalite",
-        "textMaterials": "Metin materyalleri: Word belgesi veya Google Docs formatında",
-        "brandElements": "Marka öğeleri: Marka renk kodları (HEX veya RGB), Font adları",
-        "logoIdentity": "Logo ve kimlik: SVG (vektör) veya PNG formatında, şeffaf arka plan tercih edilir",
-        "referenceMaterials": "Referans materyaller: Benzer tasarım örnekleri, istenen stil ve görsel yön"
-      },
-      "faqItems": {
-        "q1": "Tasarım kaç günde hazır olur?",
-        "a1": "Standart siparişler 24 saat içinde tamamlanır. Acil siparişler 8 saat içinde hazırlanır.",
-        "q2": "Hangi formatta dosya teslim edilir?",
-        "a2": "PNG, JPG formatlarında teslim edilir. Talep edilirse PSD veya Canva şablonları da gönderilebilir.",
-        "q3": "Düzeltme hakkım var mı?",
-        "a3": "Evet, her tasarım için 1 kez ücretsiz düzeltme hakkınız var."
-      }
-    }
-  },
   "contact": {
     "title": "Bizimle İletişime Geçin",
     "subtitle": "Projeniz hakkında konuşalım",
@@ -709,12 +355,21 @@
         "free": "Ücretsiz danışmanlık"
       },
       "services": [
-        "SMM", "SEO", "Web Sitesi", "Markalama",
-        "Grafik Tasarım", "Fotoğraf/Video", "Metin Yazarlığı", "Diğer"
+        "SMM",
+        "SEO",
+        "Web Sitesi",
+        "Markalama",
+        "Grafik Tasarım",
+        "Fotoğraf/Video",
+        "Metin Yazarlığı",
+        "Diğer"
       ],
       "budgets": [
-        "500₼'den az", "500–1500₼", "1500–4000₼",
-        "4000–10000₼", "10000₼'den fazla"
+        "500₼'den az",
+        "500–1500₼",
+        "1500–4000₼",
+        "4000–10000₼",
+        "10000₼'den fazla"
       ],
       "submit": "Mesaj Gönder",
       "submitting": "Gönderiliyor...",
@@ -1426,7 +1081,6 @@
       "orderNow": "Şimdi Sipariş Ver",
       "fileRequirements": "Dosya Gereksinimleri",
       "faq": "Sık Sorulan Sorular",
-      "professionalTeam": "🚀 Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
       "platforms": {
         "instagram": {
           "content": "Instagram içerik (1080×1350)",
