@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { Instagram, Facebook, Linkedin, Youtube, MessageCircle } from 'lucide-react'
+import { Instagram, Facebook, Linkedin, Youtube, MessageCircle, MapPin, Phone, Mail } from 'lucide-react'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Footer() {
@@ -104,15 +104,15 @@ export function Footer() {
               {t('contact')}
             </h3>
             <ul className="space-y-3 text-sm text-text-muted">
-              <li>📍 Bakı, Azərbaycan</li>
+              <li className="flex items-center gap-2"><MapPin className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />Bakı, Azərbaycan</li>
               <li>
-                <a href="tel:+994507786887" className="hover:text-text-primary transition-colors">
-                  📞 +994 50 778 68 87
+                <a href="tel:+994507786887" className="flex items-center gap-2 hover:text-text-primary transition-colors">
+                  <Phone className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />+994 50 778 68 87
                 </a>
               </li>
               <li>
-                <a href="mailto:info@cradexagency.com" className="hover:text-text-primary transition-colors">
-                  📧 info@cradexagency.com
+                <a href="mailto:info@cradexagency.com" className="flex items-center gap-2 hover:text-text-primary transition-colors">
+                  <Mail className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />info@cradexagency.com
                 </a>
               </li>
               <li>

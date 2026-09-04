@@ -7,6 +7,7 @@ import { SocialMediaDesignCalculator } from './SocialMediaDesignCalculator'
 import DigitalAdsCalculator from './DigitalAdsCalculator'
 import WebsiteCalculator from './WebsiteCalculator'
 import MobileAppCalculator from './MobileAppCalculator'
+import { Globe, Smartphone, Megaphone, Scissors, Clapperboard, Palette, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 type ServiceTab = 'video-editing' | 'video-shooting' | 'social-media-design' | 'digital-ads' | 'website' | 'mobile-app'
@@ -15,13 +16,13 @@ export function AdvancedCalculator() {
   const t = useTranslations('calculator')
   const [activeTab, setActiveTab] = useState<ServiceTab>('website')
 
-  const TABS: { id: ServiceTab; labelKey: string; icon: string }[] = [
-    { id: 'website', labelKey: 'website', icon: '🌐' },
-    { id: 'mobile-app', labelKey: 'mobileApp', icon: '📱' },
-    { id: 'digital-ads', labelKey: 'digitalAds', icon: '📢' },
-    { id: 'video-editing', labelKey: 'videoEditing', icon: '✂️' },
-    { id: 'video-shooting', labelKey: 'videoShooting', icon: '🎬' },
-    { id: 'social-media-design', labelKey: 'socialMediaDesign', icon: '🎨' },
+  const TABS: { id: ServiceTab; labelKey: string; Icon: LucideIcon }[] = [
+    { id: 'website', labelKey: 'website', Icon: Globe },
+    { id: 'mobile-app', labelKey: 'mobileApp', Icon: Smartphone },
+    { id: 'digital-ads', labelKey: 'digitalAds', Icon: Megaphone },
+    { id: 'video-editing', labelKey: 'videoEditing', Icon: Scissors },
+    { id: 'video-shooting', labelKey: 'videoShooting', Icon: Clapperboard },
+    { id: 'social-media-design', labelKey: 'socialMediaDesign', Icon: Palette },
   ]
 
   return (
@@ -39,7 +40,7 @@ export function AdvancedCalculator() {
                 : 'text-text-secondary hover:text-text-primary'
             )}
           >
-            <span>{tab.icon}</span>
+            <tab.Icon className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
             <span className="whitespace-nowrap">{t(`tabs.${tab.labelKey}`)}</span>
           </button>
         ))}
