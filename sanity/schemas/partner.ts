@@ -1,6 +1,8 @@
 import { createElement } from 'react'
 import { defineField, defineType } from 'sanity'
 
+import { urlForImage } from '../lib/image'
+
 export default defineType({
   name: 'partner',
   title: 'Partners (Tərəfdaşlar)',
@@ -44,11 +46,15 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
-      logoUrl: 'logo.asset->url',
+      // select takes plain paths only — a GROQ dereference like
+      // logo.asset->url silently resolves to undefined here, so take the image
+      // object and build the URL below.
+      logo: 'logo',
       active: 'active',
       order: 'order',
     },
-    prepare({ title, logoUrl, active, order }) {
+    prepare({ title, logo, active, order }) {
+      const logoUrl = logo?.asset ? urlForImage(logo).url() : null
       return {
         title,
         subtitle: `${active ? 'Active' : 'Inactive'} · order ${order ?? 0}`,
@@ -75,7 +81,8 @@ export default defineType({
                 style: { maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' },
               })
             )
-          : undefined,
+          : // Fall back to the raw image object, which Studio renders itself.
+            logo,
       }
     },
   },
