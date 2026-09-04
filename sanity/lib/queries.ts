@@ -204,46 +204,50 @@ export async function getAllPartners(): Promise<Partner[]> {
 
 // ─── Testimonial Queries ─────────────────────────────────────────────────────
 
+export interface LocalizedText {
+  az: string
+  en: string
+  ru: string
+  tr: string
+}
+
 export interface Testimonial {
   id: string
-  name: string
-  role: string
+  name: LocalizedText
+  role: LocalizedText
   company: string
   photo: string
   rating: number
-  text: string
+  text: LocalizedText
   featured: boolean
   order: number
 }
 
-export async function getAllTestimonials(locale: string = 'az'): Promise<Testimonial[]> {
-  const query = `*[_type == "testimonial"] | order(order asc) {
-    "id": _id,
-    "name": clientName,
-    "role": clientPosition.${locale},
-    "company": company,
-    "photo": avatar.asset->url,
-    "rating": rating,
-    "text": testimonial.${locale},
-    "featured": featured,
-    "order": order
-  }`
-  
-  return client.fetch(query)
+// Every locale is returned rather than one, because the carousel is a client
+// component that reads name/role/text by the active locale and falls back to az.
+// Resolving a single language here would leave nothing to fall back to.
+//
+// photo prefers an uploaded asset and otherwise takes photoPath, which points at
+// a file already in public/ — that is how the original entries keep their photos
+// without all of them being re-uploaded into Sanity.
+const TESTIMONIAL_FIELDS = `
+  "id": _id,
+  "name": clientName,
+  "role": clientPosition,
+  "company": coalesce(company, ""),
+  "photo": coalesce(avatar.asset->url, photoPath, ""),
+  "rating": coalesce(rating, 5),
+  "text": testimonial,
+  "featured": coalesce(featured, false),
+  "order": coalesce(order, 0)
+`
+
+export async function getAllTestimonials(): Promise<Testimonial[]> {
+  return client.fetch(`*[_type == "testimonial"] | order(order asc) {${TESTIMONIAL_FIELDS}}`)
 }
 
-export async function getFeaturedTestimonials(locale: string = 'az'): Promise<Testimonial[]> {
-  const query = `*[_type == "testimonial" && featured == true] | order(order asc) {
-    "id": _id,
-    "name": clientName,
-    "role": clientPosition.${locale},
-    "company": company,
-    "photo": avatar.asset->url,
-    "rating": rating,
-    "text": testimonial.${locale},
-    "featured": featured,
-    "order": order
-  }`
-  
-  return client.fetch(query)
+export async function getFeaturedTestimonials(): Promise<Testimonial[]> {
+  return client.fetch(
+    `*[_type == "testimonial" && featured == true] | order(order asc) {${TESTIMONIAL_FIELDS}}`
+  )
 }

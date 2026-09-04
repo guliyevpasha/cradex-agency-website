@@ -7,7 +7,7 @@ import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules'
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { testimonials } from '@/lib/data/testimonials'
+import type { Testimonial } from '@/lib/data/testimonials'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 import type { Locale } from '@/i18n'
 
@@ -52,7 +52,7 @@ const textVariants = {
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
-export function TestimonialsCarousel() {
+export function TestimonialsCarousel({ testimonials }: { testimonials: Testimonial[] }) {
   const locale = useLocale() as Locale
   const t = useTranslations('home.testimonials')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -144,7 +144,7 @@ function TestimonialCard({
   isActive,
   prefersReduced,
 }: {
-  testimonial: (typeof testimonials)[0]
+  testimonial: Testimonial
   locale: Locale
   isActive: boolean
   prefersReduced: boolean
@@ -244,7 +244,11 @@ function TestimonialCard({
                 : {}
             }
           >
-            {testimonial.photo.startsWith('/') ? (
+            {/* Anything that looks like an image is one; the field doubles as an
+                emoji fallback for entries without a photo. Testing only for a
+                leading "/" sent Sanity's https://cdn.sanity.io URLs down the
+                emoji branch, which printed the raw URL as text. */}
+            {/^(\/|https?:\/\/)/.test(testimonial.photo) ? (
               /* Real photo */
               <Image
                 src={testimonial.photo}

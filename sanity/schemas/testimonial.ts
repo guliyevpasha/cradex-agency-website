@@ -8,7 +8,15 @@ export default defineType({
     defineField({
       name: 'clientName',
       title: 'Client Name',
-      type: 'string',
+      type: 'object',
+      description:
+        'Names are transliterated per language — Кенан Акберли in Russian, Kenan Akbarli in English.',
+      fields: [
+        { name: 'az', type: 'string', title: 'Azərbaycan' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ru', type: 'string', title: 'Русский' },
+        { name: 'tr', type: 'string', title: 'Türkçe' },
+      ],
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -31,9 +39,17 @@ export default defineType({
       name: 'avatar',
       title: 'Client Photo',
       type: 'image',
+      description: 'Upload a photo here. Leave empty to keep using the path below.',
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'photoPath',
+      title: 'Client Photo — file path',
+      type: 'string',
+      description:
+        'Path to an image already in public/, e.g. /images/testimonials/kenan.jpg. Only used when no photo is uploaded above. Lets the existing photos keep working without re-uploading all of them.',
     }),
     defineField({
       name: 'testimonial',
@@ -71,16 +87,20 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'clientName',
+      title: 'clientName.az',
+      role: 'clientPosition.az',
       company: 'company',
       media: 'avatar',
       rating: 'rating',
     },
-    prepare(selection) {
-      const { company, rating } = selection
+    prepare({ title, role, company, media, rating }) {
+      // company is blank on most entries, so lead with the role and only add
+      // the company when there is one.
+      const subtitle = [role, company].filter(Boolean).join(' · ')
       return {
-        ...selection,
-        subtitle: `${company} - ${rating}⭐`,
+        title,
+        media,
+        subtitle: subtitle ? `${subtitle} — ${rating}⭐` : `${rating}⭐`,
       }
     },
   },
