@@ -5,5 +5,7 @@ export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || ''
 
-// Note: Sanity client will gracefully handle missing credentials
-// The application will fall back to JSON data when Sanity is not configured
+// An empty projectId means Sanity is not configured. The data layer treats that
+// as "use the bundled JSON instead" (see lib/data/journal.ts, portfolio.ts,
+// testimonials.ts); sanity/lib/client.ts keeps the client constructible so the
+// import itself does not fail.
