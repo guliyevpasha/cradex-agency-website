@@ -65,7 +65,18 @@ describe('Routing — correctness properties', () => {
       expect(service.pricing.baseMin).toBeGreaterThan(0)
       expect(service.pricing.baseMax).toBeGreaterThanOrEqual(service.pricing.baseMin)
       expect(service.pricing.durationMultiplier['1m']).toBe(1)
-      expect(service.pricing.durationMultiplier['3m']).toBeGreaterThan(1)
+
+      // Retainers scale with the commitment, but one-off work — branding,
+      // web-mobile-dev — leaves every multiplier at 1, and that is exactly how
+      // the calculator recognises it (isOneTime in calculatorUtils.ts). So the
+      // invariant is that a longer duration never costs less, not that 3m > 1m.
+      const durations = ['1m', '3m', '6m', '12m'] as const
+      for (let i = 1; i < durations.length; i++) {
+        expect(
+          service.pricing.durationMultiplier[durations[i]],
+          `${service.slug}: ${durations[i]} multiplier drops below ${durations[i - 1]}`
+        ).toBeGreaterThanOrEqual(service.pricing.durationMultiplier[durations[i - 1]])
+      }
     }
   })
 
