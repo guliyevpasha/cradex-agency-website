@@ -11,6 +11,7 @@ import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 import { getAllTestimonials } from '@/lib/data/testimonials'
+import { getPartners } from '@/lib/data/partners'
 
 // Enable ISR with 60 second revalidation
 export const revalidate = 60
@@ -32,15 +33,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   setRequestLocale(locale)
 
-  // Fetched here rather than inside the carousel: that component is client-side
-  // for Swiper, so it cannot query Sanity itself.
+  // Fetched here rather than in the sections: both are client components
+  // (Swiper, marquee hover state) and cannot query Sanity themselves.
   const testimonials = await getAllTestimonials()
+  const partners = await getPartners()
 
   return (
     <>
       <HeroSection />
       <StatsSection />
-      <LogoMarquee />
+      <LogoMarquee partners={partners} />
       <AdvantagesSlider />
       <ServicesOverview />
       <PortfolioPreview />

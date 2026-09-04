@@ -1,3 +1,4 @@
+import { createElement } from 'react'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -43,14 +44,38 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
-      media: 'logo',
+      logoUrl: 'logo.asset->url',
       active: 'active',
+      order: 'order',
     },
-    prepare(selection) {
-      const { active } = selection
+    prepare({ title, logoUrl, active, order }) {
       return {
-        ...selection,
-        subtitle: active ? 'Active' : 'Inactive',
+        title,
+        subtitle: `${active ? 'Active' : 'Inactive'} · order ${order ?? 0}`,
+        // Partner logos are solid white, drawn for the site's dark background,
+        // so in the Studio's light theme they look like empty boxes. Put them on
+        // a dark tile here so the list is actually readable.
+        media: logoUrl
+          ? createElement(
+              'div',
+              {
+                style: {
+                  width: '100%',
+                  height: '100%',
+                  background: '#0A0A0F',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: 4,
+                },
+              },
+              createElement('img', {
+                src: logoUrl,
+                alt: '',
+                style: { maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' },
+              })
+            )
+          : undefined,
       }
     },
   },

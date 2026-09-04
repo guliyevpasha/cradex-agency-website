@@ -2,7 +2,7 @@
 import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { partners } from '@/lib/data/partners'
+import type { PartnerLogo } from '@/lib/data/partners'
 
 /**
  * Infinite Logo Marquee — Pure CSS animation + direct DOM classList.
@@ -12,7 +12,7 @@ import { partners } from '@/lib/data/partners'
  * Logos that have passed the centre (LEFT half) are coloured.
  * Cycle repeats continuously.
  */
-export function LogoMarquee() {
+export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
   const t = useTranslations('home.partners')
   const containerRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
@@ -127,7 +127,7 @@ export function LogoMarquee() {
   )
 }
 
-function LogoCard({ partner, logo, uid }: { partner: (typeof partners)[0]; logo: string; uid: string }) {
+function LogoCard({ partner, logo, uid }: { partner: PartnerLogo; logo: string; uid: string }) {
   const isSvg = logo.toLowerCase().endsWith('.svg')
 
   return (
