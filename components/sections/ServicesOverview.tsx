@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { GlassCard } from '@/components/ui/GlassCard'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { getAllServicesSync } from '@/lib/data/services'
 
@@ -41,17 +42,8 @@ export function ServicesOverview() {
             >
               <Link href={`/${locale}/services/${service.slug}`}>
                 <GlassCard className="p-6 h-full flex flex-col group">
-                  <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center mb-4 group-hover:bg-accent-primary/20 transition-colors">
-                    <span className="text-accent-primary text-2xl">
-                      {service.icon === 'TrendingUp' && '📈'}
-                      {service.icon === 'Tv' && '📺'}
-                      {service.icon === 'Share2' && '🔗'}
-                      {service.icon === 'Palette' && '🎨'}
-                      {service.icon === 'Camera' && '📷'}
-                      {service.icon === 'Award' && '🏆'}
-                      {service.icon === 'FileText' && '📝'}
-                      {service.icon === 'Code' && '💻'}
-                    </span>
+                  <div className="w-12 h-12 rounded-xl bg-accent-primary/10 ring-1 ring-inset ring-accent-primary/15 text-accent-primary flex items-center justify-center mb-4 transition-colors group-hover:bg-accent-primary/20 group-hover:ring-accent-primary/30">
+                    <ServiceIcon name={service.icon} className="w-6 h-6" />
                   </div>
                   <h3 className="text-text-primary font-semibold text-lg mb-2 group-hover:text-accent-primary transition-colors">
                     {tServices(`${service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())}.name` as any)}

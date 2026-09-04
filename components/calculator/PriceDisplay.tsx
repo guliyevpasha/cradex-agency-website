@@ -5,17 +5,13 @@ import type { PriceRange } from '@/types'
 import type { ExtendedCalculatorSelection } from './calculatorUtils'
 import { buildWhatsAppMessage } from './calculatorUtils'
 import { getAllServicesSync } from '@/lib/data/services'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 
 interface PriceDisplayProps {
   price: PriceRange
   selections: ExtendedCalculatorSelection[]
   onGetQuote: () => void
   isValid: boolean
-}
-
-const iconMap: Record<string, string> = {
-  TrendingUp: '📈', Tv: '📺', Share2: '📱', Palette: '🎨',
-  Camera: '📷', Award: '🏆', FileText: '📝', Code: '💻',
 }
 
 export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDisplayProps) {
@@ -53,7 +49,7 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
                   key={s.serviceSlug}
                   className="flex items-center gap-2.5 py-2 px-3 rounded-xl bg-white/[0.04] border border-white/[0.06]"
                 >
-                  <span className="text-base">{iconMap[(svc as any)?.icon ?? ''] ?? '⚡'}</span>
+                  <span className="text-accent-primary"><ServiceIcon name={(svc as any)?.icon ?? ''} className="w-4 h-4" /></span>
                   <div className="flex-1 min-w-0">
                     <p className="text-text-primary text-xs font-medium truncate">
                       {s.serviceSlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
