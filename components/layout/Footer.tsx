@@ -3,6 +3,13 @@ import { useTranslations, useLocale } from 'next-intl'
 import { Instagram, Facebook, Linkedin, Youtube, MessageCircle, MapPin, Phone, Mail } from 'lucide-react'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
+// Searches for the business by name, which lands on the Google listing the
+// site already cites for its 5.0 rating. Swap in a place URL or coordinates
+// once there is a street address to point at.
+const MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=' +
+  encodeURIComponent('Cradex Agency, Bakı')
+
 export function Footer() {
   const t = useTranslations('footer')
   const tNav = useTranslations('common.nav')
@@ -104,7 +111,22 @@ export function Footer() {
               {t('contact')}
             </h3>
             <ul className="space-y-3 text-sm text-text-muted">
-              <li className="flex items-center gap-2"><MapPin className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />Bakı, Azərbaycan</li>
+              <li>
+                {/* Google Maps rather than a Bolt or Yango deep link: those
+                    only resolve on a phone with the app installed and fall
+                    through to nothing on desktop. Maps opens the listing in
+                    the app on mobile and in the browser everywhere else, and
+                    a ride can be ordered from there. */}
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-text-primary transition-colors"
+                >
+                  <MapPin className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                  {t('location')}
+                </a>
+              </li>
               <li>
                 <a href="tel:+994507786887" className="flex items-center gap-2 hover:text-text-primary transition-colors">
                   <Phone className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />+994 50 778 68 87
