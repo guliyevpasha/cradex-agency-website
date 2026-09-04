@@ -10,6 +10,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
+import { getAllTestimonials } from '@/lib/data/testimonials'
 
 // Enable ISR with 60 second revalidation
 export const revalidate = 60
@@ -30,6 +31,11 @@ export async function generateMetadata({
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
+
+  // Fetched here rather than inside the carousel: that component is client-side
+  // for Swiper, so it cannot query Sanity itself.
+  const testimonials = await getAllTestimonials()
+
   return (
     <>
       <HeroSection />
@@ -38,7 +44,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <AdvantagesSlider />
       <ServicesOverview />
       <PortfolioPreview />
-      <TestimonialsCarousel />
+      <TestimonialsCarousel testimonials={testimonials} />
       <FAQ />
       <ProcessSection />
       <LeadSection />
