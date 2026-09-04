@@ -1,3 +1,6 @@
+// Next.js 16 renamed the `middleware` file convention to `proxy`. The handler is
+// still next-intl's, which ships under next-intl/middleware; only the file name
+// and Next's expected export changed, and a default export satisfies it.
 import createMiddleware from 'next-intl/middleware'
 import { locales, defaultLocale } from './i18n'
 
