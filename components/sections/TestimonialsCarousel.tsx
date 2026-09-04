@@ -88,7 +88,17 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
           </h2>
         </ScrollReveal>
 
-        {/* Swiper */}
+        {/* Capped and masked so a slide or so shows either side of the active
+            card and the rest is clipped rather than sprawling across the section. */}
+        <div
+          className="mx-auto max-w-3xl"
+          style={{
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        >
         <Swiper
           modules={[EffectCoverflow, Autoplay, Pagination]}
           effect="coverflow"
@@ -113,7 +123,9 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
             el: '.testimonials-pagination',
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="!pb-4 !overflow-visible"
+          // overflow stays hidden: letting it be visible is what allowed all
+          // eighteen slides to spill across the full width of the section.
+          className="testimonials-swiper !pb-4 !px-2"
         >
           {testimonials.map((item, index) => (
             <SwiperSlide
@@ -129,6 +141,7 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
 
         {/* Pagination dots */}
         <div className="testimonials-pagination flex justify-center gap-2 mt-8" />
