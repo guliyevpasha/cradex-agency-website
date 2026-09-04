@@ -15,8 +15,13 @@ const securityHeaders = [
       "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https: https://cdn.sanity.io",
-      "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://api.resend.com https://*.sanity.io https://*.sanity.studio",
+      // data: is needed for fonts inlined as base64 — Sanity Studio and the dev
+      // overlay both do this, and the policy was blocking them. Inline font data
+      // cannot execute, so this is not the risk that data: poses in script-src.
+      "font-src 'self' data: https://fonts.gstatic.com",
+      // api.resend.com dropped: nothing calls Resend. app/api/contact/ has no
+      // route file and RESEND_API_KEY is read nowhere in the codebase.
+      "connect-src 'self' https://*.sanity.io https://*.sanity.studio",
       "frame-src 'self' https://cradex-agency.sanity.studio",
     ].join('; ')
   },
