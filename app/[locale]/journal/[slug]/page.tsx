@@ -8,7 +8,9 @@ import { Clock, Calendar, ChevronRight } from 'lucide-react'
 import { getArticleBySlug, getArticleSlugs } from '@/lib/data/journal'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
+import { ArticleBody } from '@/components/journal/ArticleBody'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { formatArticleDate } from '@/lib/utils/formatDate'
 import type { Article } from '@/types'
 
 const locales = ['az', 'en', 'ru', 'tr']
@@ -58,10 +60,7 @@ function ArticleContent({ article }: { article: Article }) {
   const t = useTranslations('journal')
   const locale = useLocale()
 
-  const formattedDate = new Date(article.publishedAt).toLocaleDateString(
-    locale === 'az' ? 'az-AZ' : locale === 'ru' ? 'ru-RU' : locale === 'tr' ? 'tr-TR' : 'en-US',
-    { year: 'numeric', month: 'long', day: 'numeric' }
-  )
+  const formattedDate = formatArticleDate(article.publishedAt)
 
   // JSON-LD structured data
   const jsonLd = {
@@ -149,27 +148,7 @@ function ArticleContent({ article }: { article: Article }) {
               prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary
               prose-ul:text-text-secondary prose-ol:text-text-secondary
             ">
-              {/* Render plain text content (Sanity rich text would use @portabletext/react) */}
-              {typeof article.contentKey === 'string' ? (
-                article.contentKey.split('\n\n').map((paragraph, i) => {
-                  if (paragraph.startsWith('## ')) {
-                    return <h2 key={i}>{paragraph.replace('## ', '')}</h2>
-                  }
-                  if (paragraph.startsWith('### ')) {
-                    return <h3 key={i}>{paragraph.replace('### ', '')}</h3>
-                  }
-                  if (paragraph.startsWith('- ')) {
-                    return (
-                      <ul key={i}>
-                        {paragraph.split('\n').map((item, j) => (
-                          <li key={j}>{item.replace('- ', '')}</li>
-                        ))}
-                      </ul>
-                    )
-                  }
-                  return <p key={i}>{paragraph}</p>
-                })
-              ) : null}
+              <ArticleBody content={article.contentKey} />
             </div>
           </ScrollReveal>
 

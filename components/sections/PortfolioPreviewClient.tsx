@@ -28,18 +28,13 @@ export default function PortfolioPreviewClient({ items }: { items: PortfolioItem
         }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal animation="fadeInUp" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-          <div>
-            <h2 className="text-display-lg font-display font-bold text-text-primary mb-3">
-              {t('title')}
-            </h2>
-            <p className="text-text-secondary">{t('subtitle')}</p>
-          </div>
-          <div className="shrink-0">
-            <Button href={`/${locale}/portfolio`} variant="ghost" icon={<ArrowRight size={16} />}>
-              {tPortfolio('viewProject')}
-            </Button>
-          </div>
+        {/* One link to the portfolio per section, not two: the "view all"
+            button below the grid already goes there. */}
+        <ScrollReveal animation="fadeInUp" className="mb-12">
+          <h2 className="text-display-lg font-display font-bold text-text-primary mb-3">
+            {t('title')}
+          </h2>
+          <p className="text-text-secondary">{t('subtitle')}</p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

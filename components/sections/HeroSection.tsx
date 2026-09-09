@@ -1,325 +1,235 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
-import { ArrowUpRight, Star, CheckCircle } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
+import { ArrowUpRight, Star, BadgeCheck } from 'lucide-react'
 import { fadeInUp, staggerContainer } from '@/lib/animations/variants'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
-import { HeroVisual } from '@/components/sections/HeroVisual'
+import { HeroOrbit } from '@/components/sections/HeroOrbit'
 
-
-// ─── Canvas particle animation ────────────────────────────────────────────────
-function TechBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    let animId: number
-    let W = 0, H = 0
-
-    // Resize handler
-    function resize() {
-      if (!canvas) return
-      W = canvas.width = canvas.offsetWidth
-      H = canvas.height = canvas.offsetHeight
-    }
-    resize()
-    window.addEventListener('resize', resize)
-
-    // ── Nodes (connection points) ──
-    const NODE_COUNT = 60
-    interface Node { x: number; y: number; vx: number; vy: number }
-    const nodes: Node[] = Array.from({ length: NODE_COUNT }, () => ({
-      x: Math.random() * W,
-      y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-    }))
-
-    // ── Droplets (flowing along edges) ──
-    interface Droplet {
-      fromIdx: number
-      toIdx: number
-      t: number       // 0→1 progress along edge
-      speed: number
-      alpha: number
-    }
-    const droplets: Droplet[] = []
-
-    function spawnDroplet() {
-      const fromIdx = Math.floor(Math.random() * NODE_COUNT)
-      const toIdx = Math.floor(Math.random() * NODE_COUNT)
-      if (fromIdx === toIdx) return
-      const dx = nodes[toIdx].x - nodes[fromIdx].x
-      const dy = nodes[toIdx].y - nodes[fromIdx].y
-      if (Math.sqrt(dx * dx + dy * dy) > 220) return
-      droplets.push({ fromIdx, toIdx, t: 0, speed: 0.004 + Math.random() * 0.006, alpha: 0.8 })
-    }
-
-    let frame = 0
-
-    function draw() {
-      if (!ctx || !canvas) return
-      ctx.clearRect(0, 0, W, H)
-
-      // Move nodes
-      for (const n of nodes) {
-        n.x += n.vx
-        n.y += n.vy
-        if (n.x < 0 || n.x > W) n.vx *= -1
-        if (n.y < 0 || n.y > H) n.vy *= -1
-      }
-
-      // Draw edges
-      for (let i = 0; i < NODE_COUNT; i++) {
-        for (let j = i + 1; j < NODE_COUNT; j++) {
-          const dx = nodes[j].x - nodes[i].x
-          const dy = nodes[j].y - nodes[i].y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist > 180) continue
-          const alpha = (1 - dist / 180) * 0.18
-          ctx.beginPath()
-          ctx.moveTo(nodes[i].x, nodes[i].y)
-          ctx.lineTo(nodes[j].x, nodes[j].y)
-          ctx.strokeStyle = `rgba(108,99,255,${alpha})`
-          ctx.lineWidth = 0.8
-          ctx.stroke()
-        }
-      }
-
-      // Draw nodes
-      for (const n of nodes) {
-        ctx.beginPath()
-        ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(108,99,255,0.35)'
-        ctx.fill()
-      }
-
-      // Spawn droplets periodically
-      if (frame % 8 === 0) spawnDroplet()
-      frame++
-
-      // Move & draw droplets
-      for (let i = droplets.length - 1; i >= 0; i--) {
-        const d = droplets[i]
-        d.t += d.speed
-        if (d.t >= 1) { droplets.splice(i, 1); continue }
-
-        const from = nodes[d.fromIdx]
-        const to = nodes[d.toIdx]
-        const dx = to.x - from.x
-        const dy = to.y - from.y
-        const dist = Math.sqrt(dx * dx + dy * dy)
-        if (dist > 220) { droplets.splice(i, 1); continue }
-
-        const x = from.x + dx * d.t
-        const y = from.y + dy * d.t
-
-        // Glow droplet
-        const grad = ctx.createRadialGradient(x, y, 0, x, y, 5)
-        grad.addColorStop(0, `rgba(0,212,255,${d.alpha})`)
-        grad.addColorStop(0.4, `rgba(108,99,255,${d.alpha * 0.6})`)
-        grad.addColorStop(1, 'rgba(0,0,0,0)')
-        ctx.beginPath()
-        ctx.arc(x, y, 5, 0, Math.PI * 2)
-        ctx.fillStyle = grad
-        ctx.fill()
-
-        // Tail
-        const tailX = from.x + dx * Math.max(0, d.t - 0.08)
-        const tailY = from.y + dy * Math.max(0, d.t - 0.08)
-        const tailGrad = ctx.createLinearGradient(tailX, tailY, x, y)
-        tailGrad.addColorStop(0, 'rgba(0,212,255,0)')
-        tailGrad.addColorStop(1, `rgba(0,212,255,${d.alpha * 0.5})`)
-        ctx.beginPath()
-        ctx.moveTo(tailX, tailY)
-        ctx.lineTo(x, y)
-        ctx.strokeStyle = tailGrad
-        ctx.lineWidth = 1.5
-        ctx.stroke()
-      }
-
-      animId = requestAnimationFrame(draw)
-    }
-
-    draw()
-    return () => {
-      cancelAnimationFrame(animId)
-      window.removeEventListener('resize', resize)
-    }
-  }, [])
-
+/**
+ * Hero background.
+ *
+ * This used to be a canvas particle network — 60 nodes with an O(n²) distance
+ * check every frame, for a look that is on half the agency sites in the
+ * market. Replaced with layered CSS: two drifting aurora fields, a masked
+ * technical grid and a vignette. Cheaper (nothing on the main thread), and it
+ * reads as depth rather than as decoration.
+ */
+function HeroBackdrop({ still }: { still: boolean }) {
   return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
-      aria-hidden="true"
-    />
+    <div className="absolute inset-0 -z-10 overflow-hidden bg-[#07060F]">
+      {/* Base wash */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0918] via-[#080713] to-[#06050D]" />
+
+      {/* Aurora fields.
+          No `blur()` filter on these: a 120px blur over a ~1000px square has to
+          be recomputed on every frame it moves, which is what made the first
+          version stutter. A multi-stop radial gradient is already soft-edged,
+          costs nothing to redraw, and — with only `transform` animating and
+          `will-change` set — the whole field is handed to the compositor. */}
+      <div
+        className={`absolute -top-1/3 right-[-10%] w-[75vw] h-[75vw] rounded-full ${
+          still ? '' : 'animate-aurora'
+        }`}
+        style={{
+          willChange: 'transform',
+          background:
+            'radial-gradient(circle closest-side, rgba(108,99,255,0.26) 0%, rgba(108,99,255,0.13) 32%, rgba(108,99,255,0.05) 58%, transparent 78%)',
+        }}
+      />
+      <div
+        className={`absolute bottom-[-25%] left-[-15%] w-[65vw] h-[65vw] rounded-full ${
+          still ? '' : 'animate-aurora-slow'
+        }`}
+        style={{
+          willChange: 'transform',
+          background:
+            'radial-gradient(circle closest-side, rgba(0,212,255,0.16) 0%, rgba(0,212,255,0.08) 35%, rgba(0,212,255,0.03) 60%, transparent 80%)',
+        }}
+      />
+
+      {/* Technical grid, faded out towards the edges so it never boxes the copy in */}
+      <div
+        className="absolute inset-0 opacity-[0.5]"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+          maskImage:
+            'radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 78%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 78%)',
+        }}
+      />
+
+      {/* Top spotlight */}
+      <div
+        className="absolute inset-x-0 top-0 h-[45vh]"
+        style={{
+          background:
+            'radial-gradient(ellipse 50% 100% at 50% 0%, rgba(160,155,255,0.10) 0%, transparent 70%)',
+        }}
+      />
+    </div>
   )
 }
 
 // ─── Hero Section ─────────────────────────────────────────────────────────────
 export function HeroSection() {
   const t = useTranslations('home.hero')
+  const locale = useLocale()
   const prefersReduced = useReducedMotion()
-
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('whatsappText'))}`
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+      <HeroBackdrop still={prefersReduced} />
 
-      {/* ── Background ── */}
-      <div className="absolute inset-0 -z-10 bg-bg-primary">
-        {/* Base gradients */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#07071a] via-[#0a0a1f] to-[#050510]" />
-        <div className="absolute inset-0" style={{
-          background: `radial-gradient(ellipse 70% 90% at 80% 50%,
-            rgba(0,212,255,0.12) 0%, rgba(108,99,255,0.10) 45%, transparent 70%)`,
-        }} />
-        <div className="absolute inset-0" style={{
-          background: `radial-gradient(ellipse 40% 50% at 95% 85%,
-            rgba(108,99,255,0.12) 0%, transparent 60%)`,
-        }} />
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-8 items-center">
 
-        {/* Canvas animation */}
-        {!prefersReduced && <TechBackground />}
-      </div>
-
-      {/* ── Content ── */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Text Content */}
+          {/* ── Left: copy ── */}
           <motion.div
             variants={prefersReduced ? undefined : staggerContainer}
             initial="hidden"
             animate="visible"
             className="w-full max-w-2xl"
           >
-            {/* Trust badges */}
-            <motion.div
-              variants={prefersReduced ? undefined : fadeInUp}
-              className="flex flex-wrap items-center gap-2 mb-5 justify-start"
-            >
-              {/* Google rating */}
-              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
-                <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shrink-0">
-                  <span className="text-[10px] font-bold text-blue-600">G</span>
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-1">
-                    <span className="text-white text-xs font-bold leading-none">5.0</span>
-                    <div className="flex">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star key={i} size={9} className="fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none">
-                    {t('googleReviews')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Verified partner */}
-              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg-secondary/80 border border-white/10 backdrop-blur-sm">
-                <CheckCircle size={14} className="text-accent-secondary shrink-0" />
-                <div className="flex flex-col gap-0.5">
-                  <p className="text-white text-xs font-bold leading-none">{t('verifiedPartner')}</p>
-                  <p className="text-text-muted text-[9px] uppercase tracking-wider leading-none mt-0.5">
-                    {t('googleVerified')}
-                  </p>
-                </div>
-              </div>
+            {/* Eyebrow — states the positioning before the headline does */}
+            <motion.div variants={prefersReduced ? undefined : fadeInUp}>
+              <span
+                className="inline-flex items-center gap-2.5 rounded-full border border-white/10
+                  bg-white/[0.03] backdrop-blur-sm px-3.5 py-1.5 mb-7"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-accent-secondary opacity-70 motion-safe:animate-ping" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-secondary" />
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-text-secondary">
+                  {t('eyebrow')}
+                </span>
+              </span>
             </motion.div>
 
-            {/* Main heading */}
+            {/* Headline */}
             <motion.h1
               variants={prefersReduced ? undefined : fadeInUp}
-              className="font-display font-bold text-text-primary leading-[1.1] mb-3
-                text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-left"
+              className="font-display font-bold leading-[1.03] tracking-[-0.035em] mb-5
+                text-[2.25rem] sm:text-5xl lg:text-6xl xl:text-[4.25rem]"
+              style={{
+                background:
+                  'linear-gradient(120deg, #FFFFFF 0%, #FFFFFF 42%, #CFC9FF 72%, #8FD9FF 100%)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
             >
               {t('title')}
             </motion.h1>
 
-            {/* Subtitle — rəqəmsal marketinq CTA */}
+            {/* Subtitle — a hairline rule instead of italics; quieter and cleaner */}
             <motion.p
               variants={prefersReduced ? undefined : fadeInUp}
-              className="text-text-secondary leading-relaxed mb-8 italic
-                text-base sm:text-lg md:text-xl text-left"
+              className="relative pl-4 border-l border-white/10 text-text-secondary
+                leading-relaxed mb-9 text-base sm:text-lg max-w-lg"
             >
               {t('subtitleAccent')}
             </motion.p>
 
-            {/* CTA button */}
-            <motion.div variants={prefersReduced ? undefined : fadeInUp}>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl
-                  bg-gradient-to-r from-accent-primary to-accent-secondary
-                  text-white font-semibold text-sm sm:text-base
-                  hover:opacity-90 transition-all duration-300
-                  shadow-[0_0_24px_rgba(108,99,255,0.5)]"
-              >
-                {t('cta')}
-                <ArrowUpRight size={16} />
-              </a>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Column - Social Proof at Bottom */}
-          <motion.div
-            initial={prefersReduced ? false : { opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="hidden lg:flex flex-col justify-between items-end gap-8 h-full"
-          >
-            <HeroVisual />
-
-            {/* Social proof positioned at bottom right */}
+            {/* CTAs */}
             <motion.div
-              initial={prefersReduced ? false : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-right max-w-xs"
+              variants={prefersReduced ? undefined : fadeInUp}
+              className="flex flex-wrap items-center gap-3 mb-9"
             >
-              <p className="text-text-secondary text-sm leading-relaxed mb-3">
-                {t('socialProof')}<br />
-                <span className="text-text-muted text-xs">
-                  {t('socialProofSub')}
+              {/* Primary CTA points at the work, not at the sales channel: the
+                  navbar already carries the consultation button, and a visitor
+                  landing here wants proof before a conversation. */}
+              <Link
+                href={`/${locale}/portfolio`}
+                className="group relative inline-flex items-center gap-2 overflow-hidden
+                  rounded-full px-6 py-3.5 font-semibold text-sm sm:text-[15px] text-white
+                  bg-gradient-to-r from-accent-primary to-accent-secondary
+                  shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
+                  transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                {/* Sheen sweep on hover */}
+                <span
+                  className="pointer-events-none absolute inset-0 -translate-x-full
+                    bg-gradient-to-r from-transparent via-white/25 to-transparent
+                    transition-transform duration-700 group-hover:translate-x-full"
+                  aria-hidden="true"
+                />
+                <span className="relative">{t('workCta')}</span>
+                <ArrowUpRight
+                  size={16}
+                  className="relative transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </Link>
+
+              <Link
+                href={`/${locale}/services`}
+                className="inline-flex items-center gap-2 rounded-full border border-white/12
+                  bg-white/[0.03] px-6 py-3.5 text-sm sm:text-[15px] font-medium text-text-secondary
+                  backdrop-blur-sm transition-colors duration-300
+                  hover:border-white/25 hover:text-text-primary"
+              >
+                {t('secondaryCta')}
+              </Link>
+            </motion.div>
+
+            {/* Trust strip — one hairline row rather than two boxed cards */}
+            <motion.div
+              variants={prefersReduced ? undefined : fadeInUp}
+              className="inline-flex flex-wrap items-center gap-x-5 gap-y-3 rounded-2xl
+                border border-white/[0.07] bg-white/[0.02] backdrop-blur-sm px-4 py-3"
+            >
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white">
+                  <span className="text-[10px] font-bold text-blue-600">G</span>
                 </span>
-              </p>
-              <div className="flex items-center justify-end">
-                {['#6C63FF', '#00D4FF', '#FF6B6B', '#22C55E'].map((color, i) => (
-                  <div
-                    key={i}
-                    className="w-9 h-9 rounded-full border-2 border-bg-primary flex items-center justify-center text-sm font-bold text-white"
-                    style={{ backgroundColor: color, marginLeft: i > 0 ? '-8px' : '0' }}
-                  >
-                    {['E', 'L', 'R', 'N'][i]}
-                  </div>
-                ))}
+                <span className="text-sm font-bold text-white leading-none">5.0</span>
+                <span className="flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={10} className="fill-yellow-400 text-yellow-400" />
+                  ))}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.14em] text-text-muted">
+                  {t('googleReviews')}
+                </span>
+              </div>
+
+              <span className="hidden sm:block h-4 w-px bg-white/10" aria-hidden="true" />
+
+              <div className="flex items-center gap-2">
+                <BadgeCheck size={15} className="shrink-0 text-accent-secondary" />
+                <span className="text-xs font-semibold text-white leading-none">
+                  {t('verifiedPartner')}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.14em] text-text-muted">
+                  {t('googleVerified')}
+                </span>
               </div>
             </motion.div>
           </motion.div>
-        </div>
 
-        {/* Social proof section removed from here - moved to right column */}
+          {/* ── Right: the 360° system ── */}
+          <motion.div
+            initial={prefersReduced ? false : { opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:flex justify-center"
+          >
+            <HeroOrbit />
+          </motion.div>
+        </div>
       </div>
-      {/* Bottom fade — seamless transition to StatsSection */}
+
+      {/* Bottom fade — seamless transition into the next section */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-32"
         style={{
-          background: `linear-gradient(to bottom,
-            transparent 0%,
-            rgba(7,7,26,0.6) 60%,
-            rgba(8,8,30,1) 100%)`,
+          background:
+            'linear-gradient(to bottom, transparent 0%, rgba(7,6,15,0.65) 60%, #08081E 100%)',
         }}
         aria-hidden="true"
       />

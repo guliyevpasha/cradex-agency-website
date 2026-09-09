@@ -312,7 +312,7 @@ export function AnimatedRobot() {
               position={{ x: 50, y: 200 }}
             />
             <FloatingStat
-              value="98%"
+              value="100%"
               label="Məmnunluq"
               delay={1.5}
               position={{ x: 250, y: 240 }}
