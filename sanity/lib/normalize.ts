@@ -20,6 +20,7 @@ import type {
 
 interface PortableTextSpan {
   text?: string
+  marks?: string[]
 }
 
 interface PortableTextBlock {
@@ -30,9 +31,14 @@ interface PortableTextBlock {
 }
 
 /**
- * Flattens Portable Text into the plain-text format the journal page renders:
- * paragraphs separated by a blank line, `## ` / `### ` headings, and `- ` list
- * items. Cheaper than pulling in a Portable Text renderer for this one page.
+ * Flattens Portable Text into the light markdown that `ArticleBody` renders:
+ * blank-line separated blocks, `## ` / `### ` headings, `- ` bullets, `1. `
+ * numbered items, `> ` quotes and `**bold**` inline. Cheaper than pulling in a
+ * Portable Text renderer for this one page.
+ *
+ * Strong marks and numbered lists are carried through rather than dropped —
+ * losing them turned every emphasised term and every step-by-step list in an
+ * editor's article into flat prose.
  */
 export function portableTextToPlainText(value: unknown): string {
   if (typeof value === 'string') return value
@@ -40,25 +46,34 @@ export function portableTextToPlainText(value: unknown): string {
 
   const paragraphs: string[] = []
   let list: string[] = []
+  let listCounter = 0
 
   const flushList = () => {
     if (list.length) {
       paragraphs.push(list.join('\n'))
       list = []
     }
+    listCounter = 0
   }
 
   for (const block of value as PortableTextBlock[]) {
     if (!block || block._type !== 'block') continue
 
     const text = (block.children ?? [])
-      .map((child) => child?.text ?? '')
+      .map((child) => {
+        const raw = child?.text ?? ''
+        if (!raw.trim()) return raw
+        return child?.marks?.includes('strong') ? `**${raw.trim()}**` : raw
+      })
       .join('')
       .trim()
     if (!text) continue
 
     if (block.listItem) {
-      list.push(`- ${text}`)
+      // A bullet list and a numbered list never share one run, so a single
+      // counter is enough to number the items of the current run.
+      if (block.listItem === 'number') list.push(`${++listCounter}. ${text}`)
+      else list.push(`- ${text}`)
       continue
     }
 
@@ -66,6 +81,7 @@ export function portableTextToPlainText(value: unknown): string {
 
     if (block.style === 'h2') paragraphs.push(`## ${text}`)
     else if (block.style === 'h3' || block.style === 'h4') paragraphs.push(`### ${text}`)
+    else if (block.style === 'blockquote') paragraphs.push(`> ${text}`)
     else paragraphs.push(text)
   }
 

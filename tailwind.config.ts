@@ -44,11 +44,26 @@ const config: Config = {
         // reads as drift rather than spin, and nothing competes with the copy.
         'orbit-slow': 'spin 42s linear infinite',
         'orbit-reverse': 'spin 64s linear infinite reverse',
+        // The discipline pills and their counter-rotation MUST share a
+        // duration — that is what keeps the labels upright while the ring turns.
+        'orbit': 'spin 54s linear infinite',
+        'orbit-counter': 'spin 54s linear infinite reverse',
+        'ring-slow': 'spin 120s linear infinite',
+        'sweep': 'spin 16s linear infinite',
+        'aurora': 'aurora 22s ease-in-out infinite',
+        'aurora-slow': 'aurora 30s ease-in-out infinite reverse',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        // Slow, low-amplitude drift for the hero's background light. Kept to
+        // translate/scale so it never triggers layout or paint.
+        aurora: {
+          '0%, 100%': { transform: 'translate3d(0,0,0) scale(1)' },
+          '33%': { transform: 'translate3d(4%,-3%,0) scale(1.08)' },
+          '66%': { transform: 'translate3d(-3%,4%,0) scale(0.96)' },
         },
         glow: {
           from: { boxShadow: '0 0 10px rgba(108,99,255,0.3)' },

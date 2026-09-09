@@ -14,7 +14,7 @@
       "home": "Ana Sayfa",
       "about": "Hakkımızda",
       "services": "Hizmetler",
-      "journal": "Dergi",
+      "journal": "Blog",
       "calculator": "Hesaplayıcı",
       "portfolio": "Portföy",
       "contact": "İletişim"
@@ -35,17 +35,26 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "360° Performans Pazarlama Ajansı",
       "title": "Cradex Agency ile Markanızı Büyütün",
       "subtitle": "zamanında, şeffaf fiyatlarla.",
       "subtitleAccent": "sonuç odaklı strateji, ölçülebilir büyüme.",
       "cta": "Ücretsiz danışmanlık al",
       "secondaryCta": "Hizmetlerimiz",
-      "socialProof": "Bakü'de 100'den fazla marka bizi seçti.",
-      "socialProofSub": "Çünkü biz sadece söz vermiyoruz — sonuç veriyoruz.",
       "googleReviews": "Google Yorumları",
       "verifiedPartner": "Onaylı İş Ortağı",
       "googleVerified": "Google Onaylı",
-      "whatsappText": "Merhaba! Ücretsiz danışmanlık almak istiyorum."
+      "whatsappText": "Merhaba! Ücretsiz danışmanlık almak istiyorum.",
+      "coreLabel": "Dijital Çözümler",
+      "disciplines": {
+        "seo": "SEO",
+        "smm": "SOSYAL MEDYA",
+        "ads": "REKLAM",
+        "web": "WEB",
+        "brand": "MARKA",
+        "data": "ANALİTİK"
+      },
+      "workCta": "İşlerimiz"
     },
     "stats": {
       "projects": "Tamamlanan Proje",
@@ -77,7 +86,7 @@
           "label": "Ajans Deneyimi"
         },
         {
-          "value": 98,
+          "value": 100,
           "suffix": "%",
           "label": "Müşteri Memnuniyeti"
         },
@@ -413,7 +422,7 @@
     }
   },
   "journal": {
-    "title": "Dergi",
+    "title": "Blog",
     "subtitle": "Dijital pazarlama dünyasından makaleler",
     "readingTime": "{minutes} dk okuma",
     "readMore": "Devamını Oku",

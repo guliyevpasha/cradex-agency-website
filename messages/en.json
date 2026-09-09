@@ -14,7 +14,7 @@
       "home": "Home",
       "about": "About",
       "services": "Services",
-      "journal": "Journal",
+      "journal": "Blog",
       "calculator": "Calculator",
       "portfolio": "Portfolio",
       "contact": "Contact"
@@ -35,17 +35,26 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "360° Performance Marketing Agency",
       "title": "Grow Your Brand with Cradex Agency",
       "subtitle": "on time, with transparent pricing.",
       "subtitleAccent": "results-driven strategy, measurable growth.",
       "cta": "Get free consultation",
       "secondaryCta": "Our Services",
-      "socialProof": "100+ brands in Baku chose us.",
-      "socialProofSub": "Because we don't just promise — we deliver.",
       "googleReviews": "Google Reviews",
       "verifiedPartner": "Verified Partner",
       "googleVerified": "Google Verified",
-      "whatsappText": "Hello! I'd like to get a free consultation."
+      "whatsappText": "Hello! I'd like to get a free consultation.",
+      "coreLabel": "Digital Solutions",
+      "disciplines": {
+        "seo": "SEO",
+        "smm": "SOCIAL",
+        "ads": "ADS",
+        "web": "WEB",
+        "brand": "BRAND",
+        "data": "ANALYTICS"
+      },
+      "workCta": "Our Work"
     },
     "stats": {
       "projects": "Completed Projects",
@@ -77,7 +86,7 @@
           "label": "Agency Experience"
         },
         {
-          "value": 98,
+          "value": 100,
           "suffix": "%",
           "label": "Client Satisfaction"
         },
@@ -413,7 +422,7 @@
     }
   },
   "journal": {
-    "title": "Journal",
+    "title": "Blog",
     "subtitle": "Articles from the world of digital marketing",
     "readingTime": "{minutes} min read",
     "readMore": "Read More",

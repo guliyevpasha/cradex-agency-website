@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { Clock, Calendar } from 'lucide-react'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { Badge } from '@/components/ui/Badge'
+import { formatArticleDate } from '@/lib/utils/formatDate'
 import type { Article } from '@/types'
 
 interface ArticleCardProps {
@@ -14,10 +15,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
   const t = useTranslations('journal')
   const locale = useLocale()
 
-  const formattedDate = new Date(article.publishedAt).toLocaleDateString(
-    locale === 'az' ? 'az-AZ' : locale === 'ru' ? 'ru-RU' : locale === 'tr' ? 'tr-TR' : 'en-US',
-    { year: 'numeric', month: 'long', day: 'numeric' }
-  )
+  const formattedDate = formatArticleDate(article.publishedAt)
 
   return (
     <Link href={`/${locale}/journal/${article.slug}`}>
