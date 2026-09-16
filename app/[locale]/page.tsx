@@ -10,7 +10,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
-import { AboutSection } from '@/components/sections/AboutSection/AboutSection'
+import { AboutSection } from '@/components/sections/AboutSection'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 
