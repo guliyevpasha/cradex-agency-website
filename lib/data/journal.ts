@@ -4,7 +4,17 @@ import { getAllBlogPosts, getBlogPostBySlug, getBlogPostsByCategory, getPaginate
 
 // Helper function to check if we should use Sanity (production) or JSON (fallback)
 function shouldUseSanity(): boolean {
-  return !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NODE_ENV !== 'test')
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  const nodeEnv = process.env.NODE_ENV
+  const shouldUse = !!(projectId && nodeEnv !== 'test')
+  
+  console.log('[Journal] Sanity check:', {
+    projectId: projectId ? `${projectId.substring(0, 4)}...` : 'missing',
+    nodeEnv,
+    shouldUse
+  })
+  
+  return shouldUse
 }
 
 export async function getAllArticles(locale: string = 'az'): Promise<Article[]> {
@@ -59,13 +69,20 @@ export async function getPaginatedArticles(
   category?: ArticleCategory,
   locale: string = 'az'
 ): Promise<{ articles: Article[]; total: number; totalPages: number }> {
-  if (shouldUseSanity()) {
+  const useSanity = shouldUseSanity()
+  console.log('[Journal] getPaginatedArticles called:', { page, perPage, category, locale, useSanity })
+  
+  if (useSanity) {
     try {
-      return await getPaginatedBlogPosts(page, perPage, category, locale)
+      const result = await getPaginatedBlogPosts(page, perPage, category, locale)
+      console.log('[Journal] Sanity returned:', { articles: result.articles.length, total: result.total })
+      return result
     } catch (error) {
-      console.error('Failed to fetch from Sanity, using fallback data:', error)
+      console.error('[Journal] Failed to fetch from Sanity, using fallback data:', error)
     }
   }
+  
+  console.log('[Journal] Using fallback JSON data')
   const all = category ? await getArticlesByCategory(category, locale) : await getAllArticles(locale)
   const sorted = [...all].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
   const total = sorted.length

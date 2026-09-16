@@ -82,10 +82,14 @@ export async function getPaginatedBlogPosts(
     "total": count(*[_type == "blog" ${categoryFilter}])
   }`
   
+  console.log('[Sanity] Executing query:', { page, perPage, category, locale, start, end })
+  
   const result = await client.fetch(query, { start, end })
   
   const total = result?.total ?? 0
-
+  
+  console.log('[Sanity] Query result:', { posts: result.posts?.length || 0, total })
+  
   return {
     articles: toArticles(result?.posts),
     total,
