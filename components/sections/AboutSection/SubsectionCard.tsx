@@ -50,39 +50,43 @@ export function SubsectionCard({ subsection, index }: SubsectionCardProps) {
       animate={inView ? 'visible' : 'hidden'}
       variants={aboutFadeIn}
       className={cn(
-        'p-8 lg:p-12 rounded-3xl',
-        'bg-gradient-to-br from-bg-secondary/50 to-bg-tertiary/30',
-        'border border-border/50 backdrop-blur-sm',
-        'hover:border-accent-primary/40 transition-all duration-300',
-        isEven ? 'lg:mr-auto lg:max-w-5xl' : 'lg:ml-auto lg:max-w-5xl'
+        'group relative p-10 lg:p-14 rounded-3xl',
+        'bg-gradient-to-br from-bg-secondary/30 via-bg-tertiary/10 to-bg-secondary/30',
+        'border border-border/20 backdrop-blur-lg',
+        'hover:border-accent-primary/30 hover:shadow-2xl hover:shadow-accent-primary/5',
+        'transition-all duration-700 ease-out',
+        isEven ? 'lg:mr-auto lg:max-w-6xl' : 'lg:ml-auto lg:max-w-6xl'
       )}
     >
+      {/* Subtle glow effect */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-primary/0 via-accent-secondary/0 to-accent-primary/0 opacity-0 group-hover:opacity-5 transition-opacity duration-700" />
+      
       {/* Icon (if provided) */}
       {IconComponent && (
-        <div className="mb-6">
+        <div className="relative mb-8">
           <div
-            className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20"
+            className="inline-flex p-5 rounded-2xl bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 border border-accent-primary/20 group-hover:border-accent-primary/40 transition-all duration-500"
             aria-hidden="true"
           >
-            <IconComponent className="w-8 h-8 text-accent-primary" />
+            <IconComponent className="w-10 h-10 text-accent-primary" strokeWidth={1.5} />
           </div>
         </div>
       )}
 
       {/* Title */}
-      <h3 className="text-2xl lg:text-3xl font-display font-bold mb-4 text-text-primary">
+      <h3 className="text-3xl lg:text-4xl font-display font-bold mb-6 text-text-primary group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-accent-primary group-hover:via-accent-secondary group-hover:to-accent-primary group-hover:bg-clip-text transition-all duration-500">
         {subsection.title}
       </h3>
 
       {/* Content */}
       <div
-        className="text-text-secondary text-base lg:text-lg leading-relaxed prose prose-invert max-w-none prose-p:mb-4"
+        className="text-text-secondary text-lg lg:text-xl leading-relaxed prose prose-invert prose-lg max-w-none prose-p:mb-5 prose-p:text-text-secondary/90"
         dangerouslySetInnerHTML={{ __html: subsection.content }}
       />
 
       {/* Values Grid (for Dəyərlərimiz subsection) */}
       {subsection.values && subsection.values.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {subsection.values.map((value) => (
             <ValueItem key={value.id} value={value} />
           ))}

@@ -85,30 +85,31 @@ export function AboutSectionClient({
       ref={ref}
       id="about"
       className={cn(
-        'relative py-24 lg:py-32 overflow-hidden',
-        'bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-primary',
+        'relative py-32 lg:py-40 overflow-hidden',
         className
       )}
     >
-      {/* Gradient Overlay */}
+      {/* Animated Background Gradient */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute inset-0 pointer-events-none opacity-20"
         style={{
-          background: `radial-gradient(ellipse 80% 50% at 50% 0%,
-            rgba(108,99,255,0.15) 0%, transparent 70%)`,
+          background: `
+            radial-gradient(ellipse 100% 60% at 50% 0%, rgba(108,99,255,0.2) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 20% 80%, rgba(0,212,255,0.15) 0%, transparent 50%)
+          `,
         }}
         aria-hidden="true"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Title */}
         <motion.div
           initial={prefersReducedMotion ? false : 'hidden'}
           animate={inView ? 'visible' : 'hidden'}
           variants={aboutFadeIn}
-          className="text-center mb-16 lg:mb-20"
+          className="text-center mb-24 lg:mb-32"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-6 bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
             {content.sectionTitle}
           </h2>
         </motion.div>
@@ -121,7 +122,7 @@ export function AboutSectionClient({
           initial={prefersReducedMotion ? false : 'hidden'}
           animate={inView ? 'visible' : 'hidden'}
           variants={aboutStagger}
-          className="space-y-12 lg:space-y-16 mt-16 lg:mt-20"
+          className="space-y-20 lg:space-y-24 mt-24 lg:mt-32"
         >
           {content.subsections.map((subsection, index) => (
             <SubsectionCard
