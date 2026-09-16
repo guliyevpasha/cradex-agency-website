@@ -10,6 +10,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
+import { AboutSection } from '@/components/sections/AboutSection/AboutSection'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 
@@ -42,6 +43,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <HeroSection />
       <StatsSection />
+      <AboutSection />
       <LogoMarquee partners={partners} />
       <AdvantagesSlider />
       <ServicesOverview />

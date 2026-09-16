@@ -222,25 +222,105 @@
     }
   },
   "about": {
-    "title": "Haqqımızda",
-    "subtitle": "Cradex Agency — rəqəmsal marketinq sahəsində etibarlı tərəfdaşınız",
-    "story": {
-      "title": "Bizim Hekayəmiz",
-      "content": "Cradex Agency 2020-ci ildə Azərbaycanda qurulmuş, müştərilərin rəqəmsal dünyada güclü mövqe tutmasına kömək edən tam xidmətli marketinq agentliyidir."
-    },
-    "mission": {
-      "title": "Missiyamız",
-      "content": "Hər ölçüdə biznesə dünya standartlarında rəqəmsal marketinq xidmətləri təqdim etmək."
-    },
-    "values": {
-      "title": "Dəyərlərimiz",
-      "innovation": "İnnovasiya",
-      "quality": "Keyfiyyət",
-      "transparency": "Şəffaflıq",
-      "results": "Nəticə"
-    },
-    "team": {
-      "title": "Komandamız"
+    "sectionTitle": "Haqqımızda",
+    "stats": [
+      {
+        "value": 350,
+        "suffix": "+",
+        "label": "Tamamlanmış Layihə",
+        "ariaLabel": "350 plus tamamlanmış layihə"
+      },
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Müştəri",
+        "ariaLabel": "100 plus müştəri"
+      },
+      {
+        "value": 2020,
+        "suffix": "",
+        "label": "İl Quruldu",
+        "ariaLabel": "2020-ci ildə quruldu"
+      }
+    ],
+    "subsections": [
+      {
+        "id": "haqqimizda",
+        "title": "Haqqımızda",
+        "content": "<p>Biz sadəcə reklam hazırlamırıq. Brendlərin rəqəmsal mühitdə necə görünəcəyini, necə danışacağını və necə böyüyəcəyini formalaşdırırıq.</p><p>360° yanaşmamız strategiya, kreativ, rəqəmsal reklam, sosial media, SEO, veb həllər, brendinq, foto-video istehsalı və marketinq texnologiyalarını vahid sistemdə birləşdirir. Çünki uğurlu marketinq ayrı-ayrı xidmətlərin cəmi deyil — bir-biri ilə düzgün işləyən bütünlüklü strategiyadır.</p><p>Hər layihəyə hazır şablonla deyil, brendin məqsədlərini, auditoriyasını və bazardakı mövqeyini anlayaraq başlayırıq. Strategiyanı qurur, ideyanı yaradır, kommunikasiya dilini formalaşdırır və nəticəni ölçülə bilən göstəricilərlə izləyirik.</p><p>Bizim üçün estetika və effektivlik bir-birindən ayrı deyil. Güclü ideya diqqət çəkir, düzgün strategiya isə həmin diqqəti dəyərə çevirir.</p>",
+        "icon": "Building2"
+      },
+      {
+        "id": "missiyamiz",
+        "title": "Missiyamız",
+        "content": "<p>Brendlərin potensialını doğru strategiya və yaradıcı həllərlə görünən nəticəyə çevirmək.</p><p>Hər brendin öz hekayəsi, auditoriyası və məqsədi var. Missiyamız bu fərqliliyi anlamaq, onu düzgün kommunikasiya dilinə çevirmək və hər toxunuş nöqtəsində ardıcıl brend təcrübəsi yaratmaqdır.</p><p>Biz ideyanı strategiyadan ayırmır, kreativliyi məqsədsiz istifadə etmirik. Yaratdığımız hər işin arxasında konkret məqsəd dayanır.</p>",
+        "icon": "Target"
+      },
+      {
+        "id": "vizyonumuz",
+        "title": "Vizyonumuz",
+        "content": "<p>Müasir marketinqin yeni standartlarını formalaşdıran agentlik olmaq.</p><p>Texnologiyanın, istehlakçı davranışlarının və kommunikasiya kanallarının daim dəyişdiyi bir dünyada biz dəyişimin arxasınca getməyi deyil, onu əvvəlcədən görməyi hədəfləyirik.</p><p>Vizyonumuz yerli və beynəlxalq bazarlarda strateji düşüncə, kreativ yanaşma və texnoloji imkanları bir araya gətirən güclü marketinq tərəfdaşı kimi tanınmaqdır.</p>",
+        "icon": "Eye"
+      },
+      {
+        "id": "deyerlerimiz",
+        "title": "Dəyərlərimiz",
+        "content": "<p>Bizim dəyərlərimiz hər layihədə tətbiq etdiyimiz prinsiplərdir:</p>",
+        "values": [
+          {
+            "id": "result-oriented",
+            "title": "Nəticəyönümlülük",
+            "description": "Gözəl görünən iş bizim üçün başlanğıcdır. Əsas məsələ onun biznesə yaratdığı real dəyərdir.",
+            "icon": "TrendingUp"
+          },
+          {
+            "id": "creativity",
+            "title": "Kreativlik",
+            "description": "Standart həllərdən daha çox, brendi fərqləndirən və yadda qalan ideyalar axtarırıq.",
+            "icon": "Lightbulb"
+          },
+          {
+            "id": "transparency",
+            "title": "Şəffaflıq",
+            "description": "Strategiyadan büdcəyə, prosesdən nəticələrə qədər əməkdaşlığımızı aydın və ölçülə bilən şəkildə qururuq.",
+            "icon": "Eye"
+          },
+          {
+            "id": "innovation",
+            "title": "İnnovasiya",
+            "description": "Yeni platformaları, texnologiyaları və marketinq yanaşmalarını daim araşdırır, uyğun olanları işimizə inteqrasiya edirik.",
+            "icon": "Sparkles"
+          },
+          {
+            "id": "continuous-development",
+            "title": "Davamlı inkişaf",
+            "description": "Marketinq dəyişdikcə biz də öyrənirik. Bilik, təcrübə və yanaşmalarımızı daim yeniləyirik.",
+            "icon": "Zap"
+          },
+          {
+            "id": "partnership",
+            "title": "Tərəfdaşlıq",
+            "description": "Müştərilərimizi sadəcə xidmət alan tərəf kimi deyil, eyni məqsədə doğru irəlilədiyimiz tərəfdaş kimi görürük.",
+            "icon": "Handshake"
+          }
+        ]
+      },
+      {
+        "id": "yanasma",
+        "title": "Yanaşmamız",
+        "content": "<p>Əvvəl anlayırıq. Sonra yaradırıq.</p><p>Hər layihə araşdırma və strategiya ilə başlayır. Brendi, bazarı, auditoriyanı və rəqibləri təhlil edir, əsas istiqaməti müəyyənləşdiririk.</p><p>Daha sonra strategiyanı kreativ ideyaya, ideyanı isə ölçülə bilən marketinq fəaliyyətinə çeviririk.</p><p>Analitika bizə istiqamət verir. Kreativlik diqqət yaradır. Strategiya isə bütün prosesi birləşdirir.</p>",
+        "icon": "Compass"
+      },
+      {
+        "id": "yolumuz",
+        "title": "Bizim Yolumuz - 360°",
+        "content": "<p>Bir xidmətlə deyil, bütöv bir baxışla.</p><p>360° marketinq yanaşmamızın əsasını bir fikir təşkil edir: Brendin bütün kommunikasiya nöqtələri eyni hekayəni danışmalıdır.</p><p>Sosial media, reklam, veb-sayt, axtarış nəticələri, vizual kimlik, kontent və müştəri ilə ünsiyyət — hər biri ayrıca deyil, eyni strategiyanın davamı olmalıdır.</p><p>Biz bu bütövlüyü qurur, idarə edir və inkişaf etdiririk.</p>",
+        "icon": "GitBranch"
+      }
+    ],
+    "cta": {
+      "primary": "Əməkdaşlığa Başlayın",
+      "secondary": "Konsultasiya Alın"
     }
   },
   "services": {

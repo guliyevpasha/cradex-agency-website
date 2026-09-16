@@ -222,25 +222,105 @@
     }
   },
   "about": {
-    "title": "About Us",
-    "subtitle": "Cradex Agency — your trusted partner in digital marketing",
-    "story": {
-      "title": "Our Story",
-      "content": "Cradex Agency was founded in 2020 in Azerbaijan as a full-service marketing agency helping clients establish a strong presence in the digital world."
-    },
-    "mission": {
-      "title": "Our Mission",
-      "content": "To provide world-class digital marketing services to businesses of all sizes."
-    },
-    "values": {
-      "title": "Our Values",
-      "innovation": "Innovation",
-      "quality": "Quality",
-      "transparency": "Transparency",
-      "results": "Results"
-    },
-    "team": {
-      "title": "Our Team"
+    "sectionTitle": "About Us",
+    "stats": [
+      {
+        "value": 350,
+        "suffix": "+",
+        "label": "Completed Projects",
+        "ariaLabel": "350 plus completed projects"
+      },
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Clients",
+        "ariaLabel": "100 plus clients"
+      },
+      {
+        "value": 2020,
+        "suffix": "",
+        "label": "Year Founded",
+        "ariaLabel": "Founded in 2020"
+      }
+    ],
+    "subsections": [
+      {
+        "id": "haqqimizda",
+        "title": "About Us",
+        "content": "<p>We don't just create advertising. We shape how brands appear, speak, and grow in the digital environment.</p><p>Our 360° approach combines strategy, creativity, digital advertising, social media, SEO, web solutions, branding, photo-video production, and marketing technologies in a unified system. Because successful marketing is not the sum of separate services — it's a holistic strategy where everything works together.</p><p>We don't start projects with ready-made templates. We begin by understanding the brand's goals, audience, and market position. We build the strategy, create the idea, shape the communication language, and track results with measurable indicators.</p><p>For us, aesthetics and effectiveness are not separate. A strong idea attracts attention, and the right strategy converts that attention into value.</p>",
+        "icon": "Building2"
+      },
+      {
+        "id": "missiyamiz",
+        "title": "Our Mission",
+        "content": "<p>To transform brands' potential into visible results through the right strategy and creative solutions.</p><p>Every brand has its own story, audience, and goals. Our mission is to understand this uniqueness, translate it into the right communication language, and create a consistent brand experience at every touchpoint.</p><p>We don't separate ideas from strategy or use creativity without purpose. Every piece of work we create is backed by a specific goal.</p>",
+        "icon": "Target"
+      },
+      {
+        "id": "vizyonumuz",
+        "title": "Our Vision",
+        "content": "<p>To be an agency that shapes the new standards of modern marketing.</p><p>In a world where technology, consumer behavior, and communication channels are constantly changing, we aim not to follow change, but to anticipate it.</p><p>Our vision is to be recognized in local and international markets as a powerful marketing partner that combines strategic thinking, creative approach, and technological capabilities.</p>",
+        "icon": "Eye"
+      },
+      {
+        "id": "deyerlerimiz",
+        "title": "Our Values",
+        "content": "<p>Our values are the principles we apply in every project:</p>",
+        "values": [
+          {
+            "id": "result-oriented",
+            "title": "Results-Oriented",
+            "description": "Beautiful work is just the starting point for us. What matters is the real value it creates for the business.",
+            "icon": "TrendingUp"
+          },
+          {
+            "id": "creativity",
+            "title": "Creativity",
+            "description": "We look for ideas that differentiate the brand and are memorable, rather than standard solutions.",
+            "icon": "Lightbulb"
+          },
+          {
+            "id": "transparency",
+            "title": "Transparency",
+            "description": "We build our collaboration clearly and measurably, from strategy to budget, process to results.",
+            "icon": "Eye"
+          },
+          {
+            "id": "innovation",
+            "title": "Innovation",
+            "description": "We constantly explore new platforms, technologies, and marketing approaches, integrating what fits into our work.",
+            "icon": "Sparkles"
+          },
+          {
+            "id": "continuous-development",
+            "title": "Continuous Development",
+            "description": "As marketing evolves, so do we. We constantly update our knowledge, experience, and approaches.",
+            "icon": "Zap"
+          },
+          {
+            "id": "partnership",
+            "title": "Partnership",
+            "description": "We see our clients not just as service recipients, but as partners moving toward the same goal.",
+            "icon": "Handshake"
+          }
+        ]
+      },
+      {
+        "id": "yanasma",
+        "title": "Our Approach",
+        "content": "<p>First we understand. Then we create.</p><p>Every project begins with research and strategy. We analyze the brand, market, audience, and competitors to determine the main direction.</p><p>Then we turn strategy into creative ideas, and ideas into measurable marketing activities.</p><p>Analytics gives us direction. Creativity creates attention. Strategy brings the whole process together.</p>",
+        "icon": "Compass"
+      },
+      {
+        "id": "yolumuz",
+        "title": "Our Path - 360°",
+        "content": "<p>Not just one service, but a complete view.</p><p>Our 360° marketing approach is based on one idea: All brand communication points should tell the same story.</p><p>Social media, advertising, website, search results, visual identity, content, and customer communication — none of them are separate, but a continuation of the same strategy.</p><p>We build, manage, and develop this unity.</p>",
+        "icon": "GitBranch"
+      }
+    ],
+    "cta": {
+      "primary": "Start Collaboration",
+      "secondary": "Get Consultation"
     }
   },
   "services": {
