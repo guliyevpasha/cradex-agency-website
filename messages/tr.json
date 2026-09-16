@@ -222,25 +222,105 @@
     }
   },
   "about": {
-    "title": "Hakkımızda",
-    "subtitle": "Cradex Agency — dijital pazarlamada güvenilir ortağınız",
-    "story": {
-      "title": "Hikayemiz",
-      "content": "Cradex Agency, 2020 yılında Azerbaycan'da kurulmuş, müşterilerin dijital dünyada güçlü bir konum edinmesine yardımcı olan tam hizmet pazarlama ajansıdır."
-    },
-    "mission": {
-      "title": "Misyonumuz",
-      "content": "Her ölçekteki işletmeye dünya standartlarında dijital pazarlama hizmetleri sunmak."
-    },
-    "values": {
-      "title": "Değerlerimiz",
-      "innovation": "İnovasyon",
-      "quality": "Kalite",
-      "transparency": "Şeffaflık",
-      "results": "Sonuç"
-    },
-    "team": {
-      "title": "Ekibimiz"
+    "sectionTitle": "Hakkımızda",
+    "stats": [
+      {
+        "value": 350,
+        "suffix": "+",
+        "label": "Tamamlanan Proje",
+        "ariaLabel": "350 artı tamamlanan proje"
+      },
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Müşteri",
+        "ariaLabel": "100 artı müşteri"
+      },
+      {
+        "value": 2020,
+        "suffix": "",
+        "label": "Kuruluş Yılı",
+        "ariaLabel": "2020 yılında kuruldu"
+      }
+    ],
+    "subsections": [
+      {
+        "id": "haqqimizda",
+        "title": "Hakkımızda",
+        "content": "<p>Biz sadece reklam yapmıyoruz. Markaların dijital ortamda nasıl görüneceğini, nasıl konuşacağını ve nasıl büyüyeceğini şekillendiriyoruz.</p><p>360° yaklaşımımız strateji, yaratıcılık, dijital reklam, sosyal medya, SEO, web çözümleri, markalaşma, foto-video üretimi ve pazarlama teknolojilerini tek bir sistemde birleştiriyor. Çünkü başarılı pazarlama ayrı hizmetlerin toplamı değil — her şeyin birlikte çalıştığı bütünsel bir stratejidir.</p><p>Projelere hazır şablonlarla başlamıyoruz. Markanın hedeflerini, kitlesini ve pazar konumunu anlayarak başlıyoruz. Stratejiyi kuruyoruz, fikri yaratıyoruz, iletişim dilini şekillendiriyoruz ve sonuçları ölçülebilir göstergelerle takip ediyoruz.</p><p>Bizim için estetik ve etkinlik ayrı değil. Güçlü bir fikir dikkat çeker, doğru strateji ise o dikkati değere dönüştürür.</p>",
+        "icon": "Building2"
+      },
+      {
+        "id": "missiyamiz",
+        "title": "Misyonumuz",
+        "content": "<p>Markaların potansiyelini doğru strateji ve yaratıcı çözümlerle görünür sonuçlara dönüştürmek.</p><p>Her markanın kendi hikayesi, kitlesi ve hedefleri var. Misyonumuz bu benzersizliği anlamak, doğru iletişim diline çevirmek ve her temas noktasında tutarlı bir marka deneyimi yaratmaktır.</p><p>Fikirleri stratejiden ayırmıyor, yaratıcılığı amaçsız kullanmıyoruz. Yarattığımız her işin arkasında somut bir hedef duruyor.</p>",
+        "icon": "Target"
+      },
+      {
+        "id": "vizyonumuz",
+        "title": "Vizyonumuz",
+        "content": "<p>Modern pazarlamanın yeni standartlarını şekillendiren ajans olmak.</p><p>Teknolojinin, tüketici davranışlarının ve iletişim kanallarının sürekli değiştiği bir dünyada, değişimin peşinden gitmeyi değil, onu önceden görmeyi hedefliyoruz.</p><p>Vizyonumuz, yerel ve uluslararası pazarlarda stratejik düşünce, yaratıcı yaklaşım ve teknolojik yetenekleri bir araya getiren güçlü bir pazarlama ortağı olarak tanınmak.</p>",
+        "icon": "Eye"
+      },
+      {
+        "id": "deyerlerimiz",
+        "title": "Değerlerimiz",
+        "content": "<p>Değerlerimiz her projede uyguladığımız ilkelerdir:</p>",
+        "values": [
+          {
+            "id": "result-oriented",
+            "title": "Sonuç Odaklılık",
+            "description": "Güzel görünen iş bizim için sadece başlangıç. Önemli olan işletmeye yarattığı gerçek değerdir.",
+            "icon": "TrendingUp"
+          },
+          {
+            "id": "creativity",
+            "title": "Yaratıcılık",
+            "description": "Standart çözümlerden ziyade, markayı farklılaştıran ve akılda kalan fikirler arıyoruz.",
+            "icon": "Lightbulb"
+          },
+          {
+            "id": "transparency",
+            "title": "Şeffaflık",
+            "description": "İşbirliğimizi stratejiden bütçeye, süreçten sonuçlara kadar net ve ölçülebilir şekilde kuruyoruz.",
+            "icon": "Eye"
+          },
+          {
+            "id": "innovation",
+            "title": "İnovasyon",
+            "description": "Yeni platformları, teknolojileri ve pazarlama yaklaşımlarını sürekli araştırıyor, uygun olanları işimize entegre ediyoruz.",
+            "icon": "Sparkles"
+          },
+          {
+            "id": "continuous-development",
+            "title": "Sürekli Gelişim",
+            "description": "Pazarlama geliştikçe biz de gelişiyoruz. Bilgimizi, deneyimimizi ve yaklaşımlarımızı sürekli güncelliyoruz.",
+            "icon": "Zap"
+          },
+          {
+            "id": "partnership",
+            "title": "Ortaklık",
+            "description": "Müşterilerimizi sadece hizmet alanlar olarak değil, aynı hedefe doğru ilerleyen ortaklar olarak görüyoruz.",
+            "icon": "Handshake"
+          }
+        ]
+      },
+      {
+        "id": "yanasma",
+        "title": "Yaklaşımımız",
+        "content": "<p>Önce anlıyoruz. Sonra yaratıyoruz.</p><p>Her proje araştırma ve stratejiyle başlar. Markayı, pazarı, kitleyi ve rakipleri analiz edip ana yönü belirliyoruz.</p><p>Sonra stratejiyi yaratıcı fikirlere, fikirleri ise ölçülebilir pazarlama faaliyetlerine dönüştürüyoruz.</p><p>Analitik bize yön verir. Yaratıcılık dikkat yaratır. Strateji ise tüm süreci bir araya getirir.</p>",
+        "icon": "Compass"
+      },
+      {
+        "id": "yolumuz",
+        "title": "Yolumuz - 360°",
+        "content": "<p>Sadece bir hizmet değil, bütünsel bir bakış.</p><p>360° pazarlama yaklaşımımızın temeli bir fikirdir: Markanın tüm iletişim noktaları aynı hikayeyi anlatmalı.</p><p>Sosyal medya, reklam, web sitesi, arama sonuçları, görsel kimlik, içerik ve müşteriyle iletişim — bunların hiçbiri ayrı değil, aynı stratejinin devamı olmalı.</p><p>Bu bütünlüğü kuruyor, yönetiyor ve geliştiriyoruz.</p>",
+        "icon": "GitBranch"
+      }
+    ],
+    "cta": {
+      "primary": "İşbirliğine Başlayın",
+      "secondary": "Danışmanlık Alın"
     }
   },
   "services": {
