@@ -53,6 +53,7 @@ export function StatsCounter({ stats, inView }: StatsCounterProps) {
                   end={stat.value}
                   duration={prefersReducedMotion ? 0 : 2}
                   useEasing
+                  separator=""
                   easingFn={(t) => {
                     // easeOutCubic
                     return ((t = t - 1) * t * t + 1)
