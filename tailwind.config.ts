@@ -40,6 +40,7 @@ const config: Config = {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2s ease-in-out infinite',
         // Hero orbit rings. Deliberately slow: at these speeds the movement
         // reads as drift rather than spin, and nothing competes with the copy.
         'orbit-slow': 'spin 42s linear infinite',
@@ -57,6 +58,10 @@ const config: Config = {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         // Slow, low-amplitude drift for the hero's background light. Kept to
         // translate/scale so it never triggers layout or paint.
