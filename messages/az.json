@@ -222,105 +222,197 @@
     }
   },
   "about": {
-    "sectionTitle": "Haqqımızda",
-    "stats": [
-      {
-        "value": 350,
-        "suffix": "+",
-        "label": "Tamamlanmış Layihə",
-        "ariaLabel": "350 plus tamamlanmış layihə"
-      },
-      {
-        "value": 100,
-        "suffix": "+",
-        "label": "Müştəri",
-        "ariaLabel": "100 plus müştəri"
-      },
-      {
-        "value": 2020,
-        "suffix": "",
-        "label": "İl Quruldu",
-        "ariaLabel": "2020-ci ildə quruldu"
-      }
-    ],
-    "subsections": [
-      {
-        "id": "haqqimizda",
-        "title": "Haqqımızda",
-        "content": "<p>Biz sadəcə reklam hazırlamırıq. Brendlərin rəqəmsal mühitdə necə görünəcəyini, necə danışacağını və necə böyüyəcəyini formalaşdırırıq.</p><p>360° yanaşmamız strategiya, kreativ, rəqəmsal reklam, sosial media, SEO, veb həllər, brendinq, foto-video istehsalı və marketinq texnologiyalarını vahid sistemdə birləşdirir. Çünki uğurlu marketinq ayrı-ayrı xidmətlərin cəmi deyil — bir-biri ilə düzgün işləyən bütünlüklü strategiyadır.</p><p>Hər layihəyə hazır şablonla deyil, brendin məqsədlərini, auditoriyasını və bazardakı mövqeyini anlayaraq başlayırıq. Strategiyanı qurur, ideyanı yaradır, kommunikasiya dilini formalaşdırır və nəticəni ölçülə bilən göstəricilərlə izləyirik.</p><p>Bizim üçün estetika və effektivlik bir-birindən ayrı deyil. Güclü ideya diqqət çəkir, düzgün strategiya isə həmin diqqəti dəyərə çevirir.</p>",
-        "icon": "Building2"
-      },
-      {
-        "id": "missiyamiz",
-        "title": "Missiyamız",
-        "content": "<p>Brendlərin potensialını doğru strategiya və yaradıcı həllərlə görünən nəticəyə çevirmək.</p><p>Hər brendin öz hekayəsi, auditoriyası və məqsədi var. Missiyamız bu fərqliliyi anlamaq, onu düzgün kommunikasiya dilinə çevirmək və hər toxunuş nöqtəsində ardıcıl brend təcrübəsi yaratmaqdır.</p><p>Biz ideyanı strategiyadan ayırmır, kreativliyi məqsədsiz istifadə etmirik. Yaratdığımız hər işin arxasında konkret məqsəd dayanır.</p>",
-        "icon": "Target"
-      },
-      {
-        "id": "vizyonumuz",
-        "title": "Vizyonumuz",
-        "content": "<p>Müasir marketinqin yeni standartlarını formalaşdıran agentlik olmaq.</p><p>Texnologiyanın, istehlakçı davranışlarının və kommunikasiya kanallarının daim dəyişdiyi bir dünyada biz dəyişimin arxasınca getməyi deyil, onu əvvəlcədən görməyi hədəfləyirik.</p><p>Vizyonumuz yerli və beynəlxalq bazarlarda strateji düşüncə, kreativ yanaşma və texnoloji imkanları bir araya gətirən güclü marketinq tərəfdaşı kimi tanınmaqdır.</p>",
-        "icon": "Eye"
-      },
-      {
-        "id": "deyerlerimiz",
-        "title": "Dəyərlərimiz",
-        "content": "<p>Bizim dəyərlərimiz hər layihədə tətbiq etdiyimiz prinsiplərdir:</p>",
-        "values": [
-          {
-            "id": "result-oriented",
-            "title": "Nəticəyönümlülük",
-            "description": "Gözəl görünən iş bizim üçün başlanğıcdır. Əsas məsələ onun biznesə yaratdığı real dəyərdir.",
-            "icon": "TrendingUp"
-          },
-          {
-            "id": "creativity",
-            "title": "Kreativlik",
-            "description": "Standart həllərdən daha çox, brendi fərqləndirən və yadda qalan ideyalar axtarırıq.",
-            "icon": "Lightbulb"
-          },
-          {
-            "id": "transparency",
-            "title": "Şəffaflıq",
-            "description": "Strategiyadan büdcəyə, prosesdən nəticələrə qədər əməkdaşlığımızı aydın və ölçülə bilən şəkildə qururuq.",
-            "icon": "Eye"
-          },
-          {
-            "id": "innovation",
-            "title": "İnnovasiya",
-            "description": "Yeni platformaları, texnologiyaları və marketinq yanaşmalarını daim araşdırır, uyğun olanları işimizə inteqrasiya edirik.",
-            "icon": "Sparkles"
-          },
-          {
-            "id": "continuous-development",
-            "title": "Davamlı inkişaf",
-            "description": "Marketinq dəyişdikcə biz də öyrənirik. Bilik, təcrübə və yanaşmalarımızı daim yeniləyirik.",
-            "icon": "Zap"
-          },
-          {
-            "id": "partnership",
-            "title": "Tərəfdaşlıq",
-            "description": "Müştərilərimizi sadəcə xidmət alan tərəf kimi deyil, eyni məqsədə doğru irəlilədiyimiz tərəfdaş kimi görürük.",
-            "icon": "Handshake"
-          }
-        ]
-      },
-      {
-        "id": "yanasma",
-        "title": "Yanaşmamız",
-        "content": "<p>Əvvəl anlayırıq. Sonra yaradırıq.</p><p>Hər layihə araşdırma və strategiya ilə başlayır. Brendi, bazarı, auditoriyanı və rəqibləri təhlil edir, əsas istiqaməti müəyyənləşdiririk.</p><p>Daha sonra strategiyanı kreativ ideyaya, ideyanı isə ölçülə bilən marketinq fəaliyyətinə çeviririk.</p><p>Analitika bizə istiqamət verir. Kreativlik diqqət yaradır. Strategiya isə bütün prosesi birləşdirir.</p>",
-        "icon": "Compass"
-      },
-      {
-        "id": "yolumuz",
-        "title": "Bizim Yolumuz - 360°",
-        "content": "<p>Bir xidmətlə deyil, bütöv bir baxışla.</p><p>360° marketinq yanaşmamızın əsasını bir fikir təşkil edir: Brendin bütün kommunikasiya nöqtələri eyni hekayəni danışmalıdır.</p><p>Sosial media, reklam, veb-sayt, axtarış nəticələri, vizual kimlik, kontent və müştəri ilə ünsiyyət — hər biri ayrıca deyil, eyni strategiyanın davamı olmalıdır.</p><p>Biz bu bütövlüyü qurur, idarə edir və inkişaf etdiririk.</p>",
-        "icon": "GitBranch"
-      }
-    ],
+    "hero": {
+      "eyebrow": "2020-dən bəri",
+      "title": "Rəqəmsal Marketinq Dünyasında",
+      "titleAccent": "Etibarlı",
+      "titleEnd": "Partneriniz.",
+      "description": "Cradex Agency olaraq, 2020-ci ildən bu yana müəssisələrin rəqəmsal dünyada böyüməsinə dəstək olduq. Google Partner sertifikatlı agentliyimiz ilə minlərlə layihəyə imza atdıq.",
+      "badges": [
+        {
+          "icon": "CheckCircle2",
+          "text": "Google Partner Sertifikatlı"
+        },
+        {
+          "icon": "Users",
+          "text": "26+ İllik Təcrübə"
+        },
+        {
+          "icon": "TrendingUp",
+          "text": "1000+ Uğurlu Layihə"
+        },
+        {
+          "icon": "Award",
+          "text": "7/24 Dəstək"
+        }
+      ],
+      "stats": [
+        {
+          "value": 26,
+          "suffix": "+",
+          "label": "İllik Təcrübə"
+        },
+        {
+          "value": 1000,
+          "suffix": "+",
+          "label": "Tamamlanmış Layihə"
+        },
+        {
+          "value": 26,
+          "suffix": "+",
+          "label": "Komanda Üzvü"
+        },
+        {
+          "value": 5,
+          "suffix": "+",
+          "label": "Xidmət Sahəsi"
+        }
+      ]
+    },
+    "intro": {
+      "number": "01",
+      "subtitle": "BİZ KİMİK",
+      "title": "Təcrübə və verilərə əsaslanan bir agentlik.",
+      "cards": [
+        {
+          "id": "mission",
+          "number": "01",
+          "title": "Missiyamız",
+          "subtitle": "RƏQƏMSAL DÜNYADA FƏRQ YARATMAQ",
+          "description": "Cradex Agency olaraq missiyamız, müəssisələrin rəqəmsal marketinq hədəflərinə çatmalarını təmin etmək və onların varlıqlarının gücləndirilməsini. Müştərilərimizlə müxtəliflərimizə ən son texnologiyalar və strategiyaları tətbiq edərək, ölçülə bilən nəticələr təmin edirik.\n\nVeri yönümlü yanaşmamız və təcrübəli komandamız ilə hər layihədə mükəmməlliyi hədəfləyirik."
+        },
+        {
+          "id": "vision",
+          "number": "02",
+          "title": "Vizyonumuz",
+          "subtitle": "TÜRKİYƏNİN LİDER RƏQƏMSAL MARKETİNQ AGENTLİYİ",
+          "description": "Vizyonumuz, Türkiyənin ən etibarlı və yenilikçi rəqəmsal marketinq agentliyi olmaqdır. Davalı inkişaf edən rəqəmsal dünyada, müştərilərimizə ən son texnologiyaları və strategiyaları təqdim edərək sektorda öncü olmağı hədəfləyirik.\n\nYapay zeka dəstəklərimiz həllərimi və yaradıcı yanaşmamız ilə standartları müəyyən etməyi məqsəd edirik."
+        },
+        {
+          "id": "journey",
+          "number": "03",
+          "title": "Rəqəmsal Marketing Səyahətimiz",
+          "subtitle": "2000-DƏN BUGÜNƏK DAVALMI İNKİŞAF",
+          "description": "Cradex Medya, rəqəmsal marketinq dünyasına 2000-ci ildən web sayt inkişafı xidməti ilə daxil oldu. İllər içərisində, 2010-cu ildə Google Ads-ın potensialını anlayaraq, bu platformda uzmanlaşdıq. Ardınca, Meta, LinkedIn və TikTok reklam xidmətləri ilə rəqəmsal marketinq xidmətlərimizi genişləndirdik."
+        },
+        {
+          "id": "flexibility",
+          "number": "04",
+          "title": "Yenilikçilik və Elastiklik",
+          "subtitle": "SEKTOR İNKİŞAFINI YAXINDAN İZLƏYİRİK",
+          "description": "Rəqəmsal marketinq sektoru sürətlə inkişaf edən bir sahədir. Sektor inkişafını milli və beynəlxalq səviyyədə izləmək, elastikliyimizin və yenilikçiliyin artayışınızın ən vacib həssəsidir. Müəssisi olaraq müştərilərimizin üstünlüyünü əldə etmələrinə kömək edirik."
+        }
+      ]
+    },
+    "values": {
+      "number": "02",
+      "subtitle": "ƏSASLARIMIZ",
+      "title": "Bizi 26 ildən bəri",
+      "titleAccent": "güclü",
+      "titleEnd": "edən dəyərlər.",
+      "description": "Cradex Medya-nı 26 ildən bəri güclü edən əsas 6 dəyərlərimiz.",
+      "items": [
+        {
+          "id": "transparency",
+          "icon": "Shield",
+          "title": "Şəffaflıq",
+          "description": "Müştərilərimizlə hər işdə və dizayn mərhələsində en yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+        },
+        {
+          "id": "quality",
+          "icon": "Award",
+          "title": "Keyfiyyət",
+          "description": "Hər layihədə və dizayn mərhələsində ən yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+        },
+        {
+          "id": "innovation",
+          "icon": "Lightbulb",
+          "title": "Yenilik",
+          "description": "Yapay zeka və avtnom texnologiyalar ilə daimi yenilik və inteqrasiya edirik."
+        },
+        {
+          "id": "partnership",
+          "icon": "Handshake",
+          "title": "Müştəri Mərkəzlilik",
+          "description": "Müştərilərimizin uğuru və gəlir ərtım bizim ən böyük motivasiyadır."
+        },
+        {
+          "id": "teamwork",
+          "icon": "Users",
+          "title": "Komanda İşləmə",
+          "description": "Təcrübəli və sertifikalı komandamızla kollektiv şəklə güçlü komanda ruhuna əməl kollektiv əliylə mükəmməl edik."
+        },
+        {
+          "id": "ethics",
+          "icon": "Heart",
+          "title": "Etika",
+          "description": "Bütün marketinq fəaliyyətlərimizlə qanunlara, məlumatlarə və etik dəyərlərə qanunlara əməl edirik."
+        }
+      ]
+    },
+    "timeline": {
+      "number": "03",
+      "subtitle": "RƏQƏMSAL TARİXÇƏMİZ",
+      "title": "2000-dən bu yana",
+      "titleAccent": "internet arxivi ilə",
+      "titleEnd": "sənədləşdirilmiş bir səyahət.",
+      "events": [
+        {
+          "year": "2000",
+          "title": "Təsis",
+          "description": "212 Medya, İstanbul'da rəqəmsal kommunikasiya və web xidmətləri təqdim etmək məqsədi ilə fəaliyyətə başladı."
+        },
+        {
+          "year": "2008",
+          "title": "Rəqəmsal Marketing Agentliyinə Dönüşüm",
+          "description": "Web inkişaf xidməti rəqəmsal marketingə birləşdirərək Google Ads və sosial media reklam icarəçiligən portfelimizə əlavə etdik."
+        },
+        {
+          "year": "2010",
+          "title": "Web Arxivində İlk Qeyd",
+          "description": "212medya.com, Wayback Machine tərəfindən Avqust 2010-da ilk dəfə arxivləndi. Sektordəki köklü tarixımizin konkret subutudur."
+        },
+        {
+          "year": "2014",
+          "title": "Sürətli İnkişaf Dönəmi",
+          "description": "Artan müştəri portfeli və genişləyən xidmət çəsidi ilə komandamızı gücləndir. Google və Meta reklam idarəçiliyində mütəxəssis olm dərəcəsini əldə etdik."
+        },
+        {
+          "year": "2017",
+          "title": "Google Partner Sertifikatı",
+          "description": "Google Partner sertifikası alaraq rəsmi Google iş ortağı olduq. Bu status indiki zamanda da keçərlidir."
+        },
+        {
+          "year": "2021",
+          "title": "Yapay Cihaz İnteqrasiyası",
+          "description": "AI dəstəklənim ən müzd istehsalı, verilən analizı və marketinq avtomatlaşdırılması həllərimizi xidmət portfelimizə əlavə etdik."
+        }
+      ],
+      "archiveLink": "İnternet Arxivi Qeydi →"
+    },
     "cta": {
-      "primary": "Əməkdaşlığa Başlayın",
-      "secondary": "Konsultasiya Alın"
+      "title": "Hekayəmizin bir",
+      "titleAccent": "parçası",
+      "titleEnd": "olun.",
+      "description": "Bizə hədəflərinizi bildirin, növbəti böyümə hekayəsini birlikdə yazaraq.",
+      "primaryButton": "Bizimlə Əlaqə",
+      "stats": [
+        {
+          "value": 1000,
+          "suffix": "+",
+          "label": "Tamamlanmış Layihə"
+        },
+        {
+          "value": 26,
+          "suffix": "+",
+          "label": "İllik Təcrübə"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Müştəri Məmnuniyyəti"
+        }
+      ]
     }
   },
   "services": {
