@@ -1,12 +1,97 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Menu } from 'lucide-react'
+import { Menu, Globe, ChevronDown } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils/cn'
 import { Navbar } from './Navbar'
 import { MobileMenu } from './MobileMenu'
 import { LangDropdown } from './LangDropdown'
+
+// Compact language switcher shown next to hamburger on mobile
+const LOCALES = [
+  { code: 'az', label: 'AZ' },
+  { code: 'en', label: 'EN' },
+  { code: 'ru', label: 'RU' },
+  { code: 'tr', label: 'TR' },
+]
+
+function MobileLangSwitcher() {
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  function switchLocale(code: string) {
+    if (code === locale) { setOpen(false); return }
+    localStorage.setItem('preferred-locale', code)
+    const segments = pathname.split('/')
+    segments[1] = code
+    router.push(segments.join('/'))
+    setOpen(false)
+  }
+
+  const current = LOCALES.find((l) => l.code === locale) ?? LOCALES[0]
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="Dil seçimi"
+        className="flex items-center gap-1 px-2.5 py-2 rounded-lg border border-white/15
+          bg-white/5 hover:bg-white/10 text-text-primary text-sm font-medium
+          transition-all duration-200 min-h-[40px]"
+      >
+        <Globe size={13} className="text-text-secondary" aria-hidden="true" />
+        <span className="text-xs font-semibold">{current.label}</span>
+        <ChevronDown
+          size={11}
+          className={cn('text-text-secondary transition-transform duration-200', open && 'rotate-180')}
+          aria-hidden="true"
+        />
+      </button>
+
+      {open && (
+        <div
+          role="listbox"
+          aria-label="Dil seçimi"
+          className="absolute top-full right-0 mt-2 w-28 rounded-xl border border-white/15
+            bg-bg-secondary/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+            overflow-hidden z-50"
+        >
+          {LOCALES.map(({ code, label }) => (
+            <button
+              key={code}
+              role="option"
+              aria-selected={locale === code}
+              onClick={() => switchLocale(code)}
+              className={cn(
+                'w-full flex items-center justify-center px-4 py-2.5 text-sm font-medium transition-colors duration-150',
+                locale === code
+                  ? 'bg-accent-primary/15 text-accent-primary'
+                  : 'text-text-secondary hover:bg-bg-tertiary hover:text-text-primary'
+              )}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export function Header() {
   const locale = useLocale()
@@ -66,15 +151,18 @@ export function Header() {
             </a>
           </div>
 
-          {/* Hamburger */}
-          <button
-            onClick={() => setMobileOpen(true)}
-            className="md:hidden p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-tertiary transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center"
-            aria-label="Menyunu aç"
-            aria-expanded={mobileOpen}
-          >
-            <Menu size={20} />
-          </button>
+          {/* Mobile: lang switcher + hamburger */}
+          <div className="md:hidden flex items-center gap-2">
+            <MobileLangSwitcher />
+            <button
+              onClick={() => setMobileOpen(true)}
+              className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-tertiary transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center"
+              aria-label="Menyunu aç"
+              aria-expanded={mobileOpen}
+            >
+              <Menu size={20} />
+            </button>
+          </div>
         </div>
       </header>
 
