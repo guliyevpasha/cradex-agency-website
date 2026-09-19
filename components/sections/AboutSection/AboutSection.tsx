@@ -3,6 +3,7 @@ import { getLocale } from 'next-intl/server'
 import { AboutHero } from './AboutHero'
 import { AboutIntroCards } from './AboutIntroCards'
 import { AboutValues } from './AboutValues'
+import { AboutServices } from './AboutServices'
 import { AboutTimeline } from './AboutTimeline'
 import { AboutFinalCTA } from './AboutFinalCTA'
 
@@ -41,6 +42,17 @@ export async function AboutSection({ className }: AboutSectionProps) {
     items: t.raw('values.items'),
   }
 
+  const services = {
+    number: t('services.number'),
+    subtitle: t('services.subtitle'),
+    title: t('services.title'),
+    titleAccent: t('services.titleAccent'),
+    titleEnd: t('services.titleEnd'),
+    description: t('services.description'),
+    items: t.raw('services.items'),
+    ctaLabel: t('services.ctaLabel'),
+  }
+
   const timeline = {
     number: t('timeline.number'),
     subtitle: t('timeline.subtitle'),
@@ -65,6 +77,7 @@ export async function AboutSection({ className }: AboutSectionProps) {
       <AboutHero {...hero} />
       <AboutIntroCards {...intro} />
       <AboutValues {...values} />
+      <AboutServices {...services} locale={locale} />
       <AboutTimeline {...timeline} />
       <AboutFinalCTA {...cta} locale={locale} />
     </div>

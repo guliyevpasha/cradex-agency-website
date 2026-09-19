@@ -390,6 +390,80 @@
       ],
       "archiveLink": ""
     },
+    "services": {
+      "number": "04",
+      "subtitle": "XİDMƏTLƏRİMİZ",
+      "title": "Rəqəmsal dünyada",
+      "titleAccent": "hər şeyi",
+      "titleEnd": "təklif edirik.",
+      "description": "2020-dən bəri 360° yanaşma ilə brendinizin bütün rəqəmsal ehtiyaclarını bir çatı altında birləşdiririk.",
+      "ctaLabel": "Bütün xidmətlərə bax",
+      "items": [
+        {
+          "id": "seo",
+          "icon": "Search",
+          "title": "SEO Optimallaşdırması",
+          "description": "Google-da üst sıralara çıxın. Texniki SEO, açar söz strategiyası və məzmun optimallaşdırması ilə üzvi trafiki artırırıq.",
+          "href": "/services/digital-marketing"
+        },
+        {
+          "id": "smm",
+          "icon": "Share2",
+          "title": "Sosial Media Marketinqi",
+          "description": "Instagram, Facebook, TikTok və LinkedIn-də aktiv və cəlbedici sosial media idarəetməsi ilə brendinizi gücləndiririk.",
+          "href": "/services/smm"
+        },
+        {
+          "id": "web",
+          "icon": "Globe",
+          "title": "Veb Sayt Hazırlanması",
+          "description": "Sürətli, müasir və SEO-dostu veb saytlar, e-ticarət platformaları və landing page-lər hazırlayırıq.",
+          "href": "/services/web-mobile-dev"
+        },
+        {
+          "id": "graphic",
+          "icon": "Palette",
+          "title": "Qrafik və Motion Dizayn",
+          "description": "Logo, brend kimliyi, banner, animasiya və bütün vizual materiallar — brendinizin görsel dili bizə etibar edilir.",
+          "href": "/services/graphic-motion-design"
+        },
+        {
+          "id": "video",
+          "icon": "Video",
+          "title": "Video Montaj",
+          "description": "Reklam videoları, YouTube kontenti, Reels və korporativ videolar üçün peşəkar montaj xidməti.",
+          "href": "/services/photo-video"
+        },
+        {
+          "id": "copywriting",
+          "icon": "PenTool",
+          "title": "Mətn Yazarlığı",
+          "description": "Satışa yönəlmiş kopyraytinq, SEO məzmun, blog məqalələri və sosial media mətni yazırıq.",
+          "href": "/services/copywriting"
+        },
+        {
+          "id": "ads",
+          "icon": "Megaphone",
+          "title": "Reklam Kampaniyaları",
+          "description": "Google Ads, Meta Ads, TikTok Ads — hədəfli reklam kampaniyaları ilə maksimum ROI əldə edirsiniz.",
+          "href": "/services/digital-marketing"
+        },
+        {
+          "id": "branding",
+          "icon": "Layers",
+          "title": "Brendinq",
+          "description": "Brend strategiyası, vizual kimlik, üslub bələdçisi — güclü brend qurmaq üçün hər şey.",
+          "href": "/services/branding"
+        },
+        {
+          "id": "photo",
+          "icon": "Camera",
+          "title": "Foto Çəkiliş",
+          "description": "Kommersiya foto çəkilişi, product photography və korporativ portret çəkilişləri.",
+          "href": "/services/photo-video"
+        }
+      ]
+    },
     "cta": {
       "title": "Hekayəmizin bir",
       "titleAccent": "parçası",

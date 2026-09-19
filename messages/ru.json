@@ -1307,6 +1307,80 @@
                                               ],
                                    "archiveLink":  ""
                                },
+                  "services":  {
+                      "number":  "04",
+                      "subtitle":  "НАШИ УСЛУГИ",
+                      "title":  "Всё, что нужно",
+                      "titleAccent":  "в цифровом мире",
+                      "titleEnd":  "",
+                      "description":  "С 2020 года мы объединяем все цифровые потребности вашего бренда под одной крышей с подходом 360°.",
+                      "ctaLabel":  "Все услуги",
+                      "items":  [
+                          {
+                              "id":  "seo",
+                              "icon":  "Search",
+                              "title":  "SEO Оптимизация",
+                              "description":  "Выходите в топ Google. Увеличиваем органический трафик через технический SEO, стратегию ключевых слов и оптимизацию контента.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "smm",
+                              "icon":  "Share2",
+                              "title":  "SMM — Маркетинг в соцсетях",
+                              "description":  "Усиливаем ваш бренд с помощью привлекательного ведения Instagram, Facebook, TikTok и LinkedIn.",
+                              "href":  "/services/smm"
+                          },
+                          {
+                              "id":  "web",
+                              "icon":  "Globe",
+                              "title":  "Разработка сайтов",
+                              "description":  "Быстрые, современные и SEO-дружественные сайты, интернет-магазины и лендинги для вашего бизнеса.",
+                              "href":  "/services/web-mobile-dev"
+                          },
+                          {
+                              "id":  "graphic",
+                              "icon":  "Palette",
+                              "title":  "Графический и Motion Дизайн",
+                              "description":  "Логотип, фирменный стиль, баннеры, анимация и все визуальные материалы — визуальный язык вашего бренда в надёжных руках.",
+                              "href":  "/services/graphic-motion-design"
+                          },
+                          {
+                              "id":  "video",
+                              "icon":  "Video",
+                              "title":  "Видеомонтаж",
+                              "description":  "Профессиональный монтаж рекламных видео, YouTube-контента, Reels и корпоративных роликов.",
+                              "href":  "/services/photo-video"
+                          },
+                          {
+                              "id":  "copywriting",
+                              "icon":  "PenTool",
+                              "title":  "Копирайтинг",
+                              "description":  "Продающие тексты, SEO-контент, статьи и посты для соцсетей, нацеленные на конверсию.",
+                              "href":  "/services/copywriting"
+                          },
+                          {
+                              "id":  "ads",
+                              "icon":  "Megaphone",
+                              "title":  "Рекламные кампании",
+                              "description":  "Google Ads, Meta Ads, TikTok Ads — таргетированные кампании для максимального ROI.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "branding",
+                              "icon":  "Layers",
+                              "title":  "Брендинг",
+                              "description":  "Стратегия бренда, визуальная идентичность и гайдлайн — всё для создания сильного бренда.",
+                              "href":  "/services/branding"
+                          },
+                          {
+                              "id":  "photo",
+                              "icon":  "Camera",
+                              "title":  "Фотосъёмка",
+                              "description":  "Коммерческая фотосъёмка, предметная фотография и корпоративные портреты.",
+                              "href":  "/services/photo-video"
+                          }
+                      ]
+                  },
                   "cta":  {
                               "title":  "Hekayəmizin bir",
                               "titleAccent":  "parçası",

@@ -1307,6 +1307,80 @@
                                               ],
                                    "archiveLink":  ""
                                },
+                  "services":  {
+                      "number":  "04",
+                      "subtitle":  "HİZMETLERİMİZ",
+                      "title":  "Dijital dünyada",
+                      "titleAccent":  "ihtiyacınız olan her şey",
+                      "titleEnd":  "",
+                      "description":  "2020'den bu yana 360° yaklaşımla markanızın tüm dijital ihtiyaçlarını tek çatı altında birleştiriyoruz.",
+                      "ctaLabel":  "Tüm hizmetleri gör",
+                      "items":  [
+                          {
+                              "id":  "seo",
+                              "icon":  "Search",
+                              "title":  "SEO Optimizasyonu",
+                              "description":  "Google'da üst sıralara çıkın. Teknik SEO, anahtar kelime stratejisi ve içerik optimizasyonu ile organik trafiği artırıyoruz.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "smm",
+                              "icon":  "Share2",
+                              "title":  "Sosyal Medya Pazarlaması",
+                              "description":  "Instagram, Facebook, TikTok ve LinkedIn'de etkileyici sosyal medya yönetimiyle markanızı güçlendiriyoruz.",
+                              "href":  "/services/smm"
+                          },
+                          {
+                              "id":  "web",
+                              "icon":  "Globe",
+                              "title":  "Web Sitesi Geliştirme",
+                              "description":  "Hızlı, modern ve SEO dostu web siteleri, e-ticaret platformları ve landing page'ler hazırlıyoruz.",
+                              "href":  "/services/web-mobile-dev"
+                          },
+                          {
+                              "id":  "graphic",
+                              "icon":  "Palette",
+                              "title":  "Grafik ve Motion Tasarım",
+                              "description":  "Logo, kurumsal kimlik, banner, animasyon ve tüm görsel materyaller — markanızın görsel dili güvende.",
+                              "href":  "/services/graphic-motion-design"
+                          },
+                          {
+                              "id":  "video",
+                              "icon":  "Video",
+                              "title":  "Video Montaj",
+                              "description":  "Reklam videoları, YouTube içerikleri, Reels ve kurumsal videolar için profesyonel montaj hizmeti.",
+                              "href":  "/services/photo-video"
+                          },
+                          {
+                              "id":  "copywriting",
+                              "icon":  "PenTool",
+                              "title":  "Metin Yazarlığı",
+                              "description":  "Satış odaklı metinler, SEO içerikleri, blog makaleleri ve sosyal medya metinleri yazıyoruz.",
+                              "href":  "/services/copywriting"
+                          },
+                          {
+                              "id":  "ads",
+                              "icon":  "Megaphone",
+                              "title":  "Reklam Kampanyaları",
+                              "description":  "Google Ads, Meta Ads, TikTok Ads — maksimum ROI için hedefli reklam kampanyaları.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "branding",
+                              "icon":  "Layers",
+                              "title":  "Markalama",
+                              "description":  "Marka stratejisi, görsel kimlik ve stil rehberi — güçlü bir marka inşa etmek için gereken her şey.",
+                              "href":  "/services/branding"
+                          },
+                          {
+                              "id":  "photo",
+                              "icon":  "Camera",
+                              "title":  "Fotoğraf Çekimi",
+                              "description":  "Ticari fotoğraf çekimi, ürün fotoğrafçılığı ve kurumsal portre çekimleri.",
+                              "href":  "/services/photo-video"
+                          }
+                      ]
+                  },
                   "cta":  {
                               "title":  "Hekayəmizin bir",
                               "titleAccent":  "parçası",
