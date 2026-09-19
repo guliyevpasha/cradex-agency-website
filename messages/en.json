@@ -1307,6 +1307,80 @@
                                               ],
                                    "archiveLink":  ""
                                },
+                  "services":  {
+                      "number":  "04",
+                      "subtitle":  "OUR SERVICES",
+                      "title":  "Everything you need",
+                      "titleAccent":  "in the digital world",
+                      "titleEnd":  "",
+                      "description":  "Since 2020, we cover every digital need of your brand under one roof with a 360° approach.",
+                      "ctaLabel":  "View all services",
+                      "items":  [
+                          {
+                              "id":  "seo",
+                              "icon":  "Search",
+                              "title":  "SEO Optimization",
+                              "description":  "Rank higher on Google. We grow your organic traffic through technical SEO, keyword strategy, and content optimization.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "smm",
+                              "icon":  "Share2",
+                              "title":  "Social Media Marketing",
+                              "description":  "We strengthen your brand with engaging social media management across Instagram, Facebook, TikTok, and LinkedIn.",
+                              "href":  "/services/smm"
+                          },
+                          {
+                              "id":  "web",
+                              "icon":  "Globe",
+                              "title":  "Website Development",
+                              "description":  "Fast, modern, and SEO-friendly websites, e-commerce platforms, and landing pages tailored to your business.",
+                              "href":  "/services/web-mobile-dev"
+                          },
+                          {
+                              "id":  "graphic",
+                              "icon":  "Palette",
+                              "title":  "Graphic & Motion Design",
+                              "description":  "Logo, brand identity, banners, animation, and all visual materials — your brand's visual language is in good hands.",
+                              "href":  "/services/graphic-motion-design"
+                          },
+                          {
+                              "id":  "video",
+                              "icon":  "Video",
+                              "title":  "Video Editing",
+                              "description":  "Professional video editing for ads, YouTube content, Reels, and corporate videos.",
+                              "href":  "/services/photo-video"
+                          },
+                          {
+                              "id":  "copywriting",
+                              "icon":  "PenTool",
+                              "title":  "Copywriting",
+                              "description":  "Sales-focused copy, SEO content, blog articles, and social media text crafted to convert.",
+                              "href":  "/services/copywriting"
+                          },
+                          {
+                              "id":  "ads",
+                              "icon":  "Megaphone",
+                              "title":  "Ad Campaigns",
+                              "description":  "Google Ads, Meta Ads, TikTok Ads — targeted campaigns designed to deliver maximum ROI.",
+                              "href":  "/services/digital-marketing"
+                          },
+                          {
+                              "id":  "branding",
+                              "icon":  "Layers",
+                              "title":  "Branding",
+                              "description":  "Brand strategy, visual identity, and style guide — everything you need to build a strong brand.",
+                              "href":  "/services/branding"
+                          },
+                          {
+                              "id":  "photo",
+                              "icon":  "Camera",
+                              "title":  "Photo Shoot",
+                              "description":  "Commercial photography, product photography, and corporate portrait sessions.",
+                              "href":  "/services/photo-video"
+                          }
+                      ]
+                  },
                   "cta":  {
                               "title":  "Hekayəmizin bir",
                               "titleAccent":  "parçası",
