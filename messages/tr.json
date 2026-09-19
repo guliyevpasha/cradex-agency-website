@@ -1,1409 +1,1414 @@
 {
-    "common":  {
-                   "cta":  {
-                               "whatsapp":  "WhatsApp ile İletişim",
-                               "getQuote":  "Teklif Al",
-                               "freeConsultation":  "Ücretsiz Danışmanlık",
-                               "learnMore":  "Daha Fazla",
-                               "viewAll":  "Tümünü Gör",
-                               "sendMessage":  "Gönder",
-                               "startProject":  "Projeye Başla",
-                               "orderService":  "Bu hizmeti sipariş et"
-                           },
-                   "nav":  {
-                               "home":  "Ana Sayfa",
-                               "about":  "Hakkımızda",
-                               "services":  "Hizmetler",
-                               "journal":  "Blog",
-                               "calculator":  "Hesaplayıcı",
-                               "portfolio":  "Portföy",
-                               "contact":  "İletişim"
-                           },
-                   "errors":  {
-                                  "required":  "Bu alan zorunludur",
-                                  "invalidEmail":  "Lütfen geçerli bir e-posta adresi girin",
-                                  "serverError":  "Bir hata oluştu, lütfen tekrar deneyin",
-                                  "minService":  "Lütfen en az bir hizmet seçin",
-                                  "notFound":  "Sayfa bulunamadı"
-                              },
-                   "language":  {
-                                    "az":  "Azərbaycan",
-                                    "en":  "English",
-                                    "ru":  "Русский",
-                                    "tr":  "Türkçe"
-                                }
-               },
-    "home":  {
-                 "hero":  {
-                              "eyebrow":  "360° Performans Pazarlama Ajansı",
-                              "title":  "Cradex Agency ile Markanızı Büyütün",
-                              "subtitle":  "zamanında, şeffaf fiyatlarla.",
-                              "subtitleAccent":  "sonuç odaklı strateji, ölçülebilir büyüme.",
-                              "cta":  "Ücretsiz danışmanlık al",
-                              "secondaryCta":  "Hizmetlerimiz",
-                              "googleReviews":  "Google Yorumları",
-                              "verifiedPartner":  "Onaylı İş Ortağı",
-                              "googleVerified":  "Google Onaylı",
-                              "whatsappText":  "Merhaba! Ücretsiz danışmanlık almak istiyorum.",
-                              "coreLabel":  "Dijital Çözümler",
-                              "disciplines":  {
-                                                  "seo":  "SEO",
-                                                  "smm":  "SOSYAL MEDYA",
-                                                  "ads":  "REKLAM",
-                                                  "web":  "WEB",
-                                                  "brand":  "MARKA",
-                                                  "data":  "ANALİTİK"
-                                              },
-                              "workCta":  "İşlerimiz"
-                          },
-                 "stats":  {
-                               "projects":  "Tamamlanan Proje",
-                               "clients":  "Mutlu Müşteri",
-                               "experience":  "Yıl Deneyim",
-                               "awards":  "Ödül"
-                           },
-                 "partners":  {
-                                  "tagline":  "Bizi seçen ortaklardan biri de siz olun."
-                              },
-                 "statistics":  {
-                                    "sectionLabel":  "Sonuçlarımız",
-                                    "heading":  "Bizim sonuçlar,",
-                                    "headingAccent":  "sizin büyüme.",
-                                    "stats":  [
-                                                  {
-                                                      "value":  350,
-                                                      "suffix":  "+",
-                                                      "label":  "Başarılı Proje"
-                                                  },
-                                                  {
-                                                      "value":  100,
-                                                      "suffix":  "+",
-                                                      "label":  "Mutlu Müşteri"
-                                                  },
-                                                  {
-                                                      "value":  4,
-                                                      "suffix":  " yıl+",
-                                                      "label":  "Ajans Deneyimi"
-                                                  },
-                                                  {
-                                                      "value":  100,
-                                                      "suffix":  "%",
-                                                      "label":  "Müşteri Memnuniyeti"
-                                                  },
-                                                  {
-                                                      "value":  100,
-                                                      "suffix":  "%",
-                                                      "label":  "Zamanında Teslimat"
-                                                  },
-                                                  {
-                                                      "value":  24,
-                                                      "suffix":  "/7",
-                                                      "label":  "Teknik Destek"
-                                                  }
-                                              ]
-                                },
-                 "advantages":  {
-                                    "sectionLabel":  "Avantajlarımız",
-                                    "heading":  "Neden bizi",
-                                    "headingAccent":  "seçiyorlar?",
-                                    "items":  [
-                                                  {
-                                                      "emoji":  "😎",
-                                                      "title":  "Profesyonel Deneyim",
-                                                      "desc":  "Ekibimiz dijital pazarlamada 4+ yıllık gerçek proje deneyimine sahiptir."
-                                                  },
-                                                  {
-                                                      "emoji":  "⏰",
-                                                      "title":  "Zamanında Teslimat",
-                                                      "desc":  "Her projeyi kararlaştırılan sürede tamamlıyoruz. Gecikme bizim sözlüğümüzde yok."
-                                                  },
-                                                  {
-                                                      "emoji":  "📈",
-                                                      "title":  "Ölçülebilir Sonuçlar",
-                                                      "desc":  "Her kampanya için KPI belirliyor, aylık raporlarla sonuçları kanıtlıyoruz."
-                                                  },
-                                                  {
-                                                      "emoji":  "💎",
-                                                      "title":  "Şeffaf Fiyatlar",
-                                                      "desc":  "Gizli ücret yok. Her hizmet için dürüst ve net fiyat teklifleri sunuyoruz."
-                                                  },
-                                                  {
-                                                      "emoji":  "🤝",
-                                                      "title":  "Uzun Vadeli Ortaklık",
-                                                      "desc":  "Sizin başarınız bizim başarımızdır. Kalıcı işbirliği için çalışıyoruz."
-                                                  },
-                                                  {
-                                                      "emoji":  "💬",
-                                                      "title":  "Dürüst İletişim",
-                                                      "desc":  "Müşterilerle açık ve şeffaf iletişim bizim temel standardımızdır."
-                                                  }
-                                              ]
-                                },
-                 "services":  {
-                                  "title":  "Hizmetlerimiz",
-                                  "subtitle":  "Markanızın büyümesi için kapsamlı dijital çözümler"
-                              },
-                 "portfolio":  {
-                                   "title":  "Son Çalışmalarımız",
-                                   "subtitle":  "Müşterilerimiz için hayata geçirdiğimiz projeler"
-                               },
-                 "testimonials":  {
-                                      "title":  "Müşteri Yorumları",
-                                      "subtitle":  "Bizimle çalışan müşterilerimiz ne diyor"
-                                  },
-                 "cta":  {
-                             "title":  "Projenizi Başlayalım",
-                             "subtitle":  "Markanızın dijital dönüşümü için bizimle iletişime geçin ve ücretsiz danışmanlık alın.",
-                             "button":  "İletişime Geçin"
-                         },
-                 "process":  {
-                                 "sectionLabel":  "Sürecimiz",
-                                 "title":  "Nasıl çalışıyoruz?",
-                                 "subtitle":  "Her projeyi 4 adımda hayata geçiriyoruz",
-                                 "steps":  [
-                                               {
-                                                   "number":  "01",
-                                                   "title":  "Tanışma ve Brifing",
-                                                   "desc":  "Sizinle buluşuyor, işinizi, hedeflerinizi ve beklentilerinizi öğreniyoruz. Bireysel bir yaklaşımla başlıyoruz."
-                                               },
-                                               {
-                                                   "number":  "02",
-                                                   "title":  "Analiz ve Strateji",
-                                                   "desc":  "Pazarı, rakipleri ve hedef kitleyi analiz ederek ihtiyaçlarınıza özel bir strateji geliştiriyoruz."
-                                               },
-                                               {
-                                                   "number":  "03",
-                                                   "title":  "Uygulama ve İcra",
-                                                   "desc":  "Kararlaştırılan plana göre işi zamanında ve yüksek kalitede hayata geçiriyoruz."
-                                               },
-                                               {
-                                                   "number":  "04",
-                                                   "title":  "Raporlama ve Optimizasyon",
-                                                   "desc":  "Aylık detaylı raporlar sunuyor, sonuçları birlikte analiz ediyor ve stratejiyi sürekli geliştiriyoruz."
-                                               }
-                                           ]
-                             },
-                 "lead":  {
-                              "subtitle":  "Markanızı bir sonraki seviyeye taşımaya hazırız",
-                              "button":  "Bizimle İletişime Geçin"
-                          },
-                 "faq":  {
-                             "sectionLabel":  "İşbirliğine başlamadan önce",
-                             "title":  "En çok sorulan",
-                             "titleAccent":  "sorular.",
-                             "description":  "Cevap bulamazsanız WhatsApp üzerinden bizimle iletişime geçin.",
-                             "ctaButton":  "Soru sor",
-                             "items":  [
-                                           {
-                                               "q":  "Sonuçları ne zaman görürüm?",
-                                               "a":  "Bu, hizmetin türüne bağlıdır. SMM\u0027de ilk sonuçlar — takipçi artışı, etkileşim ve başvurular — 4–6 hafta içinde görünmeye başlar. SEO\u0027da ise ilk sıralama iyileşmeleri 2–3 ayda, önemli sonuçlar ise 4–6 ayda elde edilir. Her ay detaylı rapor sunarak ilerlemeyi birlikte takip ederiz."
-                                           },
-                                           {
-                                               "q":  "SEO hizmeti neden gereklidir?",
-                                               "a":  "SEO (Arama Motoru Optimizasyonu), web sitenizin Google gibi arama motorlarında üst sıralarda görünmesini sağlar. İnsanların büyük çoğunluğu yalnızca arama sonuçlarının ilk sayfasına bakar. SEO olmadan potansiyel müşterileriniz sizi bulamaz. Doğru SEO stratejisiyle sitenize ücretsiz, hedefli trafik çekebilir, marka güvenilirliğinizi artırabilir ve uzun vadeli rekabet avantajı kazanabilirsiniz."
-                                           },
-                                           {
-                                               "q":  "Sosyal medya pazarlaması (SMM) neden önemlidir?",
-                                               "a":  "Azerbaycan\u0027da milyonlarca insan her gün Instagram, Facebook ve TikTok\u0027ta vakit geçiriyor. SMM aracılığıyla markanızı bu kitleye tanıtabilir, müşterilerle doğrudan ilişki kurabilir ve satışlarınızı artırabilirsiniz. Profesyonel SMM yönetimi — doğru içerik stratejisi, zamanında paylaşımlar, hedefli reklamlar ve aktif iletişimle — markanızın çevrimiçi itibarını güçlendirir."
-                                           },
-                                           {
-                                               "q":  "Hizmetleriniz için minimum bütçe ne kadardır?",
-                                               "a":  "Bütçe, hizmetin türüne, kapsamına ve süresine göre değişir. Her işletmenin farklı ihtiyaçları vardır — bu nedenle bireysel bir yaklaşım uyguluyoruz. Hesaplayıcımızdan tahmini fiyatı hesaplayabilir veya size en uygun paket hakkında bilgi almak için bizimle iletişime geçebilirsiniz."
-                                           },
-                                           {
-                                               "q":  "Proje tamamlandıktan sonra destek veriyor musunuz?",
-                                               "a":  "Evet, proje tamamlandıktan sonra da yanınızdayız. Teknik destek, içerik güncellemeleri ve web sitesi yönetimi için çeşitli destek paketlerimiz mevcuttur. Uzun vadeli ortaklık bizim için önceliktir."
-                                           },
-                                           {
-                                               "q":  "Hangi ödeme koşullarını uyguluyorsunuz?",
-                                               "a":  "Genellikle projenin başında %50 avans, tamamlandığında kalan %50 ödenir. Büyük projeler için taksitli ödeme planı da uygulanabilir. Banka havalesi, nakit ve online ödeme sistemleri kabul edilmektedir."
-                                           }
-                                       ]
-                         }
-             },
-    "services":  {
-                     "title":  "Hizmetlerimiz",
-                     "subtitle":  "Markanızın ihtiyaçlarına göre kapsamlı çözümler",
-                     "megaMenu":  {
-                                      "digitalMarketing":  {
-                                                               "title":  "Dijital Pazarlama",
-                                                               "description":  "SEO, Google Ads ve dijital strateji"
-                                                           },
-                                      "socialMediaMarketing":  {
-                                                                   "title":  "Sosyal Medya Pazarlaması",
-                                                                   "description":  "Facebook, Instagram ve TikTok pazarlaması"
-                                                               },
-                                      "webMobileDev":  {
-                                                           "title":  "Web ve Mobil Geliştirme",
-                                                           "description":  "Modern ve fonksiyonel web çözümleri"
-                                                       },
-                                      "contentWriting":  {
-                                                             "title":  "İçerik Yazarlığı",
-                                                             "description":  "SEO odaklı ve yaratıcı yazım hizmetleri"
-                                                         },
-                                      "graphicMotionDesign":  {
-                                                                  "title":  "Grafik/Motion Tasarım",
-                                                                  "description":  "Logo, banner ve animasyon tasarımı"
-                                                              },
-                                      "branding":  {
-                                                       "title":  "Markalama",
-                                                       "description":  "Marka kimliği ve stratejisi"
-                                                   },
-                                      "viewAllServices":  "Tüm Hizmetleri Görüntüle",
-                                      "calculatePrice":  "Fiyat Hesapla"
-                                  },
-                     "digitalMarketing":  {
-                                              "name":  "Dijital Pazarlama",
-                                              "shortDesc":  "SEO, PPC, e-posta pazarlaması",
-                                              "description":  "Arama motoru sıralamaları, ücretli reklamlar ve e-posta kampanyaları aracılığıyla çevrimiçi görünürlüğünüzü artırıyoruz.",
-                                              "metaTitle":  "Dijital Pazarlama Hizmetleri | Cradex Agency",
-                                              "metaDescription":  "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
-                                          },
-                     "traditionalMarketing":  {
-                                                  "name":  "Geleneksel Pazarlama",
-                                                  "shortDesc":  "Baskı, açık hava, medya planlaması",
-                                                  "description":  "Televizyon, radyo, basılı medya ve açık hava reklamları aracılığıyla geniş kitlelere ulaşıyoruz.",
-                                                  "metaTitle":  "Geleneksel Pazarlama Hizmetleri | Cradex Agency",
-                                                  "metaDescription":  "TV, radyo ve basılı medya aracılığıyla markanızı geniş kitlelere tanıtın."
-                                              },
-                     "smm":  {
-                                 "name":  "Sosyal Medya Pazarlaması",
-                                 "shortDesc":  "Instagram, Facebook, TikTok yönetimi",
-                                 "description":  "Sosyal medya platformlarında ilgi çekici içerikler oluşturuyor, topluluklar kuruyor ve markanızın çevrimiçi itibarını artırıyoruz.",
-                                 "metaTitle":  "SMM Hizmetleri | Cradex Agency",
-                                 "metaDescription":  "Instagram, Facebook, TikTok ve diğer platformlarda profesyonel sosyal medya yönetimi."
-                             },
-                     "graphicMotionDesign":  {
-                                                 "name":  "Grafik Tasarım / Motion Tasarım",
-                                                 "shortDesc":  "Logo, marka kimliği, animasyon",
-                                                 "description":  "Markanızın görsel dilini oluşturuyor, animasyonlu içerikler ve grafik materyaller hazırlıyoruz.",
-                                                 "metaTitle":  "Grafik Tasarım Hizmetleri | Cradex Agency",
-                                                 "metaDescription":  "Logo, marka kimliği, motion tasarım ve grafik materyaller için profesyonel tasarım hizmetleri."
-                                             },
-                     "photoVideo":  {
-                                        "name":  "Profesyonel Fotoğraf ve Video",
-                                        "shortDesc":  "Ticari fotoğraf, reklam videosu",
-                                        "description":  "Markanızı en iyi şekilde sergileyen profesyonel fotoğraf ve video çekimleri gerçekleştiriyoruz.",
-                                        "metaTitle":  "Fotoğraf ve Video Hizmetleri | Cradex Agency",
-                                        "metaDescription":  "Ticari fotoğrafçılık, reklam videosu ve kurumsal video prodüksiyon hizmetleri."
-                                    },
-                     "branding":  {
-                                      "name":  "Markalama",
-                                      "shortDesc":  "Marka stratejisi, kimlik, stil rehberi",
-                                      "description":  "Marka stratejinizi, görsel kimliğinizi ve stil rehberinizi geliştiriyoruz.",
-                                      "metaTitle":  "Markalama Hizmetleri | Cradex Agency",
-                                      "metaDescription":  "Marka stratejisi, görsel kimlik ve stil rehberi ile güçlü bir marka oluşturun."
-                                  },
-                     "copywriting":  {
-                                         "name":  "Metin Yazarlığı",
-                                         "shortDesc":  "Satış metinleri, SEO içeriği",
-                                         "description":  "Hedef kitlenizi çeken, satış odaklı profesyonel metinler yazıyoruz.",
-                                         "metaTitle":  "Metin Yazarlığı Hizmetleri | Cradex Agency",
-                                         "metaDescription":  "Satış metinleri, SEO içeriği ve kurumsal iletişim için profesyonel metin yazarlığı."
-                                     },
-                     "webMobileDev":  {
-                                          "name":  "Web Sitesi ve Mobil Uygulama",
-                                          "shortDesc":  "Next.js, React Native, UI/UX",
-                                          "description":  "Modern teknolojilerle hızlı, güvenli ve güzel web siteleri ve mobil uygulamalar geliştiriyoruz.",
-                                          "metaTitle":  "Web Sitesi Geliştirme | Cradex Agency",
-                                          "metaDescription":  "Next.js ve React Native ile modern web sitesi ve mobil uygulama geliştirme hizmetleri."
-                                      },
-                     "benefits":  "Avantajlar",
-                     "process":  "Sürecimiz",
-                     "relatedWork":  "İlgili Çalışmalar"
-                 },
-    "contact":  {
-                    "title":  "Bizimle İletişime Geçin",
-                    "subtitle":  "Projeniz hakkında konuşalım",
-                    "leadForm":  {
-                                     "sectionLabel":  "Online büyümeye hazır mısınız?",
-                                     "heading":  "Projenizi bize",
-                                     "headingAccent":  "emanet edin.",
-                                     "founderName":  "Paşa Quliyev",
-                                     "founderRole":  "Kurucu",
-                                     "founderStatus":  "🟢 Şu an çevrimiçi",
-                                     "whatsappCta":  "WhatsApp\u0027tan Yazın",
-                                     "formTitle":  "Ücretsiz danışmanlık alın",
-                                     "formSubtitle":  "24 saat içinde yanıt veriyoruz",
-                                     "fields":  {
-                                                    "name":  "Adınız",
-                                                    "email":  "E-posta",
-                                                    "phone":  "Telefon numarası",
-                                                    "phonePlaceholder":  "+994 50 000 00 00",
-                                                    "namePlaceholder":  "Adınız",
-                                                    "emailPlaceholder":  "siz@sirket.com",
-                                                    "message":  "Projeniz hakkında detaylı yazın...",
-                                                    "serviceLabel":  "Hangi hizmete ihtiyacınız var?",
-                                                    "budgetLabel":  "Bütçe aralığı"
-                                                },
-                                     "trustBadges":  {
-                                                         "response":  "24 saat yanıt",
-                                                         "confidential":  "Gizlilik",
-                                                         "free":  "Ücretsiz danışmanlık"
-                                                     },
-                                     "services":  [
-                                                      "SMM",
-                                                      "SEO",
-                                                      "Web Sitesi",
-                                                      "Markalama",
-                                                      "Grafik Tasarım",
-                                                      "Fotoğraf/Video",
-                                                      "Metin Yazarlığı",
-                                                      "Diğer"
-                                                  ],
-                                     "budgets":  [
-                                                     "500₼\u0027den az",
-                                                     "500–1500₼",
-                                                     "1500–4000₼",
-                                                     "4000–10000₼",
-                                                     "10000₼\u0027den fazla"
-                                                 ],
-                                     "submit":  "Mesaj Gönder",
-                                     "submitting":  "Gönderiliyor...",
-                                     "successTitle":  "Mesajınız gönderildi!",
-                                     "successMessage":  "En kısa sürede sizinle iletişime geçeceğiz.",
-                                     "errorMessage":  "Bir hata oluştu. Lütfen tekrar deneyin."
-                                 },
-                    "form":  {
-                                 "fullName":  "Ad Soyad",
-                                 "namePlaceholder":  "Adınız",
-                                 "emailPlaceholder":  "siz@sirket.com",
-                                 "email":  "E-posta",
-                                 "phone":  "Telefon",
-                                 "service":  "Hizmet seçin",
-                                 "serviceOptions":  {
-                                                        "digital-marketing":  "Dijital Pazarlama",
-                                                        "traditional-marketing":  "Geleneksel Pazarlama",
-                                                        "smm":  "Sosyal Medya Pazarlaması",
-                                                        "graphic-motion-design":  "Grafik / Motion Tasarım",
-                                                        "photo-video":  "Fotoğraf ve Video Çekimi",
-                                                        "branding":  "Markalama",
-                                                        "copywriting":  "Metin Yazarlığı",
-                                                        "web-mobile-dev":  "Web Sitesi / Mobil Uygulama",
-                                                        "other":  "Diğer"
-                                                    },
-                                 "message":  "Mesajınız",
-                                 "messagePlaceholder":  "Projeniz hakkında detaylı bilgi verin...",
-                                 "submit":  "Gönder",
-                                 "success":  "Mesajınız alındı, en kısa sürede sizinle iletişime geçeceğiz",
-                                 "error":  "Bir hata oluştu, lütfen tekrar deneyin",
-                                 "sending":  "Gönderiliyor..."
-                             },
-                    "info":  {
-                                 "title":  "İletişim Bilgileri",
-                                 "address":  "Adres",
-                                 "phone":  "Telefon",
-                                 "email":  "E-posta",
-                                 "whatsapp":  "WhatsApp",
-                                 "workingHours":  "Çalışma Saatleri",
-                                 "workingHoursValue":  "Pzt – Cum: 09:00 – 18:00"
-                             }
-                },
-    "journal":  {
-                    "title":  "Blog",
-                    "subtitle":  "Dijital pazarlama dünyasından makaleler",
-                    "readingTime":  "{minutes} dk okuma",
-                    "readMore":  "Devamını Oku",
-                    "by":  "Yazar:",
-                    "publishedAt":  "Yayın tarihi:",
-                    "categories":  {
-                                       "all":  "Tümü",
-                                       "seo":  "SEO",
-                                       "smm":  "SMM",
-                                       "branding":  "Markalama",
-                                       "design":  "Tasarım",
-                                       "copywriting":  "Metin Yazarlığı",
-                                       "web-dev":  "Web Geliştirme",
-                                       "marketing-strategy":  "Pazarlama Stratejisi"
-                                   },
-                    "pagination":  {
-                                       "previous":  "Önceki",
-                                       "next":  "Sonraki",
-                                       "page":  "Sayfa"
-                                   },
-                    "noArticles":  "Bu kategoride makale bulunamadı"
-                },
-    "portfolio":  {
-                      "title":  "Portföy",
-                      "subtitle":  "Tamamladığımız projeler",
-                      "viewProject":  "Portföyü Gör",
-                      "client":  "Müşteri",
-                      "category":  "Kategori",
-                      "tools":  "Kullanılan araçlar",
-                      "results":  "Sonuçlar",
-                      "gallery":  "Galeri",
-                      "foundCount":  "{count} proje bulundu",
-                      "filterLabel":  "Kategoriye göre filtrele",
-                      "categories":  {
-                                         "all":  "Tümü",
-                                         "digital-marketing":  "SEO / Dijital",
-                                         "traditional-marketing":  "Geleneksel Pazarlama",
-                                         "smm":  "SMM",
-                                         "graphic-motion-design":  "Grafik Tasarım",
-                                         "photo-video":  "Fotoğraf / Video",
-                                         "branding":  "Markalama",
-                                         "copywriting":  "Metin Yazarlığı",
-                                         "web-mobile-dev":  "Web Sitesi"
-                                     },
-                      "noItems":  "Bu kategoride proje bulunamadı"
-                  },
-    "notFound":  {
-                     "title":  "404 — Sayfa Bulunamadı",
-                     "subtitle":  "Aradığınız sayfa mevcut değil",
-                     "backHome":  "Ana Sayfaya Dön"
-                 },
-    "footer":  {
-                   "description":  "Cradex Agency — dijital pazarlama, tasarım ve teknoloji alanında güvenilir ortağınız.",
-                   "navigation":  "Navigasyon",
-                   "services":  "Hizmetler",
-                   "contact":  "İletişim",
-                   "rights":  "Tüm hakları saklıdır",
-                   "privacy":  "Gizlilik Politikası",
-                   "terms":  "Kullanım Koşulları",
-                   "location":  "Reşid Behbudov 55, Bakı"
-               },
-    "calculator":  {
-                       "title":  "Hizmet Fiyatını Hesaplayın",
-                       "subtitle":  "İhtiyacınız olan hizmetleri seçin ve anında fiyat teklifi alın",
-                       "tabs":  {
-                                    "website":  "Web Sitesi",
-                                    "mobileApp":  "Mobil Uygulama",
-                                    "digitalAds":  "Dijital Reklamlar",
-                                    "videoEditing":  "Video Montaj",
-                                    "videoShooting":  "Video Çekim",
-                                    "socialMediaDesign":  "Sosyal Medya Tasarım"
-                                },
-                       "website":  {
-                                       "title":  "Web Sitesi Hesaplayıcı",
-                                       "corporateName":  "Kurumsal Web Sitesi",
-                                       "corporateDescription":  "İşletmeniz için profesyonel kurumsal web sitesi",
-                                       "ecommerceName":  "E-ticaret Sitesi",
-                                       "ecommerceDescription":  "Online mağaza ve e-ticaret çözümü",
-                                       "startingFrom":  "başlangıç",
-                                       "includedServices":  "Dahil",
-                                       "designComplexity":  "Tasarım Karmaşıklığı",
-                                       "deliveryTime":  "Teslimat Süresi",
-                                       "additionalServices":  "Ek Hizmetler",
-                                       "totalAmount":  "Toplam Tutar",
-                                       "discount":  "İndirim",
-                                       "taxIncluded":  "* Vergi dahil",
-                                       "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
-                                       "discountCoupon":  "İndirim Kodu",
-                                       "enterCouponCode":  "Kodu girin",
-                                       "applyCoupon":  "Uygula",
-                                       "cancelCoupon":  "İptal",
-                                       "invalidCoupon":  "Geçersiz indirim kodu",
-                                       "orderNow":  "Şimdi Sipariş Ver",
-                                       "serviceRequirements":  "Hizmet Gereksinimleri",
-                                       "faq":  "SSS",
-                                       "monthlyPaymentOption":  "Ödeme Seçeneği",
-                                       "initialPayment":  "İlk ödeme",
-                                       "monthly":  "Aylık",
-                                       "months":  "ay",
-                                       "interestFree":  "Faizsiz taksit",
-                                       "complexity":  {
-                                                          "simple":  "Basit",
-                                                          "professional":  "Profesyonel",
-                                                          "custom":  "Özel"
-                                                      },
-                                       "delivery":  {
-                                                        "standard":  "Standart",
-                                                        "fast":  "Hızlı (14 gün)",
-                                                        "urgent":  "Acil (7 gün)"
-                                                    },
-                                       "paymentOptions":  {
-                                                              "fullPayment":  "Tam ödeme",
-                                                              "3months":  "3 aylık taksit (faizsiz)",
-                                                              "6months":  "6 aylık taksit (faizsiz)",
-                                                              "12months":  "12 aylık taksit (faizsiz)"
-                                                          },
-                                       "unit":  {
-                                                    "language":  "dil",
-                                                    "article":  "makale",
-                                                    "page":  "sayfa",
-                                                    "products":  "ürün"
-                                                },
-                                       "corporateIncludes":  {
-                                                                 "adminPanel":  "Yönetim paneli",
-                                                                 "domainHosting":  "1 yıllık domain ve hosting",
-                                                                 "pages5":  "5 sayfaya kadar yapı",
-                                                                 "mobileResponsive":  "Mobil uyumlu tasarım",
-                                                                 "contactForm":  "İletişim formu",
-                                                                 "facebookPixel":  "Facebook Pixel",
-                                                                 "favicon":  "Tarayıcı simgesi (Favicon)",
-                                                                 "whatsappIntegration":  "WhatsApp entegrasyonu",
-                                                                 "basicSeo":  "Temel SEO uyumluluğu",
-                                                                 "imageOptimization":  "Görsel optimizasyonu",
-                                                                 "speedOptimization":  "Hızlı açılış optimizasyonu",
-                                                                 "security":  "Güvenlik eklentileri",
-                                                                 "support3Months":  "3 aylık teknik destek",
-                                                                 "socialMedia3":  "Sosyal medya bağlantıları (3 sosyal medya)"
-                                                             },
-                                       "corporateAdditional":  {
-                                                                   "multilang":  "Çok dilli sistem",
-                                                                   "blogSystem":  "Blog sistemi",
-                                                                   "logoDesign":  "Logo tasarımı",
-                                                                   "faviconDesign":  "Tarayıcı simgesi hazırlanması",
-                                                                   "memberLogin":  "Üye girişi",
-                                                                   "faq":  "Sık sorulan sorular",
-                                                                   "teamPage":  "Ekip/çalışanlar sayfası",
-                                                                   "customAnimations":  "Özel animasyonlar",
-                                                                   "bookingSystem":  "Rezervasyon/sipariş sistemi",
-                                                                   "liveChat":  "Canlı sohbet sistemi",
-                                                                   "searchFunction":  "Arama fonksiyonu",
-                                                                   "blogWriting":  "Blog yazı hizmeti",
-                                                                   "advancedSeo":  "Ek SEO altyapısı",
-                                                                   "emailIntegration":  "E-posta entegrasyonu",
-                                                                   "googleAnalytics":  "Google Analytics",
-                                                                   "eventCalendar":  "Etkinlik takvimi",
-                                                                   "videoIntegration":  "Video entegrasyonu",
-                                                                   "extraPages":  "Ek sayfa",
-                                                                   "support1Year":  "1 yıllık teknik destek",
-                                                                   "apiIntegration":  "API entegrasyonu"
-                                                               },
-                                       "ecommerceIncludes":  {
-                                                                 "domainHosting":  "1 yıllık domain ve hosting",
-                                                                 "pages5":  "5 sayfaya kadar yapı",
-                                                                 "mobileResponsive":  "Mobil uyumlu tasarım",
-                                                                 "favicon":  "Tarayıcı simgesi",
-                                                                 "onlineStore":  "Online mağaza sistemi",
-                                                                 "productPlacement20":  "Ürün yerleştirme (20 ürün)",
-                                                                 "cartOrder":  "Sepet ve sipariş sistemi",
-                                                                 "facebookPixel":  "Facebook Pixel",
-                                                                 "metaTags":  "Meta etiketleri",
-                                                                 "socialMedia3":  "Sosyal medya bağlantıları (3 sosyal medya)",
-                                                                 "whatsappOrder":  "WhatsApp sipariş entegrasyonu",
-                                                                 "campaignDiscount":  "Kampanya ve indirim sistemi",
-                                                                 "basicSeo":  "Temel SEO optimizasyonu",
-                                                                 "adminPanel":  "Yönetim paneli"
-                                                             },
-                                       "ecommerceAdditional":  {
-                                                                   "cargoIntegration":  "Kargo entegrasyonu",
-                                                                   "multicurrency":  "Çok para birimli sistem",
-                                                                   "marketplace":  "Marketplace sistemi",
-                                                                   "productFilter":  "Ürün filtreleme sistemi",
-                                                                   "loyaltySystem":  "Müşteri sadakat sistemi",
-                                                                   "smsNotification":  "SMS bildirim sistemi",
-                                                                   "extraProducts":  "Ek ürün yerleştirme",
-                                                                   "premiumProductPage":  "Premium ürün sayfası tasarımı",
-                                                                   "instagramShop":  "Instagram Shop entegrasyonu",
-                                                                   "support1Year":  "1 yıllık teknik destek",
-                                                                   "apiIntegration":  "API entegrasyonu",
-                                                                   "blogSystem":  "Blog sistemi",
-                                                                   "logoDesign":  "Logo tasarımı",
-                                                                   "memberLogin":  "Üye Girişi",
-                                                                   "faq":  "Sık sorulan sorular",
-                                                                   "teamPage":  "Ekip/çalışanlar sayfası",
-                                                                   "customAnimations":  "Özel animasyonlar",
-                                                                   "liveChat":  "Canlı sohbet sistemi",
-                                                                   "productSearch":  "Ürün arama fonksiyonu",
-                                                                   "blogWriting":  "Blog yazı hizmeti",
-                                                                   "advancedSeo":  "Ek SEO altyapısı",
-                                                                   "emailIntegration":  "E-posta entegrasyonu",
-                                                                   "googleAnalytics":  "Google Analytics",
-                                                                   "eventCalendar":  "Etkinlik takvimi",
-                                                                   "faviconDesign":  "Tarayıcı simgesi hazırlanması",
-                                                                   "productComparison":  "Ürün karşılaştırması",
-                                                                   "productVariants":  "Ürün varyantları",
-                                                                   "productFilters":  "Ürün filtreleri",
-                                                                   "localBankIntegration":  "Yerel Banka entegrasyonu",
-                                                                   "paypalIntegration":  "Paypal/Payoneer/Stripe entegrasyonu",
-                                                                   "productZoom":  "Ürün büyütme",
-                                                                   "relatedProducts":  "İlgili ürünler",
-                                                                   "ratingSystem":  "Değerlendirme sistemi",
-                                                                   "stockAlerts":  "Stok uyarıları",
-                                                                   "productReviews":  "Ürün yorumları",
-                                                                   "salesReports":  "Satış raporları",
-                                                                   "deliveryTracking":  "Teslimat takibi",
-                                                                   "orderHistory":  "Sipariş geçmişi",
-                                                                   "wishlist":  "Beğenilen ürün listesi",
-                                                                   "videoIntegration":  "Video Entegrasyonu",
-                                                                   "inventoryTracking":  "Envanter takibi",
-                                                                   "flatShipping":  "Sabit fiyat teslimat",
-                                                                   "weightShipping":  "Ağırlığa göre teslimat",
-                                                                   "distanceShipping":  "Mesafeye göre teslimat",
-                                                                   "discountCodes":  "İndirim kodları",
-                                                                   "saveCart":  "Sepeti kaydet",
-                                                                   "emailNotifications":  "E-posta bildirimleri",
-                                                                   "competitorAnalysis":  "Rakip Analizi",
-                                                                   "googleBusiness":  "Google My Business",
-                                                                   "xmlSitemap":  "XML site haritası",
-                                                                   "onpageSeo":  "Sayfa içi SEO",
-                                                                   "localSeo":  "Yerel SEO",
-                                                                   "categorySystem":  "Kategori sistemi",
-                                                                   "schemaMarkup":  "Yapılandırılmış veri işaretlemesi (Schema kodlama)",
-                                                                   "extraPages":  "Ek sayfa"
-                                                               },
-                                       "corporateRequirements":  "Kurumsal web sitesi geliştirme için müşteri logo ve marka materyalleri, site metinleri ve medya dosyaları, iletişim bilgileri, sosyal medya bağlantıları ve gerekli teknik entegrasyon bilgilerini sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
-                                       "ecommerceRequirements":  "E-ticaret sitesi geliştirme için müşteri ürün bilgileri (ad, fiyat, açıklama), ürün görselleri, logo ve marka materyalleri, teslimat ve ödeme bilgileri, iletişim ve sosyal medya bağlantılarını sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
-                                       "corporateFaqQ1":  "Kurumsal web sitesi ne kadar sürede tamamlanır?",
-                                       "corporateFaqA1":  "Standart teslimat süresi 21-30 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
-                                       "corporateFaqQ2":  "Domain ve hosting hizmeti dahil mi?",
-                                       "corporateFaqA2":  "Evet, 1 yıllık domain ve hosting hizmeti fiyata dahildir.",
-                                       "corporateFaqQ3":  "Teknik destek nasıl çalışır?",
-                                       "corporateFaqA3":  "3 aylık ücretsiz teknik destek dahildir. 1 yıllık destek ek olarak sipariş edilebilir.",
-                                       "ecommerceFaqQ1":  "E-ticaret sitesi ne kadar sürede tamamlanır?",
-                                       "ecommerceFaqA1":  "Standart teslimat süresi 30-45 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
-                                       "ecommerceFaqQ2":  "Ödeme sistemleri entegre ediliyor mu?",
-                                       "ecommerceFaqA2":  "Yerel banka, Paypal, Stripe ve diğer ödeme sistemleri ek hizmet olarak entegre edilebilir.",
-                                       "ecommerceFaqQ3":  "Ürün sayısı artırılabilir mi?",
-                                       "ecommerceFaqA3":  "Evet, ek ürün yerleştirme hizmeti ile istenen sayıda ürün eklenebilir."
-                                   },
-                       "mobileApp":  {
-                                         "title":  "Mobil Uygulama Geliştirme",
-                                         "basePrice":  "Temel Fiyat",
-                                         "screenCount":  "Ekran Sayısı",
-                                         "screens":  "ekran",
-                                         "designComplexity":  "Tasarım Karmaşıklığı",
-                                         "supportPackage":  "Destek Paketi",
-                                         "features":  "Özellikler",
-                                         "includedServices":  "Dahil Edilen Hizmetler",
-                                         "additionalFeatures":  "Ek Özellikler",
-                                         "totalAmount":  "Toplam Tutar",
-                                         "monthly":  "aylık",
-                                         "yearly":  "yıllık",
-                                         "free":  "Ücretsiz",
-                                         "included":  "Dahil",
-                                         "taxIncluded":  "* Vergi dahildir",
-                                         "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti!",
-                                         "orderNow":  "Sipariş Ver",
-                                         "discount":  "İndirim",
-                                         "discountCoupon":  "İndirim Kuponu",
-                                         "enterCouponCode":  "Kupon kodunu girin",
-                                         "applyCoupon":  "Uygula",
-                                         "cancelCoupon":  "İptal",
-                                         "invalidCoupon":  "Geçersiz kupon kodu",
-                                         "monthlyPaymentOption":  "Ödeme Seçeneği",
-                                         "paymentOptions":  {
-                                                                "fullPayment":  "Tam Ödeme",
-                                                                "monthlyPayment":  "Aylık Ödeme",
-                                                                "3months":  "3 ay",
-                                                                "6months":  "6 ay",
-                                                                "12months":  "12 ay"
-                                                            },
-                                         "initialPayment":  "İlk Ödeme",
-                                         "months":  "ay",
-                                         "interestFree":  "Faizsiz",
-                                         "designOptions":  {
-                                                               "custom":  "Özel Tasarım (Ücretsiz)",
-                                                               "premium":  "Premium Tasarım"
-                                                           },
-                                         "supportPackages":  {
-                                                                 "basic":  "Temel (Ücretsiz)",
-                                                                 "premium":  "Premium (Yıllık 2500 AZN)"
-                                                             },
-                                         "basicSupportDetails":  [
-                                                                     "3 aylık teknik destek",
-                                                                     "Sistem kontrolü",
-                                                                     "Küçük teknik düzeltmeler",
-                                                                     "Güvenlik izleme",
-                                                                     "Kullanım kılavuzu",
-                                                                     "E-posta desteği",
-                                                                     "Temel yedekleme hizmeti",
-                                                                     "Temel performans kontrolü"
-                                                                 ],
-                                         "premiumSupportDetails":  [
-                                                                       "7/24 öncelikli teknik destek",
-                                                                       "Tam teknik yönetim",
-                                                                       "Gerçek zamanlı sistem izleme",
-                                                                       "Günlük otomatik yedekleme",
-                                                                       "Gelişmiş güvenlik sistemi",
-                                                                       "Sunucu ve performans optimizasyonu",
-                                                                       "Veritabanı optimizasyonu",
-                                                                       "Çökme ve hata izleme",
-                                                                       "API ve üçüncü taraf entegrasyon yönetimi",
-                                                                       "SEO teknik izleme",
-                                                                       "Aylık teknik rapor",
-                                                                       "Küçük fonksiyonel güncellemeler",
-                                                                       "Öncelikli düzeltme hizmeti",
-                                                                       "6-12 saat yanıt süresi"
-                                                                   ],
-                                         "includedItems":  {
-                                                               "freeDomainHosting":  "Ücretsiz Domain ve Hosting",
-                                                               "support247":  "24/7 Destek",
-                                                               "warranty":  "1 Yıl Garanti",
-                                                               "pushNotifications":  "Push Bildirimleri",
-                                                               "socialLogin":  "Sosyal Medya Girişi",
-                                                               "appAnalytics":  "Uygulama Analitiği"
-                                                           },
-                                         "additionalFeaturesList":  {
-                                                                        "pushNotifications":  "Push Bildirimleri",
-                                                                        "offlineMode":  "Çevrimdışı Mod",
-                                                                        "biometricLogin":  "Biyometrik Giriş",
-                                                                        "inAppPurchase":  "Uygulama İçi Satın Alma",
-                                                                        "socialLogin":  "Sosyal Medya Girişi",
-                                                                        "cameraIntegration":  "Kamera Entegrasyonu",
-                                                                        "geolocation":  "Coğrafi Konum",
-                                                                        "chatFeature":  "Sohbet Özelliği",
-                                                                        "cloudSync":  "Bulut Senkronizasyonu",
-                                                                        "appAnalytics":  "Uygulama Analitiği",
-                                                                        "appStoreSetup":  "App Store Kurulumu",
-                                                                        "googlePlaySetup":  "Google Play Kurulumu",
-                                                                        "appUpdatesYearly":  "Uygulama Güncellemeleri (yıllık)"
-                                                                    },
-                                         "serviceRequirements":  "Hizmet Gereksinimleri",
-                                         "requirementsList":  {
-                                                                  "appIdea":  "Uygulama fikri ve amacı",
-                                                                  "targetAudience":  "Hedef kitle bilgileri",
-                                                                  "designPreferences":  "Tasarım tercihleri ve marka materyalleri",
-                                                                  "contentMaterials":  "İçerik materyalleri (metinler, görseller, videolar)",
-                                                                  "apiDocumentation":  "API dokümantasyonu (entegrasyon gerekiyorsa)",
-                                                                  "accountCredentials":  "App Store ve Google Play hesap bilgileri"
-                                                              },
-                                         "faq":  "Sık Sorulan Sorular",
-                                         "faqQ1":  "Mobil uygulama geliştirme ne kadar sürer?",
-                                         "faqA1":  "Standart teslimat süresi uygulamanın karmaşıklığına bağlı olarak 8-16 haftadır. Basit uygulamalar 8-10 hafta, karmaşık uygulamalar 12-16 hafta sürer.",
-                                         "faqQ2":  "iOS ve Android için ayrı ödeme yapmam gerekir mi?",
-                                         "faqA2":  "Hayır, fiyat her iki platform için cross-platform teknolojisi (React Native/Flutter) ile geliştirilmiş uygulamayı içerir.",
-                                         "faqQ3":  "Uygulama mağazalarına yükleme dahil mi?",
-                                         "faqA3":  "App Store Kurulumu ve Google Play Kurulumu hizmetleri ek olarak sipariş edilmelidir. Bu hizmetler uygulamanın mağazalara yüklenmesini ve onaylanmasını sağlar.",
-                                         "faqQ4":  "Teknik destek nasıl çalışır?",
-                                         "faqA4":  "Seçtiğiniz destek paketine bağlı olarak aylık teknik destek sağlanır. Temel paket ücretsizdir ve temel hata düzeltmelerini kapsar."
-                                     },
-                       "digitalAds":  {
-                                          "title":  "Dijital Reklamcılık",
-                                          "platformSelection":  "Platform Seçimi",
-                                          "metaAds":  "Meta Reklamları (Facebook \u0026 Instagram)",
-                                          "googleAds":  "Google Reklamları",
-                                          "tiktokAds":  "TikTok Reklamları",
-                                          "linkedinAds":  "LinkedIn Reklamları",
-                                          "includedServices":  "Dahil edilen hizmetler",
-                                          "additionalServices":  "Ek Hizmetler",
-                                          "totalAmount":  "Toplam tutar",
-                                          "monthly":  "aylık",
-                                          "perUnit":  "adet",
-                                          "taxIncluded":  "* Vergi dahil",
-                                          "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
-                                          "orderNow":  "Şimdi Sipariş Ver",
-                                          "discountCoupon":  "İndirim Kuponu",
-                                          "enterCouponCode":  "Kupon kodunu girin",
-                                          "applyCoupon":  "Uygula",
-                                          "cancelCoupon":  "İptal",
-                                          "discount":  "İndirim",
-                                          "invalidCoupon":  "Geçersiz kupon kodu!",
-                                          "serviceRequirements":  "Hizmet Gereksinimleri",
-                                          "faq":  "Sık Sorulan Sorular",
-                                          "faqQ1":  "Reklam kampanyası kaç günde başlar?",
-                                          "faqA1":  "Reklam kampanyaları 24-48 saat içinde başlar. Acil kampanyalar için ek ödeme gereklidir.",
-                                          "faqQ2":  "Reklam bütçesi ne kadar olmalı?",
-                                          "faqA2":  "Minimum reklam bütçesi günlük 10 AZN\u0027dir. Optimal sonuçlar için günlük 30-50 AZN öneriyoruz.",
-                                          "faqQ3":  "Sonuçları nasıl takip edebilirim?",
-                                          "faqA3":  "Aylık raporlar ve gerçek zamanlı istatistikler sağlıyoruz. Ayrıca WhatsApp üzerinden günlük güncellemeler gönderiyoruz.",
-                                          "metaAdsName":  "Meta Reklamları (Facebook \u0026 Instagram)",
-                                          "metaAdsDescription":  "Facebook ve Instagram reklamcılığı",
-                                          "googleAdsName":  "Google Reklamları",
-                                          "googleAdsDescription":  "Google Ads ve Arama reklamcılığı",
-                                          "tiktokAdsName":  "TikTok Reklamları",
-                                          "tiktokAdsDescription":  "TikTok Ads ve video reklamcılığı",
-                                          "linkedinAdsName":  "LinkedIn Reklamları",
-                                          "linkedinAdsDescription":  "LinkedIn B2B reklamcılığı",
-                                          "oneTime":  "Tek seferlik",
-                                          "additionalPayments":  "Ek ödemeler",
-                                          "serviceRequirementsItems":  {
-                                                                           "companyInfo":  "Şirket bilgileri ve logo",
-                                                                           "targetAudience":  "Hedef kitle bilgileri",
-                                                                           "productImages":  "Ürün/hizmet görselleri",
-                                                                           "adBudget":  "Reklam bütçesi (minimum 300 AZN/ay)",
-                                                                           "website":  "Web sitesi veya açılış sayfası",
-                                                                           "contactInfo":  "İletişim bilgileri ve sosyal medya hesapları"
-                                                                       },
-                                          "metaIncludes":  {
-                                                               "businessManager":  "Meta Business Manager kurulumu",
-                                                               "adAccount":  "Reklam hesabı oluşturma",
-                                                               "pixelSetup":  "Pixel entegrasyonu",
-                                                               "campaign":  "1 reklam kampanyası",
-                                                               "targeting":  "Hedef kitle belirleme",
-                                                               "creatives":  "3 reklam kreatifi (video veya görsel)",
-                                                               "adCopy":  "Reklam metni yazımı",
-                                                               "optimization":  "Günlük optimizasyon",
-                                                               "report":  "Aylık rapor"
-                                                           },
-                                          "googleIncludes":  {
-                                                                 "accountSetup":  "Google Ads hesabı kurulumu",
-                                                                 "searchCampaign":  "Arama reklam kampanyası",
-                                                                 "keywordResearch":  "Anahtar kelime araştırması",
-                                                                 "negativeKeywords":  "Negatif anahtar kelime optimizasyonu",
-                                                                 "adGroups":  "2 reklam grubu",
-                                                                 "adCopy":  "Reklam metni hazırlama",
-                                                                 "conversionTracking":  "Dönüşüm takibi",
-                                                                 "monthlyReport":  "Aylık optimizasyon ve rapor"
-                                                             },
-                                          "tiktokIncludes":  {
-                                                                 "accountSetup":  "TikTok Ads hesabı kurulumu",
-                                                                 "pixelIntegration":  "Pixel entegrasyonu",
-                                                                 "campaign":  "1 reklam kampanyası",
-                                                                 "audienceAnalysis":  "Hedef kitle analizi",
-                                                                 "videoCreatives":  "3 video kreatif",
-                                                                 "optimization":  "Reklam optimizasyonu",
-                                                                 "monthlyReport":  "Aylık rapor"
-                                                             },
-                                          "linkedinIncludes":  {
-                                                                   "campaignManager":  "LinkedIn Campaign Manager kurulumu",
-                                                                   "b2bTargeting":  "B2B hedef kitle belirleme",
-                                                                   "leadGenCampaign":  "Potansiyel Müşteri Toplama Kampanyası",
-                                                                   "sponsoredPosts":  "Sponsorlu gönderi reklamları",
-                                                                   "adCopy":  "Reklam metni hazırlama",
-                                                                   "monthlyOptimization":  "Aylık optimizasyon",
-                                                                   "reportPresentation":  "Rapor sunumu"
-                                                               },
-                                          "metaAdditional":  {
-                                                                 "extraCampaign":  "Ek reklam kampanyası",
-                                                                 "extraCreative":  "Ek reklam kreatifi",
-                                                                 "reelsEditing":  "Reels montajı",
-                                                                 "motionDesign":  "Motion tasarım reklamı",
-                                                                 "adCopywriting":  "Reklam metni yazımı",
-                                                                 "whatsappCatalog":  "WhatsApp katalog reklamı",
-                                                                 "ecommerceCatalog":  "E-ticaret katalog reklamı",
-                                                                 "softwareAd":  "Yazılım reklamı",
-                                                                 "pixelSetup":  "Meta Pixel kurulumu",
-                                                                 "conversionApi":  "Conversion API entegrasyonu",
-                                                                 "dmService":  "DM yanıtlama hizmeti",
-                                                                 "influencerManagement":  "Influencer işbirliği yönetimi",
-                                                                 "abTesting":  "A/B test optimizasyonu"
-                                                             },
-                                          "googleAdditional":  {
-                                                                   "displayBanners":  "Display reklam bannerları",
-                                                                   "tagManager":  "Google Tag Manager kurulumu",
-                                                                   "conversionTracking":  "Dönüşüm takibi",
-                                                                   "analytics4":  "Google Analytics 4 entegrasyonu",
-                                                                   "youtubeSetup":  "YouTube reklam kurulumu",
-                                                                   "remarketingCampaign":  "Yeniden pazarlama kampanyası",
-                                                                   "keywordResearch":  "Anahtar kelime araştırması (kapsamlı)",
-                                                                   "landingPageAnalysis":  "Açılış sayfası analizi",
-                                                                   "seoAudit":  "SEO denetimi"
-                                                               },
-                                          "tiktokAdditional":  {
-                                                                   "videoEditing":  "TikTok video montajı",
-                                                                   "ugcScript":  "UGC içerik senaryosu",
-                                                                   "viralPlanning":  "Viral içerik planlaması",
-                                                                   "pixelSetup":  "TikTok Pixel kurulumu",
-                                                                   "creatorFinding":  "İçerik üreticisi/influencer bulma",
-                                                                   "trendResearch":  "Trend araştırması",
-                                                                   "shopIntegration":  "TikTok shop entegrasyonu"
-                                                               },
-                                          "linkedinAdditional":  {
-                                                                     "pageOptimization":  "LinkedIn şirket sayfası optimizasyonu",
-                                                                     "b2bLeadStrategy":  "B2B Potansiyel Müşteri Stratejisi",
-                                                                     "corporateCopy":  "Kurumsal metin yazımı",
-                                                                     "employerBranding":  "İşveren Markası Stratejisi",
-                                                                     "leadFormSetup":  "Potansiyel Müşteri Formu Kurulumu",
-                                                                     "ceoPersonalBrand":  "CEO Kişisel Marka Yönetimi",
-                                                                     "contentPlan":  "LinkedIn içerik planı"
-                                                                 }
-                                      },
-                       "videoEditing":  {
-                                            "title":  "Video Montaj",
-                                            "videoType":  "Video Türü",
-                                            "shortVideo":  "Kısa Video (Reels/Shorts)",
-                                            "longVideo":  "Uzun Video (YouTube)",
-                                            "basePrice":  "Temel fiyat",
-                                            "freeDuration":  "ücretsiz",
-                                            "videoDuration":  "Video Süresi",
-                                            "firstMinuteFree":  "İlk 1 dakika ücretsiz",
-                                            "next15SecFor3AZN":  "Sonraki her 15 saniye için 3 AZN",
-                                            "first10MinFree":  "İlk 10 dakika ücretsiz",
-                                            "next5MinFor6AZN":  "Sonraki her 5 dakika için 6 AZN",
-                                            "includedServices":  "Dahil edilen hizmetler",
-                                            "basicServices":  {
-                                                                  "editing":  "Kesme ve montaj",
-                                                                  "transitions":  "Ritme uygun geçişler",
-                                                                  "basicColor":  "Temel renk düzeltme",
-                                                                  "music":  "Müzik ekleme",
-                                                                  "export1080p":  "1080P dışa aktarma",
-                                                                  "delivery24h":  "24 saat teslimat",
-                                                                  "separateFiles":  "Video ve ses dosyalarının ayrı teslimi",
-                                                                  "oneRevision":  "1 revizyon dahil",
-                                                                  "twoRevisions":  "2 revizyon dahil"
-                                                              },
-                                            "subtitleOptions":  "Altyazı Seçenekleri",
-                                            "basicSubtitle":  "Altyazı ekleme",
-                                            "dynamicSubtitle":  "Dinamik altyazılar (renkli, animasyonlu)",
-                                            "soundDesign":  "Ses Tasarımı",
-                                            "transitionSounds":  "Geçiş sesleri",
-                                            "cinematicEffects":  "Sinematik efektler",
-                                            "ambience":  "Ortam sesleri",
-                                            "bassHits":  "Bas vuruşları",
-                                            "motionGraphics":  "Motion Grafik / Animasyon",
-                                            "logoAnimation":  "Logo animasyonu",
-                                            "infoTexts":  "Bilgi metinleri",
-                                            "otherServices":  "Diğer Hizmetler",
-                                            "colorGrading":  "Profesyonel renk düzeltme (Color Grading)",
-                                            "additionalOptions":  "Ek Seçenekler",
-                                            "thumbnailCreation":  "Küçük resim oluşturma",
-                                            "fastDelivery8h":  "8 saat teslimat",
-                                            "export4K":  "4K dışa aktarma",
-                                            "presenterSelection":  "Sunucu (konuşmacı) seçimi",
-                                            "shortsFromLong":  "Uzun Videodan Shorts",
-                                            "shortsCount":  "shorts",
-                                            "per1MinShort":  "1 dakikalık short için 5 AZN",
-                                            "extraRevisions":  "Ek Revizyonlar",
-                                            "extraRevision":  "ek revizyon",
-                                            "perExtraRevision":  "Ek revizyon başına 3 AZN (1 revizyon ücretsiz dahil)",
-                                            "totalAmount":  "Toplam Tutar",
-                                            "taxIncluded":  "* Vergi dahil",
-                                            "discount":  "İndirim",
-                                            "orderNow":  "Şimdi Sipariş Ver",
-                                            "discountCoupon":  "İndirim Kuponu",
-                                            "enterCouponCode":  "Kupon kodunu girin",
-                                            "applyCoupon":  "Uygula",
-                                            "cancelCoupon":  "İptal",
-                                            "invalidCoupon":  "Geçersiz kupon kodu!",
-                                            "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
-                                            "fileRequirements":  "Dosya Gereksinimleri",
-                                            "videoMaterials":  "Video materyalleri: MP4, MOV, AVI formatı",
-                                            "images":  "Görseller: JPG, PNG (minimum 1920×1080 px)",
-                                            "logo":  "Logo: SVG veya PNG (şeffaf arka plan)",
-                                            "music":  "Müzik: MP3, WAV formatı (lisanslı)",
-                                            "text":  "Metin: Word belgesi veya Google Docs",
-                                            "colorCode":  "Renk kodu: HEX veya RGB formatı",
-                                            "faq":  "Sık Sorulan Sorular",
-                                            "faqQ1":  "Video kaç günde tamamlanır?",
-                                            "faqA1":  "Standart siparişler 24 saat içinde tamamlanır. Acil teslimat (8 saat) seçerseniz ek ödeme gereklidir.",
-                                            "faqQ2":  "Dosya hangi formatta teslim edilir?",
-                                            "faqA2":  "Standart teslimat 1080P MP4 formatındadır. 4K dışa aktarma için ek ödeme mevcuttur.",
-                                            "faqQ3":  "Revizyon hakkı var mı?",
-                                            "faqA3":  "Evet, her siparişe 1 ücretsiz revizyon dahildir. Ek revizyonlar her biri 3 AZN\u0027dir.",
-                                            "seconds":  "saniye",
-                                            "minutes":  "dakika",
-                                            "min":  "dk",
-                                            "sec":  "sn"
-                                        },
-                       "videoShooting":  {
-                                             "title":  "Video Çekim",
-                                             "videoType":  "Video Türü",
-                                             "shortVideoShooting":  "Kısa Video Çekim (Reels/Shorts)",
-                                             "longVideoShooting":  "Uzun Video Çekim (YouTube)",
-                                             "basePrice":  "Temel fiyat",
-                                             "upTo1HourIncluded":  "1 saate kadar çekim dahil",
-                                             "shootingDuration":  "Çekim Süresi",
-                                             "first1HourIncluded":  "İlk 1 saat dahil",
-                                             "nextHourFor25AZN":  "Sonraki her saat için 25 AZN",
-                                             "nextHourFor35AZN":  "Sonraki her saat için 35 AZN",
-                                             "includedServices":  "Dahil edilen hizmetler",
-                                             "basicServices":  {
-                                                                   "iphoneShooting":  "iPhone 17 Pro ile çekim",
-                                                                   "framePlanning":  "Kare planlaması",
-                                                                   "basicLighting":  "Temel aydınlatma kurulumu",
-                                                                   "stableVideo":  "Sabit video kaydı",
-                                                                   "quality1080p":  "1080P video kalitesi",
-                                                                   "multipleAngles":  "Birden fazla açı",
-                                                                   "stabilizer":  "Stabilizatör kullanımı",
-                                                                   "basicMic":  "Temel mikrofon",
-                                                                   "socialFormat":  "Sosyal medya uyumlu format",
-                                                                   "oneLocation":  "1 lokasyonda çekim",
-                                                                   "oneOperator":  "1 operatör",
-                                                                   "twoVideoEdits":  "2 video montaj (her biri 1 dk\u0027ya kadar)"
-                                                               },
-                                             "additionalOptions":  "Ek Seçenekler",
-                                             "options":  {
-                                                             "4k_shooting":  "Profesyonel kamera ile 4K çekim",
-                                                             "cinematic_effects":  "Sinematik görsel efekt ayarlamaları",
-                                                             "professional_lighting":  "Profesyonel aydınlatma kurulumu",
-                                                             "rgb_lighting":  "RGB aydınlatma efektleri",
-                                                             "professional_mic":  "Profesyonel mikrofon",
-                                                             "audio_setup":  "Ses temizleme için ses kurulumu",
-                                                             "script_preparation":  "Çekim senaryosu hazırlama",
-                                                             "video_planning":  "Video fikir planlaması",
-                                                             "studio_shooting":  "Stüdyoda çekim",
-                                                             "extra_location":  "Ek lokasyonda çekim",
-                                                             "same_day_shooting":  "Aynı gün çekim",
-                                                             "video_editing":  "Çekilen videoların montajı",
-                                                             "presenter_selection":  "Sunucu (konuşmacı) seçimi"
-                                                         },
-                                             "fileDelivery":  "Dosya Teslimi",
-                                             "delivery":  {
-                                                              "google_drive":  "Google Drive",
-                                                              "wetransfer":  "WeTransfer",
-                                                              "ssd_flash":  "SSD / Flash kart"
-                                                          },
-                                             "totalAmount":  "Toplam Tutar",
-                                             "taxIncluded":  "* Vergi dahil",
-                                             "orderNow":  "Şimdi Sipariş Ver",
-                                             "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
-                                             "fileRequirements":  "Dosya Gereksinimleri",
-                                             "requirements":  {
-                                                                  "logoElements":  "Logo ve marka öğeleri: SVG veya PNG formatı",
-                                                                  "transparentBg":  "Şeffaf arka plan tercih edilir",
-                                                                  "locationAddress":  "Lokasyon adresi",
-                                                                  "shootingPurpose":  "Çekim amacı (reklam, içerik, YouTube vb.)",
-                                                                  "targetAudience":  "Hedef kitle bilgisi"
-                                                              },
-                                             "faq":  "Sık Sorulan Sorular",
-                                             "faqQ1":  "Çekim kaç günde tamamlanır?",
-                                             "faqA1":  "Standart çekimler sipariş sonrası 2-3 iş günü içinde planlanır ve gerçekleştirilir.",
-                                             "faqQ2":  "Çekim için hangi ekipman kullanılır?",
-                                             "faqA2":  "iPhone 17 Pro, profesyonel stabilizatör, aydınlatma kurulumu ve mikrofon sistemi kullanılır. Ek ödeme ile profesyonel ekipman seçebilirsiniz.",
-                                             "faqQ3":  "Çekim sırasında neler dahil?",
-                                             "faqA3":  "Kare planlaması, temel aydınlatma kurulumu, birden fazla açı ve her biri 1 dakika olan 2 montajlanmış video dahildir.",
-                                             "minutes":  "dakika",
-                                             "hours":  "saat",
-                                             "min":  "dk",
-                                             "discount":  "İndirim",
-                                             "discountCoupon":  "İndirim Kuponu",
-                                             "enterCouponCode":  "Kupon kodunu girin",
-                                             "applyCoupon":  "Uygula",
-                                             "cancelCoupon":  "İptal"
-                                         },
-                       "socialMediaDesign":  {
-                                                 "title":  "Sosyal Medya Tasarımı",
-                                                 "generalRules":  "Genel Kurallar",
-                                                 "oneDesignOneContent":  "1 tasarım = 1 içerik",
-                                                 "revisionOneFree":  "Revizyon: 1 kez ücretsiz",
-                                                 "delivery24h":  "Teslimat: 24 saat (standart)",
-                                                 "platformSelection":  "Sosyal Medya Platformu Seçimi",
-                                                 "designTypes":  "Tasarım Türleri",
-                                                 "designCount":  "Tasarım Sayısı (1-100)",
-                                                 "pieces":  "adet",
-                                                 "additionalServices":  "Ek Hizmetler",
-                                                 "extraRevisions":  "Ek Revizyonlar",
-                                                 "extraRevision":  "ek revizyon",
-                                                 "perExtraRevision":  "Ek revizyon başına 5 AZN (1 tasarım için).",
-                                                 "totalAmount":  "Toplam Tutar",
-                                                 "taxIncluded":  "* Vergi dahil",
-                                                 "discount":  "İndirim",
-                                                 "discountCoupon":  "İndirim Kuponu",
-                                                 "enterCouponCode":  "Kupon kodunu girin",
-                                                 "applyCoupon":  "Uygula",
-                                                 "cancelCoupon":  "İptal",
-                                                 "invalidCoupon":  "Geçersiz kupon kodu!",
-                                                 "orderNow":  "Şimdi Sipariş Ver",
-                                                 "fileRequirements":  "Dosya Gereksinimleri",
-                                                 "faq":  "Sık Sorulan Sorular",
-                                                 "platforms":  {
-                                                                   "instagram":  {
-                                                                                     "content":  "Instagram içerik (1080×1350)",
-                                                                                     "reels_cover":  "Reels video kapak tasarımı",
-                                                                                     "story":  "Instagram hikaye (1080×1920)",
-                                                                                     "highlights":  "Instagram öne çıkanlar (seçilmiş hikayeler)",
-                                                                                     "carousel":  "Karusel içerik (5–10 slayt)"
-                                                                                 },
-                                                                   "facebook":  {
-                                                                                    "post":  "Facebook gönderi görseli (1200×630)",
-                                                                                    "ad":  "Facebook reklam tasarımı (1200×628)",
-                                                                                    "event_cover":  "Facebook etkinlik kapak görseli (1920×1080)",
-                                                                                    "cover":  "Facebook kapak görseli (851×315)"
-                                                                                },
-                                                                   "linkedin":  {
-                                                                                    "post":  "LinkedIn gönderisi (1200×1200)",
-                                                                                    "banner":  "LinkedIn banner (1584×396)",
-                                                                                    "article_cover":  "LinkedIn makale kapağı",
-                                                                                    "single_ad":  "LinkedIn tek görsel reklam (1200×627)"
-                                                                                },
-                                                                   "pinterest":  {
-                                                                                     "carousel_ad":  "Karusel Pinterest reklamı (1000×1500)",
-                                                                                     "pin":  "Pinterest pin tasarımı (2:3 oranı)"
-                                                                                 },
-                                                                   "tiktok":  {
-                                                                                  "video_cover":  "Video kapak tasarımı (1080×1920)"
-                                                                              },
-                                                                   "youtube":  {
-                                                                                   "channel_cover":  "Kanal kapak görseli (2560×1440)",
-                                                                                   "thumbnail":  "YouTube küçük resim (1280×720)"
-                                                                               },
-                                                                   "twitter":  {
-                                                                                   "cover":  "Kapak görseli (1500×500)",
-                                                                                   "content":  "İçerik tasarımı (1600×900)"
-                                                                               }
-                                                               },
-                                                 "services":  {
-                                                                  "custom_icons":  "Özel ikonlar/illüstrasyonlar",
-                                                                  "copywriting":  "Metin yazımı",
-                                                                  "template_files":  "Tasarım şablon dosyaları (PSD, Canva)",
-                                                                  "rush_delivery":  "Acil teslimat 8 saat"
-                                                              },
-                                                 "packagePrice":  "Paket fiyatı",
-                                                 "perDesign":  "(1 tasarım için)",
-                                                 "fileRequirementsItems":  {
-                                                                               "visualMaterials":  "Görsel materyaller: JPG veya PNG formatı, minimum 1080px veya daha yüksek kalite",
-                                                                               "textMaterials":  "Metin materyalleri: Word belgesi veya Google Docs formatı",
-                                                                               "brandElements":  "Marka öğeleri: Marka renk kodları (HEX veya RGB), Yazı tipi adları",
-                                                                               "logoIdentity":  "Logo ve kimlik: SVG (vektör) veya PNG formatı, şeffaf arka plan tercih edilir",
-                                                                               "referenceMaterials":  "Referans materyaller: Benzer tasarım örnekleri, istenen stil ve görsel yön"
-                                                                           },
-                                                 "faqItems":  {
-                                                                  "q1":  "Tasarım kaç günde tamamlanır?",
-                                                                  "a1":  "Standart siparişler 24 saat içinde tamamlanır. Acil siparişler 8 saat içinde tamamlanır.",
-                                                                  "q2":  "Dosya hangi formatta teslim edilir?",
-                                                                  "a2":  "PNG, JPG formatlarında teslim edilir. Talep edilirse PSD veya Canva şablonları da gönderilebilir.",
-                                                                  "q3":  "Revizyon hakkım var mı?",
-                                                                  "a3":  "Evet, her tasarım için 1 ücretsiz revizyon hakkınız var."
-                                                              },
-                                                 "professionalTeam":  "Profesyonel ekibimizle kaliteli sonuç garanti edilir!"
-                                             }
-                   },
-    "popup":  {
-                  "title":  "Rakipleriniz zaten önde.",
-                  "subtitle":  "Her gecikme, kaybedilen bir müşteri demektir. Ücretsiz danışmanlık alın, stratejinizi birlikte kuralım.",
-                  "cta":  "WhatsApp\u0027tan yazın",
-                  "dismiss":  "Şimdilik ilgilenmiyorum",
-                  "whatsappText":  "Merhaba! Ücretsiz pazarlama danışmanlığı almak istiyorum."
-              },
-    "about":  {
-                  "hero":  {
-                               "eyebrow":  "2020-dən bəri",
-                               "title":  "Rəqəmsal Marketinq Dünyasında",
-                               "titleAccent":  "Etibarlı",
-                               "titleEnd":  "Partneriniz.",
-                               "description":  "Cradex Agency MMC 2020-ci ildə Bakıda qurulmuş 360° marketinq agentliyidir. 6+ illik təcrübəmizlə 10+ sektorda fəaliyyət göstərir, 100+ müştəriyə 350+ uğurlu layihə təqdim etmişik.",
-                               "badges":  [
-                                              {
-                                                  "icon":  "CheckCircle2",
-                                                  "text":  "360° Marketinq Agentliyi"
-                                              },
-                                              {
-                                                  "icon":  "Users",
-                                                  "text":  "100+ Müştəri Məmnuniyyəti"
-                                              },
-                                              {
-                                                  "icon":  "TrendingUp",
-                                                  "text":  "350+ Uğurlu Layihə"
-                                              },
-                                              {
-                                                  "icon":  "Award",
-                                                  "text":  "10+ Sektorda Fəaliyyət"
-                                              }
-                                          ],
-                               "stats":  [
-                                             {
-                                                 "value":  6,
-                                                 "suffix":  "+",
-                                                 "label":  "İllik Agentlik Təcrübəsi"
-                                             },
-                                             {
-                                                 "value":  350,
-                                                 "suffix":  "+",
-                                                 "label":  "Uğurlu Layihə"
-                                             },
-                                             {
-                                                 "value":  100,
-                                                 "suffix":  "+",
-                                                 "label":  "Müştəri Məmnuniyyəti"
-                                             },
-                                             {
-                                                 "value":  10,
-                                                 "suffix":  "+",
-                                                 "label":  "Sektorda Fəaliyyət"
-                                             }
-                                         ]
-                           },
-                  "intro":  {
-                                "number":  "01",
-                                "subtitle":  "BİZ KİMİK",
-                                "title":  "Təcrübə və verilərə əsaslanan bir agentlik.",
-                                "cards":  [
-                                              {
-                                                  "id":  "mission",
-                                                  "number":  "01",
-                                                  "title":  "Missiyamız",
-                                                  "subtitle":  "360° MARKETİNQ HƏLLƏR",
-                                                  "description":  "Cradex Agency MMC olaraq missiyamız, müəssisələrin rəqəmsal dünyada böyüməsinə 360° marketinq həlləri ilə dəstək olmaqdır. SEO, SMM, Veb Dizayn, Brendinq, Qrafik Dizayn və Copywriting xidmətlərimizlə brendlərin potensialını reallaşdırır, ölçülə bilən nəticələr təqdim edirik.\n\n2020-ci ildən bəri 10+ sektorda 100+ müştəriyə xidmət göstərərək 350+ uğurlu layihə həyata keçirdik."
-                                              },
-                                              {
-                                                  "id":  "vision",
-                                                  "number":  "02",
-                                                  "title":  "Vizyonumuz",
-                                                  "subtitle":  "AZƏRBAYCANDA LİDER RƏQƏMSAL MARKETİNQ AGENTLİYİ",
-                                                  "description":  "Vizyonumuz, Azərbaycanda ən etibarlı və innovativ rəqəmsal marketinq agentliyi olmaq, müştərilərimizin uğurunu öz uğurumuzu hesab etməkdir.\n\nDaimi inkişaf edən rəqəmsal dünyada müştərilərimizə ən son texnologiyalar və strategiyalarla xidmət göstərərək, sektorda standartları müəyyənləşdirən agentlik olmağı hədəfləyirik."
-                                              },
-                                              {
-                                                  "id":  "journey",
-                                                  "number":  "03",
-                                                  "title":  "Bizim Yolumuz",
-                                                  "subtitle":  "2020-DƏN BU YANA DAVARLI İNKİŞAF",
-                                                  "description":  "2020-ci ildə Bakıda qurulan Cradex Agency MMC, 6 il ərzində Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən birinə çevrildi.\n\n350+ uğurlu layihə, 100+ məmnun müştəri və 10+ sektorda fəaliyyətlə sübut etdik ki, keyfiyyətli xidmət və nəticəyönlü yanaşma uğurun açarıdır."
-                                              },
-                                              {
-                                                  "id":  "flexibility",
-                                                  "number":  "04",
-                                                  "title":  "Yanaşmamız",
-                                                  "subtitle":  "360° İNTEQRASİYALI STRATEGİYA",
-                                                  "description":  "Biz sadəcə xidmət göstərmirik - tərəfdaş oluruq. Hər müştəri ilə uzunmüddətli əməkdaşlıq quraraq, onların məqsədlərinə çatmaq üçün fərdi strategiyalar hazırlayırıq.\n\n360° yanaşmamız sayəsində brendinizin bütün rəqəmsal toxunma nöqtələrini vahid strategiya altında birləşdirir, maksimum nəticə əldə edirik."
-                                              }
-                                          ]
-                            },
-                  "values":  {
-                                 "number":  "02",
-                                 "subtitle":  "ƏSASLARIMIZ",
-                                 "title":  "Bizi 6 ildən bəri",
-                                 "titleAccent":  "güclü",
-                                 "titleEnd":  "edən dəyərlər.",
-                                 "description":  "Cradex Agency MMC-ni 6 ildən bəri güclü edən əsas 6 dəyərlərimiz.",
-                                 "items":  [
-                                               {
-                                                   "id":  "transparency",
-                                                   "icon":  "Shield",
-                                                   "title":  "Şəffaflıq",
-                                                   "description":  "Müştərilərimizlə hər işdə və dizayn mərhələsində en yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
-                                               },
-                                               {
-                                                   "id":  "quality",
-                                                   "icon":  "Award",
-                                                   "title":  "Keyfiyyət",
-                                                   "description":  "Hər layihədə və dizayn mərhələsində ən yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
-                                               },
-                                               {
-                                                   "id":  "innovation",
-                                                   "icon":  "Lightbulb",
-                                                   "title":  "Yenilik",
-                                                   "description":  "Yapay zeka və avtnom texnologiyalar ilə daimi yenilik və inteqrasiya edirik."
-                                               },
-                                               {
-                                                   "id":  "partnership",
-                                                   "icon":  "Handshake",
-                                                   "title":  "Müştəri Mərkəzlilik",
-                                                   "description":  "Müştərilərimizin uğuru və gəlir ərtım bizim ən böyük motivasiyadır."
-                                               },
-                                               {
-                                                   "id":  "teamwork",
-                                                   "icon":  "Users",
-                                                   "title":  "Komanda İşləmə",
-                                                   "description":  "Təcrübəli və sertifikalı komandamızla kollektiv şəklə güçlü komanda ruhuna əməl kollektiv əliylə mükəmməl edik."
-                                               },
-                                               {
-                                                   "id":  "ethics",
-                                                   "icon":  "Heart",
-                                                   "title":  "Etika",
-                                                   "description":  "Bütün marketinq fəaliyyətlərimizlə qanunlara, məlumatlarə və etik dəyərlərə qanunlara əməl edirik."
-                                               }
-                                           ]
-                             },
-                  "timeline":  {
-                                   "number":  "03",
-                                   "subtitle":  "RƏQƏMSAL TARİXÇƏMİZ",
-                                   "title":  "2020-dən bu yana",
-                                   "titleAccent":  "daimi inkişaf",
-                                   "titleEnd":  "və böyümə səyahəti.",
-                                   "events":  [
-                                                  {
-                                                      "year":  "2020",
-                                                      "title":  "Cradex Agency MMC-nin Təsisi",
-                                                      "description":  "Cradex Agency MMC, Bakıda 360° rəqəmsal marketinq agentliyi olaraq fəaliyyətə başladı. İlk müştərilərimizlə güvən əlaqələri quraraq, bazarda yerləşdik."
-                                                  },
-                                                  {
-                                                      "year":  "2021",
-                                                      "title":  "Xidmət Portfelinin Genişləndirilməsi",
-                                                      "description":  "SEO, SMM, Veb Dizayn xidmətlərimizə Brendinq, Qrafik Dizayn və Copywriting xidmətlərini əlavə edərək 360° marketinq agentliyinə çevrildik. 50+ uğurlu layihə tamamladıq."
-                                                  },
-                                                  {
-                                                      "year":  "2022",
-                                                      "title":  "100+ Layihə Milestone",
-                                                      "description":  "İlk 100 layihəmizi uğurla tamamlayaraq, müştəri portfelimizi genişləndirdik. 5+ sektorda fəaliyyət göstərməyə başladıq və komandamızı güclləndirdik."
-                                                  },
-                                                  {
-                                                      "year":  "2023",
-                                                      "title":  "Korporativ Müştərilər və Sertifikasiyalar",
-                                                      "description":  "Böyük korporativ müştərilərlə əməkdaşlığa başladıq. Google və Meta sertifikatları əldə edərək, peşəkar standartlarımızı təsdiqlədi k. 200+ layihə sayına çatdıq."
-                                                  },
-                                                  {
-                                                      "year":  "2024",
-                                                      "title":  "Regional Genişlənmə",
-                                                      "description":  "Xidmət sahəmizi genişləndirərək 10+ sektorda fəaliyyət göstərməyə başladıq. 300+ layihə milestone-unu keçdik və 100+ müştəri məmnuniyyəti əldə etdik."
-                                                  },
-                                                  {
-                                                      "year":  "2025",
-                                                      "title":  "350+ Layihə və Gələcək Vizyon",
-                                                      "description":  "350+ uğurlu layihə ilə Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən biri olduk. Yeni texnologiyalar və AI inteqrasiyası ilə xidmət keyfiyyətimizi daha da artırırıq."
-                                                  }
-                                              ],
-                                   "archiveLink":  ""
-                               },
-                  "services":  {
-                      "number":  "04",
-                      "subtitle":  "HİZMETLERİMİZ",
-                      "title":  "Dijital dünyada",
-                      "titleAccent":  "ihtiyacınız olan her şey",
-                      "titleEnd":  "",
-                      "description":  "2020'den bu yana 360° yaklaşımla markanızın tüm dijital ihtiyaçlarını tek çatı altında birleştiriyoruz.",
-                      "ctaLabel":  "Tüm hizmetleri gör",
-                      "items":  [
-                          {
-                              "id":  "seo",
-                              "icon":  "Search",
-                              "title":  "SEO Optimizasyonu",
-                              "description":  "Google'da üst sıralara çıkın. Teknik SEO, anahtar kelime stratejisi ve içerik optimizasyonu ile organik trafiği artırıyoruz.",
-                              "href":  "/services/digital-marketing"
-                          },
-                          {
-                              "id":  "smm",
-                              "icon":  "Share2",
-                              "title":  "Sosyal Medya Pazarlaması",
-                              "description":  "Instagram, Facebook, TikTok ve LinkedIn'de etkileyici sosyal medya yönetimiyle markanızı güçlendiriyoruz.",
-                              "href":  "/services/smm"
-                          },
-                          {
-                              "id":  "web",
-                              "icon":  "Globe",
-                              "title":  "Web Sitesi Geliştirme",
-                              "description":  "Hızlı, modern ve SEO dostu web siteleri, e-ticaret platformları ve landing page'ler hazırlıyoruz.",
-                              "href":  "/services/web-mobile-dev"
-                          },
-                          {
-                              "id":  "graphic",
-                              "icon":  "Palette",
-                              "title":  "Grafik ve Motion Tasarım",
-                              "description":  "Logo, kurumsal kimlik, banner, animasyon ve tüm görsel materyaller — markanızın görsel dili güvende.",
-                              "href":  "/services/graphic-motion-design"
-                          },
-                          {
-                              "id":  "video",
-                              "icon":  "Video",
-                              "title":  "Video Montaj",
-                              "description":  "Reklam videoları, YouTube içerikleri, Reels ve kurumsal videolar için profesyonel montaj hizmeti.",
-                              "href":  "/services/photo-video"
-                          },
-                          {
-                              "id":  "copywriting",
-                              "icon":  "PenTool",
-                              "title":  "Metin Yazarlığı",
-                              "description":  "Satış odaklı metinler, SEO içerikleri, blog makaleleri ve sosyal medya metinleri yazıyoruz.",
-                              "href":  "/services/copywriting"
-                          },
-                          {
-                              "id":  "ads",
-                              "icon":  "Megaphone",
-                              "title":  "Reklam Kampanyaları",
-                              "description":  "Google Ads, Meta Ads, TikTok Ads — maksimum ROI için hedefli reklam kampanyaları.",
-                              "href":  "/services/digital-marketing"
-                          },
-                          {
-                              "id":  "branding",
-                              "icon":  "Layers",
-                              "title":  "Markalama",
-                              "description":  "Marka stratejisi, görsel kimlik ve stil rehberi — güçlü bir marka inşa etmek için gereken her şey.",
-                              "href":  "/services/branding"
-                          },
-                          {
-                              "id":  "photo",
-                              "icon":  "Camera",
-                              "title":  "Fotoğraf Çekimi",
-                              "description":  "Ticari fotoğraf çekimi, ürün fotoğrafçılığı ve kurumsal portre çekimleri.",
-                              "href":  "/services/photo-video"
-                          }
-                      ]
-                  },
-                  "cta":  {
-                              "title":  "Hekayəmizin bir",
-                              "titleAccent":  "parçası",
-                              "titleEnd":  "olun.",
-                              "description":  "Bizə hədəflərinizi bildirin, növbəti uğur hekayəsini birlikdə yazaraq.",
-                              "primaryButton":  "Bizimlə Əlaqə",
-                              "stats":  [
-                                            {
-                                                "value":  350,
-                                                "suffix":  "+",
-                                                "label":  "Uğurlu Layihə"
-                                            },
-                                            {
-                                                "value":  6,
-                                                "suffix":  "+",
-                                                "label":  "İllik Təcrübə"
-                                            },
-                                            {
-                                                "value":  100,
-                                                "suffix":  "%",
-                                                "label":  "Müştəri Məmnuniyyəti"
-                                            }
-                                        ]
-                          }
-              }
+  "common": {
+    "cta": {
+      "whatsapp": "WhatsApp ile İletişim",
+      "getQuote": "Teklif Al",
+      "freeConsultation": "Ücretsiz Danışmanlık",
+      "learnMore": "Daha Fazla",
+      "viewAll": "Tümünü Gör",
+      "sendMessage": "Gönder",
+      "startProject": "Projeye Başla",
+      "orderService": "Bu hizmeti sipariş et"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımızda",
+      "services": "Hizmetler",
+      "journal": "Blog",
+      "calculator": "Hesaplayıcı",
+      "portfolio": "Portföy",
+      "contact": "İletişim"
+    },
+    "errors": {
+      "required": "Bu alan zorunludur",
+      "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+      "serverError": "Bir hata oluştu, lütfen tekrar deneyin",
+      "minService": "Lütfen en az bir hizmet seçin",
+      "notFound": "Sayfa bulunamadı"
+    },
+    "language": {
+      "az": "Azərbaycan",
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "360° Performans Pazarlama Ajansı",
+      "title": "Cradex Agency ile Markanızı Büyütün",
+      "subtitle": "zamanında, şeffaf fiyatlarla.",
+      "subtitleAccent": "sonuç odaklı strateji, ölçülebilir büyüme.",
+      "cta": "Ücretsiz danışmanlık al",
+      "secondaryCta": "Hizmetlerimiz",
+      "googleReviews": "Google Yorumları",
+      "verifiedPartner": "Onaylı İş Ortağı",
+      "googleVerified": "Google Onaylı",
+      "whatsappText": "Merhaba! Ücretsiz danışmanlık almak istiyorum.",
+      "coreLabel": "Dijital Çözümler",
+      "disciplines": {
+        "seo": "SEO",
+        "smm": "SOSYAL MEDYA",
+        "ads": "REKLAM",
+        "web": "WEB",
+        "brand": "MARKA",
+        "data": "ANALİTİK"
+      },
+      "workCta": "İşlerimiz"
+    },
+    "stats": {
+      "projects": "Tamamlanan Proje",
+      "clients": "Mutlu Müşteri",
+      "experience": "Yıl Deneyim",
+      "awards": "Ödül"
+    },
+    "partners": {
+      "tagline": "Bizi seçen ortaklardan biri de siz olun."
+    },
+    "statistics": {
+      "sectionLabel": "Sonuçlarımız",
+      "heading": "Bizim sonuçlar,",
+      "headingAccent": "sizin büyüme.",
+      "stats": [
+        {
+          "value": 350,
+          "suffix": "+",
+          "label": "Başarılı Proje"
+        },
+        {
+          "value": 100,
+          "suffix": "+",
+          "label": "Mutlu Müşteri"
+        },
+        {
+          "value": 4,
+          "suffix": " yıl+",
+          "label": "Ajans Deneyimi"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Müşteri Memnuniyeti"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Zamanında Teslimat"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "Teknik Destek"
+        }
+      ]
+    },
+    "advantages": {
+      "sectionLabel": "Avantajlarımız",
+      "heading": "Neden bizi",
+      "headingAccent": "seçiyorlar?",
+      "items": [
+        {
+          "emoji": "😎",
+          "title": "Profesyonel Deneyim",
+          "desc": "Ekibimiz dijital pazarlamada 4+ yıllık gerçek proje deneyimine sahiptir."
+        },
+        {
+          "emoji": "⏰",
+          "title": "Zamanında Teslimat",
+          "desc": "Her projeyi kararlaştırılan sürede tamamlıyoruz. Gecikme bizim sözlüğümüzde yok."
+        },
+        {
+          "emoji": "📈",
+          "title": "Ölçülebilir Sonuçlar",
+          "desc": "Her kampanya için KPI belirliyor, aylık raporlarla sonuçları kanıtlıyoruz."
+        },
+        {
+          "emoji": "💎",
+          "title": "Şeffaf Fiyatlar",
+          "desc": "Gizli ücret yok. Her hizmet için dürüst ve net fiyat teklifleri sunuyoruz."
+        },
+        {
+          "emoji": "🤝",
+          "title": "Uzun Vadeli Ortaklık",
+          "desc": "Sizin başarınız bizim başarımızdır. Kalıcı işbirliği için çalışıyoruz."
+        },
+        {
+          "emoji": "💬",
+          "title": "Dürüst İletişim",
+          "desc": "Müşterilerle açık ve şeffaf iletişim bizim temel standardımızdır."
+        }
+      ]
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "subtitle": "Markanızın büyümesi için kapsamlı dijital çözümler"
+    },
+    "portfolio": {
+      "title": "Son Çalışmalarımız",
+      "subtitle": "Müşterilerimiz için hayata geçirdiğimiz projeler"
+    },
+    "testimonials": {
+      "title": "Müşteri Yorumları",
+      "subtitle": "Bizimle çalışan müşterilerimiz ne diyor"
+    },
+    "cta": {
+      "title": "Projenizi Başlayalım",
+      "subtitle": "Markanızın dijital dönüşümü için bizimle iletişime geçin ve ücretsiz danışmanlık alın.",
+      "button": "İletişime Geçin"
+    },
+    "process": {
+      "sectionLabel": "Sürecimiz",
+      "title": "Nasıl çalışıyoruz?",
+      "subtitle": "Her projeyi 4 adımda hayata geçiriyoruz",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Tanışma ve Brifing",
+          "desc": "Sizinle buluşuyor, işinizi, hedeflerinizi ve beklentilerinizi öğreniyoruz. Bireysel bir yaklaşımla başlıyoruz."
+        },
+        {
+          "number": "02",
+          "title": "Analiz ve Strateji",
+          "desc": "Pazarı, rakipleri ve hedef kitleyi analiz ederek ihtiyaçlarınıza özel bir strateji geliştiriyoruz."
+        },
+        {
+          "number": "03",
+          "title": "Uygulama ve İcra",
+          "desc": "Kararlaştırılan plana göre işi zamanında ve yüksek kalitede hayata geçiriyoruz."
+        },
+        {
+          "number": "04",
+          "title": "Raporlama ve Optimizasyon",
+          "desc": "Aylık detaylı raporlar sunuyor, sonuçları birlikte analiz ediyor ve stratejiyi sürekli geliştiriyoruz."
+        }
+      ]
+    },
+    "lead": {
+      "subtitle": "Markanızı bir sonraki seviyeye taşımaya hazırız",
+      "button": "Bizimle İletişime Geçin"
+    },
+    "faq": {
+      "sectionLabel": "İşbirliğine başlamadan önce",
+      "title": "En çok sorulan",
+      "titleAccent": "sorular.",
+      "description": "Cevap bulamazsanız WhatsApp üzerinden bizimle iletişime geçin.",
+      "ctaButton": "Soru sor",
+      "items": [
+        {
+          "q": "Sonuçları ne zaman görürüm?",
+          "a": "Bu, hizmetin türüne bağlıdır. SMM'de ilk sonuçlar — takipçi artışı, etkileşim ve başvurular — 4–6 hafta içinde görünmeye başlar. SEO'da ise ilk sıralama iyileşmeleri 2–3 ayda, önemli sonuçlar ise 4–6 ayda elde edilir. Her ay detaylı rapor sunarak ilerlemeyi birlikte takip ederiz."
+        },
+        {
+          "q": "SEO hizmeti neden gereklidir?",
+          "a": "SEO (Arama Motoru Optimizasyonu), web sitenizin Google gibi arama motorlarında üst sıralarda görünmesini sağlar. İnsanların büyük çoğunluğu yalnızca arama sonuçlarının ilk sayfasına bakar. SEO olmadan potansiyel müşterileriniz sizi bulamaz. Doğru SEO stratejisiyle sitenize ücretsiz, hedefli trafik çekebilir, marka güvenilirliğinizi artırabilir ve uzun vadeli rekabet avantajı kazanabilirsiniz."
+        },
+        {
+          "q": "Sosyal medya pazarlaması (SMM) neden önemlidir?",
+          "a": "Azerbaycan'da milyonlarca insan her gün Instagram, Facebook ve TikTok'ta vakit geçiriyor. SMM aracılığıyla markanızı bu kitleye tanıtabilir, müşterilerle doğrudan ilişki kurabilir ve satışlarınızı artırabilirsiniz. Profesyonel SMM yönetimi — doğru içerik stratejisi, zamanında paylaşımlar, hedefli reklamlar ve aktif iletişimle — markanızın çevrimiçi itibarını güçlendirir."
+        },
+        {
+          "q": "Hizmetleriniz için minimum bütçe ne kadardır?",
+          "a": "Bütçe, hizmetin türüne, kapsamına ve süresine göre değişir. Her işletmenin farklı ihtiyaçları vardır — bu nedenle bireysel bir yaklaşım uyguluyoruz. Hesaplayıcımızdan tahmini fiyatı hesaplayabilir veya size en uygun paket hakkında bilgi almak için bizimle iletişime geçebilirsiniz."
+        },
+        {
+          "q": "Proje tamamlandıktan sonra destek veriyor musunuz?",
+          "a": "Evet, proje tamamlandıktan sonra da yanınızdayız. Teknik destek, içerik güncellemeleri ve web sitesi yönetimi için çeşitli destek paketlerimiz mevcuttur. Uzun vadeli ortaklık bizim için önceliktir."
+        },
+        {
+          "q": "Hangi ödeme koşullarını uyguluyorsunuz?",
+          "a": "Genellikle projenin başında %50 avans, tamamlandığında kalan %50 ödenir. Büyük projeler için taksitli ödeme planı da uygulanabilir. Banka havalesi, nakit ve online ödeme sistemleri kabul edilmektedir."
+        }
+      ]
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Markanızın ihtiyaçlarına göre kapsamlı çözümler",
+    "megaMenu": {
+      "digitalMarketing": {
+        "title": "Dijital Pazarlama",
+        "description": "SEO, Google Ads ve dijital strateji"
+      },
+      "socialMediaMarketing": {
+        "title": "Sosyal Medya Pazarlaması",
+        "description": "Facebook, Instagram ve TikTok pazarlaması"
+      },
+      "webMobileDev": {
+        "title": "Web ve Mobil Geliştirme",
+        "description": "Modern ve fonksiyonel web çözümleri"
+      },
+      "contentWriting": {
+        "title": "İçerik Yazarlığı",
+        "description": "SEO odaklı ve yaratıcı yazım hizmetleri"
+      },
+      "graphicMotionDesign": {
+        "title": "Grafik/Motion Tasarım",
+        "description": "Logo, banner ve animasyon tasarımı"
+      },
+      "branding": {
+        "title": "Markalama",
+        "description": "Marka kimliği ve stratejisi"
+      },
+      "viewAllServices": "Tüm Hizmetleri Görüntüle",
+      "calculatePrice": "Fiyat Hesapla"
+    },
+    "digitalMarketing": {
+      "name": "Dijital Pazarlama",
+      "shortDesc": "SEO, PPC, e-posta pazarlaması",
+      "description": "Arama motoru sıralamaları, ücretli reklamlar ve e-posta kampanyaları aracılığıyla çevrimiçi görünürlüğünüzü artırıyoruz.",
+      "metaTitle": "Dijital Pazarlama Hizmetleri | Cradex Agency",
+      "metaDescription": "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
+    },
+    "traditionalMarketing": {
+      "name": "Geleneksel Pazarlama",
+      "shortDesc": "Baskı, açık hava, medya planlaması",
+      "description": "Televizyon, radyo, basılı medya ve açık hava reklamları aracılığıyla geniş kitlelere ulaşıyoruz.",
+      "metaTitle": "Geleneksel Pazarlama Hizmetleri | Cradex Agency",
+      "metaDescription": "TV, radyo ve basılı medya aracılığıyla markanızı geniş kitlelere tanıtın."
+    },
+    "smm": {
+      "name": "Sosyal Medya Pazarlaması",
+      "shortDesc": "Instagram, Facebook, TikTok yönetimi",
+      "description": "Sosyal medya platformlarında ilgi çekici içerikler oluşturuyor, topluluklar kuruyor ve markanızın çevrimiçi itibarını artırıyoruz.",
+      "metaTitle": "SMM Hizmetleri | Cradex Agency",
+      "metaDescription": "Instagram, Facebook, TikTok ve diğer platformlarda profesyonel sosyal medya yönetimi."
+    },
+    "graphicMotionDesign": {
+      "name": "Grafik Tasarım / Motion Tasarım",
+      "shortDesc": "Logo, marka kimliği, animasyon",
+      "description": "Markanızın görsel dilini oluşturuyor, animasyonlu içerikler ve grafik materyaller hazırlıyoruz.",
+      "metaTitle": "Grafik Tasarım Hizmetleri | Cradex Agency",
+      "metaDescription": "Logo, marka kimliği, motion tasarım ve grafik materyaller için profesyonel tasarım hizmetleri."
+    },
+    "photoVideo": {
+      "name": "Profesyonel Fotoğraf ve Video",
+      "shortDesc": "Ticari fotoğraf, reklam videosu",
+      "description": "Markanızı en iyi şekilde sergileyen profesyonel fotoğraf ve video çekimleri gerçekleştiriyoruz.",
+      "metaTitle": "Fotoğraf ve Video Hizmetleri | Cradex Agency",
+      "metaDescription": "Ticari fotoğrafçılık, reklam videosu ve kurumsal video prodüksiyon hizmetleri."
+    },
+    "branding": {
+      "name": "Markalama",
+      "shortDesc": "Marka stratejisi, kimlik, stil rehberi",
+      "description": "Marka stratejinizi, görsel kimliğinizi ve stil rehberinizi geliştiriyoruz.",
+      "metaTitle": "Markalama Hizmetleri | Cradex Agency",
+      "metaDescription": "Marka stratejisi, görsel kimlik ve stil rehberi ile güçlü bir marka oluşturun."
+    },
+    "copywriting": {
+      "name": "Metin Yazarlığı",
+      "shortDesc": "Satış metinleri, SEO içeriği",
+      "description": "Hedef kitlenizi çeken, satış odaklı profesyonel metinler yazıyoruz.",
+      "metaTitle": "Metin Yazarlığı Hizmetleri | Cradex Agency",
+      "metaDescription": "Satış metinleri, SEO içeriği ve kurumsal iletişim için profesyonel metin yazarlığı."
+    },
+    "webMobileDev": {
+      "name": "Web Sitesi ve Mobil Uygulama",
+      "shortDesc": "Next.js, React Native, UI/UX",
+      "description": "Modern teknolojilerle hızlı, güvenli ve güzel web siteleri ve mobil uygulamalar geliştiriyoruz.",
+      "metaTitle": "Web Sitesi Geliştirme | Cradex Agency",
+      "metaDescription": "Next.js ve React Native ile modern web sitesi ve mobil uygulama geliştirme hizmetleri."
+    },
+    "benefits": "Avantajlar",
+    "process": "Sürecimiz",
+    "relatedWork": "İlgili Çalışmalar"
+  },
+  "contact": {
+    "title": "Bizimle İletişime Geçin",
+    "subtitle": "Projeniz hakkında konuşalım",
+    "leadForm": {
+      "sectionLabel": "Online büyümeye hazır mısınız?",
+      "heading": "Projenizi bize",
+      "headingAccent": "emanet edin.",
+      "founderName": "Paşa Quliyev",
+      "founderRole": "Kurucu",
+      "founderStatus": "🟢 Şu an çevrimiçi",
+      "whatsappCta": "WhatsApp'tan Yazın",
+      "formTitle": "Ücretsiz danışmanlık alın",
+      "formSubtitle": "24 saat içinde yanıt veriyoruz",
+      "fields": {
+        "name": "Adınız",
+        "email": "E-posta",
+        "phone": "Telefon numarası",
+        "phonePlaceholder": "+994 50 000 00 00",
+        "namePlaceholder": "Adınız",
+        "emailPlaceholder": "siz@sirket.com",
+        "message": "Projeniz hakkında detaylı yazın...",
+        "serviceLabel": "Hangi hizmete ihtiyacınız var?",
+        "budgetLabel": "Bütçe aralığı"
+      },
+      "trustBadges": {
+        "response": "24 saat yanıt",
+        "confidential": "Gizlilik",
+        "free": "Ücretsiz danışmanlık"
+      },
+      "services": [
+        "SMM",
+        "SEO",
+        "Web Sitesi",
+        "Markalama",
+        "Grafik Tasarım",
+        "Fotoğraf/Video",
+        "Metin Yazarlığı",
+        "Diğer"
+      ],
+      "budgets": [
+        "500₼'den az",
+        "500–1500₼",
+        "1500–4000₼",
+        "4000–10000₼",
+        "10000₼'den fazla"
+      ],
+      "submit": "Mesaj Gönder",
+      "submitting": "Gönderiliyor...",
+      "successTitle": "Mesajınız gönderildi!",
+      "successMessage": "En kısa sürede sizinle iletişime geçeceğiz.",
+      "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "form": {
+      "fullName": "Ad Soyad",
+      "namePlaceholder": "Adınız",
+      "emailPlaceholder": "siz@sirket.com",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "service": "Hizmet seçin",
+      "serviceOptions": {
+        "digital-marketing": "Dijital Pazarlama",
+        "traditional-marketing": "Geleneksel Pazarlama",
+        "smm": "Sosyal Medya Pazarlaması",
+        "graphic-motion-design": "Grafik / Motion Tasarım",
+        "photo-video": "Fotoğraf ve Video Çekimi",
+        "branding": "Markalama",
+        "copywriting": "Metin Yazarlığı",
+        "web-mobile-dev": "Web Sitesi / Mobil Uygulama",
+        "other": "Diğer"
+      },
+      "message": "Mesajınız",
+      "messagePlaceholder": "Projeniz hakkında detaylı bilgi verin...",
+      "submit": "Gönder",
+      "success": "Mesajınız alındı, en kısa sürede sizinle iletişime geçeceğiz",
+      "error": "Bir hata oluştu, lütfen tekrar deneyin",
+      "sending": "Gönderiliyor..."
+    },
+    "info": {
+      "title": "İletişim Bilgileri",
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "whatsapp": "WhatsApp",
+      "workingHours": "Çalışma Saatleri",
+      "workingHoursValue": "Pzt – Cum: 09:00 – 18:00"
+    }
+  },
+  "journal": {
+    "title": "Blog",
+    "subtitle": "Dijital pazarlama dünyasından makaleler",
+    "readingTime": "{minutes} dk okuma",
+    "readMore": "Devamını Oku",
+    "by": "Yazar:",
+    "publishedAt": "Yayın tarihi:",
+    "categories": {
+      "all": "Tümü",
+      "seo": "SEO",
+      "smm": "SMM",
+      "branding": "Markalama",
+      "design": "Tasarım",
+      "copywriting": "Metin Yazarlığı",
+      "web-dev": "Web Geliştirme",
+      "marketing-strategy": "Pazarlama Stratejisi"
+    },
+    "pagination": {
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "page": "Sayfa"
+    },
+    "noArticles": "Bu kategoride makale bulunamadı"
+  },
+  "portfolio": {
+    "title": "Portföy",
+    "subtitle": "Tamamladığımız projeler",
+    "viewProject": "Portföyü Gör",
+    "client": "Müşteri",
+    "category": "Kategori",
+    "tools": "Kullanılan araçlar",
+    "results": "Sonuçlar",
+    "gallery": "Galeri",
+    "foundCount": "{count} proje bulundu",
+    "filterLabel": "Kategoriye göre filtrele",
+    "categories": {
+      "all": "Tümü",
+      "digital-marketing": "SEO / Dijital",
+      "traditional-marketing": "Geleneksel Pazarlama",
+      "smm": "SMM",
+      "graphic-motion-design": "Grafik Tasarım",
+      "photo-video": "Fotoğraf / Video",
+      "branding": "Markalama",
+      "copywriting": "Metin Yazarlığı",
+      "web-mobile-dev": "Web Sitesi"
+    },
+    "noItems": "Bu kategoride proje bulunamadı"
+  },
+  "notFound": {
+    "title": "404 — Sayfa Bulunamadı",
+    "subtitle": "Aradığınız sayfa mevcut değil",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "footer": {
+    "description": "Cradex Agency — dijital pazarlama, tasarım ve teknoloji alanında güvenilir ortağınız.",
+    "navigation": "Navigasyon",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "rights": "Tüm hakları saklıdır",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "location": "Reşid Behbudov 55, Bakı"
+  },
+  "calculator": {
+    "title": "Hizmet Fiyatını Hesaplayın",
+    "subtitle": "İhtiyacınız olan hizmetleri seçin ve anında fiyat teklifi alın",
+    "tabs": {
+      "website": "Web Sitesi",
+      "mobileApp": "Mobil Uygulama",
+      "digitalAds": "Dijital Reklamlar",
+      "videoEditing": "Video Montaj",
+      "videoShooting": "Video Çekim",
+      "socialMediaDesign": "Sosyal Medya Tasarım"
+    },
+    "website": {
+      "title": "Web Sitesi Hesaplayıcı",
+      "corporateName": "Kurumsal Web Sitesi",
+      "corporateDescription": "İşletmeniz için profesyonel kurumsal web sitesi",
+      "ecommerceName": "E-ticaret Sitesi",
+      "ecommerceDescription": "Online mağaza ve e-ticaret çözümü",
+      "startingFrom": "başlangıç",
+      "includedServices": "Dahil",
+      "designComplexity": "Tasarım Karmaşıklığı",
+      "deliveryTime": "Teslimat Süresi",
+      "additionalServices": "Ek Hizmetler",
+      "totalAmount": "Toplam Tutar",
+      "discount": "İndirim",
+      "taxIncluded": "* Vergi dahil",
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
+      "discountCoupon": "İndirim Kodu",
+      "enterCouponCode": "Kodu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz indirim kodu",
+      "orderNow": "Şimdi Sipariş Ver",
+      "serviceRequirements": "Hizmet Gereksinimleri",
+      "faq": "SSS",
+      "monthlyPaymentOption": "Ödeme Seçeneği",
+      "initialPayment": "İlk ödeme",
+      "monthly": "Aylık",
+      "months": "ay",
+      "interestFree": "Faizsiz taksit",
+      "complexity": {
+        "simple": "Basit",
+        "professional": "Profesyonel",
+        "custom": "Özel"
+      },
+      "delivery": {
+        "standard": "Standart",
+        "fast": "Hızlı (14 gün)",
+        "urgent": "Acil (7 gün)"
+      },
+      "paymentOptions": {
+        "fullPayment": "Tam ödeme",
+        "3months": "3 aylık taksit (faizsiz)",
+        "6months": "6 aylık taksit (faizsiz)",
+        "12months": "12 aylık taksit (faizsiz)"
+      },
+      "unit": {
+        "language": "dil",
+        "article": "makale",
+        "page": "sayfa",
+        "products": "ürün"
+      },
+      "corporateIncludes": {
+        "adminPanel": "Yönetim paneli",
+        "domainHosting": "1 yıllık domain ve hosting",
+        "pages5": "5 sayfaya kadar yapı",
+        "mobileResponsive": "Mobil uyumlu tasarım",
+        "contactForm": "İletişim formu",
+        "facebookPixel": "Facebook Pixel",
+        "favicon": "Tarayıcı simgesi (Favicon)",
+        "whatsappIntegration": "WhatsApp entegrasyonu",
+        "basicSeo": "Temel SEO uyumluluğu",
+        "imageOptimization": "Görsel optimizasyonu",
+        "speedOptimization": "Hızlı açılış optimizasyonu",
+        "security": "Güvenlik eklentileri",
+        "support3Months": "3 aylık teknik destek",
+        "socialMedia3": "Sosyal medya bağlantıları (3 sosyal medya)"
+      },
+      "corporateAdditional": {
+        "multilang": "Çok dilli sistem",
+        "blogSystem": "Blog sistemi",
+        "logoDesign": "Logo tasarımı",
+        "faviconDesign": "Tarayıcı simgesi hazırlanması",
+        "memberLogin": "Üye girişi",
+        "faq": "Sık sorulan sorular",
+        "teamPage": "Ekip/çalışanlar sayfası",
+        "customAnimations": "Özel animasyonlar",
+        "bookingSystem": "Rezervasyon/sipariş sistemi",
+        "liveChat": "Canlı sohbet sistemi",
+        "searchFunction": "Arama fonksiyonu",
+        "blogWriting": "Blog yazı hizmeti",
+        "advancedSeo": "Ek SEO altyapısı",
+        "emailIntegration": "E-posta entegrasyonu",
+        "googleAnalytics": "Google Analytics",
+        "eventCalendar": "Etkinlik takvimi",
+        "videoIntegration": "Video entegrasyonu",
+        "extraPages": "Ek sayfa",
+        "support1Year": "1 yıllık teknik destek",
+        "apiIntegration": "API entegrasyonu"
+      },
+      "ecommerceIncludes": {
+        "domainHosting": "1 yıllık domain ve hosting",
+        "pages5": "5 sayfaya kadar yapı",
+        "mobileResponsive": "Mobil uyumlu tasarım",
+        "favicon": "Tarayıcı simgesi",
+        "onlineStore": "Online mağaza sistemi",
+        "productPlacement20": "Ürün yerleştirme (20 ürün)",
+        "cartOrder": "Sepet ve sipariş sistemi",
+        "facebookPixel": "Facebook Pixel",
+        "metaTags": "Meta etiketleri",
+        "socialMedia3": "Sosyal medya bağlantıları (3 sosyal medya)",
+        "whatsappOrder": "WhatsApp sipariş entegrasyonu",
+        "campaignDiscount": "Kampanya ve indirim sistemi",
+        "basicSeo": "Temel SEO optimizasyonu",
+        "adminPanel": "Yönetim paneli"
+      },
+      "ecommerceAdditional": {
+        "cargoIntegration": "Kargo entegrasyonu",
+        "multicurrency": "Çok para birimli sistem",
+        "marketplace": "Marketplace sistemi",
+        "productFilter": "Ürün filtreleme sistemi",
+        "loyaltySystem": "Müşteri sadakat sistemi",
+        "smsNotification": "SMS bildirim sistemi",
+        "extraProducts": "Ek ürün yerleştirme",
+        "premiumProductPage": "Premium ürün sayfası tasarımı",
+        "instagramShop": "Instagram Shop entegrasyonu",
+        "support1Year": "1 yıllık teknik destek",
+        "apiIntegration": "API entegrasyonu",
+        "blogSystem": "Blog sistemi",
+        "logoDesign": "Logo tasarımı",
+        "memberLogin": "Üye Girişi",
+        "faq": "Sık sorulan sorular",
+        "teamPage": "Ekip/çalışanlar sayfası",
+        "customAnimations": "Özel animasyonlar",
+        "liveChat": "Canlı sohbet sistemi",
+        "productSearch": "Ürün arama fonksiyonu",
+        "blogWriting": "Blog yazı hizmeti",
+        "advancedSeo": "Ek SEO altyapısı",
+        "emailIntegration": "E-posta entegrasyonu",
+        "googleAnalytics": "Google Analytics",
+        "eventCalendar": "Etkinlik takvimi",
+        "faviconDesign": "Tarayıcı simgesi hazırlanması",
+        "productComparison": "Ürün karşılaştırması",
+        "productVariants": "Ürün varyantları",
+        "productFilters": "Ürün filtreleri",
+        "localBankIntegration": "Yerel Banka entegrasyonu",
+        "paypalIntegration": "Paypal/Payoneer/Stripe entegrasyonu",
+        "productZoom": "Ürün büyütme",
+        "relatedProducts": "İlgili ürünler",
+        "ratingSystem": "Değerlendirme sistemi",
+        "stockAlerts": "Stok uyarıları",
+        "productReviews": "Ürün yorumları",
+        "salesReports": "Satış raporları",
+        "deliveryTracking": "Teslimat takibi",
+        "orderHistory": "Sipariş geçmişi",
+        "wishlist": "Beğenilen ürün listesi",
+        "videoIntegration": "Video Entegrasyonu",
+        "inventoryTracking": "Envanter takibi",
+        "flatShipping": "Sabit fiyat teslimat",
+        "weightShipping": "Ağırlığa göre teslimat",
+        "distanceShipping": "Mesafeye göre teslimat",
+        "discountCodes": "İndirim kodları",
+        "saveCart": "Sepeti kaydet",
+        "emailNotifications": "E-posta bildirimleri",
+        "competitorAnalysis": "Rakip Analizi",
+        "googleBusiness": "Google My Business",
+        "xmlSitemap": "XML site haritası",
+        "onpageSeo": "Sayfa içi SEO",
+        "localSeo": "Yerel SEO",
+        "categorySystem": "Kategori sistemi",
+        "schemaMarkup": "Yapılandırılmış veri işaretlemesi (Schema kodlama)",
+        "extraPages": "Ek sayfa"
+      },
+      "corporateRequirements": "Kurumsal web sitesi geliştirme için müşteri logo ve marka materyalleri, site metinleri ve medya dosyaları, iletişim bilgileri, sosyal medya bağlantıları ve gerekli teknik entegrasyon bilgilerini sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
+      "ecommerceRequirements": "E-ticaret sitesi geliştirme için müşteri ürün bilgileri (ad, fiyat, açıklama), ürün görselleri, logo ve marka materyalleri, teslimat ve ödeme bilgileri, iletişim ve sosyal medya bağlantılarını sağlamalıdır. Bilgi gecikmeleri proje teslim süresini etkileyebilir.",
+      "corporateFaqQ1": "Kurumsal web sitesi ne kadar sürede tamamlanır?",
+      "corporateFaqA1": "Standart teslimat süresi 21-30 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
+      "corporateFaqQ2": "Domain ve hosting hizmeti dahil mi?",
+      "corporateFaqA2": "Evet, 1 yıllık domain ve hosting hizmeti fiyata dahildir.",
+      "corporateFaqQ3": "Teknik destek nasıl çalışır?",
+      "corporateFaqA3": "3 aylık ücretsiz teknik destek dahildir. 1 yıllık destek ek olarak sipariş edilebilir.",
+      "ecommerceFaqQ1": "E-ticaret sitesi ne kadar sürede tamamlanır?",
+      "ecommerceFaqA1": "Standart teslimat süresi 30-45 gündür. Hızlı (14 gün) ve acil (7 gün) seçenekleri mevcuttur.",
+      "ecommerceFaqQ2": "Ödeme sistemleri entegre ediliyor mu?",
+      "ecommerceFaqA2": "Yerel banka, Paypal, Stripe ve diğer ödeme sistemleri ek hizmet olarak entegre edilebilir.",
+      "ecommerceFaqQ3": "Ürün sayısı artırılabilir mi?",
+      "ecommerceFaqA3": "Evet, ek ürün yerleştirme hizmeti ile istenen sayıda ürün eklenebilir."
+    },
+    "mobileApp": {
+      "title": "Mobil Uygulama Geliştirme",
+      "basePrice": "Temel Fiyat",
+      "screenCount": "Ekran Sayısı",
+      "screens": "ekran",
+      "designComplexity": "Tasarım Karmaşıklığı",
+      "supportPackage": "Destek Paketi",
+      "features": "Özellikler",
+      "includedServices": "Dahil Edilen Hizmetler",
+      "additionalFeatures": "Ek Özellikler",
+      "totalAmount": "Toplam Tutar",
+      "monthly": "aylık",
+      "yearly": "yıllık",
+      "free": "Ücretsiz",
+      "included": "Dahil",
+      "taxIncluded": "* Vergi dahildir",
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti!",
+      "orderNow": "Sipariş Ver",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz kupon kodu",
+      "monthlyPaymentOption": "Ödeme Seçeneği",
+      "paymentOptions": {
+        "fullPayment": "Tam Ödeme",
+        "monthlyPayment": "Aylık Ödeme",
+        "3months": "3 ay",
+        "6months": "6 ay",
+        "12months": "12 ay"
+      },
+      "initialPayment": "İlk Ödeme",
+      "months": "ay",
+      "interestFree": "Faizsiz",
+      "designOptions": {
+        "custom": "Özel Tasarım (Ücretsiz)",
+        "premium": "Premium Tasarım"
+      },
+      "supportPackages": {
+        "basic": "Temel (Ücretsiz)",
+        "premium": "Premium (Yıllık 2500 AZN)"
+      },
+      "basicSupportDetails": [
+        "3 aylık teknik destek",
+        "Sistem kontrolü",
+        "Küçük teknik düzeltmeler",
+        "Güvenlik izleme",
+        "Kullanım kılavuzu",
+        "E-posta desteği",
+        "Temel yedekleme hizmeti",
+        "Temel performans kontrolü"
+      ],
+      "premiumSupportDetails": [
+        "7/24 öncelikli teknik destek",
+        "Tam teknik yönetim",
+        "Gerçek zamanlı sistem izleme",
+        "Günlük otomatik yedekleme",
+        "Gelişmiş güvenlik sistemi",
+        "Sunucu ve performans optimizasyonu",
+        "Veritabanı optimizasyonu",
+        "Çökme ve hata izleme",
+        "API ve üçüncü taraf entegrasyon yönetimi",
+        "SEO teknik izleme",
+        "Aylık teknik rapor",
+        "Küçük fonksiyonel güncellemeler",
+        "Öncelikli düzeltme hizmeti",
+        "6-12 saat yanıt süresi"
+      ],
+      "includedItems": {
+        "freeDomainHosting": "Ücretsiz Domain ve Hosting",
+        "support247": "24/7 Destek",
+        "warranty": "1 Yıl Garanti",
+        "pushNotifications": "Push Bildirimleri",
+        "socialLogin": "Sosyal Medya Girişi",
+        "appAnalytics": "Uygulama Analitiği"
+      },
+      "additionalFeaturesList": {
+        "pushNotifications": "Push Bildirimleri",
+        "offlineMode": "Çevrimdışı Mod",
+        "biometricLogin": "Biyometrik Giriş",
+        "inAppPurchase": "Uygulama İçi Satın Alma",
+        "socialLogin": "Sosyal Medya Girişi",
+        "cameraIntegration": "Kamera Entegrasyonu",
+        "geolocation": "Coğrafi Konum",
+        "chatFeature": "Sohbet Özelliği",
+        "cloudSync": "Bulut Senkronizasyonu",
+        "appAnalytics": "Uygulama Analitiği",
+        "appStoreSetup": "App Store Kurulumu",
+        "googlePlaySetup": "Google Play Kurulumu",
+        "appUpdatesYearly": "Uygulama Güncellemeleri (yıllık)"
+      },
+      "serviceRequirements": "Hizmet Gereksinimleri",
+      "requirementsList": {
+        "appIdea": "Uygulama fikri ve amacı",
+        "targetAudience": "Hedef kitle bilgileri",
+        "designPreferences": "Tasarım tercihleri ve marka materyalleri",
+        "contentMaterials": "İçerik materyalleri (metinler, görseller, videolar)",
+        "apiDocumentation": "API dokümantasyonu (entegrasyon gerekiyorsa)",
+        "accountCredentials": "App Store ve Google Play hesap bilgileri"
+      },
+      "faq": "Sık Sorulan Sorular",
+      "faqQ1": "Mobil uygulama geliştirme ne kadar sürer?",
+      "faqA1": "Standart teslimat süresi uygulamanın karmaşıklığına bağlı olarak 8-16 haftadır. Basit uygulamalar 8-10 hafta, karmaşık uygulamalar 12-16 hafta sürer.",
+      "faqQ2": "iOS ve Android için ayrı ödeme yapmam gerekir mi?",
+      "faqA2": "Hayır, fiyat her iki platform için cross-platform teknolojisi (React Native/Flutter) ile geliştirilmiş uygulamayı içerir.",
+      "faqQ3": "Uygulama mağazalarına yükleme dahil mi?",
+      "faqA3": "App Store Kurulumu ve Google Play Kurulumu hizmetleri ek olarak sipariş edilmelidir. Bu hizmetler uygulamanın mağazalara yüklenmesini ve onaylanmasını sağlar.",
+      "faqQ4": "Teknik destek nasıl çalışır?",
+      "faqA4": "Seçtiğiniz destek paketine bağlı olarak aylık teknik destek sağlanır. Temel paket ücretsizdir ve temel hata düzeltmelerini kapsar."
+    },
+    "digitalAds": {
+      "title": "Dijital Reklamcılık",
+      "platformSelection": "Platform Seçimi",
+      "metaAds": "Meta Reklamları (Facebook & Instagram)",
+      "googleAds": "Google Reklamları",
+      "tiktokAds": "TikTok Reklamları",
+      "linkedinAds": "LinkedIn Reklamları",
+      "includedServices": "Dahil edilen hizmetler",
+      "additionalServices": "Ek Hizmetler",
+      "totalAmount": "Toplam tutar",
+      "monthly": "aylık",
+      "perUnit": "adet",
+      "taxIncluded": "* Vergi dahil",
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
+      "orderNow": "Şimdi Sipariş Ver",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "discount": "İndirim",
+      "invalidCoupon": "Geçersiz kupon kodu!",
+      "serviceRequirements": "Hizmet Gereksinimleri",
+      "faq": "Sık Sorulan Sorular",
+      "faqQ1": "Reklam kampanyası kaç günde başlar?",
+      "faqA1": "Reklam kampanyaları 24-48 saat içinde başlar. Acil kampanyalar için ek ödeme gereklidir.",
+      "faqQ2": "Reklam bütçesi ne kadar olmalı?",
+      "faqA2": "Minimum reklam bütçesi günlük 10 AZN'dir. Optimal sonuçlar için günlük 30-50 AZN öneriyoruz.",
+      "faqQ3": "Sonuçları nasıl takip edebilirim?",
+      "faqA3": "Aylık raporlar ve gerçek zamanlı istatistikler sağlıyoruz. Ayrıca WhatsApp üzerinden günlük güncellemeler gönderiyoruz.",
+      "metaAdsName": "Meta Reklamları (Facebook & Instagram)",
+      "metaAdsDescription": "Facebook ve Instagram reklamcılığı",
+      "googleAdsName": "Google Reklamları",
+      "googleAdsDescription": "Google Ads ve Arama reklamcılığı",
+      "tiktokAdsName": "TikTok Reklamları",
+      "tiktokAdsDescription": "TikTok Ads ve video reklamcılığı",
+      "linkedinAdsName": "LinkedIn Reklamları",
+      "linkedinAdsDescription": "LinkedIn B2B reklamcılığı",
+      "oneTime": "Tek seferlik",
+      "additionalPayments": "Ek ödemeler",
+      "serviceRequirementsItems": {
+        "companyInfo": "Şirket bilgileri ve logo",
+        "targetAudience": "Hedef kitle bilgileri",
+        "productImages": "Ürün/hizmet görselleri",
+        "adBudget": "Reklam bütçesi (minimum 300 AZN/ay)",
+        "website": "Web sitesi veya açılış sayfası",
+        "contactInfo": "İletişim bilgileri ve sosyal medya hesapları"
+      },
+      "metaIncludes": {
+        "businessManager": "Meta Business Manager kurulumu",
+        "adAccount": "Reklam hesabı oluşturma",
+        "pixelSetup": "Pixel entegrasyonu",
+        "campaign": "1 reklam kampanyası",
+        "targeting": "Hedef kitle belirleme",
+        "creatives": "3 reklam kreatifi (video veya görsel)",
+        "adCopy": "Reklam metni yazımı",
+        "optimization": "Günlük optimizasyon",
+        "report": "Aylık rapor"
+      },
+      "googleIncludes": {
+        "accountSetup": "Google Ads hesabı kurulumu",
+        "searchCampaign": "Arama reklam kampanyası",
+        "keywordResearch": "Anahtar kelime araştırması",
+        "negativeKeywords": "Negatif anahtar kelime optimizasyonu",
+        "adGroups": "2 reklam grubu",
+        "adCopy": "Reklam metni hazırlama",
+        "conversionTracking": "Dönüşüm takibi",
+        "monthlyReport": "Aylık optimizasyon ve rapor"
+      },
+      "tiktokIncludes": {
+        "accountSetup": "TikTok Ads hesabı kurulumu",
+        "pixelIntegration": "Pixel entegrasyonu",
+        "campaign": "1 reklam kampanyası",
+        "audienceAnalysis": "Hedef kitle analizi",
+        "videoCreatives": "3 video kreatif",
+        "optimization": "Reklam optimizasyonu",
+        "monthlyReport": "Aylık rapor"
+      },
+      "linkedinIncludes": {
+        "campaignManager": "LinkedIn Campaign Manager kurulumu",
+        "b2bTargeting": "B2B hedef kitle belirleme",
+        "leadGenCampaign": "Potansiyel Müşteri Toplama Kampanyası",
+        "sponsoredPosts": "Sponsorlu gönderi reklamları",
+        "adCopy": "Reklam metni hazırlama",
+        "monthlyOptimization": "Aylık optimizasyon",
+        "reportPresentation": "Rapor sunumu"
+      },
+      "metaAdditional": {
+        "extraCampaign": "Ek reklam kampanyası",
+        "extraCreative": "Ek reklam kreatifi",
+        "reelsEditing": "Reels montajı",
+        "motionDesign": "Motion tasarım reklamı",
+        "adCopywriting": "Reklam metni yazımı",
+        "whatsappCatalog": "WhatsApp katalog reklamı",
+        "ecommerceCatalog": "E-ticaret katalog reklamı",
+        "softwareAd": "Yazılım reklamı",
+        "pixelSetup": "Meta Pixel kurulumu",
+        "conversionApi": "Conversion API entegrasyonu",
+        "dmService": "DM yanıtlama hizmeti",
+        "influencerManagement": "Influencer işbirliği yönetimi",
+        "abTesting": "A/B test optimizasyonu"
+      },
+      "googleAdditional": {
+        "displayBanners": "Display reklam bannerları",
+        "tagManager": "Google Tag Manager kurulumu",
+        "conversionTracking": "Dönüşüm takibi",
+        "analytics4": "Google Analytics 4 entegrasyonu",
+        "youtubeSetup": "YouTube reklam kurulumu",
+        "remarketingCampaign": "Yeniden pazarlama kampanyası",
+        "keywordResearch": "Anahtar kelime araştırması (kapsamlı)",
+        "landingPageAnalysis": "Açılış sayfası analizi",
+        "seoAudit": "SEO denetimi"
+      },
+      "tiktokAdditional": {
+        "videoEditing": "TikTok video montajı",
+        "ugcScript": "UGC içerik senaryosu",
+        "viralPlanning": "Viral içerik planlaması",
+        "pixelSetup": "TikTok Pixel kurulumu",
+        "creatorFinding": "İçerik üreticisi/influencer bulma",
+        "trendResearch": "Trend araştırması",
+        "shopIntegration": "TikTok shop entegrasyonu"
+      },
+      "linkedinAdditional": {
+        "pageOptimization": "LinkedIn şirket sayfası optimizasyonu",
+        "b2bLeadStrategy": "B2B Potansiyel Müşteri Stratejisi",
+        "corporateCopy": "Kurumsal metin yazımı",
+        "employerBranding": "İşveren Markası Stratejisi",
+        "leadFormSetup": "Potansiyel Müşteri Formu Kurulumu",
+        "ceoPersonalBrand": "CEO Kişisel Marka Yönetimi",
+        "contentPlan": "LinkedIn içerik planı"
+      }
+    },
+    "videoEditing": {
+      "title": "Video Montaj",
+      "videoType": "Video Türü",
+      "shortVideo": "Kısa Video (Reels/Shorts)",
+      "longVideo": "Uzun Video (YouTube)",
+      "basePrice": "Temel fiyat",
+      "freeDuration": "ücretsiz",
+      "videoDuration": "Video Süresi",
+      "firstMinuteFree": "İlk 1 dakika ücretsiz",
+      "next15SecFor3AZN": "Sonraki her 15 saniye için 3 AZN",
+      "first10MinFree": "İlk 10 dakika ücretsiz",
+      "next5MinFor6AZN": "Sonraki her 5 dakika için 6 AZN",
+      "includedServices": "Dahil edilen hizmetler",
+      "basicServices": {
+        "editing": "Kesme ve montaj",
+        "transitions": "Ritme uygun geçişler",
+        "basicColor": "Temel renk düzeltme",
+        "music": "Müzik ekleme",
+        "export1080p": "1080P dışa aktarma",
+        "delivery24h": "24 saat teslimat",
+        "separateFiles": "Video ve ses dosyalarının ayrı teslimi",
+        "oneRevision": "1 revizyon dahil",
+        "twoRevisions": "2 revizyon dahil"
+      },
+      "subtitleOptions": "Altyazı Seçenekleri",
+      "basicSubtitle": "Altyazı ekleme",
+      "dynamicSubtitle": "Dinamik altyazılar (renkli, animasyonlu)",
+      "soundDesign": "Ses Tasarımı",
+      "transitionSounds": "Geçiş sesleri",
+      "cinematicEffects": "Sinematik efektler",
+      "ambience": "Ortam sesleri",
+      "bassHits": "Bas vuruşları",
+      "motionGraphics": "Motion Grafik / Animasyon",
+      "logoAnimation": "Logo animasyonu",
+      "infoTexts": "Bilgi metinleri",
+      "otherServices": "Diğer Hizmetler",
+      "colorGrading": "Profesyonel renk düzeltme (Color Grading)",
+      "additionalOptions": "Ek Seçenekler",
+      "thumbnailCreation": "Küçük resim oluşturma",
+      "fastDelivery8h": "8 saat teslimat",
+      "export4K": "4K dışa aktarma",
+      "presenterSelection": "Sunucu (konuşmacı) seçimi",
+      "shortsFromLong": "Uzun Videodan Shorts",
+      "shortsCount": "shorts",
+      "per1MinShort": "1 dakikalık short için 5 AZN",
+      "extraRevisions": "Ek Revizyonlar",
+      "extraRevision": "ek revizyon",
+      "perExtraRevision": "Ek revizyon başına 3 AZN (1 revizyon ücretsiz dahil)",
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahil",
+      "discount": "İndirim",
+      "orderNow": "Şimdi Sipariş Ver",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz kupon kodu!",
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
+      "fileRequirements": "Dosya Gereksinimleri",
+      "videoMaterials": "Video materyalleri: MP4, MOV, AVI formatı",
+      "images": "Görseller: JPG, PNG (minimum 1920×1080 px)",
+      "logo": "Logo: SVG veya PNG (şeffaf arka plan)",
+      "music": "Müzik: MP3, WAV formatı (lisanslı)",
+      "text": "Metin: Word belgesi veya Google Docs",
+      "colorCode": "Renk kodu: HEX veya RGB formatı",
+      "faq": "Sık Sorulan Sorular",
+      "faqQ1": "Video kaç günde tamamlanır?",
+      "faqA1": "Standart siparişler 24 saat içinde tamamlanır. Acil teslimat (8 saat) seçerseniz ek ödeme gereklidir.",
+      "faqQ2": "Dosya hangi formatta teslim edilir?",
+      "faqA2": "Standart teslimat 1080P MP4 formatındadır. 4K dışa aktarma için ek ödeme mevcuttur.",
+      "faqQ3": "Revizyon hakkı var mı?",
+      "faqA3": "Evet, her siparişe 1 ücretsiz revizyon dahildir. Ek revizyonlar her biri 3 AZN'dir.",
+      "seconds": "saniye",
+      "minutes": "dakika",
+      "min": "dk",
+      "sec": "sn"
+    },
+    "videoShooting": {
+      "title": "Video Çekim",
+      "videoType": "Video Türü",
+      "shortVideoShooting": "Kısa Video Çekim (Reels/Shorts)",
+      "longVideoShooting": "Uzun Video Çekim (YouTube)",
+      "basePrice": "Temel fiyat",
+      "upTo1HourIncluded": "1 saate kadar çekim dahil",
+      "shootingDuration": "Çekim Süresi",
+      "first1HourIncluded": "İlk 1 saat dahil",
+      "nextHourFor25AZN": "Sonraki her saat için 25 AZN",
+      "nextHourFor35AZN": "Sonraki her saat için 35 AZN",
+      "includedServices": "Dahil edilen hizmetler",
+      "basicServices": {
+        "iphoneShooting": "iPhone 17 Pro ile çekim",
+        "framePlanning": "Kare planlaması",
+        "basicLighting": "Temel aydınlatma kurulumu",
+        "stableVideo": "Sabit video kaydı",
+        "quality1080p": "1080P video kalitesi",
+        "multipleAngles": "Birden fazla açı",
+        "stabilizer": "Stabilizatör kullanımı",
+        "basicMic": "Temel mikrofon",
+        "socialFormat": "Sosyal medya uyumlu format",
+        "oneLocation": "1 lokasyonda çekim",
+        "oneOperator": "1 operatör",
+        "twoVideoEdits": "2 video montaj (her biri 1 dk'ya kadar)"
+      },
+      "additionalOptions": "Ek Seçenekler",
+      "options": {
+        "4k_shooting": "Profesyonel kamera ile 4K çekim",
+        "cinematic_effects": "Sinematik görsel efekt ayarlamaları",
+        "professional_lighting": "Profesyonel aydınlatma kurulumu",
+        "rgb_lighting": "RGB aydınlatma efektleri",
+        "professional_mic": "Profesyonel mikrofon",
+        "audio_setup": "Ses temizleme için ses kurulumu",
+        "script_preparation": "Çekim senaryosu hazırlama",
+        "video_planning": "Video fikir planlaması",
+        "studio_shooting": "Stüdyoda çekim",
+        "extra_location": "Ek lokasyonda çekim",
+        "same_day_shooting": "Aynı gün çekim",
+        "video_editing": "Çekilen videoların montajı",
+        "presenter_selection": "Sunucu (konuşmacı) seçimi"
+      },
+      "fileDelivery": "Dosya Teslimi",
+      "delivery": {
+        "google_drive": "Google Drive",
+        "wetransfer": "WeTransfer",
+        "ssd_flash": "SSD / Flash kart"
+      },
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahil",
+      "orderNow": "Şimdi Sipariş Ver",
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti edilir!",
+      "fileRequirements": "Dosya Gereksinimleri",
+      "requirements": {
+        "logoElements": "Logo ve marka öğeleri: SVG veya PNG formatı",
+        "transparentBg": "Şeffaf arka plan tercih edilir",
+        "locationAddress": "Lokasyon adresi",
+        "shootingPurpose": "Çekim amacı (reklam, içerik, YouTube vb.)",
+        "targetAudience": "Hedef kitle bilgisi"
+      },
+      "faq": "Sık Sorulan Sorular",
+      "faqQ1": "Çekim kaç günde tamamlanır?",
+      "faqA1": "Standart çekimler sipariş sonrası 2-3 iş günü içinde planlanır ve gerçekleştirilir.",
+      "faqQ2": "Çekim için hangi ekipman kullanılır?",
+      "faqA2": "iPhone 17 Pro, profesyonel stabilizatör, aydınlatma kurulumu ve mikrofon sistemi kullanılır. Ek ödeme ile profesyonel ekipman seçebilirsiniz.",
+      "faqQ3": "Çekim sırasında neler dahil?",
+      "faqA3": "Kare planlaması, temel aydınlatma kurulumu, birden fazla açı ve her biri 1 dakika olan 2 montajlanmış video dahildir.",
+      "minutes": "dakika",
+      "hours": "saat",
+      "min": "dk",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal"
+    },
+    "socialMediaDesign": {
+      "title": "Sosyal Medya Tasarımı",
+      "generalRules": "Genel Kurallar",
+      "oneDesignOneContent": "1 tasarım = 1 içerik",
+      "revisionOneFree": "Revizyon: 1 kez ücretsiz",
+      "delivery24h": "Teslimat: 24 saat (standart)",
+      "platformSelection": "Sosyal Medya Platformu Seçimi",
+      "designTypes": "Tasarım Türleri",
+      "designCount": "Tasarım Sayısı (1-100)",
+      "pieces": "adet",
+      "additionalServices": "Ek Hizmetler",
+      "extraRevisions": "Ek Revizyonlar",
+      "extraRevision": "ek revizyon",
+      "perExtraRevision": "Ek revizyon başına 5 AZN (1 tasarım için).",
+      "totalAmount": "Toplam Tutar",
+      "taxIncluded": "* Vergi dahil",
+      "discount": "İndirim",
+      "discountCoupon": "İndirim Kuponu",
+      "enterCouponCode": "Kupon kodunu girin",
+      "applyCoupon": "Uygula",
+      "cancelCoupon": "İptal",
+      "invalidCoupon": "Geçersiz kupon kodu!",
+      "orderNow": "Şimdi Sipariş Ver",
+      "fileRequirements": "Dosya Gereksinimleri",
+      "faq": "Sık Sorulan Sorular",
+      "platforms": {
+        "instagram": {
+          "content": "Instagram içerik (1080×1350)",
+          "reels_cover": "Reels video kapak tasarımı",
+          "story": "Instagram hikaye (1080×1920)",
+          "highlights": "Instagram öne çıkanlar (seçilmiş hikayeler)",
+          "carousel": "Karusel içerik (5–10 slayt)"
+        },
+        "facebook": {
+          "post": "Facebook gönderi görseli (1200×630)",
+          "ad": "Facebook reklam tasarımı (1200×628)",
+          "event_cover": "Facebook etkinlik kapak görseli (1920×1080)",
+          "cover": "Facebook kapak görseli (851×315)"
+        },
+        "linkedin": {
+          "post": "LinkedIn gönderisi (1200×1200)",
+          "banner": "LinkedIn banner (1584×396)",
+          "article_cover": "LinkedIn makale kapağı",
+          "single_ad": "LinkedIn tek görsel reklam (1200×627)"
+        },
+        "pinterest": {
+          "carousel_ad": "Karusel Pinterest reklamı (1000×1500)",
+          "pin": "Pinterest pin tasarımı (2:3 oranı)"
+        },
+        "tiktok": {
+          "video_cover": "Video kapak tasarımı (1080×1920)"
+        },
+        "youtube": {
+          "channel_cover": "Kanal kapak görseli (2560×1440)",
+          "thumbnail": "YouTube küçük resim (1280×720)"
+        },
+        "twitter": {
+          "cover": "Kapak görseli (1500×500)",
+          "content": "İçerik tasarımı (1600×900)"
+        }
+      },
+      "services": {
+        "custom_icons": "Özel ikonlar/illüstrasyonlar",
+        "copywriting": "Metin yazımı",
+        "template_files": "Tasarım şablon dosyaları (PSD, Canva)",
+        "rush_delivery": "Acil teslimat 8 saat"
+      },
+      "packagePrice": "Paket fiyatı",
+      "perDesign": "(1 tasarım için)",
+      "fileRequirementsItems": {
+        "visualMaterials": "Görsel materyaller: JPG veya PNG formatı, minimum 1080px veya daha yüksek kalite",
+        "textMaterials": "Metin materyalleri: Word belgesi veya Google Docs formatı",
+        "brandElements": "Marka öğeleri: Marka renk kodları (HEX veya RGB), Yazı tipi adları",
+        "logoIdentity": "Logo ve kimlik: SVG (vektör) veya PNG formatı, şeffaf arka plan tercih edilir",
+        "referenceMaterials": "Referans materyaller: Benzer tasarım örnekleri, istenen stil ve görsel yön"
+      },
+      "faqItems": {
+        "q1": "Tasarım kaç günde tamamlanır?",
+        "a1": "Standart siparişler 24 saat içinde tamamlanır. Acil siparişler 8 saat içinde tamamlanır.",
+        "q2": "Dosya hangi formatta teslim edilir?",
+        "a2": "PNG, JPG formatlarında teslim edilir. Talep edilirse PSD veya Canva şablonları da gönderilebilir.",
+        "q3": "Revizyon hakkım var mı?",
+        "a3": "Evet, her tasarım için 1 ücretsiz revizyon hakkınız var."
+      },
+      "professionalTeam": "Profesyonel ekibimizle kaliteli sonuç garanti edilir!"
+    }
+  },
+  "popup": {
+    "title": "Rakipleriniz zaten önde.",
+    "subtitle": "Her gecikme, kaybedilen bir müşteri demektir. Ücretsiz danışmanlık alın, stratejinizi birlikte kuralım.",
+    "cta": "WhatsApp'tan yazın",
+    "dismiss": "Şimdilik ilgilenmiyorum",
+    "whatsappText": "Merhaba! Ücretsiz pazarlama danışmanlığı almak istiyorum."
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "2020-dən bəri",
+      "title": "Rəqəmsal Marketinq Dünyasında",
+      "titleAccent": "Etibarlı",
+      "titleEnd": "Partneriniz.",
+      "description": "Cradex Agency MMC 2020-ci ildə Bakıda qurulmuş 360° marketinq agentliyidir. 6+ illik təcrübəmizlə 10+ sektorda fəaliyyət göstərir, 100+ müştəriyə 350+ uğurlu layihə təqdim etmişik.",
+      "badges": [
+        {
+          "icon": "CheckCircle2",
+          "text": "360° Marketinq Agentliyi"
+        },
+        {
+          "icon": "Users",
+          "text": "100+ Müştəri Məmnuniyyəti"
+        },
+        {
+          "icon": "TrendingUp",
+          "text": "350+ Uğurlu Layihə"
+        },
+        {
+          "icon": "Award",
+          "text": "10+ Sektorda Fəaliyyət"
+        }
+      ],
+      "stats": [
+        {
+          "value": 6,
+          "suffix": "+",
+          "label": "İllik Agentlik Təcrübəsi"
+        },
+        {
+          "value": 350,
+          "suffix": "+",
+          "label": "Uğurlu Layihə"
+        },
+        {
+          "value": 100,
+          "suffix": "+",
+          "label": "Müştəri Məmnuniyyəti"
+        },
+        {
+          "value": 10,
+          "suffix": "+",
+          "label": "Sektorda Fəaliyyət"
+        }
+      ]
+    },
+    "intro": {
+      "number": "01",
+      "subtitle": "BİZ KİMİK",
+      "title": "Təcrübə və verilərə əsaslanan bir agentlik.",
+      "cards": [
+        {
+          "id": "mission",
+          "number": "01",
+          "title": "Missiyamız",
+          "subtitle": "360° MARKETİNQ HƏLLƏR",
+          "description": "Cradex Agency MMC olaraq missiyamız, müəssisələrin rəqəmsal dünyada böyüməsinə 360° marketinq həlləri ilə dəstək olmaqdır. SEO, SMM, Veb Dizayn, Brendinq, Qrafik Dizayn və Copywriting xidmətlərimizlə brendlərin potensialını reallaşdırır, ölçülə bilən nəticələr təqdim edirik.\n\n2020-ci ildən bəri 10+ sektorda 100+ müştəriyə xidmət göstərərək 350+ uğurlu layihə həyata keçirdik."
+        },
+        {
+          "id": "vision",
+          "number": "02",
+          "title": "Vizyonumuz",
+          "subtitle": "AZƏRBAYCANDA LİDER RƏQƏMSAL MARKETİNQ AGENTLİYİ",
+          "description": "Vizyonumuz, Azərbaycanda ən etibarlı və innovativ rəqəmsal marketinq agentliyi olmaq, müştərilərimizin uğurunu öz uğurumuzu hesab etməkdir.\n\nDaimi inkişaf edən rəqəmsal dünyada müştərilərimizə ən son texnologiyalar və strategiyalarla xidmət göstərərək, sektorda standartları müəyyənləşdirən agentlik olmağı hədəfləyirik."
+        },
+        {
+          "id": "journey",
+          "number": "03",
+          "title": "Bizim Yolumuz",
+          "subtitle": "2020-DƏN BU YANA DAVARLI İNKİŞAF",
+          "description": "2020-ci ildə Bakıda qurulan Cradex Agency MMC, 6 il ərzində Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən birinə çevrildi.\n\n350+ uğurlu layihə, 100+ məmnun müştəri və 10+ sektorda fəaliyyətlə sübut etdik ki, keyfiyyətli xidmət və nəticəyönlü yanaşma uğurun açarıdır."
+        },
+        {
+          "id": "flexibility",
+          "number": "04",
+          "title": "Yanaşmamız",
+          "subtitle": "360° İNTEQRASİYALI STRATEGİYA",
+          "description": "Biz sadəcə xidmət göstərmirik - tərəfdaş oluruq. Hər müştəri ilə uzunmüddətli əməkdaşlıq quraraq, onların məqsədlərinə çatmaq üçün fərdi strategiyalar hazırlayırıq.\n\n360° yanaşmamız sayəsində brendinizin bütün rəqəmsal toxunma nöqtələrini vahid strategiya altında birləşdirir, maksimum nəticə əldə edirik."
+        }
+      ]
+    },
+    "values": {
+      "number": "02",
+      "subtitle": "ƏSASLARIMIZ",
+      "title": "Bizi 6 ildən bəri",
+      "titleAccent": "güclü",
+      "titleEnd": "edən dəyərlər.",
+      "description": "Cradex Agency MMC-ni 6 ildən bəri güclü edən əsas 6 dəyərlərimiz.",
+      "items": [
+        {
+          "id": "transparency",
+          "icon": "Shield",
+          "title": "Şəffaflıq",
+          "description": "Müştərilərimizlə hər işdə və dizayn mərhələsində en yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+        },
+        {
+          "id": "quality",
+          "icon": "Award",
+          "title": "Keyfiyyət",
+          "description": "Hər layihədə və dizayn mərhələsində ən yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+        },
+        {
+          "id": "innovation",
+          "icon": "Lightbulb",
+          "title": "Yenilik",
+          "description": "Yapay zeka və avtnom texnologiyalar ilə daimi yenilik və inteqrasiya edirik."
+        },
+        {
+          "id": "partnership",
+          "icon": "Handshake",
+          "title": "Müştəri Mərkəzlilik",
+          "description": "Müştərilərimizin uğuru və gəlir ərtım bizim ən böyük motivasiyadır."
+        },
+        {
+          "id": "teamwork",
+          "icon": "Users",
+          "title": "Komanda İşləmə",
+          "description": "Təcrübəli və sertifikalı komandamızla kollektiv şəklə güçlü komanda ruhuna əməl kollektiv əliylə mükəmməl edik."
+        },
+        {
+          "id": "ethics",
+          "icon": "Heart",
+          "title": "Etika",
+          "description": "Bütün marketinq fəaliyyətlərimizlə qanunlara, məlumatlarə və etik dəyərlərə qanunlara əməl edirik."
+        }
+      ]
+    },
+    "timeline": {
+      "number": "03",
+      "subtitle": "RƏQƏMSAL TARİXÇƏMİZ",
+      "title": "2020-dən bu yana",
+      "titleAccent": "daimi inkişaf",
+      "titleEnd": "və böyümə səyahəti.",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Cradex Agency'nin Kuruluşu",
+          "description": "Cradex Agency, Bakü'de 360° dijital pazarlama ajansı olarak faaliyete başladı. İlk müşterilerimizle güven ilişkileri kurarak piyasada yerimizi aldık."
+        },
+        {
+          "year": "2021",
+          "title": "Hizmet Portföyünün Genişletilmesi",
+          "description": "SEO, SMM ve Web Tasarım hizmetlerimize Marka Kimliği, Grafik Tasarım ve Metin Yazarlığı ekleyerek tam 360° pazarlama ajansına dönüştük. 50+ başarılı proje tamamladık."
+        },
+        {
+          "year": "2022",
+          "title": "100+ Proje Mihenk Taşı",
+          "description": "İlk 100 projemizi başarıyla tamamlayarak müşteri portföyümüzü genişlettik. 5+ sektörde faaliyet göstermeye başladık ve ekibimizi güçlendirdik."
+        },
+        {
+          "year": "2023",
+          "title": "Kurumsal Müşteriler ve Sertifikasyonlar",
+          "description": "Büyük kurumsal müşterilerle işbirliğine başladık. Google ve Meta sertifikaları alarak profesyonel standartlarımızı kanıtladık. 200+ proje sayısına ulaştık."
+        },
+        {
+          "year": "2024",
+          "title": "Bölgesel Büyüme",
+          "description": "Hizmet alanımızı 10+ sektöre genişlettik, 300+ proje eşiğini geçtik ve 100+ memnun müşteriye ulaştık."
+        },
+        {
+          "year": "2025",
+          "title": "350+ Proje ve Gelecek Vizyonu",
+          "description": "350+ başarılı proje ile Azerbaycan'in önde gelen dijital pazarlama ajanslarından biri olduk. Yeni teknolojiler ve yapay zeka entegrasyonu ile hizmet kalitemizi artırmaya devam ediyoruz."
+        },
+        {
+          "year": "2026",
+          "title": "Yeni Dönem: Tam Dijital Ekosistem",
+          "description": "2026'da hizmet portföyümüzü tam bir dijital ekosisteme dönüştürüyoruz. Video prodüksiyon, yapay zeka destekli analitik ve genişletilmiş bölgesel hizmetlerle Azerbaycan'in en güçlü 360° pazarlama ajansı haline geliyoruz."
+        }
+      ],
+      "archiveLink": ""
+    },
+    "services": {
+      "number": "04",
+      "subtitle": "HİZMETLERİMİZ",
+      "title": "Dijital dünyada",
+      "titleAccent": "ihtiyacınız olan her şey",
+      "titleEnd": "",
+      "description": "2020'den bu yana 360° yaklaşımla markanızın tüm dijital ihtiyaçlarını tek çatı altında birleştiriyoruz.",
+      "ctaLabel": "Tüm hizmetleri gör",
+      "items": [
+        {
+          "id": "seo",
+          "icon": "Search",
+          "title": "SEO Optimizasyonu",
+          "description": "Google'da üst sıralara çıkın. Teknik SEO, anahtar kelime stratejisi ve içerik optimizasyonu ile organik trafiği artırıyoruz.",
+          "href": "/services/digital-marketing"
+        },
+        {
+          "id": "smm",
+          "icon": "Share2",
+          "title": "Sosyal Medya Pazarlaması",
+          "description": "Instagram, Facebook, TikTok ve LinkedIn'de etkileyici sosyal medya yönetimiyle markanızı güçlendiriyoruz.",
+          "href": "/services/smm"
+        },
+        {
+          "id": "web",
+          "icon": "Globe",
+          "title": "Web Sitesi Geliştirme",
+          "description": "Hızlı, modern ve SEO dostu web siteleri, e-ticaret platformları ve landing page'ler hazırlıyoruz.",
+          "href": "/services/web-mobile-dev"
+        },
+        {
+          "id": "graphic",
+          "icon": "Palette",
+          "title": "Grafik ve Motion Tasarım",
+          "description": "Logo, kurumsal kimlik, banner, animasyon ve tüm görsel materyaller — markanızın görsel dili güvende.",
+          "href": "/services/graphic-motion-design"
+        },
+        {
+          "id": "video",
+          "icon": "Video",
+          "title": "Video Montaj",
+          "description": "Reklam videoları, YouTube içerikleri, Reels ve kurumsal videolar için profesyonel montaj hizmeti.",
+          "href": "/services/photo-video"
+        },
+        {
+          "id": "copywriting",
+          "icon": "PenTool",
+          "title": "Metin Yazarlığı",
+          "description": "Satış odaklı metinler, SEO içerikleri, blog makaleleri ve sosyal medya metinleri yazıyoruz.",
+          "href": "/services/copywriting"
+        },
+        {
+          "id": "ads",
+          "icon": "Megaphone",
+          "title": "Reklam Kampanyaları",
+          "description": "Google Ads, Meta Ads, TikTok Ads — maksimum ROI için hedefli reklam kampanyaları.",
+          "href": "/services/digital-marketing"
+        },
+        {
+          "id": "branding",
+          "icon": "Layers",
+          "title": "Markalama",
+          "description": "Marka stratejisi, görsel kimlik ve stil rehberi — güçlü bir marka inşa etmek için gereken her şey.",
+          "href": "/services/branding"
+        },
+        {
+          "id": "photo",
+          "icon": "Camera",
+          "title": "Fotoğraf Çekimi",
+          "description": "Ticari fotoğraf çekimi, ürün fotoğrafçılığı ve kurumsal portre çekimleri.",
+          "href": "/services/photo-video"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Hekayəmizin bir",
+      "titleAccent": "parçası",
+      "titleEnd": "olun.",
+      "description": "Bizə hədəflərinizi bildirin, növbəti uğur hekayəsini birlikdə yazaraq.",
+      "primaryButton": "Bizimlə Əlaqə",
+      "stats": [
+        {
+          "value": 350,
+          "suffix": "+",
+          "label": "Uğurlu Layihə"
+        },
+        {
+          "value": 6,
+          "suffix": "+",
+          "label": "İllik Təcrübə"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Müştəri Məmnuniyyəti"
+        }
+      ]
+    }
+  }
 }
