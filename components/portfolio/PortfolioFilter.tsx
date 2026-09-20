@@ -1,6 +1,17 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import { 
+  Sparkles, 
+  Share2, 
+  Award, 
+  Code2, 
+  Palette, 
+  TrendingUp, 
+  Camera,
+  Tv,
+  PenLine
+} from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import type { ServiceSlug } from '@/types'
 
@@ -16,16 +27,16 @@ export const PORTFOLIO_FILTER_VALUES: PortfolioCategory[] = [
   'photo-video',
 ]
 
-const FILTER_ICONS: Record<PortfolioCategory, string> = {
-  'all':                   '⚡',
-  'smm':                   '📱',
-  'branding':              '🏆',
-  'web-mobile-dev':        '💻',
-  'graphic-motion-design': '🎨',
-  'digital-marketing':     '🔍',
-  'photo-video':           '📷',
-  'traditional-marketing': '📺',
-  'copywriting':           '📝',
+const FILTER_ICONS: Record<PortfolioCategory, any> = {
+  'all':                   Sparkles,
+  'smm':                   Share2,
+  'branding':              Award,
+  'web-mobile-dev':        Code2,
+  'graphic-motion-design': Palette,
+  'digital-marketing':     TrendingUp,
+  'photo-video':           Camera,
+  'traditional-marketing': Tv,
+  'copywriting':           PenLine,
 }
 
 interface PortfolioFilterProps {
@@ -49,7 +60,7 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
         const isActive = active === value
         const count = value === 'all' ? totalCount : (counts[value] ?? 0)
         const label = t(value as any)
-        const icon = FILTER_ICONS[value] ?? '📌'
+        const IconComponent = FILTER_ICONS[value] ?? Sparkles
 
         return (
           <button
@@ -74,7 +85,7 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
             )}
 
             <span className="relative z-10 flex items-center gap-1.5">
-              <span aria-hidden="true">{icon}</span>
+              <IconComponent className="w-4 h-4" strokeWidth={2} />
               <span>{label}</span>
               <span
                 className={cn(
