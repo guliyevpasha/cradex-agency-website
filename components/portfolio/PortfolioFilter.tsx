@@ -68,8 +68,8 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
             onClick={() => onChange(value)}
             aria-pressed={isActive}
             className={cn(
-              'relative px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300',
-              'min-h-[44px] flex items-center gap-2 overflow-hidden',
+              'relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300',
+              'min-h-[44px] flex items-center gap-2.5',
               isActive
                 ? 'text-white shadow-[0_0_20px_rgba(108,99,255,0.5)]'
                 : 'glass-card text-text-secondary hover:text-text-primary hover:border-accent-primary/40'
@@ -79,17 +79,17 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
             {isActive && (
               <motion.span
                 layoutId="portfolio-filter-bg"
-                className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full"
+                className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full -z-0"
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.45 }}
               />
             )}
 
-            <span className="relative z-10 flex items-center gap-1.5">
-              <IconComponent className="w-4 h-4" strokeWidth={2} />
-              <span>{label}</span>
+            <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+              <IconComponent className="w-4 h-4 shrink-0" strokeWidth={2} />
+              <span className="font-medium">{label}</span>
               <span
                 className={cn(
-                  'text-xs px-1.5 py-0.5 rounded-full font-normal',
+                  'text-xs px-2 py-0.5 rounded-full font-normal shrink-0',
                   isActive ? 'bg-white/20 text-white' : 'bg-bg-tertiary text-text-muted'
                 )}
               >
