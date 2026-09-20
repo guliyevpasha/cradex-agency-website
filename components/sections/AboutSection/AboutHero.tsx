@@ -3,9 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import CountUp from 'react-countup'
-import * as Icons from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { AboutBadgesMarquee } from './AboutBadgesMarquee'
 
 interface Badge {
   icon: string
@@ -24,7 +22,7 @@ interface AboutHeroProps {
   titleAccent: string
   titleEnd: string
   description: string
-  badges: Badge[]
+  badges: Badge[] // Keep for compatibility but won't use
   stats: Stat[]
 }
 
@@ -34,7 +32,6 @@ export function AboutHero({
   titleAccent,
   titleEnd,
   description,
-  badges,
   stats,
 }: AboutHeroProps) {
   const { ref, inView } = useInView({
@@ -101,25 +98,14 @@ export function AboutHero({
           {description}
         </motion.p>
 
-        {/* Badges */}
+        {/* Animated Badges Marquee */}
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap items-center justify-center gap-6 mb-20"
+          className="mb-20"
         >
-          {badges.map((badge, index) => {
-            const IconComponent = ((Icons as any)[badge.icon] as LucideIcon) || Icons.Check
-            return (
-              <div
-                key={index}
-                className="flex items-center gap-2 text-text-secondary"
-              >
-                <IconComponent className="w-5 h-5 text-accent-primary" />
-                <span className="text-sm font-medium">{badge.text}</span>
-              </div>
-            )
-          })}
+          <AboutBadgesMarquee />
         </motion.div>
 
         {/* Stats */}
