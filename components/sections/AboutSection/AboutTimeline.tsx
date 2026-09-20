@@ -61,10 +61,6 @@ export function AboutTimeline({
     return () => observers.forEach((o) => o.disconnect())
   }, [events.length])
 
-  function scrollToIndex(index: number) {
-    itemRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
-
   return (
     <section
       ref={sectionRef}
@@ -195,44 +191,6 @@ export function AboutTimeline({
                 </div>
               )
             })}
-          </div>
-        </div>
-
-        {/* ── Right dot nav (desktop) ── */}
-        <div className="hidden lg:block">
-          <div className="fixed right-8 top-1/2 -translate-y-1/2 z-20 flex flex-col items-end gap-3">
-            {events.map((event, index) => {
-              const isActive = activeIndex === index
-              return (
-                <button
-                  key={event.year}
-                  onClick={() => scrollToIndex(index)}
-                  aria-label={`${event.year} ilinə get`}
-                  className="group flex items-center gap-2.5 focus:outline-none"
-                >
-                  <span
-                    className={cn(
-                      'text-xs font-mono font-semibold transition-all duration-300',
-                      isActive
-                        ? 'opacity-100 text-accent-primary translate-x-0'
-                        : 'opacity-0 text-text-muted translate-x-2 group-hover:opacity-60 group-hover:translate-x-0'
-                    )}
-                  >
-                    {event.year}
-                  </span>
-
-                  <div
-                    className={cn(
-                      'rounded-full transition-all duration-300',
-                      isActive
-                        ? 'w-3 h-3 bg-accent-primary shadow-[0_0_10px_rgba(108,99,255,0.7)]'
-                        : 'w-2 h-2 bg-white/20 group-hover:bg-white/40'
-                    )}
-                  />
-                </button>
-              )
-            })}
-            <div className="absolute right-[5px] top-3 bottom-3 w-px bg-white/10 -z-10" />
           </div>
         </div>
       </div>
