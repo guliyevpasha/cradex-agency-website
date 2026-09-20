@@ -84,7 +84,7 @@ export function AboutHero({
         >
           <div className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold leading-tight">
             <div className="text-text-primary mb-2">{title}</div>
-            <div className="bg-gradient-to-r from-accent-primary via-red-500 to-accent-primary bg-clip-text text-transparent">
+            <div className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
               {titleAccent}
             </div>
             <div className="text-text-primary mt-2">{titleEnd}</div>

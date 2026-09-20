@@ -49,18 +49,15 @@ export function AboutFinalCTA({
   return (
     <section
       ref={ref}
-      className="relative py-24 lg:py-32 overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
-      }}
+      className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-bg-secondary via-bg-primary to-bg-secondary"
     >
       {/* Animated background */}
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.2) 0%, transparent 50%),
-            radial-gradient(ellipse 80% 50% at 80% 50%, rgba(220,38,38,0.2) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 80% 50%, rgba(108,99,255,0.1) 0%, transparent 50%)
           `,
         }}
         aria-hidden="true"
@@ -74,11 +71,11 @@ export function AboutFinalCTA({
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6"
         >
-          <span className="text-white">{title} </span>
-          <span className="text-transparent bg-gradient-to-r from-accent-primary to-red-500 bg-clip-text">
+          <span className="text-text-primary">{title} </span>
+          <span className="text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text">
             {titleAccent}
           </span>
-          <span className="text-white"> {titleEnd}</span>
+          <span className="text-text-primary"> {titleEnd}</span>
         </motion.h2>
 
         {/* Description */}
@@ -102,14 +99,14 @@ export function AboutFinalCTA({
             onClick={handleClick}
             className={cn(
               'group relative inline-flex items-center gap-3 px-10 py-5 rounded-2xl overflow-hidden',
-              'bg-gradient-to-r from-red-600 via-red-500 to-accent-primary bg-[length:200%_100%]',
+              'bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-[length:200%_100%]',
               'text-white font-display font-bold text-lg tracking-wide',
               'hover:bg-[position:100%_0]',
               'hover:scale-105 active:scale-95',
               'transition-all duration-700 ease-out',
               'focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-bg-primary',
-              'shadow-2xl shadow-red-500/30',
-              'hover:shadow-3xl hover:shadow-red-500/50'
+              'shadow-2xl shadow-accent-primary/30',
+              'hover:shadow-3xl hover:shadow-accent-primary/50'
             )}
           >
             {/* Animated shimmer */}
@@ -130,10 +127,10 @@ export function AboutFinalCTA({
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-8 rounded-2xl bg-white/[0.03] backdrop-blur-sm border border-border/10"
+              className="text-center p-8 rounded-2xl bg-bg-tertiary/30 backdrop-blur-sm border border-border/20"
             >
               <div className="flex items-end justify-center gap-1 mb-3">
-                <span className="text-5xl font-display font-bold text-white">
+                <span className="text-5xl font-display font-bold text-text-primary">
                   {inView ? (
                     <CountUp
                       start={0}
@@ -152,7 +149,7 @@ export function AboutFinalCTA({
                   </span>
                 )}
               </div>
-              <p className="text-sm text-text-secondary/80 font-medium uppercase tracking-wider">
+              <p className="text-sm text-text-secondary font-medium uppercase tracking-wider">
                 {stat.label}
               </p>
             </div>

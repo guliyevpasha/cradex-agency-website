@@ -60,7 +60,7 @@ export function AboutIntroCards({
                 className={cn(
                   word.toLowerCase().includes('təcrübə') ||
                     word.toLowerCase().includes('verilərə')
-                    ? 'text-transparent bg-gradient-to-r from-accent-primary to-red-500 bg-clip-text'
+                    ? 'text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text'
                     : ''
                 )}
               >

@@ -104,7 +104,7 @@ export function AboutServices({
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
             <span className="text-text-primary">{title} </span>
-            <span className="text-transparent bg-gradient-to-r from-accent-primary to-red-500 bg-clip-text">
+            <span className="text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text">
               {titleAccent}
             </span>
             {titleEnd && <span className="text-text-primary"> {titleEnd}</span>}
