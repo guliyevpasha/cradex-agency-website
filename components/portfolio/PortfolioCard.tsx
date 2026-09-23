@@ -77,14 +77,6 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
           {/* Gradient scrim — bottom */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-          {/* Featured badge */}
-          {item.featured && (
-            <div className="absolute top-4 right-4 z-10">
-              <span className="text-xs bg-accent-primary text-white px-3 py-1.5 rounded-full font-semibold shadow-lg shadow-accent-primary/30">
-                Featured
-              </span>
-            </div>
-          )}
 
           {/* Category pill — top left */}
           <div className="absolute top-4 left-4 z-10">
