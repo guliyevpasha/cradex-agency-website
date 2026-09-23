@@ -223,11 +223,11 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "2020-dən bəri",
+      "eyebrow": "2020-ci ildən bəri",
       "title": "Rəqəmsal Marketinq Dünyasında",
       "titleAccent": "Etibarlı",
-      "titleEnd": "Partneriniz.",
-      "description": "Cradex Agency MMC 2020-ci ildə Bakıda qurulmuş 360° marketinq agentliyidir. 6+ illik təcrübəmizlə 10+ sektorda fəaliyyət göstərir, 100+ müştəriyə 350+ uğurlu layihə təqdim etmişik.",
+      "titleEnd": "Tərəfdaşınız.",
+      "description": "Cradex Agency 2020-ci ildə Bakıda qurulan 360° rəqəmsal marketinq agentliyidir. 6 illik təcrübəmizlə 10-dan çox sektorda fəaliyyət göstərir, 100-dən çox müştəriyə 350-dən artıq uğurlu layihə həyata keçirmişik.",
       "badges": [
         {
           "icon": "CheckCircle2",
@@ -235,7 +235,7 @@
         },
         {
           "icon": "Users",
-          "text": "100+ Müştəri Məmnuniyyəti"
+          "text": "100+ Məmnun Müştəri"
         },
         {
           "icon": "TrendingUp",
@@ -243,14 +243,14 @@
         },
         {
           "icon": "Award",
-          "text": "10+ Sektorda Fəaliyyət"
+          "text": "10+ Sektorda Təcrübə"
         }
       ],
       "stats": [
         {
           "value": 6,
           "suffix": "+",
-          "label": "İllik Agentlik Təcrübəsi"
+          "label": "İllik Təcrübə"
         },
         {
           "value": 350,
@@ -260,7 +260,7 @@
         {
           "value": 100,
           "suffix": "+",
-          "label": "Müştəri Məmnuniyyəti"
+          "label": "Məmnun Müştəri"
         },
         {
           "value": 10,
@@ -272,199 +272,199 @@
     "intro": {
       "number": "01",
       "subtitle": "BİZ KİMİK",
-      "title": "Təcrübə və verilərə əsaslanan bir agentlik.",
+      "title": "Təcrübəyə və rəqəmlərə dayanan bir agentlik.",
       "cards": [
         {
           "id": "mission",
           "number": "01",
           "title": "Missiyamız",
-          "subtitle": "360° MARKETİNQ HƏLLƏR",
-          "description": "Cradex Agency MMC olaraq missiyamız, müəssisələrin rəqəmsal dünyada böyüməsinə 360° marketinq həlləri ilə dəstək olmaqdır. SEO, SMM, Veb Dizayn, Brendinq, Qrafik Dizayn və Copywriting xidmətlərimizlə brendlərin potensialını reallaşdırır, ölçülə bilən nəticələr təqdim edirik.\n\n2020-ci ildən bəri 10+ sektorda 100+ müştəriyə xidmət göstərərək 350+ uğurlu layihə həyata keçirdik."
+          "subtitle": "360° MARKETİNQ HƏLLƏRİ",
+          "description": "Cradex Agency olaraq əsas məqsədimiz müəssisələrin rəqəmsal dünyada davamlı böyüməsinə dəstək olmaqdır. SEO, SMM, Veb Dizayn, Brendinq, Qrafik Dizayn və Kopiraytinq xidmətlərimizlə hər brendin potensialını açır, ölçülə bilən nəticələr əldə edirik.\n\n2020-ci ildən bu günə 10-dan çox sektorda 100-dən artıq müştəriyə xidmət göstərərək 350-ni keçən uğurlu layihəni başa çatdırdıq."
         },
         {
           "id": "vision",
           "number": "02",
           "title": "Vizyonumuz",
           "subtitle": "AZƏRBAYCANDA LİDER RƏQƏMSAL MARKETİNQ AGENTLİYİ",
-          "description": "Vizyonumuz, Azərbaycanda ən etibarlı və innovativ rəqəmsal marketinq agentliyi olmaq, müştərilərimizin uğurunu öz uğurumuzu hesab etməkdir.\n\nDaimi inkişaf edən rəqəmsal dünyada müştərilərimizə ən son texnologiyalar və strategiyalarla xidmət göstərərək, sektorda standartları müəyyənləşdirən agentlik olmağı hədəfləyirik."
+          "description": "Azərbaycanda ən etibarlı və yenilikçi rəqəmsal marketinq agentliyi olmaq, müştərilərimizin uğurunu öz uğurumuz kimi qəbul etmək – bu, bizim yolumuzun əsas istiqamətidir.\n\nDaim dəyişən rəqəmsal mühitdə müştərilərimizə ən müasir texnologiyalar və strategiyalar əsasında xidmət göstərərək sektorda standartları müəyyənləşdirən agentliyə çevrilməyi hədəfləyirik."
         },
         {
           "id": "journey",
           "number": "03",
-          "title": "Bizim Yolumuz",
-          "subtitle": "2020-DƏN BU YANA DAVARLI İNKİŞAF",
-          "description": "2020-ci ildə Bakıda qurulan Cradex Agency MMC, 6 il ərzində Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən birinə çevrildi.\n\n350+ uğurlu layihə, 100+ məmnun müştəri və 10+ sektorda fəaliyyətlə sübut etdik ki, keyfiyyətli xidmət və nəticəyönlü yanaşma uğurun açarıdır."
+          "title": "Keçdiyimiz Yol",
+          "subtitle": "2020-DƏN BU GÜNƏ DURMADAN İNKİŞAF",
+          "description": "2020-ci ildə Bakıda fəaliyyətə başlayan Cradex Agency, cəmi 6 il ərzində Azərbaycanın tanınan rəqəmsal marketinq agentliklərindən birinə çevrildi.\n\n350-dən artıq uğurlu layihə, 100-dən çox razı müştəri və 10-dan çox sektorda əldə etdiyimiz nəticələr bir daha sübut edir ki, keyfiyyətli xidmət və nəticəyönlü yanaşma uğurun əsl açarıdır."
         },
         {
           "id": "flexibility",
           "number": "04",
           "title": "Yanaşmamız",
           "subtitle": "360° İNTEQRASİYALI STRATEGİYA",
-          "description": "Biz sadəcə xidmət göstərmirik - tərəfdaş oluruq. Hər müştəri ilə uzunmüddətli əməkdaşlıq quraraq, onların məqsədlərinə çatmaq üçün fərdi strategiyalar hazırlayırıq.\n\n360° yanaşmamız sayəsində brendinizin bütün rəqəmsal toxunma nöqtələrini vahid strategiya altında birləşdirir, maksimum nəticə əldə edirik."
+          "description": "Biz sadəcə xidmət göstərmirik — tərəfdaş olurıq. Hər müştəri ilə uzunmüddətli əməkdaşlıq quraraq onların məqsədlərinə çatmaq üçün fərdi strategiyalar hazırlayırıq.\n\n360° yanaşmamız sayəsində brendinizin bütün rəqəmsal toxunuş nöqtələrini vahid strategiya çərçivəsində birləşdirir, maksimum nəticəyə çatırıq."
         }
       ]
     },
     "values": {
       "number": "02",
-      "subtitle": "ƏSASLARIMIZ",
-      "title": "Bizi 6 ildən bəri",
+      "subtitle": "DƏYƏRLƏRIMIZ",
+      "title": "Bizi 6 ildir",
       "titleAccent": "güclü",
-      "titleEnd": "edən dəyərlər.",
-      "description": "Cradex Agency MMC-ni 6 ildən bəri güclü edən əsas 6 dəyərlərimiz.",
+      "titleEnd": "saxlayan prinsiplər.",
+      "description": "Hər layihəmizdə, hər müştərimizlə münasibətimizdə özünü göstərən 6 əsas dəyər.",
       "items": [
         {
           "id": "transparency",
           "icon": "Shield",
           "title": "Şəffaflıq",
-          "description": "Müştərilərimizlə hər işdə və dizayn mərhələsində en yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+          "description": "Müştərilərimizlə hər mərhələdə açıq və dürüst ünsiyyət qururuq. Heç bir gizli xərc, heç bir qeyri-müəyyənlik yoxdur."
         },
         {
           "id": "quality",
           "icon": "Award",
           "title": "Keyfiyyət",
-          "description": "Hər layihədə və dizayn mərhələsində ən yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+          "description": "Hər layihədə ən yüksək keyfiyyət standartlarına riayət edirik — xırda detaldan ümumi strategiyaya qədər."
         },
         {
           "id": "innovation",
           "icon": "Lightbulb",
-          "title": "Yenilik",
-          "description": "Yapay zeka və avtnom texnologiyalar ilə daimi yenilik və inteqrasiya edirik."
+          "title": "İnnovasiya",
+          "description": "Süni intellekt və müasir texnologiyaları işimizə inteqrasiya edərək müştərilərimizə rəqabətdə üstünlük qazandırırıq."
         },
         {
           "id": "partnership",
           "icon": "Handshake",
-          "title": "Müştəri Mərkəzlilik",
-          "description": "Müştərilərimizin uğuru və gəlir ərtım bizim ən böyük motivasiyadır."
+          "title": "Müştəri Yönümlülük",
+          "description": "Müştərinin uğuru bizim uğurumuzdur. Hər qərarımızı onların biznes məqsədlərini ön planda tutaraq qəbul edirik."
         },
         {
           "id": "teamwork",
           "icon": "Users",
-          "title": "Komanda İşləmə",
-          "description": "Təcrübəli və sertifikalı komandamızla kollektiv şəklə güçlü komanda ruhuna əməl kollektiv əliylə mükəmməl edik."
+          "title": "Komanda Ruhu",
+          "description": "Sertifikatlı və həvəsli mütəxəssislərdən ibarət komandamız hər layihəyə birgə yanaşır, bilikləri birləşdirərək ən yaxşı nəticəni ortaya qoyur."
         },
         {
           "id": "ethics",
           "icon": "Heart",
           "title": "Etika",
-          "description": "Bütün marketinq fəaliyyətlərimizlə qanunlara, məlumatlarə və etik dəyərlərə qanunlara əməl edirik."
+          "description": "Bütün marketinq fəaliyyətlərimizi qanunçuluq, məlumatların məxfiliyi və etik iş prinsipləri çərçivəsində aparırıq."
         }
       ]
     },
     "timeline": {
       "number": "03",
       "subtitle": "RƏQƏMSAL TARİXÇƏMİZ",
-      "title": "2020-dən bu yana",
-      "titleAccent": "daimi inkişaf",
-      "titleEnd": "və böyümə səyahəti.",
+      "title": "2020-ci ildən bu günə",
+      "titleAccent": "durmadan irəli",
+      "titleEnd": "— böyümə səyahəti.",
+      "archiveLink": "",
       "events": [
         {
           "year": "2020",
-          "title": "Cradex Agency MMC-nin Təsisi",
-          "description": "Cradex Agency MMC, Bakıda 360° rəqəmsal marketinq agentliyi olaraq fəaliyyətə başladı. İlk müştərilərimizlə güvən əlaqələri quraraq, bazarda yerləşdik."
+          "title": "Cradex Agency-nin Yaranması",
+          "description": "Cradex Agency 2020-ci ildə Bakıda rəqəmsal marketinq sahəsindəki boşluğu doldurmaq məqsədi ilə quruldu. İlk müştərilərimizlə etibara dayalı əməkdaşlıq quraraq bazarda möhkəm yer tutduq."
         },
         {
           "year": "2021",
-          "title": "Xidmət Portfelinin Genişləndirilməsi",
-          "description": "SEO, SMM, Veb Dizayn xidmətlərimizə Brendinq, Qrafik Dizayn və Copywriting xidmətlərini əlavə edərək 360° marketinq agentliyinə çevrildik. 50+ uğurlu layihə tamamladıq."
+          "title": "Xidmət Portfelinin Genişlənməsi",
+          "description": "SEO, SMM və Veb Dizayn xidmətlərimizə Brendinq, Qrafik Dizayn və Kopiraytinq əlavə etdik. Beləliklə, tam 360° marketinq agentliyinə çevrilərək 50-dən artıq layihəni uğurla başa çatdırdıq."
         },
         {
           "year": "2022",
-          "title": "100+ Layihə Milestone",
-          "description": "İlk 100 layihəmizi uğurla tamamlayaraq, müştəri portfelimizi genişləndirdik. 5+ sektorda fəaliyyət göstərməyə başladıq və komandamızı güclləndirdik."
+          "title": "İlk 100 Layihə",
+          "description": "İlk 100 layihəmizi uğurla tamamladıq, müştəri portfelimizi genişləndirdik və 5-dən çox sektorda fəaliyyət göstərməyə başladıq. Komandamızı gücləndirərək yeni hündürlüklərə qalxdıq."
         },
         {
           "year": "2023",
-          "title": "Korporativ Müştərilər və Sertifikasiyalar",
-          "description": "Böyük korporativ müştərilərlə əməkdaşlığa başladıq. Google və Meta sertifikatları əldə edərək, peşəkar standartlarımızı təsdiqlədi k. 200+ layihə sayına çatdıq."
+          "title": "Korporativ Müştərilər və Sertifikatlar",
+          "description": "Böyük korporativ müştərilərlə əməkdaşlığa başladıq. Google və Meta sertifikatları alaraq peşəkar səviyyəmizi rəsmi şəkildə təsdiq etdik. Layihə sayımız 200-ü keçdi."
         },
         {
           "year": "2024",
-          "title": "Regional Genişlənmə",
-          "description": "Xidmət sahəmizi genişləndirərək 10+ sektorda fəaliyyət göstərməyə başladıq. 300+ layihə milestone-unu keçdik və 100+ müştəri məmnuniyyəti əldə etdik."
+          "title": "Coğrafi Genişlənmə",
+          "description": "Fəaliyyət dairəmizi 10-dan çox sektora yaydıq, 300+ layihə hədəfini aşdıq və 100-dən artıq müştərinin etibarını qazandıq."
         },
         {
           "year": "2025",
-          "title": "350+ Layihə və Gələcək Vizyon",
-          "description": "350+ uğurlu layihə ilə Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən biri olduk. Yeni texnologiyalar və AI inteqrasiyası ilə xidmət keyfiyyətimizi daha da artırırıq."
+          "title": "350+ Layihə və Gələcəyə Baxış",
+          "description": "350-dən çox uğurlu layihə ilə Azərbaycanın tanınan rəqəmsal marketinq agentliklərindən birinə çevrildi. Süni intellekt inteqrasiyası və yeni texnologiyalar vasitəsilə xidmət keyfiyyətimizi yeni səviyyəyə daşıyırıq."
         },
         {
           "year": "2026",
-          "title": "Yeni Mərhələ: Tam Rəqəmsal Ekosistem",
-          "description": "2026-cı ildə xidmət portfelimizi tam rəqəmsal ekosistemə çeviririk. Video istehsal, AI-destəkli analitika və genişlənmiş regional xidmətlərlə Azərbaycanın ən güclü 360° marketinq agentliyinə çevrilməkdəyik."
+          "title": "Yeni Fəsil: Tam Rəqəmsal Ekosistem",
+          "description": "2026-cı ildə xidmət portfoliomuz tam rəqəmsal ekosistemə çevrilir. Video istehsalı, AI-əsaslı analitika və genişlənmiş regional əməkdaşlıqla Azərbaycanın ən güclü 360° marketinq agentliyi olmaq yolundayıq."
         }
-      ],
-      "archiveLink": ""
+      ]
     },
     "services": {
       "number": "04",
       "subtitle": "XİDMƏTLƏRİMİZ",
       "title": "Rəqəmsal dünyada",
-      "titleAccent": "hər şeyi",
-      "titleEnd": "təklif edirik.",
-      "description": "2020-dən bəri 360° yanaşma ilə brendinizin bütün rəqəmsal ehtiyaclarını bir çatı altında birləşdiririk.",
+      "titleAccent": "ehtiyacınız olan hər şey",
+      "titleEnd": "bizdədir.",
+      "description": "2020-ci ildən bu günə 360° yanaşma ilə brendinizin bütün rəqəmsal ehtiyaclarını bir damın altında birləşdiririk.",
       "ctaLabel": "Bütün xidmətlərə bax",
       "items": [
         {
           "id": "seo",
           "icon": "Search",
           "title": "SEO Optimallaşdırması",
-          "description": "Google-da üst sıralara çıxın. Texniki SEO, açar söz strategiyası və məzmun optimallaşdırması ilə üzvi trafiki artırırıq.",
+          "description": "Google-da üst sıralara çıxın. Texniki SEO, açar söz strategiyası və məzmun optimallaşdırması ilə üzvi trafiki ardıcıl artırırıq.",
           "href": "/services/digital-marketing"
         },
         {
           "id": "smm",
           "icon": "Share2",
           "title": "Sosial Media Marketinqi",
-          "description": "Instagram, Facebook, TikTok və LinkedIn-də aktiv və cəlbedici sosial media idarəetməsi ilə brendinizi gücləndiririk.",
+          "description": "Instagram, Facebook, TikTok və LinkedIn-də canlı və cəlbedici sosial media idarəetməsi ilə brendinizin səsini gücləndirik.",
           "href": "/services/smm"
         },
         {
           "id": "web",
           "icon": "Globe",
           "title": "Veb Sayt Hazırlanması",
-          "description": "Sürətli, müasir və SEO-dostu veb saytlar, e-ticarət platformaları və landing page-lər hazırlayırıq.",
+          "description": "Sürətli, müasir və SEO-uyğun veb saytlar, e-ticarət platformaları, landing page-lər — işinizə uyğun həll.",
           "href": "/services/web-mobile-dev"
         },
         {
           "id": "graphic",
           "icon": "Palette",
           "title": "Qrafik və Motion Dizayn",
-          "description": "Logo, brend kimliyi, banner, animasiya və bütün vizual materiallar — brendinizin görsel dili bizə etibar edilir.",
+          "description": "Loqo, brend kimliyi, banner, animasiya və sair vizual materiallar — brendinizin görsel dilini siz yox, biz qururuq.",
           "href": "/services/graphic-motion-design"
         },
         {
           "id": "video",
           "icon": "Video",
           "title": "Video Montaj",
-          "description": "Reklam videoları, YouTube kontenti, Reels və korporativ videolar üçün peşəkar montaj xidməti.",
+          "description": "Reklam videoları, YouTube kontenti, Reels və korporativ çəkilişlər üçün peşəkar montaj xidməti.",
           "href": "/services/photo-video"
         },
         {
           "id": "copywriting",
           "icon": "PenTool",
           "title": "Mətn Yazarlığı",
-          "description": "Satışa yönəlmiş kopyraytinq, SEO məzmun, blog məqalələri və sosial media mətni yazırıq.",
+          "description": "Satışa yönəlmiş kopyraytinq, SEO məzmunu, blog yazıları və sosial media mətnləri — hər söz hesablanmış şəkildə yazılır.",
           "href": "/services/copywriting"
         },
         {
           "id": "ads",
           "icon": "Megaphone",
           "title": "Reklam Kampaniyaları",
-          "description": "Google Ads, Meta Ads, TikTok Ads — hədəfli reklam kampaniyaları ilə maksimum ROI əldə edirsiniz.",
+          "description": "Google Ads, Meta Ads, TikTok Ads — düzgün hədəf kütləsinə, düzgün vaxtda çatan, ROI-ni artıran reklam kampaniyaları.",
           "href": "/services/digital-marketing"
         },
         {
           "id": "branding",
           "icon": "Layers",
           "title": "Brendinq",
-          "description": "Brend strategiyası, vizual kimlik, üslub bələdçisi — güclü brend qurmaq üçün hər şey.",
+          "description": "Brend strategiyası, vizual kimlik, üslub bələdçisi — güclü və yadda qalan brend qurmaq üçün lazım olan hər şey.",
           "href": "/services/branding"
         },
         {
           "id": "photo",
           "icon": "Camera",
           "title": "Foto Çəkiliş",
-          "description": "Kommersiya foto çəkilişi, product photography və korporativ portret çəkilişləri.",
+          "description": "Kommersiya foto çəkilişi, məhsul fotoqrafiyası və korporativ portret sessiyaları.",
           "href": "/services/photo-video"
         }
       ]
@@ -473,7 +473,7 @@
       "title": "Hekayəmizin bir",
       "titleAccent": "parçası",
       "titleEnd": "olun.",
-      "description": "Bizə hədəflərinizi bildirin, növbəti uğur hekayəsini birlikdə yazaraq.",
+      "description": "Hədəflərinizi bizə deyin — növbəti uğur hekayəsini birlikdə yazaq.",
       "primaryButton": "Bizimlə Əlaqə",
       "stats": [
         {
