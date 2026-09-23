@@ -1140,241 +1140,241 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "2020-dən bəri",
-      "title": "Rəqəmsal Marketinq Dünyasında",
-      "titleAccent": "Etibarlı",
-      "titleEnd": "Partneriniz.",
-      "description": "Cradex Agency MMC 2020-ci ildə Bakıda qurulmuş 360° marketinq agentliyidir. 6+ illik təcrübəmizlə 10+ sektorda fəaliyyət göstərir, 100+ müştəriyə 350+ uğurlu layihə təqdim etmişik.",
+      "eyebrow": "Since 2020",
+      "title": "Your Trusted Partner",
+      "titleAccent": "in Digital Marketing.",
+      "titleEnd": "",
+      "description": "Cradex Agency is a 360° digital marketing agency founded in Baku in 2020. With over 6 years of experience, we operate across 10+ industries and have delivered 350+ successful projects for 100+ clients.",
       "badges": [
         {
           "icon": "CheckCircle2",
-          "text": "360° Marketinq Agentliyi"
+          "text": "360° Marketing Agency"
         },
         {
           "icon": "Users",
-          "text": "100+ Müştəri Məmnuniyyəti"
+          "text": "100+ Happy Clients"
         },
         {
           "icon": "TrendingUp",
-          "text": "350+ Uğurlu Layihə"
+          "text": "350+ Successful Projects"
         },
         {
           "icon": "Award",
-          "text": "10+ Sektorda Fəaliyyət"
+          "text": "10+ Industries Served"
         }
       ],
       "stats": [
         {
           "value": 6,
           "suffix": "+",
-          "label": "İllik Agentlik Təcrübəsi"
+          "label": "Years of Experience"
         },
         {
           "value": 350,
           "suffix": "+",
-          "label": "Uğurlu Layihə"
+          "label": "Successful Projects"
         },
         {
           "value": 100,
           "suffix": "+",
-          "label": "Müştəri Məmnuniyyəti"
+          "label": "Happy Clients"
         },
         {
           "value": 10,
           "suffix": "+",
-          "label": "Sektorda Fəaliyyət"
+          "label": "Industries Served"
         }
       ]
     },
     "intro": {
       "number": "01",
-      "subtitle": "BİZ KİMİK",
-      "title": "Təcrübə və verilərə əsaslanan bir agentlik.",
+      "subtitle": "WHO WE ARE",
+      "title": "An agency built on experience and data.",
       "cards": [
         {
           "id": "mission",
           "number": "01",
-          "title": "Missiyamız",
-          "subtitle": "360° MARKETİNQ HƏLLƏR",
-          "description": "Cradex Agency MMC olaraq missiyamız, müəssisələrin rəqəmsal dünyada böyüməsinə 360° marketinq həlləri ilə dəstək olmaqdır. SEO, SMM, Veb Dizayn, Brendinq, Qrafik Dizayn və Copywriting xidmətlərimizlə brendlərin potensialını reallaşdırır, ölçülə bilən nəticələr təqdim edirik.\n\n2020-ci ildən bəri 10+ sektorda 100+ müştəriyə xidmət göstərərək 350+ uğurlu layihə həyata keçirdik."
+          "title": "Our Mission",
+          "subtitle": "360° MARKETING SOLUTIONS",
+          "description": "Our mission at Cradex Agency is to support businesses in growing sustainably within the digital world. Through SEO, SMM, Web Design, Branding, Graphic Design, and Copywriting, we unlock the potential of every brand and deliver measurable results.\n\nSince 2020, we have served 100+ clients across 10+ industries and completed more than 350 successful projects."
         },
         {
           "id": "vision",
           "number": "02",
-          "title": "Vizyonumuz",
-          "subtitle": "AZƏRBAYCANDA LİDER RƏQƏMSAL MARKETİNQ AGENTLİYİ",
-          "description": "Vizyonumuz, Azərbaycanda ən etibarlı və innovativ rəqəmsal marketinq agentliyi olmaq, müştərilərimizin uğurunu öz uğurumuzu hesab etməkdir.\n\nDaimi inkişaf edən rəqəmsal dünyada müştərilərimizə ən son texnologiyalar və strategiyalarla xidmət göstərərək, sektorda standartları müəyyənləşdirən agentlik olmağı hədəfləyirik."
+          "title": "Our Vision",
+          "subtitle": "LEADING DIGITAL MARKETING AGENCY IN AZERBAIJAN",
+          "description": "Our vision is to be the most trusted and innovative digital marketing agency in Azerbaijan — treating the success of our clients as our own.\n\nWe aim to become the agency that sets the standard in the industry by serving our clients with the latest technologies and strategies in an ever-evolving digital landscape."
         },
         {
           "id": "journey",
           "number": "03",
-          "title": "Bizim Yolumuz",
-          "subtitle": "2020-DƏN BU YANA DAVARLI İNKİŞAF",
-          "description": "2020-ci ildə Bakıda qurulan Cradex Agency MMC, 6 il ərzində Azərbaycanın aparıcı rəqəmsal marketinq agentliklərindən birinə çevrildi.\n\n350+ uğurlu layihə, 100+ məmnun müştəri və 10+ sektorda fəaliyyətlə sübut etdik ki, keyfiyyətli xidmət və nəticəyönlü yanaşma uğurun açarıdır."
+          "title": "Our Journey",
+          "subtitle": "CONTINUOUS GROWTH SINCE 2020",
+          "description": "Founded in Baku in 2020, Cradex Agency has grown into one of Azerbaijan's recognised digital marketing agencies in just six years.\n\nOver 350 completed projects, 100+ satisfied clients, and active presence in 10+ sectors — proof that quality service and a results-driven approach are the real keys to success."
         },
         {
           "id": "flexibility",
           "number": "04",
-          "title": "Yanaşmamız",
-          "subtitle": "360° İNTEQRASİYALI STRATEGİYA",
-          "description": "Biz sadəcə xidmət göstərmirik - tərəfdaş oluruq. Hər müştəri ilə uzunmüddətli əməkdaşlıq quraraq, onların məqsədlərinə çatmaq üçün fərdi strategiyalar hazırlayırıq.\n\n360° yanaşmamız sayəsində brendinizin bütün rəqəmsal toxunma nöqtələrini vahid strategiya altında birləşdirir, maksimum nəticə əldə edirik."
+          "title": "Our Approach",
+          "subtitle": "360° INTEGRATED STRATEGY",
+          "description": "We don't just provide services — we become partners. We build long-term relationships with every client and craft tailored strategies to help them reach their goals.\n\nOur 360° approach brings every digital touchpoint of your brand under a single unified strategy, driving maximum results."
         }
       ]
     },
     "values": {
       "number": "02",
-      "subtitle": "ƏSASLARIMIZ",
-      "title": "Bizi 6 ildən bəri",
-      "titleAccent": "güclü",
-      "titleEnd": "edən dəyərlər.",
-      "description": "Cradex Agency MMC-ni 6 ildən bəri güclü edən əsas 6 dəyərlərimiz.",
+      "subtitle": "OUR VALUES",
+      "title": "The principles that have kept",
+      "titleAccent": "us strong",
+      "titleEnd": "for 6 years.",
+      "description": "Six core values that show up in every project and every client relationship.",
       "items": [
         {
           "id": "transparency",
           "icon": "Shield",
-          "title": "Şəffaflıq",
-          "description": "Müştərilərimizlə hər işdə və dizayn mərhələsində en yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+          "title": "Transparency",
+          "description": "We maintain open, honest communication with our clients at every stage. No hidden costs, no ambiguity."
         },
         {
           "id": "quality",
           "icon": "Award",
-          "title": "Keyfiyyət",
-          "description": "Hər layihədə və dizayn mərhələsində ən yüksək təxniki keyfiyyət standartlarına tətbiq edirik."
+          "title": "Quality",
+          "description": "From the smallest detail to the overarching strategy, we uphold the highest standards in every project we deliver."
         },
         {
           "id": "innovation",
           "icon": "Lightbulb",
-          "title": "Yenilik",
-          "description": "Yapay zeka və avtnom texnologiyalar ilə daimi yenilik və inteqrasiya edirik."
+          "title": "Innovation",
+          "description": "We integrate AI and cutting-edge technology into our work to give our clients a measurable competitive edge."
         },
         {
           "id": "partnership",
           "icon": "Handshake",
-          "title": "Müştəri Mərkəzlilik",
-          "description": "Müştərilərimizin uğuru və gəlir ərtım bizim ən böyük motivasiyadır."
+          "title": "Client Focus",
+          "description": "Our clients' success is our success. Every decision we make is guided by their business goals."
         },
         {
           "id": "teamwork",
           "icon": "Users",
-          "title": "Komanda İşləmə",
-          "description": "Təcrübəli və sertifikalı komandamızla kollektiv şəklə güçlü komanda ruhuna əməl kollektiv əliylə mükəmməl edik."
+          "title": "Team Spirit",
+          "description": "Our certified and passionate team of specialists approaches every project together, combining expertise to deliver outstanding outcomes."
         },
         {
           "id": "ethics",
           "icon": "Heart",
-          "title": "Etika",
-          "description": "Bütün marketinq fəaliyyətlərimizlə qanunlara, məlumatlarə və etik dəyərlərə qanunlara əməl edirik."
+          "title": "Ethics",
+          "description": "We conduct all marketing activities within the bounds of legal compliance, data privacy, and ethical business principles."
         }
       ]
     },
     "timeline": {
       "number": "03",
-      "subtitle": "RƏQƏMSAL TARİXÇƏMİZ",
-      "title": "2020-dən bu yana",
-      "titleAccent": "daimi inkişaf",
-      "titleEnd": "və böyümə səyahəti.",
+      "subtitle": "OUR DIGITAL HISTORY",
+      "title": "From 2020 to today —",
+      "titleAccent": "a story of steady growth.",
+      "titleEnd": "",
+      "archiveLink": "",
       "events": [
         {
           "year": "2020",
-          "title": "Founding of Cradex Agency",
-          "description": "Cradex Agency was established in Baku as a 360° digital marketing agency. We built trusted relationships with our first clients and established our place in the market."
+          "title": "The Founding of Cradex Agency",
+          "description": "Cradex Agency was established in Baku with the purpose of filling a gap in the digital marketing landscape. We built trust-based partnerships with our first clients and secured our place in the market."
         },
         {
           "year": "2021",
-          "title": "Expanding the Service Portfolio",
-          "description": "We added Branding, Graphic Design and Copywriting to our SEO, SMM and Web Design services, becoming a full 360° marketing agency. Completed 50+ successful projects."
+          "title": "Expanding Our Service Portfolio",
+          "description": "We added Branding, Graphic Design, and Copywriting to our SEO, SMM, and Web Design offering — evolving into a full 360° marketing agency. We closed more than 50 successful projects."
         },
         {
           "year": "2022",
-          "title": "100+ Projects Milestone",
-          "description": "We successfully completed our first 100 projects, expanded our client portfolio and began operating in 5+ sectors while strengthening our team."
+          "title": "The First 100 Projects",
+          "description": "We successfully completed our first 100 projects, broadened our client base, and began operating in 5+ sectors. We strengthened the team and reached new heights."
         },
         {
           "year": "2023",
           "title": "Corporate Clients & Certifications",
-          "description": "We started collaborating with large corporate clients. Obtaining Google and Meta certifications confirmed our professional standards. Reached 200+ projects."
+          "description": "We began collaborating with large corporate clients. Earning Google and Meta certifications officially confirmed our professional standards. Our project count surpassed 200."
         },
         {
           "year": "2024",
-          "title": "Regional Expansion",
-          "description": "We expanded our service area to 10+ sectors, surpassed the 300+ project milestone and achieved 100+ satisfied clients."
+          "title": "Geographic Expansion",
+          "description": "We extended our reach across 10+ industries, surpassed the 300-project milestone, and earned the trust of more than 100 clients."
         },
         {
           "year": "2025",
-          "title": "350+ Projects & Future Vision",
-          "description": "With 350+ successful projects we became one of Azerbaijan's leading digital marketing agencies. We continue raising service quality through new technologies and AI integration."
+          "title": "350+ Projects & a Look Ahead",
+          "description": "With over 350 successful projects, Cradex Agency became one of Azerbaijan's recognised digital marketing agencies. AI integration and new technologies continue to raise the bar for our service quality."
         },
         {
           "year": "2026",
-          "title": "New Chapter: Full Digital Ecosystem",
-          "description": "In 2026 we are transforming our portfolio into a complete digital ecosystem. With video production, AI-powered analytics and expanded regional reach, we are becoming Azerbaijan's strongest 360° marketing agency."
+          "title": "A New Chapter: Full Digital Ecosystem",
+          "description": "In 2026, our service portfolio is evolving into a complete digital ecosystem. With video production, AI-powered analytics, and expanded regional partnerships, we are on our way to becoming Azerbaijan's most powerful 360° marketing agency."
         }
-      ],
-      "archiveLink": ""
+      ]
     },
     "services": {
       "number": "04",
       "subtitle": "OUR SERVICES",
-      "title": "Everything you need",
+      "title": "Everything your brand needs",
       "titleAccent": "in the digital world",
-      "titleEnd": "",
-      "description": "Since 2020, we cover every digital need of your brand under one roof with a 360° approach.",
+      "titleEnd": "— all in one place.",
+      "description": "Since 2020, we have been bringing every digital need of your brand under one roof with a 360° approach.",
       "ctaLabel": "View all services",
       "items": [
         {
           "id": "seo",
           "icon": "Search",
-          "title": "SEO Optimization",
-          "description": "Rank higher on Google. We grow your organic traffic through technical SEO, keyword strategy, and content optimization.",
+          "title": "SEO Optimisation",
+          "description": "Rank higher on Google. We grow your organic traffic consistently through technical SEO, keyword strategy, and content optimisation.",
           "href": "/services/digital-marketing"
         },
         {
           "id": "smm",
           "icon": "Share2",
           "title": "Social Media Marketing",
-          "description": "We strengthen your brand with engaging social media management across Instagram, Facebook, TikTok, and LinkedIn.",
+          "description": "We amplify your brand's voice through active and engaging social media management across Instagram, Facebook, TikTok, and LinkedIn.",
           "href": "/services/smm"
         },
         {
           "id": "web",
           "icon": "Globe",
           "title": "Website Development",
-          "description": "Fast, modern, and SEO-friendly websites, e-commerce platforms, and landing pages tailored to your business.",
+          "description": "Fast, modern, and SEO-ready websites, e-commerce platforms, and landing pages — tailored to your business needs.",
           "href": "/services/web-mobile-dev"
         },
         {
           "id": "graphic",
           "icon": "Palette",
           "title": "Graphic & Motion Design",
-          "description": "Logo, brand identity, banners, animation, and all visual materials — your brand's visual language is in good hands.",
+          "description": "Logo, brand identity, banners, animations, and all visual assets — we build your brand's visual language.",
           "href": "/services/graphic-motion-design"
         },
         {
           "id": "video",
           "icon": "Video",
           "title": "Video Editing",
-          "description": "Professional video editing for ads, YouTube content, Reels, and corporate videos.",
+          "description": "Professional editing for ad videos, YouTube content, Reels, and corporate productions.",
           "href": "/services/photo-video"
         },
         {
           "id": "copywriting",
           "icon": "PenTool",
           "title": "Copywriting",
-          "description": "Sales-focused copy, SEO content, blog articles, and social media text crafted to convert.",
+          "description": "Sales-driven copy, SEO content, blog articles, and social media posts — every word written with purpose.",
           "href": "/services/copywriting"
         },
         {
           "id": "ads",
           "icon": "Megaphone",
           "title": "Ad Campaigns",
-          "description": "Google Ads, Meta Ads, TikTok Ads — targeted campaigns designed to deliver maximum ROI.",
+          "description": "Google Ads, Meta Ads, TikTok Ads — targeted campaigns that reach the right audience at the right time and maximise ROI.",
           "href": "/services/digital-marketing"
         },
         {
           "id": "branding",
           "icon": "Layers",
           "title": "Branding",
-          "description": "Brand strategy, visual identity, and style guide — everything you need to build a strong brand.",
+          "description": "Brand strategy, visual identity, and style guide — everything you need to build a strong, memorable brand.",
           "href": "/services/branding"
         },
         {
@@ -1387,26 +1387,26 @@
       ]
     },
     "cta": {
-      "title": "Hekayəmizin bir",
-      "titleAccent": "parçası",
-      "titleEnd": "olun.",
-      "description": "Bizə hədəflərinizi bildirin, növbəti uğur hekayəsini birlikdə yazaraq.",
-      "primaryButton": "Bizimlə Əlaqə",
+      "title": "Become part",
+      "titleAccent": "of our story.",
+      "titleEnd": "",
+      "description": "Tell us your goals — let's write the next success story together.",
+      "primaryButton": "Get in Touch",
       "stats": [
         {
           "value": 350,
           "suffix": "+",
-          "label": "Uğurlu Layihə"
+          "label": "Successful Projects"
         },
         {
           "value": 6,
           "suffix": "+",
-          "label": "İllik Təcrübə"
+          "label": "Years of Experience"
         },
         {
           "value": 100,
           "suffix": "%",
-          "label": "Müştəri Məmnuniyyəti"
+          "label": "Client Satisfaction"
         }
       ]
     }
