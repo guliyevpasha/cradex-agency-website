@@ -1,17 +1,30 @@
 'use client'
 
-import { Sparkles, Target, Users, Zap, TrendingUp, Award } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Sparkles, Target, Users, Zap, TrendingUp, Award, type LucideIcon } from 'lucide-react'
 
-const badges = [
-  { icon: Sparkles, text: '360° Marketing Agentliyi', gradient: 'from-purple-500 to-pink-500' },
-  { icon: Target, text: '100+ Müştəri Məmnuniyyəti', gradient: 'from-blue-500 to-cyan-500' },
-  { icon: Users, text: '10+ İllik Təcrübə', gradient: 'from-green-500 to-emerald-500' },
-  { icon: Zap, text: '350+ Uğurlu Layihə', gradient: 'from-orange-500 to-red-500' },
-  { icon: TrendingUp, text: '10+ Sektorda Fəaliyyət', gradient: 'from-indigo-500 to-purple-500' },
-  { icon: Award, text: 'Bak Çözümləri', gradient: 'from-yellow-500 to-orange-500' },
+const GRADIENTS = [
+  'from-purple-500 to-pink-500',
+  'from-blue-500 to-cyan-500',
+  'from-green-500 to-emerald-500',
+  'from-orange-500 to-red-500',
+  'from-indigo-500 to-purple-500',
+  'from-yellow-500 to-orange-500',
 ]
 
+const ICONS: LucideIcon[] = [Sparkles, Target, Users, Zap, TrendingUp, Award]
+
+type BadgeItem = { icon: LucideIcon; text: string; gradient: string }
+
 export function AboutBadgesMarquee() {
+  const t = useTranslations('about.hero')
+  const rawBadges = t.raw('badges') as { text: string }[]
+
+  const badges: BadgeItem[] = rawBadges.map((b, i) => ({
+    icon: ICONS[i % ICONS.length],
+    text: b.text,
+    gradient: GRADIENTS[i % GRADIENTS.length],
+  }))
   return (
     <div className="relative w-full overflow-hidden py-6">
       {/* Top Row - Right to Left */}
@@ -72,7 +85,7 @@ export function AboutBadgesMarquee() {
   )
 }
 
-function BadgeCard({ badge }: { badge: typeof badges[0] }) {
+function BadgeCard({ badge }: { badge: BadgeItem }) {
   const Icon = badge.icon
   
   return (
