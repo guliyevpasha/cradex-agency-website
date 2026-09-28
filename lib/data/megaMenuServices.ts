@@ -1,18 +1,20 @@
 /**
  * Mega Menu Services Configuration
  * 
- * Defines the 6 main services displayed in the services mega menu navigation.
+ * Defines all services displayed in the services mega menu navigation.
  * Each service includes an icon, slug for routing, and translation key.
  */
 
 import type { LucideIcon } from 'lucide-react'
 import {
-  TrendingUp,  // Digital Marketing
+  TrendingUp,  // Digital Marketing / SEO
   Share2,      // Social Media Marketing
   Code,        // Web & Mobile Development
   PenTool,     // Content Writing/Copywriting
   Palette,     // Graphic Design / Motion Design
-  Award        // Branding
+  Award,       // Branding
+  Camera,      // Photo/Video
+  Tv           // Traditional Marketing
 } from 'lucide-react'
 
 export interface MegaMenuService {
@@ -36,16 +38,10 @@ export const MEGA_MENU_SERVICES: MegaMenuService[] = [
     translationKey: 'socialMediaMarketing'
   },
   {
-    id: 'web-mobile-dev',
-    slug: 'web-mobile-dev',
-    icon: Code,
-    translationKey: 'webMobileDev'
-  },
-  {
-    id: 'copywriting',
-    slug: 'copywriting',
-    icon: PenTool,
-    translationKey: 'contentWriting'
+    id: 'branding',
+    slug: 'branding',
+    icon: Award,
+    translationKey: 'branding'
   },
   {
     id: 'graphic-motion-design',
@@ -54,9 +50,27 @@ export const MEGA_MENU_SERVICES: MegaMenuService[] = [
     translationKey: 'graphicMotionDesign'
   },
   {
-    id: 'branding',
-    slug: 'branding',
-    icon: Award,
-    translationKey: 'branding'
+    id: 'web-mobile-dev',
+    slug: 'web-mobile-dev',
+    icon: Code,
+    translationKey: 'webMobileDev'
+  },
+  {
+    id: 'photo-video',
+    slug: 'photo-video',
+    icon: Camera,
+    translationKey: 'photoVideo'
+  },
+  {
+    id: 'copywriting',
+    slug: 'copywriting',
+    icon: PenTool,
+    translationKey: 'contentWriting'
+  },
+  {
+    id: 'traditional-marketing',
+    slug: 'traditional-marketing',
+    icon: Tv,
+    translationKey: 'traditionalMarketing'
   }
 ]
