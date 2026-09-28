@@ -35,7 +35,6 @@
 import { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { ServiceCard } from './ServiceCard'
-import { MegaMenuActions } from './MegaMenuActions'
 import { MEGA_MENU_SERVICES } from '@/lib/data/megaMenuServices'
 import { cn } from '@/lib/utils/cn'
 
@@ -82,18 +81,17 @@ export function ServicesMegaMenu({
       <div
         onMouseEnter={onMouseEnter}
         className={cn(
-          // Positioning — anchored to the header bar (the nearest positioned
-          // ancestor), so it spans the bar's full width and sits just below it.
-          'absolute top-full left-0 right-0 mt-2 origin-top',
-          // Layout
-          'max-h-[calc(100vh-7rem)] overflow-y-auto',
-          'rounded-2xl border border-white/15',
+          // Positioning
+          'absolute top-full left-0 mt-2 origin-top',
+          // Layout - Compact dropdown style like markup.az
+          'min-w-[280px] max-w-xs',
+          'rounded-xl border border-white/10',
           // Background
-          'bg-bg-secondary/95 backdrop-blur-xl',
+          'bg-bg-secondary/98 backdrop-blur-xl',
           // Shadow
-          'shadow-[0_8px_32px_rgba(0,0,0,0.4)]',
-          // Padding
-          'p-4 md:p-6 lg:p-8',
+          'shadow-[0_8px_24px_rgba(0,0,0,0.5)]',
+          // Padding - Compact
+          'py-2',
           // Z-index
           'z-[29]',
           // Open/close transition
@@ -107,8 +105,8 @@ export function ServicesMegaMenu({
         aria-hidden={!isOpen}
         data-mega-menu=""
       >
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6 mb-6">
+        {/* Services List - Compact vertical list */}
+        <div className="space-y-0.5">
           {MEGA_MENU_SERVICES.map((service) => (
             <ServiceCard
               key={service.id}
@@ -119,9 +117,6 @@ export function ServicesMegaMenu({
             />
           ))}
         </div>
-
-        {/* Action Buttons */}
-        <MegaMenuActions locale={locale} />
       </div>
     </>
   )

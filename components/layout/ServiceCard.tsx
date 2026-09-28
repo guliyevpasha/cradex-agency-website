@@ -1,17 +1,17 @@
 /**
  * ServiceCard Component
  * 
- * Individual service card displayed in the mega menu.
- * Shows service icon, title, and description with hover effects.
+ * Individual service item displayed in the dropdown menu.
+ * Compact list item with icon and title, markup.az style.
  * 
  * @component
  * @example
  * ```tsx
  * <ServiceCard
  *   icon={TrendingUp}
- *   title="Digital Marketing"
- *   description="SEO, Google Ads and digital strategy"
- *   href="/en/services/digital-marketing"
+ *   title="Rəqəmsal Marketing"
+ *   description=""
+ *   href="/az/services/digital-marketing"
  * />
  * ```
  */
@@ -37,36 +37,25 @@ export function ServiceCard({
     <Link
       href={href}
       className={cn(
-        // Layout
-        'group flex items-start gap-3 p-4 rounded-xl',
-        // Background
-        'bg-bg-tertiary/50',
-        // Border
-        'border border-white/5',
+        // Layout - Compact dropdown item
+        'group flex items-center gap-2.5 px-4 py-2.5',
         // Transitions
-        'transition-all duration-200',
+        'transition-colors duration-150',
         // Hover effects
-        'hover:bg-bg-tertiary hover:scale-[1.02]',
-        'hover:shadow-[0_4px_16px_rgba(108,99,255,0.2)]',
-        'hover:border-accent-primary/20'
+        'hover:bg-bg-tertiary/80',
       )}
       role="menuitem"
-      aria-label={`${title} - ${description}`}
+      aria-label={title}
     >
-      {/* Icon */}
-      <div className="shrink-0 text-accent-primary">
-        <Icon className="w-6 h-6 md:w-7 md:h-7" />
+      {/* Icon - Small and subtle */}
+      <div className="shrink-0 text-text-secondary group-hover:text-accent-primary transition-colors">
+        <Icon className="w-4 h-4" strokeWidth={2} />
       </div>
 
-      {/* Content */}
-      <div className="flex-1 min-w-0">
-        <h3 className="text-text-primary font-semibold text-base md:text-lg mb-1">
-          {title}
-        </h3>
-        <p className="text-text-secondary text-sm line-clamp-2">
-          {description}
-        </p>
-      </div>
+      {/* Title only - Compact */}
+      <span className="text-text-primary text-sm font-medium group-hover:text-accent-primary transition-colors">
+        {title}
+      </span>
     </Link>
   )
 }
