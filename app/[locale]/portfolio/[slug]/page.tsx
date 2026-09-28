@@ -247,12 +247,6 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
       {relatedPortfolios.length > 0 && (
         <section className="py-20 bg-bg-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal animation="fadeInUp" className="mb-12 text-center">
-              <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
-                {t('relatedProjects')}
-              </h2>
-              <p className="text-text-secondary text-sm">{t('relatedProjectsSubtitle')}</p>
-            </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPortfolios.map((project, index) => {
                 const projectTitle = project.title?.[locale] || project.titleKey
