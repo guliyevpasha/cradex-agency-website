@@ -86,8 +86,8 @@ export function ServicesMegaMenu({
           // Layout - Compact dropdown style like markup.az
           'min-w-[280px] max-w-xs',
           'rounded-xl border border-white/10',
-          // Background - DARKER for better text visibility
-          'bg-bg-primary/98 backdrop-blur-xl',
+          // Background - DARK solid background for text readability
+          'bg-[#0a0a0a] backdrop-blur-xl',
           // Shadow
           'shadow-[0_8px_24px_rgba(0,0,0,0.5)]',
           // Padding - Compact
