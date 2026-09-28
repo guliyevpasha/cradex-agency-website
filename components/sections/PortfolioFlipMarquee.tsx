@@ -134,7 +134,7 @@ function FlipCard({ item }: FlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between text-left">
+            <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between text-left overflow-y-auto">
               {/* Top Section */}
               <div className="space-y-1.5 md:space-y-2">
                 {/* Category Badge */}
@@ -146,20 +146,20 @@ function FlipCard({ item }: FlipCardProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-xs md:text-sm leading-tight line-clamp-2">
+                <h3 className="text-white font-display font-bold text-xs md:text-sm leading-tight">
                   {title}
                 </h3>
 
-                {/* Description - show only on larger screens, reduced to 1 line */}
+                {/* Description - FULL text without line-clamp */}
                 {description && (
-                  <p className="text-white/70 text-[10px] leading-relaxed line-clamp-1 hidden sm:block">
+                  <p className="text-white/70 text-[10px] leading-relaxed hidden sm:block">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section - Meta Info */}
-              <div className="space-y-1">
+              <div className="space-y-1 flex-shrink-0">
                 {/* Client & Year - Combined in one line */}
                 <div className="flex items-center gap-2 text-white text-[10px] md:text-xs flex-wrap">
                   <div className="flex items-center gap-1">
@@ -182,7 +182,7 @@ function FlipCard({ item }: FlipCardProps) {
               </div>
 
               {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-accent-primary/5 rounded-bl-[100%]" />
+              <div className="absolute top-0 right-0 w-16 h-16 bg-accent-primary/5 rounded-bl-[100%] pointer-events-none" />
             </div>
           </div>
         </div>
