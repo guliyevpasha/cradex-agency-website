@@ -88,6 +88,7 @@ export interface PortfolioItem {
   resultsKey: string
   results?: PortfolioItemTitle
   publishedAt: string
+  duration?: string  // e.g., "3 ay", "2 həftə", etc.
   featured: boolean
 }
 
