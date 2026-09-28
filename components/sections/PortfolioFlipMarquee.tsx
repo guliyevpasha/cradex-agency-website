@@ -95,10 +95,20 @@ function FlipCard({ item }: FlipCardProps) {
   const description = item.description?.[locale] || item.descriptionKey
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
 
+  // Sanitize slug for URL (handle cases where Sanity slug has spaces)
+  const sanitizedSlug = item.slug
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_]+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
   // Debug log
   if (typeof window !== 'undefined') {
     console.log('[FlipCard] Item data:', {
-      slug: item.slug,
+      originalSlug: item.slug,
+      sanitizedSlug,
       titleType: typeof item.title,
       title: title,
       locale
@@ -144,7 +154,7 @@ function FlipCard({ item }: FlipCardProps) {
       onTouchEnd={onTouchEnd}
     >
       <Link
-        href={`/${locale}/portfolio/${item.slug}`}
+        href={`/${locale}/portfolio/${sanitizedSlug}`}
         className="block w-full"
       >
         <div
