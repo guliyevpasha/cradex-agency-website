@@ -21,17 +21,18 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
 
   if (!mounted || items.length === 0) return null
 
-  // Ensure we have at least 12 items (6 per row)
-  const minItemsPerRow = 6
-  let allItems = [...items]
+  // Ensure we have at least 12 unique items
+  let displayItems = [...items]
   
-  // If we have fewer items, duplicate them to reach minimum
-  while (allItems.length < minItemsPerRow * 2) {
-    allItems = [...allItems, ...items]
+  // If we have fewer than 12 items, duplicate them
+  while (displayItems.length < 12) {
+    displayItems = [...displayItems, ...items]
   }
 
-  // Take first 12 items and split into two rows of 6 each
-  const displayItems = allItems.slice(0, 12)
+  // Take first 12 unique items
+  displayItems = displayItems.slice(0, 12)
+
+  // Split into two rows of 6 each
   const topRowItems = displayItems.slice(0, 6)
   const bottomRowItems = displayItems.slice(6, 12)
 
