@@ -296,9 +296,12 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
                           {projectTitle}
                         </h3>
-                        <p className="text-text-secondary text-sm line-clamp-2 flex-grow">
+                        <p className="text-text-secondary text-sm line-clamp-2 flex-grow mb-4">
                           {projectDescription}
                         </p>
+                        <button className="mt-auto w-full py-2.5 px-4 bg-accent-primary/10 text-accent-primary border border-accent-primary/20 rounded-lg font-medium text-sm hover:bg-accent-primary hover:text-white transition-all duration-300">
+                          {t('viewAll')}
+                        </button>
                       </div>
                     </Link>
                   </ScrollReveal>
