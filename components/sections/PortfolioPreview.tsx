@@ -4,13 +4,14 @@ import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { getFeaturedPortfolio } from '@/lib/data/portfolio'
+import { getAllPortfolio } from '@/lib/data/portfolio'
 
 export async function PortfolioPreview() {
-  const featured = await getFeaturedPortfolio(6)
+  // Get all portfolio items for the marquee (not just featured)
+  const allItems = await getAllPortfolio()
 
   return (
-    <PortfolioPreviewClient items={featured} />
+    <PortfolioPreviewClient items={allItems} />
   )
 }
 
