@@ -134,26 +134,26 @@ function FlipCard({ item }: FlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
-            <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-between">
+            <div className="absolute inset-0 p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col justify-between">
               {/* Top Section */}
-              <div className="space-y-2">
-                {/* Title */}
-                <h3 className="text-white font-display font-bold text-xs md:text-sm leading-tight line-clamp-2">
+              <div className="space-y-1.5 sm:space-y-2 md:space-y-2.5">
+                {/* Title - Same format as portfolio index */}
+                <h3 className="text-white font-display font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-tight line-clamp-2">
                   {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
-                {/* Description */}
+                {/* Description - Short (2-3 lines) */}
                 {description && (
-                  <p className="text-white/60 text-[10px] md:text-xs leading-relaxed line-clamp-2 hidden sm:block">
+                  <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section */}
-              <div className="space-y-2">
-                {/* Meta Row */}
-                <div className="flex items-center gap-2 text-white/50 text-[10px] md:text-xs">
+              <div className="space-y-1.5 sm:space-y-2">
+                {/* Meta Row - Client & Year */}
+                <div className="flex items-center gap-2 sm:gap-3 text-white/50 text-[10px] sm:text-xs md:text-sm">
                   <span className="font-medium text-white/70 truncate">{item.clientName}</span>
                   {year && (
                     <>
@@ -166,16 +166,16 @@ function FlipCard({ item }: FlipCardProps) {
                 {/* Button Row */}
                 <div className="flex items-center justify-between gap-2">
                   {/* Category Badge */}
-                  <div className="inline-flex items-center px-2 py-1 rounded-lg bg-white/5 border border-white/10">
-                    <span className="text-white/80 text-[9px] md:text-[10px] font-medium">
+                  <div className="inline-flex items-center px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10">
+                    <span className="text-white/80 text-[9px] sm:text-[10px] md:text-xs font-medium">
                       {t(`categories.${item.serviceCategory}` as any)}
                     </span>
                   </div>
 
                   {/* View Project Button */}
-                  <div className="inline-flex items-center gap-1 text-white text-[10px] md:text-xs font-medium group-hover:text-accent-primary transition-colors">
-                    <span className="hidden sm:inline">Layihəyə keçid</span>
-                    <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-white text-[10px] sm:text-xs md:text-sm font-medium group-hover:text-accent-primary transition-colors">
+                    <span className="hidden sm:inline">Layihəyə keçid et</span>
+                    <ArrowRight size={12} className="sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               </div>
