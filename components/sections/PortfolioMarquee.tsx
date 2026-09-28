@@ -26,15 +26,12 @@ export function PortfolioMarquee({ items }: PortfolioMarqueeProps) {
   const bottomRowItems = items.slice(midpoint)
 
   return (
-    <div className="w-full">
-      {/* Full width on mobile, max-width on desktop */}
-      <div className="lg:max-w-7xl lg:mx-auto overflow-hidden space-y-6">
-        {/* Top row - Right to Left */}
-        <MarqueeRow items={topRowItems} direction="rtl" />
-        
-        {/* Bottom row - Left to Right */}
-        <MarqueeRow items={bottomRowItems} direction="ltr" />
-      </div>
+    <div className="w-full overflow-hidden space-y-6">
+      {/* Top row - Right to Left */}
+      <MarqueeRow items={topRowItems} direction="rtl" />
+      
+      {/* Bottom row - Left to Right */}
+      <MarqueeRow items={bottomRowItems} direction="ltr" />
     </div>
   )
 }
@@ -59,8 +56,8 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 25s linear infinite' 
-            : 'marquee-scroll-third-reverse 25s linear infinite',
+            ? 'marquee-scroll-third 15s linear infinite' 
+            : 'marquee-scroll-third-reverse 15s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
