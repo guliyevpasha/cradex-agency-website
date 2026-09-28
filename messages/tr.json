@@ -436,13 +436,19 @@
     "subtitle": "Tamamladığımız projeler",
     "viewProject": "Portföyü Gör",
     "client": "Müşteri",
+    "year": "Yıl",
     "category": "Kategori",
     "tools": "Kullanılan araçlar",
     "results": "Sonuçlar",
     "gallery": "Galeri",
+    "gallerySubtitle": "Proje görselleri",
+    "videoTitle": "Proje Videosu",
     "foundCount": "{count} proje bulundu",
     "filterLabel": "Kategoriye göre filtrele",
     "loadMore": "Daha Fazla",
+    "breadcrumb": {
+      "home": "Ana Sayfa"
+    },
     "categories": {
       "all": "Tümü",
       "digital-marketing": "SEO / Dijital",

@@ -436,13 +436,19 @@
     "subtitle": "Завершённые нами проекты",
     "viewProject": "Смотреть портфолио",
     "client": "Клиент",
+    "year": "Год",
     "category": "Категория",
     "tools": "Использованные инструменты",
     "results": "Результаты",
     "gallery": "Галерея",
+    "gallerySubtitle": "Изображения проекта",
+    "videoTitle": "Видео проекта",
     "foundCount": "{count} проектов найдено",
     "filterLabel": "Фильтр по категории",
     "loadMore": "Показать ещё",
+    "breadcrumb": {
+      "home": "Главная"
+    },
     "categories": {
       "all": "Все",
       "digital-marketing": "SEO / Цифровой",

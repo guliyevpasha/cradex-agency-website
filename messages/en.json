@@ -436,13 +436,19 @@
     "subtitle": "Projects we have completed",
     "viewProject": "View Portfolio",
     "client": "Client",
+    "year": "Year",
     "category": "Category",
     "tools": "Tools used",
     "results": "Results",
     "gallery": "Gallery",
+    "gallerySubtitle": "Project images",
+    "videoTitle": "Project Video",
     "foundCount": "{count} projects found",
     "filterLabel": "Filter by category",
     "loadMore": "Load More",
+    "breadcrumb": {
+      "home": "Home"
+    },
     "categories": {
       "all": "All",
       "digital-marketing": "SEO / Digital",
