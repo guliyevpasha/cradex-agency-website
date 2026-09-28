@@ -93,11 +93,10 @@ export function Navbar() {
       <NavLink href={`/${locale}/about`} label={t('about')} />
 
       {/* Services dropdown */}
-      {/* Deliberately not `relative`: the mega menu anchors to the header bar,
-          which is the nearest positioned ancestor. */}
       <div
         ref={dropdownRef}
         onMouseLeave={closeDropdown}
+        className="relative"
       >
         <button
           onClick={() => setServicesOpen((v) => !v)}
