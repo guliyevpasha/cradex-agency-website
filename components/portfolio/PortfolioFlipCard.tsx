@@ -68,9 +68,9 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
               {/* Top Section */}
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 {/* Category Badge */}
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20">
                   <Tag size={12} className="text-accent-primary" />
@@ -80,36 +80,39 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-xl md:text-2xl leading-tight line-clamp-2">
+                <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight line-clamp-2">
                   {title}
                 </h3>
 
-                {/* Description */}
+                {/* Description - reduced to 2 lines */}
                 {description && (
-                  <p className="text-white/70 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-white/70 text-xs md:text-sm leading-relaxed line-clamp-2">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section - Meta Info */}
-              <div className="space-y-3">
-                {/* Client */}
-                <div className="flex items-center gap-2 text-white text-sm pt-2">
-                  <Building2 size={16} className="text-accent-primary/70" />
-                  <span className="font-bold">{item.clientName}</span>
+              <div className="space-y-2">
+                {/* Client & Year - Combined */}
+                <div className="flex items-center gap-3 text-white text-sm flex-wrap">
+                  <div className="flex items-center gap-1.5">
+                    <Building2 size={14} className="text-accent-primary/70" />
+                    <span className="font-bold">{item.clientName}</span>
+                  </div>
+                  {year && (
+                    <>
+                      <span className="text-white/40">•</span>
+                      <div className="flex items-center gap-1.5 text-white/80">
+                        <Calendar size={14} className="text-accent-primary/70" />
+                        <span>{year}</span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
-                {/* Year */}
-                {year && (
-                  <div className="flex items-center gap-2 text-white/80 text-sm">
-                    <Calendar size={16} className="text-accent-primary/70" />
-                    <span>{year}</span>
-                  </div>
-                )}
-
                 {/* View Project Button */}
-                <div className="flex items-center gap-2 text-accent-primary font-semibold text-sm pt-2">
+                <div className="flex items-center gap-2 text-accent-primary font-semibold text-sm">
                   <span>{t('viewProject')}</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
