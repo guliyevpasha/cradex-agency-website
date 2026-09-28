@@ -224,6 +224,8 @@ export interface SanityPortfolioDoc {
   tools?: string[]
   tags?: string[]
   results?: string | { az: string; en: string; ru: string; tr: string }
+  projectUrl?: string
+  videoUrl?: string
   completedAt?: string
   featured?: boolean
 }
@@ -264,6 +266,8 @@ export function toPortfolioItem(
     tags: doc.tags ?? [],
     coverImage: doc.image ?? '',
     gallery: (doc.gallery ?? []).filter((url): url is string => Boolean(url)),
+    videoUrl: doc.videoUrl,
+    projectUrl: doc.projectUrl,
     descriptionKey: getLocalizedText(doc.description),
     description: getLocalizedObject(doc.description),
     tools: doc.tools ?? [],

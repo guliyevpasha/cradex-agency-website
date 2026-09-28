@@ -104,7 +104,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               </h1>
               <p className="text-text-secondary text-lg leading-relaxed mb-8">{description}</p>
 
-              <div className="space-y-4 bg-bg-tertiary/50 rounded-xl p-6 border border-white/5">
+              <div className="space-y-4 bg-bg-tertiary/50 rounded-xl p-6 border border-white/5 mb-6">
                 {/* Client */}
                 <div className="flex items-center gap-3">
                   <span className="text-text-muted text-sm w-32 font-medium">{t('client')}:</span>
@@ -147,6 +147,21 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   </div>
                 )}
               </div>
+
+              {/* Visit Website Button */}
+              {item.projectUrl && (
+                <a
+                  href={item.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105"
+                >
+                  <span>{t('visitWebsite')}</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
             </ScrollReveal>
 
             {/* Cover image */}

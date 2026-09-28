@@ -112,6 +112,7 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
     "tools": tools,
     "results": results,
     "projectUrl": projectUrl,
+    "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured
   }`
@@ -132,6 +133,7 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "tools": tools,
     "results": results,
     "projectUrl": projectUrl,
+    "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured
   }`
@@ -154,6 +156,7 @@ export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'
     "tools": tools,
     "results": results,
     "projectUrl": projectUrl,
+    "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured
   }`
@@ -177,6 +180,7 @@ export async function getPortfolioByCategory(
     "tools": tools,
     "results": results,
     "projectUrl": projectUrl,
+    "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured
   }`
