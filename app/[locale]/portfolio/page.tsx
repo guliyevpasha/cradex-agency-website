@@ -16,6 +16,7 @@ function PortfolioContent() {
   const [activeCategory, setActiveCategory] = useState<PortfolioCategory>('all')
   const [allItems, setAllItems] = useState<PortfolioItem[]>([])
   const [loading, setLoading] = useState(true)
+  const [displayCount, setDisplayCount] = useState(10)
 
   useEffect(() => {
     getAllPortfolio().then((items) => {
@@ -23,6 +24,11 @@ function PortfolioContent() {
       setLoading(false)
     })
   }, [])
+
+  // Reset display count when category changes
+  useEffect(() => {
+    setDisplayCount(10)
+  }, [activeCategory])
 
   // Count items per category
   const counts = useMemo(() => {
@@ -42,8 +48,13 @@ function PortfolioContent() {
     [allItems, activeCategory]
   )
 
-  // Active filter label — artıq i18n-dən birbaşa oxunur
-  // const activeLabel = ...
+  // Display items (limited by displayCount on mobile)
+  const displayedItems = useMemo(() => filtered.slice(0, displayCount), [filtered, displayCount])
+  const hasMore = displayedItems.length < filtered.length
+
+  const handleLoadMore = () => {
+    setDisplayCount((prev) => prev + 10)
+  }
 
   return (
     <>
@@ -89,7 +100,21 @@ function PortfolioContent() {
               ))}
             </div>
           ) : (
-            <PortfolioGrid items={filtered} />
+            <>
+              <PortfolioGrid items={displayedItems} />
+              
+              {/* Load More Button - Only on mobile/tablet (below lg breakpoint) */}
+              {hasMore && (
+                <div className="mt-12 flex justify-center lg:hidden">
+                  <button
+                    onClick={handleLoadMore}
+                    className="px-8 py-3.5 rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-medium text-base hover:shadow-[0_0_24px_rgba(108,99,255,0.5)] transition-all duration-300 hover:scale-105"
+                  >
+                    {t('loadMore')}
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>

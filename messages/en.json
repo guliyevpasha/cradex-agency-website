@@ -434,6 +434,7 @@
     "gallery": "Gallery",
     "foundCount": "{count} projects found",
     "filterLabel": "Filter by category",
+    "loadMore": "Load More",
     "categories": {
       "all": "All",
       "digital-marketing": "SEO / Digital",

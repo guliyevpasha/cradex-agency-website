@@ -434,6 +434,7 @@
     "gallery": "Галерея",
     "foundCount": "{count} проектов найдено",
     "filterLabel": "Фильтр по категории",
+    "loadMore": "Показать ещё",
     "categories": {
       "all": "Все",
       "digital-marketing": "SEO / Цифровой",
