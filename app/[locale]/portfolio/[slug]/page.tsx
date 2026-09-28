@@ -99,7 +99,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <Badge variant="accent" className="mb-4">
                 {t(`categories.${item.serviceCategory}` as any)}
               </Badge>
-              <h1 className="text-display-md md:text-display-lg font-display font-bold text-text-primary mb-4">
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-text-primary mb-4">
                 {title}
               </h1>
               <p className="text-text-secondary text-lg leading-relaxed mb-6">{description}</p>
@@ -193,7 +193,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         <section className="py-20 bg-bg-primary">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal animation="fadeInUp" className="mb-8 text-center">
-              <h2 className="text-display-md font-display font-bold text-text-primary">
+              <h2 className="text-3xl font-display font-bold text-text-primary">
                 {t('videoTitle')}
               </h2>
             </ScrollReveal>
@@ -217,7 +217,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         <section className="py-20 bg-bg-secondary/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal animation="fadeInUp" className="mb-12 text-center">
-              <h2 className="text-display-md font-display font-bold text-text-primary mb-3">
+              <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
                 {t('gallery')}
               </h2>
               <p className="text-text-secondary">{t('gallerySubtitle')}</p>
@@ -248,7 +248,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         <section className="py-20 bg-bg-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal animation="fadeInUp" className="mb-12 text-center">
-              <h2 className="text-display-md font-display font-bold text-text-primary mb-3">
+              <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
                 {t('relatedProjects')}
               </h2>
               <p className="text-text-secondary">{t('relatedProjectsSubtitle')}</p>
