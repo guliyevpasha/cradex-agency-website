@@ -46,8 +46,18 @@ export default async function PortfolioDetailPage({
 }) {
   const { locale, slug } = await params
   setRequestLocale(locale)
+  
+  console.log('[Portfolio Detail] Fetching slug:', slug, 'locale:', locale)
+  
   const item = await getPortfolioBySlug(slug)
-  if (!item) notFound()
+  
+  console.log('[Portfolio Detail] Found item:', item ? `${item.titleKey}` : 'NULL')
+  
+  if (!item) {
+    console.log('[Portfolio Detail] Item not found, returning 404')
+    notFound()
+  }
+  
   return <PortfolioDetailContent item={item} />
 }
 
@@ -55,18 +65,10 @@ function PortfolioDetailContent({ item }: { item: PortfolioItem }) {
   const t = useTranslations('portfolio')
   const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
 
-  // Get localized content - handle both string and object formats
-  const title = typeof item.titleKey === 'string' 
-    ? item.titleKey 
-    : (item.title?.[locale] ?? item.titleKey)
-  
-  const description = typeof item.descriptionKey === 'string'
-    ? item.descriptionKey
-    : (item.description?.[locale] ?? item.descriptionKey)
-  
-  const results = typeof item.resultsKey === 'string'
-    ? item.resultsKey
-    : (item.results?.[locale] ?? item.resultsKey)
+  // Get localized content - prioritize locale-specific object if available, fallback to string key
+  const title = item.title?.[locale] || item.titleKey
+  const description = item.description?.[locale] || item.descriptionKey  
+  const results = item.results?.[locale] || item.resultsKey
 
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
 
