@@ -21,7 +21,7 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
 
   if (!mounted || items.length === 0) return null
 
-  // Ensure each row has at least 6 items by duplicating if necessary
+  // Ensure we have at least 12 items (6 per row)
   const minItemsPerRow = 6
   let allItems = [...items]
   
@@ -30,17 +30,17 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
     allItems = [...allItems, ...items]
   }
 
-  // Split items into two rows - ensure each row has at least 6 items
-  const midpoint = Math.ceil(allItems.length / 2)
-  const topRowItems = allItems.slice(0, midpoint)
-  const bottomRowItems = allItems.slice(midpoint)
+  // Take first 12 items and split into two rows of 6 each
+  const displayItems = allItems.slice(0, 12)
+  const topRowItems = displayItems.slice(0, 6)
+  const bottomRowItems = displayItems.slice(6, 12)
 
   return (
     <div className="w-full overflow-hidden space-y-6">
-      {/* Top row - Right to Left */}
+      {/* Top row - Right to Left - 6 items */}
       <MarqueeFlipRow items={topRowItems} direction="rtl" />
       
-      {/* Bottom row - Left to Right */}
+      {/* Bottom row - Left to Right - 6 items */}
       <MarqueeFlipRow items={bottomRowItems} direction="ltr" />
     </div>
   )
@@ -55,8 +55,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
   const locale = useLocale()
   const t = useTranslations('portfolio')
   
-  // Multiply items more for seamless loop on all screen sizes (6 copies)
-  const displayItems = [...items, ...items, ...items, ...items, ...items, ...items]
+  // Multiply items 3 times for seamless loop (was 6x)
+  const displayItems = [...items, ...items, ...items]
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -67,8 +67,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-sixth 5s linear infinite' 
-            : 'marquee-scroll-sixth-reverse 5s linear infinite',
+            ? 'marquee-scroll-third 20s linear infinite'  // Faster: 20s (was 5s with 6x duplication)
+            : 'marquee-scroll-third-reverse 20s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
