@@ -192,6 +192,26 @@ export function toArticles(docs: unknown): Article[] {
 
 // ─── Portfolio ───────────────────────────────────────────────────────────────
 
+/**
+ * Sanitizes a slug to ensure it's URL-safe kebab-case format.
+ * Converts spaces to hyphens, removes special characters, and lowercases.
+ */
+function sanitizeSlug(slug: string): string {
+  if (!slug) return ''
+  
+  return slug
+    .toLowerCase()
+    .trim()
+    // Replace spaces and underscores with hyphens
+    .replace(/[\s_]+/g, '-')
+    // Remove special characters except hyphens
+    .replace(/[^a-z0-9-]/g, '')
+    // Remove consecutive hyphens
+    .replace(/-+/g, '-')
+    // Remove leading/trailing hyphens
+    .replace(/^-+|-+$/g, '')
+}
+
 export interface SanityPortfolioDoc {
   id?: string
   slug?: string
@@ -213,6 +233,13 @@ export function toPortfolioItem(
 ): PortfolioItem | null {
   if (!doc || !doc.slug) return null
 
+  // Sanitize slug to ensure URL-safe format
+  const cleanSlug = sanitizeSlug(doc.slug)
+  if (!cleanSlug) {
+    console.warn('[Portfolio Normalize] Invalid slug after sanitization:', doc.slug)
+    return null
+  }
+
   // Helper to extract localized text
   const getLocalizedText = (field: string | { az: string; en: string; ru: string; tr: string } | undefined): string => {
     if (!field) return ''
@@ -228,8 +255,8 @@ export function toPortfolioItem(
   }
 
   return {
-    id: doc.id ?? doc.slug,
-    slug: doc.slug,
+    id: doc.id ?? cleanSlug,
+    slug: cleanSlug,
     titleKey: getLocalizedText(doc.title),
     title: getLocalizedObject(doc.title),
     clientName: doc.client ?? '',

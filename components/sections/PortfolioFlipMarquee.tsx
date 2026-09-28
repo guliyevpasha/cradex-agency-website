@@ -91,9 +91,19 @@ function FlipCard({ item }: FlipCardProps) {
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
-  const title = item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey
-  const description = item.description?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.descriptionKey
+  const title = item.title?.[locale] || item.titleKey
+  const description = item.description?.[locale] || item.descriptionKey
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
+
+  // Debug log
+  if (typeof window !== 'undefined') {
+    console.log('[FlipCard] Item data:', {
+      slug: item.slug,
+      titleType: typeof item.title,
+      title: title,
+      locale
+    })
+  }
 
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50
