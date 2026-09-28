@@ -46,7 +46,7 @@ export function AboutHero({
   return (
     <section
       ref={ref}
-      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-primary py-32 lg:py-40"
+      className="relative min-h-[70vh] overflow-hidden bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-primary py-32 lg:py-40"
     >
       {/* Background gradient */}
       <div
@@ -59,6 +59,7 @@ export function AboutHero({
         aria-hidden="true"
       />
 
+      {/* Content Container */}
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
         {/* Eyebrow */}
         <motion.div
@@ -93,7 +94,7 @@ export function AboutHero({
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center text-text-secondary text-lg lg:text-xl max-w-4xl mx-auto mb-12"
+          className="text-center text-text-secondary text-lg lg:text-xl max-w-4xl mx-auto mb-16"
         >
           {description}
         </motion.p>
@@ -104,14 +105,13 @@ export function AboutHero({
         initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="w-full mb-20"
+        className="w-full mb-16"
       >
         <AboutBadgesMarquee />
       </motion.div>
 
+      {/* Stats Container */}
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
-
-        {/* Stats */}
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
