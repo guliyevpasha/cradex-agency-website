@@ -296,18 +296,30 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
                           {projectTitle}
                         </h3>
-                        <p className="text-text-secondary text-sm line-clamp-2 flex-grow mb-4">
+                        <p className="text-text-secondary text-sm line-clamp-2 flex-grow">
                           {projectDescription}
                         </p>
-                        <button className="mt-auto w-full py-2.5 px-4 bg-accent-primary/10 text-accent-primary border border-accent-primary/20 rounded-lg font-medium text-sm hover:bg-accent-primary hover:text-white transition-all duration-300">
-                          {t('viewAll')}
-                        </button>
                       </div>
                     </Link>
                   </ScrollReveal>
                 )
               })}
             </div>
+            
+            {/* View All Button */}
+            <ScrollReveal animation="fadeInUp" delay={300}>
+              <div className="flex justify-center mt-12">
+                <Link
+                  href={`/${locale}/portfolio`}
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 group"
+                >
+                  <span>{t('viewAll')}</span>
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
