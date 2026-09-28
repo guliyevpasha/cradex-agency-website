@@ -271,9 +271,9 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   <ScrollReveal key={project.id} animation="fadeInUp" delay={index * 100}>
                     <Link 
                       href={`/${locale}/portfolio/${sanitizedSlug}`}
-                      className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-white/5 hover:border-accent-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-primary/10"
+                      className="group flex flex-col h-full bg-bg-secondary rounded-2xl overflow-hidden border border-white/5 hover:border-accent-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-primary/10"
                     >
-                      <div className="relative aspect-[4/3] bg-bg-tertiary overflow-hidden">
+                      <div className="relative aspect-[4/3] bg-bg-tertiary overflow-hidden flex-shrink-0">
                         {project.coverImage ? (
                           <Image
                             src={project.coverImage}
@@ -289,14 +289,14 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
-                      <div className="p-6">
-                        <Badge variant="outline" className="mb-3">
+                      <div className="p-6 flex flex-col flex-grow">
+                        <Badge variant="outline" className="mb-3 w-fit">
                           {t(`categories.${project.serviceCategory}` as any)}
                         </Badge>
-                        <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">
+                        <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
                           {projectTitle}
                         </h3>
-                        <p className="text-text-secondary text-sm line-clamp-2">
+                        <p className="text-text-secondary text-sm line-clamp-2 flex-grow">
                           {projectDescription}
                         </p>
                       </div>
