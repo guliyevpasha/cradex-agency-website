@@ -63,13 +63,13 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
     <div className="relative w-full overflow-hidden">
       <div
         className={cn(
-          'flex gap-4',
+          'flex gap-2 md:gap-4',
           'marquee-track'
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 20s linear infinite'  // Faster: 20s (was 5s with 6x duplication)
-            : 'marquee-scroll-third-reverse 20s linear infinite',
+            ? 'marquee-scroll-third 8s linear infinite'  // Much faster animation for mobile
+            : 'marquee-scroll-third-reverse 8s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
@@ -122,8 +122,8 @@ function FlipCard({ item }: FlipCardProps) {
   return (
     <div
       className={cn(
-        // BIGGER cards on mobile for readability
-        'flex-shrink-0 w-[280px] sm:w-[300px] md:w-[320px] lg:w-[360px]',
+        // Much smaller cards on mobile to show more portfolios at once
+        'flex-shrink-0 w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px]',
         'group relative',
         '[perspective:1000px]'
       )}
@@ -165,26 +165,26 @@ function FlipCard({ item }: FlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
-            <div className="absolute inset-0 p-4 sm:p-5 md:p-6 flex flex-col justify-between">
+            <div className="absolute inset-0 p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col justify-between">
               {/* Top Section */}
-              <div className="space-y-2 sm:space-y-2.5">
-                {/* Title - Larger on mobile for readability */}
-                <h3 className="text-white font-display font-bold text-sm sm:text-base md:text-lg leading-tight line-clamp-2">
+              <div className="space-y-1.5 sm:space-y-2 md:space-y-2.5">
+                {/* Title - Optimized for smaller mobile cards */}
+                <h3 className="text-white font-display font-bold text-[11px] sm:text-sm md:text-base lg:text-lg leading-tight line-clamp-2">
                   {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
                 {/* Description - Visible on all screens */}
                 {description && (
-                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
+                  <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-2">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section */}
-              <div className="space-y-2">
+              <div className="space-y-1.5 sm:space-y-2">
                 {/* Meta Row - Client & Year */}
-                <div className="flex items-center gap-2 sm:gap-3 text-white/50 text-xs sm:text-sm">
+                <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 text-white/50 text-[10px] sm:text-xs md:text-sm">
                   <span className="font-medium text-white/70 truncate">{item.clientName}</span>
                   {year && (
                     <>
@@ -195,18 +195,19 @@ function FlipCard({ item }: FlipCardProps) {
                 </div>
 
                 {/* Button Row */}
-                <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center justify-between gap-1.5 sm:gap-2">
                   {/* Category Badge */}
-                  <div className="inline-flex items-center px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10">
-                    <span className="text-white/80 text-[10px] sm:text-xs font-medium">
+                  <div className="inline-flex items-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-lg bg-white/5 border border-white/10">
+                    <span className="text-white/80 text-[9px] sm:text-[10px] md:text-xs font-medium truncate max-w-[60px] sm:max-w-none">
                       {t(`categories.${item.serviceCategory}` as any)}
                     </span>
                   </div>
 
                   {/* View Project Button */}
-                  <div className="inline-flex items-center gap-1.5 sm:gap-2 text-white text-xs sm:text-sm font-medium group-hover:text-accent-primary transition-colors">
-                    <span>Layihəyə keçid et</span>
-                    <ArrowRight size={14} className="sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform" />
+                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-white text-[10px] sm:text-xs md:text-sm font-medium group-hover:text-accent-primary transition-colors whitespace-nowrap">
+                    <span className="hidden sm:inline">Layihəyə keçid et</span>
+                    <span className="sm:hidden">Keçid</span>
+                    <ArrowRight size={12} className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               </div>
