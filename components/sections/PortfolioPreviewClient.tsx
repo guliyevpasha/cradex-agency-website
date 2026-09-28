@@ -29,12 +29,14 @@ export default function PortfolioPreviewClient({ items }: { items: PortfolioItem
           </h2>
           <p className="text-text-secondary">{t('subtitle')}</p>
         </ScrollReveal>
+      </div>
 
-        {/* Portfolio Marquee - Two rows with opposite scrolling */}
-        <div className="mb-12">
-          <PortfolioMarquee items={items} />
-        </div>
+      {/* Portfolio Marquee - Two rows with opposite scrolling - Full width on mobile, contained on desktop */}
+      <div className="mb-12">
+        <PortfolioMarquee items={items} />
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal animation="fadeInUp" className="text-center">
           <Button href={`/${locale}/portfolio`} variant="secondary" size="lg" icon={<ArrowRight size={18} />}>
             {tCommon('viewAll')}
