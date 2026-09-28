@@ -249,6 +249,14 @@
         "title": "Markalama",
         "description": "Marka kimliği ve stratejisi"
       },
+      "photoVideo": {
+        "title": "Fotoğraf / Video",
+        "description": "Profesyonel fotoğraf ve video çekimi"
+      },
+      "traditionalMarketing": {
+        "title": "Geleneksel Pazarlama",
+        "description": "Baskı, açık hava, medya planlaması"
+      },
       "viewAllServices": "Tüm Hizmetleri Görüntüle",
       "calculatePrice": "Fiyat Hesapla"
     },

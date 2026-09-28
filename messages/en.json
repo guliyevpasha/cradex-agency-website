@@ -249,6 +249,14 @@
         "title": "Branding",
         "description": "Brand identity and strategy"
       },
+      "photoVideo": {
+        "title": "Photo / Video",
+        "description": "Professional photo and video production"
+      },
+      "traditionalMarketing": {
+        "title": "Traditional Marketing",
+        "description": "Print, outdoor, media planning"
+      },
       "viewAllServices": "View All Services",
       "calculatePrice": "Calculate Price"
     },
