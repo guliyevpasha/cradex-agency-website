@@ -1,11 +1,12 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Globe } from 'lucide-react'
+import { X, Globe, ChevronDown } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { cn } from '@/lib/utils/cn'
+import { MEGA_MENU_SERVICES } from '@/lib/data/megaMenuServices'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -38,10 +39,12 @@ const panelVariants = {
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const t = useTranslations('common.nav')
+  const tServices = useTranslations('services.megaMenu')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const [servicesOpen, setServicesOpen] = useState(false)
 
   useEffect(() => {
     if (isOpen) closeButtonRef.current?.focus()
@@ -70,7 +73,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navLinks = [
     { href: `/${locale}`,             label: t('home') },
     { href: `/${locale}/about`,       label: t('about') },
-    { href: `/${locale}/services`,    label: t('services') },
+    // Services will be handled separately with dropdown
     { href: `/${locale}/journal`,     label: t('journal') },
     { href: `/${locale}/calculator`,  label: t('calculator') },
     { href: `/${locale}/portfolio`,   label: t('portfolio') },
@@ -133,8 +136,97 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 className="space-y-1"
                 role="list"
               >
-                {navLinks.map((link) => {
+                {navLinks.map((link, index) => {
                   const isActive = pathname === link.href
+                  
+                  // Insert Services dropdown after "About"
+                  if (index === 1) {
+                    const isServicesActive = pathname.includes('/services')
+                    return (
+                      <div key="services-group">
+                        {/* Regular nav link */}
+                        <motion.li variants={itemVariants}>
+                          <Link
+                            href={link.href}
+                            onClick={onClose}
+                            className={cn(
+                              'flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
+                              isActive
+                                ? 'bg-accent-primary/15 text-accent-primary'
+                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
+                            )}
+                          >
+                            {isActive && (
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
+                            )}
+                            {link.label}
+                          </Link>
+                        </motion.li>
+                        
+                        {/* Services dropdown */}
+                        <motion.li variants={itemVariants}>
+                          <button
+                            onClick={() => setServicesOpen(!servicesOpen)}
+                            className={cn(
+                              'w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
+                              isServicesActive
+                                ? 'bg-accent-primary/15 text-accent-primary'
+                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
+                            )}
+                          >
+                            <span className="flex items-center">
+                              {isServicesActive && (
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
+                              )}
+                              {t('services')}
+                            </span>
+                            <ChevronDown
+                              size={16}
+                              className={cn('transition-transform duration-200', servicesOpen && 'rotate-180')}
+                            />
+                          </button>
+                          
+                          {/* Services submenu */}
+                          <AnimatePresence>
+                            {servicesOpen && (
+                              <motion.ul
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="mt-1 ml-4 space-y-1 overflow-hidden"
+                              >
+                                {MEGA_MENU_SERVICES.map((service) => {
+                                  const serviceHref = `/${locale}/services/${service.slug}`
+                                  const isServiceActive = pathname === serviceHref
+                                  const Icon = service.icon
+                                  
+                                  return (
+                                    <li key={service.id}>
+                                      <Link
+                                        href={serviceHref}
+                                        onClick={onClose}
+                                        className={cn(
+                                          'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+                                          isServiceActive
+                                            ? 'bg-accent-primary/10 text-accent-primary'
+                                            : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
+                                        )}
+                                      >
+                                        <Icon size={14} strokeWidth={2} />
+                                        {tServices(`${service.translationKey}.title`)}
+                                      </Link>
+                                    </li>
+                                  )
+                                })}
+                              </motion.ul>
+                            )}
+                          </AnimatePresence>
+                        </motion.li>
+                      </div>
+                    )
+                  }
+                  
                   return (
                     <motion.li key={link.href} variants={itemVariants}>
                       <Link
