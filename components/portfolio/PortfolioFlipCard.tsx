@@ -22,6 +22,15 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
   const description = item.description?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.descriptionKey
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
 
+  // Sanitize slug for URL (handle cases where Sanity slug has spaces)
+  const sanitizedSlug = item.slug
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_]+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
   return (
     <div
       className={cn(
@@ -33,7 +42,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
       onMouseLeave={() => setIsFlipped(false)}
     >
       <Link
-        href={`/${locale}/portfolio/${item.slug}`}
+        href={`/${locale}/portfolio/${sanitizedSlug}`}
         className="block w-full h-full"
         style={{ aspectRatio: '4 / 3' }}
       >
