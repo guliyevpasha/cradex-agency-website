@@ -52,7 +52,7 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
 
   return (
     <div
-      className="flex flex-wrap gap-2 justify-center"
+      className="flex gap-2 justify-center overflow-x-auto pb-2 scrollbar-thin"
       role="group"
       aria-label="Portfolio kateqoriya filtri"
     >
