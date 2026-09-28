@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect, useMemo } from 'react'
-import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { PortfolioFilter, type PortfolioCategory } from '@/components/portfolio/PortfolioFilter'
@@ -66,17 +65,13 @@ function PortfolioContent() {
 
           {/* Filter tabs */}
           {!loading && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+            <div>
               <PortfolioFilter
                 active={activeCategory}
                 onChange={setActiveCategory}
                 counts={counts}
               />
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -84,29 +79,6 @@ function PortfolioContent() {
       {/* Grid */}
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Active category heading */}
-          {!loading && (
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3 }}
-              className="mb-8 flex items-center gap-3"
-            >
-              <span className="text-text-muted text-sm">
-                {t('foundCount', { count: filtered.length })}
-              </span>
-              {activeCategory !== 'all' && (
-                <>
-                  <span className="text-text-muted">·</span>
-                  <span className="text-accent-primary text-sm font-medium">
-                    {t(`categories.${activeCategory}` as any)}
-                  </span>
-                </>
-              )}
-            </motion.div>
-          )}
-
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {Array.from({ length: 6 }).map((_, i) => (
