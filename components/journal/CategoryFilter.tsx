@@ -17,7 +17,7 @@ export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
 
   return (
     <div 
-      className="flex gap-2 overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0" 
+      className="flex gap-2 justify-start md:justify-center overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0" 
       role="group" 
       aria-label="Kateqoriya filtri"
       style={{ WebkitOverflowScrolling: 'touch' }}
