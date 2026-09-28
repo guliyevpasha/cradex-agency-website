@@ -73,15 +73,15 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
           <Link
             key={`${item.id}-${index}`}
             href={`/${locale}/portfolio/${item.slug}`}
-            className="flex-shrink-0 w-[160px] sm:w-[220px] md:w-[280px] lg:w-[320px] group"
+            className="flex-shrink-0 w-[160px] sm:w-[220px] md:w-[280px] lg:w-[320px] group relative"
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary border-2 border-transparent group-hover:border-accent-primary/60 transition-all duration-300">
               {item.coverImage ? (
                 <Image
                   src={item.coverImage}
                   alt={item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover"
                   sizes="320px"
                   loading="lazy"
                 />
@@ -91,17 +91,19 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
                 </div>
               )}
               
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
-              
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-white font-semibold text-base leading-tight line-clamp-2 mb-1">
+              {/* Hover Overlay - Markup.az style */}
+              <div className="absolute inset-0 bg-bg-primary/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                <h3 className="text-white font-semibold text-sm md:text-base leading-tight mb-2 line-clamp-2">
                   {item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey}
                 </h3>
-                <p className="text-white/70 text-sm">
+                <p className="text-white/70 text-xs mb-3">
                   {item.clientName}
                 </p>
+                <div className="w-8 h-8 rounded-full border-2 border-accent-primary flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-accent-primary">
+                    <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </Link>
