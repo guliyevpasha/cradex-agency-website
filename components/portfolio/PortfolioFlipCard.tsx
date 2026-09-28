@@ -95,9 +95,9 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
               {/* Bottom Section - Meta Info */}
               <div className="space-y-3">
                 {/* Client */}
-                <div className="flex items-center gap-2 text-white/80 text-sm">
+                <div className="flex items-center gap-2 text-white text-sm pt-2">
                   <Building2 size={16} className="text-accent-primary/70" />
-                  <span className="font-medium">{item.clientName}</span>
+                  <span className="font-bold">{item.clientName}</span>
                 </div>
 
                 {/* Year */}

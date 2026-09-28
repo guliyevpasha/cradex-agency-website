@@ -161,9 +161,9 @@ function FlipCard({ item }: FlipCardProps) {
               {/* Bottom Section - Meta Info */}
               <div className="space-y-1.5 md:space-y-2">
                 {/* Client */}
-                <div className="flex items-center gap-1.5 text-white/80 text-xs">
+                <div className="flex items-center gap-1.5 text-white text-xs pt-2">
                   <Building2 size={12} className="text-accent-primary/70" />
-                  <span className="font-medium truncate">{item.clientName}</span>
+                  <span className="font-bold truncate">{item.clientName}</span>
                 </div>
 
                 {/* Year */}
