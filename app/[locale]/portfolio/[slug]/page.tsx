@@ -45,18 +45,34 @@ export default async function PortfolioDetailPage({
   params: Promise<{ locale: string; slug: string }>
 }) {
   const { locale, slug } = await params
+  
+  console.log('═══════════════════════════════════════')
+  console.log('[Portfolio Detail Page] Starting')
+  console.log('Locale:', locale)
+  console.log('Slug:', slug)
+  console.log('═══════════════════════════════════════')
+  
   setRequestLocale(locale)
   
-  console.log('[Portfolio Detail] Fetching slug:', slug, 'locale:', locale)
-  
+  console.log('[Portfolio Detail] Calling getPortfolioBySlug...')
   const item = await getPortfolioBySlug(slug)
   
-  console.log('[Portfolio Detail] Found item:', item ? `${item.titleKey}` : 'NULL')
+  console.log('[Portfolio Detail] Result:', item ? {
+    id: item.id,
+    slug: item.slug,
+    titleKey: item.titleKey,
+    hasTitle: !!item.title,
+    clientName: item.clientName
+  } : 'NULL')
   
   if (!item) {
-    console.log('[Portfolio Detail] Item not found, returning 404')
+    console.log('[Portfolio Detail] Item not found - calling notFound()')
+    console.log('═══════════════════════════════════════')
     notFound()
   }
+  
+  console.log('[Portfolio Detail] Rendering content')
+  console.log('═══════════════════════════════════════')
   
   return <PortfolioDetailContent item={item} />
 }
