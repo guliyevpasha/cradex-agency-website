@@ -111,15 +111,14 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-30 flex justify-center px-4 pt-4">
+      <header className="fixed top-0 left-0 right-0 z-30">
         <div
           className={cn(
-            // `relative` anchors the services mega menu to the whole bar
-            'relative w-full max-w-6xl flex items-center justify-between gap-4',
-            'rounded-2xl border transition-all duration-300',
+            'w-full flex items-center justify-between gap-4 transition-all duration-300',
+            'px-4 sm:px-6 lg:px-8',
             scrolled
-              ? 'px-4 py-2.5 bg-bg-primary/80 backdrop-blur-xl border-white/15 shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
-              : 'px-5 py-3.5 bg-bg-primary/40 backdrop-blur-md border-white/8'
+              ? 'py-3 bg-bg-primary/95 backdrop-blur-xl border-b border-white/10 shadow-lg'
+              : 'py-4 bg-bg-primary/60 backdrop-blur-md border-b border-white/5'
           )}
         >
           {/* Logo */}
