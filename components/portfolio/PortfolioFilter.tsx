@@ -52,9 +52,10 @@ export function PortfolioFilter({ active, onChange, counts }: PortfolioFilterPro
 
   return (
     <div
-      className="flex gap-2 justify-center overflow-x-auto pb-2 scrollbar-thin"
+      className="flex gap-2 justify-center overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0"
       role="group"
       aria-label="Portfolio kateqoriya filtri"
+      style={{ WebkitOverflowScrolling: 'touch' }}
     >
       {PORTFOLIO_FILTER_VALUES.map((value) => {
         const isActive = active === value
