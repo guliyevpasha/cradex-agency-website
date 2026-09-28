@@ -97,16 +97,19 @@ export function AboutHero({
         >
           {description}
         </motion.p>
+      </div>
 
-        {/* Animated Badges Marquee */}
-        <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-20"
-        >
-          <AboutBadgesMarquee />
-        </motion.div>
+      {/* Animated Badges Marquee - Full Width */}
+      <motion.div
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="w-full mb-20"
+      >
+        <AboutBadgesMarquee />
+      </motion.div>
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
 
         {/* Stats */}
         <motion.div
