@@ -87,20 +87,50 @@ function FlipCard({ item }: FlipCardProps) {
   const locale = useLocale()
   const t = useTranslations('portfolio')
   const [isFlipped, setIsFlipped] = useState(false)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
   const title = item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey
   const description = item.description?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.descriptionKey
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
 
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe || isRightSwipe) {
+      setIsFlipped(!isFlipped)
+    }
+  }
+
   return (
     <div
       className={cn(
-        'flex-shrink-0 w-[160px] sm:w-[220px] md:w-[280px] lg:w-[320px]',
+        // BIGGER cards on mobile for readability
+        'flex-shrink-0 w-[280px] sm:w-[300px] md:w-[320px] lg:w-[360px]',
         'group relative',
         '[perspective:1000px]'
       )}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <Link
         href={`/${locale}/portfolio/${item.slug}`}
@@ -134,26 +164,26 @@ function FlipCard({ item }: FlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
-            <div className="absolute inset-0 p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col justify-between">
+            <div className="absolute inset-0 p-4 sm:p-5 md:p-6 flex flex-col justify-between">
               {/* Top Section */}
-              <div className="space-y-1.5 sm:space-y-2 md:space-y-2.5">
-                {/* Title - Same format as portfolio index */}
-                <h3 className="text-white font-display font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-tight line-clamp-2">
+              <div className="space-y-2 sm:space-y-2.5">
+                {/* Title - Larger on mobile for readability */}
+                <h3 className="text-white font-display font-bold text-sm sm:text-base md:text-lg leading-tight line-clamp-2">
                   {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
-                {/* Description - Short (2-3 lines) */}
+                {/* Description - Visible on all screens */}
                 {description && (
-                  <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
+                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section */}
-              <div className="space-y-1.5 sm:space-y-2">
+              <div className="space-y-2">
                 {/* Meta Row - Client & Year */}
-                <div className="flex items-center gap-2 sm:gap-3 text-white/50 text-[10px] sm:text-xs md:text-sm">
+                <div className="flex items-center gap-2 sm:gap-3 text-white/50 text-xs sm:text-sm">
                   <span className="font-medium text-white/70 truncate">{item.clientName}</span>
                   {year && (
                     <>
@@ -166,16 +196,16 @@ function FlipCard({ item }: FlipCardProps) {
                 {/* Button Row */}
                 <div className="flex items-center justify-between gap-2">
                   {/* Category Badge */}
-                  <div className="inline-flex items-center px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10">
-                    <span className="text-white/80 text-[9px] sm:text-[10px] md:text-xs font-medium">
+                  <div className="inline-flex items-center px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10">
+                    <span className="text-white/80 text-[10px] sm:text-xs font-medium">
                       {t(`categories.${item.serviceCategory}` as any)}
                     </span>
                   </div>
 
                   {/* View Project Button */}
-                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-white text-[10px] sm:text-xs md:text-sm font-medium group-hover:text-accent-primary transition-colors">
-                    <span className="hidden sm:inline">Layihəyə keçid et</span>
-                    <ArrowRight size={12} className="sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform" />
+                  <div className="inline-flex items-center gap-1.5 sm:gap-2 text-white text-xs sm:text-sm font-medium group-hover:text-accent-primary transition-colors">
+                    <span>Layihəyə keçid et</span>
+                    <ArrowRight size={14} className="sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               </div>
