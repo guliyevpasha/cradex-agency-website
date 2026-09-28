@@ -68,7 +68,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
+            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between overflow-y-auto">
               {/* Top Section */}
               <div className="space-y-2.5">
                 {/* Category Badge */}
@@ -80,20 +80,20 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight line-clamp-2">
+                <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight">
                   {title}
                 </h3>
 
-                {/* Description - reduced to 2 lines */}
+                {/* Description - FULL text without line-clamp */}
                 {description && (
-                  <p className="text-white/70 text-xs md:text-sm leading-relaxed line-clamp-2">
+                  <p className="text-white/70 text-xs md:text-sm leading-relaxed">
                     {description}
                   </p>
                 )}
               </div>
 
               {/* Bottom Section - Meta Info */}
-              <div className="space-y-2">
+              <div className="space-y-2 flex-shrink-0">
                 {/* Client & Year - Combined */}
                 <div className="flex items-center gap-3 text-white text-sm flex-wrap">
                   <div className="flex items-center gap-1.5">
@@ -119,7 +119,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
               </div>
 
               {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-primary/5 rounded-bl-[100%]" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-primary/5 rounded-bl-[100%] pointer-events-none" />
             </div>
           </div>
         </div>
