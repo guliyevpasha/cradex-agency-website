@@ -30,6 +30,8 @@ const securityHeaders = [
 const nextConfig = {
   // Removed 'output: export' to enable Sanity Studio (requires SSR)
   // trailingSlash: true, // Not needed without static export
+  // Disable Turbopack for production builds to fix Google Fonts issue
+  turbo: false,
   typescript: {
     ignoreBuildErrors: true,
   },
