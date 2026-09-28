@@ -96,13 +96,10 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Info */}
             <ScrollReveal animation="fadeInLeft">
-              <Badge variant="accent" className="mb-4">
+              <Badge variant="accent" className="mb-6">
                 {t(`categories.${item.serviceCategory}` as any)}
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-text-primary mb-4">
-                {title}
-              </h1>
-              <p className="text-text-secondary text-base leading-relaxed mb-6">{description}</p>
+              <p className="text-text-secondary text-sm leading-relaxed mb-6">{description}</p>
 
               {/* Meta Info Grid - Compact 2-column layout */}
               <div className="grid grid-cols-2 gap-4 bg-bg-tertiary/50 rounded-xl p-5 border border-white/5 mb-6">

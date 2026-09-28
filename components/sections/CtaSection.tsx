@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
@@ -16,16 +16,13 @@ export function CtaSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 -z-10" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-accent-primary/50 to-transparent" />
 
-            <h2 className="text-display-md font-display font-bold text-text-primary mb-4">
+            <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
               {t('title')}
             </h2>
-            <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-text-secondary text-sm mb-6 max-w-xl mx-auto">
               {t('subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href={`/${locale}/contact`} size="lg" icon={<ArrowRight size={18} />}>
-                {t('button')}
-              </Button>
+            <div className="flex items-center justify-center">
               <Button
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
                 variant="whatsapp"
