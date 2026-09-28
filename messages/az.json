@@ -709,13 +709,19 @@
     "subtitle": "Tamamladığımız layihələr",
     "viewProject": "Portfolioya Bax",
     "client": "Müştəri",
+    "year": "İl",
     "category": "Kateqoriya",
     "tools": "İstifadə olunan alətlər",
     "results": "Nəticələr",
     "gallery": "Qalereya",
+    "gallerySubtitle": "Layihə görüntüləri",
+    "videoTitle": "Layihə Videosu",
     "foundCount": "{count} iş tapıldı",
     "filterLabel": "Kateqoriya üzrə filtr",
     "loadMore": "Daha çox",
+    "breadcrumb": {
+      "home": "Ana Səhifə"
+    },
     "categories": {
       "all": "Hamısı",
       "digital-marketing": "SEO / Rəqəmsal",
