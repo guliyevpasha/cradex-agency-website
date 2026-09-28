@@ -195,15 +195,15 @@ export function toArticles(docs: unknown): Article[] {
 export interface SanityPortfolioDoc {
   id?: string
   slug?: string
-  title?: string
+  title?: string | { az: string; en: string; ru: string; tr: string }
   client?: string
   serviceCategory?: string
-  description?: string
+  description?: string | { az: string; en: string; ru: string; tr: string }
   image?: string
   gallery?: (string | null)[]
   tools?: string[]
   tags?: string[]
-  results?: string
+  results?: string | { az: string; en: string; ru: string; tr: string }
   completedAt?: string
   featured?: boolean
 }
@@ -213,18 +213,35 @@ export function toPortfolioItem(
 ): PortfolioItem | null {
   if (!doc || !doc.slug) return null
 
+  // Helper to extract localized text
+  const getLocalizedText = (field: string | { az: string; en: string; ru: string; tr: string } | undefined): string => {
+    if (!field) return ''
+    if (typeof field === 'string') return field
+    return field.az || field.en || ''
+  }
+
+  // Helper to get object format if available
+  const getLocalizedObject = (field: string | { az: string; en: string; ru: string; tr: string } | undefined) => {
+    if (!field) return undefined
+    if (typeof field === 'object') return field as { az: string; en: string; ru: string; tr: string }
+    return undefined
+  }
+
   return {
     id: doc.id ?? doc.slug,
     slug: doc.slug,
-    titleKey: doc.title ?? '',
+    titleKey: getLocalizedText(doc.title),
+    title: getLocalizedObject(doc.title),
     clientName: doc.client ?? '',
     serviceCategory: (doc.serviceCategory as ServiceSlug) || DEFAULT_SERVICE_CATEGORY,
     tags: doc.tags ?? [],
     coverImage: doc.image ?? '',
     gallery: (doc.gallery ?? []).filter((url): url is string => Boolean(url)),
-    descriptionKey: doc.description ?? '',
+    descriptionKey: getLocalizedText(doc.description),
+    description: getLocalizedObject(doc.description),
     tools: doc.tools ?? [],
-    resultsKey: doc.results ?? '',
+    resultsKey: getLocalizedText(doc.results),
+    results: getLocalizedObject(doc.results),
     publishedAt: doc.completedAt ?? '',
     featured: Boolean(doc.featured),
   }
