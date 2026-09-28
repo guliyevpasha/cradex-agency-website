@@ -82,6 +82,7 @@ export interface PortfolioItem {
   coverImage: string
   gallery: string[]
   videoUrl?: string
+  projectUrl?: string  // External project URL
   descriptionKey: string
   description?: PortfolioItemTitle
   tools: string[]
