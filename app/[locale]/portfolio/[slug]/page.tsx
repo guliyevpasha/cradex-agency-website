@@ -102,7 +102,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <h1 className="text-4xl md:text-5xl font-display font-bold text-text-primary mb-4">
                 {title}
               </h1>
-              <p className="text-text-secondary text-lg leading-relaxed mb-6">{description}</p>
+              <p className="text-text-secondary text-base leading-relaxed mb-6">{description}</p>
 
               {/* Meta Info Grid - Compact 2-column layout */}
               <div className="grid grid-cols-2 gap-4 bg-bg-tertiary/50 rounded-xl p-5 border border-white/5 mb-6">
@@ -220,7 +220,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
                 {t('gallery')}
               </h2>
-              <p className="text-text-secondary">{t('gallerySubtitle')}</p>
+              <p className="text-text-secondary text-sm">{t('gallerySubtitle')}</p>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {item.gallery.map((img, index) => (
@@ -251,7 +251,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
                 {t('relatedProjects')}
               </h2>
-              <p className="text-text-secondary">{t('relatedProjectsSubtitle')}</p>
+              <p className="text-text-secondary text-sm">{t('relatedProjectsSubtitle')}</p>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPortfolios.map((project, index) => {
