@@ -59,19 +59,6 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
         </div>
       )}
 
-      {/* ── Category pill — top left (always visible) ───────────── */}
-      <div className="absolute top-4 left-4 z-10">
-        <span
-          className={cn(
-            'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border backdrop-blur-sm',
-            catColor.bg, catColor.text, catColor.border
-          )}
-        >
-          <Tag size={10} />
-          {t(`categories.${item.serviceCategory}` as any)}
-        </span>
-      </div>
-
       {/* ── Hover overlay — slides up from bottom ───────────────── */}
       {/*
           Default: overlay is translateY(100%) — hidden below the card

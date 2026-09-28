@@ -36,16 +36,17 @@ export function ArticleCard({ article }: ArticleCardProps) {
               📰
             </div>
           )}
-          {/* Category badge */}
-          <div className="absolute top-3 left-3">
-            <Badge variant="accent">
-              {t(`categories.${article.category}` as any)}
-            </Badge>
-          </div>
         </div>
 
         {/* Content */}
         <div className="p-5 flex flex-col flex-1">
+          {/* Category badge moved here */}
+          <div className="mb-3">
+            <Badge variant="accent">
+              {t(`categories.${article.category}` as any)}
+            </Badge>
+          </div>
+          
           <h3 className="text-text-primary font-semibold text-lg leading-snug mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
             {article.titleKey}
           </h3>

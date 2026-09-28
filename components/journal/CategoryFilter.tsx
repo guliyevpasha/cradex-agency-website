@@ -16,7 +16,7 @@ export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
   const t = useTranslations('journal.categories')
 
   return (
-    <div className="flex flex-wrap gap-2" role="group" aria-label="Kateqoriya filtri">
+    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin" role="group" aria-label="Kateqoriya filtri">
       {categories.map((cat) => (
         <button
           key={cat}
