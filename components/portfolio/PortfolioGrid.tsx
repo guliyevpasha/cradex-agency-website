@@ -1,7 +1,7 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { PortfolioCard } from './PortfolioCard'
+import { PortfolioFlipCard } from './PortfolioFlipCard'
 import type { PortfolioItem } from '@/types'
 
 interface PortfolioGridProps {
@@ -68,7 +68,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               delay: index * 0.05,
             }}
           >
-            <PortfolioCard item={item} />
+            <PortfolioFlipCard item={item} />
           </motion.div>
         ))}
       </AnimatePresence>
