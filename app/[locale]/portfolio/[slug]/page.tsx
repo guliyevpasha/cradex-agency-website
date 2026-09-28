@@ -46,38 +46,25 @@ export default async function PortfolioDetailPage({
 }) {
   const { locale, slug } = await params
   
-  console.log('═══════════════════════════════════════')
-  console.log('[Portfolio Detail Page] Starting')
-  console.log('Locale:', locale)
-  console.log('Slug:', slug)
-  console.log('═══════════════════════════════════════')
-  
   setRequestLocale(locale)
   
-  console.log('[Portfolio Detail] Calling getPortfolioBySlug...')
   const item = await getPortfolioBySlug(slug)
   
-  console.log('[Portfolio Detail] Result:', item ? {
-    id: item.id,
-    slug: item.slug,
-    titleKey: item.titleKey,
-    hasTitle: !!item.title,
-    clientName: item.clientName
-  } : 'NULL')
-  
   if (!item) {
-    console.log('[Portfolio Detail] Item not found - calling notFound()')
-    console.log('═══════════════════════════════════════')
     notFound()
   }
   
-  console.log('[Portfolio Detail] Rendering content')
-  console.log('═══════════════════════════════════════')
+  // Get related portfolio items (same category, exclude current)
+  const { getAllPortfolio } = await import('@/lib/data/portfolio')
+  const allPortfolios = await getAllPortfolio(locale)
+  const relatedPortfolios = allPortfolios
+    .filter(p => p.serviceCategory === item.serviceCategory && p.slug !== item.slug)
+    .slice(0, 3)
   
-  return <PortfolioDetailContent item={item} />
+  return <PortfolioDetailContent item={item} relatedPortfolios={relatedPortfolios} />
 }
 
-function PortfolioDetailContent({ item }: { item: PortfolioItem }) {
+function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioItem; relatedPortfolios: PortfolioItem[] }) {
   const t = useTranslations('portfolio')
   const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
 
@@ -118,21 +105,32 @@ function PortfolioDetailContent({ item }: { item: PortfolioItem }) {
               <p className="text-text-secondary text-lg leading-relaxed mb-8">{description}</p>
 
               <div className="space-y-4 bg-bg-tertiary/50 rounded-xl p-6 border border-white/5">
+                {/* Client */}
                 <div className="flex items-center gap-3">
-                  <span className="text-text-muted text-sm w-28 font-medium">{t('client')}:</span>
+                  <span className="text-text-muted text-sm w-32 font-medium">{t('client')}:</span>
                   <span className="text-text-primary font-semibold">{item.clientName}</span>
                 </div>
                 
+                {/* Year */}
                 {year && (
                   <div className="flex items-center gap-3">
-                    <span className="text-text-muted text-sm w-28 font-medium">{t('year')}:</span>
+                    <span className="text-text-muted text-sm w-32 font-medium">{t('year')}:</span>
                     <span className="text-text-primary">{year}</span>
                   </div>
                 )}
 
+                {/* Duration */}
+                {item.duration && (
+                  <div className="flex items-center gap-3">
+                    <span className="text-text-muted text-sm w-32 font-medium">{t('duration')}:</span>
+                    <span className="text-text-primary">{item.duration}</span>
+                  </div>
+                )}
+
+                {/* Tools */}
                 {item.tools && item.tools.length > 0 && (
                   <div className="flex items-start gap-3">
-                    <span className="text-text-muted text-sm w-28 pt-1 font-medium">{t('tools')}:</span>
+                    <span className="text-text-muted text-sm w-32 pt-1 font-medium">{t('tools')}:</span>
                     <div className="flex flex-wrap gap-2">
                       {item.tools.map((tool) => (
                         <Badge key={tool} variant="outline">{tool}</Badge>
@@ -141,9 +139,10 @@ function PortfolioDetailContent({ item }: { item: PortfolioItem }) {
                   </div>
                 )}
                 
+                {/* Results */}
                 {results && (
                   <div className="flex items-start gap-3 pt-2 border-t border-white/5">
-                    <span className="text-text-muted text-sm w-28 pt-1 font-medium">{t('results')}:</span>
+                    <span className="text-text-muted text-sm w-32 pt-1 font-medium">{t('results')}:</span>
                     <p className="text-text-primary text-sm leading-relaxed flex-1">{results}</p>
                   </div>
                 )}
@@ -223,6 +222,72 @@ function PortfolioDetailContent({ item }: { item: PortfolioItem }) {
                   </div>
                 </ScrollReveal>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Projects */}
+      {relatedPortfolios.length > 0 && (
+        <section className="py-20 bg-bg-primary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fadeInUp" className="mb-12 text-center">
+              <h2 className="text-display-md font-display font-bold text-text-primary mb-3">
+                {t('relatedProjects')}
+              </h2>
+              <p className="text-text-secondary">{t('relatedProjectsSubtitle')}</p>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedPortfolios.map((project, index) => {
+                const projectTitle = project.title?.[locale] || project.titleKey
+                const projectDescription = project.description?.[locale] || project.descriptionKey
+                
+                // Sanitize slug
+                const sanitizedSlug = project.slug
+                  .toLowerCase()
+                  .trim()
+                  .replace(/[\s_]+/g, '-')
+                  .replace(/[^a-z0-9-]/g, '')
+                  .replace(/-+/g, '-')
+                  .replace(/^-+|-+$/g, '')
+                
+                return (
+                  <ScrollReveal key={project.id} animation="fadeInUp" delay={index * 100}>
+                    <Link 
+                      href={`/${locale}/portfolio/${sanitizedSlug}`}
+                      className="group block bg-bg-secondary rounded-2xl overflow-hidden border border-white/5 hover:border-accent-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-primary/10"
+                    >
+                      <div className="relative aspect-[4/3] bg-bg-tertiary overflow-hidden">
+                        {project.coverImage ? (
+                          <Image
+                            src={project.coverImage}
+                            alt={projectTitle}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
+                            <span className="text-6xl opacity-20">🖼️</span>
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      <div className="p-6">
+                        <Badge variant="outline" className="mb-3">
+                          {t(`categories.${project.serviceCategory}` as any)}
+                        </Badge>
+                        <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">
+                          {projectTitle}
+                        </h3>
+                        <p className="text-text-secondary text-sm line-clamp-2">
+                          {projectDescription}
+                        </p>
+                      </div>
+                    </Link>
+                  </ScrollReveal>
+                )
+              })}
             </div>
           </div>
         </section>
