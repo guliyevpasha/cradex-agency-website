@@ -133,53 +133,52 @@ function FlipCard({ item }: FlipCardProps) {
           </div>
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
-          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-center items-center text-center">
-              {/* Content wrapper */}
+          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
+            <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-between">
+              {/* Top Section */}
               <div className="space-y-2">
-                {/* Category Badge */}
-                <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-accent-primary/10 border border-accent-primary/20">
-                  <Tag size={10} className="text-accent-primary" />
-                  <span className="text-accent-primary text-[10px] font-semibold uppercase tracking-wider">
-                    {t(`categories.${item.serviceCategory}` as any)}
-                  </span>
-                </div>
-
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-sm md:text-base leading-tight line-clamp-2">
-                  {title}
+                <h3 className="text-white font-display font-bold text-xs md:text-sm leading-tight line-clamp-2">
+                  {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
                 {/* Description */}
                 {description && (
-                  <p className="text-white/70 text-xs leading-relaxed line-clamp-3 hidden sm:block">
+                  <p className="text-white/60 text-[10px] md:text-xs leading-relaxed line-clamp-2 hidden sm:block">
                     {description}
                   </p>
                 )}
+              </div>
 
-                {/* Meta Info - Client & Year */}
-                <div className="flex items-center justify-center gap-2 text-white/80 text-xs pt-1">
-                  <div className="flex items-center gap-1">
-                    <Building2 size={10} className="text-accent-primary/70" />
-                    <span className="font-bold truncate">{item.clientName}</span>
-                  </div>
+              {/* Bottom Section */}
+              <div className="space-y-2">
+                {/* Meta Row */}
+                <div className="flex items-center gap-2 text-white/50 text-[10px] md:text-xs">
+                  <span className="font-medium text-white/70 truncate">{item.clientName}</span>
                   {year && (
                     <>
-                      <span className="text-white/40">•</span>
+                      <span>•</span>
                       <span>{year}</span>
                     </>
                   )}
                 </div>
 
-                {/* View Project Button */}
-                <div className="inline-flex items-center gap-1 text-accent-primary font-semibold text-xs pt-1">
-                  <span>{t('viewProject')}</span>
-                  <ArrowRight size={10} className="group-hover:translate-x-0.5 transition-transform" />
+                {/* Button Row */}
+                <div className="flex items-center justify-between gap-2">
+                  {/* Category Badge */}
+                  <div className="inline-flex items-center px-2 py-1 rounded-lg bg-white/5 border border-white/10">
+                    <span className="text-white/80 text-[9px] md:text-[10px] font-medium">
+                      {t(`categories.${item.serviceCategory}` as any)}
+                    </span>
+                  </div>
+
+                  {/* View Project Button */}
+                  <div className="inline-flex items-center gap-1 text-white text-[10px] md:text-xs font-medium group-hover:text-accent-primary transition-colors">
+                    <span className="hidden sm:inline">Layihəyə keçid</span>
+                    <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
               </div>
-
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-accent-primary/5 rounded-bl-[100%] pointer-events-none" />
             </div>
           </div>
         </div>

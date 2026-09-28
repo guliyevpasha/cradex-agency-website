@@ -67,56 +67,52 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
           </div>
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
-          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-center items-center text-center">
-              {/* Content wrapper with max-width */}
-              <div className="max-w-md space-y-3">
-                {/* Category Badge */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20">
-                  <Tag size={12} className="text-accent-primary" />
-                  <span className="text-accent-primary text-xs font-semibold uppercase tracking-wider">
-                    {t(`categories.${item.serviceCategory}` as any)}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-white font-display font-bold text-xl md:text-2xl leading-tight">
-                  {title}
+          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
+            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+              {/* Top Section */}
+              <div className="space-y-3">
+                {/* Title - "[Client] üçün hazırlanmış veb sayt" */}
+                <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight">
+                  {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
-                {/* Description */}
+                {/* Description - Short project info (2-3 lines) */}
                 {description && (
-                  <p className="text-white/70 text-sm md:text-base leading-relaxed line-clamp-4">
+                  <p className="text-white/60 text-sm leading-relaxed line-clamp-3">
                     {description}
                   </p>
                 )}
+              </div>
 
-                {/* Meta Info - Client & Year */}
-                <div className="flex items-center justify-center gap-3 text-white/80 text-sm pt-2">
-                  <div className="flex items-center gap-1.5">
-                    <Building2 size={14} className="text-accent-primary/70" />
-                    <span className="font-bold">{item.clientName}</span>
-                  </div>
+              {/* Bottom Section - Meta & Button */}
+              <div className="space-y-3">
+                {/* Meta Row - Client name & Year */}
+                <div className="flex items-center gap-4 text-white/50 text-sm">
+                  <span className="font-medium text-white/70">{item.clientName}</span>
                   {year && (
                     <>
-                      <span className="text-white/40">•</span>
-                      <div className="flex items-center gap-1.5">
-                        <Calendar size={14} className="text-accent-primary/70" />
-                        <span>{year}</span>
-                      </div>
+                      <span>•</span>
+                      <span>{year}</span>
                     </>
                   )}
                 </div>
 
-                {/* View Project Button */}
-                <div className="inline-flex items-center gap-2 text-accent-primary font-semibold text-sm pt-2">
-                  <span>{t('viewProject')}</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                {/* Button Row */}
+                <div className="flex items-center justify-between gap-4">
+                  {/* Category Badge */}
+                  <div className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+                    <span className="text-white/80 text-xs font-medium">
+                      {t(`categories.${item.serviceCategory}` as any)}
+                    </span>
+                  </div>
+
+                  {/* View Project Button */}
+                  <div className="inline-flex items-center gap-2 text-white font-medium text-sm group-hover:text-accent-primary transition-colors">
+                    <span>Layihəyə keçid et</span>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </div>
-
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-primary/5 rounded-bl-[100%] pointer-events-none" />
             </div>
           </div>
         </div>
