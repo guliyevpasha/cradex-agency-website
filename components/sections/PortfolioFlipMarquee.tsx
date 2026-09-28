@@ -134,9 +134,9 @@ function FlipCard({ item }: FlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between text-left overflow-y-auto">
-              {/* Top Section */}
-              <div className="space-y-1.5 md:space-y-2">
+            <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-center items-center text-center">
+              {/* Content wrapper */}
+              <div className="space-y-2">
                 {/* Category Badge */}
                 <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-accent-primary/10 border border-accent-primary/20">
                   <Tag size={10} className="text-accent-primary" />
@@ -146,22 +146,19 @@ function FlipCard({ item }: FlipCardProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-xs md:text-sm leading-tight">
+                <h3 className="text-white font-display font-bold text-sm md:text-base leading-tight line-clamp-2">
                   {title}
                 </h3>
 
-                {/* Description - FULL text without line-clamp */}
+                {/* Description */}
                 {description && (
-                  <p className="text-white/70 text-[10px] leading-relaxed hidden sm:block">
+                  <p className="text-white/70 text-xs leading-relaxed line-clamp-3 hidden sm:block">
                     {description}
                   </p>
                 )}
-              </div>
 
-              {/* Bottom Section - Meta Info */}
-              <div className="space-y-1 flex-shrink-0">
-                {/* Client & Year - Combined in one line */}
-                <div className="flex items-center gap-2 text-white text-[10px] md:text-xs flex-wrap">
+                {/* Meta Info - Client & Year */}
+                <div className="flex items-center justify-center gap-2 text-white/80 text-xs pt-1">
                   <div className="flex items-center gap-1">
                     <Building2 size={10} className="text-accent-primary/70" />
                     <span className="font-bold truncate">{item.clientName}</span>
@@ -169,13 +166,13 @@ function FlipCard({ item }: FlipCardProps) {
                   {year && (
                     <>
                       <span className="text-white/40">•</span>
-                      <span className="text-white/80">{year}</span>
+                      <span>{year}</span>
                     </>
                   )}
                 </div>
 
                 {/* View Project Button */}
-                <div className="flex items-center gap-1 text-accent-primary font-semibold text-[10px] md:text-xs">
+                <div className="inline-flex items-center gap-1 text-accent-primary font-semibold text-xs pt-1">
                   <span>{t('viewProject')}</span>
                   <ArrowRight size={10} className="group-hover:translate-x-0.5 transition-transform" />
                 </div>

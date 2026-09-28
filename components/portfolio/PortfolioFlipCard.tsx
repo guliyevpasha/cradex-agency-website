@@ -68,9 +68,9 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary border-2 border-accent-primary/30">
-            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between overflow-y-auto">
-              {/* Top Section */}
-              <div className="space-y-2.5">
+            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-center items-center text-center">
+              {/* Content wrapper with max-width */}
+              <div className="max-w-md space-y-3">
                 {/* Category Badge */}
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20">
                   <Tag size={12} className="text-accent-primary" />
@@ -80,22 +80,19 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight">
+                <h3 className="text-white font-display font-bold text-xl md:text-2xl leading-tight">
                   {title}
                 </h3>
 
-                {/* Description - FULL text without line-clamp */}
+                {/* Description */}
                 {description && (
-                  <p className="text-white/70 text-xs md:text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed line-clamp-4">
                     {description}
                   </p>
                 )}
-              </div>
 
-              {/* Bottom Section - Meta Info */}
-              <div className="space-y-2 flex-shrink-0">
-                {/* Client & Year - Combined */}
-                <div className="flex items-center gap-3 text-white text-sm flex-wrap">
+                {/* Meta Info - Client & Year */}
+                <div className="flex items-center justify-center gap-3 text-white/80 text-sm pt-2">
                   <div className="flex items-center gap-1.5">
                     <Building2 size={14} className="text-accent-primary/70" />
                     <span className="font-bold">{item.clientName}</span>
@@ -103,7 +100,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
                   {year && (
                     <>
                       <span className="text-white/40">•</span>
-                      <div className="flex items-center gap-1.5 text-white/80">
+                      <div className="flex items-center gap-1.5">
                         <Calendar size={14} className="text-accent-primary/70" />
                         <span>{year}</span>
                       </div>
@@ -112,7 +109,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
                 </div>
 
                 {/* View Project Button */}
-                <div className="flex items-center gap-2 text-accent-primary font-semibold text-sm">
+                <div className="inline-flex items-center gap-2 text-accent-primary font-semibold text-sm pt-2">
                   <span>{t('viewProject')}</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
