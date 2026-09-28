@@ -73,7 +73,7 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
           <Link
             key={`${item.id}-${index}`}
             href={`/${locale}/portfolio/${item.slug}`}
-            className="flex-shrink-0 w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] group"
+            className="flex-shrink-0 w-[160px] sm:w-[220px] md:w-[280px] lg:w-[320px] group"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
               {item.coverImage ? (
