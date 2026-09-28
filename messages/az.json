@@ -522,6 +522,14 @@
         "title": "Brendinq",
         "description": "Brend identiteti və strategiyası"
       },
+      "photoVideo": {
+        "title": "Foto / Video",
+        "description": "Peşəkar foto və video çəkiliş"
+      },
+      "traditionalMarketing": {
+        "title": "Ənənəvi Marketinq",
+        "description": "Çap, outdoor, media planlaması"
+      },
       "viewAllServices": "Bütün xidmətlərə bax",
       "calculatePrice": "Qiymət hesabla"
     },
