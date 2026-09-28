@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
-import { PortfolioMarquee } from './PortfolioMarquee'
+import { PortfolioFlipMarquee } from './PortfolioFlipMarquee'
 import type { PortfolioItem } from '@/types'
 
 export default function PortfolioPreviewClient({ items }: { items: PortfolioItem[] }) {
@@ -33,7 +33,7 @@ export default function PortfolioPreviewClient({ items }: { items: PortfolioItem
 
       {/* Portfolio Marquee - Two rows with opposite scrolling - Full width on mobile, contained on desktop */}
       <div className="mb-12">
-        <PortfolioMarquee items={items} />
+        <PortfolioFlipMarquee items={items} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
