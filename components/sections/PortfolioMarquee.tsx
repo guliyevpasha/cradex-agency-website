@@ -20,10 +20,19 @@ export function PortfolioMarquee({ items }: PortfolioMarqueeProps) {
 
   if (!mounted || items.length === 0) return null
 
-  // Split items into two rows
-  const midpoint = Math.ceil(items.length / 2)
-  const topRowItems = items.slice(0, midpoint)
-  const bottomRowItems = items.slice(midpoint)
+  // Ensure each row has at least 6 items by duplicating if necessary
+  const minItemsPerRow = 6
+  let allItems = [...items]
+  
+  // If we have fewer items, duplicate them to reach minimum
+  while (allItems.length < minItemsPerRow * 2) {
+    allItems = [...allItems, ...items]
+  }
+
+  // Split items into two rows - ensure each row has at least 6 items
+  const midpoint = Math.ceil(allItems.length / 2)
+  const topRowItems = allItems.slice(0, midpoint)
+  const bottomRowItems = allItems.slice(midpoint)
 
   return (
     <div className="w-full overflow-hidden space-y-6">
