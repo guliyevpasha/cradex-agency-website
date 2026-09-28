@@ -102,62 +102,63 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <h1 className="text-display-md md:text-display-lg font-display font-bold text-text-primary mb-4">
                 {title}
               </h1>
-              <p className="text-text-secondary text-lg leading-relaxed mb-8">{description}</p>
+              <p className="text-text-secondary text-lg leading-relaxed mb-6">{description}</p>
 
-              <div className="space-y-4 bg-bg-tertiary/50 rounded-xl p-6 border border-white/5 mb-6">
+              {/* Meta Info Grid - Compact 2-column layout */}
+              <div className="grid grid-cols-2 gap-4 bg-bg-tertiary/50 rounded-xl p-5 border border-white/5 mb-6">
                 {/* Client */}
-                <div className="flex items-center gap-3">
-                  <span className="text-text-muted text-sm w-32 font-medium">{t('client')}:</span>
-                  <span className="text-text-primary font-semibold">{item.clientName}</span>
+                <div className="space-y-1">
+                  <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('client')}</span>
+                  <p className="text-text-primary font-semibold">{item.clientName}</p>
                 </div>
                 
                 {/* Year */}
                 {year && (
-                  <div className="flex items-center gap-3">
-                    <span className="text-text-muted text-sm w-32 font-medium">{t('year')}:</span>
-                    <span className="text-text-primary">{year}</span>
+                  <div className="space-y-1">
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('year')}</span>
+                    <p className="text-text-primary font-semibold">{year}</p>
                   </div>
                 )}
 
                 {/* Duration */}
                 {item.duration && (
-                  <div className="flex items-center gap-3">
-                    <span className="text-text-muted text-sm w-32 font-medium">{t('duration')}:</span>
-                    <span className="text-text-primary">{item.duration}</span>
+                  <div className="space-y-1">
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('duration')}</span>
+                    <p className="text-text-primary font-semibold">{item.duration}</p>
                   </div>
                 )}
 
-                {/* Tools */}
+                {/* Tools - Full width if exists */}
                 {item.tools && item.tools.length > 0 && (
-                  <div className="flex items-start gap-3">
-                    <span className="text-text-muted text-sm w-32 pt-1 font-medium">{t('tools')}:</span>
+                  <div className="col-span-2 space-y-2 pt-4 border-t border-white/5">
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium block">{t('tools')}</span>
                     <div className="flex flex-wrap gap-2">
                       {item.tools.map((tool) => (
-                        <Badge key={tool} variant="outline">{tool}</Badge>
+                        <Badge key={tool} variant="outline" className="text-xs">{tool}</Badge>
                       ))}
                     </div>
                   </div>
                 )}
                 
-                {/* Results */}
+                {/* Results - Full width if exists */}
                 {results && (
-                  <div className="flex items-start gap-3 pt-2 border-t border-white/5">
-                    <span className="text-text-muted text-sm w-32 pt-1 font-medium">{t('results')}:</span>
-                    <p className="text-text-primary text-sm leading-relaxed flex-1">{results}</p>
+                  <div className="col-span-2 space-y-2 pt-4 border-t border-white/5">
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium block">{t('results')}</span>
+                    <p className="text-text-primary text-sm leading-relaxed">{results}</p>
                   </div>
                 )}
               </div>
 
-              {/* Visit Website Button */}
+              {/* Visit Website Button - Prominent placement */}
               {item.projectUrl && (
                 <a
                   href={item.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-[1.02] group"
                 >
                   <span>{t('visitWebsite')}</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -166,7 +167,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
 
             {/* Cover image */}
             <ScrollReveal animation="fadeInRight">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary shadow-2xl">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary shadow-2xl ring-1 ring-white/5">
                 {item.coverImage ? (
                   <Image
                     src={item.coverImage}
