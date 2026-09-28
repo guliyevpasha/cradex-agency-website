@@ -44,8 +44,8 @@ interface MarqueeRowProps {
 function MarqueeRow({ items, direction }: MarqueeRowProps) {
   const locale = useLocale()
   
-  // Triple the items for seamless loop
-  const displayItems = [...items, ...items, ...items]
+  // Multiply items more for seamless loop on all screen sizes (6 copies instead of 3)
+  const displayItems = [...items, ...items, ...items, ...items, ...items, ...items]
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -56,8 +56,8 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 15s linear infinite' 
-            : 'marquee-scroll-third-reverse 15s linear infinite',
+            ? 'marquee-scroll-sixth 5s linear infinite' 
+            : 'marquee-scroll-sixth-reverse 5s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (

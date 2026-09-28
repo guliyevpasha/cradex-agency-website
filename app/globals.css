@@ -172,6 +172,17 @@
   100% { transform: translateX(0); }
 }
 
+/* Six copies - for more items and smoother mobile experience */
+@keyframes marquee-scroll-sixth {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-16.6667%); }
+}
+
+@keyframes marquee-scroll-sixth-reverse {
+  0%   { transform: translateX(-16.6667%); }
+  100% { transform: translateX(0); }
+}
+
 /* Pause on hover — applied via the parent .group hovering */
 .group:hover .marquee-track {
   animation-play-state: paused;
