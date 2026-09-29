@@ -592,6 +592,24 @@
           "icon": "trending"
         }
       ],
+      "strategicApproach": {
+        "title": "Strateji Yanaşma",
+        "description": "Hər platformanın öz alqoritmi, öz auditoriyası və öz uğur formulası var. Yalnız bir kanala etibar etmək bu gün kifayət deyil — büdcənizin hara, necə və kimə yönəldiləcəyi strateji şəkildə planlaşdırılmalıdır. Biz reklamı xərc kimi yox, ölçülə bilən nəticəyə aparan investisiya kimi idarə edirik.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Hər platformanın öz alqoritmi, auditoriyası və uğur formulası var — biz bunları analiz edib sizin üçün ən effektiv strategiyanı qururuq."
+          },
+          {
+            "icon": "chart",
+            "text": "Büdcənizin hara, necə və kimə yönəldiləcəyi strateji şəkildə planlaşdırılır və davamlı optimallaşdırılır."
+          },
+          {
+            "icon": "trending",
+            "text": "Reklamı xərc kimi yox, ölçülə bilən nəticəyə aparan investisiya kimi idarə edir və hər kampaniyanın ROAS-ını maksimuma çatdırırıq."
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "Nə daxildir",
         "tabRoadmap": "Aylıq yol xəritəsi",

@@ -9,6 +9,7 @@ import { ServiceHero } from '@/components/sections/ServiceHero'
 import { DigitalMarketingHero } from '@/components/sections/DigitalMarketingHero'
 import { PlatformsSection } from '@/components/sections/PlatformsSection'
 import { AuditStrategySection } from '@/components/sections/AuditStrategySection'
+import { StrategicApproach } from '@/components/sections/StrategicApproach'
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -89,6 +90,11 @@ function ServicePageContent({
           <AuditStrategySection
             title={t(`${key}.auditTitle` as any)}
             items={t.raw(`${key}.auditItems` as any)}
+          />
+          <StrategicApproach
+            title={t(`${key}.strategicApproach.title` as any)}
+            description={t(`${key}.strategicApproach.description` as any)}
+            highlights={t.raw(`${key}.strategicApproach.highlights` as any)}
           />
         </>
       ) : (

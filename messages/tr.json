@@ -319,6 +319,24 @@
           "icon": "trending"
         }
       ],
+      "strategicApproach": {
+        "title": "Stratejik Yaklaşım",
+        "description": "Her platformun kendi algoritması, kendi kitlesi ve kendi başarı formülü var. Sadece bir kanala güvenmek artık yeterli değil — bütçenizin nereye, nasıl ve kime yönlendirileceği stratejik olarak planlanmalıdır. Reklamı bir gider olarak değil, ölçülebilir sonuçlara yol açan bir yatırım olarak yönetiyoruz.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Her platformun kendi algoritması, kitlesi ve başarı formülü var — bunları analiz ediyor ve sizin için en etkili stratejiyi kuruyoruz."
+          },
+          {
+            "icon": "chart",
+            "text": "Bütçenizin nereye, nasıl ve kime yönlendirileceği stratejik olarak planlanır ve sürekli optimize edilir."
+          },
+          {
+            "icon": "trending",
+            "text": "Reklamı bir gider olarak değil, ölçülebilir sonuçlara yol açan bir yatırım olarak yönetiyor ve her kampanyanın ROAS'ını maksimuma çıkarıyoruz."
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "Neler Dahil",
         "tabRoadmap": "Aylık Yol Haritası",
