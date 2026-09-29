@@ -301,6 +301,24 @@
           "description": "Yandex Ads hizmeti kapsamında Yandex Direct üzerinden arama ve Display reklamları kuruyoruz. Rusça konuşan kitleyi hedefleyen markalar için Yandex Metrica ile performans izliyoruz."
         }
       ],
+      "auditTitle": "Derinlemesine Denetim ve Strateji",
+      "auditItems": [
+        {
+          "title": "Hesap Denetimi",
+          "description": "Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads ve Yandex Ads hesaplarınızın 50+ göstergesini kontrol ediyor, bütçenin nereye harcandığını analiz ediyoruz.",
+          "icon": "chart"
+        },
+        {
+          "title": "Kitle Analizi",
+          "description": "Sadece demografiye değil, davranış ve niyete (intent) odaklanan kitle segmentasyonu yapıyor, her platform için hedefleme stratejileri hazırlıyoruz.",
+          "icon": "search"
+        },
+        {
+          "title": "Stratejik Yol Haritası",
+          "description": "Önümüzdeki 3–6 ay için platformları, bütçe dağılımını ve KPI'ları (ROAS, CPL, CTR) belirleyen stratejik yol haritası sunuyoruz.",
+          "icon": "trending"
+        }
+      ],
       "metaTitle": "Dijital Pazarlama Hizmetleri | Cradex Agency",
       "metaDescription": "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
     },
