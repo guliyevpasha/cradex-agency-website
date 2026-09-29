@@ -37,14 +37,14 @@ export function PlatformsSection({ title, subtitle, platforms }: PlatformsSectio
     <section
       id="platforms-section"
       ref={ref}
-      className="py-20 lg:py-32 bg-bg-secondary relative overflow-hidden scroll-mt-20"
+      className="py-20 lg:py-32 bg-bg-primary relative overflow-hidden scroll-mt-20"
     >
       {/* Background */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-10"
+        className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           background: `
-            radial-gradient(ellipse 60% 40% at 50% 50%, rgba(108,99,255,0.15) 0%, transparent 50%)
+            radial-gradient(ellipse 60% 40% at 50% 50%, rgba(108,99,255,0.2) 0%, transparent 60%)
           `,
         }}
         aria-hidden="true"
@@ -79,19 +79,19 @@ export function PlatformsSection({ title, subtitle, platforms }: PlatformsSectio
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-bg-tertiary/30 border border-border/20 hover:border-accent-primary/30 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-bg-tertiary/50 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300">
                   {/* Number and Icon - Horizontal on mobile */}
                   <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-0">
                     {/* Number */}
                     <div className="flex-shrink-0">
-                      <span className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent-primary/40 to-accent-secondary/40 select-none">
+                      <span className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 select-none">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
 
                     {/* Icon */}
                     <div className="flex-shrink-0 sm:mt-2">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-bg-secondary/80 border border-accent-primary/20 flex items-center justify-center group-hover:border-accent-primary/40 group-hover:bg-accent-primary/10 transition-all duration-300">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center group-hover:border-accent-primary/50 group-hover:bg-accent-primary/20 transition-all duration-300">
                         <Icon size={20} className="sm:w-6 sm:h-6 text-accent-primary" />
                       </div>
                     </div>
