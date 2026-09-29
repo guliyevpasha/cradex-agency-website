@@ -154,7 +154,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
         >
           <Link
             href={`/${locale}/journal`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold hover:shadow-[0_0_30px_rgba(108,99,255,0.4)] transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#06B6D4] text-white font-semibold shadow-lg hover:shadow-[0_0_40px_rgba(79,70,229,0.5)] transition-all duration-300 hover:scale-105"
           >
             {t('viewAll')}
             <ArrowRight size={18} />
