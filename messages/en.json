@@ -274,6 +274,33 @@
       "name": "Digital Marketing",
       "shortDesc": "SEO, PPC, email marketing",
       "description": "We boost your online visibility through search engine rankings, paid advertising, and email campaigns.",
+      "heroDescription": "We manage your advertising campaigns across Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and other channels.",
+      "ctaStart": "Get Started",
+      "ctaProcess": "View Process",
+      "platformsTitle": "Which platforms do we work on?",
+      "platformsSubtitle": "OUR SERVICES",
+      "platforms": [
+        {
+          "name": "Google Ads",
+          "description": "Through Google Ads service, we attract your target audience with search ads, Display and YouTube ads, and measure results with comprehensive keyword strategy and conversion tracking."
+        },
+        {
+          "name": "Meta Ads (Facebook & Instagram)",
+          "description": "With Meta Ads service, we create ad campaigns reaching target audiences on Facebook and Instagram — using Pixel and Conversion API integration, retargeting and localized audience strategy."
+        },
+        {
+          "name": "TikTok Ads",
+          "description": "Through TikTok Ads service, we prepare video ad campaigns in In-Feed and Spark Ads formats, applying TikTok-appropriate creative strategy to reach young audiences."
+        },
+        {
+          "name": "LinkedIn Ads",
+          "description": "With LinkedIn Ads service, we build B2B advertising strategy. We manage campaigns reaching corporate clients through Sponsored Content and Lead Gen Forms."
+        },
+        {
+          "name": "Yandex Ads",
+          "description": "Within Yandex Ads service, we create search and Display ads via Yandex Direct. We track performance with Yandex Metrica for brands targeting Russian-speaking audiences."
+        }
+      ],
       "metaTitle": "Digital Marketing Services | Cradex Agency",
       "metaDescription": "Increase your online visibility with SEO, PPC and email marketing. Achieve digital success with Cradex Agency."
     },

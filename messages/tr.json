@@ -274,6 +274,33 @@
       "name": "Dijital Pazarlama",
       "shortDesc": "SEO, PPC, e-posta pazarlaması",
       "description": "Arama motoru sıralamaları, ücretli reklamlar ve e-posta kampanyaları aracılığıyla çevrimiçi görünürlüğünüzü artırıyoruz.",
+      "heroDescription": "Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads ve diğer kanallar üzerinden reklam kampanyalarınızı yönetiyoruz.",
+      "ctaStart": "Başlayalım",
+      "ctaProcess": "Süreci Gör",
+      "platformsTitle": "Hangi platformlarda çalışıyoruz?",
+      "platformsSubtitle": "HİZMETLERİMİZ",
+      "platforms": [
+        {
+          "name": "Google Ads",
+          "description": "Google Ads hizmeti kapsamında arama reklamları, Display ve YouTube reklamları ile hedef kitlenizi çekiyor, kapsamlı anahtar kelime stratejisi ve dönüşüm takibi ile sonuçları ölçüyoruz."
+        },
+        {
+          "name": "Meta Ads (Facebook & Instagram)",
+          "description": "Meta Ads hizmeti ile Facebook ve Instagram'da hedef kitleye ulaşan reklam kampanyaları oluşturuyoruz — Pixel ve Conversion API entegrasyonu, yeniden hedefleme ve yerelleştirilmiş kitle stratejisi ile."
+        },
+        {
+          "name": "TikTok Ads",
+          "description": "TikTok Ads hizmeti aracılığıyla In-Feed ve Spark Ads formatlarında video reklam kampanyaları hazırlıyor, genç kitleye ulaşmak için TikTok'a uygun yaratıcı strateji uyguluyoruz."
+        },
+        {
+          "name": "LinkedIn Ads",
+          "description": "LinkedIn Ads hizmeti ile B2B reklam stratejisi kuruyoruz. Sponsored Content ve Lead Gen Form aracılığıyla kurumsal müşterilere ulaşan kampanyalar yönetiyoruz."
+        },
+        {
+          "name": "Yandex Ads",
+          "description": "Yandex Ads hizmeti kapsamında Yandex Direct üzerinden arama ve Display reklamları kuruyoruz. Rusça konuşan kitleyi hedefleyen markalar için Yandex Metrica ile performans izliyoruz."
+        }
+      ],
       "metaTitle": "Dijital Pazarlama Hizmetleri | Cradex Agency",
       "metaDescription": "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
     },
