@@ -274,6 +274,33 @@
       "name": "Цифровой маркетинг",
       "shortDesc": "SEO, PPC, email-маркетинг",
       "description": "Повышаем вашу онлайн-видимость через позиции в поисковых системах, платную рекламу и email-кампании.",
+      "heroDescription": "Управляем вашими рекламными кампаниями в Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads и других каналах.",
+      "ctaStart": "Начать",
+      "ctaProcess": "Посмотреть процесс",
+      "platformsTitle": "На каких платформах мы работаем?",
+      "platformsSubtitle": "НАШИ УСЛУГИ",
+      "platforms": [
+        {
+          "name": "Google Ads",
+          "description": "В рамках сервиса Google Ads привлекаем вашу целевую аудиторию с помощью поисковой рекламы, Display и YouTube-рекламы, измеряя результаты с помощью комплексной стратегии ключевых слов и отслеживания конверсий."
+        },
+        {
+          "name": "Meta Ads (Facebook & Instagram)",
+          "description": "С помощью сервиса Meta Ads создаем рекламные кампании, достигающие целевой аудитории в Facebook и Instagram — используя интеграцию Pixel и Conversion API, ретаргетинг и локализованную стратегию аудитории."
+        },
+        {
+          "name": "TikTok Ads",
+          "description": "Через сервис TikTok Ads готовим видеорекламные кампании в форматах In-Feed и Spark Ads, применяя подходящую для TikTok креативную стратегию для охвата молодой аудитории."
+        },
+        {
+          "name": "LinkedIn Ads",
+          "description": "С помощью сервиса LinkedIn Ads строим B2B-рекламную стратегию. Управляем кампаниями, достигающими корпоративных клиентов через Sponsored Content и Lead Gen Forms."
+        },
+        {
+          "name": "Yandex Ads",
+          "description": "В рамках сервиса Yandex Ads создаем поисковую и Display-рекламу через Yandex Direct. Отслеживаем производительность с помощью Yandex Metrica для брендов, ориентированных на русскоязычную аудиторию."
+        }
+      ],
       "metaTitle": "Услуги цифрового маркетинга | Cradex Agency",
       "metaDescription": "Повысьте онлайн-видимость с помощью SEO, PPC и email-маркетинга. Достигните цифрового успеха с Cradex Agency."
     },
