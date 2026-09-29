@@ -34,8 +34,19 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
   return (
     <section
       ref={ref}
-      className="relative py-20 lg:py-28 bg-[#E8F5E9] overflow-hidden"
+      className="relative py-20 lg:py-28 bg-bg-secondary overflow-hidden"
     >
+      {/* Background gradient */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          background: `
+            radial-gradient(ellipse 60% 40% at 50% 50%, rgba(108,99,255,0.15) 0%, transparent 60%)
+          `,
+        }}
+        aria-hidden="true"
+      />
+
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section title */}
         <motion.div
@@ -44,10 +55,10 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-2">
             {title}
           </h2>
-          <div className="w-24 h-1 bg-[#8BC34A] rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full" />
         </motion.div>
 
         {/* Cards grid */}
@@ -62,24 +73,24 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border-2 border-transparent hover:border-[#8BC34A]/30">
+                <div className="relative bg-bg-tertiary/50 rounded-3xl p-8 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300 h-full group">
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-[#E8F5E9] flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-[#8BC34A]" />
+                  <div className="w-16 h-16 rounded-2xl bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
+                    <Icon className="w-8 h-8 text-accent-primary" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-200">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-text-secondary leading-relaxed">
                     {item.description}
                   </p>
 
                   {/* Card number (decorative) */}
-                  <div className="absolute top-6 right-6 text-6xl font-bold text-gray-100 select-none">
+                  <div className="absolute top-6 right-6 text-6xl font-bold text-text-primary/5 select-none">
                     0{index + 1}
                   </div>
                 </div>
