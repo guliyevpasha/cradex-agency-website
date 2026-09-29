@@ -1,153 +1,137 @@
 'use client'
+
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useTranslations } from 'next-intl'
-import { ChevronDown, MessageCircle } from 'lucide-react'
-import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { cn } from '@/lib/utils/cn'
+import { useInView } from 'react-intersection-observer'
+import { Plus, X, MessageCircle } from 'lucide-react'
 
-export function FAQ() {
-  const t = useTranslations('home.faq')
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+interface FAQItem {
+  question: string
+  answer: string
+}
 
-  const items = t.raw('items') as Array<{ q: string; a: string }>
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'
+interface FAQProps {
+  title: string
+  subtitle: string
+  items: FAQItem[]
+  ctaText: string
+  ctaButton: string
+}
 
-  function toggle(index: number) {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+export function FAQ({ title, subtitle, items, ctaText, ctaButton }: FAQProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+    <section ref={ref} className="py-16 lg:py-24 bg-bg-primary">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Left side - Title and CTA */}
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 0, x: -30 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2"
+          >
+            <div className="lg:sticky lg:top-24">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 mb-4">
+                <span className="text-xs font-semibold text-green-400 uppercase tracking-wide">FAQ</span>
+              </div>
+              
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-4">
+                {title}
+              </h2>
+              
+              <p className="text-sm lg:text-base text-text-secondary mb-8">
+                {subtitle}
+              </p>
 
-          {/* ── Left: text block ── */}
-          <ScrollReveal animation="fadeInLeft" className="lg:col-span-2 lg:sticky lg:top-28">
-            {/* Section label */}
-            <p className="text-accent-primary text-xs font-semibold tracking-[0.18em] mb-4">
-              {t('sectionLabel')}
-            </p>
+              <a
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold transition-all duration-300 hover:scale-105"
+              >
+                <MessageCircle size={18} />
+                {ctaButton}
+              </a>
+            </div>
+          </motion.div>
 
-            {/* Heading */}
-            <h2 className="text-display-md font-display font-bold text-text-primary leading-tight mb-4">
-              {t('title')}{' '}
-              <span className="relative inline-block">
-                <em className="not-italic gradient-text">{t('titleAccent')}</em>
-                {/* Wavy underline */}
-                <svg
-                  className="absolute -bottom-1 left-0 w-full"
-                  viewBox="0 0 160 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  preserveAspectRatio="none"
+          {/* Right side - FAQ Items */}
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-3 space-y-3"
+          >
+            {items.map((item, index) => {
+              const isOpen = openIndex === index
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 >
-                  <path
-                    d="M2 5 C30 2, 60 7, 90 4 C120 1, 140 6, 158 4"
-                    stroke="url(#faq-underline)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <defs>
-                    <linearGradient id="faq-underline" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#6C63FF" />
-                      <stop offset="100%" stopColor="#00D4FF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </span>
-            </h2>
-
-            {/* Description */}
-            <p className="text-text-secondary text-sm leading-relaxed mb-6">
-              {t('description')}
-            </p>
-
-            {/* WhatsApp CTA */}
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] text-white text-sm font-medium hover:bg-[#20bd5a] transition-all duration-300 shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)]"
-            >
-              <MessageCircle size={16} />
-              {t('ctaButton')}
-            </a>
-          </ScrollReveal>
-
-          {/* ── Right: accordion ── */}
-          <ScrollReveal animation="fadeInRight" className="lg:col-span-3">
-            <div className="space-y-3" role="list">
-              {items.map((item, index) => {
-                const isOpen = openIndex === index
-
-                return (
-                  <div
-                    key={index}
-                    role="listitem"
-                    className={cn(
-                      'rounded-2xl border overflow-hidden transition-all duration-300',
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    className={`w-full text-left transition-all duration-300 rounded-2xl ${
                       isOpen
-                        ? 'border-accent-primary/60 shadow-[0_0_24px_rgba(108,99,255,0.2)]'
-                        : 'border-white/10 hover:border-accent-primary/30 hover:shadow-[0_0_16px_rgba(108,99,255,0.1)]'
-                    )}
+                        ? 'bg-bg-tertiary border-accent-primary/30'
+                        : 'bg-bg-secondary/50 border-bg-tertiary/50 hover:border-accent-primary/20'
+                    } border p-5 sm:p-6`}
                   >
-                    {/* Question button */}
-                    <button
-                      onClick={() => toggle(index)}
-                      aria-expanded={isOpen}
-                      aria-controls={`faq-answer-${index}`}
-                      id={`faq-question-${index}`}
-                      className={cn(
-                        'w-full flex items-center justify-between gap-4 px-5 py-4 text-left transition-all duration-300',
-                        isOpen
-                          ? 'bg-accent-primary text-white'
-                          : 'bg-white/[0.04] backdrop-blur-sm text-text-primary hover:bg-white/[0.07]'
-                      )}
-                    >
-                      <span className="font-medium text-sm leading-snug pr-2">
-                        {item.q}
-                      </span>
-                      <motion.span
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.25, ease: 'easeInOut' }}
-                        className="shrink-0"
-                        aria-hidden="true"
+                    <div className="flex items-start justify-between gap-4">
+                      <h3
+                        className={`text-base sm:text-lg font-bold pr-4 transition-colors ${
+                          isOpen ? 'text-text-primary' : 'text-text-secondary'
+                        }`}
                       >
-                        <ChevronDown
-                          size={18}
-                          className={isOpen ? 'text-white' : 'text-accent-primary'}
-                        />
-                      </motion.span>
-                    </button>
+                        {item.question}
+                      </h3>
+                      
+                      <motion.div
+                        animate={{ rotate: isOpen ? 45 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={`flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center ${
+                          isOpen
+                            ? 'bg-green-500/20 text-green-500'
+                            : 'bg-accent-primary/10 text-accent-primary'
+                        }`}
+                      >
+                        {isOpen ? <X size={16} /> : <Plus size={16} />}
+                      </motion.div>
+                    </div>
 
-                    {/* Answer — animated height */}
-                    <AnimatePresence initial={false}>
+                    <AnimatePresence>
                       {isOpen && (
                         <motion.div
-                          id={`faq-answer-${index}`}
-                          role="region"
-                          aria-labelledby={`faq-question-${index}`}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                          transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <div className="px-5 py-4 bg-white/[0.02] backdrop-blur-sm border-t border-white/10">
-                            <p className="text-text-secondary text-sm leading-relaxed">
-                              {item.a}
-                            </p>
-                          </div>
+                          <p className="text-sm sm:text-base text-text-secondary leading-relaxed mt-4 pt-4 border-t border-accent-primary/10">
+                            {item.answer}
+                          </p>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
-                )
-              })}
-            </div>
-          </ScrollReveal>
+                  </button>
+                </motion.div>
+              )
+            })}
+          </motion.div>
         </div>
       </div>
     </section>
