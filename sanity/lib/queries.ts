@@ -97,6 +97,22 @@ export async function getPaginatedBlogPosts(
   }
 }
 
+export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az'): Promise<Article[]> {
+  const query = `*[_type == "blog"] | order(publishedAt desc) [0...${limit}] {
+    "id": _id,
+    "slug": slug.current,
+    "title": title.${locale},
+    "excerpt": excerpt.${locale},
+    "category": category,
+    "author": author,
+    "publishedAt": publishedAt,
+    "readingTime": readingTime,
+    "image": mainImage.asset->url
+  }`
+  
+  return toArticles(await client.fetch(query))
+}
+
 // ─── Portfolio Queries ───────────────────────────────────────────────────────
 
 export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioItem[]> {

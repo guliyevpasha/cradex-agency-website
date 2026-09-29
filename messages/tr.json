@@ -157,6 +157,15 @@
       "subtitle": "Markanızın dijital dönüşümü için bizimle iletişime geçin ve ücretsiz danışmanlık alın.",
       "button": "İletişime Geçin"
     },
+    "blog": {
+      "sectionLabel": "Makalelerimiz",
+      "title": "En Son",
+      "titleAccent": "Yazılarımız",
+      "subtitle": "Dijital pazarlama dünyasından en son bilgiler ve ipuçları",
+      "viewAll": "Tüm Makaleleri Gör",
+      "readMore": "Devamını Oku",
+      "readingTime": "{minutes} dk okuma"
+    },
     "process": {
       "sectionLabel": "Sürecimiz",
       "title": "Nasıl çalışıyoruz?",

@@ -10,8 +10,10 @@ import { FAQ } from '@/components/sections/FAQ'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { LeadSection } from '@/components/sections/LeadSection'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
+import { BlogPreview } from '@/components/sections/BlogPreview'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
+import { getRecentBlogPosts } from '@/sanity/lib/queries'
 
 // Enable ISR with 60 second revalidation
 export const revalidate = 60
@@ -37,6 +39,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   // (Swiper, marquee hover state) and cannot query Sanity themselves.
   const testimonials = await getAllTestimonials()
   const partners = await getPartners()
+  const recentArticles = await getRecentBlogPosts(3, locale)
 
   return (
     <>
@@ -49,6 +52,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <TestimonialsCarousel testimonials={testimonials} />
       <FAQ />
       <ProcessSection />
+      <BlogPreview articles={recentArticles} />
       <LeadSection />
     </>
   )
