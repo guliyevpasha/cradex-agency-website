@@ -12,6 +12,7 @@ interface DigitalMarketingHeroProps {
   ctaStart: string
   ctaProcess: string
   locale: string
+  imagePath?: string
 }
 
 export function DigitalMarketingHero({
@@ -20,6 +21,7 @@ export function DigitalMarketingHero({
   ctaStart,
   ctaProcess,
   locale,
+  imagePath = '/images/digital-marketing-hero.webp',
 }: DigitalMarketingHeroProps) {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -132,7 +134,7 @@ export function DigitalMarketingHero({
                 }}
               >
                 <Image
-                  src="/images/digital-marketing-hero.webp"
+                  src={imagePath}
                   alt="Digital Marketing Platforms - Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads"
                   width={1024}
                   height={768}

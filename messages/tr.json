@@ -526,6 +526,244 @@
       "name": "Sosyal Medya Pazarlaması",
       "shortDesc": "Instagram, Facebook, TikTok yönetimi",
       "description": "Sosyal medya platformlarında ilgi çekici içerikler oluşturuyor, topluluklar kuruyor ve markanızın çevrimiçi itibarını artırıyoruz.",
+      "heroDescription": "Instagram, Facebook, TikTok, LinkedIn ve diğer sosyal medya platformlarında markanızı yönetiyor, içerik stratejisi kurarak ilgi çekici paylaşımlarla kitle etkileşimini sağlıyoruz.",
+      "ctaStart": "Başlayalım",
+      "ctaProcess": "Süreci Görün",
+      "platformsTitle": "Hangi platformlarda çalışıyoruz?",
+      "platformsSubtitle": "HİZMETLERİMİZ",
+      "platforms": [
+        {
+          "name": "Instagram",
+          "description": "Instagram hizmeti kapsamında feed paylaşımları, story, reels ve IGTV içerik stratejisi hazırlıyor, görsel kimlik ve estetiğe uygun içerik üretimi ile markanızı farklılaştırıyoruz."
+        },
+        {
+          "name": "Facebook",
+          "description": "Facebook hizmeti ile feed paylaşımları, video içerik ve Facebook Grupları aracılığıyla topluluk oluşturuyor, içerik planı ve interaktif kampanyalarla markanızın görünürlüğünü artırıyoruz."
+        },
+        {
+          "name": "TikTok",
+          "description": "TikTok hizmeti aracılığıyla trend videolar, challenge kampanyaları ve viral içerik stratejisi hazırlıyor, genç kitleye ulaşmak için TikTok dilinde içerik üretimi yapıyoruz."
+        },
+        {
+          "name": "LinkedIn",
+          "description": "LinkedIn hizmeti ile B2B içerik stratejisi kuruyor, şirket yenilikleri, sektör araştırmaları ve liderlik içeriği ile kurumsal markanızı güçlendiriyoruz."
+        },
+        {
+          "name": "YouTube",
+          "description": "YouTube hizmeti kapsamında video içerik stratejisi, kanal optimizasyonu ve uzun vadeli içerik planlaması ile markanızı video formatında tanıtıyoruz."
+        }
+      ],
+      "auditTitle": "Derinlemesine Audit ve Strateji",
+      "auditItems": [
+        {
+          "title": "Hesap Auditi",
+          "description": "Instagram, Facebook, TikTok, LinkedIn ve YouTube hesaplarınızın içerik performansını, kitle davranışını ve rekabet konumunu analiz ediyoruz.",
+          "icon": "chart"
+        },
+        {
+          "title": "Kitle Analizi",
+          "description": "Hedef kitlenizin hangi platformlarda daha aktif olduğunu, hangi içerik formatlarına tepki verdiğini ve davranış örüntülerini belirliyoruz.",
+          "icon": "search"
+        },
+        {
+          "title": "İçerik Stratejisi",
+          "description": "Önümüzdeki 3–6 ay için platformlar, içerik formatları (post, story, reels, video) ve KPI'ları (etkileşim, erişim, takipçi artışı) içeren içerik yol haritası hazırlıyoruz.",
+          "icon": "trending"
+        }
+      ],
+      "strategicApproach": {
+        "title": "Stratejik Yaklaşım",
+        "description": "Her sosyal medya platformunun kendi dili, kendi kitlesi ve kendi başarı formülü var. Sadece paylaşım yapmak yeterli değil — içeriğinizin ne zaman, nasıl ve kime ulaştırılacağı stratejik olarak planlanmalıdır. Biz sosyal medyayı sadece bir paylaşım kanalı olarak değil, marka inşa eden ve müşteri ilişkisi kuran platform olarak yönetiyoruz.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Her platformun kendi algoritması, kitlesi ve içerik gereksinimleri var — bunları analiz edip sizin için en etkili stratejiyi kuruyoruz."
+          },
+          {
+            "icon": "chart",
+            "text": "İçerik takvimi stratejik olarak planlanıyor, kitle ile ilişki geliştiriliyor ve sürekli optimizasyon yapılıyor."
+          },
+          {
+            "icon": "trending",
+            "text": "Sosyal medyayı bir maliyet olarak değil, marka değeri yaratabilen ve müşteri sadakati oluşturan yatırım olarak yönetiyor ve her kampanyanın ROI'sini maksimize ediyoruz."
+          }
+        ]
+      },
+      "whoIsThisFor": {
+        "title": "Bu hizmet kime uygun?",
+        "subtitle": "Etkili sonuç için doğru hazırlık önemlidir. Bu hizmetin size uygun olup olmadığını aşağıdaki kriterlere göre değerlendirin.",
+        "suitable": [
+          {
+            "title": "Sosyal medyada aktif olmak isteyen markalar",
+            "description": "Instagram, Facebook, TikTok, LinkedIn veya YouTube'da sistematik ve profesyonel bir varlık kurmak isteyen işletmeler."
+          },
+          {
+            "title": "İçerik üretimine zaman ayıramayanlar",
+            "description": "İç ekibi olmayan veya içerik üretimi için yeterli kaynak ayıramayan işletmeler."
+          },
+          {
+            "title": "Kitleyle ilişki kurmak isteyenler",
+            "description": "Sosyal medya aracılığıyla müşterilerle doğrudan iletişim kurmak, yorumlara cevap vermek ve topluluk oluşturmak isteyenler."
+          },
+          {
+            "title": "Marka bilinirliğini artırmak isteyenler",
+            "description": "Reklam kampanyalarından önce veya paralel olarak sosyal medya aracılığıyla marka değeri oluşturmak isteyenler."
+          },
+          {
+            "title": "Sürekli, uzun vadeli büyüme isteyenler",
+            "description": "3–6 aylık perspektifte sosyal medya metriklerine dayalı kitle artışı ve etkileşim için stratejik yatırım yapmaya hazır olanlar."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Anında, tek seferlik sonuç bekleyenler",
+            "description": "Sosyal medya büyümesi zaman gerektirir — ilk 1–2 ay içerik ve kitle oluşturma aşamasıdır."
+          },
+          {
+            "title": "Sadece satış odaklı içerik isteyenler",
+            "description": "Sosyal medya marka inşa etme ve ilişki kurma kanalıdır; sadece satış mesajları kitle kaybına neden olabilir."
+          },
+          {
+            "title": "Görsel materyal sağlayamayanlar",
+            "description": "İçerik için fotoğraf, video veya grafik materyal hazırlamak mümkün değilse, önce Fotoğraf/Video veya Grafik Tasarım hizmetimiz gerekebilir."
+          },
+          {
+            "title": "Yorumlara ve mesajlara cevap vermeye hazır olmayanlar",
+            "description": "Sosyal medya yönetimi yorumları ve mesajları izlemeyi kapsar, ancak nihai kararlar ve cevaplar için marka ile iletişim gereklidir."
+          },
+          {
+            "title": "İçerik onayı için zaman ayıramayanlar",
+            "description": "Aylık içerik planının onayı ve yorum cevapları için minimum işbirliği olmadan kampanya etkinliği azalır."
+          }
+        ],
+        "ctaText": "Emin değil misiniz? Ücretsiz danışmanlık alın — birlikte değerlendirelim."
+      },
+      "glossary": {
+        "title": "Sözlük",
+        "subtitle": "Bu hizmetle ilgili sık karşılaşılan terimlerin kısa açıklaması.",
+        "terms": [
+          {
+            "term": "Engagement (Etkileşim)",
+            "definition": "Paylaşımlarınıza yapılan beğeni, yorum, paylaşım ve kaydetme gibi kullanıcı tepkilerinin toplamı.",
+            "icon": "💬"
+          },
+          {
+            "term": "Reach (Erişim)",
+            "definition": "Paylaşımınızı gören benzersiz kullanıcı sayısı — içeriğinizin ne kadar geniş yayıldığını gösterir.",
+            "icon": "📊"
+          },
+          {
+            "term": "Impressions (Gösterim)",
+            "definition": "Paylaşımınızın toplamda kaç kez gösterildiğini belirtir (bir kullanıcı birden fazla kez görebilir).",
+            "icon": "👁️"
+          },
+          {
+            "term": "Story (Hikaye)",
+            "definition": "Instagram ve Facebook'ta 24 saat görünür kalan kısa video veya fotoğraf formatı — zamanında içerik için ideal.",
+            "icon": "📸"
+          },
+          {
+            "term": "Reels",
+            "definition": "Instagram ve Facebook'ta kısa, dikey video formatı — algoritma tarafından daha geniş kitleye ulaştırılır.",
+            "icon": "🎬"
+          },
+          {
+            "term": "Hashtag",
+            "definition": "Paylaşımları kategorize eden ve keşfedilebilir hale getiren # işaretiyle başlayan anahtar kelimeler.",
+            "icon": "#️⃣"
+          },
+          {
+            "term": "UGC (Kullanıcı Tarafından Oluşturulan İçerik)",
+            "definition": "Kullanıcılar tarafından oluşturulan içerik — müşteri incelemeleri, fotoğraflar ve videolar markanın güvenilirliğini artırır.",
+            "icon": "👥"
+          },
+          {
+            "term": "Community Management (Topluluk Yönetimi)",
+            "definition": "Yorumlara cevap verme, mesajları yönetme ve kitle ile aktif ilişkiler kurma süreci.",
+            "icon": "🤝"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "subtitle": "Bu hizmetle ilgili en sık sorulan soruların cevaplarını burada bulabilirsiniz.",
+        "ctaButton": "Sorunuz mu var?",
+        "items": [
+          {
+            "question": "Aylık kaç paylaşım yapıyorsunuz?",
+            "answer": "Platforma ve pakete göre değişir. Genellikle Instagram için 12–20 feed paylaşımı + story, Facebook için 8–12 paylaşım, TikTok için 8–12 video, LinkedIn için 4–8 paylaşım sağlıyoruz."
+          },
+          {
+            "question": "İçeriği kim hazırlıyor?",
+            "answer": "Biz içerik stratejisi, metin yazarlığı (copywriting), grafik tasarım ve montaj işlerini yapıyoruz. Fotoğraf ve video materyal sağlayamıyorsanız, Fotoğraf/Video hizmetimizi ekleyebilirsiniz."
+          },
+          {
+            "question": "Yorumlara ve mesajlara kim cevap veriyor?",
+            "answer": "Biz yorumları ve mesajları izliyor, genel cevaplar hazırlıyoruz. Markaya özel kararlar ve ürün soruları için sizinle iletişime geçiyoruz."
+          },
+          {
+            "question": "Ne kadar sürede sonuç göreceğim?",
+            "answer": "Sosyal medya büyümesi 2–3 ayda görünmeye başlar. İlk ay içerik ve kitle oluşturma, 2-3. aydan itibaren etkileşim ve takipçi artışı beklenir."
+          },
+          {
+            "question": "Hangi raporları alacağım?",
+            "answer": "Her ay platformlara göre (Instagram, Facebook, TikTok, LinkedIn) erişim, etkileşim, takipçi artışı ve en iyi performans gösteren içerikleri içeren detaylı rapor sunuyoruz."
+          }
+        ]
+      },
+      "process": {
+        "tabIncluded": "Neler dahil",
+        "tabRoadmap": "Aylık yol haritası",
+        "progressLabel": "Tamamlanma oranı",
+        "included": [
+          {
+            "title": "Audit",
+            "description": "Mevcut Instagram, Facebook, TikTok, LinkedIn ve YouTube hesaplarınızı araştırıyor, içerik geçmişini ve rakiplerin sosyal medya faaliyetlerini analiz ediyoruz."
+          },
+          {
+            "title": "Strateji ve Platform Seçimi",
+            "description": "Hedef kitle ve markaya göre Instagram, Facebook, TikTok, LinkedIn ve YouTube platformlarından hangisinin daha etkili olacağını belirliyor, içerik stratejisi hazırlıyoruz."
+          },
+          {
+            "title": "İçerik Takvimi",
+            "description": "Aylık içerik planı hazırlıyor, paylaşım türlerini (feed, story, reels, video) ve konuları belirliyoruz."
+          },
+          {
+            "title": "İçerik Üretimi",
+            "description": "Grafik tasarım, copywriting ve video montajı ile platforma uygun içerik hazırlıyor, markanızın görsel kimliği ile uyumlu hale getiriyoruz."
+          },
+          {
+            "title": "Paylaşım ve Yönetim",
+            "description": "İçeriği optimal zamanlarda paylaşıyor, yorumları izliyor ve kitle ile ilişki kuruyor, community management gerçekleştiriyoruz."
+          },
+          {
+            "title": "Ölçme ve Raporlama",
+            "description": "Aylık KPI raporu ile sosyal medya performansını şeffaf şekilde sunuyor, stratejiyi sürekli ayarlıyoruz."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "1-2. Hafta — Audit ve Keşif",
+            "description": "Mevcut Instagram, Facebook, TikTok, LinkedIn ve YouTube hesaplarının auditi, rakip analizi ve içerik analizi yapılır."
+          },
+          {
+            "title": "3-4. Hafta — Strateji",
+            "description": "Kitle segmentasyonu, platform seçimi ve içerik stratejisi ile aylık içerik takvimi hazırlanır."
+          },
+          {
+            "title": "2-3. Ay — İcra",
+            "description": "İlk içerik serisi hazırlanır, paylaşımlar başlar, yorumlar ve mesajlar yönetilir, ilk performans verileri toplanır."
+          },
+          {
+            "title": "4-5. Ay — Güçlendirme",
+            "description": "Etkileşim ve erişim metriklerine göre içerik formatları optimize edilir, başarılı içerik türleri genişletilir."
+          },
+          {
+            "title": "6. Ay — Ölçme ve Ölçeklendirme",
+            "description": "KPI'lar (etkileşim, erişim, takipçi artışı) değerlendirilir, en iyi performans gösteren platform ve içerik türleri ölçeklenir, bir sonraki dönem için strateji yenilenir."
+          }
+        ]
+      },
       "metaTitle": "SMM Hizmetleri | Cradex Agency",
       "metaDescription": "Instagram, Facebook, TikTok ve diğer platformlarda profesyonel sosyal medya yönetimi."
     },

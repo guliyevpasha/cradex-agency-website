@@ -71,12 +71,14 @@ function ServicePageContent({
   const locale = useLocale()
   const key = service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())
   
-  // Special layout for digital-marketing
+  // Special layout for digital-marketing and smm
   const isDigitalMarketing = service.slug === 'digital-marketing'
+  const isSMM = service.slug === 'smm'
+  const hasCustomLayout = isDigitalMarketing || isSMM
 
   return (
     <>
-      {isDigitalMarketing ? (
+      {hasCustomLayout ? (
         <>
           <DigitalMarketingHero
             title={t(`${key}.name` as any)}
@@ -84,6 +86,7 @@ function ServicePageContent({
             ctaStart={t(`${key}.ctaStart` as any)}
             ctaProcess={t(`${key}.ctaProcess` as any)}
             locale={locale}
+            imagePath={isSMM ? '/images/smm-hero.webp' : '/images/digital-marketing-hero.webp'}
           />
           <PlatformsSection
             title={t(`${key}.platformsTitle` as any)}
@@ -117,8 +120,8 @@ function ServicePageContent({
       {/* Process timeline */}
       <ProcessTimeline steps={service.processSteps} />
 
-      {/* Glossary - only for digital marketing */}
-      {isDigitalMarketing && (
+      {/* Glossary and FAQ - only for services with custom layout */}
+      {hasCustomLayout && (
         <>
           <Glossary
             title={t(`${key}.glossary.title` as any)}
@@ -160,8 +163,8 @@ function ServicePageContent({
         </section>
       )}
 
-      {/* CTA - only for non-digital marketing services */}
-      {!isDigitalMarketing && (
+      {/* CTA - only for services without custom layout */}
+      {!hasCustomLayout && (
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <ScrollReveal animation="scaleIn">
