@@ -10,7 +10,9 @@ import { DigitalMarketingHero } from '@/components/sections/DigitalMarketingHero
 import { PlatformsSection } from '@/components/sections/PlatformsSection'
 import { AuditStrategySection } from '@/components/sections/AuditStrategySection'
 import { StrategicApproach } from '@/components/sections/StrategicApproach'
+import { WhoIsThisFor } from '@/components/sections/WhoIsThisFor'
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
+import { Glossary } from '@/components/sections/Glossary'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
@@ -96,6 +98,13 @@ function ServicePageContent({
             description={t(`${key}.strategicApproach.description` as any)}
             highlights={t.raw(`${key}.strategicApproach.highlights` as any)}
           />
+          <WhoIsThisFor
+            title={t(`${key}.whoIsThisFor.title` as any)}
+            subtitle={t(`${key}.whoIsThisFor.subtitle` as any)}
+            suitable={t.raw(`${key}.whoIsThisFor.suitable` as any)}
+            notSuitable={t.raw(`${key}.whoIsThisFor.notSuitable` as any)}
+            ctaText={t(`${key}.whoIsThisFor.ctaText` as any)}
+          />
         </>
       ) : (
         <ServiceHero
@@ -106,6 +115,15 @@ function ServicePageContent({
 
       {/* Process timeline */}
       <ProcessTimeline steps={service.processSteps} />
+
+      {/* Glossary - only for digital marketing */}
+      {isDigitalMarketing && (
+        <Glossary
+          title={t(`${key}.glossary.title` as any)}
+          subtitle={t(`${key}.glossary.subtitle` as any)}
+          terms={t.raw(`${key}.glossary.terms` as any)}
+        />
+      )}
 
       {/* Related portfolio */}
       {relatedPortfolio.length > 0 && (

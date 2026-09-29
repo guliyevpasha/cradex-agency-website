@@ -610,6 +610,101 @@
           }
         ]
       },
+      "whoIsThisFor": {
+        "title": "Bu xidmət kimə uyğundur?",
+        "subtitle": "Effektiv nəticə üçün düzgün hazırlıq vacibdir. Bu xidmətin sizə uyğun olub-olmadığını aşağıdaki meyarlara əsasən qiymətləndirin.",
+        "suitable": [
+          {
+            "title": "Reklam büdcəsini effektiv idarə etmək istəyənlər",
+            "description": "Mövcud reklam xərclərinin hara getdiyini bilmək və nəticələri artırmaq istəyən bizneslər."
+          },
+          {
+            "title": "Bir neçə platformada reklam vermək istəyənlər",
+            "description": "Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads və ya Yandex Ads-də bir neçəsini eyni vaxtda idarə etmək istəyənlər."
+          },
+          {
+            "title": "Yeni məhsul və ya xidməti lansaman edən bizneslər",
+            "description": "Bazara yeni çıxan brendlər üçün sürətli görünürlük və ilk müştəri axını yaratmaq."
+          },
+          {
+            "title": "Davamlı, ölçülə bilən artım istəyənlər",
+            "description": "3–6 aylıq perspektivdə performans göstəricilərinə əsasən inkişaf üçün strateji investisiya etməyə hazır olanlar."
+          },
+          {
+            "title": "Müştəri əldəetmə xərcini (CPL/CPA) azaltmaq istəyənlər",
+            "description": "Mövcud kampaniyalarının dəyərli qapı əşağı salaraq daha çox lead və satış əldə etmək istəyən bizneslər."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Ani, bir dəfəlik nəticə gözləyənlər",
+            "description": "Reklam kampaniyalarının qurulma mərhələsi vaxt və optimal 1–2 həftə test dövründür."
+          },
+          {
+            "title": "Yalnız üzvi (organic) böyümə istəyənlər",
+            "description": "Reklam büdcəsi ayırmaq istəmirsinizsə, SEO və ya Kontent Marketinq xidmətimiz daha uyğun ola bilər."
+          },
+          {
+            "title": "Minimum reklam büdcəsi ayıra bilməyənlər",
+            "description": "Platformların öyrənmə alqoritmlərinin düzgün işləməsi üçün müəyyən minimum büdcə tələb olunur."
+          },
+          {
+            "title": "Reklam üçün hazır veb sayt və ya sosial media hesabı olmayanlar",
+            "description": "Trafikli yönləndirmək üçün ən azı funksional bir landing page və ya aktiv hesab təlab olunur."
+          },
+          {
+            "title": "Proses dəyarlandırmə üçün vaxt ayırmağayanlar",
+            "description": "Kreativ təsdiq və hesabat görüşləri üçün minimal əməkdaşlıq olmadan kampaniyaların effektivliyi azalır."
+          }
+        ],
+        "ctaText": "Əmin deyilsiniz? Pulsuz məsləhət alın — vasiyəçilərə birlikdə qiymətləndirək."
+      },
+      "glossary": {
+        "title": "Lüğət",
+        "subtitle": "Bu xidmətlə bağlı tez-tez rast gəlinən terminlərin qısa izahı.",
+        "terms": [
+          {
+            "term": "CPC (Cost Per Click)",
+            "definition": "Google Ads, Meta Ads, TikTok Ads kimi platformalarda reklamınıza ediləcək hər bir klik üçün ödədiyiniz orta məbləğ.",
+            "icon": "💰"
+          },
+          {
+            "term": "CPM (Cost Per Mille)",
+            "definition": "Reklamınızın 1000 dəfə göstərilməsi üçün ödənilən məbləğ — brend tanınma kampaniyalarında əsas göstəricidir.",
+            "icon": "📊"
+          },
+          {
+            "term": "CTR (Click-Through Rate)",
+            "definition": "Reklamı görən istifadəçilərin neçə faizinin onu kliklədiyi göstərir; kreativ effektivliyin ölçüsü.",
+            "icon": "🎯"
+          },
+          {
+            "term": "ROAS (Return on Ad Spend)",
+            "definition": "Reklam xərcindən hər manat üçün geri qazanılan gəlir — kampaniya performansının əsas göstəricisi.",
+            "icon": "📈"
+          },
+          {
+            "term": "Konversiya",
+            "definition": "İstifadəçinin reklam vasitəsilə hədəflənən hərəkəti (əliş, sorğu, qeydiyyat və s.) tamamlaması.",
+            "icon": "✅"
+          },
+          {
+            "term": "Pixel / Conversion API",
+            "definition": "Səytinizdə quraşdırılan və istifadəçi davranışını izləyərək Meta Ads, TikTok Ads, Yandex Metrika kimi alətlərə məlumat göndərən kod.",
+            "icon": "🔍"
+          },
+          {
+            "term": "Lookalike Auditoriya",
+            "definition": "Mövcud müştərilərinizin xüsusiyyətlərinə əsaslanan, Meta Ads və TikTok Ads-də yaradılan, onlara bənzər yeni potensial müştəri qrupu.",
+            "icon": "👥"
+          },
+          {
+            "term": "Retargeting (Yenidən Hədəfləmə)",
+            "definition": "Səytinizi ziyarət etmiş, lakin hərəkət etməmiş istifadəçilərə Meta Ads, Google Ads kimi platformalarda yenidən reklam göstərmək.",
+            "icon": "🔄"
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "Nə daxildir",
         "tabRoadmap": "Aylıq yol xəritəsi",
