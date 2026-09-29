@@ -129,7 +129,6 @@ function ServicePageContent({
             title={t(`${key}.faq.title` as any)}
             subtitle={t(`${key}.faq.subtitle` as any)}
             items={t.raw(`${key}.faq.items` as any)}
-            ctaText={t(`${key}.faq.ctaText` as any)}
             ctaButton={t(`${key}.faq.ctaButton` as any)}
           />
         </>
