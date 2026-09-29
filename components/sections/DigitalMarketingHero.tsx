@@ -65,7 +65,7 @@ export function DigitalMarketingHero({
             </span>
 
             {/* Description */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-primary mb-6 leading-tight">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-text-primary mb-6 leading-tight">
               {description}
             </h1>
 
@@ -89,23 +89,61 @@ export function DigitalMarketingHero({
             </div>
           </motion.div>
 
-          {/* Right: Illustration */}
+          {/* Right: Illustration with 3D animation */}
           <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.9, rotateY: -15 }}
+            animate={inView ? { opacity: 1, scale: 1, rotateY: 0 } : { opacity: 0, scale: 0.9, rotateY: -15 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            style={{ perspective: '1000px' }}
             className="relative"
           >
-            <div className="relative w-full max-w-2xl mx-auto">
-              <Image
-                src="/images/digital-marketing-hero.webp"
-                alt="Digital Marketing Platforms - Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads"
-                width={1024}
-                height={768}
-                className="w-full h-auto rounded-2xl"
-                priority
+            <motion.div
+              animate={
+                prefersReducedMotion
+                  ? {}
+                  : {
+                      rotateY: [0, -5, 5, 0],
+                      rotateX: [0, 2, -2, 0],
+                    }
+              }
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              style={{
+                transformStyle: 'preserve-3d',
+              }}
+              className="relative w-full max-w-2xl mx-auto"
+            >
+              {/* 3D Shadow layer */}
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 blur-2xl rounded-2xl"
+                style={{
+                  transform: 'translateZ(-50px)',
+                }}
               />
-            </div>
+              
+              {/* Image with 3D effect */}
+              <div
+                className="relative"
+                style={{
+                  transform: 'translateZ(30px)',
+                }}
+              >
+                <Image
+                  src="/images/digital-marketing-hero.webp"
+                  alt="Digital Marketing Platforms - Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads"
+                  width={1024}
+                  height={768}
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  priority
+                />
+                
+                {/* Floating glow effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-accent-primary/30 to-accent-secondary/30 blur-3xl -z-10 rounded-3xl opacity-50" />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
