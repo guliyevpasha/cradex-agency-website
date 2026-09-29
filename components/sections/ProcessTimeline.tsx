@@ -4,15 +4,15 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ChevronDown, CheckCircle2, Calendar } from 'lucide-react'
-import type { ProcessStep } from '@/types'
 import { useTranslations } from 'next-intl'
 
 interface ProcessTimelineProps {
-  steps: ProcessStep[]
+  steps?: any[] // Optional, not used for Digital Marketing
 }
 
 export function ProcessTimeline({ steps }: ProcessTimelineProps) {
   const t = useTranslations('services')
+  const tDM = useTranslations('services.digitalMarketing')
   const [activeTab, setActiveTab] = useState<'included' | 'roadmap'>('included')
   const [openIndex, setOpenIndex] = useState<number>(0)
   const { ref, inView } = useInView({
@@ -24,10 +24,75 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  // Split steps: first 3 for "included", rest for "roadmap"
-  const includedSteps = steps.slice(0, 3)
-  const roadmapSteps = steps.slice(3)
-  const displaySteps = activeTab === 'included' ? includedSteps : roadmapSteps
+  // Get process data from translations
+  const processData = {
+    included: [
+      {
+        step: 1,
+        title: tDM('process.included.0.title'),
+        description: tDM('process.included.0.description'),
+      },
+      {
+        step: 2,
+        title: tDM('process.included.1.title'),
+        description: tDM('process.included.1.description'),
+      },
+      {
+        step: 3,
+        title: tDM('process.included.2.title'),
+        description: tDM('process.included.2.description'),
+      },
+      {
+        step: 4,
+        title: tDM('process.included.3.title'),
+        description: tDM('process.included.3.description'),
+      },
+      {
+        step: 5,
+        title: tDM('process.included.4.title'),
+        description: tDM('process.included.4.description'),
+      },
+      {
+        step: 6,
+        title: tDM('process.included.5.title'),
+        description: tDM('process.included.5.description'),
+      },
+    ],
+    roadmap: [
+      {
+        step: 1,
+        title: tDM('process.roadmap.0.title'),
+        description: tDM('process.roadmap.0.description'),
+        progress: 15,
+      },
+      {
+        step: 2,
+        title: tDM('process.roadmap.1.title'),
+        description: tDM('process.roadmap.1.description'),
+        progress: 30,
+      },
+      {
+        step: 3,
+        title: tDM('process.roadmap.2.title'),
+        description: tDM('process.roadmap.2.description'),
+        progress: 55,
+      },
+      {
+        step: 4,
+        title: tDM('process.roadmap.3.title'),
+        description: tDM('process.roadmap.3.description'),
+        progress: 75,
+      },
+      {
+        step: 5,
+        title: tDM('process.roadmap.4.title'),
+        description: tDM('process.roadmap.4.description'),
+        progress: 100,
+      },
+    ],
+  }
+
+  const displaySteps = activeTab === 'included' ? processData.included : processData.roadmap
 
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-bg-primary">
@@ -57,7 +122,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
               }`}
             >
               <CheckCircle2 size={18} />
-              <span className="text-sm sm:text-base">Nə daxildir</span>
+              <span className="text-sm sm:text-base">{tDM('process.tabIncluded')}</span>
             </button>
 
             <button
@@ -72,7 +137,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
               }`}
             >
               <Calendar size={18} />
-              <span className="text-sm sm:text-base">Aylıq yol xəritəsi</span>
+              <span className="text-sm sm:text-base">{tDM('process.tabRoadmap')}</span>
             </button>
           </div>
         </motion.div>
@@ -89,7 +154,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
           >
             {displaySteps.map((step, index) => {
               const isOpen = openIndex === index
-              const progress = ((index + 1) / displaySteps.length) * 100
+              const progress = 'progress' in step ? step.progress : undefined
               
               return (
                 <motion.div
@@ -119,7 +184,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                           {String(step.step).padStart(2, '0')}
                         </div>
                         <h3
-                          className={`font-bold text-base sm:text-lg transition-colors truncate ${
+                          className={`font-bold text-base sm:text-lg transition-colors ${
                             isOpen ? 'text-text-primary' : 'text-text-secondary'
                           }`}
                         >
@@ -156,11 +221,11 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                               </p>
 
                               {/* Progress Bar - only for roadmap */}
-                              {activeTab === 'roadmap' && (
+                              {activeTab === 'roadmap' && progress !== undefined && (
                                 <div className="mt-4">
                                   <div className="flex justify-between items-center mb-2">
-                                    <span className="text-xs text-text-muted">Tamamlanma həddi</span>
-                                    <span className="text-sm font-bold text-text-primary">{Math.round(progress)}%</span>
+                                    <span className="text-xs text-text-muted">{tDM('process.progressLabel')}</span>
+                                    <span className="text-sm font-bold text-text-primary">{progress}%</span>
                                   </div>
                                   <div className="h-2 bg-bg-tertiary rounded-full overflow-hidden">
                                     <motion.div
@@ -187,5 +252,6 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
     </section>
   )
 }
+
 
 

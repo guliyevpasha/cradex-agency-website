@@ -319,6 +319,59 @@
           "icon": "trending"
         }
       ],
+      "process": {
+        "tabIncluded": "What's Included",
+        "tabRoadmap": "Monthly Roadmap",
+        "progressLabel": "Completion Target",
+        "included": [
+          {
+            "title": "Audit",
+            "description": "We investigate your existing Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and Yandex Ads accounts, analyzing campaign history and competitors' advertising activities."
+          },
+          {
+            "title": "Strategy & Platform Selection",
+            "description": "Based on target audience and budget, we determine which of Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and Yandex Ads platforms will be most effective, and prepare the media plan."
+          },
+          {
+            "title": "Technical Setup",
+            "description": "We set up account structure and integrate tracking tools (Meta Pixel, Conversion API, Yandex Metrica, conversion tracking) to accurately measure each campaign's results."
+          },
+          {
+            "title": "Campaign Setup",
+            "description": "We set up audience targeting, budget allocation and campaign structure (Google Ads Search/Display, Meta Ads, TikTok Ads, LinkedIn Ads, Yandex Ads) on selected platforms."
+          },
+          {
+            "title": "Optimization",
+            "description": "We launch campaigns, conduct A/B tests, and continuously optimize based on CTR, CPC and ROAS indicators."
+          },
+          {
+            "title": "Measurement & Reporting",
+            "description": "We transparently present campaign results with monthly KPI reports, continuously adjusting budget and strategy."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "Week 1-2 — Audit & Discovery",
+            "description": "Audit of existing Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and Yandex Ads accounts, competitor analysis and platform capability assessment is conducted."
+          },
+          {
+            "title": "Week 3-4 — Strategy",
+            "description": "Media plan is prepared with audience segmentation, platform selection and budget allocation."
+          },
+          {
+            "title": "Month 2-3 — Execution",
+            "description": "Campaigns are launched on selected platforms, tracking systems (Pixel, Conversion API, Yandex Metrica) are integrated, and initial creative tests are conducted."
+          },
+          {
+            "title": "Month 4-5 — Amplification",
+            "description": "Budget is redistributed based on ROAS, CPC and CTR indicators, successful campaigns are scaled, new creative tests are implemented."
+          },
+          {
+            "title": "Month 6 — Measurement & Scaling",
+            "description": "KPIs (ROAS, CPL, conversion) are evaluated, best performing platforms and campaigns are scaled, strategy is renewed for the next period."
+          }
+        ]
+      },
       "metaTitle": "Digital Marketing Services | Cradex Agency",
       "metaDescription": "Increase your online visibility with SEO, PPC and email marketing. Achieve digital success with Cradex Agency."
     },
