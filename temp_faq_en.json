@@ -1,0 +1,14 @@
+﻿{
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about this service here.",
+    "ctaButton": "Have a question?",
+    "items": [
+      {"question": "How long until I see results?", "answer": "Ad campaigns typically provide initial data in the first 1–2 weeks, with Google Ads, Meta Ads, and TikTok Ads campaigns reaching optimal performance (CTR, ROAS) in 4–6 weeks."},
+      {"question": "What does the monthly fee cover?", "answer": "Monthly management fee covers strategy, campaign setup, tracking tools setup (Pixel, Conversion API, Yandex Metrica), optimization, and reporting. Ad budget (amount paid to platforms) is separate."},
+      {"question": "What reporting mechanism do you use?", "answer": "We provide detailed monthly reports including performance indicators by platform (Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, Yandex Ads) — spend, CTR, CPC, conversion, ROAS."},
+      {"question": "Which platforms do you advertise on?", "answer": "We set up and manage campaigns on Google Ads, Meta Ads (Facebook and Instagram), TikTok Ads, LinkedIn Ads, Yandex Ads, and other platforms."},
+      {"question": "What if I have an existing ad account?", "answer": "Nothing needed. We audit your existing Google Ads, Meta Ads, or other accounts to assess their condition, then prepare an optimization plan. Creating a new account is not required."}
+    ]
+  }
+}

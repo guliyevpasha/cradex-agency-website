@@ -432,6 +432,33 @@
           }
         ]
       },
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "subtitle": "Bu hizmetle ilgili en sık sorulan soruların cevaplarını burada bulabilirsiniz.",
+        "ctaButton": "Sorunuz mu var?",
+        "items": [
+          {
+            "question": "Ne kadar sürede sonuç görürüm?",
+            "answer": "Reklam kampanyaları genellikle ilk 1–2 haftada başlangıç verileri sağlar ve Google Ads, Meta Ads ve TikTok Ads kampanyaları 4–6 haftada optimal performansa (CTR, ROAS) ulaşır."
+          },
+          {
+            "question": "Aylık ücret neyi kapsar?",
+            "answer": "Aylık yönetim ücreti strateji, kampanya kurulumu, izleme araçları kurulumu (Pixel, Conversion API, Yandex Metrica), optimizasyon ve raporlamayı kapsar. Reklam bütçesi (platformlara ödenen tutar) ayrıdır."
+          },
+          {
+            "question": "Hangi raporlama mekanizmasını kullanıyorsunuz?",
+            "answer": "Platformlara göre (Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, Yandex Ads) performans göstergeleri — harcama, CTR, CPC, dönüşüm, ROAS — dahil olmak üzere aylık detaylı raporlar sunuyoruz."
+          },
+          {
+            "question": "Hangi platformlarda reklam veriyorsunuz?",
+            "answer": "Google Ads, Meta Ads (Facebook ve Instagram), TikTok Ads, LinkedIn Ads, Yandex Ads ve diğer platformlarda kampanyalar kuruyoruz ve yönetiyoruz."
+          },
+          {
+            "question": "Mevcut reklam hesabım varsa ne yapmalıyım?",
+            "answer": "Hiçbir şey. Mevcut Google Ads, Meta Ads veya diğer hesaplarınızı denetleyerek durumlarını değerlendiriyor, ardından optimizasyon planı hazırlıyoruz. Yeni hesap oluşturma gerekli değildir."
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "Neler Dahil",
         "tabRoadmap": "Aylık Yol Haritası",
