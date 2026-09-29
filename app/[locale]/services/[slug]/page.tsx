@@ -98,30 +98,6 @@ function ServicePageContent({
         />
       )}
 
-      {/* Benefits */}
-      <section className="py-16 bg-bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal animation="fadeInUp" className="text-center mb-12">
-            <h2 className="text-display-md font-display font-bold text-text-primary">
-              {t('benefits')}
-            </h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {service.benefits.map((benefit, index) => (
-              <ScrollReveal key={index} animation="scaleIn" delay={index * 100}>
-                <GlassCard className="p-6 text-center">
-                  <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center mx-auto mb-4 text-2xl">
-                    ✨
-                  </div>
-                  <h3 className="text-text-primary font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-text-muted text-sm">{benefit.description}</p>
-                </GlassCard>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Process timeline */}
       <ProcessTimeline steps={service.processSteps} />
 
