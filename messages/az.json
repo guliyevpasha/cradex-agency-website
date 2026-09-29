@@ -157,6 +157,15 @@
       "subtitle": "Brendinizin rəqəmsal transformasiyası üçün bizimlə əlaqə saxlayın və pulsuz konsultasiya alın.",
       "button": "Əlaqə Saxlayın"
     },
+    "blog": {
+      "sectionLabel": "Məqalələrimiz",
+      "title": "Ən Son",
+      "titleAccent": "Yazılarımız",
+      "subtitle": "Rəqəmsal marketinq dünyasından ən son məlumatlar və məsləhətlər",
+      "viewAll": "Bütün Məqalələrə Bax",
+      "readMore": "Davam et",
+      "readingTime": "{minutes} dəq oxuma"
+    },
     "process": {
       "sectionLabel": "İş prosesi",
       "title": "Necə işləyirik?",

@@ -157,6 +157,15 @@
       "subtitle": "Contact us for your brand's digital transformation and get a free consultation.",
       "button": "Get In Touch"
     },
+    "blog": {
+      "sectionLabel": "Our Articles",
+      "title": "Latest",
+      "titleAccent": "Articles",
+      "subtitle": "Latest insights and tips from the world of digital marketing",
+      "viewAll": "View All Articles",
+      "readMore": "Read More",
+      "readingTime": "{minutes} min read"
+    },
     "process": {
       "sectionLabel": "Our process",
       "title": "How do we work?",
