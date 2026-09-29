@@ -802,45 +802,45 @@
       "heroDescription": "Instagram, Facebook, TikTok, LinkedIn və digər sosial media platformalarında brendinizi idarə edir, məzmun strategiyası qurur və cəlbedici paylaşımlarla auditoriya quruluşunu təmin edirik.",
       "ctaStart": "Başlayaq",
       "ctaProcess": "Prosesi Gör",
-      "platformsTitle": "Hansı platformalarda işləyirik?",
-      "platformsSubtitle": "XİDMƏTLƏRİMİZ",
+      "platformsTitle": "İş prosesinə nələr daxildir?",
+      "platformsSubtitle": "İŞ PROSESIMIZ",
       "platforms": [
         {
-          "name": "Instagram",
-          "description": "Instagram xidməti çərçivəsində feed paylaşımları, story, reels və IGTV məzmun strategiyası hazırlayır, vizual identitet və estetikaya uyğun məzmun istehsalı ilə markanızı fərqləndiririk."
+          "name": "01 - Kəşfiyyat və Audit",
+          "description": "Hesablarınızın mövcud vəziyyətini 100+ meyar üzrə yoxlayır, boşluqları müəyyən edirik."
         },
         {
-          "name": "Facebook",
-          "description": "Facebook xidməti ilə feed paylaşımları, video məzmun və Facebook Qrupları vasitəsilə cəmiyyət yaradır, məzmun planı və interaktiv kampaniyalarla markanızın görünürlüyünü artırırıq."
+          "name": "02 - Strategiya və Planlaşdırma",
+          "description": "Rəqib analizi, hədəf auditoriya xəritəsi və 6 aylıq böyümə yol xəritəsi hazırlayırıq."
         },
         {
-          "name": "TikTok",
-          "description": "TikTok xidməti vasitəsilə trend videolar, challenge kampaniyaları və viral məzmun strategiyası hazırlayır, gənc auditoriyaya çatmaq üçün TikTok dilində məzmun istehsalı aparırıq."
+          "name": "03 - İcra və Optimallaşdırma",
+          "description": "Kontent istehsalı, reklam kampaniyaları, icma idarəetməsi - hamısı paralel həyata keçirilir."
         },
         {
-          "name": "LinkedIn",
-          "description": "LinkedIn xidməti ilə B2B məzmun strategiyası qurur, şirkət yenilikləri, sənaye araşdırmaları və liderlik məzmunu ilə korporativ brendinizi möhkəmləndiririk."
+          "name": "04 - Davamlı İnkişaf",
+          "description": "Performans metriklərinə əsasən strategiyanı davamlı şəkildə təkmilləşdirir və optimallaşdırırıq."
         },
         {
-          "name": "YouTube",
-          "description": "YouTube xidməti çərçivəsində video məzmun strategiyası, kanal optimallaşdırması və uzunmüddətli məzmun planlaması ilə brendinizi video formatında tanıdırıq."
+          "name": "05 - Ölçmə və Hesabat",
+          "description": "Aylıq performans hesabatı, hər paylaşımın təsirini real zamanda izləyir, strategiyanı tənzimləyirik."
         }
       ],
       "auditTitle": "Dərin Audit və Strategiya",
       "auditItems": [
         {
-          "title": "Hesab Auditi",
-          "description": "Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarınızın məzmun performansını, auditoriya davranışını və rəqabət mövqeyini analiz edirik.",
+          "title": "Hesabat Auditi",
+          "description": "Instagram, Facebook və TikTok hesablarınızın profil strukturundan, məzmun keyfiyyətinə qədər hər bir detalı 100+ meyar üzrə yoxlayırıq.",
           "icon": "chart"
         },
         {
           "title": "Auditoriya Analizi",
-          "description": "Hədəf auditoriyanızın hansı platformalarda daha aktiv olduğunu, hansı məzmun formatlarına reaksiya verdiyini və davranış nümunələrini müəyyən edirik.",
+          "description": "Yalnız izləyici sayına deyil, davranış və maraqlara fokuslanan hədəf auditoriya xəritəsi hazırlayırıq.",
           "icon": "search"
         },
         {
-          "title": "Məzmun Strategiyası",
-          "description": "Növbəti 3–6 ay üçün platformalar, məzmun formatları (post, story, reels, video) və KPI-ları (engagement, reach, follower growth) daxil edən məzmun yol xəritəsi hazırlayırıq.",
+          "title": "Böyümə Xəritəsi",
+          "description": "Növbəti 6–12 ay üçün aylıq hədəfləri və KPI-ları müəyyən edən strateji böyümə yol xəritəsi təqdim edirik.",
           "icon": "trending"
         }
       ],
@@ -867,46 +867,46 @@
         "subtitle": "Effektiv nəticə üçün düzgün hazırlıq vacibdir. Bu xidmətin sizə uyğun olub-olmadığını aşağıdaki meyarlara əsasən qiymətləndirin.",
         "suitable": [
           {
-            "title": "Sosial mediada aktiv olmaq istəyən brendlər",
-            "description": "Instagram, Facebook, TikTok, LinkedIn və ya YouTube-da sistemli və peşəkar şəkildə mövcudluq qurmaq istəyən bizneslər."
+            "title": "Sosial mediada davamlı görünürlük istəyən brendlər",
+            "description": "Təsadüfi paylaşımlar əvəzinə strateji, davamlı və ölçülə bilən böyümə istəyən bizneslər."
           },
           {
-            "title": "Məzmun istehsalı üçün vaxt ayıra bilməyənlər",
-            "description": "Daxili komanda olmadan və ya məzmun istehsalı üçün kifayət qədər resurs ayıra bilməyən bizneslər."
+            "title": "Aktivlik və icma qurmaq istəyən şirkətlər",
+            "description": "İzləyicilərlə real əlaqə yaradaraq sadiq və aktiv icma formalaşdırmaq istəyən brendlər."
           },
           {
-            "title": "Auditoriya ilə əlaqə qurmaq istəyənlər",
-            "description": "Sosial media vasitəsilə müştərilərlə birbaşa ünsiyyət qurmaq, şərhlərə cavab vermək və cəmiyyət yaratmaq istəyənlər."
+            "title": "Yeni hesab açan və ya sıfırdan başlayan brendlər",
+            "description": "Sosial media strategiyasını düzgün təməl üzərində qurmaq istəyən startaplar və bizneslər."
           },
           {
-            "title": "Brend tanınması artırmaq istəyənlər",
-            "description": "Reklam kampaniyalarından əvvəl və ya paralel olaraq sosial media vasitəsilə brend dəyəri qurmaq istəyənlər."
+            "title": "Reklam performansını artırmaq istəyən bizneslər",
+            "description": "Meta Ads, TikTok Ads kampaniyaları üçün strateji idarəetməyə və optimallaşdırmaya ehtiyac duyan bizneslər."
           },
           {
-            "title": "Davamlı, uzunmüddətli artım istəyənlər",
-            "description": "3–6 aylıq perspektivdə sosial media göstəricilərinə əsasən auditoriya artımı və engagement üçün strateji investisiya etməyə hazır olanlar."
+            "title": "Rəqabətli bazarda fərqlənmək istəyənlər",
+            "description": "Güclü rəqibləri olan sektorda auditoriyanın diqqətini çəkmək və brend imicini gücləndirmək istəyənlər."
           }
         ],
         "notSuitable": [
           {
-            "title": "Ani, bir dəfəlik nəticə gözləyənlər",
-            "description": "Sosial media böyüməsi vaxt tələb edir — ilk 1–2 ay məzmun və auditoriya qurma mərhələsidir."
+            "title": "Bir həftədə nəticə gözləyənlər",
+            "description": "SMM davamlı prosesdir, ani viral effekt və ya sürətli nəticə zəmanət edilə bilən xidmət deyil."
           },
           {
-            "title": "Yalnız satış odaqlı məzmun istəyənlər",
-            "description": "Sosial media brend quruculuğu və əlaqə qurma kanalıdır; yalnız satış mesajları auditoriya itkisinə səbəb ola bilər."
+            "title": "Yalnız reklam büdcəsinə investisiya etmək istəyənlər",
+            "description": "Yalnız ödənişli trafik istəyirsinizsə, reklam idarəetməsi xidmətimiz daha uyğun ola bilər."
           },
           {
-            "title": "Vizual material təmin edə bilməyənlər",
-            "description": "Məzmun üçün foto, video və ya qrafik material hazırlamaq mümkün deyilsə, əvvəlcə Foto/Video və ya Qrafik Dizayn xidmətimiz tələb oluna bilər."
+            "title": "Kontent istehsalına vaxt/resurs ayırmaq istəməyənlər",
+            "description": "Davamlı çəkiliş, dizayn və təsdiq prosesinə iştirak etmək istəməyən bizneslər lazımi nəticəni ala bilmir."
           },
           {
-            "title": "Şərh və mesajlara cavab verməyə hazır olmayanlar",
-            "description": "Sosial media idarəetməsi şərhləri və mesajları izləməyi əhatə edir, lakin son qərar və cavablar üçün brendlə əlaqə tələb olunur."
+            "title": "Tam kreativ nəzarəti əldə saxlamaq istəyənlər",
+            "description": "Strategiyanın effektivliyi peşəkar kreativ azadlıqdan asılıdır - həddindən artıq müdaxilə nəticəni zəiflədir."
           },
           {
-            "title": "Məzmun təsdiqi üçün vaxt ayırmağa bilməyənlər",
-            "description": "Aylıq məzmun planının təsdiqi və şərh cavabları üçün minimal əməkdaşlıq olmadan kampaniyaların effektivliyi azalır."
+            "title": "Bir dəfəlik əməkdaşlıq axtaranlar",
+            "description": "SMM uzunmüddətli, davamlı əməkdaşlıqda ən yaxşı nəticəni verir, tək dəfəlik layihə formatı üçün uyğun deyil."
           }
         ],
         "ctaText": "Əmin deyilsiniz? Pulsuz məsləhət alın — vasitəçilərə birlikdə qiymətləndirək."
@@ -915,6 +915,26 @@
         "title": "Lüğət",
         "subtitle": "Bu xidmətlə bağlı tez-tez rast gəlinən terminlərin qısa izahı.",
         "terms": [
+          {
+            "term": "CPM/CPC",
+            "definition": "Reklamda 1000 göstərim (CPM) və ya 1 klik (CPC) üçün ödənilən orta xərc.",
+            "icon": "💰"
+          },
+          {
+            "term": "Kontent Təqvimi",
+            "definition": "Paylaşımların əvvəlcədən planlaşdırıldığı aylıq/həftəlik cədvəl.",
+            "icon": "📅"
+          },
+          {
+            "term": "Alqoritm",
+            "definition": "Platformanın hansı kontenti kimə göstərəcəyini müəyyən edən sistem.",
+            "icon": "⚙️"
+          },
+          {
+            "term": "İzləyici Artımı",
+            "definition": "Müəyyən dövr ərzində qazanılan yeni izləyicilərin sayı.",
+            "icon": "📈"
+          },
           {
             "term": "Engagement (Əlaqə)",
             "definition": "Paylaşımlarınıza edilən bəyənmə, şərh, paylaşma və saxlama kimi istifadəçi reaksiyalarının cəmi.",
@@ -926,11 +946,6 @@
             "icon": "📊"
           },
           {
-            "term": "Impressions (Göstərilmə)",
-            "definition": "Paylaşımınızın cəmi neçə dəfə göstərildiyini bildirir (bir istifadəçi bir neçə dəfə görə bilər).",
-            "icon": "👁️"
-          },
-          {
             "term": "Story",
             "definition": "Instagram və Facebook-da 24 saat görünən qısa video və ya şəkil formatı — operativ məzmun üçün ideal.",
             "icon": "📸"
@@ -939,21 +954,6 @@
             "term": "Reels",
             "definition": "Instagram və Facebook-da qısa, şaquli video formatı — alqoritm tərəfindən daha geniş auditoriyaya çatdırılır.",
             "icon": "🎬"
-          },
-          {
-            "term": "Hashtag",
-            "definition": "Paylaşımları kateqoriyalaşdıran və kəşf edilə bilən edən # işarəsi ilə başlayan açar sözlər.",
-            "icon": "#️⃣"
-          },
-          {
-            "term": "UGC (User-Generated Content)",
-            "definition": "İstifadəçilər tərəfindən yaradılan məzmun — müştəri rəyləri, foto və videolar brendin etibarlılığını artırır.",
-            "icon": "👥"
-          },
-          {
-            "term": "Community Management",
-            "definition": "Şərhlərə cavab vermək, mesajları idarə etmək və auditoriya ilə aktiv əlaqə qurmaq prosesi.",
-            "icon": "🤝"
           }
         ]
       },
@@ -991,49 +991,54 @@
         "included": [
           {
             "title": "Audit",
-            "description": "Mövcud Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarınızı araşdırır, məzmun tarixçəsini və rəqiblərin sosial media fəaliyyətini analiz edirik."
+            "description": "Hesablarınızın bütün aspektlərini - profil optimallaşdırma, məzmun keyfiyyəti, auditoriya davranışı - ətraflı yoxlayır, prioritetli düzəliş planı hazırlayırıq."
           },
           {
-            "title": "Strategiya və Platforma Seçimi",
-            "description": "Hədəf auditoriya və brendə əsasən Instagram, Facebook, TikTok, LinkedIn və YouTube platformalarından hansının daha effektiv olacağını müəyyən edir, məzmun strategiyasını hazırlayırıq."
+            "title": "Auditoriya və rəqib analizi",
+            "description": "Yalnız izləyici sayına deyil, davranış və maraqlara fokuslanan hədəf auditoriya xəritəsi çıxarır, əsas rəqiblərinizin güclü və zəif tərəflərini təhlil edirik."
           },
           {
-            "title": "Məzmun Təqvimi",
-            "description": "Aylıq məzmun planı hazırlayır, paylaşım növləri (feed, story, reels, video) və mövzuları müəyyən edirik."
+            "title": "Kontent strategiyası",
+            "description": "Brendinizin tonuna və hədəf auditoriyanın maraqlarına uyğun format, mövzu və mesaj strukturunu müəyyən edən kontent strategiyası hazırlayırıq."
           },
           {
-            "title": "Məzmun İstehsalı",
-            "description": "Qrafik dizayn, copywriting və video montaj ilə platformaya uyğun məzmun hazırlayır, brendinizin vizual kimliyi ilə uyğunlaşdırırıq."
+            "title": "Paylaşım təqvimi",
+            "description": "Hər platformanın optimal paylaşım vaxtını və tezliyini nəzərə alaraq aylıq kontent təqviminizi əvvəlcədən planlaşdırırıq."
           },
           {
-            "title": "Paylaşım və İdarəetmə",
-            "description": "Məzmunu optimal vaxtlarda paylaşır, şərhləri izləyir və auditoriya ilə əlaqə qurur, community management həyata keçiririk."
+            "title": "Reklam kampaniyaları",
+            "description": "Instagram, Facebook və TikTok-da hədəf auditoriyanıza uyğun reklam kampaniyaları qurur, büdcəni səmərəli şəkildə idarə edirik."
           },
           {
-            "title": "Ölçmə və Hesabat",
-            "description": "Aylıq KPI hesabatı ilə sosyal media performansını şəffaf şəkildə təqdim edir, strategiyanı davamlı tənzimləyirik."
+            "title": "Aylıq performans hesabatı",
+            "description": "İzləyici artımı, aktivlik dərəcəsi (engagement rate) və əhatə (reach) göstəriciləri — hər şey şəffaf şəkildə aylıq hesabat formatında təqdim edilir."
           }
         ],
         "roadmap": [
           {
-            "title": "1-2-ci Həftə — Audit və Kəşfiyyat",
-            "description": "Mövcud Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarının auditi, rəqib analizi və məzmun analizi aparılır."
+            "title": "1-2-ci Həftə — Audit",
+            "description": "Hesab auditi, rəqib analizi və sosial media hesablarınızın mövcud vəziyyətinin qiymətləndirilməsi. Prioritetli düzəlişlərin siyahısı hazırlanır.",
+            "progress": 15
           },
           {
             "title": "3-4-cü Həftə — Strategiya",
-            "description": "Auditoriya seqmentasiyası, platforma seçimi və məzmun strategiyası ilə aylıq məzmun təqvimi hazırlanır."
+            "description": "Auditoriya və rəqib analizinə əsaslanan kontent strategiyası, paylaşım təqvimi və reklam planı hazırlanır. Brendin ton və vizual istiqaməti müəyyənləşdirilir.",
+            "progress": 30
           },
           {
             "title": "2-3-cü Ay — İcra",
-            "description": "İlk məzmun seriyası hazırlanır, paylaşımlar başlayır, şərh və mesajlar idarə edilir, ilk performance məlumatları toplanır."
+            "description": "Kontent istehsalı, planlaşdırılmış paylaşımlar və ilk reklam kampaniyaları başladılır. Nəticələr izlənilir və strategiya lazım gəldikdə tənzimlənir.",
+            "progress": 60
           },
           {
             "title": "4-5-ci Ay — Güclənmə",
-            "description": "Engagement və reach göstəricilərinə əsasən məzmun formatları optimallaşdırılır, uğurlu məzmun növləri genişləndirilir."
+            "description": "İlkin nəticələrə əsasən kontent və reklam performansı optimallaşdırılır, ən yaxşı işləyən formatlara diqqət artırılır, icma ilə əlaqə gücləndirilir.",
+            "progress": 80
           },
           {
-            "title": "6-cı Ay — Ölçmə və Miqyaslandırma",
-            "description": "KPI-lar (engagement, reach, follower growth) qiymətləndirilir, ən yaxşı performans göstərən platforma və məzmun növləri miqyaslandırılır, növbəti dövr üçün strategiya yenilənir."
+            "title": "6-cı Ay — Ölçmə və Hesabat",
+            "description": "Altı aylıq dövrün yekun nəticələri qiymətləndirilir, uğurlu strategiyalar miqyaslandırılır və növbəti dövr üçün yeni hədəflər müəyyən edilir.",
+            "progress": 100
           }
         ]
       },
