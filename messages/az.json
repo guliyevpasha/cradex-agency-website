@@ -547,6 +547,33 @@
       "name": "Rəqəmsal Marketinq",
       "shortDesc": "SEO, PPC, e-poçt marketinqi",
       "description": "Axtarış motorlarında yüksək sıralanma, ödənişli reklamlar və e-poçt kampaniyaları ilə onlayn görünürlüyünüzü artırırıq.",
+      "heroDescription": "Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads və digər kanalları üzrə reklam kampaniyalarınızı idarə edirik.",
+      "ctaStart": "Başlayaq",
+      "ctaProcess": "Prosesi Gör",
+      "platformsTitle": "Hansı platformalarda işləyirik?",
+      "platformsSubtitle": "XİDMƏTLƏRİMİZ",
+      "platforms": [
+        {
+          "name": "Google Ads",
+          "description": "Google Ads xidməti çərçivəsində axtarış reklamları, Display və YouTube reklamları ilə hədəf auditoriyanızı cəlb edir, geniş söz strategiyası və konversiya izləməsi ilə nəticəli ölçü biləm edirik."
+        },
+        {
+          "name": "Meta Ads (Facebook & Instagram)",
+          "description": "Meta Ads xidməti ilə Facebook və Instagram-da hədəf auditoriyaya çatan reklam kampaniyaları quururuq — Pixel və Conversion API inteqrasiyası, retargeting və lokallaşdırma auditoriya strategiyası ilə."
+        },
+        {
+          "name": "TikTok Ads",
+          "description": "TikTok Ads xidməti vasitəsilə In-Feed və Spark Ads formatlarında video reklam kampaniyaları hazırlayır, gənc auditoriyaya çatmaq üçün TikTok-a uyğun kreativ strategiya tətbiq edirik."
+        },
+        {
+          "name": "LinkedIn Ads",
+          "description": "LinkedIn Ads xidməti ilə B2B reklam strategiyası qururuq. Sponsored Content və Lead Gen Form vasitəsilə korporativ müştərilərə çatan kampaniyalar idarə edirik."
+        },
+        {
+          "name": "Yandex Ads",
+          "description": "Yandex Ads xidməti çərçivəsində Yandex Direct üzərindən axtarış və Display reklamları qururuq. Rusiyədilli auditoriyaya çatmaq istəyən brendlər üçün Yandex Metrika ilə performans izləyirik."
+        }
+      ],
       "metaTitle": "Rəqəmsal Marketinq Xidmətləri | Cradex Agency",
       "metaDescription": "SEO, PPC və e-poçt marketinqi ilə onlayn görünürlüyünüzü artırın. Cradex Agency ilə rəqəmsal uğura çatın."
     },

@@ -6,6 +6,8 @@ import { MessageCircle, ArrowRight } from 'lucide-react'
 import { getAllServices, getServiceBySlug } from '@/lib/data/services'
 import { getPortfolioByCategory } from '@/lib/data/portfolio'
 import { ServiceHero } from '@/components/sections/ServiceHero'
+import { DigitalMarketingHero } from '@/components/sections/DigitalMarketingHero'
+import { PlatformsSection } from '@/components/sections/PlatformsSection'
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -63,13 +65,33 @@ function ServicePageContent({
   const t = useTranslations('services')
   const locale = useLocale()
   const key = service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())
+  
+  // Special layout for digital-marketing
+  const isDigitalMarketing = service.slug === 'digital-marketing'
 
   return (
     <>
-      <ServiceHero
-        serviceName={t(`${key}.name` as any)}
-        serviceDescription={t(`${key}.description` as any)}
-      />
+      {isDigitalMarketing ? (
+        <>
+          <DigitalMarketingHero
+            title={t(`${key}.name` as any)}
+            description={t(`${key}.heroDescription` as any)}
+            ctaStart={t(`${key}.ctaStart` as any)}
+            ctaProcess={t(`${key}.ctaProcess` as any)}
+            locale={locale}
+          />
+          <PlatformsSection
+            title={t(`${key}.platformsTitle` as any)}
+            subtitle={t(`${key}.platformsSubtitle` as any)}
+            platforms={t.raw(`${key}.platforms` as any)}
+          />
+        </>
+      ) : (
+        <ServiceHero
+          serviceName={t(`${key}.name` as any)}
+          serviceDescription={t(`${key}.description` as any)}
+        />
+      )}
 
       {/* Benefits */}
       <section className="py-16 bg-bg-secondary/30">
