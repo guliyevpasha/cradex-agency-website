@@ -526,6 +526,244 @@
       "name": "Social Media Marketing",
       "shortDesc": "Instagram, Facebook, TikTok management",
       "description": "We create engaging content on social media platforms, build communities and grow your brand's online reputation.",
+      "heroDescription": "We manage your brand on Instagram, Facebook, TikTok, LinkedIn and other social media platforms, building content strategy and ensuring audience engagement with compelling posts.",
+      "ctaStart": "Get Started",
+      "ctaProcess": "See the Process",
+      "platformsTitle": "Which platforms do we work on?",
+      "platformsSubtitle": "OUR SERVICES",
+      "platforms": [
+        {
+          "name": "Instagram",
+          "description": "Within Instagram service, we prepare feed posts, story, reels and IGTV content strategy, differentiating your brand with content production aligned with visual identity and aesthetics."
+        },
+        {
+          "name": "Facebook",
+          "description": "With Facebook service, we build community through feed posts, video content and Facebook Groups, increasing your brand visibility with content planning and interactive campaigns."
+        },
+        {
+          "name": "TikTok",
+          "description": "Through TikTok service, we prepare trending videos, challenge campaigns and viral content strategy, producing content in TikTok language to reach younger audiences."
+        },
+        {
+          "name": "LinkedIn",
+          "description": "With LinkedIn service, we build B2B content strategy, strengthening your corporate brand with company updates, industry research and leadership content."
+        },
+        {
+          "name": "YouTube",
+          "description": "Within YouTube service, we introduce your brand in video format with video content strategy, channel optimization and long-term content planning."
+        }
+      ],
+      "auditTitle": "Deep Audit & Strategy",
+      "auditItems": [
+        {
+          "title": "Account Audit",
+          "description": "We analyze your Instagram, Facebook, TikTok, LinkedIn and YouTube accounts' content performance, audience behavior and competitive position.",
+          "icon": "chart"
+        },
+        {
+          "title": "Audience Analysis",
+          "description": "We determine which platforms your target audience is more active on, which content formats they respond to and their behavioral patterns.",
+          "icon": "search"
+        },
+        {
+          "title": "Content Strategy",
+          "description": "We prepare a content roadmap for the next 3–6 months including platforms, content formats (post, story, reels, video) and KPIs (engagement, reach, follower growth).",
+          "icon": "trending"
+        }
+      ],
+      "strategicApproach": {
+        "title": "Strategic Approach",
+        "description": "Each social media platform has its own language, its own audience and its own success formula. Just posting is not enough — when, how and to whom your content is delivered must be strategically planned. We manage social media not just as a posting channel, but as a platform that builds brand and establishes customer relationships.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Each platform has its own algorithm, audience and content requirements — we analyze these and build the most effective strategy for you."
+          },
+          {
+            "icon": "chart",
+            "text": "Content calendar is strategically planned, audience relationship is developed and continuous optimization is performed."
+          },
+          {
+            "icon": "trending",
+            "text": "We manage social media not as an expense, but as an investment that can create brand value and build customer loyalty, maximizing ROI of each campaign."
+          }
+        ]
+      },
+      "whoIsThisFor": {
+        "title": "Who is this service suitable for?",
+        "subtitle": "Proper preparation is important for effective results. Evaluate whether this service is suitable for you based on the criteria below.",
+        "suitable": [
+          {
+            "title": "Brands who want to be active on social media",
+            "description": "Businesses that want to establish a systematic and professional presence on Instagram, Facebook, TikTok, LinkedIn or YouTube."
+          },
+          {
+            "title": "Those who cannot spare time for content production",
+            "description": "Businesses without an in-house team or unable to allocate sufficient resources for content production."
+          },
+          {
+            "title": "Those who want to build relationships with their audience",
+            "description": "Those who want to establish direct communication with customers through social media, respond to comments and create community."
+          },
+          {
+            "title": "Those who want to increase brand awareness",
+            "description": "Those who want to build brand value through social media before or parallel to advertising campaigns."
+          },
+          {
+            "title": "Those who want continuous, long-term growth",
+            "description": "Those ready to make strategic investment for audience growth and engagement based on social media metrics in a 3–6 month perspective."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Those expecting instant, one-time results",
+            "description": "Social media growth takes time — the first 1–2 months are the content and audience building phase."
+          },
+          {
+            "title": "Those who want sales-focused content only",
+            "description": "Social media is a channel for brand building and relationship establishment; sales messages alone may cause audience loss."
+          },
+          {
+            "title": "Those who cannot provide visual materials",
+            "description": "If it is not possible to prepare photo, video or graphic materials for content, our Photo/Video or Graphic Design service may be required first."
+          },
+          {
+            "title": "Those not ready to respond to comments and messages",
+            "description": "Social media management includes monitoring comments and messages, but contact with the brand is required for final decisions and responses."
+          },
+          {
+            "title": "Those who cannot spare time for content approval",
+            "description": "Without minimal collaboration for monthly content plan approval and comment responses, campaign effectiveness decreases."
+          }
+        ],
+        "ctaText": "Not sure? Get free consultation — let's evaluate together."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "subtitle": "Brief explanations of frequently encountered terms related to this service.",
+        "terms": [
+          {
+            "term": "Engagement",
+            "definition": "The sum of user reactions to your posts such as likes, comments, shares and saves.",
+            "icon": "💬"
+          },
+          {
+            "term": "Reach",
+            "definition": "The number of unique users who saw your post — shows how widely your content spread.",
+            "icon": "📊"
+          },
+          {
+            "term": "Impressions",
+            "definition": "Indicates how many times your post was shown in total (one user may see it multiple times).",
+            "icon": "👁️"
+          },
+          {
+            "term": "Story",
+            "definition": "Short video or photo format visible for 24 hours on Instagram and Facebook — ideal for timely content.",
+            "icon": "📸"
+          },
+          {
+            "term": "Reels",
+            "definition": "Short, vertical video format on Instagram and Facebook — delivered to wider audience by algorithm.",
+            "icon": "🎬"
+          },
+          {
+            "term": "Hashtag",
+            "definition": "Keywords starting with # sign that categorize posts and make them discoverable.",
+            "icon": "#️⃣"
+          },
+          {
+            "term": "UGC (User-Generated Content)",
+            "definition": "Content created by users — customer reviews, photos and videos increase brand credibility.",
+            "icon": "👥"
+          },
+          {
+            "term": "Community Management",
+            "definition": "The process of responding to comments, managing messages and building active relationships with audience.",
+            "icon": "🤝"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "You can find answers to the most frequently asked questions about this service here.",
+        "ctaButton": "Have a Question?",
+        "items": [
+          {
+            "question": "How many posts do you make monthly?",
+            "answer": "It varies by platform and package. We typically provide 12–20 feed posts + stories for Instagram, 8–12 posts for Facebook, 8–12 videos for TikTok, and 4–8 posts for LinkedIn."
+          },
+          {
+            "question": "Who prepares the content?",
+            "answer": "We handle content strategy, copywriting, graphic design and editing. If you cannot provide photo and video materials, you can add our Photo/Video service."
+          },
+          {
+            "question": "Who responds to comments and messages?",
+            "answer": "We monitor comments and messages and prepare general responses. For brand-specific decisions and product questions, we contact you."
+          },
+          {
+            "question": "How soon will I see results?",
+            "answer": "Social media growth starts to show in 2–3 months. The first month is content and audience building, engagement and follower growth is expected from the 2nd-3rd month."
+          },
+          {
+            "question": "What reports will I receive?",
+            "answer": "We provide detailed monthly reports by platform (Instagram, Facebook, TikTok, LinkedIn) including reach, engagement, follower growth and best performing content."
+          }
+        ]
+      },
+      "process": {
+        "tabIncluded": "What's included",
+        "tabRoadmap": "Monthly roadmap",
+        "progressLabel": "Completion rate",
+        "included": [
+          {
+            "title": "Audit",
+            "description": "We investigate your existing Instagram, Facebook, TikTok, LinkedIn and YouTube accounts, analyze content history and competitors' social media activities."
+          },
+          {
+            "title": "Strategy & Platform Selection",
+            "description": "Based on target audience and brand, we determine which of Instagram, Facebook, TikTok, LinkedIn and YouTube platforms will be more effective, and prepare content strategy."
+          },
+          {
+            "title": "Content Calendar",
+            "description": "We prepare monthly content plan, determine post types (feed, story, reels, video) and topics."
+          },
+          {
+            "title": "Content Production",
+            "description": "With graphic design, copywriting and video editing, we prepare platform-appropriate content, aligning with your brand's visual identity."
+          },
+          {
+            "title": "Posting & Management",
+            "description": "We post content at optimal times, monitor comments and build relationships with audience, conducting community management."
+          },
+          {
+            "title": "Measurement & Reporting",
+            "description": "With monthly KPI reports, we transparently present social media performance and continuously adjust strategy."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "Week 1-2 — Audit & Discovery",
+            "description": "Audit of existing Instagram, Facebook, TikTok, LinkedIn and YouTube accounts, competitor analysis and content analysis are performed."
+          },
+          {
+            "title": "Week 3-4 — Strategy",
+            "description": "Monthly content calendar is prepared with audience segmentation, platform selection and content strategy."
+          },
+          {
+            "title": "Month 2-3 — Execution",
+            "description": "First content series is prepared, posts begin, comments and messages are managed, initial performance data is collected."
+          },
+          {
+            "title": "Month 4-5 — Strengthening",
+            "description": "Content formats are optimized based on engagement and reach metrics, successful content types are expanded."
+          },
+          {
+            "title": "Month 6 — Measurement & Scaling",
+            "description": "KPIs (engagement, reach, follower growth) are evaluated, best performing platform and content types are scaled, strategy is renewed for next period."
+          }
+        ]
+      },
       "metaTitle": "SMM Services | Cradex Agency",
       "metaDescription": "Professional social media management on Instagram, Facebook, TikTok and other platforms."
     },

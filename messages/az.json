@@ -799,6 +799,244 @@
       "name": "Sosial Media Marketinqi",
       "shortDesc": "Instagram, Facebook, TikTok idarəetməsi",
       "description": "Sosial media platformalarında cəlbedici məzmun yaradır, cəmiyyət qururuq və brendinizin onlayn nüfuzunu artırırıq.",
+      "heroDescription": "Instagram, Facebook, TikTok, LinkedIn və digər sosial media platformalarında brendinizi idarə edir, məzmun strategiyası qurur və cəlbedici paylaşımlarla auditoriya quruluşunu təmin edirik.",
+      "ctaStart": "Başlayaq",
+      "ctaProcess": "Prosesi Gör",
+      "platformsTitle": "Hansı platformalarda işləyirik?",
+      "platformsSubtitle": "XİDMƏTLƏRİMİZ",
+      "platforms": [
+        {
+          "name": "Instagram",
+          "description": "Instagram xidməti çərçivəsində feed paylaşımları, story, reels və IGTV məzmun strategiyası hazırlayır, vizual identitet və estetikaya uyğun məzmun istehsalı ilə markanızı fərqləndiririk."
+        },
+        {
+          "name": "Facebook",
+          "description": "Facebook xidməti ilə feed paylaşımları, video məzmun və Facebook Qrupları vasitəsilə cəmiyyət yaradır, məzmun planı və interaktiv kampaniyalarla markanızın görünürlüyünü artırırıq."
+        },
+        {
+          "name": "TikTok",
+          "description": "TikTok xidməti vasitəsilə trend videolar, challenge kampaniyaları və viral məzmun strategiyası hazırlayır, gənc auditoriyaya çatmaq üçün TikTok dilində məzmun istehsalı aparırıq."
+        },
+        {
+          "name": "LinkedIn",
+          "description": "LinkedIn xidməti ilə B2B məzmun strategiyası qurur, şirkət yenilikləri, sənaye araşdırmaları və liderlik məzmunu ilə korporativ brendinizi möhkəmləndiririk."
+        },
+        {
+          "name": "YouTube",
+          "description": "YouTube xidməti çərçivəsində video məzmun strategiyası, kanal optimallaşdırması və uzunmüddətli məzmun planlaması ilə brendinizi video formatında tanıdırıq."
+        }
+      ],
+      "auditTitle": "Dərin Audit və Strategiya",
+      "auditItems": [
+        {
+          "title": "Hesab Auditi",
+          "description": "Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarınızın məzmun performansını, auditoriya davranışını və rəqabət mövqeyini analiz edirik.",
+          "icon": "chart"
+        },
+        {
+          "title": "Auditoriya Analizi",
+          "description": "Hədəf auditoriyanızın hansı platformalarda daha aktiv olduğunu, hansı məzmun formatlarına reaksiya verdiyini və davranış nümunələrini müəyyən edirik.",
+          "icon": "search"
+        },
+        {
+          "title": "Məzmun Strategiyası",
+          "description": "Növbəti 3–6 ay üçün platformalar, məzmun formatları (post, story, reels, video) və KPI-ları (engagement, reach, follower growth) daxil edən məzmun yol xəritəsi hazırlayırıq.",
+          "icon": "trending"
+        }
+      ],
+      "strategicApproach": {
+        "title": "Strateji Yanaşma",
+        "description": "Hər sosial media platformasının öz dili, öz auditoriyası və öz uğur düsturu var. Yalnız paylaşım etmək kifayət deyil — məzmununuzun nə zaman, necə və kimə çatdırılacağı strateji şəkildə planlaşdırılmalıdır. Biz sosial medianı sadəcə paylaşım kanalı deyil, brend quruculuğu və müştəri əlaqəsi quran platforma kimi idarə edirik.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Hər platformanın öz alqoritmi, auditoriyası və məzmun tələbləri var — biz bunları analiz edib sizin üçün ən effektiv strategiyanı qururuq."
+          },
+          {
+            "icon": "chart",
+            "text": "Məzmun təqvimi strateji şəkildə planlaşdırılır, auditoriya ilə əlaqə inkişaf etdirilir və davamlı optimallaşdırma aparılır."
+          },
+          {
+            "icon": "trending",
+            "text": "Sosial medianı xərc kimi yox, brend dəyəri yarada bilən və müştəri loyallığı quran investisiya kimi idarə edir və hər kampaniyanın ROI-sını maksimuma çatdırırıq."
+          }
+        ]
+      },
+      "whoIsThisFor": {
+        "title": "Bu xidmət kimə uyğundur?",
+        "subtitle": "Effektiv nəticə üçün düzgün hazırlıq vacibdir. Bu xidmətin sizə uyğun olub-olmadığını aşağıdaki meyarlara əsasən qiymətləndirin.",
+        "suitable": [
+          {
+            "title": "Sosial mediada aktiv olmaq istəyən brendlər",
+            "description": "Instagram, Facebook, TikTok, LinkedIn və ya YouTube-da sistemli və peşəkar şəkildə mövcudluq qurmaq istəyən bizneslər."
+          },
+          {
+            "title": "Məzmun istehsalı üçün vaxt ayıra bilməyənlər",
+            "description": "Daxili komanda olmadan və ya məzmun istehsalı üçün kifayət qədər resurs ayıra bilməyən bizneslər."
+          },
+          {
+            "title": "Auditoriya ilə əlaqə qurmaq istəyənlər",
+            "description": "Sosial media vasitəsilə müştərilərlə birbaşa ünsiyyət qurmaq, şərhlərə cavab vermək və cəmiyyət yaratmaq istəyənlər."
+          },
+          {
+            "title": "Brend tanınması artırmaq istəyənlər",
+            "description": "Reklam kampaniyalarından əvvəl və ya paralel olaraq sosial media vasitəsilə brend dəyəri qurmaq istəyənlər."
+          },
+          {
+            "title": "Davamlı, uzunmüddətli artım istəyənlər",
+            "description": "3–6 aylıq perspektivdə sosial media göstəricilərinə əsasən auditoriya artımı və engagement üçün strateji investisiya etməyə hazır olanlar."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Ani, bir dəfəlik nəticə gözləyənlər",
+            "description": "Sosial media böyüməsi vaxt tələb edir — ilk 1–2 ay məzmun və auditoriya qurma mərhələsidir."
+          },
+          {
+            "title": "Yalnız satış odaqlı məzmun istəyənlər",
+            "description": "Sosial media brend quruculuğu və əlaqə qurma kanalıdır; yalnız satış mesajları auditoriya itkisinə səbəb ola bilər."
+          },
+          {
+            "title": "Vizual material təmin edə bilməyənlər",
+            "description": "Məzmun üçün foto, video və ya qrafik material hazırlamaq mümkün deyilsə, əvvəlcə Foto/Video və ya Qrafik Dizayn xidmətimiz tələb oluna bilər."
+          },
+          {
+            "title": "Şərh və mesajlara cavab verməyə hazır olmayanlar",
+            "description": "Sosial media idarəetməsi şərhləri və mesajları izləməyi əhatə edir, lakin son qərar və cavablar üçün brendlə əlaqə tələb olunur."
+          },
+          {
+            "title": "Məzmun təsdiqi üçün vaxt ayırmağa bilməyənlər",
+            "description": "Aylıq məzmun planının təsdiqi və şərh cavabları üçün minimal əməkdaşlıq olmadan kampaniyaların effektivliyi azalır."
+          }
+        ],
+        "ctaText": "Əmin deyilsiniz? Pulsuz məsləhət alın — vasitəçilərə birlikdə qiymətləndirək."
+      },
+      "glossary": {
+        "title": "Lüğət",
+        "subtitle": "Bu xidmətlə bağlı tez-tez rast gəlinən terminlərin qısa izahı.",
+        "terms": [
+          {
+            "term": "Engagement (Əlaqə)",
+            "definition": "Paylaşımlarınıza edilən bəyənmə, şərh, paylaşma və saxlama kimi istifadəçi reaksiyalarının cəmi.",
+            "icon": "💬"
+          },
+          {
+            "term": "Reach (Əhatə)",
+            "definition": "Paylaşımınızı görən unikal istifadəçilərin sayı — məzmununuzun nə qədər geniş yayıldığını göstərir.",
+            "icon": "📊"
+          },
+          {
+            "term": "Impressions (Göstərilmə)",
+            "definition": "Paylaşımınızın cəmi neçə dəfə göstərildiyini bildirir (bir istifadəçi bir neçə dəfə görə bilər).",
+            "icon": "👁️"
+          },
+          {
+            "term": "Story",
+            "definition": "Instagram və Facebook-da 24 saat görünən qısa video və ya şəkil formatı — operativ məzmun üçün ideal.",
+            "icon": "📸"
+          },
+          {
+            "term": "Reels",
+            "definition": "Instagram və Facebook-da qısa, şaquli video formatı — alqoritm tərəfindən daha geniş auditoriyaya çatdırılır.",
+            "icon": "🎬"
+          },
+          {
+            "term": "Hashtag",
+            "definition": "Paylaşımları kateqoriyalaşdıran və kəşf edilə bilən edən # işarəsi ilə başlayan açar sözlər.",
+            "icon": "#️⃣"
+          },
+          {
+            "term": "UGC (User-Generated Content)",
+            "definition": "İstifadəçilər tərəfindən yaradılan məzmun — müştəri rəyləri, foto və videolar brendin etibarlılığını artırır.",
+            "icon": "👥"
+          },
+          {
+            "term": "Community Management",
+            "definition": "Şərhlərə cavab vermək, mesajları idarə etmək və auditoriya ilə aktiv əlaqə qurmaq prosesi.",
+            "icon": "🤝"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Tez-tez soruşulan suallar",
+        "subtitle": "Bu xidmətlə bağlı ən çox gəlinən suallara cavabları burada tapa bilərsiniz.",
+        "ctaButton": "Sualınız var?",
+        "items": [
+          {
+            "question": "Aylıq neçə paylaşım edirsiniz?",
+            "answer": "Platforma və paketə görə dəyişir. Adətən Instagram üçün 12–20 feed post + story, Facebook üçün 8–12 post, TikTok üçün 8–12 video, LinkedIn üçün 4–8 post təmin edirik."
+          },
+          {
+            "question": "Məzmunu kim hazırlayır?",
+            "answer": "Biz məzmun strategiyası, mətn (copywriting), qrafik dizayn və montaj işlərini aparırıq. Foto və video material təmin edə bilmirsinizsə, Foto/Video xidmətimizi əlavə edə bilərsiniz."
+          },
+          {
+            "question": "Şərh və mesajlara kim cavab verir?",
+            "answer": "Biz şərhləri və mesajları izləyir, ümumi cavablar hazırlayırıq. Brendə aid xüsusi qərarlar və məhsul sualları üçün sizinlə əlaqə saxlayırıq."
+          },
+          {
+            "question": "Nə qədər müddətdə nəticə görəcəyəm?",
+            "answer": "Sosial media böyüməsi 2–3 ayda görünməyə başlayır. İlk ay məzmun və auditoriya qurma, 2-3-cü aydan etibarən engagement və follower artımı gözlənilir."
+          },
+          {
+            "question": "Hansı hesabatları alacağam?",
+            "answer": "Hər ay platformalara özrə (Instagram, Facebook, TikTok, LinkedIn) reach, engagement, follower growth və ən yaxşı performans göstərən məzmunlar daxil olmaqla ətraflı hesabat təqdim edirik."
+          }
+        ]
+      },
+      "process": {
+        "tabIncluded": "Nə daxildir",
+        "tabRoadmap": "Aylıq yol xəritəsi",
+        "progressLabel": "Tamamlanma həddi",
+        "included": [
+          {
+            "title": "Audit",
+            "description": "Mövcud Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarınızı araşdırır, məzmun tarixçəsini və rəqiblərin sosial media fəaliyyətini analiz edirik."
+          },
+          {
+            "title": "Strategiya və Platforma Seçimi",
+            "description": "Hədəf auditoriya və brendə əsasən Instagram, Facebook, TikTok, LinkedIn və YouTube platformalarından hansının daha effektiv olacağını müəyyən edir, məzmun strategiyasını hazırlayırıq."
+          },
+          {
+            "title": "Məzmun Təqvimi",
+            "description": "Aylıq məzmun planı hazırlayır, paylaşım növləri (feed, story, reels, video) və mövzuları müəyyən edirik."
+          },
+          {
+            "title": "Məzmun İstehsalı",
+            "description": "Qrafik dizayn, copywriting və video montaj ilə platformaya uyğun məzmun hazırlayır, brendinizin vizual kimliyi ilə uyğunlaşdırırıq."
+          },
+          {
+            "title": "Paylaşım və İdarəetmə",
+            "description": "Məzmunu optimal vaxtlarda paylaşır, şərhləri izləyir və auditoriya ilə əlaqə qurur, community management həyata keçiririk."
+          },
+          {
+            "title": "Ölçmə və Hesabat",
+            "description": "Aylıq KPI hesabatı ilə sosyal media performansını şəffaf şəkildə təqdim edir, strategiyanı davamlı tənzimləyirik."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "1-2-ci Həftə — Audit və Kəşfiyyat",
+            "description": "Mövcud Instagram, Facebook, TikTok, LinkedIn və YouTube hesablarının auditi, rəqib analizi və məzmun analizi aparılır."
+          },
+          {
+            "title": "3-4-cü Həftə — Strategiya",
+            "description": "Auditoriya seqmentasiyası, platforma seçimi və məzmun strategiyası ilə aylıq məzmun təqvimi hazırlanır."
+          },
+          {
+            "title": "2-3-cü Ay — İcra",
+            "description": "İlk məzmun seriyası hazırlanır, paylaşımlar başlayır, şərh və mesajlar idarə edilir, ilk performance məlumatları toplanır."
+          },
+          {
+            "title": "4-5-ci Ay — Güclənmə",
+            "description": "Engagement və reach göstəricilərinə əsasən məzmun formatları optimallaşdırılır, uğurlu məzmun növləri genişləndirilir."
+          },
+          {
+            "title": "6-cı Ay — Ölçmə və Miqyaslandırma",
+            "description": "KPI-lar (engagement, reach, follower growth) qiymətləndirilir, ən yaxşı performans göstərən platforma və məzmun növləri miqyaslandırılır, növbəti dövr üçün strategiya yenilənir."
+          }
+        ]
+      },
       "metaTitle": "SMM Xidmətləri | Cradex Agency",
       "metaDescription": "Instagram, Facebook, TikTok və digər platformalarda peşəkar sosial media idarəetməsi."
     },
