@@ -58,11 +58,11 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                       : 'bg-bg-tertiary/30 border-bg-tertiary/50 hover:border-accent-primary/20'
                   } border`}
                 >
-                  <div className="flex items-center justify-between p-6">
+                  <div className="flex items-center justify-between p-4 sm:p-6">
                     {/* Left: Number and Title */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
                       <div
-                        className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-colors ${
+                        className={`flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-bold text-xs sm:text-sm transition-colors ${
                           isOpen
                             ? 'bg-accent-primary text-white'
                             : 'bg-accent-primary/10 text-accent-primary'
@@ -71,7 +71,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                         {String(step.step).padStart(2, '0')}
                       </div>
                       <h3
-                        className={`font-bold text-lg transition-colors ${
+                        className={`font-bold text-base sm:text-lg transition-colors truncate ${
                           isOpen ? 'text-text-primary' : 'text-text-secondary'
                         }`}
                       >
@@ -87,7 +87,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                         isOpen ? 'text-accent-primary' : 'text-text-muted'
                       }`}
                     >
-                      <ChevronDown size={24} />
+                      <ChevronDown size={20} className="sm:w-6 sm:h-6" />
                     </motion.div>
                   </div>
 
@@ -101,9 +101,9 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 pl-20">
-                          <div className="border-l-2 border-accent-primary/50 pl-6">
-                            <p className="text-text-secondary leading-relaxed">
+                        <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-14 sm:pl-20">
+                          <div className="border-l-2 border-accent-primary/50 pl-4 sm:pl-6">
+                            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                               {step.description}
                             </p>
                           </div>
