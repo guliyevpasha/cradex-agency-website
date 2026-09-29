@@ -8,6 +8,7 @@ import { getPortfolioByCategory } from '@/lib/data/portfolio'
 import { ServiceHero } from '@/components/sections/ServiceHero'
 import { DigitalMarketingHero } from '@/components/sections/DigitalMarketingHero'
 import { PlatformsSection } from '@/components/sections/PlatformsSection'
+import { AuditStrategySection } from '@/components/sections/AuditStrategySection'
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -84,6 +85,10 @@ function ServicePageContent({
             title={t(`${key}.platformsTitle` as any)}
             subtitle={t(`${key}.platformsSubtitle` as any)}
             platforms={t.raw(`${key}.platforms` as any)}
+          />
+          <AuditStrategySection
+            title={t(`${key}.auditTitle` as any)}
+            items={t.raw(`${key}.auditItems` as any)}
           />
         </>
       ) : (

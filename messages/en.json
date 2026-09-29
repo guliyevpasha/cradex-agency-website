@@ -301,6 +301,24 @@
           "description": "Within Yandex Ads service, we create search and Display ads via Yandex Direct. We track performance with Yandex Metrica for brands targeting Russian-speaking audiences."
         }
       ],
+      "auditTitle": "In-Depth Audit and Strategy",
+      "auditItems": [
+        {
+          "title": "Account Audit",
+          "description": "We check 50+ indicators of your Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and Yandex Ads accounts, analyzing where your budget is spent.",
+          "icon": "chart"
+        },
+        {
+          "title": "Audience Analysis",
+          "description": "We perform audience segmentation focused not only on demographics but also on behavior and intent, preparing targeting strategies for each platform.",
+          "icon": "search"
+        },
+        {
+          "title": "Strategic Roadmap",
+          "description": "We present a strategic roadmap for the next 3–6 months, defining platforms, budget allocation and KPIs (ROAS, CPL, CTR).",
+          "icon": "trending"
+        }
+      ],
       "metaTitle": "Digital Marketing Services | Cradex Agency",
       "metaDescription": "Increase your online visibility with SEO, PPC and email marketing. Achieve digital success with Cradex Agency."
     },
