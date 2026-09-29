@@ -13,6 +13,7 @@
     "nav": {
       "home": "Əsas",
       "about": "Haqqımızda",
+      "clients": "Müştərilər",
       "services": "Xidmətlər",
       "journal": "Bloq",
       "calculator": "Kalkulyator",
@@ -739,6 +740,16 @@
       "web-mobile-dev": "Vebsayt"
     },
     "noItems": "Bu kateqoriyada layihə tapılmadı"
+  },
+  "clients": {
+    "title": "Müştərilər",
+    "subtitle": "Bizimlə Böyüdüyümüz Brendlər",
+    "heading": "Birlikdə Böyüdüyümüz",
+    "headingAccent": "Brendlər",
+    "description": "2020-ci ildən bəri 10-dan çox sektorda 100-dən artıq müştəriyə xidmət göstəririk. Onların uğuru bizim uğurumuzdur.",
+    "breadcrumb": {
+      "home": "Ana Səhifə"
+    }
   },
   "notFound": {
     "title": "404 — Səhifə Tapılmadı",

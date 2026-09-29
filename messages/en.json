@@ -13,6 +13,7 @@
     "nav": {
       "home": "Home",
       "about": "About",
+      "clients": "Clients",
       "services": "Services",
       "journal": "Blog",
       "calculator": "Calculator",
@@ -466,6 +467,16 @@
       "web-mobile-dev": "Website"
     },
     "noItems": "No projects found in this category"
+  },
+  "clients": {
+    "title": "Clients",
+    "subtitle": "Brands Growing With Us",
+    "heading": "Brands We Grow",
+    "headingAccent": "Together",
+    "description": "Since 2020, we've served over 100 clients across 10+ industries. Their success is our success.",
+    "breadcrumb": {
+      "home": "Home"
+    }
   },
   "notFound": {
     "title": "404 — Page Not Found",
