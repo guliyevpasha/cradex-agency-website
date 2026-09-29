@@ -319,6 +319,24 @@
           "icon": "trending"
         }
       ],
+      "strategicApproach": {
+        "title": "Strategic Approach",
+        "description": "Each platform has its own algorithm, audience, and success formula. Relying on just one channel is no longer enough — your budget must be strategically planned for where, how, and to whom it will be directed. We manage advertising not as an expense, but as an investment leading to measurable results.",
+        "highlights": [
+          {
+            "icon": "target",
+            "text": "Each platform has its own algorithm, audience, and success formula — we analyze these and build the most effective strategy for you."
+          },
+          {
+            "icon": "chart",
+            "text": "Your budget is strategically planned for where, how, and to whom it will be directed, and continuously optimized."
+          },
+          {
+            "icon": "trending",
+            "text": "We manage advertising not as an expense, but as an investment leading to measurable results, maximizing ROAS for every campaign."
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "What's Included",
         "tabRoadmap": "Monthly Roadmap",
