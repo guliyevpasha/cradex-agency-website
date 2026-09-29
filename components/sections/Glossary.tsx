@@ -40,7 +40,7 @@ export function Glossary({ title, subtitle, terms }: GlossaryProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {terms.map((term, index) => (
             <motion.div
               key={index}
@@ -49,22 +49,22 @@ export function Glossary({ title, subtitle, terms }: GlossaryProps) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative h-full bg-gradient-to-br from-green-500/5 to-accent-primary/5 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300">
+              <div className="relative h-full bg-gradient-to-br from-green-500/5 to-accent-primary/5 border border-green-500/20 rounded-2xl p-4 sm:p-5 lg:p-6 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300">
                 {/* Color indicator */}
-                <div className="absolute top-0 left-6 w-12 h-1 bg-gradient-to-r from-green-500 to-accent-primary rounded-b-full" />
+                <div className="absolute top-0 left-4 sm:left-6 w-10 sm:w-12 h-1 bg-gradient-to-r from-green-500 to-accent-primary rounded-b-full" />
                 
                 <div className="pt-2">
-                  <div className="flex items-start gap-2 mb-3">
+                  <div className="flex items-start gap-2 mb-2 sm:mb-3">
                     {term.icon && (
-                      <span className="flex-shrink-0 w-5 h-5 rounded bg-green-500/20 flex items-center justify-center text-xs">
+                      <span className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-500/20 flex items-center justify-center text-[10px] sm:text-xs">
                         {term.icon}
                       </span>
                     )}
-                    <h3 className="text-base font-bold text-text-primary group-hover:text-green-400 transition-colors">
+                    <h3 className="text-sm sm:text-base font-bold text-text-primary group-hover:text-green-400 transition-colors">
                       {term.term}
                     </h3>
                   </div>
-                  <p className="text-sm text-text-secondary leading-relaxed">
+                  <p className="text-[11px] sm:text-xs lg:text-sm text-text-secondary leading-relaxed">
                     {term.definition}
                   </p>
                 </div>

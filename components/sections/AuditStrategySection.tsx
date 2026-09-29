@@ -62,7 +62,7 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
         </motion.div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {items.map((item, index) => {
             const Icon = iconMap[item.icon]
             
@@ -73,19 +73,19 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="relative bg-bg-tertiary/50 rounded-3xl p-8 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300 h-full group">
+                <div className="relative bg-bg-tertiary/50 rounded-2xl p-5 sm:p-6 lg:p-8 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300 h-full group">
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
-                    <Icon className="w-8 h-8 text-accent-primary" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-accent-primary" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-200">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-accent-primary transition-colors duration-200">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-text-secondary leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-text-secondary leading-relaxed">
                     {item.description}
                   </p>
                 </div>
