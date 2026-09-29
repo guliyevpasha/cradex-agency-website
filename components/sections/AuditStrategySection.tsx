@@ -88,11 +88,6 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
                   <p className="text-text-secondary leading-relaxed">
                     {item.description}
                   </p>
-
-                  {/* Card number (decorative) */}
-                  <div className="absolute top-6 right-6 text-6xl font-bold text-text-primary/5 select-none">
-                    0{index + 1}
-                  </div>
                 </div>
               </motion.div>
             )
