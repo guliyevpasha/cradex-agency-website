@@ -61,9 +61,6 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-bg-tertiary/50 border border-accent-primary/20 text-sm font-medium text-text-secondary uppercase tracking-wider mb-6">
-            / {t('sectionLabel')} /
-          </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
             <span className="text-text-primary">{t('title')} </span>
             <span className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
@@ -76,7 +73,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
         </motion.div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {displayArticles.map((article, index) => (
             <motion.div
               key={article.id}
@@ -88,54 +85,56 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                 href={`/${locale}/journal/${article.slug}`}
                 className="group block h-full"
               >
-                <article className="h-full flex flex-col rounded-2xl bg-bg-tertiary/30 border border-border/20 overflow-hidden hover:border-accent-primary/30 transition-all duration-300">
+                <article className="h-full flex flex-col rounded-2xl overflow-hidden bg-bg-tertiary/30 border border-border/20 hover:border-accent-primary/40 transition-all duration-300">
                   {/* Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-bg-secondary">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-accent-primary/20 via-bg-secondary to-accent-secondary/20">
                     {article.image ? (
                       <Image
                         src={article.image}
                         alt={article.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     ) : (
-                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
-                        <span className="text-6xl opacity-20">📝</span>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-24 h-24 rounded-2xl bg-bg-tertiary/50 flex items-center justify-center">
+                          <svg
+                            className="w-12 h-12 text-text-tertiary"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     )}
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1 flex flex-col p-6">
-                    {/* Meta */}
-                    <div className="flex items-center gap-4 text-xs text-text-tertiary mb-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} />
-                        {format(new Date(article.publishedAt), 'dd MMM yyyy', {
+                  {/* Content - Simplified */}
+                  <div className="flex-1 flex flex-col justify-between p-6 bg-bg-secondary/80">
+                    {/* Meta - Bottom Section */}
+                    <div className="flex items-center justify-between text-xs text-text-tertiary">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar size={14} />
+                        {format(new Date(article.publishedAt), 'dd.MM.yyyy', {
                           locale: localeMap[locale],
                         })}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <Clock size={12} />
+                      <span className="flex items-center gap-1.5">
+                        <Clock size={14} />
                         {t('readingTime', { minutes: article.readingTime })}
                       </span>
                     </div>
 
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-text-primary mb-3 line-clamp-2 group-hover:text-accent-primary transition-colors duration-200">
-                      {article.title}
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-sm text-text-secondary mb-4 line-clamp-3 flex-1">
-                      {article.excerpt}
-                    </p>
-
                     {/* Read more link */}
-                    <div className="flex items-center gap-2 text-sm font-medium text-accent-primary group-hover:gap-3 transition-all duration-200">
+                    <div className="mt-4 flex items-center gap-2 text-sm font-medium text-accent-primary group-hover:gap-3 transition-all duration-200">
                       {t('readMore')}
                       <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
                     </div>
