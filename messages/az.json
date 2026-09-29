@@ -592,6 +592,59 @@
           "icon": "trending"
         }
       ],
+      "process": {
+        "tabIncluded": "Nə daxildir",
+        "tabRoadmap": "Aylıq yol xəritəsi",
+        "progressLabel": "Tamamlanma həddi",
+        "included": [
+          {
+            "title": "Audit",
+            "description": "Mövcud Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads və Yandex Ads hesablarınızı araşdırır, kampaniya tarixçəsini və rəqiblərin reklam fəaliyyətini analiz edirik."
+          },
+          {
+            "title": "Strategiya və Platforma Seçimi",
+            "description": "Hədəf auditoriya və büdcəyə əsasən Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads və Yandex Ads platformalarından hansının daha effektiv olacağını müəyyən edir, media planını hazırlayırıq."
+          },
+          {
+            "title": "Texniki Qurulum",
+            "description": "Hesab strukturunu qurur, izləmə alətlərini (Meta Pixel, Conversion API, Yandex Metrika, konversiya izləməsi) inteqrasiya edirik ki, hər kampaniyanın nəticəsi dəqiq ölçülsün."
+          },
+          {
+            "title": "Kampaniya Qurulumu",
+            "description": "Seçilmiş platformalarda auditoriya hədəfləməsini, büdcə bölgüsünü və kampaniya strukturunu (Google Ads axtarış/Display, Meta Ads, TikTok Ads, LinkedIn Ads, Yandex Ads) qururuq."
+          },
+          {
+            "title": "Optimallaşdırma",
+            "description": "Kampaniyaları işə salır, A/B testlər aparır, CTR, CPC və ROAS göstəricilərinə əsasən davamlı optimallaşdırma edirik."
+          },
+          {
+            "title": "Ölçmə və Hesabat",
+            "description": "Aylıq KPI hesabatı ilə kampaniya nəticələrini şəffaf şəkildə təqdim edir, büdcəni və strategiyanı davamlı tənzimləyirik."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "1-2-ci Həftə — Audit və Kəşfiyyat",
+            "description": "Mövcud Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads və Yandex Ads hesablarının auditi, rəqib analizi və platforma imkanlarının qiymətləndirilməsi aparılır."
+          },
+          {
+            "title": "3-4-cü Həftə — Strategiya",
+            "description": "Auditoriya seqmentasiyası, platforma seçimi və büdcə bölgüsü ilə media planı hazırlanır."
+          },
+          {
+            "title": "2-3-cü Ay — İcra",
+            "description": "Seçilmiş platformalarda kampaniyalar işə salınır, izləmə sistemləri (Pixel, Conversion API, Yandex Metrika) inteqrasiya olunur, ilk kreativ testlər aparılır."
+          },
+          {
+            "title": "4-5-ci Ay — Güclənmə",
+            "description": "ROAS, CPC və CTR göstəricilərinə əsasən büdcə yenidən bölüşdürülür, uğurlu kampaniyalar genişləndirilir, yeni kreativ testlər tətbiq edilir."
+          },
+          {
+            "title": "6-cı Ay — Ölçmə və Miqyaslandırma",
+            "description": "KPI-lar (ROAS, CPL, konversiya) qiymətləndirilir, ən yaxşı performans göstərən platforma və kampaniyalar miqyaslandırılır, növbəti dövr üçün strategiya yenilənir."
+          }
+        ]
+      },
       "metaTitle": "Rəqəmsal Marketinq Xidmətləri | Cradex Agency",
       "metaDescription": "SEO, PPC və e-poçt marketinqi ilə onlayn görünürlüyünüzü artırın. Cradex Agency ilə rəqəmsal uğura çatın."
     },

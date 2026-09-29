@@ -319,6 +319,59 @@
           "icon": "trending"
         }
       ],
+      "process": {
+        "tabIncluded": "Neler Dahil",
+        "tabRoadmap": "Aylık Yol Haritası",
+        "progressLabel": "Tamamlanma Hedefi",
+        "included": [
+          {
+            "title": "Denetim",
+            "description": "Mevcut Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads ve Yandex Ads hesaplarınızı araştırıyor, kampanya geçmişini ve rakiplerin reklam faaliyetlerini analiz ediyoruz."
+          },
+          {
+            "title": "Strateji ve Platform Seçimi",
+            "description": "Hedef kitle ve bütçeye göre Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads ve Yandex Ads platformlarından hangisinin daha etkili olacağını belirliyoruz ve medya planını hazırlıyoruz."
+          },
+          {
+            "title": "Teknik Kurulum",
+            "description": "Hesap yapısını kuruyoruz, izleme araçlarını (Meta Pixel, Conversion API, Yandex Metrica, dönüşüm izleme) entegre ediyoruz ki her kampanyanın sonucu doğru ölçülsün."
+          },
+          {
+            "title": "Kampanya Kurulumu",
+            "description": "Seçilen platformlarda kitle hedeflemesi, bütçe dağılımı ve kampanya yapısını (Google Ads Arama/Display, Meta Ads, TikTok Ads, LinkedIn Ads, Yandex Ads) kuruyoruz."
+          },
+          {
+            "title": "Optimizasyon",
+            "description": "Kampanyaları başlatıyor, A/B testleri yapıyor, CTR, CPC ve ROAS göstergelerine göre sürekli optimizasyon yapıyoruz."
+          },
+          {
+            "title": "Ölçme ve Raporlama",
+            "description": "Aylık KPI raporları ile kampanya sonuçlarını şeffaf bir şekilde sunuyor, bütçeyi ve stratejiyi sürekli ayarlıyoruz."
+          }
+        ],
+        "roadmap": [
+          {
+            "title": "1-2. Hafta — Denetim ve Keşif",
+            "description": "Mevcut Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads ve Yandex Ads hesaplarının denetimi, rakip analizi ve platform yeteneklerinin değerlendirilmesi yapılır."
+          },
+          {
+            "title": "3-4. Hafta — Strateji",
+            "description": "Kitle segmentasyonu, platform seçimi ve bütçe dağılımı ile medya planı hazırlanır."
+          },
+          {
+            "title": "2-3. Ay — Uygulama",
+            "description": "Seçilen platformlarda kampanyalar başlatılır, izleme sistemleri (Pixel, Conversion API, Yandex Metrica) entegre edilir, ilk yaratıcı testler yapılır."
+          },
+          {
+            "title": "4-5. Ay — Güçlendirme",
+            "description": "ROAS, CPC ve CTR göstergelerine göre bütçe yeniden dağıtılır, başarılı kampanyalar ölçeklendirilir, yeni yaratıcı testler uygulanır."
+          },
+          {
+            "title": "6. Ay — Ölçme ve Ölçeklendirme",
+            "description": "KPI'lar (ROAS, CPL, dönüşüm) değerlendirilir, en iyi performans gösteren platformlar ve kampanyalar ölçeklendirilir, bir sonraki dönem için strateji yenilenir."
+          }
+        ]
+      },
       "metaTitle": "Dijital Pazarlama Hizmetleri | Cradex Agency",
       "metaDescription": "SEO, PPC ve e-posta pazarlaması ile çevrimiçi görünürlüğünüzü artırın. Cradex Agency ile dijital başarıya ulaşın."
     },
