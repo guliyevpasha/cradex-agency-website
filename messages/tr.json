@@ -13,6 +13,7 @@
     "nav": {
       "home": "Ana Sayfa",
       "about": "Hakkımızda",
+      "clients": "Müşteriler",
       "services": "Hizmetler",
       "journal": "Blog",
       "calculator": "Hesaplayıcı",
@@ -466,6 +467,16 @@
       "web-mobile-dev": "Web Sitesi"
     },
     "noItems": "Bu kategoride proje bulunamadı"
+  },
+  "clients": {
+    "title": "Müşteriler",
+    "subtitle": "Bizimle Büyüyen Markalar",
+    "heading": "Birlikte Büyüdüğümüz",
+    "headingAccent": "Markalar",
+    "description": "2020'den beri 10'dan fazla sektörde 100'den fazla müşteriye hizmet veriyoruz. Onların başarısı bizim başarımızdır.",
+    "breadcrumb": {
+      "home": "Ana Sayfa"
+    }
   },
   "notFound": {
     "title": "404 — Sayfa Bulunamadı",
