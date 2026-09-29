@@ -337,6 +337,101 @@
           }
         ]
       },
+      "whoIsThisFor": {
+        "title": "Who is this service for?",
+        "subtitle": "Proper preparation is essential for effective results. Assess whether this service is right for you based on the criteria below.",
+        "suitable": [
+          {
+            "title": "Those who want to manage ad budget effectively",
+            "description": "Businesses that want to know where their current ad spending goes and increase results."
+          },
+          {
+            "title": "Those who want to advertise on multiple platforms",
+            "description": "Those who want to manage several of Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads or Yandex Ads simultaneously."
+          },
+          {
+            "title": "Businesses launching new products or services",
+            "description": "Creating rapid visibility and initial customer flow for brands entering the market."
+          },
+          {
+            "title": "Those seeking sustainable, measurable growth",
+            "description": "Those ready to make strategic investments for development based on performance indicators over a 3–6 month perspective."
+          },
+          {
+            "title": "Those who want to reduce customer acquisition cost (CPL/CPA)",
+            "description": "Businesses that want to gain more leads and sales by lowering cost per acquisition in existing campaigns."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Those expecting instant, one-time results",
+            "description": "The campaign setup phase takes time and an optimal 1–2 week testing period is required."
+          },
+          {
+            "title": "Those only seeking organic growth",
+            "description": "If you don't want to allocate an ad budget, our SEO or Content Marketing service may be more suitable."
+          },
+          {
+            "title": "Those unable to allocate minimum ad budget",
+            "description": "A certain minimum budget is required for platform learning algorithms to function properly."
+          },
+          {
+            "title": "Those without a ready website or social media account for advertising",
+            "description": "At least a functional landing page or active account is required to direct traffic."
+          },
+          {
+            "title": "Those unable to dedicate time for process evaluation",
+            "description": "Campaign effectiveness decreases without minimal collaboration for creative approvals and reporting meetings."
+          }
+        ],
+        "ctaText": "Not sure? Get free consultation — let's evaluate together."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "subtitle": "Brief explanations of frequently encountered terms related to this service.",
+        "terms": [
+          {
+            "term": "CPC (Cost Per Click)",
+            "definition": "Average amount you pay for each click on your ad on platforms like Google Ads, Meta Ads, TikTok Ads.",
+            "icon": "💰"
+          },
+          {
+            "term": "CPM (Cost Per Mille)",
+            "definition": "Amount paid for 1000 displays of your ad — a key indicator in brand awareness campaigns.",
+            "icon": "📊"
+          },
+          {
+            "term": "CTR (Click-Through Rate)",
+            "definition": "Shows what percentage of users who see your ad click on it; measure of creative effectiveness.",
+            "icon": "🎯"
+          },
+          {
+            "term": "ROAS (Return on Ad Spend)",
+            "definition": "Revenue earned back for each dollar of ad spend — key indicator of campaign performance.",
+            "icon": "📈"
+          },
+          {
+            "term": "Conversion",
+            "definition": "User completing the targeted action through advertising (purchase, inquiry, registration, etc.).",
+            "icon": "✅"
+          },
+          {
+            "term": "Pixel / Conversion API",
+            "definition": "Code installed on your site that tracks user behavior and sends data to tools like Meta Ads, TikTok Ads, Yandex Metrica.",
+            "icon": "🔍"
+          },
+          {
+            "term": "Lookalike Audience",
+            "definition": "New potential customer group created in Meta Ads and TikTok Ads, based on characteristics of your existing customers.",
+            "icon": "👥"
+          },
+          {
+            "term": "Retargeting",
+            "definition": "Showing ads again on platforms like Meta Ads, Google Ads to users who visited your site but didn't take action.",
+            "icon": "🔄"
+          }
+        ]
+      },
       "process": {
         "tabIncluded": "What's Included",
         "tabRoadmap": "Monthly Roadmap",
