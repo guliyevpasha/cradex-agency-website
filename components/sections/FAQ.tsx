@@ -14,7 +14,7 @@ interface FAQProps {
   title: string
   subtitle: string
   items: FAQItem[]
-  ctaText: string
+  ctaText?: string
   ctaButton: string
 }
 
@@ -28,6 +28,11 @@ export function FAQ({ title, subtitle, items, ctaText, ctaButton }: FAQProps) {
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  // Safety check for items
+  if (!items || !Array.isArray(items) || items.length === 0) {
+    return null
+  }
 
   return (
     <section ref={ref} className="py-16 lg:py-24 bg-bg-primary">
