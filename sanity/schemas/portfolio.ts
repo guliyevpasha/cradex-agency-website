@@ -167,15 +167,39 @@ export default defineType({
         {
           type: 'object',
           fields: [
-            defineField({ name: 'az', title: 'AZ', type: 'string' }),
-            defineField({ name: 'en', title: 'EN', type: 'string' }),
-            defineField({ name: 'ru', title: 'RU', type: 'string' }),
-            defineField({ name: 'tr', title: 'TR', type: 'string' }),
+            defineField({
+              name: 'title',
+              title: 'Xidmət adı',
+              type: 'object',
+              fields: [
+                { name: 'az', title: 'AZ', type: 'string' },
+                { name: 'en', title: 'EN', type: 'string' },
+                { name: 'ru', title: 'RU', type: 'string' },
+                { name: 'tr', title: 'TR', type: 'string' },
+              ],
+            }),
+            defineField({
+              name: 'description',
+              title: 'Qısa təsvir (accordion açılanda görünəcək)',
+              type: 'object',
+              fields: [
+                { name: 'az', title: 'AZ', type: 'text', rows: 2 },
+                { name: 'en', title: 'EN', type: 'text', rows: 2 },
+                { name: 'ru', title: 'RU', type: 'text', rows: 2 },
+                { name: 'tr', title: 'TR', type: 'text', rows: 2 },
+              ],
+            }),
           ],
           preview: {
-            select: { title: 'az' },
-            prepare({ title }) {
-              return { title: title || 'Xidmət' }
+            select: { 
+              title: 'title.az',
+              description: 'description.az'
+            },
+            prepare({ title, description }) {
+              return { 
+                title: title || 'Xidmət',
+                subtitle: description ? description.substring(0, 50) + '...' : ''
+              }
             },
           },
         },

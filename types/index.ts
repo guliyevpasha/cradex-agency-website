@@ -96,7 +96,10 @@ export interface PortfolioItem {
     title: PortfolioItemTitle
     description: PortfolioItemTitle
   }>
-  servicesList?: Array<PortfolioItemTitle>
+  servicesList?: Array<{
+    title: PortfolioItemTitle
+    description?: PortfolioItemTitle
+  }>
   statistics?: Array<{
     label: PortfolioItemTitle
     value: string
