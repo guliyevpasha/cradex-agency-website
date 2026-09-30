@@ -342,29 +342,39 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   </p>
                 </ScrollReveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {item.mediaGallery.socialMediaPosts.map((post, index) => (
-                    <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
-                      <div className="relative aspect-square rounded-xl overflow-hidden bg-bg-tertiary shadow-lg group cursor-pointer border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
-                        {post.url && (
-                          <Image
-                            src={post.url}
-                            alt={post.caption?.[locale] || `Post ${index + 1}`}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-500"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                            loading="lazy"
-                          />
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {post.caption?.[locale] && (
-                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                              <p className="text-white text-sm font-medium">{post.caption[locale]}</p>
-                            </div>
+                  {item.mediaGallery.socialMediaPosts.map((post, index) => {
+                    // Aspect ratio: 4:5 (1080x1350 - Feed) or 9:16 (1080x1920 - Story)
+                    const aspectRatio = post.aspectRatio || '4:5'
+                    const aspectClass = aspectRatio === '9:16' ? 'aspect-[9/16]' : 'aspect-[4/5]'
+                    
+                    return (
+                      <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
+                        <div className={`relative ${aspectClass} rounded-xl overflow-hidden bg-bg-tertiary shadow-lg group cursor-pointer border border-white/5 hover:border-accent-primary/30 transition-all duration-300`}>
+                          {post.url && (
+                            <Image
+                              src={post.url}
+                              alt={post.caption?.[locale] || `Post ${index + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                              loading="lazy"
+                            />
                           )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {post.caption?.[locale] && (
+                              <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <p className="text-white text-sm font-medium">{post.caption[locale]}</p>
+                              </div>
+                            )}
+                          </div>
+                          {/* Format badge */}
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            {aspectRatio === '9:16' ? 'Story' : 'Feed'}
+                          </div>
                         </div>
-                      </div>
-                    </ScrollReveal>
-                  ))}
+                      </ScrollReveal>
+                    )
+                  })}
                 </div>
               </div>
             )}

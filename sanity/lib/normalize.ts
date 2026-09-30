@@ -243,6 +243,7 @@ export interface SanityPortfolioDoc {
   mediaGallery?: {
     socialMediaPosts?: Array<{
       url?: string
+      aspectRatio?: '4:5' | '9:16'
       caption?: { az?: string; en?: string; ru?: string; tr?: string }
     }>
     motionDesigns?: Array<{

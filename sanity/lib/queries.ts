@@ -157,6 +157,7 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "mediaGallery": {
       "socialMediaPosts": mediaGallery.socialMediaPosts[]{
         "url": asset->url,
+        "aspectRatio": aspectRatio,
         "caption": caption
       },
       "motionDesigns": mediaGallery.motionDesigns[]{
