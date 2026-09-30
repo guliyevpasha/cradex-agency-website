@@ -222,6 +222,20 @@ export default defineType({
               options: { hotspot: true },
               fields: [
                 {
+                  name: 'aspectRatio',
+                  title: 'Ölçü / Format',
+                  type: 'string',
+                  options: {
+                    list: [
+                      { title: '1080x1350 (4:5 - Feed Post)', value: '4:5' },
+                      { title: '1080x1920 (9:16 - Story/Reels)', value: '9:16' },
+                    ],
+                    layout: 'radio',
+                  },
+                  initialValue: '4:5',
+                  validation: (Rule) => Rule.required(),
+                },
+                {
                   name: 'caption',
                   title: 'Başlıq (opsional)',
                   type: 'object',

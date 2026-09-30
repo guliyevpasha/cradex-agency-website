@@ -18,6 +18,7 @@ async function testMediaGallery() {
     "mediaGallery": {
       "socialMediaPosts": mediaGallery.socialMediaPosts[]{
         "url": asset->url,
+        "aspectRatio": aspectRatio,
         "caption": caption.az
       },
       "motionDesigns": mediaGallery.motionDesigns[]{
@@ -50,7 +51,12 @@ async function testMediaGallery() {
     if (result?.mediaGallery) {
       console.log('Social Media Posts:', result.mediaGallery.socialMediaPosts?.length || 0)
       if (result.mediaGallery.socialMediaPosts?.length > 0) {
-        console.log('  First post URL:', result.mediaGallery.socialMediaPosts[0].url)
+        result.mediaGallery.socialMediaPosts.forEach((post, i) => {
+          console.log(`  Post ${i + 1}:`)
+          console.log(`    URL: ${post.url || 'NULL'}`)
+          console.log(`    Aspect Ratio: ${post.aspectRatio || 'Not set (default 4:5)'}`)
+          console.log(`    Caption: ${post.caption || 'No caption'}`)
+        })
       }
       
       console.log('\nMotion Designs:', result.mediaGallery.motionDesigns?.length || 0)
