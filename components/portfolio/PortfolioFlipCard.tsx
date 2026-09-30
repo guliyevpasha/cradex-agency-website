@@ -80,9 +80,9 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
             <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
               {/* Top Section */}
               <div className="space-y-3">
-                {/* Title - "[Client] üçün hazırlanmış veb sayt" */}
+                {/* Title - "[Client] üçün verilmiş [service]" */}
                 <h3 className="text-white font-display font-bold text-lg md:text-xl leading-tight">
-                  {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
+                  {item.clientName} {t('deliveredFor')} {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
                 {/* Description - Short project info (2-3 lines) */}
@@ -117,7 +117,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
 
                   {/* View Project Button */}
                   <div className="inline-flex items-center gap-2 text-white font-medium text-sm group-hover:text-accent-primary transition-colors">
-                    <span>Layihəyə keçid et</span>
+                    <span>{t('viewProject')}</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
