@@ -161,10 +161,12 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
       },
       "motionDesigns": mediaGallery.motionDesigns[]{
         "url": asset->url,
+        "mimeType": asset->mimeType,
         "caption": caption
       },
       "videoContent": mediaGallery.videoContent[]{
         "url": asset->url,
+        "mimeType": asset->mimeType,
         "caption": caption
       },
       "adResults": mediaGallery.adResults[]{

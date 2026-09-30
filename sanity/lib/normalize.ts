@@ -247,10 +247,12 @@ export interface SanityPortfolioDoc {
     }>
     motionDesigns?: Array<{
       url?: string
+      mimeType?: string
       caption?: { az?: string; en?: string; ru?: string; tr?: string }
     }>
     videoContent?: Array<{
       url?: string
+      mimeType?: string
       caption?: { az?: string; en?: string; ru?: string; tr?: string }
     }>
     adResults?: Array<{

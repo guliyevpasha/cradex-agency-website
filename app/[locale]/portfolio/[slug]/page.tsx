@@ -69,6 +69,16 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
   const t = useTranslations('portfolio')
   const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
 
+  // Debug: Log media gallery data
+  if (item.mediaGallery) {
+    console.log('[Portfolio] Media Gallery:', {
+      socialMediaPosts: item.mediaGallery.socialMediaPosts?.length || 0,
+      motionDesigns: item.mediaGallery.motionDesigns?.map(m => ({ url: m.url, caption: m.caption?.[locale] })),
+      videoContent: item.mediaGallery.videoContent?.map(v => ({ url: v.url, caption: v.caption?.[locale] })),
+      adResults: item.mediaGallery.adResults?.length || 0,
+    })
+  }
+
   // Get localized content - prioritize locale-specific object if available, fallback to string key
   const title = item.title?.[locale] || item.titleKey
   const description = item.description?.[locale] || item.descriptionKey  
@@ -382,10 +392,12 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                       <div className="relative aspect-video rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
                         {motion.url && (
                           <video
-                            src={motion.url}
+                            src={`${motion.url}#t=0.1`}
                             controls
+                            playsInline
                             className="w-full h-full object-cover"
                             preload="metadata"
+                            poster={motion.url ? `${motion.url}?fm=jpg&w=800&q=75` : undefined}
                           >
                             {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
                              locale === 'en' ? 'Your browser does not support video' : 
@@ -394,7 +406,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                           </video>
                         )}
                         {motion.caption?.[locale] && (
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
                             <p className="text-white text-sm font-medium">{motion.caption[locale]}</p>
                           </div>
                         )}
@@ -428,10 +440,12 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                       <div className="relative aspect-[9/16] rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
                         {video.url && (
                           <video
-                            src={video.url}
+                            src={`${video.url}#t=0.1`}
                             controls
+                            playsInline
                             className="w-full h-full object-cover"
                             preload="metadata"
+                            poster={video.url ? `${video.url}?fm=jpg&w=400&q=75` : undefined}
                           >
                             {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
                              locale === 'en' ? 'Your browser does not support video' : 
@@ -440,7 +454,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                           </video>
                         )}
                         {video.caption?.[locale] && (
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
                             <p className="text-white text-sm font-medium">{video.caption[locale]}</p>
                           </div>
                         )}
