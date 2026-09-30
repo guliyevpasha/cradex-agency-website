@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, TrendingUp, Users, MessageCircle, Target, Eye, Heart, BarChart3, Link as LinkIcon } from 'lucide-react'
 import { getPortfolioBySlug, getPortfolioSlugs } from '@/lib/data/portfolio'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
@@ -191,30 +191,55 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal animation="fadeInUp" className="text-center mb-12">
               <h2 className="text-3xl font-display font-bold text-text-primary">
-                📊 Kampaniya Nəticələri
+                Əldə Etdiyimiz Nəticələr
               </h2>
             </ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {item.statistics.map((stat, index) => {
                 const statLabel = stat.label?.[locale] || ''
-                const iconMap: Record<string, string> = {
-                  'trending-up': '📈',
-                  'users': '👥',
-                  'message-circle': '💬',
-                  'target': '🎯',
-                  'eye': '👁️',
-                  'heart': '❤️',
-                  'bar-chart': '📊',
-                  'link': '🔗',
-                }
-                const iconEmoji = stat.icon ? iconMap[stat.icon] : '📊'
+                
+                // Modern lucide icon component mapping
+                const IconComponent = stat.icon === 'trending-up' ? TrendingUp :
+                  stat.icon === 'users' ? Users :
+                  stat.icon === 'message-circle' ? MessageCircle :
+                  stat.icon === 'target' ? Target :
+                  stat.icon === 'eye' ? Eye :
+                  stat.icon === 'heart' ? Heart :
+                  stat.icon === 'bar-chart' ? BarChart3 :
+                  stat.icon === 'link' ? LinkIcon :
+                  BarChart3
                 
                 return (
                   <ScrollReveal key={index} animation="scaleIn" delay={index * 100}>
-                    <div className="bg-gradient-to-br from-bg-tertiary to-bg-secondary p-6 rounded-xl border border-white/5 hover:border-accent-primary/30 transition-all duration-300 hover:scale-105 text-center">
-                      <div className="text-4xl mb-3">{iconEmoji}</div>
-                      <div className="text-3xl font-bold text-accent-primary mb-2">{stat.value}</div>
-                      <div className="text-sm text-text-muted">{statLabel}</div>
+                    <div className="group relative bg-gradient-to-br from-bg-tertiary to-bg-secondary p-6 rounded-xl border border-white/5 hover:border-accent-primary/30 transition-all duration-500 hover:scale-105 text-center overflow-hidden">
+                      {/* Animated background glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/0 via-accent-primary/5 to-accent-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      {/* 3D Icon with animation */}
+                      <div className="relative mb-4 flex justify-center">
+                        <div className="relative">
+                          {/* Icon shadow/glow effect */}
+                          <div className="absolute inset-0 bg-accent-primary/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          
+                          {/* Main icon with 3D effect */}
+                          <div className="relative transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:-translate-y-1">
+                            <IconComponent 
+                              className="w-12 h-12 text-accent-primary drop-shadow-[0_0_15px_rgba(139,92,246,0.5)] transition-all duration-500 group-hover:drop-shadow-[0_0_25px_rgba(139,92,246,0.8)]" 
+                              strokeWidth={1.5}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Value with gradient text */}
+                      <div className="relative text-3xl font-bold bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent mb-2 transition-all duration-300 group-hover:scale-110">
+                        {stat.value}
+                      </div>
+                      
+                      {/* Label */}
+                      <div className="relative text-sm text-text-muted transition-colors duration-300 group-hover:text-text-secondary">
+                        {statLabel}
+                      </div>
                     </div>
                   </ScrollReveal>
                 )
