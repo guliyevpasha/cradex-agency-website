@@ -117,8 +117,8 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   </div>
                 )}
 
-                {/* Duration */}
-                {item.duration && (
+                {/* Duration - Only for SMM */}
+                {item.category === 'smm' && item.duration && (
                   <div className="space-y-1">
                     <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('duration')}</span>
                     <p className="text-text-primary font-semibold">{item.duration}</p>
@@ -185,8 +185,8 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </div>
       </section>
 
-      {/* Detailed Sections - New addition based on screenshot */}
-      {item.detailedSections && item.detailedSections.length > 0 && (
+      {/* Detailed Sections - Only for SMM category */}
+      {item.category === 'smm' && item.detailedSections && item.detailedSections.length > 0 && (
         <section className="py-20 bg-bg-primary">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
@@ -219,8 +219,8 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </section>
       )}
 
-      {/* Services List - New addition */}
-      {item.servicesList && item.servicesList.length > 0 && (
+      {/* Services List - Only for SMM category */}
+      {item.category === 'smm' && item.servicesList && item.servicesList.length > 0 && (
         <section className="py-20 bg-bg-secondary/30">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal animation="fadeInUp" className="mb-12">

@@ -102,8 +102,9 @@ export default defineType({
     }),
     defineField({
       name: 'duration',
-      title: 'Müddət (məsələn: 8 ay)',
+      title: 'Müddət (məsələn: 8 ay) - YALNIZ SMM üçün',
       type: 'string',
+      hidden: ({ document }) => document?.category !== 'smm',
     }),
     defineField({
       name: 'projectUrl',
@@ -112,8 +113,9 @@ export default defineType({
     }),
     defineField({
       name: 'detailedSections',
-      title: 'Ətraflı Bölmələr',
+      title: 'Ətraflı Bölmələr - YALNIZ SMM üçün',
       type: 'array',
+      hidden: ({ document }) => document?.category !== 'smm',
       of: [
         {
           type: 'object',
@@ -158,8 +160,9 @@ export default defineType({
     }),
     defineField({
       name: 'servicesList',
-      title: 'Xidmətlər Siyahısı',
+      title: 'Xidmətlər Siyahısı - YALNIZ SMM üçün',
       type: 'array',
+      hidden: ({ document }) => document?.category !== 'smm',
       of: [
         {
           type: 'object',
