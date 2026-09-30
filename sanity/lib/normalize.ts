@@ -217,6 +217,7 @@ export interface SanityPortfolioDoc {
   slug?: string
   title?: string | { az: string; en: string; ru: string; tr: string }
   client?: string
+  category?: string
   serviceCategory?: string
   description?: string | { az: string; en: string; ru: string; tr: string }
   image?: string
@@ -224,7 +225,13 @@ export interface SanityPortfolioDoc {
   tools?: string[]
   tags?: string[]
   results?: string | { az: string; en: string; ru: string; tr: string }
+  duration?: string
   projectUrl?: string
+  detailedSections?: Array<{
+    title?: { az?: string; en?: string; ru?: string; tr?: string }
+    description?: { az?: string; en?: string; ru?: string; tr?: string }
+  }>
+  servicesList?: Array<{ az?: string; en?: string; ru?: string; tr?: string }>
   videoUrl?: string
   completedAt?: string
   featured?: boolean
@@ -262,6 +269,7 @@ export function toPortfolioItem(
     titleKey: getLocalizedText(doc.title),
     title: getLocalizedObject(doc.title),
     clientName: doc.client ?? '',
+    category: doc.category,
     serviceCategory: (doc.serviceCategory as ServiceSlug) || DEFAULT_SERVICE_CATEGORY,
     tags: doc.tags ?? [],
     coverImage: doc.image ?? '',
@@ -273,6 +281,9 @@ export function toPortfolioItem(
     tools: doc.tools ?? [],
     resultsKey: getLocalizedText(doc.results),
     results: getLocalizedObject(doc.results),
+    duration: doc.duration,
+    detailedSections: doc.detailedSections,
+    servicesList: doc.servicesList,
     publishedAt: doc.completedAt ?? '',
     featured: Boolean(doc.featured),
   }
