@@ -105,6 +105,24 @@ export interface PortfolioItem {
     value: string
     icon?: string
   }>
+  mediaGallery?: {
+    socialMediaPosts?: Array<{
+      url: string
+      caption?: PortfolioItemTitle
+    }>
+    motionDesigns?: Array<{
+      url: string
+      caption?: PortfolioItemTitle
+    }>
+    videoContent?: Array<{
+      url: string
+      caption?: PortfolioItemTitle
+    }>
+    adResults?: Array<{
+      url: string
+      caption?: PortfolioItemTitle
+    }>
+  }
 }
 
 // Journal/Blog types
