@@ -690,24 +690,24 @@
         "ctaButton": "Have a Question?",
         "items": [
           {
-            "question": "How many posts do you make monthly?",
-            "answer": "It varies by platform and package. We typically provide 12–20 feed posts + stories for Instagram, 8–12 posts for Facebook, 8–12 videos for TikTok, and 4–8 posts for LinkedIn."
-          },
-          {
-            "question": "Who prepares the content?",
-            "answer": "We handle content strategy, copywriting, graphic design and editing. If you cannot provide photo and video materials, you can add our Photo/Video service."
-          },
-          {
-            "question": "Who responds to comments and messages?",
-            "answer": "We monitor comments and messages and prepare general responses. For brand-specific decisions and product questions, we contact you."
-          },
-          {
             "question": "How soon will I see results?",
-            "answer": "Social media growth starts to show in 2–3 months. The first month is content and audience building, engagement and follower growth is expected from the 2nd-3rd month."
+            "answer": "SMM is a long-term investment. Initial engagement and reach increase is typically felt in 4-6 weeks, while consistent follower growth and conversion to sales manifests over 3-6 months."
           },
           {
-            "question": "What reports will I receive?",
-            "answer": "We provide detailed monthly reports by platform (Instagram, Facebook, TikTok, LinkedIn) including reach, engagement, follower growth and best performing content."
+            "question": "Is advertising budget included in the service fee?",
+            "answer": "No, the service fee covers strategy, content production and management. Advertising budget (Meta/TikTok Ads spend) is determined separately and managed directly from your platform account."
+          },
+          {
+            "question": "Which platforms do you operate on?",
+            "answer": "We primarily work on Instagram, Facebook and TikTok, with LinkedIn added based on your needs. Platform selection is based on where your target audience is active."
+          },
+          {
+            "question": "Who shoots and prepares the content?",
+            "answer": "Photo/video shooting, design and copywriting are carried out by our team. You only participate in the approval stage, the production process is entirely on us."
+          },
+          {
+            "question": "How do you handle negative comments and crisis moments?",
+            "answer": "Comments and messages are monitored according to established response protocol and reacted to promptly. In serious situations, a communication plan pre-agreed with you is implemented."
           }
         ]
       },

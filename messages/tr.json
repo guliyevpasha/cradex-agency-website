@@ -690,24 +690,24 @@
         "ctaButton": "Sorunuz mu var?",
         "items": [
           {
-            "question": "Aylık kaç paylaşım yapıyorsunuz?",
-            "answer": "Platforma ve pakete göre değişir. Genellikle Instagram için 12–20 feed paylaşımı + story, Facebook için 8–12 paylaşım, TikTok için 8–12 video, LinkedIn için 4–8 paylaşım sağlıyoruz."
-          },
-          {
-            "question": "İçeriği kim hazırlıyor?",
-            "answer": "Biz içerik stratejisi, metin yazarlığı (copywriting), grafik tasarım ve montaj işlerini yapıyoruz. Fotoğraf ve video materyal sağlayamıyorsanız, Fotoğraf/Video hizmetimizi ekleyebilirsiniz."
-          },
-          {
-            "question": "Yorumlara ve mesajlara kim cevap veriyor?",
-            "answer": "Biz yorumları ve mesajları izliyor, genel cevaplar hazırlıyoruz. Markaya özel kararlar ve ürün soruları için sizinle iletişime geçiyoruz."
-          },
-          {
             "question": "Ne kadar sürede sonuç göreceğim?",
-            "answer": "Sosyal medya büyümesi 2–3 ayda görünmeye başlar. İlk ay içerik ve kitle oluşturma, 2-3. aydan itibaren etkileşim ve takipçi artışı beklenir."
+            "answer": "SMM uzun vadeli bir yatırımdır. İlk etkileşim ve erişim artışı genellikle 4-6 haftada hissedilir, sürekli takipçi artışı ve satışa dönüşüm ise 3-6 ay içinde kendini gösterir."
           },
           {
-            "question": "Hangi raporları alacağım?",
-            "answer": "Her ay platformlara göre (Instagram, Facebook, TikTok, LinkedIn) erişim, etkileşim, takipçi artışı ve en iyi performans gösteren içerikleri içeren detaylı rapor sunuyoruz."
+            "question": "Reklam bütçesi hizmet ücretine dahil mi?",
+            "answer": "Hayır, hizmet ücreti strateji, içerik üretimi ve yönetimi kapsar. Reklam bütçesi (Meta/TikTok Ads harcaması) ayrıca belirlenir ve doğrudan sizin platform hesabınızdan yönetilir."
+          },
+          {
+            "question": "Hangi platformlarda faaliyet gösteriyorsunuz?",
+            "answer": "Öncelikle Instagram, Facebook ve TikTok üzerinde çalışıyoruz, ihtiyacınıza göre LinkedIn de eklenebilir. Platform seçimi hedef kitlenizin nerede aktif olduğuna göre yapılır."
+          },
+          {
+            "question": "İçeriği kim çekiyor ve hazırlıyor?",
+            "answer": "Fotoğraf/video çekimi, tasarım ve metin yazarlığı ekibimiz tarafından gerçekleştirilir. Siz sadece onay aşamasında yer alırsınız, üretim süreci tamamen üzerimizdedir."
+          },
+          {
+            "question": "Olumsuz yorumlar ve kriz anlarında nasıl davranıyorsunuz?",
+            "answer": "Yorumlar ve mesajlar belirlenmiş yanıt protokolüne uygun olarak izlenir ve zamanında tepki verilir. Ciddi durumlarda önceden sizinle anlaşılmış iletişim planı uygulanır."
           }
         ]
       },

@@ -963,24 +963,24 @@
         "ctaButton": "Sualınız var?",
         "items": [
           {
-            "question": "Aylıq neçə paylaşım edirsiniz?",
-            "answer": "Platforma və paketə görə dəyişir. Adətən Instagram üçün 12–20 feed post + story, Facebook üçün 8–12 post, TikTok üçün 8–12 video, LinkedIn üçün 4–8 post təmin edirik."
+            "question": "Nə qədər müddətdə nəticə görəcəm?",
+            "answer": "SMM uzunmüddətli bir investisiyadır. İlk aktivlik və əhatə artımı adətən 4–6 həftədə hiss olunur, davamlı izləyici artımı və satışa çevrilmə isə 3–6 ay ərzində özünü göstərir."
           },
           {
-            "question": "Məzmunu kim hazırlayır?",
-            "answer": "Biz məzmun strategiyası, mətn (copywriting), qrafik dizayn və montaj işlərini aparırıq. Foto və video material təmin edə bilmirsinizsə, Foto/Video xidmətimizi əlavə edə bilərsiniz."
+            "question": "Reklam büdcəsi xidmət haqqına daxildirmi?",
+            "answer": "Xeyr, xidmət haqqı strategiya, kontent istehsalı və idarəetməni əhatə edir. Reklam büdcəsi (Meta/TikTok Ads xərci) ayrıca müəyyənləşdirilir və birbaşa sizin platform hesabınızdan idarə olunur."
           },
           {
-            "question": "Şərh və mesajlara kim cavab verir?",
-            "answer": "Biz şərhləri və mesajları izləyir, ümumi cavablar hazırlayırıq. Brendə aid xüsusi qərarlar və məhsul sualları üçün sizinlə əlaqə saxlayırıq."
+            "question": "Hansı platformalarda fəaliyyət göstərirsiniz?",
+            "answer": "Əsasən Instagram, Facebook və TikTok üzərinde işləyirik, tələbatınıza görə LinkedIn də əlavə oluna bilər. Platform seçimi hədəf auditoriyanızın harada aktiv olduğuna əsaslanır."
           },
           {
-            "question": "Nə qədər müddətdə nəticə görəcəyəm?",
-            "answer": "Sosial media böyüməsi 2–3 ayda görünməyə başlayır. İlk ay məzmun və auditoriya qurma, 2-3-cü aydan etibarən engagement və follower artımı gözlənilir."
+            "question": "Kontenti kim çəkir və hazırlayır?",
+            "answer": "Foto/video çəkiliş, dizayn və kopirayting komandamız tərəfindən həyata keçirilir. Siz yalnız təsdiq mərhələsində iştirak edirsiniz, istehsal prosesi tam bizim üzərimizdədir."
           },
           {
-            "question": "Hansı hesabatları alacağam?",
-            "answer": "Hər ay platformalara özrə (Instagram, Facebook, TikTok, LinkedIn) reach, engagement, follower growth və ən yaxşı performans göstərən məzmunlar daxil olmaqla ətraflı hesabat təqdim edirik."
+            "question": "Mənfi şərhlər və böhran anlarında necə davranırsınız?",
+            "answer": "Şərh və mesajlar müəyyən olunmuş cavab protokoluna uyğun izlənilir və vaxtında reaksiya verilir. Ciddi vəziyyətlərdə əvvəlcədən sizinlə razılaşdırılmış kommunikasiya planı tətbiq olunur."
           }
         ]
       },
