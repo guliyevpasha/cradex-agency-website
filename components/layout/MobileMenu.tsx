@@ -45,6 +45,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const router = useRouter()
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
 
   useEffect(() => {
     if (isOpen) closeButtonRef.current?.focus()
@@ -72,7 +73,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   const navLinks = [
     { href: `/${locale}`,             label: t('home') },
-    { href: `/${locale}/about`,       label: t('about') },
+    // About will be handled separately with dropdown
     // Services will be handled separately with dropdown
     { href: `/${locale}/journal`,     label: t('journal') },
     { href: `/${locale}/calculator`,  label: t('calculator') },
@@ -139,12 +140,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 {navLinks.map((link, index) => {
                   const isActive = pathname === link.href
                   
-                  // Insert Services dropdown after "About"
-                  if (index === 1) {
+                  // Insert About and Services dropdowns after "Home"
+                  if (index === 0) {
+                    const isAboutActive = pathname.includes('/about') || pathname.includes('/clients')
                     const isServicesActive = pathname.includes('/services')
+                    
                     return (
-                      <div key="services-group">
-                        {/* Regular nav link */}
+                      <div key="nav-group">
+                        {/* Home link */}
                         <motion.li variants={itemVariants}>
                           <Link
                             href={link.href}
@@ -161,6 +164,72 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             )}
                             {link.label}
                           </Link>
+                        </motion.li>
+                        
+                        {/* About dropdown */}
+                        <motion.li variants={itemVariants}>
+                          <button
+                            onClick={() => setAboutOpen(!aboutOpen)}
+                            className={cn(
+                              'w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
+                              isAboutActive
+                                ? 'bg-accent-primary/15 text-accent-primary'
+                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
+                            )}
+                          >
+                            <span className="flex items-center">
+                              {isAboutActive && (
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
+                              )}
+                              {t('about')}
+                            </span>
+                            <ChevronDown
+                              size={16}
+                              className={cn('transition-transform duration-200', aboutOpen && 'rotate-180')}
+                            />
+                          </button>
+                          
+                          {/* About submenu */}
+                          <AnimatePresence>
+                            {aboutOpen && (
+                              <motion.ul
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="mt-1 ml-4 space-y-1 overflow-hidden"
+                              >
+                                <li>
+                                  <Link
+                                    href={`/${locale}/about`}
+                                    onClick={onClose}
+                                    className={cn(
+                                      'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+                                      pathname.includes('/about') && !pathname.includes('/clients')
+                                        ? 'bg-accent-primary/10 text-accent-primary'
+                                        : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
+                                    )}
+                                  >
+                                    {t('about')}
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href={`/${locale}/clients`}
+                                    onClick={onClose}
+                                    className={cn(
+                                      'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+                                      pathname.includes('/clients')
+                                        ? 'bg-accent-primary/10 text-accent-primary'
+                                        : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
+                                    )}
+                                  >
+                                    {t('clients')}
+                                  </Link>
+                                </li>
+                              </motion.ul>
+                            )}
+                          </AnimatePresence>
                         </motion.li>
                         
                         {/* Services dropdown */}
