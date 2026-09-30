@@ -15,6 +15,7 @@ const securityHeaders = [
       "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https: https://cdn.sanity.io",
+      "media-src 'self' blob: https://cdn.sanity.io",
       // data: is needed for fonts inlined as base64 — Sanity Studio and the dev
       // overlay both do this, and the policy was blocking them. Inline font data
       // cannot execute, so this is not the risk that data: poses in script-src.
