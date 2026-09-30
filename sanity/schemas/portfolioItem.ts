@@ -98,6 +98,84 @@ export const portfolioItemSchema = defineType({
       rows: 3,
     }),
     defineField({
+      name: 'duration',
+      title: 'Müddət (məsələn: 8 ay)',
+      type: 'string',
+    }),
+    defineField({
+      name: 'projectUrl',
+      title: 'Layihə URL (Sayta bax linki)',
+      type: 'url',
+    }),
+    defineField({
+      name: 'detailedSections',
+      title: 'Ətraflı Bölmələr',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              title: 'Başlıq (məsələn: Sosial Media Dizaynları)',
+              type: 'object',
+              fields: [
+                { name: 'az', title: 'AZ', type: 'string' },
+                { name: 'en', title: 'EN', type: 'string' },
+                { name: 'ru', title: 'RU', type: 'string' },
+                { name: 'tr', title: 'TR', type: 'string' },
+              ],
+            }),
+            defineField({
+              name: 'description',
+              title: 'Təsvir',
+              type: 'object',
+              fields: [
+                { name: 'az', title: 'AZ', type: 'text', rows: 3 },
+                { name: 'en', title: 'EN', type: 'text', rows: 3 },
+                { name: 'ru', title: 'RU', type: 'text', rows: 3 },
+                { name: 'tr', title: 'TR', type: 'text', rows: 3 },
+              ],
+            }),
+          ],
+          preview: {
+            select: {
+              title: 'title.az',
+              description: 'description.az',
+            },
+            prepare({ title, description }) {
+              return {
+                title: title || 'Başlıq yoxdur',
+                subtitle: description ? description.substring(0, 60) + '...' : '',
+              }
+            },
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: 'servicesList',
+      title: 'Xidmətlər Siyahısı',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({ name: 'az', title: 'AZ', type: 'string' }),
+            defineField({ name: 'en', title: 'EN', type: 'string' }),
+            defineField({ name: 'ru', title: 'RU', type: 'string' }),
+            defineField({ name: 'tr', title: 'TR', type: 'string' }),
+          ],
+          preview: {
+            select: { title: 'az' },
+            prepare({ title }) {
+              return { title: title || 'Xidmət' }
+            },
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'featured',
       title: 'Əsas səhifədə göstər',
       type: 'boolean',

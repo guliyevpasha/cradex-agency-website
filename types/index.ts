@@ -89,8 +89,13 @@ export interface PortfolioItem {
   resultsKey: string
   results?: PortfolioItemTitle
   publishedAt: string
-  duration?: string  // e.g., "3 ay", "2 həftə", etc.
+  duration?: string  // e.g., "3 ay", "2 həftə", "8 ay" etc.
   featured: boolean
+  detailedSections?: Array<{
+    title: PortfolioItemTitle
+    description: PortfolioItemTitle
+  }>
+  servicesList?: Array<PortfolioItemTitle>
 }
 
 // Journal/Blog types

@@ -185,6 +185,66 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </div>
       </section>
 
+      {/* Detailed Sections - New addition based on screenshot */}
+      {item.detailedSections && item.detailedSections.length > 0 && (
+        <section className="py-20 bg-bg-primary">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-12">
+              {item.detailedSections.map((section, index) => {
+                const sectionTitle = section.title?.[locale] || ''
+                const sectionDescription = section.description?.[locale] || ''
+                
+                return (
+                  <ScrollReveal key={index} animation="fadeInUp" delay={index * 100}>
+                    <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 lg:gap-12 items-start">
+                      {/* Section Title */}
+                      <div className="lg:sticky lg:top-32">
+                        <h3 className="text-xl lg:text-2xl font-display font-bold text-text-primary">
+                          {sectionTitle}
+                        </h3>
+                      </div>
+                      
+                      {/* Section Description */}
+                      <div className="bg-bg-secondary/50 rounded-xl p-6 lg:p-8 border border-white/5">
+                        <p className="text-text-secondary leading-relaxed whitespace-pre-line">
+                          {sectionDescription}
+                        </p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Services List - New addition */}
+      {item.servicesList && item.servicesList.length > 0 && (
+        <section className="py-20 bg-bg-secondary/30">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fadeInUp" className="mb-12">
+              <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
+                {t('services')}
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {item.servicesList.map((service, index) => {
+                const serviceText = service?.[locale] || ''
+                return (
+                  <ScrollReveal key={index} animation="fadeInUp" delay={index * 80}>
+                    <div className="flex items-start gap-3 bg-bg-tertiary/50 rounded-xl p-5 border border-white/5 hover:border-accent-primary/30 transition-colors">
+                      <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent-primary mt-2" />
+                      <p className="text-text-secondary text-sm leading-relaxed">{serviceText}</p>
+                    </div>
+                  </ScrollReveal>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Video */}
       {item.videoUrl && (
         <section className="py-20 bg-bg-primary">
