@@ -397,7 +397,6 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                             playsInline
                             className="w-full h-full object-cover"
                             preload="metadata"
-                            poster={motion.url ? `${motion.url}?fm=jpg&w=800&q=75` : undefined}
                           >
                             {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
                              locale === 'en' ? 'Your browser does not support video' : 
@@ -445,7 +444,6 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                             playsInline
                             className="w-full h-full object-cover"
                             preload="metadata"
-                            poster={video.url ? `${video.url}?fm=jpg&w=400&q=75` : undefined}
                           >
                             {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
                              locale === 'en' ? 'Your browser does not support video' : 
