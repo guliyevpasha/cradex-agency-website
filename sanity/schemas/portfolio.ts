@@ -182,6 +182,66 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'statistics',
+      title: 'Statistikalar - YALNIZ SMM üçün',
+      description: 'Kampaniya nəticələri: Reach, Engagement, CTR və s.',
+      type: 'array',
+      hidden: ({ document }) => document?.category !== 'smm',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'label',
+              title: 'Etiket (məsələn: Reach artımı)',
+              type: 'object',
+              fields: [
+                { name: 'az', title: 'AZ', type: 'string' },
+                { name: 'en', title: 'EN', type: 'string' },
+                { name: 'ru', title: 'RU', type: 'string' },
+                { name: 'tr', title: 'TR', type: 'string' },
+              ],
+            }),
+            defineField({
+              name: 'value',
+              title: 'Dəyər (məsələn: +285%)',
+              type: 'string',
+            }),
+            defineField({
+              name: 'icon',
+              title: 'İkon',
+              type: 'string',
+              options: {
+                list: [
+                  { title: '📈 Artım', value: 'trending-up' },
+                  { title: '👥 İstifadəçilər', value: 'users' },
+                  { title: '💬 Engagement', value: 'message-circle' },
+                  { title: '🎯 Hədəf', value: 'target' },
+                  { title: '👁️ Görünürlük', value: 'eye' },
+                  { title: '❤️ Bəğənmə', value: 'heart' },
+                  { title: '📊 Statistika', value: 'bar-chart' },
+                  { title: '🔗 Klik', value: 'link' },
+                ],
+              },
+            }),
+          ],
+          preview: {
+            select: {
+              label: 'label.az',
+              value: 'value',
+              icon: 'icon',
+            },
+            prepare({ label, value, icon }) {
+              return {
+                title: `${value} - ${label || 'Etiket yoxdur'}`,
+                subtitle: icon ? `İkon: ${icon}` : 'İkon seçilməyib',
+              }
+            },
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'completedAt',
       title: 'Completed At',
       type: 'date',

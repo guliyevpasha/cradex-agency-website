@@ -153,6 +153,7 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "projectUrl": projectUrl,
     "detailedSections": detailedSections,
     "servicesList": servicesList,
+    "statistics": statistics,
     "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured
