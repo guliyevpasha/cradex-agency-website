@@ -231,7 +231,10 @@ export interface SanityPortfolioDoc {
     title?: { az?: string; en?: string; ru?: string; tr?: string }
     description?: { az?: string; en?: string; ru?: string; tr?: string }
   }>
-  servicesList?: Array<{ az?: string; en?: string; ru?: string; tr?: string }>
+  servicesList?: Array<{
+    title?: { az?: string; en?: string; ru?: string; tr?: string }
+    description?: { az?: string; en?: string; ru?: string; tr?: string }
+  }>
   statistics?: Array<{
     label?: { az?: string; en?: string; ru?: string; tr?: string }
     value?: string

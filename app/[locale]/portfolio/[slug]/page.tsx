@@ -8,6 +8,7 @@ import { ChevronRight, TrendingUp, Users, MessageCircle, Target, Eye, Heart, Bar
 import { getPortfolioBySlug, getPortfolioSlugs } from '@/lib/data/portfolio'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
+import { Accordion } from '@/components/ui/Accordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import type { PortfolioItem } from '@/types'
 
@@ -283,28 +284,24 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </section>
       )}
 
-      {/* Services List - Only for SMM category */}
+      {/* Services List - Only for SMM category - Accordion */}
       {item.category === 'smm' && item.servicesList && item.servicesList.length > 0 && (
         <section className="py-20 bg-bg-secondary/30">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal animation="fadeInUp" className="mb-12">
+            <ScrollReveal animation="fadeInUp" className="mb-8">
               <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
                 {t('services')}
               </h2>
+              <p className="text-text-muted text-sm">Xidmət üzərinə klikləyərək ətraflı məlumat əldə edin</p>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {item.servicesList.map((service, index) => {
-                const serviceText = service?.[locale] || ''
-                return (
-                  <ScrollReveal key={index} animation="fadeInUp" delay={index * 80}>
-                    <div className="flex items-start gap-3 bg-bg-tertiary/50 rounded-xl p-5 border border-white/5 hover:border-accent-primary/30 transition-colors">
-                      <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent-primary mt-2" />
-                      <p className="text-text-secondary text-sm leading-relaxed">{serviceText}</p>
-                    </div>
-                  </ScrollReveal>
-                )
-              })}
-            </div>
+            <ScrollReveal animation="fadeInUp" delay={100}>
+              <Accordion 
+                items={item.servicesList.map((service) => ({
+                  title: service.title?.[locale] || '',
+                  description: service.description?.[locale] || ''
+                }))}
+              />
+            </ScrollReveal>
           </div>
         </section>
       )}
