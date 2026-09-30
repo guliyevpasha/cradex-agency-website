@@ -154,6 +154,24 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "detailedSections": detailedSections,
     "servicesList": servicesList,
     "statistics": statistics,
+    "mediaGallery": {
+      "socialMediaPosts": mediaGallery.socialMediaPosts[]{
+        "url": asset->url,
+        "caption": caption
+      },
+      "motionDesigns": mediaGallery.motionDesigns[]{
+        "url": asset->url,
+        "caption": caption
+      },
+      "videoContent": mediaGallery.videoContent[]{
+        "url": asset->url,
+        "caption": caption
+      },
+      "adResults": mediaGallery.adResults[]{
+        "url": asset->url,
+        "caption": caption
+      }
+    },
     "videoUrl": videoUrl,
     "completedAt": completedAt,
     "featured": featured

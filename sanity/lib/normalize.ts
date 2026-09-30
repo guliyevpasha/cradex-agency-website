@@ -240,6 +240,24 @@ export interface SanityPortfolioDoc {
     value?: string
     icon?: string
   }>
+  mediaGallery?: {
+    socialMediaPosts?: Array<{
+      url?: string
+      caption?: { az?: string; en?: string; ru?: string; tr?: string }
+    }>
+    motionDesigns?: Array<{
+      url?: string
+      caption?: { az?: string; en?: string; ru?: string; tr?: string }
+    }>
+    videoContent?: Array<{
+      url?: string
+      caption?: { az?: string; en?: string; ru?: string; tr?: string }
+    }>
+    adResults?: Array<{
+      url?: string
+      caption?: { az?: string; en?: string; ru?: string; tr?: string }
+    }>
+  }
   videoUrl?: string
   completedAt?: string
   featured?: boolean
@@ -293,6 +311,7 @@ export function toPortfolioItem(
     detailedSections: doc.detailedSections,
     servicesList: doc.servicesList,
     statistics: doc.statistics,
+    mediaGallery: doc.mediaGallery,
     publishedAt: doc.completedAt ?? '',
     featured: Boolean(doc.featured),
   }

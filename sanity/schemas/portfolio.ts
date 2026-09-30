@@ -206,6 +206,115 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'mediaGallery',
+      title: 'Media Qalereya - YALNIZ SMM üçün',
+      description: 'Post dizaynları, motion dizaynlar, reels və reklam nəticələri',
+      type: 'object',
+      hidden: ({ document }) => document?.category !== 'smm',
+      fields: [
+        defineField({
+          name: 'socialMediaPosts',
+          title: 'Sosial Media Postları (Şəkillər)',
+          type: 'array',
+          of: [
+            {
+              type: 'image',
+              options: { hotspot: true },
+              fields: [
+                {
+                  name: 'caption',
+                  title: 'Başlıq (opsional)',
+                  type: 'object',
+                  fields: [
+                    { name: 'az', title: 'AZ', type: 'string' },
+                    { name: 'en', title: 'EN', type: 'string' },
+                    { name: 'ru', title: 'RU', type: 'string' },
+                    { name: 'tr', title: 'TR', type: 'string' },
+                  ],
+                },
+              ],
+            },
+          ],
+        }),
+        defineField({
+          name: 'motionDesigns',
+          title: 'Motion Dizaynlar (Video/GIF)',
+          type: 'array',
+          of: [
+            {
+              type: 'file',
+              options: {
+                accept: 'video/*,.gif',
+              },
+              fields: [
+                {
+                  name: 'caption',
+                  title: 'Başlıq (opsional)',
+                  type: 'object',
+                  fields: [
+                    { name: 'az', title: 'AZ', type: 'string' },
+                    { name: 'en', title: 'EN', type: 'string' },
+                    { name: 'ru', title: 'RU', type: 'string' },
+                    { name: 'tr', title: 'TR', type: 'string' },
+                  ],
+                },
+              ],
+            },
+          ],
+        }),
+        defineField({
+          name: 'videoContent',
+          title: 'Video Kontent (Reels)',
+          type: 'array',
+          of: [
+            {
+              type: 'file',
+              options: {
+                accept: 'video/*',
+              },
+              fields: [
+                {
+                  name: 'caption',
+                  title: 'Başlıq (opsional)',
+                  type: 'object',
+                  fields: [
+                    { name: 'az', title: 'AZ', type: 'string' },
+                    { name: 'en', title: 'EN', type: 'string' },
+                    { name: 'ru', title: 'RU', type: 'string' },
+                    { name: 'tr', title: 'TR', type: 'string' },
+                  ],
+                },
+              ],
+            },
+          ],
+        }),
+        defineField({
+          name: 'adResults',
+          title: 'Meta Reklam Nəticələri (Ekran görüntüləri)',
+          type: 'array',
+          of: [
+            {
+              type: 'image',
+              options: { hotspot: true },
+              fields: [
+                {
+                  name: 'caption',
+                  title: 'Başlıq (opsional)',
+                  type: 'object',
+                  fields: [
+                    { name: 'az', title: 'AZ', type: 'string' },
+                    { name: 'en', title: 'EN', type: 'string' },
+                    { name: 'ru', title: 'RU', type: 'string' },
+                    { name: 'tr', title: 'TR', type: 'string' },
+                  ],
+                },
+              ],
+            },
+          ],
+        }),
+      ],
+    }),
+    defineField({
       name: 'statistics',
       title: 'Statistikalar - YALNIZ SMM üçün',
       description: 'Kampaniya nəticələri: Reach, Engagement, CTR və s.',

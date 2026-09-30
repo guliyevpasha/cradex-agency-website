@@ -310,6 +310,193 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </section>
       )}
 
+      {/* Media Gallery - Only for SMM category */}
+      {item.category === 'smm' && item.mediaGallery && (
+        <section className="py-20 bg-bg-primary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Social Media Posts */}
+            {item.mediaGallery.socialMediaPosts && item.mediaGallery.socialMediaPosts.length > 0 && (
+              <div className="mb-20">
+                <ScrollReveal animation="fadeInUp" className="mb-12">
+                  <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
+                    {locale === 'az' ? 'Sosial Media Postları' : 
+                     locale === 'en' ? 'Social Media Posts' : 
+                     locale === 'ru' ? 'Посты в социальных сетях' : 
+                     'Sosyal Medya Gönderileri'}
+                  </h2>
+                  <p className="text-text-muted">
+                    {locale === 'az' ? 'Hazırladığımız sosial media post dizaynları' : 
+                     locale === 'en' ? 'Social media post designs we created' : 
+                     locale === 'ru' ? 'Созданные нами дизайны постов' : 
+                     'Oluşturduğumuz sosyal medya gönderi tasarımları'}
+                  </p>
+                </ScrollReveal>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {item.mediaGallery.socialMediaPosts.map((post, index) => (
+                    <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
+                      <div className="relative aspect-square rounded-xl overflow-hidden bg-bg-tertiary shadow-lg group cursor-pointer border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
+                        {post.url && (
+                          <Image
+                            src={post.url}
+                            alt={post.caption?.[locale] || `Post ${index + 1}`}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            loading="lazy"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {post.caption?.[locale] && (
+                            <div className="absolute bottom-0 left-0 right-0 p-4">
+                              <p className="text-white text-sm font-medium">{post.caption[locale]}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Motion Designs */}
+            {item.mediaGallery.motionDesigns && item.mediaGallery.motionDesigns.length > 0 && (
+              <div className="mb-20">
+                <ScrollReveal animation="fadeInUp" className="mb-12">
+                  <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
+                    {locale === 'az' ? 'Motion Dizaynlar' : 
+                     locale === 'en' ? 'Motion Designs' : 
+                     locale === 'ru' ? 'Моушн-дизайн' : 
+                     'Hareketli Tasarımlar'}
+                  </h2>
+                  <p className="text-text-muted">
+                    {locale === 'az' ? 'Animasiyalı video və GIF dizaynlarımız' : 
+                     locale === 'en' ? 'Our animated video and GIF designs' : 
+                     locale === 'ru' ? 'Наши анимированные видео и GIF-дизайны' : 
+                     'Animasyonlu video ve GIF tasarımlarımız'}
+                  </p>
+                </ScrollReveal>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {item.mediaGallery.motionDesigns.map((motion, index) => (
+                    <ScrollReveal key={index} animation="scaleIn" delay={index * 80}>
+                      <div className="relative aspect-video rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
+                        {motion.url && (
+                          <video
+                            src={motion.url}
+                            controls
+                            className="w-full h-full object-cover"
+                            preload="metadata"
+                          >
+                            {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
+                             locale === 'en' ? 'Your browser does not support video' : 
+                             locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
+                             'Tarayıcınız videoyu desteklemiyor'}
+                          </video>
+                        )}
+                        {motion.caption?.[locale] && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <p className="text-white text-sm font-medium">{motion.caption[locale]}</p>
+                          </div>
+                        )}
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Video Content (Reels) */}
+            {item.mediaGallery.videoContent && item.mediaGallery.videoContent.length > 0 && (
+              <div className="mb-20">
+                <ScrollReveal animation="fadeInUp" className="mb-12">
+                  <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
+                    {locale === 'az' ? 'Video Kontent (Reels)' : 
+                     locale === 'en' ? 'Video Content (Reels)' : 
+                     locale === 'ru' ? 'Видеоконтент (Reels)' : 
+                     'Video İçerik (Reels)'}
+                  </h2>
+                  <p className="text-text-muted">
+                    {locale === 'az' ? 'Çəkdiyimiz və montaj etdiyimiz reels videoları' : 
+                     locale === 'en' ? 'Reels videos we shot and edited' : 
+                     locale === 'ru' ? 'Снятые и смонтированные нами Reels-видео' : 
+                     'Çektiğimiz ve düzenlediğimiz reels videoları'}
+                  </p>
+                </ScrollReveal>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {item.mediaGallery.videoContent.map((video, index) => (
+                    <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
+                      <div className="relative aspect-[9/16] rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
+                        {video.url && (
+                          <video
+                            src={video.url}
+                            controls
+                            className="w-full h-full object-cover"
+                            preload="metadata"
+                          >
+                            {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
+                             locale === 'en' ? 'Your browser does not support video' : 
+                             locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
+                             'Tarayıcınız videoyu desteklemiyor'}
+                          </video>
+                        )}
+                        {video.caption?.[locale] && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <p className="text-white text-sm font-medium">{video.caption[locale]}</p>
+                          </div>
+                        )}
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Meta Ad Results */}
+            {item.mediaGallery.adResults && item.mediaGallery.adResults.length > 0 && (
+              <div>
+                <ScrollReveal animation="fadeInUp" className="mb-12">
+                  <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
+                    {locale === 'az' ? 'Meta Reklam Nəticələri' : 
+                     locale === 'en' ? 'Meta Ad Results' : 
+                     locale === 'ru' ? 'Результаты Meta Рекламы' : 
+                     'Meta Reklam Sonuçları'}
+                  </h2>
+                  <p className="text-text-muted">
+                    {locale === 'az' ? 'Kampaniya nəticələrinin ekran görüntüləri' : 
+                     locale === 'en' ? 'Campaign results screenshots' : 
+                     locale === 'ru' ? 'Скриншоты результатов кампании' : 
+                     'Kampanya sonuçlarının ekran görüntüleri'}
+                  </p>
+                </ScrollReveal>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {item.mediaGallery.adResults.map((result, index) => (
+                    <ScrollReveal key={index} animation="scaleIn" delay={index * 100}>
+                      <div className="relative aspect-video rounded-xl overflow-hidden bg-bg-tertiary shadow-xl border border-white/5 hover:border-accent-primary/30 transition-all duration-300 group cursor-pointer">
+                        {result.url && (
+                          <Image
+                            src={result.url}
+                            alt={result.caption?.[locale] || `Result ${index + 1}`}
+                            fill
+                            className="object-contain group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            loading="lazy"
+                          />
+                        )}
+                        {result.caption?.[locale] && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6">
+                            <p className="text-white font-medium">{result.caption[locale]}</p>
+                          </div>
+                        )}
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Video */}
       {item.videoUrl && (
         <section className="py-20 bg-bg-primary">
