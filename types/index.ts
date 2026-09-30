@@ -90,12 +90,18 @@ export interface PortfolioItem {
   results?: PortfolioItemTitle
   publishedAt: string
   duration?: string  // e.g., "3 ay", "2 həftə", "8 ay" etc.
+  category?: string  // e.g., "smm", "digital-marketing", etc.
   featured: boolean
   detailedSections?: Array<{
     title: PortfolioItemTitle
     description: PortfolioItemTitle
   }>
   servicesList?: Array<PortfolioItemTitle>
+  statistics?: Array<{
+    label: PortfolioItemTitle
+    value: string
+    icon?: string
+  }>
 }
 
 // Journal/Blog types

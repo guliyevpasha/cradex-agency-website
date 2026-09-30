@@ -232,6 +232,11 @@ export interface SanityPortfolioDoc {
     description?: { az?: string; en?: string; ru?: string; tr?: string }
   }>
   servicesList?: Array<{ az?: string; en?: string; ru?: string; tr?: string }>
+  statistics?: Array<{
+    label?: { az?: string; en?: string; ru?: string; tr?: string }
+    value?: string
+    icon?: string
+  }>
   videoUrl?: string
   completedAt?: string
   featured?: boolean
@@ -284,6 +289,7 @@ export function toPortfolioItem(
     duration: doc.duration,
     detailedSections: doc.detailedSections,
     servicesList: doc.servicesList,
+    statistics: doc.statistics,
     publishedAt: doc.completedAt ?? '',
     featured: Boolean(doc.featured),
   }

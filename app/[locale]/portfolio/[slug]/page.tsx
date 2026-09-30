@@ -185,6 +185,45 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </div>
       </section>
 
+      {/* Statistics - Only for SMM category */}
+      {item.category === 'smm' && item.statistics && item.statistics.length > 0 && (
+        <section className="py-16 bg-bg-secondary/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fadeInUp" className="text-center mb-12">
+              <h2 className="text-3xl font-display font-bold text-text-primary">
+                📊 Kampaniya Nəticələri
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {item.statistics.map((stat, index) => {
+                const statLabel = stat.label?.[locale] || ''
+                const iconMap: Record<string, string> = {
+                  'trending-up': '📈',
+                  'users': '👥',
+                  'message-circle': '💬',
+                  'target': '🎯',
+                  'eye': '👁️',
+                  'heart': '❤️',
+                  'bar-chart': '📊',
+                  'link': '🔗',
+                }
+                const iconEmoji = stat.icon ? iconMap[stat.icon] : '📊'
+                
+                return (
+                  <ScrollReveal key={index} animation="scaleIn" delay={index * 100}>
+                    <div className="bg-gradient-to-br from-bg-tertiary to-bg-secondary p-6 rounded-xl border border-white/5 hover:border-accent-primary/30 transition-all duration-300 hover:scale-105 text-center">
+                      <div className="text-4xl mb-3">{iconEmoji}</div>
+                      <div className="text-3xl font-bold text-accent-primary mb-2">{stat.value}</div>
+                      <div className="text-sm text-text-muted">{statLabel}</div>
+                    </div>
+                  </ScrollReveal>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Detailed Sections - Only for SMM category */}
       {item.category === 'smm' && item.detailedSections && item.detailedSections.length > 0 && (
         <section className="py-20 bg-bg-primary">
