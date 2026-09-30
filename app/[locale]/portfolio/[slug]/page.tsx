@@ -574,9 +574,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
         </section>
       )}
 
-      <CtaSection />
-
-      {/* Related Projects */}
+      {/* Related Projects - Now before CTA */}
       {relatedPortfolios.length > 0 && (
         <section className="py-20 bg-bg-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,6 +655,9 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
           </div>
         </section>
       )}
+
+      {/* CTA Section - Now at the end */}
+      <CtaSection />
     </>
   )
 }
