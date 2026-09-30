@@ -112,10 +112,12 @@ export interface PortfolioItem {
     }>
     motionDesigns?: Array<{
       url: string
+      mimeType?: string
       caption?: PortfolioItemTitle
     }>
     videoContent?: Array<{
       url: string
+      mimeType?: string
       caption?: PortfolioItemTitle
     }>
     adResults?: Array<{
