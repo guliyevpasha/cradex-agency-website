@@ -142,7 +142,8 @@
     },
     "services": {
       "title": "Xidmətlərimiz",
-      "subtitle": "Brendinizin böyüməsi üçün hərtərəfli rəqəmsal həllər"
+      "subtitle": "Brendinizin böyüməsi üçün hərtərəfli rəqəmsal həllər",
+      "relatedWork": "İşlərimiz"
     },
     "portfolio": {
       "title": "Bizim İşlərimiz",
