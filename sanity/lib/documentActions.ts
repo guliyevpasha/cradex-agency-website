@@ -1,12 +1,12 @@
 import { DocumentActionComponent } from 'sanity'
-import { DocumentDuplicateIcon } from '@sanity/icons'
+import { CopyIcon } from '@sanity/icons'
 
 export const DuplicateAction: DocumentActionComponent = (props) => {
   const { draft, published, onComplete } = props
 
   return {
     label: 'Duplicate',
-    icon: DocumentDuplicateIcon,
+    icon: CopyIcon,
     onHandle: async () => {
       const { getClient } = await import('sanity')
       const client = getClient({ apiVersion: '2024-01-01' })
