@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
-import { ChevronRight, TrendingUp, Users, MessageCircle, Target, Eye, Heart, BarChart3, Link as LinkIcon } from 'lucide-react'
+import { ChevronRight, TrendingUp, Users, MessageCircle, Target, Eye, Heart, BarChart3, Link as LinkIcon, DollarSign, ShoppingCart, Phone } from 'lucide-react'
 import { getPortfolioBySlug, getPortfolioSlugs } from '@/lib/data/portfolio'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
@@ -208,6 +208,10 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   stat.icon === 'heart' ? Heart :
                   stat.icon === 'bar-chart' ? BarChart3 :
                   stat.icon === 'link' ? LinkIcon :
+                  stat.icon === 'dollar-sign' ? DollarSign :
+                  stat.icon === 'trending-up-dollar' ? TrendingUp :
+                  stat.icon === 'shopping-cart' ? ShoppingCart :
+                  stat.icon === 'phone' ? Phone :
                   BarChart3
                 
                 return (
