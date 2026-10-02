@@ -85,70 +85,69 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                 href={`/${locale}/journal/${article.slug}`}
                 className="group block h-full"
               >
-                <article className="h-full flex flex-col rounded-2xl overflow-hidden bg-bg-tertiary/30 border border-border/20 hover:border-accent-primary/40 transition-all duration-300">
-                  {/* Image */}
-                  <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-accent-primary/20 via-bg-secondary to-accent-secondary/20">
+                <article className="h-full flex flex-col rounded-2xl overflow-hidden bg-bg-tertiary/30 backdrop-blur-sm border border-white/5 hover:border-accent-primary/40 transition-all duration-300 hover:shadow-xl hover:shadow-accent-primary/10">
+                  {/* Cover Image */}
+                  <div className="relative aspect-[16/9] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 overflow-hidden">
                     {article.image ? (
                       <Image
                         src={article.image}
                         alt={article.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 rounded-2xl bg-bg-tertiary/50 flex items-center justify-center">
-                          <svg
-                            className="w-12 h-12 text-text-tertiary"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
-                          </svg>
-                        </div>
+                      <div className="absolute inset-0 flex items-center justify-center text-5xl opacity-30">
+                        📰
                       </div>
                     )}
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 flex flex-col p-6 bg-bg-secondary/80">
+                  <div className="p-5 flex flex-col flex-1 bg-bg-secondary/80">
+                    {/* Category badge */}
+                    {article.category && (
+                      <div className="mb-3">
+                        <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-accent-primary/10 text-accent-primary border border-accent-primary/20">
+                          {article.category.toUpperCase()}
+                        </span>
+                      </div>
+                    )}
+                    
                     {/* Title */}
-                    <h3 className="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2 group-hover:text-accent-primary transition-colors">
+                    <h3 className="text-text-primary font-semibold text-lg leading-snug mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
                       {article.title}
                     </h3>
 
                     {/* Excerpt */}
-                    {article.excerpt && (
-                      <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                        {article.excerpt}
-                      </p>
-                    )}
+                    <p className="text-text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-3">
+                      {article.excerpt}
+                    </p>
 
                     {/* Meta */}
-                    <div className="flex items-center justify-between text-xs text-text-tertiary mb-4">
-                      <span className="flex items-center gap-1.5">
-                        <Calendar size={14} />
-                        {format(new Date(article.publishedAt), 'dd.MM.yyyy', {
-                          locale: localeMap[locale],
-                        })}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <Clock size={14} />
-                        {t('readingTime', { minutes: article.readingTime })}
-                      </span>
-                    </div>
-
-                    {/* Read more link */}
-                    <div className="flex items-center gap-2 text-sm font-medium text-accent-primary group-hover:gap-3 transition-all duration-200">
-                      {t('readMore')}
-                      <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+                    <div className="flex items-center justify-between text-xs text-text-muted border-t border-white/10 pt-3 mt-auto">
+                      <div className="flex items-center gap-1.5">
+                        {article.author && (
+                          <>
+                            <div className="w-6 h-6 rounded-full bg-accent-primary/10 flex items-center justify-center text-xs font-semibold text-accent-primary">
+                              {article.author.charAt(0)}
+                            </div>
+                            <span>{article.author}</span>
+                          </>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="flex items-center gap-1">
+                          <Clock size={12} />
+                          {article.readingTime} {locale === 'az' ? 'dəq' : locale === 'en' ? 'min' : locale === 'ru' ? 'мин' : 'dk'}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar size={12} />
+                          {format(new Date(article.publishedAt), 'dd.MM.yyyy', {
+                            locale: localeMap[locale],
+                          })}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </article>
