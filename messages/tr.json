@@ -143,7 +143,7 @@
     "services": {
       "title": "Hizmetlerimiz",
       "subtitle": "Markanızın büyümesi için kapsamlı dijital çözümler",
-      "relatedWork": "İşlerimiz"
+      "relatedWork": "İşlerimiz",`n    "loadMore": "Daha Fazla"
     },
     "portfolio": {
       "title": "Bizim İşlerimiz",
@@ -810,7 +810,7 @@
     },
     "benefits": "Avantajlar",
     "process": "Sürecimiz",
-    "relatedWork": "İlgili Çalışmalar"
+    "relatedWork": "İlgili Çalışmalar",`n    "loadMore": "Daha Fazla"
   },
   "contact": {
     "title": "Bizimle İletişime Geçin",
