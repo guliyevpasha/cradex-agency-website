@@ -24,6 +24,9 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
   // Use ALL items from Sanity - no limit
   const allItems = [...items]
   
+  console.log('[PortfolioFlipMarquee] Received', allItems.length, 'items from props')
+  console.log('[PortfolioFlipMarquee] Items:', allItems.map((i, idx) => `${idx}: ${i.clientName}`).join(', '))
+  
   // Split items alternately between two rows (not half/half)
   // This ensures top and bottom rows show DIFFERENT portfolios
   const topRowItems: PortfolioItem[] = []
@@ -36,6 +39,8 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
       bottomRowItems.push(item)  // 1, 3, 5, 7, 9... (odd indices)
     }
   })
+  
+  console.log('[PortfolioFlipMarquee] Split into:', topRowItems.length, 'top,', bottomRowItems.length, 'bottom')
 
   return (
     <div className="w-full overflow-hidden space-y-6">
