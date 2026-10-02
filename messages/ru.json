@@ -18,7 +18,8 @@
       "journal": "Блог",
       "calculator": "Калькулятор",
       "portfolio": "Портфолио",
-      "contact": "Контакты"
+      "contact": "Контакты",
+      "menu": "Меню"
     },
     "errors": {
       "required": "Это поле обязательно",
