@@ -69,8 +69,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 60s linear infinite'  // Slower, smoother animation
-            : 'marquee-scroll-third-reverse 60s linear infinite',
+            ? 'marquee-scroll-third 30s linear infinite'  // Faster animation - 30s
+            : 'marquee-scroll-third-reverse 30s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
