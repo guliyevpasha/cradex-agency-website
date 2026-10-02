@@ -22,15 +22,20 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
   if (!mounted || items.length === 0) return null
 
   // Use ALL items from Sanity - no limit
-  let displayItems = [...items]
+  const allItems = [...items]
   
-  // Duplicate items 2x for smooth infinite scrolling
-  displayItems = [...displayItems, ...displayItems]
-
-  // Split into two rows (distribute evenly)
-  const halfLength = Math.ceil(displayItems.length / 2)
-  const topRowItems = displayItems.slice(0, halfLength)
-  const bottomRowItems = displayItems.slice(halfLength)
+  // Split items alternately between two rows (not half/half)
+  // This ensures top and bottom rows show DIFFERENT portfolios
+  const topRowItems: PortfolioItem[] = []
+  const bottomRowItems: PortfolioItem[] = []
+  
+  allItems.forEach((item, index) => {
+    if (index % 2 === 0) {
+      topRowItems.push(item)  // 0, 2, 4, 6, 8... (even indices)
+    } else {
+      bottomRowItems.push(item)  // 1, 3, 5, 7, 9... (odd indices)
+    }
+  })
 
   return (
     <div className="w-full overflow-hidden space-y-6">
