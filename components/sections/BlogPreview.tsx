@@ -117,10 +117,22 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                     )}
                   </div>
 
-                  {/* Content - Simplified */}
-                  <div className="flex-1 flex flex-col justify-between p-6 bg-bg-secondary/80">
-                    {/* Meta - Bottom Section */}
-                    <div className="flex items-center justify-between text-xs text-text-tertiary">
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col p-6 bg-bg-secondary/80">
+                    {/* Title */}
+                    <h3 className="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2 group-hover:text-accent-primary transition-colors">
+                      {article.title}
+                    </h3>
+
+                    {/* Excerpt */}
+                    {article.excerpt && (
+                      <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                        {article.excerpt}
+                      </p>
+                    )}
+
+                    {/* Meta */}
+                    <div className="flex items-center justify-between text-xs text-text-tertiary mb-4">
                       <span className="flex items-center gap-1.5">
                         <Calendar size={14} />
                         {format(new Date(article.publishedAt), 'dd.MM.yyyy', {
@@ -134,7 +146,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                     </div>
 
                     {/* Read more link */}
-                    <div className="mt-4 flex items-center gap-2 text-sm font-medium text-accent-primary group-hover:gap-3 transition-all duration-200">
+                    <div className="flex items-center gap-2 text-sm font-medium text-accent-primary group-hover:gap-3 transition-all duration-200">
                       {t('readMore')}
                       <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
                     </div>
