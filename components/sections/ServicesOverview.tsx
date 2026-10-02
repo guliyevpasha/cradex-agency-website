@@ -14,7 +14,7 @@ export function ServicesOverview() {
   const services = getAllServicesSync()
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden scroll-mt-20">
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none -z-10 opacity-[0.025]"
