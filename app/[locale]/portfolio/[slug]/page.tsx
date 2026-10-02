@@ -396,32 +396,42 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                      'Animasyonlu video ve GIF tasarımlarımız'}
                   </p>
                 </ScrollReveal>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {item.mediaGallery.motionDesigns.map((motion, index) => (
-                    <ScrollReveal key={index} animation="scaleIn" delay={index * 80}>
-                      <div className="relative aspect-video rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
-                        {motion.url && (
-                          <video
-                            src={`${motion.url}#t=0.1`}
-                            controls
-                            playsInline
-                            className="w-full h-full object-cover"
-                            preload="metadata"
-                          >
-                            {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
-                             locale === 'en' ? 'Your browser does not support video' : 
-                             locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
-                             'Tarayıcınız videoyu desteklemiyor'}
-                          </video>
-                        )}
-                        {motion.caption?.[locale] && (
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
-                            <p className="text-white text-sm font-medium">{motion.caption[locale]}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {item.mediaGallery.motionDesigns.map((motion, index) => {
+                    // Get aspect ratio from metadata: 4:5 (1080x1350 - Feed) or 9:16 (1080x1920 - Story)
+                    const aspectRatio = motion.aspectRatio || '9:16'
+                    const aspectClass = aspectRatio === '4:5' ? 'aspect-[4/5]' : 'aspect-[9/16]'
+                    
+                    return (
+                      <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
+                        <div className={`relative ${aspectClass} rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300 group`}>
+                          {motion.url && (
+                            <video
+                              src={`${motion.url}#t=0.1`}
+                              controls
+                              playsInline
+                              className="w-full h-full object-cover"
+                              preload="metadata"
+                            >
+                              {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
+                               locale === 'en' ? 'Your browser does not support video' : 
+                               locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
+                               'Tarayıcınız videoyu desteklemiyor'}
+                            </video>
+                          )}
+                          {motion.caption?.[locale] && (
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
+                              <p className="text-white text-sm font-medium">{motion.caption[locale]}</p>
+                            </div>
+                          )}
+                          {/* Format badge */}
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            {aspectRatio === '4:5' ? 'Feed' : 'Story'}
                           </div>
-                        )}
-                      </div>
-                    </ScrollReveal>
-                  ))}
+                        </div>
+                      </ScrollReveal>
+                    )
+                  })}
                 </div>
               </div>
             )}
@@ -444,31 +454,41 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   </p>
                 </ScrollReveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {item.mediaGallery.videoContent.map((video, index) => (
-                    <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
-                      <div className="relative aspect-[9/16] rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300">
-                        {video.url && (
-                          <video
-                            src={`${video.url}#t=0.1`}
-                            controls
-                            playsInline
-                            className="w-full h-full object-cover"
-                            preload="metadata"
-                          >
-                            {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
-                             locale === 'en' ? 'Your browser does not support video' : 
-                             locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
-                             'Tarayıcınız videoyu desteklemiyor'}
-                          </video>
-                        )}
-                        {video.caption?.[locale] && (
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
-                            <p className="text-white text-sm font-medium">{video.caption[locale]}</p>
+                  {item.mediaGallery.videoContent.map((video, index) => {
+                    // Get aspect ratio from metadata: 4:5 (1080x1350 - Feed) or 9:16 (1080x1920 - Story/Reels)
+                    const aspectRatio = video.aspectRatio || '9:16'
+                    const aspectClass = aspectRatio === '4:5' ? 'aspect-[4/5]' : 'aspect-[9/16]'
+                    
+                    return (
+                      <ScrollReveal key={index} animation="scaleIn" delay={index * 60}>
+                        <div className={`relative ${aspectClass} rounded-xl overflow-hidden bg-bg-tertiary shadow-lg border border-white/5 hover:border-accent-primary/30 transition-all duration-300 group`}>
+                          {video.url && (
+                            <video
+                              src={`${video.url}#t=0.1`}
+                              controls
+                              playsInline
+                              className="w-full h-full object-cover"
+                              preload="metadata"
+                            >
+                              {locale === 'az' ? 'Brauzerniz video dəstəkləmir' : 
+                               locale === 'en' ? 'Your browser does not support video' : 
+                               locale === 'ru' ? 'Ваш браузер не поддерживает видео' : 
+                               'Tarayıcınız videoyu desteklemiyor'}
+                            </video>
+                          )}
+                          {video.caption?.[locale] && (
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
+                              <p className="text-white text-sm font-medium">{video.caption[locale]}</p>
+                            </div>
+                          )}
+                          {/* Format badge */}
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            {aspectRatio === '4:5' ? 'Feed' : 'Reels'}
                           </div>
-                        )}
-                      </div>
-                    </ScrollReveal>
-                  ))}
+                        </div>
+                      </ScrollReveal>
+                    )
+                  })}
                 </div>
               </div>
             )}

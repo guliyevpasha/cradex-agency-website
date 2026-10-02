@@ -116,7 +116,11 @@ export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az
 // ─── Portfolio Queries ───────────────────────────────────────────────────────
 
 export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioItem[]> {
-  const query = `*[_type == "portfolio"] | order(completedAt desc) {
+  // First check total count
+  const count = await client.fetch('count(*[_type == "portfolio"])')
+  console.log('[Sanity] Total portfolio documents in Sanity:', count)
+  
+  const query = `*[_type == "portfolio"] | order(completedAt desc) [0...100] {
     "id": _id,
     "slug": slug.current,
     "title": title,
@@ -133,7 +137,13 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
     "featured": featured
   }`
   
-  return toPortfolioItems(await client.fetch(query))
+  const result = await client.fetch(query)
+  console.log('[Sanity] Query returned:', result?.length || 0, 'portfolios')
+  
+  const normalized = toPortfolioItems(result)
+  console.log('[Sanity] After normalization:', normalized.length, 'portfolios')
+  
+  return normalized
 }
 
 export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
@@ -164,12 +174,14 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
         "url": asset->url,
         "mimeType": asset->mimeType,
         "originalFilename": asset->originalFilename,
+        "aspectRatio": aspectRatio,
         "caption": caption
       },
       "videoContent": mediaGallery.videoContent[]{
         "url": asset->url,
         "mimeType": asset->mimeType,
         "originalFilename": asset->originalFilename,
+        "aspectRatio": aspectRatio,
         "caption": caption
       },
       "adResults": mediaGallery.adResults[]{

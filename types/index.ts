@@ -114,11 +114,13 @@ export interface PortfolioItem {
     motionDesigns?: Array<{
       url: string
       mimeType?: string
+      aspectRatio?: '4:5' | '9:16'
       caption?: PortfolioItemTitle
     }>
     videoContent?: Array<{
       url: string
       mimeType?: string
+      aspectRatio?: '4:5' | '9:16'
       caption?: PortfolioItemTitle
     }>
     adResults?: Array<{
