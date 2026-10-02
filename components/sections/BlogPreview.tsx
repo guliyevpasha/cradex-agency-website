@@ -88,10 +88,10 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                 <article className="h-full flex flex-col rounded-2xl overflow-hidden bg-bg-tertiary/30 backdrop-blur-sm border border-white/5 hover:border-accent-primary/40 transition-all duration-300 hover:shadow-xl hover:shadow-accent-primary/10">
                   {/* Cover Image */}
                   <div className="relative aspect-[16/9] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 overflow-hidden">
-                    {article.image ? (
+                    {((article as any).image || (article as any).coverImage) ? (
                       <Image
-                        src={article.image}
-                        alt={article.title}
+                        src={(article as any).image || (article as any).coverImage}
+                        alt={(article as any).title || (article as any).titleKey || 'Article'}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -114,14 +114,14 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                       </div>
                     )}
                     
-                    {/* Title */}
+                    {/* Title - use both title and titleKey for compatibility */}
                     <h3 className="text-text-primary font-semibold text-lg leading-snug mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">
-                      {article.title}
+                      {(article as any).title || (article as any).titleKey || 'Untitled'}
                     </h3>
 
-                    {/* Excerpt */}
+                    {/* Excerpt - use both excerpt and excerptKey for compatibility */}
                     <p className="text-text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-3">
-                      {article.excerpt}
+                      {(article as any).excerpt || (article as any).excerptKey || ''}
                     </p>
 
                     {/* Meta */}
@@ -132,21 +132,21 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                             <div className="w-6 h-6 rounded-full bg-accent-primary/10 flex items-center justify-center text-xs font-semibold text-accent-primary">
                               {typeof article.author === 'string' 
                                 ? article.author.charAt(0) 
-                                : article.author.name?.charAt(0) || 'A'}
+                                : (article.author as any).name?.charAt(0) || 'A'}
                             </div>
                             <span>
                               {typeof article.author === 'string' 
                                 ? article.author 
-                                : article.author.name || 'Anonymous'}
+                                : (article.author as any).name || 'Anonymous'}
                             </span>
                           </>
                         )}
                       </div>
                       <div className="flex items-center gap-3">
-                        {article.readingTime && (
+                        {((article as any).readingTime || (article as any).readingTimeMinutes) && (
                           <span className="flex items-center gap-1">
                             <Clock size={12} />
-                            {article.readingTime} {locale === 'az' ? 'dəq' : locale === 'en' ? 'min' : locale === 'ru' ? 'мин' : 'dk'}
+                            {(article as any).readingTime || (article as any).readingTimeMinutes} {locale === 'az' ? 'dəq' : locale === 'en' ? 'min' : locale === 'ru' ? 'мин' : 'dk'}
                           </span>
                         )}
                         <span className="flex items-center gap-1">
