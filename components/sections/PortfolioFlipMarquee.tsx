@@ -21,16 +21,11 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
 
   if (!mounted || items.length === 0) return null
 
-  // Use all items - duplicate if fewer than 12 for smooth scrolling
+  // Use ALL items from Sanity - no limit
   let displayItems = [...items]
   
-  // If we have fewer than 12 items, duplicate them for smooth scrolling
-  if (displayItems.length < 12) {
-    while (displayItems.length < 12) {
-      displayItems = [...displayItems, ...items]
-    }
-    displayItems = displayItems.slice(0, 12)
-  }
+  // Duplicate items 2x for smooth infinite scrolling
+  displayItems = [...displayItems, ...displayItems]
 
   // Split into two rows (distribute evenly)
   const halfLength = Math.ceil(displayItems.length / 2)
@@ -69,8 +64,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 30s linear infinite'  // Faster animation - 30s
-            : 'marquee-scroll-third-reverse 30s linear infinite',
+            ? 'marquee-scroll-third 15s linear infinite'  // Much faster - 15 seconds
+            : 'marquee-scroll-third-reverse 15s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
