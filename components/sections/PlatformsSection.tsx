@@ -2,7 +2,20 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Search, Share2, PlayCircle, Briefcase, Globe } from 'lucide-react'
+import { 
+  Search, 
+  Share2, 
+  PlayCircle, 
+  Briefcase, 
+  Globe,
+  Target,
+  Rocket,
+  TrendingUp,
+  BarChart3,
+  Compass,
+  Lightbulb,
+  Zap
+} from 'lucide-react'
 
 interface Platform {
   name: string
@@ -15,12 +28,42 @@ interface PlatformsSectionProps {
   platforms: Platform[]
 }
 
+// Icon mapping based on platform/process step names
 const platformIcons: Record<string, typeof Search> = {
+  // Digital Marketing platforms
   'Google Ads': Search,
   'Meta Ads (Facebook & Instagram)': Share2,
   'TikTok Ads': PlayCircle,
   'LinkedIn Ads': Briefcase,
   'Yandex Ads': Globe,
+  
+  // SMM Process Steps (Azerbaijani)
+  'Kəşfiyyat və Audit': Search,
+  'Strategiya və Planlaşdırma': Target,
+  'İcra və Optimallaşdırma': Rocket,
+  'Davamlı İnkişaf': TrendingUp,
+  'Ölçmə və Hesabat': BarChart3,
+  
+  // SMM Process Steps (English)
+  'Discovery & Audit': Search,
+  'Strategy & Planning': Target,
+  'Execution & Optimization': Rocket,
+  'Continuous Development': TrendingUp,
+  'Measurement & Reporting': BarChart3,
+  
+  // SMM Process Steps (Russian)
+  'Разведка и аудит': Search,
+  'Стратегия и планирование': Target,
+  'Реализация и оптимизация': Rocket,
+  'Непрерывное развитие': TrendingUp,
+  'Измерение и отчётность': BarChart3,
+  
+  // SMM Process Steps (Turkish)
+  'Keşif ve Audit': Search,
+  'Strateji ve Planlama': Target,
+  'Uygulama ve Optimizasyon': Rocket,
+  'Sürekli Gelişim': TrendingUp,
+  'Ölçme ve Raporlama': BarChart3,
 }
 
 export function PlatformsSection({ title, subtitle, platforms }: PlatformsSectionProps) {
