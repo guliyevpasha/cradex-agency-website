@@ -16,7 +16,7 @@ function PortfolioContent() {
   const [activeCategory, setActiveCategory] = useState<PortfolioCategory>('all')
   const [allItems, setAllItems] = useState<PortfolioItem[]>([])
   const [loading, setLoading] = useState(true)
-  const [displayCount, setDisplayCount] = useState(10)
+  const [displayCount, setDisplayCount] = useState(9) // Start with 9 for mobile, 15 for desktop
 
   useEffect(() => {
     getAllPortfolio().then((items) => {
@@ -27,7 +27,7 @@ function PortfolioContent() {
 
   // Reset display count when category changes
   useEffect(() => {
-    setDisplayCount(10)
+    setDisplayCount(9)
   }, [activeCategory])
 
   // Count items per category
@@ -48,12 +48,12 @@ function PortfolioContent() {
     [allItems, activeCategory]
   )
 
-  // Display items (limited by displayCount on mobile)
+  // Display items (limited by displayCount)
   const displayedItems = useMemo(() => filtered.slice(0, displayCount), [filtered, displayCount])
   const hasMore = displayedItems.length < filtered.length
 
   const handleLoadMore = () => {
-    setDisplayCount((prev) => prev + 10)
+    setDisplayCount((prev) => prev + 9) // Load 9 more items each time
   }
 
   return (
@@ -103,18 +103,20 @@ function PortfolioContent() {
             <>
               <PortfolioGrid items={displayedItems} />
               
-              {/* Load More Button - Only on mobile/tablet (below lg breakpoint) */}
+              {/* Load More Button - Show when there are more items */}
               {hasMore && (
-                <div className="mt-12 flex justify-center lg:hidden">
+                <div className="mt-12 flex justify-center">
                   <button
                     onClick={handleLoadMore}
-                    className="px-8 py-3.5 rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-medium text-base hover:shadow-[0_0_24px_rgba(108,99,255,0.5)] transition-all duration-300 hover:scale-105"
+                    className="px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   >
-                    {t('loadMore')}
+                    <span>{t('loadMore')}</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
                 </div>
               )}
-            </>
           )}
         </div>
       </section>
