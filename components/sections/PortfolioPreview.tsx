@@ -1,19 +1,14 @@
-import Link from 'next/link'
-import { useTranslations, useLocale } from 'next-intl'
-import { ArrowRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
+import { getLocale } from 'next-intl/server'
 import { getAllPortfolio } from '@/lib/data/portfolio'
+import PortfolioPreviewClient from './PortfolioPreviewClient'
 
 export async function PortfolioPreview() {
-  // Get all portfolio items for the marquee (not just featured)
-  const allItems = await getAllPortfolio()
+  const locale = await getLocale()
+  
+  // Get ALL portfolio items for the marquee (no limit)
+  const allItems = await getAllPortfolio(locale)
 
   return (
     <PortfolioPreviewClient items={allItems} />
   )
 }
-
-// Client-renderable inner component
-import PortfolioPreviewClient from './PortfolioPreviewClient'
