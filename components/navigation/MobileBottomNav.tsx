@@ -61,7 +61,7 @@ export function MobileBottomNav({ locale }: MobileBottomNavProps) {
     <>
       {/* Mobile Bottom Navigation - Only visible on mobile */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 pb-safe">
-        <div className="relative mx-4 mb-4 px-4 py-2.5 bg-bg-secondary/95 backdrop-blur-xl border border-white/5 rounded-full shadow-2xl">
+        <div className="relative mx-4 mb-4 px-4 py-2.5 bg-bg-secondary/95 backdrop-blur-xl border border-white/5 rounded-3xl shadow-2xl">
           <div className="flex items-center justify-around">
             {navItems.map((item) => {
               if (item.isCenter) {
