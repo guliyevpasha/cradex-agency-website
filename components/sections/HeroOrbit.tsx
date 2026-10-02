@@ -227,7 +227,7 @@ export function HeroOrbit() {
           >
             360°
           </span>
-          <span className="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-text-muted leading-tight">
+          <span className="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] leading-tight bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
             {t('coreLabel')}
           </span>
         </div>

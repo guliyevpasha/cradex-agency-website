@@ -3,12 +3,32 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ChevronDown, CheckCircle2, Calendar } from 'lucide-react'
+import { 
+  ChevronDown, 
+  CheckCircle2, 
+  Calendar,
+  Search,
+  Target,
+  FileEdit,
+  Rocket,
+  BarChart3,
+  Zap
+} from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 interface ProcessTimelineProps {
   steps?: any[] // Optional, not used for Digital Marketing
 }
+
+// Icon mapping for each step
+const stepIcons = [
+  Search,      // 01 - Kəşfiyyat və Audit
+  Target,      // 02 - Strategiya və Planlaşdırma
+  FileEdit,    // 03 - Kontent Yaradılması
+  Rocket,      // 04 - İcra və Optimizasiya
+  BarChart3,   // 05 - Hesabat və Təhlil
+  Zap,         // 06 - Davamlı İnkişaf
+]
 
 export function ProcessTimeline({ steps }: ProcessTimelineProps) {
   const t = useTranslations('services')
@@ -172,16 +192,28 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                     } border`}
                   >
                     <div className="flex items-center justify-between p-4 sm:p-6">
-                      {/* Left: Number and Title */}
+                      {/* Left: Icon and Title */}
                       <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                        {/* Modern Icon with glow effect */}
                         <div
-                          className={`flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-bold text-xs sm:text-sm transition-colors ${
+                          className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center transition-all duration-300 ${
                             isOpen
-                              ? 'bg-accent-primary text-white'
-                              : 'bg-accent-primary/10 text-accent-primary'
+                              ? 'bg-gradient-to-br from-accent-primary to-accent-secondary shadow-lg shadow-accent-primary/50'
+                              : 'bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 hover:shadow-md hover:shadow-accent-primary/30'
                           }`}
                         >
-                          {String(step.step).padStart(2, '0')}
+                          {(() => {
+                            const IconComponent = stepIcons[index] || Search
+                            return (
+                              <IconComponent
+                                size={24}
+                                className={`transition-colors ${
+                                  isOpen ? 'text-white' : 'text-accent-primary'
+                                }`}
+                                strokeWidth={2}
+                              />
+                            )
+                          })()}
                         </div>
                         <h3
                           className={`font-bold text-base sm:text-lg transition-colors ${
@@ -192,7 +224,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                         </h3>
                       </div>
 
-                      {/* Right: Icon */}
+                      {/* Right: Chevron */}
                       <motion.div
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
@@ -214,8 +246,8 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-14 sm:pl-20">
-                            <div className="border-l-2 border-accent-primary/50 pl-4 sm:pl-6">
+                          <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-16 sm:pl-24">
+                            <div className="border-l-2 border-accent-primary/30 pl-4 sm:pl-6">
                               <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-4">
                                 {step.description}
                               </p>
