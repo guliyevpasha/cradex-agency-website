@@ -79,23 +79,22 @@ export function PlatformsSection({ title, subtitle, platforms }: PlatformsSectio
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-bg-tertiary/50 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300">
-                  {/* Number and Icon - Horizontal on mobile */}
-                  <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-0">
-                    {/* Number */}
-                    <div className="flex-shrink-0">
-                      <span className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 select-none">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
+                <div className="flex items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-bg-tertiary/50 border border-accent-primary/10 hover:border-accent-primary/30 hover:bg-bg-tertiary/70 transition-all duration-300">
+                  {/* Icon only - removed number */}
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotateY: 15 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="flex-shrink-0"
+                    style={{
+                      transformStyle: 'preserve-3d',
+                    }}
+                  >
+                    <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                      'bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]'
+                    }`}>
+                      <Icon size={28} className="text-accent-primary transition-all duration-300" strokeWidth={2.5} />
                     </div>
-
-                    {/* Icon */}
-                    <div className="flex-shrink-0 sm:mt-2">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center group-hover:border-accent-primary/50 group-hover:bg-accent-primary/20 transition-all duration-300">
-                        <Icon size={20} className="sm:w-6 sm:h-6 text-accent-primary" />
-                      </div>
-                    </div>
-                  </div>
+                  </motion.div>
 
                   {/* Content */}
                   <div className="flex-1 w-full">
