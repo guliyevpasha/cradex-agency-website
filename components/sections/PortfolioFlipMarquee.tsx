@@ -21,20 +21,21 @@ export function PortfolioFlipMarquee({ items }: PortfolioFlipMarqueeProps) {
 
   if (!mounted || items.length === 0) return null
 
-  // Ensure we have at least 12 unique items
+  // Use all items - duplicate if fewer than 12 for smooth scrolling
   let displayItems = [...items]
   
-  // If we have fewer than 12 items, duplicate them
-  while (displayItems.length < 12) {
-    displayItems = [...displayItems, ...items]
+  // If we have fewer than 12 items, duplicate them for smooth scrolling
+  if (displayItems.length < 12) {
+    while (displayItems.length < 12) {
+      displayItems = [...displayItems, ...items]
+    }
+    displayItems = displayItems.slice(0, 12)
   }
 
-  // Take first 12 unique items
-  displayItems = displayItems.slice(0, 12)
-
-  // Split into two rows of 6 each
-  const topRowItems = displayItems.slice(0, 6)
-  const bottomRowItems = displayItems.slice(6, 12)
+  // Split into two rows (distribute evenly)
+  const halfLength = Math.ceil(displayItems.length / 2)
+  const topRowItems = displayItems.slice(0, halfLength)
+  const bottomRowItems = displayItems.slice(halfLength)
 
   return (
     <div className="w-full overflow-hidden space-y-6">
@@ -56,7 +57,7 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
   const locale = useLocale()
   const t = useTranslations('portfolio')
   
-  // Multiply items 3 times for seamless loop (was 6x)
+  // Multiply items 3 times for seamless infinite loop
   const displayItems = [...items, ...items, ...items]
 
   return (
@@ -68,8 +69,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 8s linear infinite'  // Much faster animation for mobile
-            : 'marquee-scroll-third-reverse 8s linear infinite',
+            ? 'marquee-scroll-third 60s linear infinite'  // Slower, smoother animation
+            : 'marquee-scroll-third-reverse 60s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
