@@ -31,7 +31,7 @@ export function MobileBottomNav({ locale }: MobileBottomNavProps) {
     {
       id: 'services',
       label: t('services'),
-      href: `/${locale}/services/smm`,
+      href: `/${locale}#services`,
       icon: Briefcase,
     },
     {
