@@ -194,29 +194,34 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
                     <div className="flex items-center justify-between p-4 sm:p-6">
                       {/* Left: Icon and Title */}
                       <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
-                        {/* Modern Icon with glow effect */}
-                        <div
-                          className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                        {/* Modern Icon with 3D effect and glow */}
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotateY: 15 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                          className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center transition-all duration-300 ${
                             isOpen
-                              ? 'bg-gradient-to-br from-accent-primary to-accent-secondary shadow-lg shadow-accent-primary/50'
-                              : 'bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 hover:shadow-md hover:shadow-accent-primary/30'
+                              ? 'bg-gradient-to-br from-accent-primary via-accent-secondary to-accent-primary shadow-[0_0_30px_rgba(99,102,241,0.6)]'
+                              : 'bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]'
                           }`}
+                          style={{
+                            transformStyle: 'preserve-3d',
+                          }}
                         >
                           {(() => {
                             const IconComponent = stepIcons[index] || Search
                             return (
                               <IconComponent
-                                size={24}
-                                className={`transition-colors ${
-                                  isOpen ? 'text-white' : 'text-accent-primary'
+                                size={28}
+                                className={`transition-all duration-300 ${
+                                  isOpen ? 'text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.5)]' : 'text-accent-primary'
                                 }`}
-                                strokeWidth={2}
+                                strokeWidth={2.5}
                               />
                             )
                           })()}
-                        </div>
+                        </motion.div>
                         <h3
-                          className={`font-bold text-base sm:text-lg transition-colors ${
+                          className={`font-bold text-base sm:text-lg lg:text-xl transition-colors ${
                             isOpen ? 'text-text-primary' : 'text-text-secondary'
                           }`}
                         >

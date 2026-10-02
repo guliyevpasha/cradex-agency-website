@@ -807,23 +807,23 @@
       "platformsSubtitle": "İŞ PROSESIMIZ",
       "platforms": [
         {
-          "name": "01 - Kəşfiyyat və Audit",
+          "name": "Kəşfiyyat və Audit",
           "description": "Hesablarınızın mövcud vəziyyətini 100+ meyar üzrə yoxlayır, boşluqları müəyyən edirik."
         },
         {
-          "name": "02 - Strategiya və Planlaşdırma",
+          "name": "Strategiya və Planlaşdırma",
           "description": "Rəqib analizi, hədəf auditoriya xəritəsi və 6 aylıq böyümə yol xəritəsi hazırlayırıq."
         },
         {
-          "name": "03 - İcra və Optimallaşdırma",
+          "name": "İcra və Optimallaşdırma",
           "description": "Kontent istehsalı, reklam kampaniyaları, icma idarəetməsi - hamısı paralel həyata keçirilir."
         },
         {
-          "name": "04 - Davamlı İnkişaf",
+          "name": "Davamlı İnkişaf",
           "description": "Performans metriklərinə əsasən strategiyanı davamlı şəkildə təkmilləşdirir və optimallaşdırırıq."
         },
         {
-          "name": "05 - Ölçmə və Hesabat",
+          "name": "Ölçmə və Hesabat",
           "description": "Aylıq performans hesabatı, hər paylaşımın təsirini real zamanda izləyir, strategiyanı tənzimləyirik."
         }
       ],
