@@ -130,17 +130,25 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                         {article.author && (
                           <>
                             <div className="w-6 h-6 rounded-full bg-accent-primary/10 flex items-center justify-center text-xs font-semibold text-accent-primary">
-                              {article.author.charAt(0)}
+                              {typeof article.author === 'string' 
+                                ? article.author.charAt(0) 
+                                : article.author.name?.charAt(0) || 'A'}
                             </div>
-                            <span>{article.author}</span>
+                            <span>
+                              {typeof article.author === 'string' 
+                                ? article.author 
+                                : article.author.name || 'Anonymous'}
+                            </span>
                           </>
                         )}
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1">
-                          <Clock size={12} />
-                          {article.readingTime} {locale === 'az' ? 'dəq' : locale === 'en' ? 'min' : locale === 'ru' ? 'мин' : 'dk'}
-                        </span>
+                        {article.readingTime && (
+                          <span className="flex items-center gap-1">
+                            <Clock size={12} />
+                            {article.readingTime} {locale === 'az' ? 'dəq' : locale === 'en' ? 'min' : locale === 'ru' ? 'мин' : 'dk'}
+                          </span>
+                        )}
                         <span className="flex items-center gap-1">
                           <Calendar size={12} />
                           {format(new Date(article.publishedAt), 'dd.MM.yyyy', {
