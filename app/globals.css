@@ -35,6 +35,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Default font size: 16px for desktop */
+    font-size: 16px;
+  }
+
+  /* Mobile devices: smaller base font size (14px) */
+  @media (max-width: 767px) {
+    html {
+      font-size: 14px;
+    }
   }
 
   body {
