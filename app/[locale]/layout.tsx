@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { MobileBottomNav } from '@/components/navigation/MobileBottomNav'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { PromoPopup } from '@/components/ui/PromoPopup'
 import '@/app/globals.css'
@@ -93,10 +94,11 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ErrorBoundary>
             <Header />
-            <main id="main-content" tabIndex={-1}>
+            <main id="main-content" tabIndex={-1} className="pb-20 md:pb-0">
               {children}
             </main>
             <Footer />
+            <MobileBottomNav locale={locale} />
             <PromoPopup />
           </ErrorBoundary>
         </NextIntlClientProvider>

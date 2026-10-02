@@ -18,7 +18,8 @@
       "journal": "Blog",
       "calculator": "Calculator",
       "portfolio": "Portfolio",
-      "contact": "Contact"
+      "contact": "Contact",
+      "menu": "Menu"
     },
     "errors": {
       "required": "This field is required",

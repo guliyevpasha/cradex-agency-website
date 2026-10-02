@@ -18,7 +18,8 @@
       "journal": "Bloq",
       "calculator": "Kalkulyator",
       "portfolio": "Portfolio",
-      "contact": "Əlaqə"
+      "contact": "Əlaqə",
+      "menu": "Menyu"
     },
     "errors": {
       "required": "Bu sahə məcburidir",

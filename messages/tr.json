@@ -18,7 +18,8 @@
       "journal": "Blog",
       "calculator": "Hesaplayıcı",
       "portfolio": "Portföy",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "menu": "Menü"
     },
     "errors": {
       "required": "Bu alan zorunludur",
