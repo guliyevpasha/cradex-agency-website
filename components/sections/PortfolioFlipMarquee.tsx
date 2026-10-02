@@ -57,8 +57,10 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
   const locale = useLocale()
   const t = useTranslations('portfolio')
   
-  // Multiply items 3 times for seamless infinite loop
-  const displayItems = [...items, ...items, ...items]
+  // Duplicate items enough times for seamless loop
+  // If we have fewer items, duplicate more; if more items, duplicate less
+  const duplicateCount = items.length < 6 ? 4 : items.length < 10 ? 3 : 2
+  const displayItems = Array(duplicateCount).fill(items).flat()
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -69,8 +71,8 @@ function MarqueeFlipRow({ items, direction }: MarqueeFlipRowProps) {
         )}
         style={{
           animation: direction === 'ltr' 
-            ? 'marquee-scroll-third 15s linear infinite'  // Much faster - 15 seconds
-            : 'marquee-scroll-third-reverse 15s linear infinite',
+            ? 'marquee-scroll-third 25s linear infinite'  // Slower for more items
+            : 'marquee-scroll-third-reverse 25s linear infinite',
         }}
       >
         {displayItems.map((item, index) => (
@@ -143,8 +145,9 @@ function FlipCard({ item }: FlipCardProps) {
   return (
     <div
       className={cn(
-        // Much smaller cards on mobile to show more portfolios at once
-        'flex-shrink-0 w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px]',
+        // MUCH smaller cards to show MORE portfolios at once
+        // Mobile: ~140px shows 2-3 cards, PC: ~200px shows 5-6 cards
+        'flex-shrink-0 w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px]',
         'group relative',
         '[perspective:1000px]'
       )}
