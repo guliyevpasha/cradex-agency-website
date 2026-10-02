@@ -535,23 +535,23 @@
       "platformsSubtitle": "İŞ SÜRECİMİZ",
       "platforms": [
         {
-          "name": "01 - Keşif ve Audit",
+          "name": "Keşif ve Audit",
           "description": "Hesaplarınızın mevcut durumunu 100+ kriter üzerinden kontrol ediyor, boşlukları belirliyoruz."
         },
         {
-          "name": "02 - Strateji ve Planlama",
+          "name": "Strateji ve Planlama",
           "description": "Rakip analizi, hedef kitle haritası ve 6 aylık büyüme yol haritası hazırlıyoruz."
         },
         {
-          "name": "03 - Uygulama ve Optimizasyon",
+          "name": "Uygulama ve Optimizasyon",
           "description": "İçerik üretimi, reklam kampanyaları, topluluk yönetimi - hepsi paralel olarak gerçekleştiriliyor."
         },
         {
-          "name": "04 - Sürekli Gelişim",
+          "name": "Sürekli Gelişim",
           "description": "Performans metriklerine göre stratejiyi sürekli olarak geliştiriyor ve optimize ediyoruz."
         },
         {
-          "name": "05 - Ölçme ve Raporlama",
+          "name": "Ölçme ve Raporlama",
           "description": "Aylık performans raporu, her paylaşımın etkisini gerçek zamanlı izliyor, stratejiyi ayarlıyoruz."
         }
       ],

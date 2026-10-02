@@ -535,23 +535,23 @@
       "platformsSubtitle": "OUR PROCESS",
       "platforms": [
         {
-          "name": "01 - Discovery & Audit",
+          "name": "Discovery & Audit",
           "description": "We check the current status of your accounts on 100+ criteria and identify gaps."
         },
         {
-          "name": "02 - Strategy & Planning",
+          "name": "Strategy & Planning",
           "description": "We prepare competitor analysis, target audience map and 6-month growth roadmap."
         },
         {
-          "name": "03 - Execution & Optimization",
+          "name": "Execution & Optimization",
           "description": "Content production, advertising campaigns, community management - all executed in parallel."
         },
         {
-          "name": "04 - Continuous Development",
+          "name": "Continuous Development",
           "description": "We continuously improve and optimize the strategy based on performance metrics."
         },
         {
-          "name": "05 - Measurement & Reporting",
+          "name": "Measurement & Reporting",
           "description": "Monthly performance report, tracking the impact of each post in real time and adjusting strategy."
         }
       ],
