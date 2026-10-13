@@ -1080,7 +1080,178 @@
       "shortDesc": "Next.js, React Native, UI/UX",
       "description": "Müasir texnologiyalarla sürətli, təhlükəsiz və gözəl veb-saytlar və mobil tətbiqlər hazırlayırıq.",
       "metaTitle": "Veb-sayt Hazırlanması | Cradex Agency",
-      "metaDescription": "Next.js, React Native ilə müasir veb-sayt və mobil tətbiq hazırlanması xidmətləri."
+      "metaDescription": "Next.js, React Native ilə müasir veb-sayt və mobil tətbiq hazırlanması xidmətləri.",
+      "hero": {
+        "title": "Saytınız 48 saata hazır.",
+        "titleAccent": "Əvvəlcə demosunu görün.",
+        "subtitle": "Əvvəlcə biznesiniz üçün sayt demosu hazırlayıb sizə göstəririk. Bəyənsəniz, illik 299 AZN-dən başlayan paketlə yayımlayırıq.",
+        "primaryButton": "Pulsuz demo istəyirəm",
+        "secondaryButton": "AI ilə məhsul yaratmağı öyrənin",
+        "demoNote": "Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur."
+      },
+      "portfolioShowcase": {
+        "label": "SAYT NÜMUNƏLƏRİ",
+        "title": "Sahənizi seçin. Demonuzu 48 saata göndərək.",
+        "subtitle": "18 hazır sayt dizaynı. Biznesinizə uyğun olanı seçin, biz də onu brendinizə uyğunlaşdıraq.",
+        "categories": {
+          "all": "Hamısı",
+          "medical": "Klinika",
+          "automotive": "Avtomobil",
+          "realestate": "Daşınmaz əmlak",
+          "beauty": "Gözəllik",
+          "law": "Hüquq / konsaltinq",
+          "education": "Təhsil",
+          "other": "Digər"
+        },
+        "viewDetails": "Böyük ölçüdə bax"
+      },
+      "pricing": {
+        "label": "ŞƏXSİ SAYTLAR ÜÇÜN",
+        "title": "Qiyməti zəngdən əvvəl öyrənin.",
+        "subtitle": "Şəxsi saytlar üçün açıq paketlər. Mağaza, ödəniş sistemi, mobil tətbiq və ya AI köməkçi lazımdırsa, qiymət pulsuz zəngdən sonra yazılı təklifdə verilir.",
+        "monthlyLabel": "Aylıq",
+        "yearlyLabel": "İllik",
+        "saveLabel": "26% qənaət edin",
+        "perMonthLabel": "hər ay",
+        "tiers": {
+          "start": {
+            "name": "Start",
+            "subtitle": "Kiçik sayt, sürətli başlanğıc.",
+            "monthlyPrice": 299,
+            "yearlyPrice": 2988,
+            "cta": "Başla",
+            "features": [
+              "5 səhifəyə qədər, 1 dil, telefona uyğun dizayn",
+              "Hosting və SSL sertifikatı",
+              "WhatsApp düyməsi və əlaqə forması",
+              "Ayda 1 kiçik düzəliş"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "subtitle": "Böyüyən şəxsi brand üçün. Qiymət və imkanlar arasında balansə seçim.",
+            "monthlyPrice": 399,
+            "yearlyPrice": 3996,
+            "cta": "Başla",
+            "popular": true,
+            "features": [
+              "Start-dakı hər şey",
+              "10 səhifəyə qədər",
+              "AZ, RU, EN dil seçimi",
+              "Korporativ e-poçt (ad@sizinsayt.az) şəxsi e-poçtunuza yönləndirilir",
+              "Əsas SEO və Google-da görünmə",
+              "Ayda 3 düzəliş, 24 saatda cavab"
+            ]
+          },
+          "max": {
+            "name": "Max",
+            "subtitle": "Tam imkanlar: sayt, inteqrasiyalar və prioritet dəstək.",
+            "monthlyPrice": 599,
+            "yearlyPrice": 5988,
+            "cta": "Başla",
+            "features": [
+              "Pro-dakı hər şey",
+              "Limitsiz səhifə, bloq və 2 inteqrasiya (məs. Google Analytics, Telegram)",
+              "Korporativ e-poçt (ad@sizinsayt.az) şəxsi e-poçtunuza yönləndirilir",
+              "Aylıq hesabat, prioritet dəstək"
+            ]
+          }
+        },
+        "corporate": {
+          "title": "Böyük layihə? Gəlin danışaq",
+          "description": "Onlayn mağaza, ödəniş və rezervasiya sistemləri, mobil tətbiq və ya AI köməkçi lazımdırsa? Qiymət layihənin həcminə görə fərdi hesablanır.",
+          "button": "Zəng üçün vaxt seçin"
+        }
+      },
+      "processCards": {
+        "title": "Niyə bizim sayt paketi?",
+        "cards": [
+          {
+            "title": "48 saata demo",
+            "description": "Ödənişdən əvvəl biznesinizə uyğun sayt demosunu görürsünüz."
+          },
+          {
+            "title": "Qiymət əvvəlcədən",
+            "description": "299, 399 və ya 599 AZN illik paket. Gizli ödəniş yoxdur."
+          },
+          {
+            "title": "Hər şey sizin adınıza",
+            "description": "Domen və hesablar sizin adınıza qeydiyyata alınır. Sayt sizə məxsusdur."
+          },
+          {
+            "title": "WhatsApp ilə əlaqə",
+            "description": "Mobil cihazlara uyğun sayt. WhatsApp düyməsi və əlaqə forması. Müştəriləriniz sizə bir toxunuşla yaza bilər."
+          }
+        ]
+      },
+      "processTimeline": {
+        "title": "Necə işləyirik?",
+        "subtitle": "Addım-addım proses saytınızın peşəkar və vaxtında hazırlanmasını təmin edir.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Briefinq və analiz",
+            "description": "Biznesiniz, hədəf auditoriyanız və rəqibləriniz haqqında məlumat toplayırıq. Saytın məqsədini və funksionallığını müəyyən edirik."
+          },
+          {
+            "number": "02",
+            "title": "Demo hazırlanması",
+            "description": "48 saat ərzində brendinizə uyğun sayt demosu hazırlayır və sizinlə paylaşırıq. Bəyənməsəniz, ödəniş yoxdur.",
+            "highlighted": true
+          },
+          {
+            "number": "03",
+            "title": "Dizayn və inkişaf",
+            "description": "Demonu bəyəndikdən sonra, saytı tam funksional hala gətiririk. Bütün səhifələr, inteqrasiyalar və mobil versiya hazırlanır."
+          },
+          {
+            "number": "04",
+            "title": "Test və optimallaşdırma",
+            "description": "Saytı bütün cihazlarda sınayır, sürət və SEO optimallaşdırması aparırıq. İstənilən düzəlişlər edilir."
+          },
+          {
+            "number": "05",
+            "title": "Yayımlanma və dəstək",
+            "description": "Saytı canlı serverə yükləyir, domen qoşuluşunu tamamlayırıq. Davamlı texniki dəstək və aylıq düzəlişlər təmin edilir."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Tez-tez verilən suallar",
+        "subtitle": "Sayt paketləri haqqında ən çox soruşulan suallar",
+        "items": [
+          {
+            "question": "Demo həqiqətən pulsuzdur?",
+            "answer": "Bəli. Biznesinizi yazırsınız, 48 saata demo göndəririk. Bəyənməsəniz, heç bir ödəniş yoxdur."
+          },
+          {
+            "question": "Paketlər nəyi əhatə edir?",
+            "answer": "Bütün paketlər hosting, SSL sertifikatı, telefona uyğun dizayn, WhatsApp düyməsi və əlaqə formasını əhatə edir. Fərq səhifə sayı, dil seçimləri, SEO və aylıq düzəliş limitindədir."
+          },
+          {
+            "question": "Domen və sayt kimə məxsusdur?",
+            "answer": "Domen və hesablar sizin adınıza qeydiyyata alınır. Sayt tamamilə sizə məxsusdur. İstənilən vaxt başqa provayderlə işləməyə başlaya bilərsiniz."
+          },
+          {
+            "question": "Aylıq və illik ödəniş fərqi nədir?",
+            "answer": "İllik ödənişdə 26%-dən çox qənaət edirsiniz. Aylıq ödəniş daha çevik, illik isə daha sərfəlidir. Hər iki halda xidmət eynidir."
+          },
+          {
+            "question": "Saytda dəyişiklik istəsəm?",
+            "answer": "Start paketində ayda 1, Pro paketində ayda 3, Max paketində isə limitsiz kiçik düzəliş haqqınız var. Böyük funksional dəyişikliklər üçün əlavə qiymət təklifi təqdim edilir."
+          },
+          {
+            "question": "Mobil tətbiq və ya onlayn mağaza lazımdırsa?",
+            "answer": "Bu paketlər şəxsi və kiçik biznes saytları üçündür. Mobil tətbiq, onlayn mağaza və ya ödəniş sistemləri üçün fərdi qiymət təklifi hazırlayırıq. Əlaqə formu vasitəsilə bizimlə əlaqə saxlayın."
+          }
+        ]
+      },
+      "finalCTA": {
+        "title": "Saytınızı bu gün sifariş edin",
+        "subtitle": "48 saat ərzində pulsuz demo alın və biznesinizi onlayn dünyaya təqdim edin.",
+        "primaryButton": "Pulsuz demo al",
+        "secondaryButton": "Super İntellekt kursu"
+      }
     },
     "benefits": "Üstünlüklər",
     "process": "İş Prosesi",
