@@ -75,7 +75,7 @@ export default function FinalCTA({
               href="https://wa.me/994502211161"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
+              className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {primaryButton.text}
