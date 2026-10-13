@@ -371,11 +371,12 @@
         { "icon": "Globe", "title": "SEO Hazır", "description": "Axtarış motorları üçün optimallaşdırılmış" }
       ],
       "processSteps": [
-        { "step": 1, "title": "Tələblər", "description": "Layihə tələblərinin toplanması" },
-        { "step": 2, "title": "Dizayn", "description": "UI/UX dizaynın hazırlanması" },
-        { "step": 3, "title": "İnkişaf", "description": "Frontend və backend inkişafı" },
-        { "step": 4, "title": "Test", "description": "Keyfiyyət yoxlaması və test" },
-        { "step": 5, "title": "Buraxılış", "description": "Canlı mühitə yerləşdirmə" }
+        { "step": 1, "title": "Brifinq və Analiz", "description": "Biznesinizi, hədəflərinizi və hədəf auditoriyanızı anlayır, rəqib saytları araşdırır, saytın funksional tələblərini müəyyən edirik." },
+        { "step": 2, "title": "UX/UI Dizayn", "description": "Saytın struktur sxemini (wireframe), istifadəçi axınını və vizual dizaynını hazırlayır, təsdiqinizi alırıq." },
+        { "step": 3, "title": "Texniki Qurulum", "description": "Domen, hosting, platforma (WordPress və ya xüsusi) qurulumu və SEO əsaslarının (meta teqlər, site structure, schema markup) yerləşdirilməsi." },
+        { "step": 4, "title": "İnkişaf", "description": "Dizaynı funksional sayta çevirir, responsiv dizaynı, sürəti (Core Web Vitals) və SEO optimizasiyalı sayt tələblərini tətbiq edirik." },
+        { "step": 5, "title": "Test və Optimallaşdırma", "description": "Mobil uyğunluq (mobil uyğun sayt hazırlanması), sürət testi, forma yoxlanışı və cross-browser uyğunluq testləri aparırıq." },
+        { "step": 6, "title": "Yayım və Dəstək", "description": "Saytı yayımlayır, komandanızı idarə paneli üzrə təlim keçirir, texniki dəstək (veb sayt texniki dəstəyi) təmin edirik." }
       ],
       "portfolioIds": ["port-12", "port-13"],
       "metaTitleKey": "services.webMobileDev.metaTitle",
