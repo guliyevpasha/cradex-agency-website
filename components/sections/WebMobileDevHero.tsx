@@ -23,7 +23,7 @@ export default function WebMobileDevHero({
   note,
 }: WebMobileDevHeroProps) {
   return (
-    <section className="relative min-h-[90vh] bg-gradient-to-br from-[#0A1628] via-[#111E35] to-black overflow-hidden">
+    <section className="relative min-h-[90vh] bg-gradient-to-br from-[#1a2332] via-[#1e3a52] to-[#0f1419] overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
