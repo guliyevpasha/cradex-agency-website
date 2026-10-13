@@ -91,7 +91,7 @@ export default function WebMobileDevHero({
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden z-20"
+              className="absolute top-0 left-0 w-full max-w-[600px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden z-20"
             >
               {/* Browser Header */}
               <div className="w-full h-10 bg-gray-800 border-b border-gray-700 flex items-center px-4 gap-2">
