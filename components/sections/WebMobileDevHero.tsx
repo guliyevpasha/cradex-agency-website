@@ -106,12 +106,12 @@ export default function WebMobileDevHero({
               </div>
               
               {/* Website Screenshot */}
-              <div className="relative w-full h-[400px] bg-white overflow-hidden">
+              <div className="relative w-full h-[400px] bg-white overflow-hidden flex items-center justify-center">
                 <Image
                   src="/images/web-mobile-dev-preview.jpg"
                   alt="Web və Mobil Tətbiq Nümunəsi"
                   fill
-                  className="object-contain"
+                  className="object-contain object-center"
                   priority
                 />
               </div>
