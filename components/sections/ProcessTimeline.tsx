@@ -33,6 +33,7 @@ const stepIcons = [
 export function ProcessTimeline({ steps }: ProcessTimelineProps) {
   const t = useTranslations('services')
   const tDM = useTranslations('services.digitalMarketing')
+  const hasCustomSteps = Boolean(steps && steps.length > 0) // If custom steps provided, hide roadmap tab
   const [activeTab, setActiveTab] = useState<'included' | 'roadmap'>('included')
   const [openIndex, setOpenIndex] = useState<number>(0)
   const { ref, inView } = useInView({
@@ -128,38 +129,40 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
             {t('process')}
           </h2>
 
-          {/* Tab Buttons */}
-          <div className="flex gap-3">
-            <button
-              onClick={() => {
-                setActiveTab('included')
-                setOpenIndex(0)
-              }}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                activeTab === 'included'
-                  ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
-                  : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
-              }`}
-            >
-              <CheckCircle2 size={18} />
-              <span className="text-sm sm:text-base">{tDM('process.tabIncluded')}</span>
-            </button>
+          {/* Tab Buttons - Only show if no custom steps */}
+          {!hasCustomSteps && (
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  setActiveTab('included')
+                  setOpenIndex(0)
+                }}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === 'included'
+                    ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
+                    : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
+                }`}
+              >
+                <CheckCircle2 size={18} />
+                <span className="text-sm sm:text-base">{tDM('process.tabIncluded')}</span>
+              </button>
 
-            <button
-              onClick={() => {
-                setActiveTab('roadmap')
-                setOpenIndex(0)
-              }}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                activeTab === 'roadmap'
-                  ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
-                  : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
-              }`}
-            >
-              <Calendar size={18} />
-              <span className="text-sm sm:text-base">{tDM('process.tabRoadmap')}</span>
-            </button>
-          </div>
+              <button
+                onClick={() => {
+                  setActiveTab('roadmap')
+                  setOpenIndex(0)
+                }}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === 'roadmap'
+                    ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
+                    : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
+                }`}
+              >
+                <Calendar size={18} />
+                <span className="text-sm sm:text-base">{tDM('process.tabRoadmap')}</span>
+              </button>
+            </div>
+          )}
         </motion.div>
 
         {/* Accordion Steps */}
