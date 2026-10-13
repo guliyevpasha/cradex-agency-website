@@ -23,12 +23,19 @@ export default function WebMobileDevHero({
   note,
 }: WebMobileDevHeroProps) {
   return (
-    <section className="relative min-h-[90vh] bg-gradient-to-br from-[#1a2332] via-[#1e3a52] to-[#0f1419] overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative min-h-[90vh] bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary overflow-hidden">
+      {/* Background gradient */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-30"
+        style={{
+          background: `
+            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 80% 50%, rgba(151,71,255,0.1) 0%, transparent 50%)
+          `,
+        }}
+        aria-hidden="true"
+      />
+      {/* Background Effects - REMOVED, using gradient overlay instead */}
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
