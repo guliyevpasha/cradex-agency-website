@@ -15,7 +15,7 @@ interface ProcessTimelineProps {
   steps: TimelineStep[];
 }
 
-export default function ProcessTimeline({
+export default function WebDevProcessTimeline({
   title,
   subtitle,
   steps,
