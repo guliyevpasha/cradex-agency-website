@@ -16,6 +16,7 @@ import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { Glossary } from '@/components/sections/Glossary'
 import { FAQ } from '@/components/sections/FAQ'
 import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
+import WebMobileDevHero from '@/components/sections/WebMobileDevHero'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
@@ -73,10 +74,60 @@ function ServicePageContent({
   const locale = useLocale()
   const key = service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())
   
-  // Special layout for digital-marketing and smm
+  // Special layout for digital-marketing, smm, and web-mobile-dev
   const isDigitalMarketing = service.slug === 'digital-marketing'
   const isSMM = service.slug === 'smm'
+  const isWebMobileDev = service.slug === 'web-mobile-dev'
   const hasCustomLayout = isDigitalMarketing || isSMM
+
+  // Web-mobile-dev has special hero
+  if (isWebMobileDev) {
+    const heroData = {
+      title: 'Saytınız 48 saata hazır.',
+      titleAccent: 'Əvvəlcə demosunu görün.',
+      subtitle: title,
+      description: 'Əvvəlcə biznesiniz üçün sayt demosu hazırlayıb sizə göstəririk. Bəyənsəniz, illik 299 AZN-dən başlayan paketlə yayımlayırıq.',
+      buttonText: 'Pulsuz demo istəyirəm',
+      note: 'Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.',
+    }
+
+    return (
+      <>
+        <WebMobileDevHero {...heroData} />
+        <ProcessTimeline steps={service.processSteps} />
+        <RelatedPortfolioSection portfolios={relatedPortfolio} />
+        <section className="py-16">
+          <div className="max-w-2xl mx-auto px-4 text-center">
+            <ScrollReveal animation="scaleIn">
+              <GlassCard className="p-10">
+                <h2 className="text-display-md font-display font-bold text-text-primary mb-4">
+                  Bu xidməti sifariş et
+                </h2>
+                <p className="text-text-secondary mb-8">
+                  {t(`${key}.shortDesc` as any)} xidməti üçün bizimlə əlaqə saxlayın.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button href={`/${locale}/contact`} size="lg" icon={<ArrowRight size={18} />}>
+                    Əlaqə
+                  </Button>
+                  <Button
+                    href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
+                    variant="whatsapp"
+                    size="lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon={<MessageCircle size={18} />}
+                  >
+                    WhatsApp
+                  </Button>
+                </div>
+              </GlassCard>
+            </ScrollReveal>
+          </div>
+        </section>
+      </>
+    )
+  }
 
   return (
     <>
