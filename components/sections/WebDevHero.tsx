@@ -109,27 +109,70 @@ export default function WebDevHero({
               {/* Desktop mockup - back */}
               <motion.div
                 initial={{ opacity: 0, y: 40, rotate: 3 }}
-                animate={{ opacity: 1, y: 0, rotate: 2 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: [0, -10, 0],
+                  rotate: 2 
+                }}
+                transition={{ 
+                  delay: 0.4, 
+                  duration: 0.8,
+                  y: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
                 className="absolute top-0 right-0 w-[85%] transform transition-transform duration-500 hover:rotate-0 hover:scale-105"
               >
                 <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-2xl border-8 border-gray-900">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200">
-                    <div className="absolute top-4 left-4 right-4 h-10 bg-white/90 rounded-lg flex items-center px-4 gap-2 shadow-sm">
+                  {/* Real Website Screenshot - Desktop */}
+                  <div className="absolute inset-0 bg-white">
+                    <div className="absolute top-0 left-0 right-0 h-10 bg-gray-900 flex items-center px-4 gap-2">
                       <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full bg-red-400" />
                         <div className="w-3 h-3 rounded-full bg-yellow-400" />
                         <div className="w-3 h-3 rounded-full bg-green-400" />
                       </div>
-                      <div className="flex-1 h-5 bg-gray-200 rounded" />
-                    </div>
-                    <div className="absolute top-16 left-4 right-4 bottom-4 bg-white rounded-lg p-4 flex flex-col gap-4 shadow-inner">
-                      <div className="h-16 bg-gradient-to-r from-[#FF6B2C]/20 to-[#FF8F5C]/20 rounded-lg" />
-                      <div className="grid grid-cols-3 gap-3 flex-1">
-                        <div className="bg-gray-100 rounded-lg" />
-                        <div className="bg-gray-100 rounded-lg" />
-                        <div className="bg-gray-100 rounded-lg" />
+                      <div className="flex-1 h-5 bg-gray-800 rounded text-xs text-gray-400 flex items-center px-2">
+                        cradexagency.com
                       </div>
+                    </div>
+                    {/* Website Content Preview */}
+                    <div className="absolute top-10 left-0 right-0 bottom-0 overflow-hidden">
+                      <motion.div
+                        animate={{ y: [0, -50, 0] }}
+                        transition={{
+                          duration: 6,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        {/* Header */}
+                        <div className="h-16 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] flex items-center px-4">
+                          <div className="w-20 h-6 bg-white/20 rounded" />
+                          <div className="ml-auto flex gap-2">
+                            <div className="w-12 h-4 bg-white/20 rounded" />
+                            <div className="w-12 h-4 bg-white/20 rounded" />
+                            <div className="w-12 h-4 bg-white/20 rounded" />
+                          </div>
+                        </div>
+                        {/* Hero Section */}
+                        <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                          <div className="w-3/4 h-8 bg-gray-200 rounded mb-3" />
+                          <div className="w-1/2 h-6 bg-gray-100 rounded mb-4" />
+                          <div className="flex gap-2">
+                            <div className="w-20 h-8 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] rounded" />
+                            <div className="w-20 h-8 bg-gray-200 rounded" />
+                          </div>
+                        </div>
+                        {/* Content Blocks */}
+                        <div className="p-6 grid grid-cols-3 gap-3">
+                          <div className="h-24 bg-gray-100 rounded" />
+                          <div className="h-24 bg-gray-100 rounded" />
+                          <div className="h-24 bg-gray-100 rounded" />
+                        </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
@@ -138,20 +181,48 @@ export default function WebDevHero({
               {/* Tablet mockup - middle */}
               <motion.div
                 initial={{ opacity: 0, y: 40, rotate: -8 }}
-                animate={{ opacity: 1, y: 0, rotate: -6 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: [0, -15, 0],
+                  rotate: -6 
+                }}
+                transition={{ 
+                  delay: 0.6, 
+                  duration: 0.8,
+                  y: {
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
                 className="absolute bottom-24 left-8 md:left-12 w-[45%] transform transition-transform duration-500 hover:rotate-0 hover:scale-105 z-10"
               >
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-xl border-6 border-gray-800">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300">
-                    <div className="absolute top-3 left-3 right-3 bottom-3 bg-white rounded-lg flex flex-col gap-2 p-3">
-                      <div className="h-10 bg-gradient-to-r from-[#FF6B2C]/20 to-[#FF8F5C]/20 rounded" />
-                      <div className="flex-1 bg-gray-100 rounded" />
-                      <div className="grid grid-cols-2 gap-2 h-24">
-                        <div className="bg-gray-200 rounded" />
-                        <div className="bg-gray-200 rounded" />
+                  {/* Real Website Screenshot - Tablet */}
+                  <div className="absolute inset-0 bg-white">
+                    <motion.div
+                      animate={{ y: [0, -40, 0] }}
+                      transition={{
+                        duration: 5.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="h-full"
+                    >
+                      <div className="h-12 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C]" />
+                      <div className="p-4 space-y-3">
+                        <div className="h-16 bg-gradient-to-r from-[#FF6B2C]/20 to-[#FF8F5C]/20 rounded" />
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="h-20 bg-gray-100 rounded" />
+                          <div className="h-20 bg-gray-100 rounded" />
+                        </div>
+                        <div className="h-24 bg-gray-100 rounded" />
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="h-16 bg-gray-100 rounded" />
+                          <div className="h-16 bg-gray-100 rounded" />
+                        </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
@@ -159,19 +230,48 @@ export default function WebDevHero({
               {/* Mobile mockup - front */}
               <motion.div
                 initial={{ opacity: 0, y: 40, rotate: 8 }}
-                animate={{ opacity: 1, y: 0, rotate: 6 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: [0, -20, 0],
+                  rotate: 6 
+                }}
+                transition={{ 
+                  delay: 0.8, 
+                  duration: 0.8,
+                  y: {
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
                 className="absolute bottom-0 right-12 md:right-16 w-[28%] transform transition-transform duration-500 hover:rotate-0 hover:scale-110 z-20"
               >
                 <div className="relative aspect-[9/19] rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-900">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400">
+                  {/* Real Website Screenshot - Mobile */}
+                  <div className="absolute inset-0 bg-white">
                     {/* Phone notch */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-3xl z-10" />
-                    <div className="absolute top-8 left-2 right-2 bottom-2 bg-white rounded-2xl flex flex-col gap-2 p-2">
-                      <div className="h-8 bg-gradient-to-r from-[#FF6B2C]/20 to-[#FF8F5C]/20 rounded" />
-                      <div className="flex-1 bg-gray-100 rounded" />
-                      <div className="h-16 bg-gray-200 rounded" />
-                    </div>
+                    <motion.div
+                      animate={{ y: [0, -30, 0] }}
+                      transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="pt-6"
+                    >
+                      <div className="h-10 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C]" />
+                      <div className="p-2 space-y-2">
+                        <div className="h-12 bg-gradient-to-r from-[#FF6B2C]/20 to-[#FF8F5C]/20 rounded" />
+                        <div className="h-16 bg-gray-100 rounded" />
+                        <div className="grid grid-cols-2 gap-1">
+                          <div className="h-12 bg-gray-100 rounded" />
+                          <div className="h-12 bg-gray-100 rounded" />
+                        </div>
+                        <div className="h-20 bg-gray-100 rounded" />
+                        <div className="h-8 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] rounded" />
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
