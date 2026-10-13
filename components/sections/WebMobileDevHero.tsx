@@ -112,6 +112,7 @@ export default function WebMobileDevHero({
                   alt="Web və Mobil Tətbiq Nümunəsi"
                   fill
                   className="object-contain object-center"
+                  quality={100}
                   priority
                 />
               </div>
