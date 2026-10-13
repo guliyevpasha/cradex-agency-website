@@ -135,11 +135,11 @@ export default function WebDevHero({
                         <div className="w-3 h-3 rounded-full bg-green-400" />
                       </div>
                       <div className="flex-1 h-5 bg-gray-800 rounded text-xs text-gray-400 flex items-center px-2">
-                        cradexagency.com
+                        restaurantwebsite.az
                       </div>
                     </div>
-                    {/* Website Content Preview */}
-                    <div className="absolute top-10 left-0 right-0 bottom-0 overflow-hidden">
+                    {/* Restaurant Website Content Preview */}
+                    <div className="absolute top-10 left-0 right-0 bottom-0 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                       <motion.div
                         animate={{ y: [0, -50, 0] }}
                         transition={{
@@ -148,29 +148,47 @@ export default function WebDevHero({
                           ease: "easeInOut"
                         }}
                       >
-                        {/* Header */}
-                        <div className="h-16 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center px-4">
-                          <div className="w-20 h-6 bg-white/20 rounded" />
-                          <div className="ml-auto flex gap-2">
-                            <div className="w-12 h-4 bg-white/20 rounded" />
-                            <div className="w-12 h-4 bg-white/20 rounded" />
-                            <div className="w-12 h-4 bg-white/20 rounded" />
+                        {/* Header with Logo */}
+                        <div className="h-16 bg-gradient-to-r from-amber-600 to-orange-600 flex items-center px-6 shadow-lg">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+                              <div className="text-amber-600 font-bold text-lg">R</div>
+                            </div>
+                            <div className="text-white font-bold text-xl">Restaurant Elite</div>
+                          </div>
+                          <div className="ml-auto flex gap-4 text-sm text-white">
+                            <div className="px-3 py-1">Menu</div>
+                            <div className="px-3 py-1">About</div>
+                            <div className="px-3 py-1">Contact</div>
                           </div>
                         </div>
-                        {/* Hero Section */}
-                        <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                          <div className="w-3/4 h-8 bg-gray-200 rounded mb-3" />
-                          <div className="w-1/2 h-6 bg-gray-100 rounded mb-4" />
-                          <div className="flex gap-2">
-                            <div className="w-20 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded" />
-                            <div className="w-20 h-8 bg-gray-200 rounded" />
+                        {/* Hero Image Section */}
+                        <div className="relative h-48 bg-gradient-to-r from-amber-100 to-orange-100 flex items-center justify-center">
+                          <div className="text-center px-6">
+                            <div className="text-3xl font-bold text-gray-800 mb-2">Premium Dining Experience</div>
+                            <div className="text-gray-600">Reserve your table today</div>
+                            <div className="mt-4 inline-block px-6 py-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-full text-sm font-semibold">
+                              Book Now
+                            </div>
                           </div>
                         </div>
-                        {/* Content Blocks */}
-                        <div className="p-6 grid grid-cols-3 gap-3">
-                          <div className="h-24 bg-gray-100 rounded" />
-                          <div className="h-24 bg-gray-100 rounded" />
-                          <div className="h-24 bg-gray-100 rounded" />
+                        {/* Featured Dishes */}
+                        <div className="p-6 grid grid-cols-3 gap-4">
+                          <div className="bg-white rounded-lg p-4 shadow-md">
+                            <div className="h-24 bg-gradient-to-br from-amber-200 to-orange-200 rounded-lg mb-2" />
+                            <div className="h-3 bg-gray-200 rounded w-3/4 mb-1" />
+                            <div className="h-2 bg-gray-100 rounded w-1/2" />
+                          </div>
+                          <div className="bg-white rounded-lg p-4 shadow-md">
+                            <div className="h-24 bg-gradient-to-br from-red-200 to-orange-200 rounded-lg mb-2" />
+                            <div className="h-3 bg-gray-200 rounded w-3/4 mb-1" />
+                            <div className="h-2 bg-gray-100 rounded w-1/2" />
+                          </div>
+                          <div className="bg-white rounded-lg p-4 shadow-md">
+                            <div className="h-24 bg-gradient-to-br from-yellow-200 to-amber-200 rounded-lg mb-2" />
+                            <div className="h-3 bg-gray-200 rounded w-3/4 mb-1" />
+                            <div className="h-2 bg-gray-100 rounded w-1/2" />
+                          </div>
                         </div>
                       </motion.div>
                     </div>
@@ -198,7 +216,7 @@ export default function WebDevHero({
                 className="absolute bottom-24 left-8 md:left-12 w-[45%] transform transition-transform duration-500 hover:rotate-0 hover:scale-105 z-10"
               >
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-xl border-6 border-gray-800">
-                  {/* Real Website Screenshot - Tablet */}
+                  {/* Real Website Screenshot - Tablet (Clinic Website) */}
                   <div className="absolute inset-0 bg-white">
                     <motion.div
                       animate={{ y: [0, -40, 0] }}
@@ -207,19 +225,48 @@ export default function WebDevHero({
                         repeat: Infinity,
                         ease: "easeInOut"
                       }}
-                      className="h-full"
+                      className="h-full bg-gradient-to-br from-blue-50 to-cyan-50"
                     >
-                      <div className="h-12 bg-gradient-to-r from-blue-500 to-blue-600" />
-                      <div className="p-4 space-y-3">
-                        <div className="h-16 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded" />
-                        <div className="grid grid-cols-2 gap-2">
-                          <div className="h-20 bg-gray-100 rounded" />
-                          <div className="h-20 bg-gray-100 rounded" />
+                      {/* Medical Clinic Header */}
+                      <div className="h-12 bg-gradient-to-r from-cyan-600 to-blue-600 flex items-center px-4 shadow-lg">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 bg-white/90 rounded flex items-center justify-center">
+                            <div className="text-cyan-600 font-bold">+</div>
+                          </div>
+                          <div className="text-white font-semibold text-sm">Health Clinic</div>
                         </div>
-                        <div className="h-24 bg-gray-100 rounded" />
-                        <div className="grid grid-cols-2 gap-2">
-                          <div className="h-16 bg-gray-100 rounded" />
-                          <div className="h-16 bg-gray-100 rounded" />
+                      </div>
+                      {/* Appointment Banner */}
+                      <div className="p-4 bg-gradient-to-r from-cyan-100 to-blue-100 border-l-4 border-cyan-600 mx-4 mt-4 rounded">
+                        <div className="text-sm font-semibold text-cyan-900">Book Appointment</div>
+                        <div className="text-xs text-cyan-700 mt-1">24/7 Available</div>
+                      </div>
+                      {/* Doctor Cards */}
+                      <div className="p-4 space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-md flex items-center gap-3">
+                          <div className="w-12 h-12 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full" />
+                          <div className="flex-1">
+                            <div className="h-3 bg-gray-200 rounded w-2/3 mb-1" />
+                            <div className="h-2 bg-gray-100 rounded w-1/2" />
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-md flex items-center gap-3">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full" />
+                          <div className="flex-1">
+                            <div className="h-3 bg-gray-200 rounded w-2/3 mb-1" />
+                            <div className="h-2 bg-gray-100 rounded w-1/2" />
+                          </div>
+                        </div>
+                      </div>
+                      {/* Services Grid */}
+                      <div className="px-4 grid grid-cols-2 gap-2">
+                        <div className="bg-white rounded-lg p-3 shadow-sm text-center">
+                          <div className="h-8 w-8 bg-cyan-100 rounded-full mx-auto mb-2" />
+                          <div className="h-2 bg-gray-100 rounded" />
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-sm text-center">
+                          <div className="h-8 w-8 bg-blue-100 rounded-full mx-auto mb-2" />
+                          <div className="h-2 bg-gray-100 rounded" />
                         </div>
                       </div>
                     </motion.div>
@@ -247,7 +294,7 @@ export default function WebDevHero({
                 className="absolute bottom-0 right-12 md:right-16 w-[28%] transform transition-transform duration-500 hover:rotate-0 hover:scale-110 z-20"
               >
                 <div className="relative aspect-[9/19] rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-900">
-                  {/* Real Website Screenshot - Mobile */}
+                  {/* Real Website Screenshot - Mobile (E-commerce) */}
                   <div className="absolute inset-0 bg-white">
                     {/* Phone notch */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-3xl z-10" />
@@ -258,18 +305,52 @@ export default function WebDevHero({
                         repeat: Infinity,
                         ease: "easeInOut"
                       }}
-                      className="pt-6"
+                      className="pt-6 bg-gradient-to-br from-purple-50 to-pink-50 h-full"
                     >
-                      <div className="h-10 bg-gradient-to-r from-blue-500 to-blue-600" />
-                      <div className="p-2 space-y-2">
-                        <div className="h-12 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded" />
-                        <div className="h-16 bg-gray-100 rounded" />
-                        <div className="grid grid-cols-2 gap-1">
-                          <div className="h-12 bg-gray-100 rounded" />
-                          <div className="h-12 bg-gray-100 rounded" />
+                      {/* E-commerce Header */}
+                      <div className="h-10 bg-gradient-to-r from-purple-600 to-pink-600 flex items-center px-2 shadow-lg">
+                        <div className="flex items-center gap-2 flex-1">
+                          <div className="w-6 h-6 bg-white/90 rounded-full" />
+                          <div className="text-white font-bold text-xs">Shop Online</div>
                         </div>
-                        <div className="h-20 bg-gray-100 rounded" />
-                        <div className="h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded" />
+                        <div className="w-6 h-6 bg-white/20 rounded-full" />
+                      </div>
+                      {/* Search Bar */}
+                      <div className="px-2 py-2">
+                        <div className="h-8 bg-white rounded-full shadow-sm flex items-center px-3">
+                          <div className="h-3 bg-gray-200 rounded flex-1" />
+                        </div>
+                      </div>
+                      {/* Product Banner */}
+                      <div className="px-2">
+                        <div className="h-24 bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="h-4 w-20 bg-white/50 rounded mx-auto mb-1" />
+                            <div className="h-3 w-16 bg-white/30 rounded mx-auto" />
+                          </div>
+                        </div>
+                      </div>
+                      {/* Product Grid */}
+                      <div className="p-2 grid grid-cols-2 gap-2">
+                        <div className="bg-white rounded-lg p-2 shadow-md">
+                          <div className="h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded mb-1" />
+                          <div className="h-2 bg-gray-200 rounded mb-1" />
+                          <div className="h-2 bg-gray-100 rounded w-2/3" />
+                          <div className="h-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded mt-1" />
+                        </div>
+                        <div className="bg-white rounded-lg p-2 shadow-md">
+                          <div className="h-16 bg-gradient-to-br from-pink-100 to-rose-100 rounded mb-1" />
+                          <div className="h-2 bg-gray-200 rounded mb-1" />
+                          <div className="h-2 bg-gray-100 rounded w-2/3" />
+                          <div className="h-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded mt-1" />
+                        </div>
+                      </div>
+                      {/* Bottom Nav */}
+                      <div className="absolute bottom-0 left-0 right-0 h-12 bg-white border-t border-gray-200 flex items-center justify-around px-2">
+                        <div className="w-6 h-6 bg-purple-100 rounded" />
+                        <div className="w-6 h-6 bg-gray-100 rounded" />
+                        <div className="w-6 h-6 bg-gray-100 rounded" />
+                        <div className="w-6 h-6 bg-gray-100 rounded" />
                       </div>
                     </motion.div>
                   </div>
