@@ -141,11 +141,9 @@ export function HeroSection() {
               variants={prefersReduced ? undefined : fadeInUp}
               className="flex flex-wrap items-center gap-3 mb-9"
             >
-              {/* Primary CTA points at the work, not at the sales channel: the
-                  navbar already carries the consultation button, and a visitor
-                  landing here wants proof before a conversation. */}
+              {/* Primary CTA */}
               <Link
-                href={`/${locale}/portfolio`}
+                href={`/${locale}/contact`}
                 className="group relative inline-flex items-center gap-2 overflow-hidden
                   rounded-full px-6 py-3.5 font-semibold text-sm sm:text-[15px] text-white
                   bg-gradient-to-r from-accent-primary to-accent-secondary
@@ -159,7 +157,7 @@ export function HeroSection() {
                     transition-transform duration-700 group-hover:translate-x-full"
                   aria-hidden="true"
                 />
-                <span className="relative">{t('workCta')}</span>
+                <span className="relative">{t('cta')}</span>
                 <ArrowUpRight
                   size={16}
                   className="relative transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
