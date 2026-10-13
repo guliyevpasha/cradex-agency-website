@@ -60,7 +60,6 @@ export default async function PortfolioDetailPage({
   const allPortfolios = await getAllPortfolio(locale)
   const relatedPortfolios = allPortfolios
     .filter(p => p.serviceCategory === item.serviceCategory && p.slug !== item.slug)
-    // No limit - show ALL related portfolios
   
   return <PortfolioDetailContent item={item} relatedPortfolios={relatedPortfolios} />
 }
