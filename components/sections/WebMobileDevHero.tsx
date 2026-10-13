@@ -31,7 +31,7 @@ export default function WebMobileDevHero({
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -91,7 +91,7 @@ export default function WebMobileDevHero({
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden z-20"
+              className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden z-20"
             >
               {/* Browser Header */}
               <div className="w-full h-10 bg-gray-800 border-b border-gray-700 flex items-center px-4 gap-2">
