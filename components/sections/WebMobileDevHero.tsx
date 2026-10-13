@@ -110,7 +110,7 @@ export default function WebMobileDevHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute bottom-8 left-8 bg-white rounded-2xl shadow-2xl p-6 z-30"
+              className="absolute bottom-8 left-0 bg-white rounded-2xl shadow-2xl p-6 z-30"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
