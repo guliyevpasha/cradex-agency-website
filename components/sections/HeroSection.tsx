@@ -168,12 +168,26 @@ export function HeroSection() {
 
               <Link
                 href={`/${locale}/services`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/12
-                  bg-white/[0.03] px-6 py-3.5 text-sm sm:text-[15px] font-medium text-text-secondary
-                  backdrop-blur-sm transition-colors duration-300
-                  hover:border-white/25 hover:text-text-primary"
+                className="group relative inline-flex items-center gap-2 overflow-hidden
+                  rounded-full border border-white/25 px-6 py-3.5 text-sm sm:text-[15px] 
+                  font-medium text-text-primary backdrop-blur-sm 
+                  transition-all duration-300 hover:border-transparent
+                  hover:bg-gradient-to-r hover:from-accent-primary hover:to-accent-secondary
+                  hover:text-white hover:shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
+                  hover:-translate-y-0.5"
               >
-                {t('secondaryCta')}
+                {/* Sheen sweep on hover */}
+                <span
+                  className="pointer-events-none absolute inset-0 -translate-x-full
+                    bg-gradient-to-r from-transparent via-white/25 to-transparent
+                    transition-transform duration-700 group-hover:translate-x-full"
+                  aria-hidden="true"
+                />
+                <span className="relative">{t('secondaryCta')}</span>
+                <ArrowUpRight
+                  size={16}
+                  className="relative transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </Link>
             </motion.div>
 
