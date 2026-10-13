@@ -124,7 +124,7 @@ export default function WebMobileDevHero({
             <div className="absolute top-0 right-20 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl" />
             <div className="absolute bottom-0 left-20 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl" />
             <div className="absolute top-1/2 left-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl" />
-          </motion.div></div>
+          </motion.div>
         </div>
       </div>
 
