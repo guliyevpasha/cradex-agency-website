@@ -81,7 +81,7 @@ export default function WebMobileDevHero({
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative h-[600px] hidden lg:block"
           >
-            {/* Main Website Preview with Browser Frame */}
+            {/* Main Website Preview Image */}
             <motion.div
               animate={{
                 y: [0, -20, 0],
@@ -91,22 +91,9 @@ export default function WebMobileDevHero({
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="absolute top-0 left-0 w-full max-w-[600px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden z-20 mt-16"
+              className="absolute top-0 left-0 w-full max-w-[600px] mt-16"
             >
-              {/* Browser Header */}
-              <div className="w-full h-10 bg-gray-800 border-b border-gray-700 flex items-center px-4 gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <div className="flex-1 ml-4">
-                  <div className="bg-gray-700 rounded px-3 py-1 text-xs text-gray-400 max-w-md">
-                    cradexagency.com
-                  </div>
-                </div>
-              </div>
-              
-              {/* Website Screenshot */}
-              <div className="relative w-full h-[400px] bg-white overflow-hidden flex items-center justify-center">
+              <div className="relative w-full h-[450px]">
                 <Image
                   src="/images/web-mobile-dev-preview.jpg"
                   alt="Web və Mobil Tətbiq Nümunəsi"
@@ -115,6 +102,28 @@ export default function WebMobileDevHero({
                   quality={100}
                   priority
                 />
+              </div>
+            </motion.div>
+
+            {/* Conversion Rate Stats Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute bottom-8 left-8 bg-white rounded-2xl shadow-2xl p-6 z-30"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wide font-semibold">
+                    Orta konversiya artımı
+                  </p>
+                  <p className="text-3xl font-bold text-gray-900">+85%</p>
+                </div>
               </div>
             </motion.div>
 
