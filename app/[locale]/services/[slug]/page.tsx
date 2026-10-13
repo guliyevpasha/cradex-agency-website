@@ -12,7 +12,7 @@ import { PlatformsSection } from '@/components/sections/PlatformsSection'
 import { AuditStrategySection } from '@/components/sections/AuditStrategySection'
 import { StrategicApproach } from '@/components/sections/StrategicApproach'
 import { WhoIsThisFor } from '@/components/sections/WhoIsThisFor'
-import { ProcessTimeline as OldProcessTimeline } from '@/components/sections/ProcessTimeline'
+import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { Glossary } from '@/components/sections/Glossary'
 import { FAQ } from '@/components/sections/FAQ'
 import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
@@ -20,7 +20,7 @@ import WebDevHero from '@/components/sections/WebDevHero'
 import PortfolioShowcase from '@/components/sections/PortfolioShowcase'
 import PricingPackages from '@/components/sections/PricingPackages'
 import ProcessCards from '@/components/sections/ProcessCards'
-import ProcessTimeline from '@/components/sections/ProcessTimeline'
+import WebDevProcessTimeline from '@/components/sections/WebDevProcessTimeline'
 import WebDevFAQ from '@/components/sections/WebDevFAQ'
 import FinalCTA from '@/components/sections/FinalCTA'
 import { GlassCard } from '@/components/ui/GlassCard'
@@ -182,7 +182,7 @@ function ServicePageContent({
         <PortfolioShowcase {...portfolioShowcaseData} portfolios={relatedPortfolio} />
         <PricingPackages {...pricingData} />
         <ProcessCards {...processCardsData} />
-        <ProcessTimeline2 {...processTimelineData} />
+        <WebDevProcessTimeline {...processTimelineData} />
         <WebDevFAQ {...faqData} />
         <FinalCTA {...finalCTAData} />
       </>
@@ -231,7 +231,7 @@ function ServicePageContent({
       )}
 
       {/* Process timeline */}
-      <OldProcessTimeline steps={service.processSteps} />
+      <ProcessTimeline steps={service.processSteps} />
 
       {/* Glossary and FAQ - only for services with custom layout */}
       {hasCustomLayout && (
