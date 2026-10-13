@@ -272,3 +272,5 @@ export function PortfolioShowcase({ portfolios }: PortfolioShowcaseProps) {
     </section>
   )
 }
+
+export default PortfolioShowcase;
