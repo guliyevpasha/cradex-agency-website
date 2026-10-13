@@ -47,7 +47,7 @@ export default function WebsiteTypes({ title, subtitle, types }: WebsiteTypesPro
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-[#0A1628] to-[#111E35]">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -56,13 +56,13 @@ export default function WebsiteTypes({ title, subtitle, types }: WebsiteTypesPro
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 bg-[#FF6B2C]/10 text-[#FF6B2C] text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-blue-500/10 text-blue-400 text-sm font-semibold rounded-full mb-4">
             SAYT NÖVLƏRİ
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             {title}
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             {subtitle}
           </p>
         </motion.div>
@@ -79,32 +79,32 @@ export default function WebsiteTypes({ title, subtitle, types }: WebsiteTypesPro
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group relative bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-[#FF6B2C] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
             >
               {/* Number Badge */}
-              <div className="absolute top-6 right-6 w-10 h-10 bg-gradient-to-br from-[#FF6B2C]/10 to-[#FF8F5C]/10 rounded-full flex items-center justify-center">
-                <span className="text-sm font-bold text-[#FF6B2C]">
+              <div className="absolute top-6 right-6 w-10 h-10 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-full flex items-center justify-center">
+                <span className="text-sm font-bold text-blue-400">
                   {String(index + 1).padStart(2, '0')}
                 </span>
               </div>
 
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-[#FF6B2C] to-[#FF8F5C] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {type.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#FF6B2C] transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {type.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 {type.description}
               </p>
 
               {/* Hover Effect Border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#FF6B2C]/5 to-[#FF8F5C]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </motion.div>
           ))}
         </motion.div>

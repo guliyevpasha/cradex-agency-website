@@ -84,7 +84,7 @@ export default function DomainChecker() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-[#111E35] to-[#0A1628]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -94,16 +94,16 @@ export default function DomainChecker() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-2 bg-[#FF6B2C]/10 text-[#FF6B2C] text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-blue-500/10 text-blue-400 text-sm font-semibold rounded-full mb-4">
               DOMAIN YOXLAMA
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
               Domain mövcudluğunu{' '}
-              <span className="bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
                 yoxlayın
               </span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               İstədiyiniz domain adını daxil edin və hansı uzantıların mövcud olduğunu canlı olaraq öyrənin
             </p>
           </motion.div>
@@ -125,14 +125,14 @@ export default function DomainChecker() {
                   value={domain}
                   onChange={(e) => setDomain(e.target.value)}
                   placeholder="məsələn: sizinfirma"
-                  className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg focus:border-[#FF6B2C] focus:outline-none text-lg"
+                  className="w-full pl-12 pr-4 py-4 bg-white/5 border-2 border-white/10 rounded-lg focus:border-blue-500 focus:outline-none text-lg text-white placeholder-gray-400"
                   disabled={isSearching}
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSearching || !domain.trim()}
-                className="px-8 py-4 bg-gradient-to-r from-[#FF6B2C] to-[#FF8F5C] text-white font-semibold rounded-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSearching ? (
                   <>
