@@ -974,6 +974,119 @@
           }
         ]
       },
+      "websiteTypes": {
+        "title": "What types of websites do we create?",
+        "subtitle": "Custom and professional web solutions for every business type",
+        "types": [
+          {
+            "title": "Corporate Website Development",
+            "description": "Corporate website development for B2B and large businesses — easy-to-manage websites that professionally present the company's image, services and values."
+          },
+          {
+            "title": "Online Store & E-commerce Website",
+            "description": "Complete solution for online store and e-commerce website development — from product catalog to payment system, from shipping integration to customer panel."
+          },
+          {
+            "title": "Landing Page Development",
+            "description": "High-conversion landing page development for Google Ads, Meta Ads and other advertising campaigns — every element tested and goal-oriented."
+          },
+          {
+            "title": "WordPress Website Development",
+            "description": "WordPress website development on the most popular CMS platform — easy to manage, scalable, SEO-optimized, responsive design websites."
+          },
+          {
+            "title": "Business & Industry Websites",
+            "description": "Website for restaurants, website for doctors, website for construction companies, portfolio website development — custom approach for every industry."
+          }
+        ]
+      },
+      "whoIsThisFor": {
+        "title": "Who is this service for?",
+        "subtitle": "Proper preparation is essential for effective results. Evaluate whether this service is suitable for you based on the following criteria.",
+        "suitable": [
+          {
+            "title": "First-time website orderers",
+            "description": "If you want to start with a demo for your business's first digital step, you can make a decision by minimizing risk."
+          },
+          {
+            "title": "Businesses seeking fast solutions",
+            "description": "Ready demo in 48 hours, live website in 7-14 days — speed and quality at the same time."
+          },
+          {
+            "title": "Those wanting to work with a clear budget",
+            "description": "Annual packages of 299, 399 or 599 AZN — no hidden costs, everything is transparent."
+          },
+          {
+            "title": "Those without technical knowledge",
+            "description": "If you don't understand the technical side of the website — don't worry, we handle everything."
+          },
+          {
+            "title": "Those wanting SEO and Google visibility",
+            "description": "Your website should be found on Google, customers should find you easily — SEO basics included."
+          }
+        ],
+        "notSuitable": [
+          {
+            "title": "Those wanting very complex functionality",
+            "description": "Payment systems, custom API integrations, large databases — not included in these packages, evaluated as a custom project."
+          },
+          {
+            "title": "Those expecting fully custom design",
+            "description": "Packages use ready-made templates. If you want fully custom design, order a custom project."
+          },
+          {
+            "title": "Those wanting changes every week",
+            "description": "Package price covers initial setup and 1-2 minor monthly changes. If more updates are needed, additional service is required."
+          }
+        ],
+        "ctaText": "Not sure? Get a free consultation — our experts will evaluate with you."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "subtitle": "Brief explanations of commonly encountered terms related to this service.",
+        "terms": [
+          {
+            "term": "Responsive Design",
+            "definition": "The website displaying and functioning correctly on mobile, tablet and computer screens.",
+            "icon": "📱"
+          },
+          {
+            "term": "CMS (Content Management System)",
+            "definition": "A system that allows managing website content without coding knowledge — WordPress is the most popular of these systems.",
+            "icon": "⚙️"
+          },
+          {
+            "term": "SEO (Search Engine Optimization)",
+            "definition": "Technical and content optimization done for the website to rank high in Google and other search engines.",
+            "icon": "🔍"
+          },
+          {
+            "term": "Landing Page",
+            "definition": "A single-page website created for one goal (e.g., filling out a form, buying a product).",
+            "icon": "🎯"
+          },
+          {
+            "term": "Hosting",
+            "definition": "The server service where your website is stored and published on the internet.",
+            "icon": "☁️"
+          },
+          {
+            "term": "Domain",
+            "definition": "Your website's internet address (e.g., yourcompany.az, mycompany.com).",
+            "icon": "🌐"
+          },
+          {
+            "term": "SSL Certificate",
+            "definition": "A digital certificate that ensures the website operates securely (HTTPS).",
+            "icon": "🔒"
+          },
+          {
+            "term": "UI/UX Design",
+            "definition": "User Interface (UI) and User Experience (UX) — design approach that ensures the website is beautiful and easy to use.",
+            "icon": "🎨"
+          }
+        ]
+      },
       "finalCTA": {
         "title": "Order your website today",
         "subtitle": "Get a free demo in 48 hours and present your business to the online world.",
