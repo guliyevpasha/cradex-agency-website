@@ -106,17 +106,14 @@ export default function WebMobileDevHero({
               </div>
               
               {/* Website Screenshot */}
-              <div className="relative w-full aspect-[16/10] bg-white overflow-hidden">
+              <div className="relative w-full h-[400px] bg-white overflow-hidden">
                 <Image
                   src="/images/web-mobile-dev-preview.jpg"
                   alt="Web və Mobil Tətbiq Nümunəsi"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain"
                   priority
                 />
-                
-                {/* Overlay gradient for better text visibility if needed */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               </div>
             </motion.div>
 
