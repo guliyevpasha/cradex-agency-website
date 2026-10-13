@@ -808,7 +808,178 @@
       "shortDesc": "Next.js, React Native, UI/UX",
       "description": "We build fast, secure and beautiful websites and mobile apps with modern technologies.",
       "metaTitle": "Web Development Services | Cradex Agency",
-      "metaDescription": "Modern website and mobile app development services with Next.js and React Native."
+      "metaDescription": "Modern website and mobile app development services with Next.js and React Native.",
+      "hero": {
+        "title": "Your website ready in 48 hours.",
+        "titleAccent": "See the demo first.",
+        "subtitle": "First, we prepare a demo website for your business and show it to you. If you like it, we publish it with packages starting from 299 AZN per year.",
+        "primaryButton": "I want a free demo",
+        "secondaryButton": "Learn to create products with AI",
+        "demoNote": "The demo is free. If you don't like it, no payment required."
+      },
+      "portfolioShowcase": {
+        "label": "WEBSITE EXAMPLES",
+        "title": "Choose your industry. We'll send your demo in 48 hours.",
+        "subtitle": "18 ready website designs. Choose the one that suits your business, and we'll adapt it to your brand.",
+        "categories": {
+          "all": "All",
+          "medical": "Clinic",
+          "automotive": "Automotive",
+          "realestate": "Real Estate",
+          "beauty": "Beauty",
+          "law": "Law / Consulting",
+          "education": "Education",
+          "other": "Other"
+        },
+        "viewDetails": "View full size"
+      },
+      "pricing": {
+        "label": "FOR PERSONAL WEBSITES",
+        "title": "Know the price before the call.",
+        "subtitle": "Open packages for personal websites. If you need an online store, payment system, mobile app or AI assistant, the price will be provided in a written offer after a free call.",
+        "monthlyLabel": "Monthly",
+        "yearlyLabel": "Yearly",
+        "saveLabel": "Save 26%",
+        "perMonthLabel": "per month",
+        "tiers": {
+          "start": {
+            "name": "Start",
+            "subtitle": "Small website, quick start.",
+            "monthlyPrice": 299,
+            "yearlyPrice": 2988,
+            "cta": "Get Started",
+            "features": [
+              "Up to 5 pages, 1 language, mobile-friendly design",
+              "Hosting and SSL certificate",
+              "WhatsApp button and contact form",
+              "1 minor edit per month"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "subtitle": "For growing personal brand. Balanced choice between price and features.",
+            "monthlyPrice": 399,
+            "yearlyPrice": 3996,
+            "cta": "Get Started",
+            "popular": true,
+            "features": [
+              "Everything in Start",
+              "Up to 10 pages",
+              "AZ, RU, EN language options",
+              "Corporate email (name@yoursite.az) forwarded to your personal email",
+              "Basic SEO and Google visibility",
+              "3 edits per month, 24-hour response"
+            ]
+          },
+          "max": {
+            "name": "Max",
+            "subtitle": "Full features: website, integrations and priority support.",
+            "monthlyPrice": 599,
+            "yearlyPrice": 5988,
+            "cta": "Get Started",
+            "features": [
+              "Everything in Pro",
+              "Unlimited pages, blog and 2 integrations (e.g. Google Analytics, Telegram)",
+              "Corporate email (name@yoursite.az) forwarded to your personal email",
+              "Monthly report, priority support"
+            ]
+          }
+        },
+        "corporate": {
+          "title": "Big project? Let's talk",
+          "description": "Need an online store, payment and booking systems, mobile app or AI assistant? Price is calculated individually based on project scope.",
+          "button": "Schedule a call"
+        }
+      },
+      "processCards": {
+        "title": "Why our website package?",
+        "cards": [
+          {
+            "title": "Demo in 48 hours",
+            "description": "You see the demo website tailored to your business before any payment."
+          },
+          {
+            "title": "Price upfront",
+            "description": "299, 399 or 599 AZN annual package. No hidden fees."
+          },
+          {
+            "title": "Everything in your name",
+            "description": "Domain and accounts are registered in your name. The website belongs to you."
+          },
+          {
+            "title": "WhatsApp contact",
+            "description": "Mobile-friendly website. WhatsApp button and contact form. Your customers can reach you with one tap."
+          }
+        ]
+      },
+      "processTimeline": {
+        "title": "How we work?",
+        "subtitle": "Step-by-step process ensures your website is delivered professionally and on time.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Briefing and analysis",
+            "description": "We gather information about your business, target audience and competitors. We define the website's purpose and functionality."
+          },
+          {
+            "number": "02",
+            "title": "Demo preparation",
+            "description": "Within 48 hours, we prepare a demo website tailored to your brand and share it with you. If you don't like it, no payment required.",
+            "highlighted": true
+          },
+          {
+            "number": "03",
+            "title": "Design and development",
+            "description": "After you approve the demo, we make the website fully functional. All pages, integrations and mobile version are developed."
+          },
+          {
+            "number": "04",
+            "title": "Testing and optimization",
+            "description": "We test the website on all devices, perform speed and SEO optimization. Any requested revisions are made."
+          },
+          {
+            "number": "05",
+            "title": "Launch and support",
+            "description": "We upload the website to the live server and complete domain connection. Ongoing technical support and monthly edits are provided."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Most common questions about website packages",
+        "items": [
+          {
+            "question": "Is the demo really free?",
+            "answer": "Yes. You describe your business, we send a demo in 48 hours. If you don't like it, there's no payment."
+          },
+          {
+            "question": "What do the packages include?",
+            "answer": "All packages include hosting, SSL certificate, mobile-friendly design, WhatsApp button and contact form. The difference is in page count, language options, SEO and monthly edit limits."
+          },
+          {
+            "question": "Who owns the domain and website?",
+            "answer": "Domain and accounts are registered in your name. The website fully belongs to you. You can switch to another provider at any time."
+          },
+          {
+            "question": "What's the difference between monthly and yearly payment?",
+            "answer": "With yearly payment you save over 26%. Monthly payment is more flexible, yearly is more economical. The service is identical in both cases."
+          },
+          {
+            "question": "What if I want changes to the website?",
+            "answer": "Start package includes 1 minor edit per month, Pro includes 3, and Max includes unlimited minor edits. Major functional changes require an additional quote."
+          },
+          {
+            "question": "What if I need a mobile app or online store?",
+            "answer": "These packages are for personal and small business websites. For mobile apps, online stores or payment systems, we prepare a custom quote. Contact us via the contact form."
+          }
+        ]
+      },
+      "finalCTA": {
+        "title": "Order your website today",
+        "subtitle": "Get a free demo in 48 hours and present your business to the online world.",
+        "primaryButton": "Get free demo",
+        "secondaryButton": "Super Intellect course"
+      }
     },
     "benefits": "Benefits",
     "process": "Our Process",

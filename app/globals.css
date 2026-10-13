@@ -23,8 +23,8 @@
   --color-border-hover: rgba(108, 99, 255, 0.4);
 
   /* Glassmorphism */
-  --color-glass-bg: rgba(255, 255, 255, 0.04);
-  --color-glass-border: rgba(255, 255, 255, 0.10);
+  --color-glass-bg: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.15);
 
   /* Status colors */
   --color-success: #22C55E;
@@ -72,12 +72,14 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--color-glass-border);
     border-radius: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
     border-color: var(--color-border-hover);
     box-shadow: 0 0 24px rgba(108, 99, 255, 0.15);
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .gradient-text {
