@@ -1,134 +1,294 @@
-'use client';
+﻿'use client'
 
-import { motion } from 'framer-motion';
-
-interface TimelineStep {
-  number: string;
-  title: string;
-  description: string;
-  highlighted?: boolean;
-}
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { 
+  ChevronDown, 
+  CheckCircle2, 
+  Calendar,
+  Search,
+  Target,
+  FileEdit,
+  Rocket,
+  BarChart3,
+  Zap
+} from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 interface ProcessTimelineProps {
-  title: string;
-  subtitle?: string;
-  steps: TimelineStep[];
+  steps?: any[] // Optional, not used for Digital Marketing
 }
 
-export default function ProcessTimeline({
-  title,
-  subtitle,
-  steps,
-}: ProcessTimelineProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.12,
-      },
-    },
-  };
+// Icon mapping for each step
+const stepIcons = [
+  Search,      // 01 - K╔Ö┼ƒfiyyat v╔Ö Audit
+  Target,      // 02 - Strategiya v╔Ö Planla┼ƒd─▒rma
+  FileEdit,    // 03 - Kontent Yarad─▒lmas─▒
+  Rocket,      // 04 - ─░cra v╔Ö Optimizasiya
+  BarChart3,   // 05 - Hesabat v╔Ö T╔Öhlil
+  Zap,         // 06 - Davaml─▒ ─░nki┼ƒaf
+]
 
-  const stepVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeOut',
+export function ProcessTimeline({ steps }: ProcessTimelineProps) {
+  const t = useTranslations('services')
+  const tDM = useTranslations('services.digitalMarketing')
+  const [activeTab, setActiveTab] = useState<'included' | 'roadmap'>('included')
+  const [openIndex, setOpenIndex] = useState<number>(0)
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  // Get process data from translations
+  const processData = {
+    included: [
+      {
+        step: 1,
+        title: tDM('process.included.0.title'),
+        description: tDM('process.included.0.description'),
       },
-    },
-  };
+      {
+        step: 2,
+        title: tDM('process.included.1.title'),
+        description: tDM('process.included.1.description'),
+      },
+      {
+        step: 3,
+        title: tDM('process.included.2.title'),
+        description: tDM('process.included.2.description'),
+      },
+      {
+        step: 4,
+        title: tDM('process.included.3.title'),
+        description: tDM('process.included.3.description'),
+      },
+      {
+        step: 5,
+        title: tDM('process.included.4.title'),
+        description: tDM('process.included.4.description'),
+      },
+      {
+        step: 6,
+        title: tDM('process.included.5.title'),
+        description: tDM('process.included.5.description'),
+      },
+    ],
+    roadmap: [
+      {
+        step: 1,
+        title: tDM('process.roadmap.0.title'),
+        description: tDM('process.roadmap.0.description'),
+        progress: 15,
+      },
+      {
+        step: 2,
+        title: tDM('process.roadmap.1.title'),
+        description: tDM('process.roadmap.1.description'),
+        progress: 30,
+      },
+      {
+        step: 3,
+        title: tDM('process.roadmap.2.title'),
+        description: tDM('process.roadmap.2.description'),
+        progress: 55,
+      },
+      {
+        step: 4,
+        title: tDM('process.roadmap.3.title'),
+        description: tDM('process.roadmap.3.description'),
+        progress: 75,
+      },
+      {
+        step: 5,
+        title: tDM('process.roadmap.4.title'),
+        description: tDM('process.roadmap.4.description'),
+        progress: 100,
+      },
+    ],
+  }
+
+  const displaySteps = activeTab === 'included' ? processData.included : processData.roadmap
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
+    <section ref={ref} className="py-20 lg:py-28 bg-bg-primary">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-          >
-            {title}
-          </motion.h2>
-          {subtitle && (
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-gray-600 text-lg max-w-2xl mx-auto"
-            >
-              {subtitle}
-            </motion.p>
-          )}
-        </div>
-
-        {/* Timeline Steps */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto space-y-6"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
         >
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              variants={stepVariants}
-              className={`relative flex items-start gap-4 md:gap-6 p-6 md:p-8 rounded-2xl transition-all duration-300 ${
-                step.highlighted
-                  ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-2xl scale-105'
-                  : 'bg-white border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg'
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-8">
+            {t('process')}
+          </h2>
+
+          {/* Tab Buttons */}
+          <div className="flex gap-3">
+            <button
+              onClick={() => {
+                setActiveTab('included')
+                setOpenIndex(0)
+              }}
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                activeTab === 'included'
+                  ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
+                  : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
               }`}
             >
-              {/* Step Number */}
-              <div
-                className={`flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-bold text-xl md:text-2xl ${
-                  step.highlighted
-                    ? 'bg-gradient-to-br from-[#FF6B2C] to-[#FF8F5C] text-white shadow-lg'
-                    : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-700'
-                }`}
-              >
-                {step.number}
-              </div>
+              <CheckCircle2 size={18} />
+              <span className="text-sm sm:text-base">{tDM('process.tabIncluded')}</span>
+            </button>
 
-              {/* Content */}
-              <div className="flex-1 pt-1">
-                <h3
-                  className={`text-xl md:text-2xl font-bold mb-2 ${
-                    step.highlighted ? 'text-white' : 'text-gray-900'
-                  }`}
-                >
-                  {step.title}
-                </h3>
-                <p
-                  className={`text-sm md:text-base leading-relaxed ${
-                    step.highlighted ? 'text-gray-300' : 'text-gray-600'
-                  }`}
-                >
-                  {step.description}
-                </p>
-              </div>
-
-              {/* Connector Line (except last item) */}
-              {index < steps.length - 1 && (
-                <div
-                  className={`absolute left-10 md:left-11 top-full w-0.5 h-6 ${
-                    step.highlighted || steps[index + 1]?.highlighted
-                      ? 'bg-gradient-to-b from-[#FF6B2C] to-[#FF8F5C]'
-                      : 'bg-gray-200'
-                  }`}
-                />
-              )}
-            </motion.div>
-          ))}
+            <button
+              onClick={() => {
+                setActiveTab('roadmap')
+                setOpenIndex(0)
+              }}
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                activeTab === 'roadmap'
+                  ? 'bg-bg-tertiary border-2 border-accent-primary text-text-primary'
+                  : 'bg-bg-tertiary/50 border-2 border-transparent text-text-secondary hover:border-accent-primary/30'
+              }`}
+            >
+              <Calendar size={18} />
+              <span className="text-sm sm:text-base">{tDM('process.tabRoadmap')}</span>
+            </button>
+          </div>
         </motion.div>
+
+        {/* Accordion Steps */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-3"
+          >
+            {displaySteps.map((step, index) => {
+              const isOpen = openIndex === index
+              const progress = 'progress' in step ? step.progress : undefined
+              
+              return (
+                <motion.div
+                  key={`${activeTab}-${step.step}`}
+                  initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                    className={`w-full text-left transition-all duration-300 rounded-2xl ${
+                      isOpen
+                        ? 'bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 border-accent-primary/30'
+                        : 'bg-bg-tertiary/30 border-bg-tertiary/50 hover:border-accent-primary/20'
+                    } border`}
+                  >
+                    <div className="flex items-center justify-between p-4 sm:p-6">
+                      {/* Left: Icon and Title */}
+                      <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                        {/* Modern Icon with 3D effect and glow */}
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotateY: 15 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                          className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                            isOpen
+                              ? 'bg-gradient-to-br from-accent-primary via-accent-secondary to-accent-primary shadow-[0_0_30px_rgba(99,102,241,0.6)]'
+                              : 'bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]'
+                          }`}
+                          style={{
+                            transformStyle: 'preserve-3d',
+                          }}
+                        >
+                          {(() => {
+                            const IconComponent = stepIcons[index] || Search
+                            return (
+                              <IconComponent
+                                size={28}
+                                className={`transition-all duration-300 ${
+                                  isOpen ? 'text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.5)]' : 'text-accent-primary'
+                                }`}
+                                strokeWidth={2.5}
+                              />
+                            )
+                          })()}
+                        </motion.div>
+                        <h3
+                          className={`font-bold text-base sm:text-lg lg:text-xl transition-colors ${
+                            isOpen ? 'text-text-primary' : 'text-text-secondary'
+                          }`}
+                        >
+                          {step.title}
+                        </h3>
+                      </div>
+
+                      {/* Right: Chevron */}
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={`flex-shrink-0 ${
+                          isOpen ? 'text-accent-primary' : 'text-text-muted'
+                        }`}
+                      >
+                        <ChevronDown size={20} className="sm:w-6 sm:h-6" />
+                      </motion.div>
+                    </div>
+
+                    {/* Content with Progress Bar */}
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-4 sm:px-6 pb-4 sm:pb-6 pl-16 sm:pl-24">
+                            <div className="border-l-2 border-accent-primary/30 pl-4 sm:pl-6">
+                              <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-4">
+                                {step.description}
+                              </p>
+
+                              {/* Progress Bar - only for roadmap */}
+                              {activeTab === 'roadmap' && progress !== undefined && (
+                                <div className="mt-4">
+                                  <div className="flex justify-between items-center mb-2">
+                                    <span className="text-xs text-text-muted">{tDM('process.progressLabel')}</span>
+                                    <span className="text-sm font-bold text-text-primary">{progress}%</span>
+                                  </div>
+                                  <div className="h-2 bg-bg-tertiary rounded-full overflow-hidden">
+                                    <motion.div
+                                      initial={{ width: 0 }}
+                                      animate={{ width: `${progress}%` }}
+                                      transition={{ duration: 1, delay: 0.3 }}
+                                      className="h-full bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full"
+                                    />
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </button>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
-  );
+  )
 }
+
+
+
