@@ -116,10 +116,6 @@ export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az
 // ─── Portfolio Queries ───────────────────────────────────────────────────────
 
 export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioItem[]> {
-  // First check total count
-  const count = await client.fetch('count(*[_type == "portfolio"])')
-  console.log('[Sanity] Total portfolio documents in Sanity:', count)
-  
   const query = `*[_type == "portfolio"] | order(completedAt desc) [0...100] {
     "id": _id,
     "slug": slug.current,
@@ -138,12 +134,7 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
   }`
   
   const result = await client.fetch(query)
-  console.log('[Sanity] Query returned:', result?.length || 0, 'portfolios')
-  
-  const normalized = toPortfolioItems(result)
-  console.log('[Sanity] After normalization:', normalized.length, 'portfolios')
-  
-  return normalized
+  return toPortfolioItems(result)
 }
 
 export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
