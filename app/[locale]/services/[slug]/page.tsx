@@ -172,10 +172,6 @@ function ServicePageContent({
         text: t(`${key}.finalCTA.primaryButton` as any),
         href: `/${locale}/contact`,
       },
-      secondaryButton: {
-        text: t(`${key}.finalCTA.secondaryButton` as any),
-        href: 'https://super-intellect.az',
-      },
     }
 
     const websiteTypesData = {
