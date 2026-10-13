@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, ShoppingCart, Target, Wordpress, Briefcase } from 'lucide-react';
+import { Building2, ShoppingCart, Target, Globe, Briefcase } from 'lucide-react';
 
 interface WebsiteType {
   icon: React.ReactNode;
@@ -19,7 +19,7 @@ const iconMap = {
   Building2,
   ShoppingCart,
   Target,
-  Wordpress,
+  Globe,
   Briefcase,
 };
 

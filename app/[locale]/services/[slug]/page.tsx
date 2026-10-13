@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
-import { MessageCircle, ArrowRight, Building2, ShoppingCart, Target, Briefcase } from 'lucide-react'
-import { Wordpress } from 'lucide-react'
+import { MessageCircle, ArrowRight, Building2, ShoppingCart, Target, Briefcase, Globe } from 'lucide-react'
 import { getAllServices, getServiceBySlug } from '@/lib/data/services'
 import { getPortfolioByCategory } from '@/lib/data/portfolio'
 import { ServiceHero } from '@/components/sections/ServiceHero'
@@ -199,7 +198,7 @@ function ServicePageContent({
           description: t(`${key}.websiteTypes.types.2.description` as any),
         },
         {
-          icon: <Wordpress className="w-8 h-8 text-white" />,
+          icon: <Globe className="w-8 h-8 text-white" />,
           title: t(`${key}.websiteTypes.types.3.title` as any),
           description: t(`${key}.websiteTypes.types.3.description` as any),
         },
