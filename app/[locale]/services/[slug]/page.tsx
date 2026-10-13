@@ -85,7 +85,7 @@ function ServicePageContent({
     const heroData = {
       title: 'Saytınız 48 saata hazır.',
       titleAccent: 'Əvvəlcə demosunu görün.',
-      subtitle: title,
+      subtitle: service.name,
       description: 'Əvvəlcə biznesiniz üçün sayt demosu hazırlayıb sizə göstəririk. Bəyənsəniz, illik 299 AZN-dən başlayan paketlə yayımlayırıq.',
       buttonText: 'Pulsuz demo istəyirəm',
       note: 'Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.',
