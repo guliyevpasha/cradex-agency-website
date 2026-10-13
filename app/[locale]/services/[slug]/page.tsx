@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
-import { MessageCircle, ArrowRight } from 'lucide-react'
+import { MessageCircle, ArrowRight, Building2, ShoppingCart, Target, Briefcase } from 'lucide-react'
+import { Wordpress } from 'lucide-react'
 import { getAllServices, getServiceBySlug } from '@/lib/data/services'
 import { getPortfolioByCategory } from '@/lib/data/portfolio'
 import { ServiceHero } from '@/components/sections/ServiceHero'
@@ -23,6 +24,8 @@ import ProcessCards from '@/components/sections/ProcessCards'
 import WebDevProcessTimeline from '@/components/sections/WebDevProcessTimeline'
 import WebDevFAQ from '@/components/sections/WebDevFAQ'
 import FinalCTA from '@/components/sections/FinalCTA'
+import DomainChecker from '@/components/sections/DomainChecker'
+import WebsiteTypes from '@/components/sections/WebsiteTypes'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
@@ -176,13 +179,63 @@ function ServicePageContent({
       },
     }
 
+    const websiteTypesData = {
+      title: t(`${key}.websiteTypes.title` as any),
+      subtitle: t(`${key}.websiteTypes.subtitle` as any),
+      types: [
+        {
+          icon: <Building2 className="w-8 h-8 text-white" />,
+          title: t(`${key}.websiteTypes.types.0.title` as any),
+          description: t(`${key}.websiteTypes.types.0.description` as any),
+        },
+        {
+          icon: <ShoppingCart className="w-8 h-8 text-white" />,
+          title: t(`${key}.websiteTypes.types.1.title` as any),
+          description: t(`${key}.websiteTypes.types.1.description` as any),
+        },
+        {
+          icon: <Target className="w-8 h-8 text-white" />,
+          title: t(`${key}.websiteTypes.types.2.title` as any),
+          description: t(`${key}.websiteTypes.types.2.description` as any),
+        },
+        {
+          icon: <Wordpress className="w-8 h-8 text-white" />,
+          title: t(`${key}.websiteTypes.types.3.title` as any),
+          description: t(`${key}.websiteTypes.types.3.description` as any),
+        },
+        {
+          icon: <Briefcase className="w-8 h-8 text-white" />,
+          title: t(`${key}.websiteTypes.types.4.title` as any),
+          description: t(`${key}.websiteTypes.types.4.description` as any),
+        },
+      ],
+    }
+
+    const whoIsThisForData = {
+      title: t(`${key}.whoIsThisFor.title` as any),
+      subtitle: t(`${key}.whoIsThisFor.subtitle` as any),
+      suitable: t.raw(`${key}.whoIsThisFor.suitable` as any),
+      notSuitable: t.raw(`${key}.whoIsThisFor.notSuitable` as any),
+      ctaText: t(`${key}.whoIsThisFor.ctaText` as any),
+    }
+
+    const glossaryData = {
+      title: t(`${key}.glossary.title` as any),
+      subtitle: t(`${key}.glossary.subtitle` as any),
+      terms: t.raw(`${key}.glossary.terms` as any),
+    }
+
     return (
       <>
         <WebDevHero {...heroData} />
+        <DomainChecker />
+        <WebsiteTypes {...websiteTypesData} />
         <PortfolioShowcase {...portfolioShowcaseData} portfolios={relatedPortfolio} />
         <PricingPackages {...pricingData} />
         <ProcessCards {...processCardsData} />
         <WebDevProcessTimeline {...processTimelineData} />
+        <WhoIsThisFor {...whoIsThisForData} />
+        <Glossary {...glossaryData} />
         <WebDevFAQ {...faqData} />
         <FinalCTA {...finalCTAData} />
       </>
