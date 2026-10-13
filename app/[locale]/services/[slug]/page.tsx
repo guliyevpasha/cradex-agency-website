@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations, useLocale } from 'next-intl'
-import { MessageCircle, ArrowRight, Building2, ShoppingCart, Target, Briefcase, Globe } from 'lucide-react'
+import { MessageCircle, ArrowRight } from 'lucide-react'
 import { getAllServices, getServiceBySlug } from '@/lib/data/services'
 import { getPortfolioByCategory } from '@/lib/data/portfolio'
 import { ServiceHero } from '@/components/sections/ServiceHero'
@@ -16,15 +16,6 @@ import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
 import { Glossary } from '@/components/sections/Glossary'
 import { FAQ } from '@/components/sections/FAQ'
 import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
-import WebDevHero from '@/components/sections/WebDevHero'
-import PortfolioShowcase from '@/components/sections/PortfolioShowcase'
-import PricingPackages from '@/components/sections/PricingPackages'
-import ProcessCards from '@/components/sections/ProcessCards'
-import WebDevProcessTimeline from '@/components/sections/WebDevProcessTimeline'
-import WebDevFAQ from '@/components/sections/WebDevFAQ'
-import FinalCTA from '@/components/sections/FinalCTA'
-import DomainChecker from '@/components/sections/DomainChecker'
-import WebsiteTypes from '@/components/sections/WebsiteTypes'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
@@ -82,160 +73,10 @@ function ServicePageContent({
   const locale = useLocale()
   const key = service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())
   
-  // Special layout for digital-marketing, smm, and web-mobile-dev
+  // Special layout for digital-marketing and smm
   const isDigitalMarketing = service.slug === 'digital-marketing'
   const isSMM = service.slug === 'smm'
-  const isWebMobileDev = service.slug === 'web-mobile-dev'
-  const hasCustomLayout = isDigitalMarketing || isSMM || isWebMobileDev
-
-  // Web-mobile-dev has completely different layout
-  if (isWebMobileDev) {
-    const heroData = {
-      title: t(`${key}.hero.title` as any),
-      titleAccent: t(`${key}.hero.titleAccent` as any),
-      subtitle: t(`${key}.hero.subtitle` as any),
-      primaryButton: t(`${key}.hero.primaryButton` as any),
-      secondaryButton: t(`${key}.hero.secondaryButton` as any),
-      demoNote: t(`${key}.hero.demoNote` as any),
-    }
-
-    const portfolioShowcaseData = {
-      label: t(`${key}.portfolioShowcase.label` as any),
-      title: t(`${key}.portfolioShowcase.title` as any),
-      subtitle: t(`${key}.portfolioShowcase.subtitle` as any),
-      categories: t.raw(`${key}.portfolioShowcase.categories` as any),
-      viewDetails: t(`${key}.portfolioShowcase.viewDetails` as any),
-    }
-
-    const pricingData = {
-      title: t(`${key}.pricing.title` as any),
-      subtitle: t(`${key}.pricing.subtitle` as any),
-      monthlyLabel: t(`${key}.pricing.monthlyLabel` as any),
-      yearlyLabel: t(`${key}.pricing.yearlyLabel` as any),
-      saveLabel: t(`${key}.pricing.saveLabel` as any),
-      perMonthLabel: t(`${key}.pricing.perMonthLabel` as any),
-      corporateTitle: t(`${key}.pricing.corporate.title` as any),
-      corporateDescription: t(`${key}.pricing.corporate.description` as any),
-      corporateButton: t(`${key}.pricing.corporate.button` as any),
-      tiers: [
-        {
-          name: t(`${key}.pricing.tiers.start.name` as any),
-          monthlyPrice: 299,
-          yearlyPrice: 2988,
-          features: t.raw(`${key}.pricing.tiers.start.features` as any),
-          cta: t(`${key}.pricing.tiers.start.cta` as any),
-          ctaHref: `/${locale}/contact`,
-        },
-        {
-          name: t(`${key}.pricing.tiers.pro.name` as any),
-          monthlyPrice: 399,
-          yearlyPrice: 3996,
-          popular: true,
-          features: t.raw(`${key}.pricing.tiers.pro.features` as any),
-          cta: t(`${key}.pricing.tiers.pro.cta` as any),
-          ctaHref: `/${locale}/contact`,
-        },
-        {
-          name: t(`${key}.pricing.tiers.max.name` as any),
-          monthlyPrice: 599,
-          yearlyPrice: 5988,
-          features: t.raw(`${key}.pricing.tiers.max.features` as any),
-          cta: t(`${key}.pricing.tiers.max.cta` as any),
-          ctaHref: `/${locale}/contact`,
-        },
-      ],
-    }
-
-    const processCardsData = {
-      cards: t.raw(`${key}.processCards.cards` as any).map((card: any, index: number) => ({
-        ...card,
-        icon: ['Clock', 'DollarSign', 'Shield', 'MessageCircle'][index] as any,
-      })),
-    }
-
-    const processTimelineData = {
-      title: t(`${key}.processTimeline.title` as any),
-      subtitle: t(`${key}.processTimeline.subtitle` as any),
-      steps: t.raw(`${key}.processTimeline.steps` as any),
-    }
-
-    const faqData = {
-      title: t(`${key}.faq.title` as any),
-      subtitle: t(`${key}.faq.subtitle` as any),
-      items: t.raw(`${key}.faq.items` as any),
-    }
-
-    const finalCTAData = {
-      title: t(`${key}.finalCTA.title` as any),
-      subtitle: t(`${key}.finalCTA.subtitle` as any),
-      primaryButton: {
-        text: t(`${key}.finalCTA.primaryButton` as any),
-        href: `/${locale}/contact`,
-      },
-    }
-
-    const websiteTypesData = {
-      title: t(`${key}.websiteTypes.title` as any),
-      subtitle: t(`${key}.websiteTypes.subtitle` as any),
-      types: [
-        {
-          icon: <Building2 className="w-8 h-8 text-white" />,
-          title: t(`${key}.websiteTypes.types.0.title` as any),
-          description: t(`${key}.websiteTypes.types.0.description` as any),
-        },
-        {
-          icon: <ShoppingCart className="w-8 h-8 text-white" />,
-          title: t(`${key}.websiteTypes.types.1.title` as any),
-          description: t(`${key}.websiteTypes.types.1.description` as any),
-        },
-        {
-          icon: <Target className="w-8 h-8 text-white" />,
-          title: t(`${key}.websiteTypes.types.2.title` as any),
-          description: t(`${key}.websiteTypes.types.2.description` as any),
-        },
-        {
-          icon: <Globe className="w-8 h-8 text-white" />,
-          title: t(`${key}.websiteTypes.types.3.title` as any),
-          description: t(`${key}.websiteTypes.types.3.description` as any),
-        },
-        {
-          icon: <Briefcase className="w-8 h-8 text-white" />,
-          title: t(`${key}.websiteTypes.types.4.title` as any),
-          description: t(`${key}.websiteTypes.types.4.description` as any),
-        },
-      ],
-    }
-
-    const whoIsThisForData = {
-      title: t(`${key}.whoIsThisFor.title` as any),
-      subtitle: t(`${key}.whoIsThisFor.subtitle` as any),
-      suitable: t.raw(`${key}.whoIsThisFor.suitable` as any),
-      notSuitable: t.raw(`${key}.whoIsThisFor.notSuitable` as any),
-      ctaText: t(`${key}.whoIsThisFor.ctaText` as any),
-    }
-
-    const glossaryData = {
-      title: t(`${key}.glossary.title` as any),
-      subtitle: t(`${key}.glossary.subtitle` as any),
-      terms: t.raw(`${key}.glossary.terms` as any),
-    }
-
-    return (
-      <>
-        <WebDevHero {...heroData} />
-        <DomainChecker />
-        <WebsiteTypes {...websiteTypesData} />
-        <PortfolioShowcase {...portfolioShowcaseData} portfolios={relatedPortfolio} />
-        <PricingPackages {...pricingData} />
-        <ProcessCards {...processCardsData} />
-        <WebDevProcessTimeline {...processTimelineData} />
-        <WhoIsThisFor {...whoIsThisForData} />
-        <Glossary {...glossaryData} />
-        <WebDevFAQ {...faqData} />
-        <FinalCTA {...finalCTAData} />
-      </>
-    )
-  }
+  const hasCustomLayout = isDigitalMarketing || isSMM
 
   return (
     <>
