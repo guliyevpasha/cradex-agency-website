@@ -171,9 +171,8 @@ export function HeroSection() {
                 className="group relative inline-flex items-center gap-2 overflow-hidden
                   rounded-full border border-white/25 px-6 py-3.5 text-sm sm:text-[15px] 
                   font-medium text-text-primary backdrop-blur-sm 
-                  transition-all duration-300 hover:border-transparent
-                  hover:bg-gradient-to-r hover:from-accent-primary hover:to-accent-secondary
-                  hover:text-white hover:shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
+                  transition-all duration-300
+                  hover:shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
                   hover:-translate-y-0.5"
               >
                 {/* Sheen sweep on hover */}
