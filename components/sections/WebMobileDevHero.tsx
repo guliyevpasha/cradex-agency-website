@@ -67,7 +67,7 @@ export default function WebMobileDevHero({
             {/* CTA Button */}
             <div className="space-y-4">
               <Link
-                href="https://wa.me/994502211161"
+                href="https://wa.me/994507786887"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-xl hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
