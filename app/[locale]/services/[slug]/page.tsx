@@ -17,6 +17,7 @@ import { Glossary } from '@/components/sections/Glossary'
 import { FAQ } from '@/components/sections/FAQ'
 import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
 import WebMobileDevHero from '@/components/sections/WebMobileDevHero'
+import WebsiteTypesSection from '@/components/sections/WebsiteTypesSection'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Button } from '@/components/ui/Button'
@@ -98,6 +99,7 @@ function ServicePageContent({
       <>
         <WebMobileDevHero {...heroData} />
         <ProcessTimeline steps={service.processSteps} />
+        <WebsiteTypesSection />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 text-center">
