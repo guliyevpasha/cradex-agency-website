@@ -17,9 +17,6 @@ export const revalidate = 60
 
 const locales = ['az', 'en', 'ru', 'tr']
 
-// ISR revalidation
-export const revalidate = 60
-
 export async function generateStaticParams() {
   const slugs = await getPortfolioSlugs()
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })))
