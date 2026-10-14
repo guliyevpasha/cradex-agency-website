@@ -17,6 +17,7 @@ import { Glossary } from '@/components/sections/Glossary'
 import { FAQ } from '@/components/sections/FAQ'
 import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
 import WebMobileDevHero from '@/components/sections/WebMobileDevHero'
+import { WhoIsThisFor } from '@/components/sections/WhoIsThisFor'
 import WebsiteTypesSection from '@/components/sections/WebsiteTypesSection'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -100,6 +101,55 @@ function ServicePageContent({
         <WebMobileDevHero {...heroData} />
         <ProcessTimeline steps={service.processSteps} />
         <WebsiteTypesSection />
+        <WhoIsThisFor
+          title="Bu xidmət kimə uyğundur?"
+          subtitle="Effektiv nəticə üçün düzgün hazırlıq vacibdir. Bu xidmətin sizə uyğun olub-olmadığını aşağıdaki meyarlara əsasən qiymətləndirin."
+          suitable={[
+            {
+              title: 'Rəqəmsal mövcudluğunu qurmaq istəyən yeni bizneslər',
+              description: 'Sayt açılışından etibarən düzgün texniki əsas, SEO optimizasiyalı struktur və peşəkar dizayn üzərində böyümək istəyən startaplar.',
+            },
+            {
+              title: 'Köhnə saytını yeniləmək istəyən bizneslər',
+              description: 'Mövcud saytı köhnəlib, mobil uyğun deyil, yavaş yüklənir və ya nəticə vermirərsə — tam yeniləmə lazımdır.',
+            },
+            {
+              title: 'Onlayn satış kanalı açmaq istəyən bizneslər',
+              description: 'E-ticarət saytı hazırlanması və onlayn mağaza açmaq istəyən, satışlarını rəqəmsal kanala köçürmək istəyən bizneslər.',
+            },
+            {
+              title: 'Reklam kampaniyaları üçün landing page lazım olanlar',
+              description: 'Google Ads, Meta Ads kampaniyaları üçün yüksək konversiyalı landing page hazırlanması tələb edən bizneslər.',
+            },
+            {
+              title: 'Peşəkar korporativ imic istəyənlər',
+              description: 'Korporativ saytların hazırlanması ilə B2B müştərilərə güvən verən, şirkətin dəyərini doğru təqdim edən peşəkar bir veb mövcudluq.',
+            },
+          ]}
+          notSuitable={[
+            {
+              title: 'Bir gündə sayt istəyənlər',
+              description: 'Keyfiyyətli sayt hazırlanması vaxt tələb edir — ucuz, şablonlu saytlar qısa müddətdə mövcuddur, lakin nəticə baxımından fərqlidir.',
+            },
+            {
+              title: 'Yalnız şablonlu, dəyişdirilməmiş sayt istəyənlər',
+              description: 'Fərdi biznesin ehtiyaclarına uyğunlaşdırılmamış şablon saytlar uzunmüddətli rəqabət üstünlüyü yaratmır.',
+            },
+            {
+              title: 'Davamlı texniki dəstəyə ehtiyacı olmayanlar',
+              description: 'Sayt yayımdan sonra texniki dəstək, yeniləmə və optimallaşdırma tələb edir — bunu özünüz idarə edə bilmirsizsə, dəstək paketi tövsiyə olunur.',
+            },
+            {
+              title: 'Minimum büdcə ilə maksimal funksionallıq gözləyənlər',
+              description: 'Mürəkkəb funksionallıq (e-ticarət, çoxdilli, xüsusi inteqrasiyalar) müvafiq büdcə tələb edir — realist gözləntilərlə başlamaq önəmlidir.',
+            },
+            {
+              title: 'Kontenti özü hazırlamaq istəməyənlər',
+              description: 'Sayt kontenti (mətn, şəkil, video) müştəri tərəfindən hazırlanır; kontent hazırlığı olmadan inkişaf prosesi gecikir.',
+            },
+          ]}
+          ctaText="Əmin deyilsiniz? Pulsuz məsləhət alın — vəziyyətinizi birlikdə qiymətləndirək."
+        />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 text-center">
