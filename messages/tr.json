@@ -806,197 +806,40 @@
     "webMobileDev": {
       "name": "Web Sitesi ve Mobil Uygulama",
       "shortDesc": "Next.js, React Native, UI/UX",
-      "description": "Modern teknolojilerle hızlı, güvenli ve güzel web siteleri ve mobil uygulamalar geliştiriyoruz.",
+      "description": "Modern teknolojilerle hızlı, güvenli ve güzel web siteleri ve mobil uygulamalar oluşturuyoruz.",
       "metaTitle": "Web Sitesi Geliştirme | Cradex Agency",
       "metaDescription": "Next.js ve React Native ile modern web sitesi ve mobil uygulama geliştirme hizmetleri.",
       "hero": {
         "title": "Siteniz 48 saatte hazır.",
         "titleAccent": "Önce demoyu görün.",
-        "subtitle": "Önce işiniz için bir demo site hazırlayıp size gösteriyoruz. Beğenirseniz, yıllık 299 AZN'den başlayan paketlerle yayınlıyoruz.",
+        "subtitle": "Önce işiniz için bir demo site hazırlıyor ve size gösteriyoruz. Beğenirseniz, aylık 129 AZN'den başlayan paketlerle yayınlıyoruz.",
         "primaryButton": "Ücretsiz demo istiyorum",
-        "secondaryButton": "AI ile ürün yaratmayı öğrenin",
-        "demoNote": "Demo ücretsizdir. Beğenmezseniz ödeme yok."
-      },
-      "portfolioShowcase": {
-        "label": "SİTE ÖRNEKLERİ",
-        "title": "Sektörünüzü seçin. Demonuzu 48 saatte gönderelim.",
-        "subtitle": "18 hazır site tasarımı. İşinize uygun olanı seçin, biz de markanıza uyarlayalım.",
-        "categories": {
-          "all": "Tümü",
-          "medical": "Klinik",
-          "automotive": "Otomotiv",
-          "realestate": "Gayrimenkul",
-          "beauty": "Güzellik",
-          "law": "Hukuk / danışmanlık",
-          "education": "Eğitim",
-          "other": "Diğer"
-        },
-        "viewDetails": "Tam boyutta görüntüle"
-      },
-      "pricing": {
-        "label": "KİŞİSEL SİTELER İÇİN",
-        "title": "Aramadan önce fiyatı öğrenin.",
-        "subtitle": "Kişisel siteler için açık paketler. Online mağaza, ödeme sistemi, mobil uygulama veya AI asistanı gerekiyorsa, fiyat ücretsiz bir görüşme sonrası yazılı teklifte verilir.",
-        "monthlyLabel": "Aylık",
-        "yearlyLabel": "Yıllık",
-        "saveLabel": "%26 tasarruf edin",
-        "perMonthLabel": "her ay",
-        "tiers": {
-          "start": {
-            "name": "Start",
-            "subtitle": "Küçük site, hızlı başlangıç.",
-            "monthlyPrice": 299,
-            "yearlyPrice": 2988,
-            "cta": "Başlayın",
-            "features": [
-              "5 sayfaya kadar, 1 dil, mobil uyumlu tasarım",
-              "Hosting ve SSL sertifikası",
-              "WhatsApp butonu ve iletişim formu",
-              "Ayda 1 küçük düzenleme"
-            ]
-          },
-          "pro": {
-            "name": "Pro",
-            "subtitle": "Büyüyen kişisel marka için. Fiyat ve özellikler arasında dengeli seçim.",
-            "monthlyPrice": 399,
-            "yearlyPrice": 3996,
-            "cta": "Başlayın",
-            "popular": true,
-            "features": [
-              "Start'taki her şey",
-              "10 sayfaya kadar",
-              "AZ, RU, EN dil seçenekleri",
-              "Kurumsal e-posta (isim@siteniz.az) kişisel e-postanıza yönlendirilir",
-              "Temel SEO ve Google görünürlüğü",
-              "Ayda 3 düzenleme, 24 saat yanıt"
-            ]
-          },
-          "max": {
-            "name": "Max",
-            "subtitle": "Tam özellikler: site, entegrasyonlar ve öncelikli destek.",
-            "monthlyPrice": 599,
-            "yearlyPrice": 5988,
-            "cta": "Başlayın",
-            "features": [
-              "Pro'daki her şey",
-              "Sınırsız sayfa, blog ve 2 entegrasyon (örn. Google Analytics, Telegram)",
-              "Kurumsal e-posta (isim@siteniz.az) kişisel e-postanıza yönlendirilir",
-              "Aylık rapor, öncelikli destek"
-            ]
-          }
-        },
-        "corporate": {
-          "title": "Büyük proje mi? Konuşalım",
-          "description": "Online mağaza, ödeme ve rezervasyon sistemleri, mobil uygulama veya AI asistanı mı gerekiyor? Fiyat proje kapsamına göre bireysel olarak hesaplanır.",
-          "button": "Görüşme ayarlayın"
-        }
-      },
-      "processCards": {
-        "title": "Neden bizim site paketimiz?",
-        "cards": [
-          {
-            "title": "48 saatte demo",
-            "description": "Herhangi bir ödeme yapmadan önce işinize özel demo siteyi görüyorsunuz."
-          },
-          {
-            "title": "Fiyat önceden belli",
-            "description": "299, 399 veya 599 AZN yıllık paket. Gizli ücret yok."
-          },
-          {
-            "title": "Her şey sizin adınıza",
-            "description": "Domain ve hesaplar sizin adınıza kayıt edilir. Site size aittir."
-          },
-          {
-            "title": "WhatsApp ile iletişim",
-            "description": "Mobil uyumlu site. WhatsApp butonu ve iletişim formu. Müşterileriniz size tek dokunuşla ulaşabilir."
-          }
-        ]
-      },
-      "processTimeline": {
-        "title": "Nasıl çalışıyoruz?",
-        "subtitle": "Adım adım süreç, sitenizin profesyonelce ve zamanında teslim edilmesini garanti eder.",
-        "steps": [
-          {
-            "number": "01",
-            "title": "Brifing ve analiz",
-            "description": "İşiniz, hedef kitleniz ve rakipleriniz hakkında bilgi topluyoruz. Sitenin amacını ve işlevselliğini belirliyoruz."
-          },
-          {
-            "number": "02",
-            "title": "Demo hazırlama",
-            "description": "48 saat içinde markanıza uygun bir demo site hazırlayıp sizinle paylaşıyoruz. Beğenmezseniz ödeme yok.",
-            "highlighted": true
-          },
-          {
-            "number": "03",
-            "title": "Tasarım ve geliştirme",
-            "description": "Demoyu onayladıktan sonra siteyi tamamen işlevsel hale getiriyoruz. Tüm sayfalar, entegrasyonlar ve mobil versiyon geliştirilir."
-          },
-          {
-            "number": "04",
-            "title": "Test ve optimizasyon",
-            "description": "Siteyi tüm cihazlarda test ediyor, hız ve SEO optimizasyonu yapıyoruz. İstenen revizyonlar yapılır."
-          },
-          {
-            "number": "05",
-            "title": "Yayın ve destek",
-            "description": "Siteyi canlı sunucuya yüklüyor ve domain bağlantısını tamamlıyoruz. Sürekli teknik destek ve aylık düzenlemeler sağlanır."
-          }
-        ]
-      },
-      "faq": {
-        "title": "Sık Sorulan Sorular",
-        "subtitle": "Site paketleri hakkında en çok sorulan sorular",
-        "items": [
-          {
-            "question": "Demo gerçekten ücretsiz mi?",
-            "answer": "Evet. İşinizi anlatıyorsunuz, 48 saatte demo gönderiyoruz. Beğenmezseniz ödeme yok."
-          },
-          {
-            "question": "Paketler neleri kapsar?",
-            "answer": "Tüm paketler hosting, SSL sertifikası, mobil uyumlu tasarım, WhatsApp butonu ve iletişim formunu kapsar. Fark sayfa sayısı, dil seçenekleri, SEO ve aylık düzenleme limitlerindedir."
-          },
-          {
-            "question": "Domain ve site kime ait?",
-            "answer": "Domain ve hesaplar sizin adınıza kayıt edilir. Site tamamen size aittir. İstediğiniz zaman başka bir sağlayıcıya geçebilirsiniz."
-          },
-          {
-            "question": "Aylık ve yıllık ödeme arasındaki fark nedir?",
-            "answer": "Yıllık ödemede %26'dan fazla tasarruf ediyorsunuz. Aylık ödeme daha esnek, yıllık daha ekonomik. Her iki durumda da hizmet aynıdır."
-          },
-          {
-            "question": "Sitede değişiklik istersem ne olur?",
-            "answer": "Start paketi ayda 1, Pro paketi ayda 3, Max paketi ise sınırsız küçük düzenleme içerir. Büyük işlevsel değişiklikler için ek teklif hazırlanır."
-          },
-          {
-            "question": "Mobil uygulama veya online mağazaya ihtiyacım olursa?",
-            "answer": "Bu paketler kişisel ve küçük işletme siteleri içindir. Mobil uygulama, online mağaza veya ödeme sistemleri için özel teklif hazırlıyoruz. İletişim formu aracılığıyla bizimle iletişime geçin."
-          }
-        ]
+        "secondaryButton": "AI ile ürün oluşturmayı öğren",
+        "demoNote": "Demo ücretsizdir. Beğenmezseniz, ödeme yapmanıza gerek yok."
       },
       "websiteTypes": {
-        "title": "Hangi web sitesi türlerini hazırlıyoruz?",
+        "title": "Hangi site türlerini geliştiriyoruz?",
         "subtitle": "Her işletme türü için özel ve profesyonel web çözümleri",
         "types": [
           {
-            "title": "Kurumsal Web Sitesi Geliştirme",
-            "description": "B2B ve büyük işletmeler için kurumsal web sitesi geliştirme — şirketin imajını, hizmetlerini ve değerlerini profesyonel şekilde sunan, yönetimi kolay siteler."
+            "title": "Kurumsal Site Geliştirme",
+            "description": "B2B ve büyük işletmeler için kurumsal site geliştirme — şirketin imajını, hizmetlerini ve değerlerini profesyonel şekilde sunan, kolay yönetilebilir siteler."
           },
           {
-            "title": "Online Mağaza & E-ticaret Sitesi",
-            "description": "Online mağaza ve e-ticaret sitesi geliştirme için tam çözüm — ürün kataloğundan ödeme sistemine, kargo entegrasyonundan müşteri paneline kadar."
+            "title": "Online Mağaza ve E-ticaret Sitesi",
+            "description": "Online mağaza geliştirme ve e-ticaret sitesi oluşturma için eksiksiz çözüm — ürün katalogdan ödeme sistemine, kargo entegrasyonundan müşteri paneline kadar."
           },
           {
             "title": "Landing Page Geliştirme",
-            "description": "Google Ads, Meta Ads ve diğer reklam kampanyaları için yüksek dönüşümlü landing page geliştirme — her unsur test edilmiş, hedefe yönelik."
+            "description": "Google Ads, Meta Ads ve diğer reklam kampanyaları için yüksek dönüşümlü landing page geliştirme — her öğe test edilmiş, hedefe yönelik."
           },
           {
-            "title": "WordPress Web Sitesi Geliştirme",
-            "description": "En popüler CMS platformunda WordPress web sitesi geliştirme — yönetimi kolay, ölçeklenebilir, SEO optimize edilmiş, responsive tasarımlı siteler."
+            "title": "WordPress Site Geliştirme",
+            "description": "En popüler CMS platformunda WordPress site geliştirme — yönetimi kolay, genişletilebilir, SEO optimize, responsive tasarımlı siteler."
           },
           {
-            "title": "İşletme & Sektör Siteleri",
-            "description": "Restoran web sitesi, doktorlar için web sitesi, inşaat şirketi için site, portfolyo sitesi geliştirme — her sektör için özel yaklaşım."
+            "title": "İşletme ve Sektör Siteleri",
+            "description": "Restoran için web sitesi, doktorlar için web sitesi, inşaat şirketi için site, portföy sitesi geliştirme — her sektör için bireysel yaklaşım."
           }
         ]
       },
@@ -1005,92 +848,114 @@
         "subtitle": "Etkili sonuç için doğru hazırlık önemlidir. Bu hizmetin size uygun olup olmadığını aşağıdaki kriterlere göre değerlendirin.",
         "suitable": [
           {
-            "title": "İlk kez site sipariş edenler",
-            "description": "İşinizin ilk dijital adımı için demo ile başlamak istiyorsanız, riski minimize ederek karar verebilirsiniz."
+            "title": "Dijital varlık oluşturmak isteyen yeni işletmeler",
+            "description": "Site lansmanından itibaren sağlam teknik temel, SEO optimize yapı ve profesyonel tasarım üzerinde büyümek isteyen startuplar."
           },
           {
-            "title": "Hızlı çözüm isteyen işletmeler",
-            "description": "48 saat içinde hazır demo, 7-14 gün içinde canlı site — hız ve kalite aynı anda."
+            "title": "Eski sitesini yenilemek isteyen işletmeler",
+            "description": "Mevcut siteniz eskimişse, mobil uyumlu değilse, yavaş yükleniyorsa veya sonuç vermiyorsa — tam yenileme gereklidir."
           },
           {
-            "title": "Net bütçe ile çalışmak isteyenler",
-            "description": "Yıllık 299, 399 veya 599 AZN paketler — gizli maliyet yok, her şey şeffaf."
+            "title": "Online satış kanalı açmak isteyen işletmeler",
+            "description": "E-ticaret sitesi geliştirme ve online mağaza açmak isteyen, satışlarını dijital kanala taşımak isteyen işletmeler."
           },
           {
-            "title": "Teknik bilgiye sahip olmayanlar",
-            "description": "Sitenin teknik tarafını anlamıyorsanız — endişelenmeyin, biz her şeyi yönetiyoruz."
+            "title": "Reklam kampanyaları için landing page'e ihtiyaç duyanlar",
+            "description": "Google Ads, Meta Ads kampanyaları için yüksek dönüşümlü landing page geliştirme gerektiren işletmeler."
           },
           {
-            "title": "SEO ve Google'da görünmek isteyenler",
-            "description": "Siteniz Google'da bulunmalı, müşteriler sizi kolayca bulmalı — SEO temelleri dahil."
+            "title": "Profesyonel kurumsal imaj isteyenler",
+            "description": "Kurumsal site geliştirme ile B2B müşterilere güven veren, şirket değerini doğru sunan profesyonel bir web varlığı."
           }
         ],
         "notSuitable": [
           {
-            "title": "Çok karmaşık işlevsellik isteyenler",
-            "description": "Ödeme sistemleri, özel API entegrasyonları, büyük veritabanları — bu paketlere dahil değil, özel proje olarak değerlendirilir."
+            "title": "Bir günde site isteyenler",
+            "description": "Kaliteli site geliştirme zaman gerektirir — ucuz, şablon siteler kısa sürede mevcuttur, ancak sonuç açısından farklıdır."
           },
           {
-            "title": "Tamamen özel tasarım bekleyenler",
-            "description": "Paketlerde hazır şablonlar kullanılır. Tamamen özel tasarım istiyorsanız, özel proje sipariş edin."
+            "title": "Sadece şablon, değiştirilmemiş site isteyenler",
+            "description": "Bireysel işletme ihtiyaçlarına uyarlanmamış şablon siteler uzun vadeli rekabet avantajı yaratmaz."
           },
           {
-            "title": "Her hafta değişiklik yapmak isteyenler",
-            "description": "Paket fiyatı ilk kurulum ve aylık 1-2 küçük değişikliği kapsar. Daha fazla güncelleme gerekirse, ek hizmet gerekir."
+            "title": "Sürekli teknik desteğe ihtiyaç duymayanlar",
+            "description": "Siteler yayından sonra teknik destek, güncelleme ve optimizasyon gerektirir — bunu kendiniz yönetemiyorsanız, destek paketleri önerilir."
+          },
+          {
+            "title": "Minimum bütçe ile maksimum işlevsellik bekleyenler",
+            "description": "Karmaşık işlevsellik (e-ticaret, çok dilli, özel entegrasyonlar) uygun bütçe gerektirir — gerçekçi beklentilerle başlamak önemlidir."
+          },
+          {
+            "title": "İçeriği kendileri hazırlamak istemeyenler",
+            "description": "Site içeriği (metin, resim, video) müşteri tarafından hazırlanır; içerik hazırlığı olmadan geliştirme süreci gecikir."
           }
         ],
-        "ctaText": "Emin değil misiniz? Ücretsiz danışmanlık alın — uzmanlarımız sizinle birlikte değerlendirecek."
+        "ctaText": "Emin değil misiniz? Ücretsiz danışmanlık alın — durumunuzu birlikte değerlendirelim."
       },
       "glossary": {
         "title": "Sözlük",
-        "subtitle": "Bu hizmetle ilgili sık karşılaşılan terimlerin kısa açıklamaları.",
+        "subtitle": "Bu hizmetle ilgili sıkça karşılaşılan terimlerin kısa açıklaması.",
         "terms": [
           {
             "term": "Responsive Tasarım",
-            "definition": "Sitenin mobil, tablet ve bilgisayar ekranlarında doğru görüntülenmesi ve çalışması.",
-            "icon": "📱"
+            "definition": "Sitenin farklı ekran boyutlarına (masaüstü, tablet, mobil) otomatik uyum sağlayan tasarım — mobil uyumlu site geliştirmenin temeli."
           },
           {
-            "term": "CMS (İçerik Yönetim Sistemi)",
-            "definition": "Site içeriğini kod bilmeden yönetmeye olanak veren sistem — WordPress bu sistemlerin en popüleridir.",
-            "icon": "⚙️"
+            "term": "UX/UI Tasarım",
+            "definition": "UX (kullanıcı deneyimi) sitede navigasyon rahatlığını, UI (kullanıcı arayüzü) görsel görünümü belirler."
           },
           {
-            "term": "SEO (Arama Motoru Optimizasyonu)",
-            "definition": "Sitenin Google ve diğer arama motorlarında üst sıralarda çıkması için yapılan teknik ve içerik optimizasyonu.",
-            "icon": "🔍"
+            "term": "WordPress",
+            "definition": "Dünyada en yaygın kullanılan CMS (içerik yönetim sistemi) — WordPress site geliştirme için kolay yönetilen, genişletilebilir platform."
           },
           {
             "term": "Landing Page",
-            "definition": "Bir hedef için (örneğin form doldurmak, ürün almak) hazırlanan tek sayfalık site.",
-            "icon": "🎯"
+            "definition": "Sadece bir amaç için (lead toplama, satış, kayıt) tasarlanmış, reklam kampanyaları için kullanılan özel iniş sayfası."
           },
           {
-            "term": "Hosting",
-            "definition": "Sitenizin internette saklandığı ve yayınlandığı sunucu hizmeti.",
-            "icon": "☁️"
+            "term": "Core Web Vitals",
+            "definition": "Google'ın site hızı ve kullanıcı deneyimini ölçmek için kullandığı teknik göstergeler — hızlı web sitesi geliştirmenin ana kriteri."
           },
           {
-            "term": "Domain",
-            "definition": "Sitenizin internet adresi (örneğin, sizinfirma.az, mycompany.com).",
-            "icon": "🌐"
+            "term": "SEO Optimize Site",
+            "definition": "Arama motorlarının (Google) gereksinimlerine uygun yapılan, organik trafik çekmek için optimize edilmiş site yapısı."
           },
           {
-            "term": "SSL Sertifikası",
-            "definition": "Sitenin güvenli (HTTPS) şekilde çalışmasını sağlayan dijital sertifika.",
-            "icon": "🔒"
+            "term": "CMS (Content Management System)",
+            "definition": "Site içeriğini kodlama bilgisi olmadan yönetmeye olanak sağlayan platform (WordPress, Shopify, özel CMS)."
           },
           {
-            "term": "UI/UX Tasarım",
-            "definition": "Kullanıcı Arayüzü (UI) ve Kullanıcı Deneyimi (UX) — sitenin güzel ve kullanımı kolay olmasını sağlayan tasarım yaklaşımı.",
-            "icon": "🎨"
+            "term": "Dönüşüm Oranı",
+            "definition": "Siteyi ziyaret eden kullanıcıların hedeflenen eylemi (satın alma, iletişim formu, arama) tamamlama yüzdesi."
           }
         ]
       },
-      "finalCTA": {
-        "title": "Sitenizi bugün sipariş edin",
-        "subtitle": "48 saat içinde ücretsiz demo alın ve işinizi online dünyaya tanıtın.",
-        "primaryButton": "Ücretsiz demo istiyorum"
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Web sitesi geliştirme hakkında en sık sorulan soruların cevapları.",
+        "items": [
+          {
+            "question": "Web sitesi geliştirme ne kadar sürer?",
+            "answer": "Site karmaşıklığına bağlı olarak değişir. Basit işletme sitesi 3-4 hafta, e-ticaret sitesi geliştirme 6-10 hafta, özel işlevsellikli kurumsal site 8-16 hafta gerektirebilir."
+          },
+          {
+            "question": "Bakü'de site fiyatı ne kadardır?",
+            "answer": "Web sitesi fiyatları site türüne, işlevselliğe ve teknik gereksinimlere bağlıdır. Landing page'den kurumsal siteye, online mağazadan özel platforma kadar çeşitli bütçe seçenekleri mevcuttur — doğru değerlendirme için bizimle iletişime geçin."
+          },
+          {
+            "question": "WordPress site geliştirme neden üstün?",
+            "answer": "WordPress dünyada en popüler CMS'dir — yönetimi kolay, genişletilebilir, binlerce eklenti desteği olan, SEO optimize site kurmak için ideal platformdur. Büyük işletmeler için özel platform da önerebiliriz."
+          },
+          {
+            "question": "Site geliştirildikten sonra kendim değişiklik yapabilir miyim?",
+            "answer": "Evet. WordPress veya diğer CMS tabanlı sitelerde içerik değişiklikleri (metin, resim, ürün ekleme) kodlama bilgisi olmadan yapılabilir. Yayından sonra yönetici paneli hakkında kısa eğitim veriyoruz."
+          },
+          {
+            "question": "SEO optimize site ne demektir?",
+            "answer": "Site geliştirme sırasında teknik SEO temellerini (URL yapısı, meta etiketler, site hızı, schema markup, mobil uyumluluk) uyguluyoruz ki siteniz Google'da üst sıralara çıkmaya hazır olsun. Bu, SEO hizmetinin başlangıç noktasıdır."
+          }
+        ],
+        "ctaButton": "WhatsApp'tan sor"
       }
     },
     "benefits": "Avantajlar",
@@ -1212,7 +1077,7 @@
   "portfolio": {
     "title": "Portföy",
     "subtitle": "Tamamladığımız projeler",
-    "viewProject": "Portföyü Gör",
+    "viewProject": "Projeye Git",
     "visitWebsite": "Siteyi Ziyaret Et",
     "client": "Müşteri",
     "year": "Yıl",
@@ -1224,7 +1089,6 @@
     "services": "Hizmetler",
     "deliveredFor": "için gerçekleştirilen",
     "serviceText": "hizmeti",
-    "viewProject": "Projeye Git",
     "gallery": "Galeri",
     "gallerySubtitle": "Proje görselleri",
     "videoTitle": "Proje Videosu",
