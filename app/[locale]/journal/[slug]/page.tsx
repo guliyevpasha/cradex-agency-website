@@ -15,9 +15,6 @@ import type { Article } from '@/types'
 
 const locales = ['az', 'en', 'ru', 'tr']
 
-// ISR revalidation
-export const revalidate = 60
-
 // ISR: Revalidate every 60 seconds
 export const revalidate = 60
 
