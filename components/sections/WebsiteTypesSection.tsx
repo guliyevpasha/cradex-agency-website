@@ -7,42 +7,23 @@ import {
   ShoppingCart, 
   Megaphone, 
   Blocks,
-  Utensils,
-  Stethoscope,
-  HardHat,
   Briefcase
 } from 'lucide-react'
 
-const websiteTypes = [
-  {
-    icon: Building2,
-    title: 'Korporativ Sayt Hazırlanması',
-    description: 'B2B və böyük bizneslər üçün korporativ saytların hazırlanması — şirkətin imicini, xidmətlərini və dəyərlərini peşəkar şəkildə təqdim edən, idarəsi asan saytlar.',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'Onlayn Mağaza & E-ticarət Saytı',
-    description: 'Onlayn mağaza hazırlanması və e-ticarət saytı hazırlanması üçün tam həll-məhsul kataloqundan ödəniş sisteminə, kargo inteqrasiyasından müştəri panelinə qədər.',
-  },
-  {
-    icon: Megaphone,
-    title: 'Landing Page Hazırlanması',
-    description: 'Google Ads, Meta Ads və digər reklam kampaniyaları üçün yüksək konversiyalı landing page hazırlanması-hər element test edilmiş, məqsəd yönümlü.',
-  },
-  {
-    icon: Blocks,
-    title: 'WordPress Sayt Hazırlanması',
-    description: 'Ən populyar CMS platformasında WordPress sayt hazırlanması-idarəsi asan, genişlənə bilən, SEO optimizasiyalı, responsiv dizaynlı saytlar.',
-  },
-  {
-    icon: Briefcase,
-    title: 'Biznes & Sektor Saytları',
-    description: 'Restoran üçün veb sayt, həkimlər üçün veb sayt, tikinti şirkəti üçün sayt, portfolio saytı hazırlanması - hər sektor üçün fərdi yanaşma ilə.',
-    subIcons: [Utensils, Stethoscope, HardHat],
-  },
-]
+interface WebsiteType {
+  title: string
+  description: string
+}
 
-export default function WebsiteTypesSection() {
+interface WebsiteTypesSectionProps {
+  title: string
+  subtitle: string
+  types: WebsiteType[]
+}
+
+const iconMap = [Building2, ShoppingCart, Megaphone, Blocks, Briefcase]
+
+export default function WebsiteTypesSection({ title, subtitle, types }: WebsiteTypesSectionProps) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -63,17 +44,17 @@ export default function WebsiteTypesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-4">
-            Hansı sayt növlərini hazırlayırıq?
+            {title}
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            Biznesinizin ehtiyaclarına uyğun peşəkar veb həllər
+            {subtitle}
           </p>
         </motion.div>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {websiteTypes.map((type, index) => {
-            const IconComponent = type.icon
+          {types.map((type, index) => {
+            const IconComponent = iconMap[index] || Building2
             return (
               <motion.div
                 key={type.title}
@@ -91,20 +72,6 @@ export default function WebsiteTypesSection() {
                       strokeWidth={2}
                     />
                   </div>
-                  
-                  {/* Sub icons for Biznes & Sektor */}
-                  {type.subIcons && (
-                    <div className="flex gap-1 opacity-60">
-                      {type.subIcons.map((SubIcon, i) => (
-                        <div 
-                          key={i}
-                          className="w-6 h-6 rounded bg-bg-tertiary/50 flex items-center justify-center"
-                        >
-                          <SubIcon size={14} className="text-text-secondary" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
 
                 {/* Title */}
