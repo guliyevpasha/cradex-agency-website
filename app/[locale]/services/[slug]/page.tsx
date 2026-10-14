@@ -149,6 +149,44 @@ function ServicePageContent({
           ]}
           ctaText="Əmin deyilsiniz? Pulsuz məsləhət alın — vəziyyətinizi birlikdə qiymətləndirək."
         />
+        <Glossary
+          title="Lüğət"
+          subtitle="Bu xidmətlə bağlı tez-tez rast gəlinən terminlərin qısa izahı."
+          terms={[
+            {
+              term: 'Responsiv Dizayn',
+              definition: 'Saytın müxtəlif ekran ölçülərinə (masaüstü, planşet, mobil) avtomatik uyğunlaşan dizayn — mobil uyğun sayt hazırlanmasının əsası.',
+            },
+            {
+              term: 'UX/UI Dizayn',
+              definition: 'UX (istifadəçi təcrübəsi) saytda naviqasiyanın rahatlığını, UI (istifadəçi interfeysi) isə vizual görünüşü müəyyən edir.',
+            },
+            {
+              term: 'WordPress',
+              definition: 'Dünyada ən geniş istifadə olunan CMS (məzmun idarəetmə sistemi) — WordPress sayt hazırlanması üçün asan idarə olunan, genişlənə bilən platforma.',
+            },
+            {
+              term: 'Landing Page',
+              definition: 'Yalnız bir məqsəd üçün (lead toplama, satış, qeydiyyat) dizayn edilmiş, reklam kampaniyaları üçün istifadə olunan xüsusi açılış səhifəsi.',
+            },
+            {
+              term: 'Core Web Vitals',
+              definition: 'Google-un sayt sürəti və istifadəçi təcrübəsini ölçmək üçün istifadə etdiyi texniki göstəricilər — sürətli veb sayt hazırlanmasının əsas meyarı.',
+            },
+            {
+              term: 'SEO Optimizasiyalı Sayt',
+              definition: 'Axtarış sistemlərinin (Google) tələblərinə uyğun qurulan, üzvi trafik cəlb etmək üçün optimizasiya edilmiş sayt strukturu.',
+            },
+            {
+              term: 'CMS (Content Management System)',
+              definition: 'Sayt kontentini kod bilmədən idarə etməyə imkan verən platforma (WordPress, Shopify, xüsusi CMS).',
+            },
+            {
+              term: 'Konversiya Nisbəti',
+              definition: 'Saytı ziyarət edən istifadəçilərin hədəflənən hərəkəti (alış, əlaqə forması, zəng) tamamlamasının faizi.',
+            },
+          ]}
+        />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 text-center">
