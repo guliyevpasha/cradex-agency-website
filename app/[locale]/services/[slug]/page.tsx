@@ -87,132 +87,40 @@ function ServicePageContent({
   // Web-mobile-dev has special hero
   if (isWebMobileDev) {
     const heroData = {
-      title: 'Saytınız 48 saata hazır.',
-      titleAccent: 'Əvvəlcə demosunu görün.',
-      subtitle: service.name,
-      description: 'Əvvəlcə biznesiniz üçün sayt demosu hazırlayıb sizə göstəririk. Bəyənsəniz, aylıq 129 AZN-dan başlayan paketlə saytınızı hazır edirik.',
-      buttonText: 'Pulsuz demo istəyirəm',
-      note: 'Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.',
+      title: t(`${key}.hero.title` as any),
+      titleAccent: t(`${key}.hero.titleAccent` as any),
+      subtitle: t(`${key}.hero.subtitle` as any),
+      description: t(`${key}.description` as any),
+      buttonText: t(`${key}.hero.primaryButton` as any),
+      note: t(`${key}.hero.demoNote` as any),
     }
 
     return (
       <>
         <WebMobileDevHero {...heroData} />
         <ProcessTimeline steps={service.processSteps} />
-        <WebsiteTypesSection />
+        <WebsiteTypesSection
+          title={t(`${key}.websiteTypes.title` as any)}
+          subtitle={t(`${key}.websiteTypes.subtitle` as any)}
+          types={t.raw(`${key}.websiteTypes.types` as any)}
+        />
         <WhoIsThisFor
-          title="Bu xidmət kimə uyğundur?"
-          subtitle="Effektiv nəticə üçün düzgün hazırlıq vacibdir. Bu xidmətin sizə uyğun olub-olmadığını aşağıdaki meyarlara əsasən qiymətləndirin."
-          suitable={[
-            {
-              title: 'Rəqəmsal mövcudluğunu qurmaq istəyən yeni bizneslər',
-              description: 'Sayt açılışından etibarən düzgün texniki əsas, SEO optimizasiyalı struktur və peşəkar dizayn üzərində böyümək istəyən startaplar.',
-            },
-            {
-              title: 'Köhnə saytını yeniləmək istəyən bizneslər',
-              description: 'Mövcud saytı köhnəlib, mobil uyğun deyil, yavaş yüklənir və ya nəticə vermirərsə — tam yeniləmə lazımdır.',
-            },
-            {
-              title: 'Onlayn satış kanalı açmaq istəyən bizneslər',
-              description: 'E-ticarət saytı hazırlanması və onlayn mağaza açmaq istəyən, satışlarını rəqəmsal kanala köçürmək istəyən bizneslər.',
-            },
-            {
-              title: 'Reklam kampaniyaları üçün landing page lazım olanlar',
-              description: 'Google Ads, Meta Ads kampaniyaları üçün yüksək konversiyalı landing page hazırlanması tələb edən bizneslər.',
-            },
-            {
-              title: 'Peşəkar korporativ imic istəyənlər',
-              description: 'Korporativ saytların hazırlanması ilə B2B müştərilərə güvən verən, şirkətin dəyərini doğru təqdim edən peşəkar bir veb mövcudluq.',
-            },
-          ]}
-          notSuitable={[
-            {
-              title: 'Bir gündə sayt istəyənlər',
-              description: 'Keyfiyyətli sayt hazırlanması vaxt tələb edir — ucuz, şablonlu saytlar qısa müddətdə mövcuddur, lakin nəticə baxımından fərqlidir.',
-            },
-            {
-              title: 'Yalnız şablonlu, dəyişdirilməmiş sayt istəyənlər',
-              description: 'Fərdi biznesin ehtiyaclarına uyğunlaşdırılmamış şablon saytlar uzunmüddətli rəqabət üstünlüyü yaratmır.',
-            },
-            {
-              title: 'Davamlı texniki dəstəyə ehtiyacı olmayanlar',
-              description: 'Sayt yayımdan sonra texniki dəstək, yeniləmə və optimallaşdırma tələb edir — bunu özünüz idarə edə bilmirsizsə, dəstək paketi tövsiyə olunur.',
-            },
-            {
-              title: 'Minimum büdcə ilə maksimal funksionallıq gözləyənlər',
-              description: 'Mürəkkəb funksionallıq (e-ticarət, çoxdilli, xüsusi inteqrasiyalar) müvafiq büdcə tələb edir — realist gözləntilərlə başlamaq önəmlidir.',
-            },
-            {
-              title: 'Kontenti özü hazırlamaq istəməyənlər',
-              description: 'Sayt kontenti (mətn, şəkil, video) müştəri tərəfindən hazırlanır; kontent hazırlığı olmadan inkişaf prosesi gecikir.',
-            },
-          ]}
-          ctaText="Əmin deyilsiniz? Pulsuz məsləhət alın — vəziyyətinizi birlikdə qiymətləndirək."
+          title={t(`${key}.whoIsThisFor.title` as any)}
+          subtitle={t(`${key}.whoIsThisFor.subtitle` as any)}
+          suitable={t.raw(`${key}.whoIsThisFor.suitable` as any)}
+          notSuitable={t.raw(`${key}.whoIsThisFor.notSuitable` as any)}
+          ctaText={t(`${key}.whoIsThisFor.ctaText` as any)}
         />
         <Glossary
-          title="Lüğət"
-          subtitle="Bu xidmətlə bağlı tez-tez rast gəlinən terminlərin qısa izahı."
-          terms={[
-            {
-              term: 'Responsiv Dizayn',
-              definition: 'Saytın müxtəlif ekran ölçülərinə (masaüstü, planşet, mobil) avtomatik uyğunlaşan dizayn — mobil uyğun sayt hazırlanmasının əsası.',
-            },
-            {
-              term: 'UX/UI Dizayn',
-              definition: 'UX (istifadəçi təcrübəsi) saytda naviqasiyanın rahatlığını, UI (istifadəçi interfeysi) isə vizual görünüşü müəyyən edir.',
-            },
-            {
-              term: 'WordPress',
-              definition: 'Dünyada ən geniş istifadə olunan CMS (məzmun idarəetmə sistemi) — WordPress sayt hazırlanması üçün asan idarə olunan, genişlənə bilən platforma.',
-            },
-            {
-              term: 'Landing Page',
-              definition: 'Yalnız bir məqsəd üçün (lead toplama, satış, qeydiyyat) dizayn edilmiş, reklam kampaniyaları üçün istifadə olunan xüsusi açılış səhifəsi.',
-            },
-            {
-              term: 'Core Web Vitals',
-              definition: 'Google-un sayt sürəti və istifadəçi təcrübəsini ölçmək üçün istifadə etdiyi texniki göstəricilər — sürətli veb sayt hazırlanmasının əsas meyarı.',
-            },
-            {
-              term: 'SEO Optimizasiyalı Sayt',
-              definition: 'Axtarış sistemlərinin (Google) tələblərinə uyğun qurulan, üzvi trafik cəlb etmək üçün optimizasiya edilmiş sayt strukturu.',
-            },
-            {
-              term: 'CMS (Content Management System)',
-              definition: 'Sayt kontentini kod bilmədən idarə etməyə imkan verən platforma (WordPress, Shopify, xüsusi CMS).',
-            },
-            {
-              term: 'Konversiya Nisbəti',
-              definition: 'Saytı ziyarət edən istifadəçilərin hədəflənən hərəkəti (alış, əlaqə forması, zəng) tamamlamasının faizi.',
-            },
-          ]}
+          title={t(`${key}.glossary.title` as any)}
+          subtitle={t(`${key}.glossary.subtitle` as any)}
+          terms={t.raw(`${key}.glossary.terms` as any)}
         />
         <FAQ
-          title="Tez-tez soruşulan suallar"
-          subtitle="Veb sayt hazırlanması ilə bağlı ən çox verilən sualların cavabları."
-          items={[
-            {
-              question: 'Veb sayt hazırlanması nə qədər vaxt aparır?',
-              answer: 'Saytın mürəkkəbliyindən asılı olaraq dəyişir. Sadə biznes saytı 3–4 həftə, e-ticarət saytı hazırlanması 6–10 həftə, xüsusi funksionallıqlı korporativ sayt isə 8–16 həftə tələb edə bilər.',
-            },
-            {
-              question: 'Sayt qiyməti Bakıda nə qədərdir?',
-              answer: 'Web sayt qiymətləri saytın növündən, funksionallığından və texniki tələblərindən asılıdır. Landing page-dən korporativ sayta, onlayn mağazadan xüsusi platforma qədər müxtəlif büdcə seçimləri mövcuddur — dəqiq qiymətləndirmə üçün bizimlə əlaqə saxlayın.',
-            },
-            {
-              question: 'WordPress sayt hazırlanması niyə üstündür?',
-              answer: 'WordPress dünyada ən populyar CMS-dir — idarəsi asan, genişlənə bilən, minlərlə eklenti dəstəyi olan, SEO optimizasiyalı sayt qurmaq üçün ideal platformadır. Böyük bizneslər üçün xüsusi platforma da tövsiyə edə bilərik.',
-            },
-            {
-              question: 'Sayt hazırlandıqdan sonra özüm dəyişiklik edə bilərəmmi?',
-              answer: 'Bəli. WordPress və ya digər CMS əsaslı saytlarda kontent dəyişiklikləri (mətn, şəkil, məhsul əlavəsi) kod bilmədən edilə bilər. Yayımdan sonra idarə paneli üzrə qısa təlim keçirik.',
-            },
-            {
-              question: 'SEO optimizasiyalı sayt nə deməkdir?',
-              answer: 'Sayt hazırlanması zamanı texniki SEO əsaslarını (URL strukturu, meta teqlər, site speed, schema markup, mobil uyğunluq) tətbiq edirik ki, saytınız Google-da üst sıralara çıxmağa hazır olsun. Bu, SEO xidmətinin başlanğıc nöqtəsidir.',
-            },
-          ]}
-          ctaButton="WhatsApp-dan soruş"
+          title={t(`${key}.faq.title` as any)}
+          subtitle={t(`${key}.faq.subtitle` as any)}
+          items={t.raw(`${key}.faq.items` as any)}
+          ctaButton={t(`${key}.faq.ctaButton` as any) || 'WhatsApp-dan soruş'}
         />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
       </>
