@@ -113,7 +113,14 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
     ],
   }
 
-  const displaySteps = activeTab === 'included' ? processData.included : processData.roadmap
+  // Use custom steps if provided, otherwise use default processData
+  const customSteps = steps && steps.length > 0 ? steps.map(s => ({
+    step: s.step,
+    title: s.title,
+    description: s.description
+  })) : null
+
+  const displaySteps = customSteps || (activeTab === 'included' ? processData.included : processData.roadmap)
 
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-bg-primary">
