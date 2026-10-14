@@ -187,6 +187,33 @@ function ServicePageContent({
             },
           ]}
         />
+        <FAQ
+          title="Tez-tez soruşulan suallar"
+          subtitle="Veb sayt hazırlanması ilə bağlı ən çox verilən sualların cavabları."
+          items={[
+            {
+              question: 'Veb sayt hazırlanması nə qədər vaxt aparır?',
+              answer: 'Saytın mürəkkəbliyindən asılı olaraq dəyişir. Sadə biznes saytı 3–4 həftə, e-ticarət saytı hazırlanması 6–10 həftə, xüsusi funksionallıqlı korporativ sayt isə 8–16 həftə tələb edə bilər.',
+            },
+            {
+              question: 'Sayt qiyməti Bakıda nə qədərdir?',
+              answer: 'Web sayt qiymətləri saytın növündən, funksionallığından və texniki tələblərindən asılıdır. Landing page-dən korporativ sayta, onlayn mağazadan xüsusi platforma qədər müxtəlif büdcə seçimləri mövcuddur — dəqiq qiymətləndirmə üçün bizimlə əlaqə saxlayın.',
+            },
+            {
+              question: 'WordPress sayt hazırlanması niyə üstündür?',
+              answer: 'WordPress dünyada ən populyar CMS-dir — idarəsi asan, genişlənə bilən, minlərlə eklenti dəstəyi olan, SEO optimizasiyalı sayt qurmaq üçün ideal platformadır. Böyük bizneslər üçün xüsusi platforma da tövsiyə edə bilərik.',
+            },
+            {
+              question: 'Sayt hazırlandıqdan sonra özüm dəyişiklik edə bilərəmmi?',
+              answer: 'Bəli. WordPress və ya digər CMS əsaslı saytlarda kontent dəyişiklikləri (mətn, şəkil, məhsul əlavəsi) kod bilmədən edilə bilər. Yayımdan sonra idarə paneli üzrə qısa təlim keçirik.',
+            },
+            {
+              question: 'SEO optimizasiyalı sayt nə deməkdir?',
+              answer: 'Sayt hazırlanması zamanı texniki SEO əsaslarını (URL strukturu, meta teqlər, site speed, schema markup, mobil uyğunluq) tətbiq edirik ki, saytınız Google-da üst sıralara çıxmağa hazır olsun. Bu, SEO xidmətinin başlanğıc nöqtəsidir.',
+            },
+          ]}
+          ctaButton="WhatsApp-dan soruş"
+        />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
         <section className="py-16">
           <div className="max-w-2xl mx-auto px-4 text-center">
