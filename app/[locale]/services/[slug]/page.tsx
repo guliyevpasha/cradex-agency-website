@@ -215,35 +215,6 @@ function ServicePageContent({
           ctaButton="WhatsApp-dan soruş"
         />
         <RelatedPortfolioSection portfolios={relatedPortfolio} />
-        <section className="py-16">
-          <div className="max-w-2xl mx-auto px-4 text-center">
-            <ScrollReveal animation="scaleIn">
-              <GlassCard className="p-10">
-                <h2 className="text-display-md font-display font-bold text-text-primary mb-4">
-                  Bu xidməti sifariş et
-                </h2>
-                <p className="text-text-secondary mb-8">
-                  {t(`${key}.shortDesc` as any)} xidməti üçün bizimlə əlaqə saxlayın.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button href={`/${locale}/contact`} size="lg" icon={<ArrowRight size={18} />}>
-                    Əlaqə
-                  </Button>
-                  <Button
-                    href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
-                    variant="whatsapp"
-                    size="lg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    icon={<MessageCircle size={18} />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </GlassCard>
-            </ScrollReveal>
-          </div>
-        </section>
       </>
     )
   }
