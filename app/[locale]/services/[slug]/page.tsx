@@ -24,6 +24,9 @@ import type { Service, PortfolioItem } from '@/types'
 
 const locales = ['az', 'en', 'ru', 'tr']
 
+// ISR revalidation - səhifə 60 saniyədə bir yenilənəcək
+export const revalidate = 60 // saniyə
+
 export async function generateStaticParams() {
   const services = await getAllServices()
   return locales.flatMap((locale) =>
