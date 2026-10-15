@@ -4,6 +4,7 @@ import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schemas'
 import { projectId, dataset } from './sanity/env'
 import { DuplicateAction } from './sanity/lib/documentActions'
+import { analyticsPlugin } from './sanity/plugins/analyticsPlugin'
 
 export default defineConfig({
   name: 'default',
@@ -14,7 +15,7 @@ export default defineConfig({
 
   basePath: '/studio',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), analyticsPlugin()],
 
   schema: {
     types: schemaTypes,
