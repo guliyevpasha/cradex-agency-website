@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer'
 import { MobileBottomNav } from '@/components/navigation/MobileBottomNav'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { PromoPopup } from '@/components/ui/PromoPopup'
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import '@/app/globals.css'
 
 const locales = ['az', 'en', 'ru', 'tr']
@@ -83,6 +84,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={inter.variable}>
       <body className="bg-bg-primary text-text-primary font-body antialiased">
+        <GoogleAnalytics />
         {/* Skip to main content — keyboard accessibility */}
         <a
           href="#main-content"

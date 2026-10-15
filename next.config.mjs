@@ -12,7 +12,7 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https: https://cdn.sanity.io",
       "media-src 'self' blob: https://cdn.sanity.io",
@@ -22,7 +22,7 @@ const securityHeaders = [
       "font-src 'self' data: https://fonts.gstatic.com",
       // api.resend.com dropped: nothing calls Resend. app/api/contact/ has no
       // route file and RESEND_API_KEY is read nowhere in the codebase.
-      "connect-src 'self' https://*.sanity.io https://*.sanity.studio",
+      "connect-src 'self' https://*.sanity.io https://*.sanity.studio https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
       "frame-src 'self' https://cradex-agency.sanity.studio",
     ].join('; ')
   },
