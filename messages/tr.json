@@ -2259,7 +2259,9 @@
       "work": "Projelerimize göz atın",
       "demo": "Ücretsiz demo",
       "whatsappMessage": "Merhaba, demo versiyon bir web sitesi istiyorum",
-      "details": "Ayrıntılar"
+      "details": "Ayrıntılar",
+      "consult": "Ücretsiz danışmanlık",
+      "consultMessage": "Merhaba, ücretsiz danışmanlık almak istiyorum"
     },
     "hero": {
       "eyebrow": "Ücretsiz demo · 2 saatte",
@@ -2289,12 +2291,11 @@
       },
       "preview": {
         "url": "markaniz.az",
-        "brand": "Nova",
+        "brand": "Markanız",
         "link1": "Hakkımızda",
         "link2": "Hizmetler",
         "link3": "Projeler",
         "cta": "İletişim",
-        "eyebrow": "Yeni koleksiyon",
         "title": "Markanızı dijital dünyada güçlü gösterin",
         "text": "Müşterileriniz sizi ilk kez web sitenizde görür. Bu ilk izlenimi özenle tasarlıyoruz.",
         "primary": "Başlayalım",
@@ -2306,7 +2307,7 @@
     },
     "process": {
       "eyebrow": "Nasıl çalışır",
-      "title": "Üç adım, ilk adım ücretsiz",
+      "title": "Web siteniz 3 adımda hazır",
       "step1Title": "Bize yazarsınız",
       "step1Text": "WhatsApp'tan işletmeniz hakkında 2–3 cümle gönderirsiniz: ne iş yaptığınızı ve sitede neler olması gerektiğini.",
       "step2Title": "Demoyu hazırlarız",
@@ -2316,16 +2317,22 @@
     },
     "services": {
       "eyebrow": "Hizmetlerimiz",
-      "title": "Asıl işimiz web siteleri",
-      "subtitle": "Diğer hizmetler, sitenizin daha çok müşteri getirmesi ve güvenle çalışması içindir.",
+      "title": "Cradex Agency size 5 farklı hizmet sunar",
+      "subtitle": "Web sitesi geliştirmeden mobil uygulamaya, arama sonuçlarında görünürlükten reklama ve teknik desteğe kadar. Hizmetleri ayrı ayrı ya da tek pakette sipariş edebilirsiniz.",
       "featured": "Ana hizmet",
       "web": {
         "title": "Web Sitesi Geliştirme",
-        "text": "Kurumsal siteler, açılış sayfaları, e-ticaret siteleri ve web uygulamaları. Strateji, tasarım, yazılım ve yayın tek ekipte.",
+        "text": "Web sitesi türleri çoktur ve doğru seçim işletmenizin hedefine bağlıdır. Size hangisinin gerektiğini birlikte belirler, ardından sıfırdan inşa ederiz.",
         "p1": "Kurumsal site",
         "p2": "Açılış sayfası",
         "p3": "E-ticaret sitesi",
-        "p4": "Web uygulaması"
+        "p4": "Web uygulaması",
+        "p5": "Blog ve haber portalı",
+        "p6": "Kişisel ve portfolyo sitesi",
+        "p7": "Kampanya ve etkinlik sitesi",
+        "p8": "Kartvizit sitesi",
+        "p9": "Katalog sitesi",
+        "p10": "Marketplace sitesi"
       },
       "mobile": {
         "title": "Mobil Uygulama Geliştirme",
@@ -2361,7 +2368,8 @@
         "s3": "Sahte hesapların ve taklitçi profillerin kapattırılması",
         "s4": "Reklam hesaplarının kurtarılması",
         "s5": "Kısıtlanan hesapların kısıtlamasının kaldırılması",
-        "s6": "Hesap güvenliğinin sağlanması"
+        "s6": "Hesap güvenliğinin sağlanması",
+        "w5": "Teknik destek"
       }
     },
     "products": {
@@ -2376,13 +2384,18 @@
       },
       "combo": {
         "title": "Sosyal Medya Kombo Paketleri",
-        "text": "İçerik, tasarım ve yönetim tek pakette. Platformunuzu seçin.",
+        "text": "Uygun fiyatlı ve keşfet etkili kombo paketlerimiz.",
         "instagramTitle": "Instagram Kombo Paketi",
         "instagramText": "Instagram sayfanızın içeriği, tasarımı ve yönetimi.",
         "tiktokTitle": "TikTok Kombo Paketi",
         "tiktokText": "TikTok için kısa videoların planlanması, hazırlanması ve paylaşılması.",
         "youtubeTitle": "YouTube Kombo Paketi",
-        "youtubeText": "YouTube kanalınız için video içeriği, tasarım ve kanal optimizasyonu."
+        "youtubeText": "YouTube kanalınız için video içeriği, tasarım ve kanal optimizasyonu.",
+        "instagramPrice": "20 ₼",
+        "tiktokPrice": "20 ₼",
+        "youtubePrice": "35 ₼",
+        "order": "Sipariş ver",
+        "orderMessage": "Merhaba, {package} sipariş etmek istiyorum"
       }
     },
     "pricing": {
@@ -2444,6 +2457,34 @@
       "services": "Hizmetler",
       "contact": "İletişim",
       "rights": "Tüm hakları saklıdır."
+    },
+    "work": {
+      "eyebrow": "Projelerimiz",
+      "title": "Seçili projeler",
+      "subtitle": "Her proje canlı olarak çalışıyor. İnceleyin, ardından kendi web siteniz hakkında karar verin.",
+      "cta": "Tüm projeleri görün",
+      "chip": "Web sitesi",
+      "visit": "Siteye git"
+    },
+    "domain": {
+      "badge": "Ücretsiz araç",
+      "title": "Alan adınız müsait mi?",
+      "text": ".az, .com, .net, .io ve 12 farklı uzantıda müsaitliği anında kontrol edin. Kayıt gerekmez.",
+      "formTitle": "Alan adı müsaitliğini sorgulayın",
+      "formText": "Alan adını veya site adresini girin. Azerbaycan, uluslararası ve bölgesel uzantılarda anında kontrol edilir.",
+      "label": "Alan adı",
+      "placeholder": "örn. isletmem veya isletmem.com",
+      "button": "Müsaitliği kontrol et",
+      "checking": "Kontrol ediliyor…",
+      "available": "Müsait",
+      "taken": "Alınmış",
+      "unknown": "Kontrol edilemedi",
+      "invalid": "Geçerli bir alan adı girin: yalnızca harf, rakam ve tire.",
+      "error": "Sorgulama yapılamadı. Lütfen biraz sonra tekrar deneyin.",
+      "limited": "Çok fazla istek gönderildi. Lütfen bir dakika sonra tekrar deneyin.",
+      "register": "Kaydını yaptır",
+      "registerMessage": "Merhaba, {domain} alan adını kaydettirmek istiyorum",
+      "note": "Sonuç bilgilendirme amaçlıdır. Alan adının müsait olduğu, kayıt sırasında son kez doğrulanır."
     }
   }
 }

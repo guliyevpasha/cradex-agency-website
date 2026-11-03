@@ -91,11 +91,12 @@ export default async function LocaleLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="bg-bg-primary font-body text-text-primary antialiased">
+      {/* Browser extensions (Grammarly etc.) add attributes to <body>. */}
+      <body className="bg-bg-primary font-body text-text-primary antialiased" suppressHydrationWarning>
         <GoogleAnalytics />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-strong focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-snow"
         >
           {t('skip')}
         </a>

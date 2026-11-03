@@ -55,7 +55,7 @@ export function MobileBottomNav({ locale }: { locale: string }) {
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-1 text-[11px] font-semibold text-snow"
         >
-          <span className="-mt-7 flex h-14 w-14 items-center justify-center rounded-[20px] bg-brand text-ink shadow-brand ring-4 ring-bg-primary">
+          <span className="-mt-7 flex h-14 w-14 items-center justify-center rounded-[20px] bg-brand-strong text-snow shadow-brand ring-4 ring-bg-primary">
             <WhatsAppIcon className="h-6 w-6" />
           </span>
           <span>{t('demo')}</span>

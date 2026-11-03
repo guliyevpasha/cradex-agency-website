@@ -2259,7 +2259,9 @@
       "work": "See our work",
       "demo": "Free demo",
       "whatsappMessage": "Hi, I'd like a demo version of a website",
-      "details": "Learn more"
+      "details": "Learn more",
+      "consult": "Free consultation",
+      "consultMessage": "Hello, I would like a free consultation"
     },
     "hero": {
       "eyebrow": "Free demo · in 2 hours",
@@ -2289,12 +2291,11 @@
       },
       "preview": {
         "url": "yourbrand.com",
-        "brand": "Nova",
+        "brand": "Your brand",
         "link1": "About",
         "link2": "Services",
         "link3": "Work",
         "cta": "Contact",
-        "eyebrow": "New collection",
         "title": "Make your brand stand out in the digital world",
         "text": "Your customers first meet you on your website. We make sure that first impression is deliberate.",
         "primary": "Get started",
@@ -2306,7 +2307,7 @@
     },
     "process": {
       "eyebrow": "How it works",
-      "title": "Three steps, and the first one is free",
+      "title": "Your website in 3 steps",
       "step1Title": "You message us",
       "step1Text": "Send 2–3 sentences about your business on WhatsApp: what you do and what the website needs.",
       "step2Title": "We build the demo",
@@ -2316,16 +2317,22 @@
     },
     "services": {
       "eyebrow": "Our Services",
-      "title": "Websites are our core business",
-      "subtitle": "The other services help your site bring in more customers and run securely.",
+      "title": "Cradex Agency offers 5 core services",
+      "subtitle": "From website development and mobile apps to search visibility, advertising and technical support. Order services separately or as one package.",
       "featured": "Core service",
       "web": {
         "title": "Website Development",
-        "text": "Corporate websites, landing pages, online stores and web apps. Strategy, design, development and launch in one team.",
+        "text": "There are many types of websites, and the right one depends on your business goals. We define what you need together, then build it from scratch.",
         "p1": "Corporate website",
         "p2": "Landing page",
         "p3": "Online store",
-        "p4": "Web app"
+        "p4": "Web app",
+        "p5": "Blog and news portal",
+        "p6": "Personal and portfolio website",
+        "p7": "Campaign and event website",
+        "p8": "Business card website",
+        "p9": "Catalog website",
+        "p10": "Marketplace website"
       },
       "mobile": {
         "title": "Mobile App Development",
@@ -2361,7 +2368,8 @@
         "s3": "Taking down fake accounts and impersonator profiles",
         "s4": "Recovering ad accounts",
         "s5": "Lifting restrictions on limited accounts",
-        "s6": "Securing your accounts"
+        "s6": "Securing your accounts",
+        "w5": "Technical support"
       }
     },
     "products": {
@@ -2376,13 +2384,18 @@
       },
       "combo": {
         "title": "Social Media Combo Packages",
-        "text": "Content, design and management in one package. Choose your platform.",
+        "text": "Affordable combo packages with Explore-page boost.",
         "instagramTitle": "Instagram Combo Package",
         "instagramText": "Content, design and management for your Instagram page.",
         "tiktokTitle": "TikTok Combo Package",
         "tiktokText": "Planning, producing and publishing short videos for TikTok.",
         "youtubeTitle": "YouTube Combo Package",
-        "youtubeText": "Video content, design and channel optimization for your YouTube channel."
+        "youtubeText": "Video content, design and channel optimization for your YouTube channel.",
+        "instagramPrice": "20 ₼",
+        "tiktokPrice": "20 ₼",
+        "youtubePrice": "35 ₼",
+        "order": "Order",
+        "orderMessage": "Hello, I would like to order the {package}"
       }
     },
     "pricing": {
@@ -2444,6 +2457,34 @@
       "services": "Services",
       "contact": "Contact",
       "rights": "All rights reserved."
+    },
+    "work": {
+      "eyebrow": "Our work",
+      "title": "Selected projects",
+      "subtitle": "Every project is live. Take a look, then decide about your own website.",
+      "cta": "View all work",
+      "chip": "Website",
+      "visit": "Visit website"
+    },
+    "domain": {
+      "badge": "Free tool",
+      "title": "Is your domain available?",
+      "text": "Instantly check availability on .az, .com, .net, .io and 12 more domains. No registration required.",
+      "formTitle": "Check domain availability",
+      "formText": "Enter a domain name or website address. We check Azerbaijani, international and regional domains instantly.",
+      "label": "Domain name",
+      "placeholder": "e.g. mybusiness or mybusiness.com",
+      "button": "Check availability",
+      "checking": "Checking…",
+      "available": "Available",
+      "taken": "Taken",
+      "unknown": "Not checked",
+      "invalid": "Enter a valid domain name: letters, numbers and hyphens only.",
+      "error": "The check failed. Please try again shortly.",
+      "limited": "Too many requests. Please try again in a minute.",
+      "register": "Register",
+      "registerMessage": "Hello, I would like to register the domain {domain}",
+      "note": "The result is for information only. Availability is confirmed one last time at registration."
     }
   }
 }

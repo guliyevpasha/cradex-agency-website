@@ -93,8 +93,7 @@ function PreviewSite() {
 
       <div className="grid grid-cols-[1.05fr_1fr] items-center gap-[4cqw] px-[5cqw] pb-[4cqw] pt-[2cqw]">
         <div>
-          <span className="text-[1.9cqw] font-bold uppercase tracking-[0.14em] text-brand">{t('eyebrow')}</span>
-          <p className="mt-[1.4cqw] text-[5.4cqw] font-extrabold leading-[1.04] tracking-[-0.04em]">{t('title')}</p>
+          <p className=" text-[5.4cqw] font-extrabold leading-[1.04] tracking-[-0.04em]">{t('title')}</p>
           <p className="mt-[2cqw] text-[2.15cqw] leading-relaxed text-[#5B6470]">{t('text')}</p>
           <div className="mt-[3cqw] flex items-center gap-[2cqw] text-[2.1cqw] font-semibold">
             <span className="rounded-full bg-ink px-[3cqw] py-[1.7cqw] text-snow">{t('primary')}</span>

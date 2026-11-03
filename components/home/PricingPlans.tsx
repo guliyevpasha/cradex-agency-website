@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { DomainChecker } from './DomainChecker'
 import { SectionHeading } from './SectionHeading'
 
 const PLANS = ['demo', 'launch', 'custom'] as const
@@ -30,7 +31,7 @@ export function PricingPlans({ headingAs = 'h2' }: { headingAs?: 'h1' | 'h2' }) 
                 )}
               >
                 {featured && (
-                  <span className="absolute -top-3 left-7 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-ink">
+                  <span className="absolute -top-3 left-7 rounded-full bg-brand-strong px-3 py-1 text-xs font-semibold text-snow">
                     {t('launchBadge')}
                   </span>
                 )}
@@ -53,7 +54,7 @@ export function PricingPlans({ headingAs = 'h2' }: { headingAs?: 'h1' | 'h2' }) 
             )
           })}
         </div>
-        <p className="mt-6 text-center text-sm text-text-muted">{t('note')}</p>
+        <DomainChecker />
       </div>
     </section>
   )

@@ -113,16 +113,21 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
           background: rgba(36,160,255,0.05);
           box-shadow: 0 0 16px rgba(36,160,255,0.18);
         }
+        /* Light theme: most partner logos are drawn white for dark
+           backgrounds, so they stay as solid dark silhouettes here. */
         .lm-card img {
-          filter: brightness(0) grayscale(1);
-          opacity: 0.55;
+          filter: brightness(0);
+          opacity: 0.6;
           transition: filter 0.4s ease, opacity 0.4s ease;
+        }
+        .lm-card.lm-lit img {
+          opacity: 1;
         }
         .dark .lm-card img {
           filter: brightness(0) invert(1) grayscale(1);
-          opacity: 0.45;
+          opacity: 0.5;
         }
-        .lm-card.lm-lit img {
+        .dark .lm-card.lm-lit img {
           filter: none;
           opacity: 1;
         }

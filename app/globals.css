@@ -244,3 +244,221 @@
   cursor: pointer;
   border: 2px solid var(--color-bg-primary);
 }
+
+/* ─── Process 3D (components/home/ProcessSteps.tsx) ─────────────────────── */
+.p3d-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  perspective: 900px;
+  list-style: none;
+}
+
+.p3d-inner {
+  height: 100%;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.p3d-card:hover .p3d-inner {
+  border-color: rgb(36 160 255 / 0.45);
+  box-shadow: 0 30px 60px -36px rgb(36 160 255 / 0.6);
+}
+
+.p3d-scene {
+  position: relative;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  perspective: 700px;
+  margin-bottom: 0.5rem;
+}
+
+.p3d-iso {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-40deg);
+}
+
+.p3d-plate {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: rgb(var(--bg-primary));
+  border: 1px solid rgb(var(--line));
+  box-shadow: 0 0 0 1px rgb(var(--contrast) / 0.04), -14px 14px 30px -10px rgb(11 13 16 / 0.35);
+  transform-style: preserve-3d;
+}
+
+/* 1 — chat on a phone */
+.p3d-phone {
+  inset: 0 25px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgb(var(--bg-tertiary)), rgb(var(--bg-primary)));
+}
+
+.p3d-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 34px;
+  height: 6px;
+  margin-left: -17px;
+  border-radius: 6px;
+  background: rgb(var(--contrast) / 0.15);
+}
+
+.p3d-bubble {
+  position: absolute;
+  height: 22px;
+  border-radius: 11px;
+  background: rgb(var(--bg-primary));
+  border: 1px solid rgb(var(--line));
+  box-shadow: -8px 8px 16px -6px rgb(11 13 16 / 0.35);
+  animation: p3d-pop 4.5s ease-in-out infinite;
+}
+
+.p3d-b1 { left: 34px; top: 34px; width: 70px; }
+.p3d-b2 { left: 50px; top: 68px; width: 64px; animation-delay: 0.5s; }
+.p3d-b3 { left: 34px; top: 102px; width: 54px; animation-delay: 1s; }
+.p3d-brand { background: #0A74CC; border-color: #0A74CC; }
+
+@keyframes p3d-pop {
+  0%, 12% { transform: translateZ(0); opacity: 0; }
+  24%, 78% { transform: translateZ(28px); opacity: 1; }
+  92%, 100% { transform: translateZ(0); opacity: 0; }
+}
+
+/* 2 — design layers coming apart */
+.p3d-layer { animation: p3d-spread 5s ease-in-out infinite; }
+.p3d-l1 {
+  background: repeating-linear-gradient(45deg, rgb(var(--bg-tertiary)) 0 6px, rgb(var(--bg-secondary)) 6px 12px);
+  --z: 0px;
+}
+.p3d-l2 {
+  background: linear-gradient(135deg, #24A0FF, #7CC8FF);
+  border-color: transparent;
+  overflow: hidden;
+  --z: 34px;
+}
+.p3d-l3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 22px;
+  background: rgb(var(--bg-primary) / 0.92);
+  --z: 68px;
+}
+
+.p3d-blob {
+  position: absolute;
+  right: -24px;
+  bottom: -24px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #FF8A65;
+  opacity: 0.85;
+}
+
+.p3d-line {
+  display: block;
+  height: 9px;
+  border-radius: 5px;
+  background: rgb(var(--contrast) / 0.14);
+}
+
+.p3d-brandline { height: 14px; border-radius: 7px; background: #0A74CC; }
+
+@keyframes p3d-spread {
+  0%, 15% { transform: translateZ(0); }
+  45%, 75% { transform: translateZ(var(--z)); }
+  100% { transform: translateZ(0); }
+}
+
+/* 3 — launch: a check coin spinning above a base */
+.p3d-base {
+  background: radial-gradient(circle at 50% 50%, rgb(36 160 255 / 0.18), rgb(var(--bg-primary)) 70%);
+  overflow: hidden;
+}
+
+.p3d-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
+  border-radius: 50%;
+  border: 2px solid rgb(36 160 255 / 0.6);
+  animation: p3d-ring 2.6s ease-out infinite;
+}
+
+.p3d-ring2 { animation-delay: 1.3s; }
+
+@keyframes p3d-ring {
+  from { transform: scale(0.6); opacity: 1; }
+  to { transform: scale(2.1); opacity: 0; }
+}
+
+.p3d-coin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  transform-style: preserve-3d;
+  animation: p3d-spin 4s linear infinite;
+}
+
+.p3d-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #24A0FF, #0A74CC);
+  color: #FFFFFF;
+  box-shadow: inset 0 0 0 4px rgb(255 255 255 / 0.25);
+  backface-visibility: hidden;
+}
+
+.p3d-back { transform: rotateY(180deg); }
+
+/* stand the coin up in the tilted scene, float it, spin it */
+@keyframes p3d-spin {
+  0% { transform: translateZ(46px) rotateZ(40deg) rotateX(-58deg) rotateY(0deg); }
+  50% { transform: translateZ(54px) rotateZ(40deg) rotateX(-58deg) rotateY(180deg); }
+  100% { transform: translateZ(46px) rotateZ(40deg) rotateX(-58deg) rotateY(360deg); }
+}
+
+@media (max-width: 640px) {
+  .p3d-scene { height: 170px; }
+  .p3d-iso { transform: rotateX(58deg) rotateZ(-40deg) scale(0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p3d-bubble { opacity: 1; transform: translateZ(28px); }
+  .p3d-layer { transform: translateZ(var(--z)); }
+  .p3d-inner { transform: none; }
+}
+
+/* ─── Reveal on scroll (components/ui/Reveal.tsx) ───────────────────────── */
+.rv {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+  transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rv.rv-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+  .rv { opacity: 1; transform: none; }
+}

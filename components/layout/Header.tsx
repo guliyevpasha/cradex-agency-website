@@ -191,7 +191,7 @@ export function Header() {
           <div className="ml-auto hidden items-center gap-2 xl:flex">
             <LangDropdown />
             <ThemeToggle />
-            <WhatsAppButton size="md" label={tCta('demo')} className="ml-1 whitespace-nowrap" />
+            <WhatsAppButton size="md" label={tCta('consult')} message={tCta('consultMessage')} className="ml-1 whitespace-nowrap" />
           </div>
 
           <div className="ml-auto flex items-center gap-2 xl:hidden">

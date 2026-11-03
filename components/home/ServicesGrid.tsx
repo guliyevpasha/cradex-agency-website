@@ -11,7 +11,7 @@ import { SectionHeading } from './SectionHeading'
 
 const ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const POINTS: Record<string, string[]> = {
-  web: ['p1', 'p2', 'p3', 'p4'],
+  web: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10'],
   mobile: ['p1', 'p2'],
   seo: ['p1', 'p2'],
   ads: ['p1', 'p2', 'p3', 'p4'],
@@ -42,7 +42,7 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
     const Icon = ICONS[id]
     return (
       <>
-        <span className={cn('flex h-12 w-12 items-center justify-center rounded-2xl', id === 'web' ? 'bg-brand text-ink' : 'bg-accent-primary/10 text-accent-ink')}>
+        <span className={cn('flex h-12 w-12 items-center justify-center rounded-2xl', id === 'web' ? 'bg-brand-strong text-snow' : 'bg-accent-primary/10 text-accent-ink')}>
           <Icon size={22} aria-hidden="true" />
         </span>
         <h3 className="mt-6 text-2xl font-bold tracking-tight text-text-primary">{t(`${id}.title`)}</h3>
@@ -64,7 +64,7 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
         </div>
 
         <div className="mt-12 grid gap-4 lg:grid-cols-6">
-          <Card id="web" className={cn(cardCls, 'lg:col-span-6 lg:grid lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-10 lg:p-10')}>
+          <Card id="web" className={cn(cardCls, 'lg:col-span-6 lg:grid lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-12 lg:p-10')}>
             <div>
               <span className="mb-5 inline-flex rounded-full bg-accent-primary/10 px-3 py-1 text-xs font-semibold text-accent-ink">{t('featured')}</span>
               {head('web')}
@@ -85,14 +85,14 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
               <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:mt-0">
                 {(
                   [
-                    ['webTitle', ['w1', 'w2', 'w3', 'w4']],
+                    ['webTitle', ['w1', 'w2', 'w3', 'w5', 'w4']],
                     ['socialTitle', ['s1', 's2', 's3', 's4', 's5', 's6']],
                   ] as const
                 ).map(([title, keys]) => (
                   <div key={title} className="rounded-2xl border border-line bg-bg-primary p-5">
                     <h4 className="text-sm font-bold uppercase tracking-[0.1em] text-text-primary">{t(`support.${title}`)}</h4>
                     <ul className="mt-3 space-y-2">
-                      {(detailed ? keys : keys.slice(0, 3)).map((k) => (
+                      {keys.map((k) => (
                         <li key={k} className="flex gap-2 text-[14px] leading-snug text-text-secondary">
                           <Check size={15} className="mt-0.5 shrink-0 text-accent-primary" aria-hidden="true" />
                           {t(`support.${k}`)}

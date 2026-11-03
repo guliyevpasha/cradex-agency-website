@@ -1,7 +1,9 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { PortfolioFlipCard } from './PortfolioFlipCard'
+import { WebProjectCard } from './WebProjectCard'
+import { clientName, cleanSlug, domainOf, isWebsite, shortSummary } from '@/lib/site/portfolio'
 import type { PortfolioItem } from '@/types'
 
 interface PortfolioGridProps {
@@ -36,6 +38,8 @@ const cardVariants = {
 
 export function PortfolioGrid({ items }: PortfolioGridProps) {
   const t = useTranslations('portfolio')
+  const tWork = useTranslations('site.work')
+  const locale = useLocale()
 
   if (items.length === 0) {
     return (
@@ -68,7 +72,17 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               delay: index * 0.05,
             }}
           >
-            <PortfolioFlipCard item={item} />
+            {isWebsite(item) ? (
+              <WebProjectCard
+                href={`/${locale}/portfolio/${cleanSlug(item.slug)}`}
+                image={item.coverImage}
+                client={clientName(item, locale)}
+                summary={shortSummary(item, locale, 70)}
+                tags={[tWork('chip'), domainOf(item.projectUrl)].filter((x): x is string => Boolean(x))}
+              />
+            ) : (
+              <PortfolioFlipCard item={item} />
+            )}
           </motion.div>
         ))}
       </AnimatePresence>

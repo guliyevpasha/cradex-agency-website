@@ -2263,7 +2263,9 @@
       "work": "İşlərimizə baxın",
       "demo": "Pulsuz demo",
       "whatsappMessage": "Salam, demo versiya sayt istəyirəm",
-      "details": "Ətraflı"
+      "details": "Ətraflı",
+      "consult": "Ödənişsiz konsultasiya",
+      "consultMessage": "Salam, ödənişsiz konsultasiya almaq istəyirəm"
     },
     "hero": {
       "eyebrow": "Pulsuz demo · 2 saata",
@@ -2293,12 +2295,11 @@
       },
       "preview": {
         "url": "sizinbrendiniz.az",
-        "brand": "Nova",
+        "brand": "Brendiniz",
         "link1": "Haqqımızda",
         "link2": "Xidmətlər",
         "link3": "İşlər",
         "cta": "Əlaqə",
-        "eyebrow": "Yeni kolleksiya",
         "title": "Brendinizi rəqəmsal dünyada güclü göstərin",
         "text": "Müştəriləriniz sizi ilk dəfə saytınızda görür. Biz bu təəssüratı düşünülmüş edirik.",
         "primary": "Başlayaq",
@@ -2310,7 +2311,7 @@
     },
     "process": {
       "eyebrow": "Necə işləyir",
-      "title": "Üç addım, ilk addım pulsuzdur",
+      "title": "Saytınız 3 addımda hazırdır",
       "step1Title": "Bizə yazırsınız",
       "step1Text": "WhatsApp-a biznesiniz haqqında 2–3 cümlə göndərirsiniz: nə ilə məşğul olursunuz, saytda nə olmalıdır.",
       "step2Title": "Demonu hazırlayırıq",
@@ -2320,16 +2321,22 @@
     },
     "services": {
       "eyebrow": "Xidmətlərimiz",
-      "title": "Əsas işimiz veb saytlardır",
-      "subtitle": "Qalan xidmətlər saytınızın daha çox müştəri gətirməsi və təhlükəsiz işləməsi üçündür.",
+      "title": "Cradex Agency sizə 5 fərqli xidmət təqdim edir",
+      "subtitle": "Saytın hazırlanmasından mobil tətbiqə, axtarışda görünməkdən reklama və texniki dəstəyə qədər. Xidmətləri ayrıca və ya bir paketdə sifariş edə bilərsiniz.",
       "featured": "Əsas xidmət",
       "web": {
         "title": "Veb sayt hazırlanması",
-        "text": "Korporativ saytlar, landing page-lər, onlayn mağazalar və veb tətbiqlər. Strategiya, dizayn, proqramlaşdırma və buraxılış bir komandada.",
+        "text": "Sayt növləri çoxdur, düzgün seçim isə biznesinizin məqsədindən asılıdır. Sizə hansının lazım olduğunu birlikdə müəyyənləşdirir, sonra onu sıfırdan qururuq.",
         "p1": "Korporativ sayt",
         "p2": "Landing page",
         "p3": "Onlayn mağaza",
-        "p4": "Veb tətbiq"
+        "p4": "Veb tətbiq",
+        "p5": "Bloq və xəbər portalı",
+        "p6": "Şəxsi və portfolio sayt",
+        "p7": "Kampaniya və tədbir saytı",
+        "p8": "Vizit kart saytı",
+        "p9": "Kataloq saytı",
+        "p10": "Marketplace saytı"
       },
       "mobile": {
         "title": "Mobil tətbiq hazırlanması",
@@ -2365,7 +2372,8 @@
         "s3": "Saxta hesabların və təqlidçi profillərin bağlanması",
         "s4": "Reklam hesablarının bərpası",
         "s5": "Məhdudlaşdırılmış hesabların açılması",
-        "s6": "Hesabların təhlükəsizliyinin təmin edilməsi"
+        "s6": "Hesabların təhlükəsizliyinin təmin edilməsi",
+        "w5": "Texniki dəstək"
       }
     },
     "products": {
@@ -2380,13 +2388,18 @@
       },
       "combo": {
         "title": "Sosial Media Kombo Paketləri",
-        "text": "Kontent, dizayn və idarəetmə bir paketdə. Platformanızı seçin.",
+        "text": "Əlverişli və kəşfet effektli kombo paketlərimiz!",
         "instagramTitle": "Instagram Kombo Paketi",
         "instagramText": "Instagram səhifənizin kontenti, dizaynı və idarə olunması.",
         "tiktokTitle": "TikTok Kombo Paketi",
         "tiktokText": "TikTok üçün qısa videoların planlanması, hazırlanması və paylaşılması.",
         "youtubeTitle": "YouTube Kombo Paketi",
-        "youtubeText": "YouTube kanalınız üçün video kontent, dizayn və kanal optimallaşdırılması."
+        "youtubeText": "YouTube kanalınız üçün video kontent, dizayn və kanal optimallaşdırılması.",
+        "instagramPrice": "20 ₼",
+        "tiktokPrice": "20 ₼",
+        "youtubePrice": "35 ₼",
+        "order": "Sifariş et",
+        "orderMessage": "Salam, {package} sifariş etmək istəyirəm"
       }
     },
     "pricing": {
@@ -2448,6 +2461,34 @@
       "services": "Xidmətlər",
       "contact": "Əlaqə",
       "rights": "Bütün hüquqlar qorunur."
+    },
+    "work": {
+      "eyebrow": "İşlərimiz",
+      "title": "Seçilmiş layihələr",
+      "subtitle": "Hər layihə canlı işləyir. Baxın, sonra öz saytınız haqqında qərar verin.",
+      "cta": "Bütün işlərə baxın",
+      "chip": "Veb sayt",
+      "visit": "Sayta keçin"
+    },
+    "domain": {
+      "badge": "Pulsuz alət",
+      "title": "Domeniniz mövcuddurmu?",
+      "text": ".az, .com, .net, .io və 12 digər domendə mövcudluğunu dərhal yoxlayın. Qeydiyyat tələb olunmur.",
+      "formTitle": "Domen mövcudluğunu yoxlayın",
+      "formText": "Domen adını və ya sayt ünvanını daxil edin. Azərbaycan, beynəlxalq və regional domenlər üzrə dərhal yoxlanacaq.",
+      "label": "Domen adı",
+      "placeholder": "məs. menbiznes və ya menbiznes.com",
+      "button": "Mövcudluğu yoxla",
+      "checking": "Yoxlanılır…",
+      "available": "Boşdur",
+      "taken": "Tutulub",
+      "unknown": "Yoxlanmadı",
+      "invalid": "Düzgün domen adı daxil edin: yalnız hərf, rəqəm və tire.",
+      "error": "Yoxlama alınmadı. Bir az sonra yenidən cəhd edin.",
+      "limited": "Çox sayda sorğu göndərildi. Bir dəqiqə sonra yenidən cəhd edin.",
+      "register": "Qeydiyyatdan keçir",
+      "registerMessage": "Salam, {domain} domenini qeydiyyatdan keçirmək istəyirəm",
+      "note": "Nəticə məlumat xarakterlidir. Domenin boş olduğu qeydiyyat zamanı son dəfə təsdiqlənir."
     }
   }
 }

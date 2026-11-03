@@ -17,17 +17,19 @@ export function WhatsAppIcon({ className }: { className?: string }) {
 
 type Props = {
   label?: string
+  /** Pre-filled WhatsApp text; defaults to the demo request. */
+  message?: string
   size?: 'md' | 'lg'
   variant?: 'primary' | 'dark'
   className?: string
 }
 
-export function WhatsAppButton({ label, size = 'lg', variant = 'primary', className }: Props) {
+export function WhatsAppButton({ label, message, size = 'lg', variant = 'primary', className }: Props) {
   const t = useTranslations('site.cta')
 
   return (
     <a
-      href={whatsappUrl(t('whatsappMessage'))}
+      href={whatsappUrl(message ?? t('whatsappMessage'))}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
@@ -35,7 +37,7 @@ export function WhatsAppButton({ label, size = 'lg', variant = 'primary', classN
         'hover:-translate-y-0.5 active:translate-y-0',
         size === 'lg' ? 'px-7 py-4 text-[15px]' : 'px-5 py-2.5 text-sm',
         variant === 'primary'
-          ? 'bg-brand text-ink shadow-brand hover:bg-[#45AEFF]'
+          ? 'bg-brand-strong text-snow shadow-brand hover:bg-[#0967B5]'
           : 'bg-text-primary text-bg-primary hover:opacity-90',
         className
       )}

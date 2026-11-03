@@ -37,6 +37,8 @@ const config: Config = {
         snow: '#FFFFFF',
         ink: '#0B0D10',
         brand: '#24A0FF',
+        // Filled buttons: white text on this blue passes WCAG AA (4.8:1).
+        'brand-strong': '#0A74CC',
       },
       fontFamily: {
         display: ['var(--font-onest)', 'system-ui', 'sans-serif'],

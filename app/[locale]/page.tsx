@@ -12,7 +12,7 @@ import { PricingPlans } from '@/components/home/PricingPlans'
 import { DemoFaq } from '@/components/home/DemoFaq'
 import { FinalCta } from '@/components/home/FinalCta'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
-import { PortfolioPreview } from '@/components/sections/PortfolioPreview'
+import { WorkShowcase } from '@/components/home/WorkShowcase'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 import { BlogPreview } from '@/components/sections/BlogPreview'
 import { getAllTestimonials } from '@/lib/data/testimonials'
@@ -47,7 +47,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <LogoMarquee partners={partners} />
       <ProcessSteps />
       <ServicesGrid />
-      <PortfolioPreview />
+      <WorkShowcase />
       <ProductsShowcase />
       <PricingPlans />
       <TestimonialsCarousel testimonials={testimonials} />
