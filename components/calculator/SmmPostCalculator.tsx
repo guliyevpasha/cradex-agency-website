@@ -180,7 +180,7 @@ export function SmmPostCalculator() {
                 className={cn(
                   'px-4 py-2 rounded-lg text-sm font-medium transition-all',
                   count === c.value
-                    ? 'bg-accent-primary text-white'
+                    ? 'bg-brand-strong text-snow'
                     : 'bg-bg-tertiary text-text-secondary hover:text-text-primary'
                 )}
               >

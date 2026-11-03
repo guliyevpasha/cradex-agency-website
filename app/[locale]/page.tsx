@@ -13,8 +13,8 @@ import { DemoFaq } from '@/components/home/DemoFaq'
 import { FinalCta } from '@/components/home/FinalCta'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
 import { WorkShowcase } from '@/components/home/WorkShowcase'
-import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
-import { BlogPreview } from '@/components/sections/BlogPreview'
+import { ReviewsSection } from '@/components/home/ReviewsSection'
+import { BlogShowcase } from '@/components/home/BlogShowcase'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 import { getRecentBlogPosts } from '@/sanity/lib/queries'
@@ -50,9 +50,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <WorkShowcase />
       <ProductsShowcase />
       <PricingPlans />
-      <TestimonialsCarousel testimonials={testimonials} />
+      <ReviewsSection testimonials={testimonials} />
       <DemoFaq />
-      <BlogPreview articles={recentArticles} />
+      <BlogShowcase articles={recentArticles} />
       <FinalCta />
     </>
   )

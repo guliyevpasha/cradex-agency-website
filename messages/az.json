@@ -2466,7 +2466,7 @@
       "eyebrow": "İşlərimiz",
       "title": "Seçilmiş layihələr",
       "subtitle": "Hər layihə canlı işləyir. Baxın, sonra öz saytınız haqqında qərar verin.",
-      "cta": "Bütün işlərə baxın",
+      "cta": "Portfolioya baxın",
       "chip": "Veb sayt",
       "visit": "Sayta keçin"
     },
@@ -2489,6 +2489,22 @@
       "register": "Qeydiyyatdan keçir",
       "registerMessage": "Salam, {domain} domenini qeydiyyatdan keçirmək istəyirəm",
       "note": "Nəticə məlumat xarakterlidir. Domenin boş olduğu qeydiyyat zamanı son dəfə təsdiqlənir."
+    },
+    "reviews": {
+      "eyebrow": "Müştəri rəyləri",
+      "title": "Bizimlə işləyənlər nə deyir",
+      "rating": "{count} rəy əsasında orta qiymət",
+      "prev": "Əvvəlki rəy",
+      "next": "Növbəti rəy",
+      "goTo": "{n}-ci rəyə keç"
+    },
+    "blog": {
+      "eyebrow": "Bloq",
+      "title": "Son yazılar",
+      "subtitle": "Veb sayt, SEO və rəqəmsal reklam haqqında praktik məqalələr.",
+      "all": "Bütün yazılar",
+      "read": "Oxu",
+      "minutes": "{minutes} dəq"
     }
   }
 }

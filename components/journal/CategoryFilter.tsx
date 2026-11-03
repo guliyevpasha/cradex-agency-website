@@ -30,7 +30,7 @@ export function CategoryFilter({ active, onChange }: CategoryFilterProps) {
           className={cn(
             'px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 min-h-[36px] whitespace-nowrap',
             active === cat
-              ? 'bg-accent-primary text-snow shadow-[0_0_16px_rgba(36,160,255,0.4)]'
+              ? 'bg-brand-strong text-snow shadow-[0_0_16px_rgba(36,160,255,0.4)]'
               : 'glass-card text-text-secondary hover:text-text-primary hover:border-accent-primary/30'
           )}
         >

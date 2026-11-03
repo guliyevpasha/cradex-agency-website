@@ -152,7 +152,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   href={item.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-[1.02] group"
+                  className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-brand-strong text-snow font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-[1.02] group"
                 >
                   <span>{t('visitWebsite')}</span>
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -652,7 +652,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <div className="flex justify-center mt-12">
                 <Link
                   href={`/${locale}/portfolio`}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 group"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-brand-strong text-snow font-semibold rounded-xl hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 group"
                 >
                   <span>{t('viewAll')}</span>
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

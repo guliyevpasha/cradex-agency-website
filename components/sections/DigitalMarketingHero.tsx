@@ -75,7 +75,7 @@ export function DigitalMarketingHero({
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-snow font-semibold hover:shadow-[0_0_30px_rgba(36,160,255,0.4)] transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-brand-strong text-snow font-semibold hover:shadow-[0_0_30px_rgba(36,160,255,0.4)] transition-all duration-300 hover:scale-105"
               >
                 {ctaStart}
                 <ArrowRight size={18} />

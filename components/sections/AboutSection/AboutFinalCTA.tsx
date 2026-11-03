@@ -99,7 +99,7 @@ export function AboutFinalCTA({
             onClick={handleClick}
             className={cn(
               'group relative inline-flex items-center gap-3 px-10 py-5 rounded-2xl overflow-hidden',
-              'bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-[length:200%_100%]',
+              'bg-gradient-to-r from-brand-strong via-[#1580E0] to-brand-strong bg-[length:200%_100%]',
               'text-snow font-display font-bold text-lg tracking-wide',
               'hover:bg-[position:100%_0]',
               'hover:scale-105 active:scale-95',

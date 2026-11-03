@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLocale, useTranslations } from 'next-intl'
 import { PortfolioFlipCard } from './PortfolioFlipCard'
 import { WebProjectCard } from './WebProjectCard'
-import { clientName, cleanSlug, domainOf, isWebsite, shortSummary } from '@/lib/site/portfolio'
+import { clientName, cleanSlug, domainOf, isWebsite, shortSummary, shotsFor } from '@/lib/site/portfolio'
 import type { PortfolioItem } from '@/types'
 
 interface PortfolioGridProps {
@@ -75,7 +75,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
             {isWebsite(item) ? (
               <WebProjectCard
                 href={`/${locale}/portfolio/${cleanSlug(item.slug)}`}
-                image={item.coverImage}
+                shots={shotsFor(item)}
                 client={clientName(item, locale)}
                 summary={shortSummary(item, locale, 70)}
                 tags={[tWork('chip'), domainOf(item.projectUrl)].filter((x): x is string => Boolean(x))}

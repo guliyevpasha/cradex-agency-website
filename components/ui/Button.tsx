@@ -20,7 +20,7 @@ interface ButtonProps {
 
 const variantStyles = {
   primary:
-    'bg-gradient-to-r from-accent-primary to-accent-secondary text-snow hover:opacity-90 shadow-[0_0_20px_rgba(36,160,255,0.3)] hover:shadow-[0_0_30px_rgba(36,160,255,0.5)]',
+    'bg-brand-strong text-snow hover:opacity-90 shadow-[0_0_20px_rgba(36,160,255,0.3)] hover:shadow-[0_0_30px_rgba(36,160,255,0.5)]',
   secondary:
     'border border-accent-primary/50 text-text-primary hover:bg-accent-primary/10 hover:border-accent-primary',
   ghost:

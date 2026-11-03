@@ -163,7 +163,7 @@ export function LeadForm({ className }: LeadFormProps) {
                   className={cn(
                     'px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 min-h-[32px]',
                     active
-                      ? 'bg-accent-primary text-snow shadow-[0_0_12px_rgba(36,160,255,0.4)]'
+                      ? 'bg-brand-strong text-snow shadow-[0_0_12px_rgba(36,160,255,0.4)]'
                       : 'bg-bg-tertiary text-text-secondary border border-white/10 hover:border-accent-primary/40 hover:text-text-primary'
                   )}
                 >
@@ -189,7 +189,7 @@ export function LeadForm({ className }: LeadFormProps) {
                   className={cn(
                     'px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 min-h-[32px]',
                     active
-                      ? 'bg-gradient-to-r from-accent-primary to-accent-secondary text-snow shadow-[0_0_12px_rgba(36,160,255,0.4)]'
+                      ? 'bg-brand-strong text-snow shadow-[0_0_12px_rgba(36,160,255,0.4)]'
                       : 'bg-bg-tertiary text-text-secondary border border-white/10 hover:border-accent-primary/40 hover:text-text-primary'
                   )}
                 >
@@ -216,7 +216,7 @@ export function LeadForm({ className }: LeadFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-snow text-sm bg-gradient-to-r from-accent-primary to-accent-secondary hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 shadow-[0_0_24px_rgba(36,160,255,0.35)] hover:shadow-[0_0_36px_rgba(36,160,255,0.55)] min-h-[52px]"
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-snow text-sm bg-brand-strong hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 shadow-[0_0_24px_rgba(36,160,255,0.35)] hover:shadow-[0_0_36px_rgba(36,160,255,0.55)] min-h-[52px]"
           aria-busy={isSubmitting}
         >
           {isSubmitting ? (

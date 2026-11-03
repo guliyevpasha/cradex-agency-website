@@ -119,7 +119,7 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
             disabled={!isValid}
             className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
               isValid
-                ? 'bg-gradient-to-r from-accent-primary to-accent-secondary text-white shadow-[0_0_20px_rgba(36,160,255,0.4)] hover:shadow-[0_0_30px_rgba(36,160,255,0.6)] hover:opacity-90'
+                ? 'bg-brand-strong text-snow shadow-[0_0_20px_rgba(36,160,255,0.4)] hover:shadow-[0_0_30px_rgba(36,160,255,0.6)] hover:opacity-90'
                 : 'bg-bg-tertiary text-text-muted cursor-not-allowed'
             }`}
           >

@@ -23,7 +23,7 @@ function AccordionItem({ title, description, isOpen, onToggle, index }: Accordio
           {/* Plus/Minus Icon */}
           <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
             isOpen 
-              ? 'bg-accent-primary text-snow rotate-180' 
+              ? 'bg-brand-strong text-snow rotate-180' 
               : 'bg-white/5 text-accent-primary group-hover:bg-accent-primary/10'
           }`}>
             <ChevronDown size={16} className="transition-transform duration-300" />

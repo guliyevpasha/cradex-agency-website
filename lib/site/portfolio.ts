@@ -6,6 +6,27 @@ import type { PortfolioItem } from '@/types'
 
 type Locale = 'az' | 'en' | 'ru' | 'tr'
 
+/** Projects with fresh captures in public/images/work (<slug>-desktop.jpg / -mobile.jpg). */
+const CAPTURED = new Set([
+  'baku-global-education',
+  'porr-group-insaat-sirk-ti',
+  'orien-travel-mmc',
+  'saatlar-az',
+  'ciao-stellina-resto-pub',
+  'executive-baku-resto-pub',
+  'sanidez-mmc',
+  'alov-insaat-mmc',
+  'itm-store-mmc',
+  'akademi-xaricd-t-hsil-sirk-ti',
+])
+
+export function shotsFor(item: PortfolioItem): { desktop: string; mobile?: string } {
+  const slug = cleanSlug(item.slug)
+  return CAPTURED.has(slug)
+    ? { desktop: `/images/work/${slug}-desktop.jpg`, mobile: `/images/work/${slug}-mobile.jpg` }
+    : { desktop: item.coverImage }
+}
+
 export const isWebsite = (item: PortfolioItem) =>
   (item.category ?? item.serviceCategory) === 'web-mobile-dev' && Boolean(item.coverImage)
 
@@ -43,10 +64,16 @@ export function shortSummary(item: PortfolioItem, locale: string, max = 90): str
   if (!text) return ''
   text = text.split(/(?<=[.!?])\s/)[0]
 
-  const name = clientName(item, locale)
-  if (name && text.toLowerCase().startsWith(name.toLowerCase())) {
-    text = text
-      .slice(name.length)
+  // Drop the longest run of opening words that repeats the client's name
+  // (at least two words, so a lone common word is never removed).
+  const nameWords = clientName(item, locale).toLowerCase().split(/\s+/)
+  const words = text.split(/\s+/)
+  let n = 0
+  while (n < words.length && n < nameWords.length && words[n].toLowerCase() === nameWords[n]) n++
+  if (n >= 2) {
+    text = words
+      .slice(n)
+      .join(' ')
       .replace(/^[\s,:—-]*(üçün|için|для|for)?[\s,:—-]*/i, '')
     text = text.charAt(0).toLocaleUpperCase(locale) + text.slice(1)
   }

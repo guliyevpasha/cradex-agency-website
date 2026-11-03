@@ -2462,7 +2462,7 @@
       "eyebrow": "Our work",
       "title": "Selected projects",
       "subtitle": "Every project is live. Take a look, then decide about your own website.",
-      "cta": "View all work",
+      "cta": "View portfolio",
       "chip": "Website",
       "visit": "Visit website"
     },
@@ -2485,6 +2485,22 @@
       "register": "Register",
       "registerMessage": "Hello, I would like to register the domain {domain}",
       "note": "The result is for information only. Availability is confirmed one last time at registration."
+    },
+    "reviews": {
+      "eyebrow": "Client reviews",
+      "title": "What our clients say",
+      "rating": "Average rating from {count} reviews",
+      "prev": "Previous review",
+      "next": "Next review",
+      "goTo": "Go to review {n}"
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Latest articles",
+      "subtitle": "Practical articles on websites, SEO and digital advertising.",
+      "all": "All articles",
+      "read": "Read",
+      "minutes": "{minutes} min"
     }
   }
 }

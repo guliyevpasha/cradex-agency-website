@@ -2462,7 +2462,7 @@
       "eyebrow": "Projelerimiz",
       "title": "Seçili projeler",
       "subtitle": "Her proje canlı olarak çalışıyor. İnceleyin, ardından kendi web siteniz hakkında karar verin.",
-      "cta": "Tüm projeleri görün",
+      "cta": "Portföye göz atın",
       "chip": "Web sitesi",
       "visit": "Siteye git"
     },
@@ -2485,6 +2485,22 @@
       "register": "Kaydını yaptır",
       "registerMessage": "Merhaba, {domain} alan adını kaydettirmek istiyorum",
       "note": "Sonuç bilgilendirme amaçlıdır. Alan adının müsait olduğu, kayıt sırasında son kez doğrulanır."
+    },
+    "reviews": {
+      "eyebrow": "Müşteri yorumları",
+      "title": "Müşterilerimiz ne diyor",
+      "rating": "{count} yoruma göre ortalama puan",
+      "prev": "Önceki yorum",
+      "next": "Sonraki yorum",
+      "goTo": "{n}. yoruma git"
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Son yazılar",
+      "subtitle": "Web siteleri, SEO ve dijital reklam üzerine pratik yazılar.",
+      "all": "Tüm yazılar",
+      "read": "Oku",
+      "minutes": "{minutes} dk"
     }
   }
 }

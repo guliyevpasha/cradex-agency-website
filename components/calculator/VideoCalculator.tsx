@@ -164,7 +164,7 @@ export function VideoCalculator() {
                   className={cn(
                     'px-3 py-1.5 rounded-lg text-sm font-medium transition-all',
                     count === c.value
-                      ? 'bg-accent-primary text-white'
+                      ? 'bg-brand-strong text-snow'
                       : 'bg-bg-tertiary text-text-secondary hover:text-text-primary'
                   )}
                 >
@@ -184,7 +184,7 @@ export function VideoCalculator() {
                   className={cn(
                     'px-3 py-1.5 rounded-lg text-sm font-medium transition-all',
                     duration === d.value
-                      ? 'bg-accent-primary text-white'
+                      ? 'bg-brand-strong text-snow'
                       : 'bg-bg-tertiary text-text-secondary hover:text-text-primary'
                   )}
                 >

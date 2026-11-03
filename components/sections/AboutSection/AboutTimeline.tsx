@@ -148,7 +148,7 @@ export function AboutTimeline({
                       className={cn(
                         'inline-flex items-center px-4 py-1.5 rounded-full text-sm font-mono font-bold mb-5 transition-all duration-500',
                         isActive && hasEntered
-                          ? 'bg-accent-primary text-snow shadow-[0_0_14px_rgba(36,160,255,0.5)]'
+                          ? 'bg-brand-strong text-snow shadow-[0_0_14px_rgba(36,160,255,0.5)]'
                           : 'bg-accent-primary/10 text-accent-primary border border-accent-primary/20'
                       )}
                     >

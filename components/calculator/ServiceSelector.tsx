@@ -143,7 +143,7 @@ export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) 
                           className={cn(
                             'px-3 py-1.5 rounded-lg text-xs font-medium transition-all',
                             sel.duration === d
-                              ? 'bg-accent-primary text-white shadow-[0_0_10px_rgba(36,160,255,0.4)]'
+                              ? 'bg-brand-strong text-snow shadow-[0_0_10px_rgba(36,160,255,0.4)]'
                               : 'bg-bg-tertiary text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/80'
                           )}
                         >

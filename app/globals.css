@@ -462,3 +462,63 @@
 @media (prefers-reduced-motion: reduce), (scripting: none) {
   .rv { opacity: 1; transform: none; }
 }
+
+/* ─── 3D tilt (components/ui/Tilt.tsx) ──────────────────────────────────── */
+.tilt {
+  --rx: 0deg;
+  --ry: 0deg;
+  --gx: 50%;
+  --gy: 50%;
+  perspective: 1400px;
+}
+
+.tilt-inner {
+  position: relative;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.tilt-z1 { transform: translateZ(24px); }
+.tilt-z2 { transform: translateZ(48px); }
+.tilt-z3 { transform: translateZ(80px); }
+
+/* soft light that follows the pointer */
+.tilt-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(600px circle at var(--gx) var(--gy), rgb(255 255 255 / 0.22), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tilt:hover .tilt-glare { opacity: 1; }
+.dark .tilt-glare { background: radial-gradient(600px circle at var(--gx) var(--gy), rgb(36 160 255 / 0.14), transparent 45%); }
+
+/* 3D entrance for reveal blocks */
+.rv.rv-3d {
+  transform: perspective(1400px) rotateX(16deg) translate3d(0, 70px, -40px);
+  transform-origin: 50% 100%;
+}
+
+.rv.rv-3d.rv-in { transform: none; }
+
+/* phone in project mockups floats gently */
+@keyframes device-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+
+.device-float { animation: device-float 6s ease-in-out infinite; }
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .tilt-inner { transform: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv.rv-3d { transform: none; }
+  .device-float { animation: none; }
+}

@@ -91,7 +91,7 @@ export function RelatedPortfolioSection({ portfolios }: RelatedPortfolioSectionP
           <div className="flex justify-center">
             <button
               onClick={handleLoadMore}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-snow font-semibold hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              className="px-8 py-4 rounded-xl bg-brand-strong text-snow font-semibold hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               <span>{t('loadMore')}</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

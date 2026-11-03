@@ -579,7 +579,7 @@ export function SocialMediaDesignCalculator() {
                 <button
                   onClick={applyCoupon}
                   disabled={!couponCode.trim()}
-                  className="px-3 py-2 rounded-lg bg-accent-primary text-white text-xs font-medium hover:bg-accent-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  className="px-3 py-2 rounded-lg bg-brand-strong text-snow text-xs font-medium hover:bg-accent-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                 >
                   {t('applyCoupon')}
                 </button>
@@ -654,7 +654,7 @@ export function SocialMediaDesignCalculator() {
                 <button
                   onClick={applyCoupon}
                   disabled={!couponCode.trim()}
-                  className="px-3 py-2 rounded-lg bg-accent-primary text-white text-xs font-medium hover:bg-accent-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  className="px-3 py-2 rounded-lg bg-brand-strong text-snow text-xs font-medium hover:bg-accent-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                 >
                   {t('applyCoupon')}
                 </button>
