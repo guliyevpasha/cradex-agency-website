@@ -799,3 +799,159 @@
 @media (prefers-reduced-motion: reduce) {
   .bot-launcher, .bot-eye, .bot-antenna::after { animation: none; }
 }
+
+/* ─── Robot assistant v2 ────────────────────────────────────────────────── */
+.bot-launcher {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 20px 40px -14px rgb(10 116 204 / 0.75);
+}
+
+.bot-launcher:hover { transform: translateY(-3px) scale(1.04); }
+
+/* spinning gradient halo */
+.bot-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #24A0FF, #7CF2FF, #0A74CC, #A78BFA, #24A0FF);
+  animation: bot-spin 4s linear infinite;
+}
+
+.bot-core {
+  position: absolute;
+  inset: 3px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #1E2A3A, #07090C 70%);
+  box-shadow: inset 0 2px 6px rgb(255 255 255 / 0.08);
+}
+
+.bot-wave {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgb(36 160 255 / 0.6);
+  animation: bot-wave 2.4s ease-out infinite;
+}
+
+@keyframes bot-spin { to { transform: rotate(360deg); } }
+@keyframes bot-wave { from { transform: scale(1); opacity: 0.9; } to { transform: scale(1.55); opacity: 0; } }
+
+.rb {
+  position: relative;
+  width: 40px;
+  height: 34px;
+  margin-top: 6px;
+}
+
+.rb-sm { transform: scale(0.82); margin-top: 3px; }
+
+.rb-helmet {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px 14px 12px 12px;
+  background: linear-gradient(160deg, #FFFFFF 0%, #E3EBF5 45%, #A9BBD1 100%);
+  box-shadow: inset 0 -3px 5px rgb(10 40 80 / 0.25), inset 0 2px 2px rgb(255 255 255 / 0.9), 0 4px 10px rgb(0 0 0 / 0.35);
+}
+
+.rb-visor {
+  position: absolute;
+  inset: 6px 4px 6px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #0F1B2D, #04070C);
+  box-shadow: inset 0 0 0 1px rgb(124 242 255 / 0.25), inset 0 -6px 10px rgb(36 160 255 / 0.15);
+  overflow: hidden;
+}
+
+.rb-visor::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  width: 45%;
+  height: 35%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.22), transparent);
+}
+
+.rb-eyes {
+  position: absolute;
+  inset: 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  animation: rb-look 6s ease-in-out infinite;
+}
+
+.rb-eyes i {
+  width: 7px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7CF2FF;
+  box-shadow: 0 0 6px #7CF2FF, 0 0 12px #24A0FF;
+  animation: rb-blink 4.2s infinite;
+}
+
+.rb-mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 9px;
+  height: 3px;
+  margin-left: -4.5px;
+  border-radius: 0 0 6px 6px;
+  background: #7CF2FF;
+  opacity: 0.8;
+}
+
+.rb-ear {
+  position: absolute;
+  top: 11px;
+  width: 5px;
+  height: 12px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #5CB8FF, #0A74CC);
+}
+
+.rb-ear-l { left: -4px; }
+.rb-ear-r { right: -4px; }
+
+.rb-antenna {
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  width: 2px;
+  height: 8px;
+  margin-left: -1px;
+  background: #C9D6E6;
+}
+
+.rb-antenna::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #24A0FF;
+  box-shadow: 0 0 10px #24A0FF, 0 0 18px #7CF2FF;
+  animation: pulse2 1.4s ease-in-out infinite;
+}
+
+@keyframes rb-look {
+  0%, 30%, 100% { transform: translateX(0); }
+  40%, 55% { transform: translateX(-3px); }
+  65%, 80% { transform: translateX(3px); }
+}
+
+@keyframes rb-blink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(0.1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .bot-ring, .bot-wave, .rb-eyes, .rb-eyes i, .rb-antenna::after { animation: none; }
+}

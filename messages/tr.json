@@ -2468,63 +2468,24 @@
       "subtitle": "Hizmetlerimiz ve ürünlerimiz hakkında en çok sorulanlar. Cevabı bulamadınız mı? Bize yazın.",
       "ask": "Sorunuzu WhatsApp'tan sorun",
       "askMessage": "Merhaba, bir sorum var",
-      "groups": {
-        "all": "Tümü",
-        "web": "Web sitesi",
-        "mobile": "Mobil uygulama",
-        "seo": "SEO ve GEO",
-        "ads": "Reklam",
-        "support": "Teknik destek",
-        "products": "Ürünler"
-      },
       "items": [
         {
-          "g": "web",
-          "q": "Demo gerçekten ücretsiz mi?",
-          "a": "Evet. İşletmeniz için web sitesi demosu hazırlıyoruz, siz inceliyorsunuz. Beğenmezseniz hiçbir ücret ödemezsiniz."
-        },
-        {
-          "g": "web",
           "q": "Web sitesi kaç günde hazır olur?",
           "a": "Demo 2 saat içinde hazırlanır. Tam site projenin kapsamına bağlıdır: tanıtım sitesi ve landing page genellikle birkaç günde, kurumsal site ve e-ticaret sitesi daha uzun sürede tamamlanır. Kesin tarihi yazılı teklifte belirtiriz."
         },
         {
-          "g": "web",
-          "q": "Alan adı ve site kime ait olur?",
-          "a": "Alan adı sizin adınıza tescil edilir, site tamamen size aittir."
-        },
-        {
-          "g": "mobile",
-          "q": "Mobil uygulama hem iOS hem Android için mi hazırlanır?",
-          "a": "Evet. Uygulamayı her iki platform için geliştiriyor, App Store ve Google Play'de yayınlanmasına da yardımcı oluyoruz."
-        },
-        {
-          "g": "seo",
           "q": "SEO ile GEO arasındaki fark nedir?",
           "a": "SEO, sitenizin Google gibi arama motorlarında üst sıralara çıkmasıdır. GEO ise ChatGPT, Gemini ve Perplexity gibi yapay zekâ aramalarının yanıtlarında işletmenizin adının geçmesi için yapılan çalışmadır."
         },
         {
-          "g": "ads",
           "q": "Hangi platformlarda reklam yönetiyorsunuz?",
           "a": "Meta (Instagram ve Facebook), TikTok, LinkedIn ve Google. Kampanyayı kurar, yönetir ve sonuçlar hakkında rapor veririz."
         },
         {
-          "g": "support",
           "q": "Kapatılmış veya çalınmış hesabı geri alabiliyor musunuz?",
           "a": "Evet. Kapatılmış, kısıtlanmış, çalınmış ve silinmiş sosyal medya ve reklam hesaplarının kurtarılmasıyla ilgileniyor, sahte profillerin kapatılmasına da yardımcı oluyoruz."
         },
         {
-          "g": "support",
-          "q": "Mevcut sitemin teknik bakımını üstleniyor musunuz?",
-          "a": "Evet. Teknik SEO, güvenlik, backlink, site içi bağlantı yapısı ve günlük teknik desteği biz yürütüyoruz."
-        },
-        {
-          "g": "products",
-          "q": "Chatbot ne yapar?",
-          "a": "Sitenizde ve mesajlaşma kanallarınızda müşteri sorularını 7/24 yanıtlar, sipariş ve randevuları kaydeder."
-        },
-        {
-          "g": "products",
           "q": "Kombo paketlere neler dahil?",
           "a": "Her pakette takipçi, beğeni, izlenme, kaydetme, paylaşım, etkileşim ve keşfet etkisi bulunur. Instagram ve TikTok paketi 20 ₼, YouTube paketi 35 ₼'dir."
         }
@@ -2613,14 +2574,6 @@
       "inbox3From": "Yeni müşteri",
       "inbox3Subject": "Görüşme saati",
       "inbox3Preview": "Yarın saat 11:00'de ofisinize gelebilir miyim?"
-    },
-    "talk": {
-      "title": "Projenizi konuşalım",
-      "online": "Çevrimiçi",
-      "person": "Paşa Quliyev",
-      "role": "Cradex Agency",
-      "button": "WhatsApp'tan yazın",
-      "message": "Merhaba, projem hakkında konuşmak istiyorum"
     },
     "top": {
       "label": "Yukarı çık"

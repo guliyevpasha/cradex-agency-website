@@ -19,14 +19,19 @@ type Msg = { from: 'bot' | 'me'; text: string }
 
 function RobotHead({ small }: { small?: boolean }) {
   return (
-    <span className={cn('bot-head', small && 'bot-head-sm')} aria-hidden="true">
-      <span className="bot-antenna" />
-      <span className="bot-face">
-        <span className="bot-eye" />
-        <span className="bot-eye" />
+    <span className={cn('rb', small && 'rb-sm')} aria-hidden="true">
+      <span className="rb-antenna" />
+      <span className="rb-ear rb-ear-l" />
+      <span className="rb-ear rb-ear-r" />
+      <span className="rb-helmet">
+        <span className="rb-visor">
+          <span className="rb-eyes">
+            <i />
+            <i />
+          </span>
+          <span className="rb-mouth" />
+        </span>
       </span>
-      <span className="bot-ear bot-ear-l" />
-      <span className="bot-ear bot-ear-r" />
     </span>
   )
 }
@@ -217,7 +222,9 @@ export function FloatingActions() {
 
       {/* launcher */}
       <button type="button" onClick={toggle} aria-label={open ? t('close') : t('open')} aria-expanded={open} className="bot-launcher">
-        {open ? <X size={24} className="text-snow" aria-hidden="true" /> : <RobotHead />}
+        <span className="bot-ring" aria-hidden="true" />
+        {!open && <span className="bot-wave" aria-hidden="true" />}
+        <span className="bot-core">{open ? <X size={24} className="text-snow" aria-hidden="true" /> : <RobotHead />}</span>
         {!open && teaser && <span className="bot-badge">1</span>}
       </button>
     </div>

@@ -1,7 +1,7 @@
 'use client'
 /**
- * FAQ across all services and products: topic filter, animated accordion
- * cards and a 3D question-mark orb. See ".faq-orb" in app/globals.css.
+ * FAQ about the services and products: animated accordion cards and a
+ * 3D question-mark orb. See ".faq-orb" in app/globals.css.
  * @author Paşa Quliyev — Cradex Agency
  */
 import { useState } from 'react'
@@ -11,9 +11,7 @@ import { cn } from '@/lib/utils/cn'
 import { Reveal } from '@/components/ui/Reveal'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
-type Item = { g: string; q: string; a: string }
-
-const GROUPS = ['all', 'web', 'mobile', 'seo', 'ads', 'support', 'products'] as const
+type Item = { q: string; a: string }
 
 function Orb() {
   return (
@@ -29,10 +27,8 @@ function Orb() {
 export function DemoFaq() {
   const t = useTranslations('site.faq')
   const items = t.raw('items') as Item[]
-  const [group, setGroup] = useState<(typeof GROUPS)[number]>('all')
   const [open, setOpen] = useState<number | null>(0)
 
-  const shown = items.map((it, i) => ({ ...it, i })).filter((it) => group === 'all' || it.g === group)
 
   return (
     <section className="py-20 lg:py-28">
@@ -48,31 +44,8 @@ export function DemoFaq() {
         </div>
 
         <div>
-          <div role="tablist" aria-label={t('title')} className="flex flex-wrap gap-2">
-            {GROUPS.map((g) => (
-              <button
-                key={g}
-                type="button"
-                role="tab"
-                aria-selected={group === g}
-                onClick={() => {
-                  setGroup(g)
-                  setOpen(null)
-                }}
-                className={cn(
-                  'rounded-full border px-4 py-2 text-sm font-semibold transition-colors',
-                  group === g
-                    ? 'border-transparent bg-brand-strong text-snow'
-                    : 'border-line bg-bg-secondary text-text-secondary hover:text-text-primary'
-                )}
-              >
-                {t(`groups.${g}`)}
-              </button>
-            ))}
-          </div>
-
-          <ul className="mt-6 space-y-3 [perspective:1200px]">
-            {shown.map(({ q, a, i, g }, idx) => {
+          <ul className="space-y-3 [perspective:1200px]">
+            {items.map(({ q, a }, i) => {
               const isOpen = open === i
               const id = `faq-${i}`
               return (
@@ -82,7 +55,7 @@ export function DemoFaq() {
                     'faq-item overflow-hidden rounded-3xl border bg-bg-secondary transition-all duration-500',
                     isOpen ? 'faq-open border-accent-primary/40 shadow-float' : 'border-line hover:border-accent-primary/30'
                   )}
-                  style={{ animationDelay: `${idx * 60}ms` }}
+                  style={{ animationDelay: `${i * 60}ms` }}
                 >
                   <h3>
                     <button
@@ -101,8 +74,7 @@ export function DemoFaq() {
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <span className="flex-1">
-                        <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-ink">{t(`groups.${g}`)}</span>
-                        <span className="mt-0.5 block text-[17px] font-semibold text-text-primary">{q}</span>
+                        <span className="block text-[17px] font-semibold text-text-primary">{q}</span>
                       </span>
                       <span
                         className={cn(
