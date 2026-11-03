@@ -60,7 +60,7 @@ export function StrategicApproach({ title, description, highlights }: StrategicA
                 
                 <div className="relative bg-bg-tertiary/40 backdrop-blur-sm border border-accent-primary/20 rounded-3xl p-8 h-full hover:border-accent-primary/40 transition-all duration-300">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-snow" />
                   </div>
                   
                   <p className="text-base text-text-secondary leading-relaxed">

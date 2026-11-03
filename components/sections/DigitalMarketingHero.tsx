@@ -46,7 +46,7 @@ export function DigitalMarketingHero({
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(36,160,255,0.15) 0%, transparent 50%),
             radial-gradient(ellipse 80% 50% at 80% 50%, rgba(151,71,255,0.1) 0%, transparent 50%)
           `,
         }}
@@ -75,7 +75,7 @@ export function DigitalMarketingHero({
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold hover:shadow-[0_0_30px_rgba(108,99,255,0.4)] transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-snow font-semibold hover:shadow-[0_0_30px_rgba(36,160,255,0.4)] transition-all duration-300 hover:scale-105"
               >
                 {ctaStart}
                 <ArrowRight size={18} />

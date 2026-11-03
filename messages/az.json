@@ -144,7 +144,8 @@
     "services": {
       "title": "Xidmətlərimiz",
       "subtitle": "Brendinizin böyüməsi üçün hərtərəfli rəqəmsal həllər",
-      "relatedWork": "İşlərimiz"
+      "relatedWork": "İşlərimiz",
+      "loadMore": "Daha çox göstər"
     },
     "portfolio": {
       "title": "Bizim İşlərimiz",
@@ -368,7 +369,7 @@
       "title": "2020-ci ildən bu günə",
       "titleAccent": "durmadan irəli",
       "titleEnd": "— böyümə səyahəti.",
-      "archiveLink": "",
+      "archiveLink": "Bütün arxiv",
       "events": [
         {
           "year": "2020",
@@ -1485,7 +1486,7 @@
   "portfolio": {
     "title": "Portfolio",
     "subtitle": "Tamamladığımız layihələr",
-    "viewProject": "Portfolioya Bax",
+    "viewProject": "Layihəyə keçid et",
     "visitWebsite": "Sayta Bax",
     "client": "Müştəri",
     "year": "İl",
@@ -1497,7 +1498,6 @@
     "services": "Xidmətlər",
     "deliveredFor": "üçün həyata keçirilən",
     "serviceText": "xidməti",
-    "viewProject": "Layihəyə keçid et",
     "gallery": "Qalereya",
     "gallerySubtitle": "Layihə görüntüləri",
     "videoTitle": "Layihə Videosu",
@@ -2223,5 +2223,231 @@
     "cta": "WhatsApp-da yazın",
     "dismiss": "Hələlik maraqlanmıram",
     "whatsappText": "Salam! Pulsuz marketinq konsultasiyası almaq istəyirəm."
+  },
+  "site": {
+    "meta": {
+      "homeTitle": "Cradex Agency — Veb sayt hazırlanması",
+      "homeDescription": "Saytınızın demosunu 2 saata pulsuz əldə edin. Veb sayt, mobil tətbiq, SEO, GEO və rəqəmsal reklam xidmətləri.",
+      "servicesTitle": "Xidmətlərimiz",
+      "servicesDescription": "Veb sayt və mobil tətbiq hazırlanması, SEO və GEO, Meta, TikTok, LinkedIn və Google reklamları, texniki xidmət.",
+      "productsTitle": "Məhsullarımız",
+      "productsDescription": "Chatbot və Instagram, TikTok, YouTube üçün sosial media kombo paketləri.",
+      "pricingTitle": "Qiymətlər",
+      "pricingDescription": "Sayt demosu pulsuzdur. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq."
+    },
+    "nav": {
+      "home": "Əsas Səhifə",
+      "services": "Xidmətlərimiz",
+      "products": "Məhsullarımız",
+      "work": "İşlərimiz",
+      "about": "Haqqımızda",
+      "pricing": "Qiymətlər",
+      "blog": "Bloq",
+      "contact": "Əlaqə",
+      "menu": "Menyu",
+      "openMenu": "Menyunu aç",
+      "closeMenu": "Menyunu bağla",
+      "skip": "Əsas məzmuna keç",
+      "language": "Dil",
+      "allServices": "Bütün xidmətlər",
+      "allProducts": "Bütün məhsullar",
+      "mainNav": "Əsas naviqasiya",
+      "mobileNav": "Mobil naviqasiya"
+    },
+    "theme": {
+      "toLight": "Gündüz rejiminə keç",
+      "toDark": "Gecə rejiminə keç"
+    },
+    "cta": {
+      "discuss": "Layihənizi müzakirə edək",
+      "work": "İşlərimizə baxın",
+      "demo": "Pulsuz demo",
+      "whatsappMessage": "Salam, demo versiya sayt istəyirəm",
+      "details": "Ətraflı"
+    },
+    "hero": {
+      "eyebrow": "Pulsuz demo · 2 saata",
+      "titleStart": "Saytınızın demosunu 2 aya yox,",
+      "titleAccent": "2 saata",
+      "titleEnd": "əldə edin.",
+      "titleFree": "Özü də pulsuz!",
+      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün sayt demosunu əvvəlcə hazırlayırıq. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
+      "fine": "Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.",
+      "card": {
+        "building": "Demo hazırlanır",
+        "ready": "Demo hazırdır",
+        "hoursLeft": "{hours} saat {minutes} dəq qalıb",
+        "minutesLeft": "{minutes} dəq qalıb",
+        "done": "Hazırdır",
+        "steps": {
+          "structure": "Struktur",
+          "design": "Dizayn",
+          "content": "Mətnlər",
+          "ready": "Hazırdır"
+        },
+        "kinds": {
+          "business": "Biznes saytı",
+          "personal": "Şəxsi brend",
+          "content": "Kontent layihəsi"
+        }
+      },
+      "preview": {
+        "url": "sizinbrendiniz.az",
+        "brand": "Nova",
+        "link1": "Haqqımızda",
+        "link2": "Xidmətlər",
+        "link3": "İşlər",
+        "cta": "Əlaqə",
+        "eyebrow": "Yeni kolleksiya",
+        "title": "Brendinizi rəqəmsal dünyada güclü göstərin",
+        "text": "Müştəriləriniz sizi ilk dəfə saytınızda görür. Biz bu təəssüratı düşünülmüş edirik.",
+        "primary": "Başlayaq",
+        "secondary": "Ətraflı",
+        "stat1": "dil",
+        "stat2": "mobil uyğun",
+        "stat3": "onlayn"
+      }
+    },
+    "process": {
+      "eyebrow": "Necə işləyir",
+      "title": "Üç addım, ilk addım pulsuzdur",
+      "step1Title": "Bizə yazırsınız",
+      "step1Text": "WhatsApp-a biznesiniz haqqında 2–3 cümlə göndərirsiniz: nə ilə məşğul olursunuz, saytda nə olmalıdır.",
+      "step2Title": "Demonu hazırlayırıq",
+      "step2Text": "2 saat ərzində sahənizə və brendinizə uyğun sayt demosunu sizə göndəririk.",
+      "step3Title": "Siz qərar verirsiniz",
+      "step3Text": "Bəyənsəniz, saytı tamamlayıb illik paketlə yayımlayırıq. Bəyənməsəniz, heç nə ödəmirsiniz."
+    },
+    "services": {
+      "eyebrow": "Xidmətlərimiz",
+      "title": "Əsas işimiz veb saytlardır",
+      "subtitle": "Qalan xidmətlər saytınızın daha çox müştəri gətirməsi və təhlükəsiz işləməsi üçündür.",
+      "featured": "Əsas xidmət",
+      "web": {
+        "title": "Veb sayt hazırlanması",
+        "text": "Korporativ saytlar, landing page-lər, onlayn mağazalar və veb tətbiqlər. Strategiya, dizayn, proqramlaşdırma və buraxılış bir komandada.",
+        "p1": "Korporativ sayt",
+        "p2": "Landing page",
+        "p3": "Onlayn mağaza",
+        "p4": "Veb tətbiq"
+      },
+      "mobile": {
+        "title": "Mobil tətbiq hazırlanması",
+        "text": "iOS və Android üçün tətbiqlər: dizayn, proqramlaşdırma, App Store və Google Play-də yayım.",
+        "p1": "iOS",
+        "p2": "Android"
+      },
+      "seo": {
+        "title": "SEO və GEO",
+        "text": "Saytınızın Google-da və ChatGPT, Gemini, Perplexity kimi süni intellekt axtarış sistemlərində tapılması.",
+        "p1": "SEO optimallaşdırma",
+        "p2": "GEO — süni intellekt axtarışında görünürlük"
+      },
+      "ads": {
+        "title": "Rəqəmsal reklam",
+        "text": "Hədəfli reklam kampaniyalarının qurulması, idarə olunması və hesabatı.",
+        "p1": "Meta Ads",
+        "p2": "TikTok Ads",
+        "p3": "LinkedIn Ads",
+        "p4": "Google Ads"
+      },
+      "support": {
+        "title": "Texniki Xidmət",
+        "text": "Saytınızın və sosial media hesablarınızın texniki optimallaşdırılması, təhlükəsizliyi və bərpası.",
+        "webTitle": "Veb sayt",
+        "w1": "Texniki SEO optimallaşdırılması",
+        "w2": "Təhlükəsizlik optimallaşdırılması",
+        "w3": "Xarici linklər (Backlink)",
+        "w4": "Daxili linkləmə (Internal Linking)",
+        "socialTitle": "Sosial media hesabları",
+        "s1": "Bağlanmış sosial media hesablarının açılması",
+        "s2": "Oğurlanmış və silinmiş hesabların bərpası",
+        "s3": "Saxta hesabların və təqlidçi profillərin bağlanması",
+        "s4": "Reklam hesablarının bərpası",
+        "s5": "Məhdudlaşdırılmış hesabların açılması",
+        "s6": "Hesabların təhlükəsizliyinin təmin edilməsi"
+      }
+    },
+    "products": {
+      "eyebrow": "Məhsullarımız",
+      "title": "Hazır həllər, sürətli başlanğıc",
+      "subtitle": "Biznesiniz üçün dərhal işə salına bilən məhsullar.",
+      "chatbot": {
+        "title": "Chatbot",
+        "text": "Saytınızda və mesajlaşma kanallarınızda müştəri suallarını 7/24 cavablandıran süni intellekt köməkçisi.",
+        "user": "Sabah saat 15:00-da boş yer var?",
+        "bot": "Bəli, 15:00 və 16:30 boşdur. Hansı saata yazım?"
+      },
+      "combo": {
+        "title": "Sosial Media Kombo Paketləri",
+        "text": "Kontent, dizayn və idarəetmə bir paketdə. Platformanızı seçin.",
+        "instagramTitle": "Instagram Kombo Paketi",
+        "instagramText": "Instagram səhifənizin kontenti, dizaynı və idarə olunması.",
+        "tiktokTitle": "TikTok Kombo Paketi",
+        "tiktokText": "TikTok üçün qısa videoların planlanması, hazırlanması və paylaşılması.",
+        "youtubeTitle": "YouTube Kombo Paketi",
+        "youtubeText": "YouTube kanalınız üçün video kontent, dizayn və kanal optimallaşdırılması."
+      }
+    },
+    "pricing": {
+      "eyebrow": "Qiymətlər",
+      "title": "Əvvəl görün, sonra ödəyin",
+      "subtitle": "Gizli ödəniş yoxdur. Dəqiq qiymət layihənin həcminə görə yazılı təklifdə verilir.",
+      "demoName": "Demo",
+      "demoPrice": "0 ₼",
+      "demoPeriod": "2 saata hazır",
+      "demoText": "Biznesinizə uyğun sayt demosu. Baxın, qərar verin.",
+      "demoP1": "Sahənizə uyğun dizayn",
+      "demoP2": "Mobil uyğun",
+      "demoP3": "Öhdəlik yoxdur",
+      "launchName": "Yayım paketi",
+      "launchPrice": "399 ₼-dən",
+      "launchPeriod": "illik",
+      "launchBadge": "Demonu bəyəndinizsə",
+      "launchText": "Demo əsasında saytınızı tamamlayır və yayımlayırıq.",
+      "launchP1": "Demo əsasında hazır sayt",
+      "launchP2": "Yayım və texniki dəstək",
+      "launchP3": "Dəqiq qiymət yazılı təklifdə",
+      "customName": "Fərdi layihə",
+      "customPrice": "Fərdi",
+      "customPeriod": "müzakirə ilə",
+      "customText": "Onlayn mağaza, veb tətbiq, mobil tətbiq və ya inteqrasiyalar.",
+      "customP1": "Layihəyə uyğun hesablanır",
+      "customP2": "Mərhələli ödəniş",
+      "customP3": "Yazılı təklif",
+      "note": "Qiymətlər manatla (₼) göstərilib.",
+      "teaserTitle": "Demo pulsuz, yayım illik 399 ₼-dən",
+      "teaserLink": "Qiymətlərə baxın"
+    },
+    "faq": {
+      "eyebrow": "Suallar",
+      "title": "Tez-tez verilən suallar",
+      "q1": "Demo həqiqətən pulsuzdur?",
+      "a1": "Bəli. Demonu hazırlayırıq, siz baxırsınız. Bəyənməsəniz, heç nə ödəmirsiniz.",
+      "q2": "Demo üçün nə göndərməliyəm?",
+      "a2": "WhatsApp-a biznesiniz haqqında 2–3 cümlə yazın: nə ilə məşğul olursunuz və saytda nə olmalıdır. Loqonuz varsa, onu da göndərin.",
+      "q3": "Bəyənsəm, sonra nə olur?",
+      "a3": "Saytı istəklərinizə görə tamamlayır və illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
+      "q4": "Onlayn mağaza və ya mobil tətbiq lazımdırsa?",
+      "a4": "Bu cür layihələrin qiyməti həcmə görə hesablanır. Bizə yazın, yazılı təklif göndərək."
+    },
+    "final": {
+      "title": "Bir mesaj yazın, demonuz 2 saata hazır olsun",
+      "text": "Biznesiniz haqqında qısa yazın. Demonu görəndən sonra qərar verirsiniz."
+    },
+    "mobileNav": {
+      "home": "Əsas",
+      "services": "Xidmətlər",
+      "demo": "Demo",
+      "work": "İşlər",
+      "menu": "Menyu"
+    },
+    "footer": {
+      "tagline": "Veb saytlar, mobil tətbiqlər və rəqəmsal reklam. Bakı, Azərbaycan.",
+      "company": "Şirkət",
+      "services": "Xidmətlər",
+      "contact": "Əlaqə",
+      "rights": "Bütün hüquqlar qorunur."
+    }
   }
 }

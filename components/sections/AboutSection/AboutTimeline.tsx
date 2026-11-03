@@ -65,7 +65,7 @@ export function AboutTimeline({
     <section
       ref={sectionRef}
       className="relative py-24 lg:py-36 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #111118 0%, #0A0A0F 50%, #111118 100%)' }}
+      style={{ background: 'linear-gradient(180deg, rgb(var(--bg-secondary)) 0%, rgb(var(--bg-primary)) 50%, rgb(var(--bg-secondary)) 100%)' }}
     >
       {/* Brand glow — accent-primary */}
       <div
@@ -73,7 +73,7 @@ export function AboutTimeline({
         aria-hidden="true"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(108,99,255,0.08) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(36,160,255,0.08) 0%, transparent 70%)',
         }}
       />
 
@@ -110,8 +110,8 @@ export function AboutTimeline({
                 className="absolute top-0 left-0 w-full origin-top rounded-full"
                 style={{
                   height: lineHeight,
-                  background: 'linear-gradient(180deg, #6C63FF 0%, #6C63FF 100%)',
-                  boxShadow: '0 0 8px rgba(108,99,255,0.4)',
+                  background: 'linear-gradient(180deg, #24A0FF 0%, #24A0FF 100%)',
+                  boxShadow: '0 0 8px rgba(36,160,255,0.4)',
                 }}
               />
             </div>
@@ -139,7 +139,7 @@ export function AboutTimeline({
                     className={cn(
                       'relative p-8 lg:p-10 rounded-2xl border transition-all duration-500',
                       isActive && hasEntered
-                        ? 'border-accent-primary/30 bg-gradient-to-br from-bg-secondary/40 to-bg-tertiary/40 shadow-[0_0_32px_rgba(108,99,255,0.06)]'
+                        ? 'border-accent-primary/30 bg-gradient-to-br from-bg-secondary/40 to-bg-tertiary/40 shadow-[0_0_32px_rgba(36,160,255,0.06)]'
                         : 'border-white/[0.06] bg-white/[0.02]'
                     )}
                   >
@@ -148,7 +148,7 @@ export function AboutTimeline({
                       className={cn(
                         'inline-flex items-center px-4 py-1.5 rounded-full text-sm font-mono font-bold mb-5 transition-all duration-500',
                         isActive && hasEntered
-                          ? 'bg-accent-primary text-white shadow-[0_0_14px_rgba(108,99,255,0.5)]'
+                          ? 'bg-accent-primary text-snow shadow-[0_0_14px_rgba(36,160,255,0.5)]'
                           : 'bg-accent-primary/10 text-accent-primary border border-accent-primary/20'
                       )}
                     >
@@ -181,8 +181,8 @@ export function AboutTimeline({
                           transition={{ duration: 0.3 }}
                           className="absolute left-0 top-6 bottom-6 w-0.5 rounded-full origin-top"
                           style={{
-                            background: 'linear-gradient(180deg, #6C63FF 0%, #6C63FF 100%)',
-                            boxShadow: '0 0 8px rgba(108,99,255,0.6)',
+                            background: 'linear-gradient(180deg, #24A0FF 0%, #24A0FF 100%)',
+                            boxShadow: '0 0 8px rgba(36,160,255,0.6)',
                           }}
                         />
                       )}

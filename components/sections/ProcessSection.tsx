@@ -29,8 +29,8 @@ const STEP_ICONS = [
 ]
 
 const STEP_COLORS = [
-  { bg: 'rgba(108,99,255,0.12)', border: 'rgba(108,99,255,0.45)', glow: '0 0 40px rgba(108,99,255,0.3)', accent: '#6C63FF', particle: 'rgba(108,99,255,0.6)' },
-  { bg: 'rgba(0,212,255,0.10)',  border: 'rgba(0,212,255,0.4)',   glow: '0 0 40px rgba(0,212,255,0.25)',  accent: '#00D4FF', particle: 'rgba(0,212,255,0.6)' },
+  { bg: 'rgba(36,160,255,0.12)', border: 'rgba(36,160,255,0.45)', glow: '0 0 40px rgba(36,160,255,0.3)', accent: '#24A0FF', particle: 'rgba(36,160,255,0.6)' },
+  { bg: 'rgba(124,200,255,0.10)',  border: 'rgba(124,200,255,0.4)',   glow: '0 0 40px rgba(124,200,255,0.25)',  accent: '#7CC8FF', particle: 'rgba(124,200,255,0.6)' },
   { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.45)', glow: '0 0 40px rgba(139,92,246,0.3)', accent: '#8B5CF6', particle: 'rgba(139,92,246,0.6)' },
   { bg: 'rgba(34,197,94,0.10)',  border: 'rgba(34,197,94,0.4)',   glow: '0 0 40px rgba(34,197,94,0.25)',  accent: '#22C55E', particle: 'rgba(34,197,94,0.6)' },
 ]
@@ -57,7 +57,7 @@ export function ProcessSection() {
       <div
         className="absolute inset-0 pointer-events-none -z-10"
         style={{
-          background: 'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(108,99,255,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(36,160,255,0.07) 0%, transparent 70%)',
         }}
       />
       {/* Subtle grid */}
@@ -169,7 +169,7 @@ export function ProcessSection() {
                       initial={prefersReduced ? false : { scale: 0, opacity: 0 }}
                       animate={inView ? { scale: 1, opacity: 1 } : {}}
                       transition={{ duration: 0.4, delay: 0.5 + i * 0.15, type: 'spring', stiffness: 260, damping: 18 }}
-                      className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[11px] font-bold text-white tracking-wider z-10"
+                      className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[11px] font-bold text-snow tracking-wider z-10"
                       style={{ background: color.accent }}
                     >
                       {step.number}

@@ -437,8 +437,8 @@ export default function DigitalAdsCalculator() {
           className="hidden xl:block rounded-2xl p-4 lg:p-5 sticky top-24"
           style={{
             background: 'linear-gradient(160deg, #0f0f1e, #13132a)',
-            border: '1px solid rgba(108,99,255,0.3)',
-            boxShadow: '0 0 30px rgba(108,99,255,0.1)',
+            border: '1px solid rgba(36,160,255,0.3)',
+            boxShadow: '0 0 30px rgba(36,160,255,0.1)',
           }}
         >
           <div className="h-0.5 w-full bg-gradient-to-r from-accent-primary to-accent-secondary rounded mb-4" />

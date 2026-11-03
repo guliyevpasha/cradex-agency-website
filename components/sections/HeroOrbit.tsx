@@ -64,7 +64,7 @@ export function HeroOrbit() {
         className="absolute inset-[-22%] rounded-full blur-[80px]"
         style={{
           background:
-            'radial-gradient(circle at 50% 45%, rgba(108,99,255,0.28) 0%, rgba(0,212,255,0.12) 45%, transparent 72%)',
+            'radial-gradient(circle at 50% 45%, rgba(36,160,255,0.28) 0%, rgba(124,200,255,0.12) 45%, transparent 72%)',
         }}
       />
 
@@ -85,7 +85,7 @@ export function HeroOrbit() {
           style={{
             ...LAYER,
             background:
-              'conic-gradient(from 0deg, rgba(0,212,255,0.20) 0deg, rgba(108,99,255,0.06) 38deg, transparent 90deg, transparent 360deg)',
+              'conic-gradient(from 0deg, rgba(124,200,255,0.20) 0deg, rgba(36,160,255,0.06) 38deg, transparent 90deg, transparent 360deg)',
           }}
         />
       </div>
@@ -114,9 +114,9 @@ export function HeroOrbit() {
         <svg viewBox="0 0 400 400" className="w-full h-full">
           <defs>
             <linearGradient id="ho-rim" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#6C63FF" stopOpacity="0.75" />
-              <stop offset="45%" stopColor="#00D4FF" stopOpacity="0.30" />
-              <stop offset="100%" stopColor="#6C63FF" stopOpacity="0.05" />
+              <stop offset="0%" stopColor="#24A0FF" stopOpacity="0.75" />
+              <stop offset="45%" stopColor="#7CC8FF" stopOpacity="0.30" />
+              <stop offset="100%" stopColor="#24A0FF" stopOpacity="0.05" />
             </linearGradient>
           </defs>
           <circle cx="200" cy="200" r="158" fill="none" stroke="url(#ho-rim)" strokeWidth="1.25" />
@@ -131,7 +131,7 @@ export function HeroOrbit() {
             cy="200"
             r="82"
             fill="none"
-            stroke="rgba(108,99,255,0.22)"
+            stroke="rgba(36,160,255,0.22)"
             strokeWidth="1"
             strokeDasharray="2 8"
           />
@@ -150,8 +150,8 @@ export function HeroOrbit() {
         <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full">
           <defs>
             <linearGradient id="ho-spoke" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#6C63FF" stopOpacity="0.30" />
-              <stop offset="100%" stopColor="#00D4FF" stopOpacity="0" />
+              <stop offset="0%" stopColor="#24A0FF" stopOpacity="0.30" />
+              <stop offset="100%" stopColor="#7CC8FF" stopOpacity="0" />
             </linearGradient>
           </defs>
           {DISCIPLINES.map((d, i) => (
@@ -205,10 +205,10 @@ export function HeroOrbit() {
           className="absolute inset-0 rounded-full border border-white/10"
           style={{
             background:
-              'radial-gradient(circle at 34% 26%, rgba(255,255,255,0.10) 0%, rgba(108,99,255,0.14) 44%, rgba(9,9,16,0.92) 100%)',
+              'radial-gradient(circle at 34% 26%, rgba(255,255,255,0.10) 0%, rgba(36,160,255,0.14) 44%, rgba(9,9,16,0.92) 100%)',
             backdropFilter: 'blur(8px)',
             WebkitBackdropFilter: 'blur(8px)',
-            boxShadow: '0 0 70px rgba(108,99,255,0.26), inset 0 0 46px rgba(0,212,255,0.09)',
+            boxShadow: '0 0 70px rgba(36,160,255,0.26), inset 0 0 46px rgba(124,200,255,0.09)',
           }}
         />
         <div
@@ -219,7 +219,7 @@ export function HeroOrbit() {
             className="font-display font-bold leading-none tracking-[-0.04em]
               text-[clamp(2.2rem,4.6vw,3.6rem)]"
             style={{
-              background: 'linear-gradient(135deg, #FFFFFF 0%, #C9C4FF 48%, #00D4FF 100%)',
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #C9C4FF 48%, #7CC8FF 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',

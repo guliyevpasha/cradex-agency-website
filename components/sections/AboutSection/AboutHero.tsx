@@ -53,7 +53,7 @@ export function AboutHero({
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 50% 0%, rgba(108,99,255,0.15) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 50% at 50% 0%, rgba(36,160,255,0.15) 0%, transparent 50%)
           `,
         }}
         aria-hidden="true"

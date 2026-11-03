@@ -1,125 +1,75 @@
 'use client'
-
-import { useState } from 'react'
+/**
+ * App-style bottom bar on phones. The centre button starts a demo request on
+ * WhatsApp; "Menu" opens the same burger menu as the header.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Home, 
-  Briefcase, 
-  FolderOpen, 
-  Phone,
-  Info
-} from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Briefcase, Home, LayoutGrid, Menu } from 'lucide-react'
+import { cn } from '@/lib/utils/cn'
+import { isActive, whatsappUrl } from '@/lib/site/navigation'
+import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
-interface MobileBottomNavProps {
-  locale: string
-}
+export const OPEN_MENU_EVENT = 'cradex:open-menu'
 
-export function MobileBottomNav({ locale }: MobileBottomNavProps) {
+export function MobileBottomNav({ locale }: { locale: string }) {
   const pathname = usePathname()
-  const t = useTranslations('common.nav')
+  const t = useTranslations('site.mobileNav')
+  const tNav = useTranslations('site.nav')
+  const tCta = useTranslations('site.cta')
 
-  const navItems = [
-    {
-      id: 'about',
-      label: t('about'),
-      href: `/${locale}/about`,
-      icon: Info,
-    },
-    {
-      id: 'services',
-      label: t('services'),
-      href: `/${locale}#services`,
-      icon: Briefcase,
-    },
-    {
-      id: 'home',
-      label: t('home'),
-      href: `/${locale}`,
-      icon: Home,
-      isCenter: true,
-    },
-    {
-      id: 'portfolio',
-      label: t('portfolio'),
-      href: `/${locale}/portfolio`,
-      icon: FolderOpen,
-    },
-    {
-      id: 'contact',
-      label: t('contact'),
-      href: `/${locale}/contact`,
-      icon: Phone,
-    },
+  const links = [
+    { href: '', label: t('home'), icon: Home, exact: true },
+    { href: '/services', label: t('services'), icon: LayoutGrid },
   ]
+  const linksRight = [{ href: '/portfolio', label: t('work'), icon: Briefcase }]
 
-  const isActive = (href: string) => pathname === href
+  const item = (l: { href: string; label: string; icon: typeof Home; exact?: boolean }) => {
+    const active = isActive(pathname, locale, l.href, l.exact)
+    const Icon = l.icon
+    return (
+      <Link
+        key={l.href}
+        href={`/${locale}${l.href}`}
+        aria-current={active ? 'page' : undefined}
+        className={cn(
+          'flex min-w-[58px] flex-col items-center gap-1 py-1.5 text-[11px] font-semibold transition-colors',
+          active ? 'text-snow' : 'text-[#8E98A6]'
+        )}
+      >
+        <Icon size={21} strokeWidth={2} aria-hidden="true" />
+        <span>{l.label}</span>
+      </Link>
+    )
+  }
 
   return (
-    <>
-      {/* Mobile Bottom Navigation - Only visible on mobile */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 pb-safe">
-        <div className="relative mx-4 mb-4 px-4 py-2.5 bg-bg-secondary/95 backdrop-blur-xl border border-white/5 rounded-3xl shadow-2xl">
-          <div className="flex items-center justify-around">
-            {navItems.map((item) => {
-              if (item.isCenter) {
-                return (
-                  <Link
-                    key={item.id}
-                    href={item.href || '#'}
-                    className="relative -mt-6"
-                    aria-label={item.label}
-                  >
-                    <motion.div
-                      whileTap={{ scale: 0.95 }}
-                      className="relative"
-                    >
-                      {/* Glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full blur-lg opacity-40" />
-                      
-                      {/* Main button */}
-                      <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary shadow-xl shadow-accent-primary/30 flex items-center justify-center">
-                        <item.icon size={24} className="text-white" strokeWidth={2.5} />
-                      </div>
-                    </motion.div>
-                  </Link>
-                )
-              }
-
-              const Icon = item.icon
-              const active = item.href && isActive(item.href)
-
-              return (
-                <Link
-                  key={item.id}
-                  href={item.href || '#'}
-                  className="flex flex-col items-center justify-center py-1.5 px-2 min-w-[56px]"
-                >
-                  <motion.div
-                    whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center gap-0.5"
-                  >
-                    <div className={`transition-colors ${
-                      active 
-                        ? 'text-accent-primary' 
-                        : 'text-text-muted'
-                    }`}>
-                      <Icon size={20} strokeWidth={2.2} />
-                    </div>
-                    <span className={`text-[9px] font-medium transition-colors ${
-                      active ? 'text-accent-primary' : 'text-text-muted'
-                    }`}>
-                      {item.label}
-                    </span>
-                  </motion.div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </nav>
-    </>
+    <nav aria-label={tNav('mobileNav')} className="fixed inset-x-0 bottom-0 z-30 px-3 pb-safe md:hidden">
+      <div className="mb-3 grid grid-cols-5 items-center rounded-[26px] bg-ink/95 px-2 py-1.5 shadow-float backdrop-blur-xl ring-1 ring-snow/10">
+        {links.map(item)}
+        <a
+          href={whatsappUrl(tCta('whatsappMessage'))}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center gap-1 text-[11px] font-semibold text-snow"
+        >
+          <span className="-mt-7 flex h-14 w-14 items-center justify-center rounded-[20px] bg-brand text-ink shadow-brand ring-4 ring-bg-primary">
+            <WhatsAppIcon className="h-6 w-6" />
+          </span>
+          <span>{t('demo')}</span>
+        </a>
+        {linksRight.map(item)}
+        <button
+          type="button"
+          onClick={() => window.dispatchEvent(new Event(OPEN_MENU_EVENT))}
+          className="flex min-w-[58px] flex-col items-center gap-1 py-1.5 text-[11px] font-semibold text-[#8E98A6] transition-colors hover:text-snow"
+        >
+          <Menu size={21} aria-hidden="true" />
+          <span>{t('menu')}</span>
+        </button>
+      </div>
+    </nav>
   )
 }

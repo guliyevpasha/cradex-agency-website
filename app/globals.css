@@ -1,126 +1,143 @@
+/*
+ * Cradex Agency — global styles and theme tokens.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Channels (r g b) so Tailwind opacity modifiers keep working: bg-bg-primary/80 */
 :root {
-  /* Background colors */
-  --color-bg-primary: #0A0A0F;
-  --color-bg-secondary: #111118;
-  --color-bg-tertiary: #1A1A24;
+  --bg-primary: 255 255 255;
+  --bg-secondary: 246 248 251;
+  --bg-tertiary: 236 241 246;
+  --text-primary: 11 13 16;
+  --text-secondary: 74 82 96;
+  --text-muted: 105 114 127;
+  --accent-primary: 36 160 255;
+  --accent-secondary: 110 196 255;
+  --accent-ink: 10 111 194;
+  --line: 223 228 234;
+  --contrast: 11 13 16;
 
-  /* Accent colors */
-  --color-accent-primary: #6C63FF;
-  --color-accent-secondary: #00D4FF;
-  --color-accent-gradient: linear-gradient(135deg, #6C63FF 0%, #00D4FF 100%);
+  /* hex aliases for inline styles and third-party widgets */
+  --color-bg-primary: rgb(var(--bg-primary));
+  --color-bg-tertiary: rgb(var(--bg-tertiary));
+  --color-accent-primary: #24A0FF;
+  --color-accent-secondary: #6EC4FF;
+  --color-border: rgb(var(--line));
 
-  /* Text colors */
-  --color-text-primary: #F0F0FF;
-  --color-text-secondary: #A0A0B8;
-  --color-text-muted: #606078;
+  color-scheme: light;
+}
 
-  /* Border colors */
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(108, 99, 255, 0.4);
+.dark {
+  --bg-primary: 8 10 13;
+  --bg-secondary: 15 18 23;
+  --bg-tertiary: 24 28 35;
+  --text-primary: 242 245 248;
+  --text-secondary: 166 176 189;
+  --text-muted: 120 130 144;
+  --accent-primary: 36 160 255;
+  --accent-secondary: 124 200 255;
+  --accent-ink: 92 184 255;
+  --line: 36 42 50;
+  --contrast: 255 255 255;
 
-  /* Glassmorphism */
-  --color-glass-bg: rgba(255, 255, 255, 0.08);
-  --color-glass-border: rgba(255, 255, 255, 0.15);
-
-  /* Status colors */
-  --color-success: #22C55E;
-  --color-error: #EF4444;
-  --color-warning: #F59E0B;
+  color-scheme: dark;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Default font size: 16px for desktop */
-    font-size: 16px;
-  }
-
-  /* Mobile devices: smaller base font size (14px) */
-  @media (max-width: 767px) {
-    html {
-      font-size: 14px;
-    }
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
   }
 
   body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: rgb(var(--bg-primary));
+    color: rgb(var(--text-primary));
+    font-family: var(--font-onest), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     min-height: 100vh;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
-  html {
-    overflow-x: hidden;
+  h1, h2, h3 {
+    text-wrap: balance;
   }
 
-  * {
-    box-sizing: border-box;
+  ::selection {
+    background: rgb(36 160 255 / 0.25);
+  }
+
+  :focus-visible {
+    outline: 2px solid #24A0FF;
+    outline-offset: 2px;
   }
 }
 
 @layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-10;
+  }
+
   .glass-card {
-    background: var(--color-glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--color-glass-border);
+    background: rgb(var(--bg-secondary));
+    border: 1px solid rgb(var(--line));
     border-radius: 16px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .glass-card:hover {
-    border-color: var(--color-border-hover);
-    box-shadow: 0 0 24px rgba(108, 99, 255, 0.15);
-    transform: translateY(-4px) scale(1.02);
-    background: rgba(255, 255, 255, 0.12);
+    border-color: rgb(36 160 255 / 0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -24px rgb(36 160 255 / 0.55);
   }
 
   .gradient-text {
-    background: var(--color-accent-gradient);
+    background: linear-gradient(120deg, #24A0FF 0%, #6EC4FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-bg {
-    background: var(--color-accent-gradient);
+    background: linear-gradient(120deg, #24A0FF 0%, #6EC4FF 100%);
   }
 
   .focus-ring {
-    outline: 2px solid var(--color-accent-primary);
+    outline: 2px solid #24A0FF;
     outline-offset: 2px;
+  }
+
+  /* Brand mark: public/logo.svg used as a mask so it takes the text colour. */
+  .logo-mark {
+    display: inline-block;
+    background-color: currentColor;
+    -webkit-mask: url('/logo.svg') left center / contain no-repeat;
+    mask: url('/logo.svg') left center / contain no-repeat;
   }
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  /* Hide scrollbar but keep scroll functionality */
+  .no-scrollbar::-webkit-scrollbar,
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
 
+  .no-scrollbar,
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -132,27 +149,23 @@
   }
 }
 
-/* ─── Swiper — Testimonials Carousel ──────────────────────────────────────── */
+/* ─── Swiper (testimonials) ─────────────────────────────────────────────── */
 .testimonials-pagination .swiper-pagination-bullet {
   display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(var(--contrast) / 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .testimonials-pagination .swiper-pagination-bullet-active {
-  background: #6C63FF;
+  background: #24A0FF;
   width: 24px;
   border-radius: 4px;
 }
 
-/* Swiper slide opacity for non-active slides.
-   0.5 left the neighbouring quotes readable, so with eighteen testimonials the
-   ones flanking the active card read as overlapping blocks of text rather than
-   as background. Low enough now that they register as depth only. */
 .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.18;
   transition: opacity 0.4s ease;
@@ -163,67 +176,47 @@
   transition: opacity 0.4s ease;
 }
 
-/* ─── Infinite Logo Marquee ───────────────────────────────────────────────── */
+/* ─── Marquees ──────────────────────────────────────────────────────────── */
 @keyframes marquee-scroll {
-  0%   { transform: translateX(0); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* Three copies of the content: shifting by exactly one third lands on an
-   identical frame, so the loop has no seam. Used where one copy is too narrow
-   to cover a wide viewport on its own. */
 @keyframes marquee-scroll-third {
-  0%   { transform: translateX(0); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-33.3333%); }
 }
 
-/* Reverse animation for right-to-left scroll */
 @keyframes marquee-scroll-third-reverse {
-  0%   { transform: translateX(-33.3333%); }
+  0% { transform: translateX(-33.3333%); }
   100% { transform: translateX(0); }
 }
 
-/* Six copies - for more items and smoother mobile experience */
 @keyframes marquee-scroll-sixth {
-  0%   { transform: translateX(0); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-16.6667%); }
 }
 
 @keyframes marquee-scroll-sixth-reverse {
-  0%   { transform: translateX(-16.6667%); }
+  0% { transform: translateX(-16.6667%); }
   100% { transform: translateX(0); }
 }
 
-/* Three copies - for 6 items per row, faster animation */
-@keyframes marquee-scroll-third {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
-}
-
-@keyframes marquee-scroll-third-reverse {
-  0%   { transform: translateX(-33.3333%); }
-  100% { transform: translateX(0); }
-}
-
-/* Pause on hover — applied via the parent .group hovering */
 .group:hover .marquee-track {
   animation-play-state: paused;
 }
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none !important;
   }
 
-  /* With the animation stopped the track still overflows, so hand scrolling
-     back to the reader rather than clipping the rest of the cards away. */
   .marquee-viewport {
     overflow-x: auto;
   }
 }
 
-/* ─── Custom Range Slider Styles ──────────────────────────────────────────── */
+/* ─── Range slider (archived calculator) ────────────────────────────────── */
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -241,14 +234,6 @@
   background: var(--color-accent-primary);
   cursor: pointer;
   border: 2px solid var(--color-bg-primary);
-  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
-  transition: all 0.2s ease;
-}
-
-.slider::-webkit-slider-thumb:hover {
-  background: var(--color-accent-secondary);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
-  transform: scale(1.1);
 }
 
 .slider::-moz-range-thumb {
@@ -258,12 +243,4 @@
   background: var(--color-accent-primary);
   cursor: pointer;
   border: 2px solid var(--color-bg-primary);
-  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
-  transition: all 0.2s ease;
-}
-
-.slider::-moz-range-thumb:hover {
-  background: var(--color-accent-secondary);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
-  transform: scale(1.1);
 }

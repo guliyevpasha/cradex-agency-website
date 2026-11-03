@@ -4,11 +4,11 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
 const CARD_ACCENTS = [
-  { bg: 'rgba(108,99,255,0.13)', border: 'rgba(108,99,255,0.4)', shadow: 'rgba(108,99,255,0.25)' },
-  { bg: 'rgba(0,212,255,0.11)',  border: 'rgba(0,212,255,0.35)',  shadow: 'rgba(0,212,255,0.2)'  },
+  { bg: 'rgba(36,160,255,0.13)', border: 'rgba(36,160,255,0.4)', shadow: 'rgba(36,160,255,0.25)' },
+  { bg: 'rgba(124,200,255,0.11)',  border: 'rgba(124,200,255,0.35)',  shadow: 'rgba(124,200,255,0.2)'  },
   { bg: 'rgba(139,92,246,0.13)', border: 'rgba(139,92,246,0.4)', shadow: 'rgba(139,92,246,0.25)' },
-  { bg: 'rgba(0,212,255,0.13)',  border: 'rgba(0,212,255,0.4)',  shadow: 'rgba(0,212,255,0.25)' },
-  { bg: 'rgba(108,99,255,0.11)', border: 'rgba(108,99,255,0.35)', shadow: 'rgba(108,99,255,0.2)' },
+  { bg: 'rgba(124,200,255,0.13)',  border: 'rgba(124,200,255,0.4)',  shadow: 'rgba(124,200,255,0.25)' },
+  { bg: 'rgba(36,160,255,0.11)', border: 'rgba(36,160,255,0.35)', shadow: 'rgba(36,160,255,0.2)' },
   { bg: 'rgba(34,197,94,0.11)',  border: 'rgba(34,197,94,0.35)',  shadow: 'rgba(34,197,94,0.2)'  },
 ]
 

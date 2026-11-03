@@ -58,8 +58,8 @@ export function Statistics() {
         className="absolute inset-0 -z-10 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(108,99,255,0.8) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(108,99,255,0.8) 1px, transparent 1px)
+            linear-gradient(rgba(36,160,255,0.8) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(36,160,255,0.8) 1px, transparent 1px)
           `,
           backgroundSize: '48px 48px',
         }}
@@ -70,7 +70,7 @@ export function Statistics() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(108,99,255,0.06) 0%, transparent 70%)',
+            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(36,160,255,0.06) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -110,8 +110,8 @@ export function Statistics() {
                 />
                 <defs>
                   <linearGradient id="underline-grad" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#6C63FF" />
-                    <stop offset="100%" stopColor="#00D4FF" />
+                    <stop offset="0%" stopColor="#24A0FF" />
+                    <stop offset="100%" stopColor="#7CC8FF" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -135,7 +135,7 @@ export function Statistics() {
                 border border-white/10
                 bg-white/[0.04] backdrop-blur-md
                 hover:border-accent-primary/30
-                hover:shadow-[0_0_30px_rgba(108,99,255,0.12)]
+                hover:shadow-[0_0_30px_rgba(36,160,255,0.12)]
                 transition-all duration-300
                 group
               `}
@@ -181,7 +181,7 @@ export function Statistics() {
 
               {/* Corner glow dot */}
               <div
-                className="absolute top-4 right-4 w-2 h-2 rounded-full bg-accent-primary opacity-40 group-hover:opacity-100 group-hover:shadow-[0_0_8px_rgba(108,99,255,0.8)] transition-all duration-300"
+                className="absolute top-4 right-4 w-2 h-2 rounded-full bg-accent-primary opacity-40 group-hover:opacity-100 group-hover:shadow-[0_0_8px_rgba(36,160,255,0.8)] transition-all duration-300"
                 aria-hidden="true"
               />
             </motion.div>

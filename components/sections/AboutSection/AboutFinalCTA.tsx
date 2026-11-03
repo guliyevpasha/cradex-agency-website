@@ -56,8 +56,8 @@ export function AboutFinalCTA({
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.15) 0%, transparent 50%),
-            radial-gradient(ellipse 80% 50% at 80% 50%, rgba(108,99,255,0.1) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(36,160,255,0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 80% 50%, rgba(36,160,255,0.1) 0%, transparent 50%)
           `,
         }}
         aria-hidden="true"
@@ -100,7 +100,7 @@ export function AboutFinalCTA({
             className={cn(
               'group relative inline-flex items-center gap-3 px-10 py-5 rounded-2xl overflow-hidden',
               'bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-[length:200%_100%]',
-              'text-white font-display font-bold text-lg tracking-wide',
+              'text-snow font-display font-bold text-lg tracking-wide',
               'hover:bg-[position:100%_0]',
               'hover:scale-105 active:scale-95',
               'transition-all duration-700 ease-out',

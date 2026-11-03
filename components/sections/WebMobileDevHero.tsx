@@ -29,7 +29,7 @@ export default function WebMobileDevHero({
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(108,99,255,0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 50% at 20% 50%, rgba(36,160,255,0.15) 0%, transparent 50%),
             radial-gradient(ellipse 80% 50% at 80% 50%, rgba(151,71,255,0.1) 0%, transparent 50%)
           `,
         }}
@@ -48,7 +48,7 @@ export default function WebMobileDevHero({
           >
             {/* Title */}
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-snow mb-4">
                 {title}{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   {titleAccent}
@@ -70,7 +70,7 @@ export default function WebMobileDevHero({
                 href="https://wa.me/994507786887"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-xl hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-snow font-semibold text-lg rounded-xl hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
               >
                 {buttonText}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -121,7 +121,7 @@ export default function WebMobileDevHero({
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-snow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>

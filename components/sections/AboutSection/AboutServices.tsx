@@ -75,7 +75,7 @@ export function AboutServices({
     <section
       ref={ref}
       className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #0A0A0F 0%, #111118 50%, #0A0A0F 100%)' }}
+      style={{ background: 'linear-gradient(180deg, rgb(var(--bg-primary)) 0%, rgb(var(--bg-secondary)) 50%, rgb(var(--bg-primary)) 100%)' }}
     >
       {/* Ambient glow — marka accent-primary rəngindən */}
       <div
@@ -83,7 +83,7 @@ export function AboutServices({
         aria-hidden="true"
         style={{
           background:
-            'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(108,99,255,0.1) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(36,160,255,0.1) 0%, transparent 70%)',
         }}
       />
 
@@ -141,7 +141,7 @@ export function AboutServices({
                   className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
                     background:
-                      'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(108,99,255,0.06) 0%, transparent 70%)',
+                      'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(36,160,255,0.06) 0%, transparent 70%)',
                   }}
                 />
 

@@ -26,7 +26,7 @@ export function GlassCard({
       className={cn(
         'glass-card',
         blurMap[blurIntensity],
-        hoverEffect && 'transition-all duration-300 hover:border-accent-primary/40 hover:shadow-[0_0_24px_rgba(108,99,255,0.15)] hover:-translate-y-1',
+        hoverEffect && 'transition-all duration-300 hover:border-accent-primary/40 hover:shadow-[0_0_24px_rgba(36,160,255,0.15)] hover:-translate-y-1',
         className
       )}
     >

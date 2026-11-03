@@ -36,7 +36,7 @@ export function AdvancedCalculator() {
             className={cn(
               'flex items-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200',
               activeTab === tab.id
-                ? 'bg-accent-primary text-white shadow-[0_0_16px_rgba(108,99,255,0.4)]'
+                ? 'bg-accent-primary text-white shadow-[0_0_16px_rgba(36,160,255,0.4)]'
                 : 'text-text-secondary hover:text-text-primary'
             )}
           >

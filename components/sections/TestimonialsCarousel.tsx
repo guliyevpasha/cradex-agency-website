@@ -73,7 +73,7 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
         className="absolute inset-0 pointer-events-none -z-10"
         style={{
           background:
-            'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(108,99,255,0.07) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(36,160,255,0.07) 0%, transparent 70%)',
         }}
       />
 
@@ -200,7 +200,7 @@ function TestimonialCard({
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         boxShadow: isActive
-          ? '0 0 40px rgba(108,99,255,0.22), 0 8px 32px rgba(0,0,0,0.3)'
+          ? '0 0 40px rgba(36,160,255,0.22), 0 8px 32px rgba(0,0,0,0.3)'
           : '0 4px 24px rgba(0,0,0,0.2)',
         transformStyle: 'preserve-3d',
         perspective: 1000,
@@ -253,7 +253,7 @@ function TestimonialCard({
             ].join(' ')}
             style={
               isActive
-                ? { boxShadow: '0 0 20px rgba(108,99,255,0.35)' }
+                ? { boxShadow: '0 0 20px rgba(36,160,255,0.35)' }
                 : {}
             }
           >

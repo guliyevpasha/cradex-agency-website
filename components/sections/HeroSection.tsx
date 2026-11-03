@@ -35,7 +35,7 @@ function HeroBackdrop({ still }: { still: boolean }) {
         style={{
           willChange: 'transform',
           background:
-            'radial-gradient(circle closest-side, rgba(108,99,255,0.26) 0%, rgba(108,99,255,0.13) 32%, rgba(108,99,255,0.05) 58%, transparent 78%)',
+            'radial-gradient(circle closest-side, rgba(36,160,255,0.26) 0%, rgba(36,160,255,0.13) 32%, rgba(36,160,255,0.05) 58%, transparent 78%)',
         }}
       />
       <div
@@ -45,7 +45,7 @@ function HeroBackdrop({ still }: { still: boolean }) {
         style={{
           willChange: 'transform',
           background:
-            'radial-gradient(circle closest-side, rgba(0,212,255,0.16) 0%, rgba(0,212,255,0.08) 35%, rgba(0,212,255,0.03) 60%, transparent 80%)',
+            'radial-gradient(circle closest-side, rgba(124,200,255,0.16) 0%, rgba(124,200,255,0.08) 35%, rgba(124,200,255,0.03) 60%, transparent 80%)',
         }}
       />
 
@@ -149,7 +149,7 @@ export function HeroSection() {
                 className="group relative inline-flex items-center gap-2 overflow-hidden
                   rounded-full px-6 py-3.5 font-semibold text-sm sm:text-[15px] text-white
                   bg-gradient-to-r from-accent-primary to-accent-secondary
-                  shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
+                  shadow-[0_10px_40px_-12px_rgba(36,160,255,0.85)]
                   transition-transform duration-300 hover:-translate-y-0.5"
               >
                 {/* Sheen sweep on hover */}
@@ -172,7 +172,7 @@ export function HeroSection() {
                   rounded-full border border-white/25 px-6 py-3.5 text-sm sm:text-[15px] 
                   font-medium text-text-primary backdrop-blur-sm 
                   transition-all duration-300
-                  hover:shadow-[0_10px_40px_-12px_rgba(108,99,255,0.85)]
+                  hover:shadow-[0_10px_40px_-12px_rgba(36,160,255,0.85)]
                   hover:-translate-y-0.5"
               >
                 {/* Sheen sweep on hover */}

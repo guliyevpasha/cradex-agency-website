@@ -1,6 +1,20 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import { useClient } from 'sanity'
+
+// Studio keeps the login either in the client config or, when it falls back to
+// token login, in localStorage. The API checks this token with Sanity.
+function studioToken(client: ReturnType<typeof useClient>): string {
+  const fromConfig = client.config().token
+  if (fromConfig) return fromConfig
+  try {
+    const raw = localStorage.getItem(`__studio_auth_token_${client.config().projectId}`)
+    return raw ? (JSON.parse(raw).token ?? '') : ''
+  } catch {
+    return ''
+  }
+}
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -129,6 +143,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 // ─── Main Dashboard ───────────────────────────────────────────────────────────
 
 export function AnalyticsDashboard() {
+  const client = useClient({ apiVersion: '2024-01-01' })
   const [data, setData] = useState<AnalyticsData | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -144,7 +159,10 @@ export function AnalyticsDashboard() {
     try {
       const startDate = useCustom ? customStart : preset.startDate
       const endDate = useCustom ? customEnd : preset.endDate
-      const res = await fetch(`/api/analytics?startDate=${startDate}&endDate=${endDate}`)
+      const res = await fetch(`/api/analytics?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`, {
+        headers: { Authorization: `Bearer ${studioToken(client)}` },
+        cache: 'no-store',
+      })
       if (!res.ok) {
         const err = await res.json()
         throw new Error(err.error || 'Xəta baş verdi')

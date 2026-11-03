@@ -1,8 +1,13 @@
+/**
+ * GA4 reports for the Studio analytics dashboard.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { NextRequest, NextResponse } from 'next/server'
+import { createHash } from 'node:crypto'
 
-const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID!
-const CLIENT_EMAIL = process.env.GA_SERVICE_ACCOUNT_EMAIL!
-const PRIVATE_KEY = process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n')!
+const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID ?? ''
+const CLIENT_EMAIL = process.env.GA_SERVICE_ACCOUNT_EMAIL ?? ''
+const PRIVATE_KEY = process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n') ?? ''
 
 // ─── JWT for Google OAuth2 ────────────────────────────────────────────────────
 
@@ -62,7 +67,7 @@ async function getAccessToken(): Promise<string> {
 
   const tokenData = await tokenRes.json()
   if (!tokenData.access_token) {
-    throw new Error(`Token error: ${JSON.stringify(tokenData)}`)
+    throw new Error(`Google token request failed (${tokenRes.status})`)
   }
   return tokenData.access_token
 }
@@ -131,11 +136,53 @@ function parseRows(report: any) {
 
 // ─── Route handler ────────────────────────────────────────────────────────────
 
+// GA4 accepts YYYY-MM-DD, NdaysAgo, today and yesterday. Nothing else is forwarded.
+const DATE_RE = /^(\d{4}-\d{2}-\d{2}|\d{1,4}daysAgo|today|yesterday)$/
+
+// Only logged-in Studio users may read reports: the caller's Sanity token is
+// checked against Sanity itself. Valid tokens are cached briefly.
+const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+const verified = new Map<string, number>()
+const TOKEN_TTL_MS = 5 * 60 * 1000
+
+async function authorized(request: NextRequest): Promise<boolean> {
+  const header = request.headers.get('authorization') ?? ''
+  const token = header.startsWith('Bearer ') ? header.slice(7).trim() : ''
+  if (!token || token.length > 512 || !SANITY_PROJECT_ID) return false
+
+  const key = createHash('sha256').update(token).digest('hex')
+  const until = verified.get(key)
+  if (until && until > Date.now()) return true
+
+  try {
+    const res = await fetch(`https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-06-07/users/me`, {
+      headers: { Authorization: `Bearer ${token}` },
+      cache: 'no-store',
+    })
+    if (!res.ok) return false
+    const me = await res.json()
+    if (!me?.id) return false
+    verified.set(key, Date.now() + TOKEN_TTL_MS)
+    return true
+  } catch {
+    return false
+  }
+}
+
 export async function GET(request: NextRequest) {
+  if (!GA_PROPERTY_ID || !CLIENT_EMAIL || !PRIVATE_KEY) {
+    return NextResponse.json({ error: 'Analytics is not configured' }, { status: 503 })
+  }
+  if (!(await authorized(request))) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
   try {
     const { searchParams } = new URL(request.url)
     const startDate = searchParams.get('startDate') || '30daysAgo'
     const endDate = searchParams.get('endDate') || 'today'
+    if (!DATE_RE.test(startDate) || !DATE_RE.test(endDate)) {
+      return NextResponse.json({ error: 'Invalid date range' }, { status: 400 })
+    }
 
     const token = await getAccessToken()
 
@@ -189,11 +236,8 @@ export async function GET(request: NextRequest) {
       age: parseRows(ageReport),
       dateRange: { startDate, endDate },
     })
-  } catch (error: any) {
-    console.error('Analytics API error:', error)
-    return NextResponse.json(
-      { error: error.message ?? 'Analytics data fetch failed' },
-      { status: 500 }
-    )
+  } catch (error) {
+    console.error('[analytics] failed:', error instanceof Error ? error.message : error)
+    return NextResponse.json({ error: 'Analytics data fetch failed' }, { status: 500 })
   }
 }

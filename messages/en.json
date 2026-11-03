@@ -960,6 +960,138 @@
           }
         ],
         "ctaButton": "Ask on WhatsApp"
+      },
+      "portfolioShowcase": {
+        "label": "WEBSITE SAMPLES",
+        "title": "Pick your industry. We'll send your demo in 48 hours.",
+        "subtitle": "18 ready-made website designs. Choose the one that fits your business and we'll adapt it to your brand.",
+        "categories": {
+          "all": "All",
+          "medical": "Clinics",
+          "automotive": "Automotive",
+          "realestate": "Real estate",
+          "beauty": "Beauty",
+          "law": "Legal / consulting",
+          "education": "Education",
+          "other": "Other"
+        },
+        "viewDetails": "View full size"
+      },
+      "pricing": {
+        "label": "FOR PERSONAL WEBSITES",
+        "title": "Know the price before the call.",
+        "subtitle": "Transparent packages for personal websites. If you need a store, payment system, mobile app or AI assistant, the price is given in a written quote after a free call.",
+        "monthlyLabel": "Monthly",
+        "yearlyLabel": "Yearly",
+        "saveLabel": "Save 26%",
+        "perMonthLabel": "per month",
+        "tiers": {
+          "start": {
+            "name": "Start",
+            "subtitle": "A small website, a fast start.",
+            "monthlyPrice": 299,
+            "yearlyPrice": 2988,
+            "cta": "Get started",
+            "features": [
+              "Up to 5 pages, 1 language, mobile-friendly design",
+              "Hosting and SSL certificate",
+              "WhatsApp button and contact form",
+              "1 small edit per month"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "subtitle": "For a growing personal brand. A balanced choice between price and features.",
+            "monthlyPrice": 399,
+            "yearlyPrice": 3996,
+            "cta": "Get started",
+            "popular": true,
+            "features": [
+              "Everything in Start",
+              "Up to 10 pages",
+              "AZ, RU, EN language options",
+              "Business email (name@yoursite.az) forwarded to your personal inbox",
+              "Basic SEO and Google visibility",
+              "3 edits per month, 24-hour response"
+            ]
+          },
+          "max": {
+            "name": "Max",
+            "subtitle": "Full capabilities: website, integrations and priority support.",
+            "monthlyPrice": 599,
+            "yearlyPrice": 5988,
+            "cta": "Get started",
+            "features": [
+              "Everything in Pro",
+              "Unlimited pages, a blog and 2 integrations (e.g. Google Analytics, Telegram)",
+              "Business email (name@yoursite.az) forwarded to your personal inbox",
+              "Monthly report, priority support"
+            ]
+          }
+        },
+        "corporate": {
+          "title": "Big project? Let's talk",
+          "description": "Need an online store, payment and booking systems, a mobile app or an AI assistant? Pricing is calculated individually based on project scope.",
+          "button": "Book a call"
+        }
+      },
+      "processCards": {
+        "title": "Why our website package?",
+        "cards": [
+          {
+            "title": "Demo in 48 hours",
+            "description": "You see a demo website tailored to your business before you pay."
+          },
+          {
+            "title": "Price upfront",
+            "description": "299, 399 or 599 AZN annual package. No hidden fees."
+          },
+          {
+            "title": "Everything in your name",
+            "description": "Domain and accounts are registered in your name. The website belongs to you."
+          },
+          {
+            "title": "Contact via WhatsApp",
+            "description": "A mobile-friendly website with a WhatsApp button and contact form. Your customers can reach you with one tap."
+          }
+        ]
+      },
+      "processTimeline": {
+        "title": "How we work",
+        "subtitle": "A step-by-step process ensures your website is built professionally and on time.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Briefing and analysis",
+            "description": "We gather information about your business, target audience and competitors. We define the website's goals and functionality."
+          },
+          {
+            "number": "02",
+            "title": "Demo creation",
+            "description": "Within 48 hours we prepare a demo website matching your brand and share it with you. If you don't like it, you pay nothing.",
+            "highlighted": true
+          },
+          {
+            "number": "03",
+            "title": "Design and development",
+            "description": "Once you approve the demo, we build the fully functional website. All pages, integrations and the mobile version are produced."
+          },
+          {
+            "number": "04",
+            "title": "Testing and optimization",
+            "description": "We test the website on all devices and optimize speed and SEO. Any required fixes are made."
+          },
+          {
+            "number": "05",
+            "title": "Launch and support",
+            "description": "We deploy the website to a live server and complete the domain connection. Ongoing technical support and monthly edits are provided."
+          }
+        ]
+      },
+      "finalCTA": {
+        "title": "Order your website today",
+        "subtitle": "Get a free demo within 48 hours and bring your business online.",
+        "primaryButton": "I want a free demo"
       }
     }
   },
@@ -1950,7 +2082,7 @@
       "title": "From 2020 to today â€”",
       "titleAccent": "a story of steady growth.",
       "titleEnd": "",
-      "archiveLink": "",
+      "archiveLink": "Full archive",
       "events": [
         {
           "year": "2020",
@@ -2086,6 +2218,232 @@
           "label": "Client Satisfaction"
         }
       ]
+    }
+  },
+  "site": {
+    "meta": {
+      "homeTitle": "Cradex Agency — Website Development in Baku",
+      "homeDescription": "Get a demo of your website in 2 hours, free. Websites, mobile apps, SEO, GEO and digital advertising.",
+      "servicesTitle": "Our Services",
+      "servicesDescription": "Website and mobile app development, SEO and GEO, Meta, TikTok, LinkedIn and Google ads, technical support.",
+      "productsTitle": "Our Products",
+      "productsDescription": "Chatbot and social media combo packages for Instagram, TikTok and YouTube.",
+      "pricingTitle": "Pricing",
+      "pricingDescription": "The website demo is free. If you like it, we launch it with a yearly package from 399 ₼."
+    },
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "products": "Products",
+      "work": "Our Work",
+      "about": "About",
+      "pricing": "Pricing",
+      "blog": "Blog",
+      "contact": "Contact",
+      "menu": "Menu",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "skip": "Skip to main content",
+      "language": "Language",
+      "allServices": "All services",
+      "allProducts": "All products",
+      "mainNav": "Main navigation",
+      "mobileNav": "Mobile navigation"
+    },
+    "theme": {
+      "toLight": "Switch to light mode",
+      "toDark": "Switch to dark mode"
+    },
+    "cta": {
+      "discuss": "Discuss your project",
+      "work": "See our work",
+      "demo": "Free demo",
+      "whatsappMessage": "Hi, I'd like a demo version of a website",
+      "details": "Learn more"
+    },
+    "hero": {
+      "eyebrow": "Free demo · in 2 hours",
+      "titleStart": "Get your website demo in",
+      "titleAccent": "2 hours,",
+      "titleEnd": "not 2 months.",
+      "titleFree": "And it's free!",
+      "subtitle": "We build a demo of your site first, for your business, personal brand or content project. If you like it, we launch it with a yearly package from 399 ₼.",
+      "fine": "The demo is free. If you don't like it, you pay nothing.",
+      "card": {
+        "building": "Building your demo",
+        "ready": "Demo is ready",
+        "hoursLeft": "{hours} h {minutes} min left",
+        "minutesLeft": "{minutes} min left",
+        "done": "Ready",
+        "steps": {
+          "structure": "Structure",
+          "design": "Design",
+          "content": "Copy",
+          "ready": "Ready"
+        },
+        "kinds": {
+          "business": "Business website",
+          "personal": "Personal brand",
+          "content": "Content project"
+        }
+      },
+      "preview": {
+        "url": "yourbrand.com",
+        "brand": "Nova",
+        "link1": "About",
+        "link2": "Services",
+        "link3": "Work",
+        "cta": "Contact",
+        "eyebrow": "New collection",
+        "title": "Make your brand stand out in the digital world",
+        "text": "Your customers first meet you on your website. We make sure that first impression is deliberate.",
+        "primary": "Get started",
+        "secondary": "Learn more",
+        "stat1": "languages",
+        "stat2": "mobile-friendly",
+        "stat3": "online"
+      }
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Three steps, and the first one is free",
+      "step1Title": "You message us",
+      "step1Text": "Send 2–3 sentences about your business on WhatsApp: what you do and what the website needs.",
+      "step2Title": "We build the demo",
+      "step2Text": "Within 2 hours we send you a website demo tailored to your industry and brand.",
+      "step3Title": "You decide",
+      "step3Text": "If you like it, we finish the site and launch it with a yearly package. If not, you pay nothing."
+    },
+    "services": {
+      "eyebrow": "Our Services",
+      "title": "Websites are our core business",
+      "subtitle": "The other services help your site bring in more customers and run securely.",
+      "featured": "Core service",
+      "web": {
+        "title": "Website Development",
+        "text": "Corporate websites, landing pages, online stores and web apps. Strategy, design, development and launch in one team.",
+        "p1": "Corporate website",
+        "p2": "Landing page",
+        "p3": "Online store",
+        "p4": "Web app"
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "text": "Apps for iOS and Android: design, development and publishing on the App Store and Google Play.",
+        "p1": "iOS",
+        "p2": "Android"
+      },
+      "seo": {
+        "title": "SEO and GEO",
+        "text": "Get your site found on Google and in AI search engines like ChatGPT, Gemini and Perplexity.",
+        "p1": "SEO optimization",
+        "p2": "GEO — visibility in AI search"
+      },
+      "ads": {
+        "title": "Digital Advertising",
+        "text": "Setup, management and reporting of targeted ad campaigns.",
+        "p1": "Meta Ads",
+        "p2": "TikTok Ads",
+        "p3": "LinkedIn Ads",
+        "p4": "Google Ads"
+      },
+      "support": {
+        "title": "Technical Support",
+        "text": "Technical optimization, security and recovery for your website and social media accounts.",
+        "webTitle": "Website",
+        "w1": "Technical SEO optimization",
+        "w2": "Security hardening",
+        "w3": "Backlinks",
+        "w4": "Internal linking",
+        "socialTitle": "Social media accounts",
+        "s1": "Unblocking disabled social media accounts",
+        "s2": "Recovering hacked and deleted accounts",
+        "s3": "Taking down fake accounts and impersonator profiles",
+        "s4": "Recovering ad accounts",
+        "s5": "Lifting restrictions on limited accounts",
+        "s6": "Securing your accounts"
+      }
+    },
+    "products": {
+      "eyebrow": "Our Products",
+      "title": "Ready-made solutions, fast start",
+      "subtitle": "Products your business can launch right away.",
+      "chatbot": {
+        "title": "Chatbot",
+        "text": "An AI assistant that answers customer questions 24/7 on your website and messaging channels.",
+        "user": "Is there a free slot tomorrow at 3 PM?",
+        "bot": "Yes, 3:00 PM and 4:30 PM are open. Which time should I book?"
+      },
+      "combo": {
+        "title": "Social Media Combo Packages",
+        "text": "Content, design and management in one package. Choose your platform.",
+        "instagramTitle": "Instagram Combo Package",
+        "instagramText": "Content, design and management for your Instagram page.",
+        "tiktokTitle": "TikTok Combo Package",
+        "tiktokText": "Planning, producing and publishing short videos for TikTok.",
+        "youtubeTitle": "YouTube Combo Package",
+        "youtubeText": "Video content, design and channel optimization for your YouTube channel."
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "See it first, pay later",
+      "subtitle": "No hidden fees. The exact price depends on project scope and is given in a written proposal.",
+      "demoName": "Demo",
+      "demoPrice": "0 ₼",
+      "demoPeriod": "ready in 2 hours",
+      "demoText": "A website demo tailored to your business. Take a look and decide.",
+      "demoP1": "Design suited to your industry",
+      "demoP2": "Mobile-friendly",
+      "demoP3": "No obligation",
+      "launchName": "Launch package",
+      "launchPrice": "from 399 ₼",
+      "launchPeriod": "per year",
+      "launchBadge": "If you like the demo",
+      "launchText": "We finish your website based on the demo and launch it.",
+      "launchP1": "Finished site based on the demo",
+      "launchP2": "Launch and technical support",
+      "launchP3": "Exact price in a written proposal",
+      "customName": "Custom project",
+      "customPrice": "Custom",
+      "customPeriod": "let's discuss",
+      "customText": "Online store, web app, mobile app or integrations.",
+      "customP1": "Priced to fit the project",
+      "customP2": "Staged payments",
+      "customP3": "Written proposal",
+      "note": "Prices are shown in Azerbaijani manat (₼).",
+      "teaserTitle": "Free demo, launch from 399 ₼ per year",
+      "teaserLink": "See pricing"
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "q1": "Is the demo really free?",
+      "a1": "Yes. We build the demo, you take a look. If you don't like it, you pay nothing.",
+      "q2": "What do I need to send for the demo?",
+      "a2": "Write 2–3 sentences about your business on WhatsApp: what you do and what the website needs. If you have a logo, send that too.",
+      "q3": "What happens if I like it?",
+      "a3": "We finish the site to your requirements and launch it with a yearly package from 399 ₼.",
+      "q4": "What if I need an online store or a mobile app?",
+      "a4": "Pricing for these projects depends on scope. Message us and we'll send a written proposal."
+    },
+    "final": {
+      "title": "Send one message, get your demo in 2 hours",
+      "text": "Tell us briefly about your business. You decide after you see the demo."
+    },
+    "mobileNav": {
+      "home": "Home",
+      "services": "Services",
+      "demo": "Demo",
+      "work": "Work",
+      "menu": "Menu"
+    },
+    "footer": {
+      "tagline": "Websites, mobile apps and digital advertising. Baku, Azerbaijan.",
+      "company": "Company",
+      "services": "Services",
+      "contact": "Contact",
+      "rights": "All rights reserved."
     }
   }
 }

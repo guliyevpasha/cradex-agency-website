@@ -1,32 +1,32 @@
+/**
+ * Home page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { HeroSection } from '@/components/sections/HeroSection'
-import { ServicesOverview } from '@/components/sections/ServicesOverview'
-import { PortfolioPreview } from '@/components/sections/PortfolioPreview'
-import { StatsSection } from '@/components/sections/StatsSection'
+import { DemoHero } from '@/components/home/DemoHero'
+import { ProcessSteps } from '@/components/home/ProcessSteps'
+import { ServicesGrid } from '@/components/home/ServicesGrid'
+import { ProductsShowcase } from '@/components/home/ProductsShowcase'
+import { PricingPlans } from '@/components/home/PricingPlans'
+import { DemoFaq } from '@/components/home/DemoFaq'
+import { FinalCta } from '@/components/home/FinalCta'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
-import { AdvantagesSlider } from '@/components/sections/AdvantagesSlider'
-import { ProcessSection } from '@/components/sections/ProcessSection'
-import { LeadSection } from '@/components/sections/LeadSection'
+import { PortfolioPreview } from '@/components/sections/PortfolioPreview'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 import { BlogPreview } from '@/components/sections/BlogPreview'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 import { getRecentBlogPosts } from '@/sanity/lib/queries'
 
-// Enable ISR with 60 second revalidation
 export const revalidate = 60
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'home' })
+  const t = await getTranslations({ locale, namespace: 'site.meta' })
   return {
-    title: 'Cradex Agency — Rəqəmsal Marketinq Agentliyi',
-    description: t('hero.subtitle'),
+    title: { absolute: t('homeTitle') },
+    description: t('homeDescription'),
   }
 }
 
@@ -34,24 +34,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   setRequestLocale(locale)
 
-  // Fetched here rather than in the sections: both are client components
-  // (Swiper, marquee hover state) and cannot query Sanity themselves.
-  const testimonials = await getAllTestimonials()
-  const partners = await getPartners()
-  const recentArticles = await getRecentBlogPosts(3, locale)
+  // Client sections (Swiper, marquee) cannot query Sanity themselves.
+  const [testimonials, partners, recentArticles] = await Promise.all([
+    getAllTestimonials(),
+    getPartners(),
+    getRecentBlogPosts(3, locale),
+  ])
 
   return (
     <>
-      <HeroSection />
-      <StatsSection />
+      <DemoHero />
       <LogoMarquee partners={partners} />
-      <AdvantagesSlider />
-      <ServicesOverview />
+      <ProcessSteps />
+      <ServicesGrid />
       <PortfolioPreview />
+      <ProductsShowcase />
+      <PricingPlans />
       <TestimonialsCarousel testimonials={testimonials} />
-      <ProcessSection />
+      <DemoFaq />
       <BlogPreview articles={recentArticles} />
-      <LeadSection />
+      <FinalCta />
     </>
   )
 }

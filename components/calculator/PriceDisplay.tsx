@@ -28,8 +28,8 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
       className="sticky top-24 rounded-2xl overflow-hidden"
       style={{
         background: 'linear-gradient(160deg, #0f0f1e 0%, #13132a 100%)',
-        border: '1px solid rgba(108,99,255,0.25)',
-        boxShadow: isValid ? '0 0 40px rgba(108,99,255,0.15)' : 'none',
+        border: '1px solid rgba(36,160,255,0.25)',
+        boxShadow: isValid ? '0 0 40px rgba(36,160,255,0.15)' : 'none',
       }}
     >
       {/* Top gradient bar */}
@@ -71,7 +71,7 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
         {/* Price range */}
         <div
           className="rounded-xl p-4 mb-5"
-          style={{ background: 'rgba(108,99,255,0.08)', border: '1px solid rgba(108,99,255,0.2)' }}
+          style={{ background: 'rgba(36,160,255,0.08)', border: '1px solid rgba(36,160,255,0.2)' }}
         >
           {isValid ? (
             <div className="text-center">
@@ -81,7 +81,7 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
                   className="font-display font-bold"
                   style={{
                     fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
-                    background: 'linear-gradient(135deg, #6C63FF, #00D4FF)',
+                    background: 'linear-gradient(135deg, #24A0FF, #7CC8FF)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -119,7 +119,7 @@ export function PriceDisplay({ price, selections, onGetQuote, isValid }: PriceDi
             disabled={!isValid}
             className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
               isValid
-                ? 'bg-gradient-to-r from-accent-primary to-accent-secondary text-white shadow-[0_0_20px_rgba(108,99,255,0.4)] hover:shadow-[0_0_30px_rgba(108,99,255,0.6)] hover:opacity-90'
+                ? 'bg-gradient-to-r from-accent-primary to-accent-secondary text-white shadow-[0_0_20px_rgba(36,160,255,0.4)] hover:shadow-[0_0_30px_rgba(36,160,255,0.6)] hover:opacity-90'
                 : 'bg-bg-tertiary text-text-muted cursor-not-allowed'
             }`}
           >

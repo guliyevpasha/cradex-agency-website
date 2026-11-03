@@ -20,13 +20,13 @@ interface ButtonProps {
 
 const variantStyles = {
   primary:
-    'bg-gradient-to-r from-accent-primary to-accent-secondary text-white hover:opacity-90 shadow-[0_0_20px_rgba(108,99,255,0.3)] hover:shadow-[0_0_30px_rgba(108,99,255,0.5)]',
+    'bg-gradient-to-r from-accent-primary to-accent-secondary text-snow hover:opacity-90 shadow-[0_0_20px_rgba(36,160,255,0.3)] hover:shadow-[0_0_30px_rgba(36,160,255,0.5)]',
   secondary:
     'border border-accent-primary/50 text-text-primary hover:bg-accent-primary/10 hover:border-accent-primary',
   ghost:
     'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary',
   whatsapp:
-    'bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] animate-pulse-slow',
+    'bg-[#25D366] text-snow hover:bg-[#20bd5a] shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] animate-pulse-slow',
 }
 
 const sizeStyles = {

@@ -41,7 +41,7 @@ export function AuditStrategySection({ title, items }: AuditStrategySectionProps
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           background: `
-            radial-gradient(ellipse 60% 40% at 50% 50%, rgba(108,99,255,0.15) 0%, transparent 60%)
+            radial-gradient(ellipse 60% 40% at 50% 50%, rgba(36,160,255,0.15) 0%, transparent 60%)
           `,
         }}
         aria-hidden="true"

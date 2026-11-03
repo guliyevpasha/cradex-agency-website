@@ -69,7 +69,7 @@ export function RelatedPortfolioSection({ portfolios }: RelatedPortfolioSectionP
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="inline-flex items-center px-3 py-1 rounded-lg bg-white/5 border border-white/10 mb-3 w-fit">
-                      <span className="text-white/80 text-xs font-medium">
+                      <span className="text-snow/80 text-xs font-medium">
                         {project.serviceCategory?.toUpperCase() || 'SMM'}
                       </span>
                     </div>
@@ -91,7 +91,7 @@ export function RelatedPortfolioSection({ portfolios }: RelatedPortfolioSectionP
           <div className="flex justify-center">
             <button
               onClick={handleLoadMore}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-snow font-semibold hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               <span>{t('loadMore')}</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

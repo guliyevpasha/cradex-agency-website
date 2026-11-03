@@ -36,7 +36,7 @@ export function LeadSection() {
               className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm"
             >
               {/* Logo avatar */}
-              <div className="w-14 h-14 rounded-full shrink-0 shadow-[0_0_20px_rgba(108,99,255,0.4)] overflow-hidden border-2 border-accent-primary/40">
+              <div className="w-14 h-14 rounded-full shrink-0 shadow-[0_0_20px_rgba(36,160,255,0.4)] overflow-hidden border-2 border-accent-primary/40">
                 <img
                   src="/images/testimonials/pasha.jpg"
                   alt="Paşa Quliyev"
@@ -55,7 +55,7 @@ export function LeadSection() {
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#25D366] text-white font-semibold text-base hover:bg-[#20bd5a] transition-all duration-300 shadow-[0_0_28px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] min-h-[56px]"
+              className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#25D366] text-snow font-semibold text-base hover:bg-[#20bd5a] transition-all duration-300 shadow-[0_0_28px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] min-h-[56px]"
               aria-label={t('whatsappCta')}
             >
               <MessageCircle size={22} />
@@ -84,7 +84,7 @@ export function LeadSection() {
 
           {/* ── Right panel: form ── */}
           <ScrollReveal animation="fadeInRight">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.05] backdrop-blur-md p-6 sm:p-8 shadow-[0_0_40px_rgba(108,99,255,0.08)]">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.05] backdrop-blur-md p-6 sm:p-8 shadow-[0_0_40px_rgba(36,160,255,0.08)]">
               {/* Form header */}
               <div className="mb-6">
                 <h3 className="text-text-primary font-display font-bold text-xl mb-1">

@@ -428,4 +428,4 @@ Sisteminiz tam hazırdır və real-time content update işləyir! 🚀
 
 **Son yeniləmə:** 2024
 **Versiay:** 1.0
-**Müəllif:** Kiro AI Assistant
+**Müəllif:** Paşa Quliyev — Cradex Agency

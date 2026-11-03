@@ -39,3 +39,11 @@ next-env.d.ts
 
 # generated article import bundle (run: node scripts/build-articles.mjs)
 /content/import/
+
+# credentials — never commit or place in public/
+*service-account*.json
+cradex-agency-*.json
+/secrets/
+
+# local tooling
+/.claude/

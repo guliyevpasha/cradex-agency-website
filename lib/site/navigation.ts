@@ -1,0 +1,54 @@
+/**
+ * Site-wide navigation, locales and contact helpers.
+ * @author Paşa Quliyev — Cradex Agency
+ */
+
+export const LOCALES = [
+  { code: 'az', label: 'AZ', name: 'Azərbaycan' },
+  { code: 'ru', label: 'RU', name: 'Русский' },
+  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'tr', label: 'TR', name: 'Türkçe' },
+] as const
+
+export type LocaleCode = (typeof LOCALES)[number]['code']
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'
+
+export function whatsappUrl(message: string): string {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
+
+/** Same page in another language: /az/services → /ru/services */
+export function localizedPath(pathname: string, code: string): string {
+  const parts = pathname.split('/')
+  parts[1] = code
+  return parts.join('/') || `/${code}`
+}
+
+export const SERVICE_IDS = ['web', 'mobile', 'seo', 'ads', 'support'] as const
+export type ServiceId = (typeof SERVICE_IDS)[number]
+
+export const PRODUCT_LINKS = [
+  { id: 'chatbot', key: 'chatbot.title' },
+  { id: 'instagram', key: 'combo.instagramTitle' },
+  { id: 'tiktok', key: 'combo.tiktokTitle' },
+  { id: 'youtube', key: 'combo.youtubeTitle' },
+] as const
+
+/** Top-level menu, in display order. `menu` marks items with a dropdown. */
+export const NAV_ITEMS = [
+  { key: 'home', href: '', exact: true },
+  { key: 'services', href: '/services', menu: 'services' },
+  { key: 'products', href: '/products', menu: 'products' },
+  { key: 'work', href: '/portfolio' },
+  { key: 'about', href: '/about' },
+  { key: 'pricing', href: '/pricing' },
+  { key: 'blog', href: '/journal' },
+  { key: 'contact', href: '/contact' },
+] as const
+
+export function isActive(pathname: string, locale: string, href: string, exact = false): boolean {
+  const full = `/${locale}${href}`
+  if (exact) return pathname === full || pathname === `${full}/`
+  return pathname === full || pathname.startsWith(`${full}/`)
+}

@@ -287,4 +287,4 @@ Sisteminiz real-time content update üçün tam hazırdır!
 
 **Son yeniləmə:** 2024  
 **Status:** ✅ Kod hazırdır, manual deployment gözlənilir  
-**Müəllif:** Kiro AI Assistant
+**Müəllif:** Paşa Quliyev — Cradex Agency

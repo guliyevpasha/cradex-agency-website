@@ -70,8 +70,8 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
             <motion.div
               className="absolute top-4 left-6 w-4 h-4 rounded-full"
               style={{
-                background: 'radial-gradient(circle, #00d4ff 0%, #0099cc 100%)',
-                boxShadow: '0 0 16px #00d4ff'
+                background: 'radial-gradient(circle, #7CC8FF 0%, #0099cc 100%)',
+                boxShadow: '0 0 16px #7CC8FF'
               }}
               animate={{ 
                 opacity: [1, 0.3, 1],
@@ -82,8 +82,8 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
             <motion.div
               className="absolute top-4 right-6 w-4 h-4 rounded-full"
               style={{
-                background: 'radial-gradient(circle, #00d4ff 0%, #0099cc 100%)',
-                boxShadow: '0 0 16px #00d4ff'
+                background: 'radial-gradient(circle, #7CC8FF 0%, #0099cc 100%)',
+                boxShadow: '0 0 16px #7CC8FF'
               }}
               animate={{ 
                 opacity: [1, 0.3, 1],
@@ -96,7 +96,7 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
             <motion.div
               className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-3 rounded-full"
               style={{
-                background: 'linear-gradient(180deg, transparent 0%, #00d4ff 50%, #00d4ff 100%)',
+                background: 'linear-gradient(180deg, transparent 0%, #7CC8FF 50%, #7CC8FF 100%)',
                 clipPath: 'ellipse(50% 100% at 50% 0%)'
               }}
               animate={{ 
@@ -152,8 +152,8 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
           <motion.div
             className="absolute top-6 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full"
             style={{
-              background: 'radial-gradient(circle, #00d4ff 0%, #0099cc 100%)',
-              boxShadow: '0 0 12px #00d4ff'
+              background: 'radial-gradient(circle, #7CC8FF 0%, #0099cc 100%)',
+              boxShadow: '0 0 12px #7CC8FF'
             }}
             animate={{ 
               opacity: [0.6, 1, 0.6],
@@ -203,7 +203,7 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
             animate={isHandOpen ? {
               boxShadow: [
                 '0 4px 12px rgba(0,0,0,0.2)',
-                '0 0 30px #00d4ff, 0 0 60px #00d4ff',
+                '0 0 30px #7CC8FF, 0 0 60px #7CC8FF',
                 '0 4px 12px rgba(0,0,0,0.2)'
               ]
             } : {}}
@@ -218,7 +218,7 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
                   exit={{ opacity: 0, scale: 0 }}
                   className="absolute -top-4 -left-4 w-18 h-18 rounded-full pointer-events-none"
                   style={{
-                    background: 'radial-gradient(circle, rgba(0,212,255,0.4) 0%, rgba(0,212,255,0.2) 50%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(124,200,255,0.4) 0%, rgba(124,200,255,0.2) 50%, transparent 70%)',
                     filter: 'blur(8px)'
                   }}
                 />
@@ -240,7 +240,7 @@ function ModernRobot({ isHandOpen }: { isHandOpen: boolean }) {
         <motion.div
           className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-6 rounded-full opacity-60"
           style={{
-            background: 'radial-gradient(ellipse, rgba(0,212,255,0.3) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(124,200,255,0.3) 0%, transparent 70%)',
             filter: 'blur(12px)'
           }}
           animate={{ opacity: [0.3, 0.6, 0.3] }}

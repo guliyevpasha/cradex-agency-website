@@ -1,171 +1,217 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+/**
+ * Site header: logo, main menu with Services / Products dropdowns, language,
+ * theme switch and the WhatsApp call to action. Below xl it collapses to a
+ * burger that opens <MobileMenu>.
+ * @author Paşa Quliyev — Cradex Agency
+ */
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Menu, Globe, ChevronDown } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { useRouter, usePathname } from 'next/navigation'
+import { ArrowRight, ChevronDown, Menu } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
-import { Navbar } from './Navbar'
-import { MobileMenu } from './MobileMenu'
+import { Logo } from '@/components/brand/Logo'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, isActive } from '@/lib/site/navigation'
 import { LangDropdown } from './LangDropdown'
+import { MobileMenu } from './MobileMenu'
+import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
 
-// Compact language switcher shown next to hamburger on mobile
-const LOCALES = [
-  { code: 'az', label: 'AZ' },
-  { code: 'en', label: 'EN' },
-  { code: 'ru', label: 'RU' },
-  { code: 'tr', label: 'TR' },
-]
+type MenuId = 'services' | 'products'
 
-function MobileLangSwitcher() {
+function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
   const locale = useLocale()
-  const router = useRouter()
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const tNav = useTranslations('site.nav')
+  const tS = useTranslations('site.services')
+  const tP = useTranslations('site.products')
 
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
-  }, [])
-
-  function switchLocale(code: string) {
-    if (code === locale) { setOpen(false); return }
-    localStorage.setItem('preferred-locale', code)
-    const segments = pathname.split('/')
-    segments[1] = code
-    router.push(segments.join('/'))
-    setOpen(false)
-  }
-
-  const current = LOCALES.find((l) => l.code === locale) ?? LOCALES[0]
+  const items =
+    id === 'services'
+      ? SERVICE_IDS.map((s) => ({ href: `/${locale}/services#${s}`, title: tS(`${s}.title`), text: tS(`${s}.text`) }))
+      : PRODUCT_LINKS.map((p) => ({
+          href: `/${locale}/products#${p.id}`,
+          title: tP(p.key),
+          text: p.id === 'chatbot' ? tP('chatbot.text') : tP(`combo.${p.id}Text`),
+        }))
 
   return (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen((v) => !v)}
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        aria-label="Dil seçimi"
-        className="flex items-center gap-1 px-2.5 py-2 rounded-lg border border-white/15
-          bg-white/5 hover:bg-white/10 text-text-primary text-sm font-medium
-          transition-all duration-200 min-h-[40px]"
-      >
-        <Globe size={13} className="text-text-secondary" aria-hidden="true" />
-        <span className="text-xs font-semibold">{current.label}</span>
-        <ChevronDown
-          size={11}
-          className={cn('text-text-secondary transition-transform duration-200', open && 'rotate-180')}
-          aria-hidden="true"
-        />
-      </button>
-
-      {open && (
-        <div
-          role="listbox"
-          aria-label="Dil seçimi"
-          className="absolute top-full right-0 mt-2 w-28 rounded-xl border border-white/15
-            bg-bg-secondary/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-            overflow-hidden z-50"
-        >
-          {LOCALES.map(({ code, label }) => (
-            <button
-              key={code}
-              role="option"
-              aria-selected={locale === code}
-              onClick={() => switchLocale(code)}
-              className={cn(
-                'w-full flex items-center justify-center px-4 py-2.5 text-sm font-medium transition-colors duration-150',
-                locale === code
-                  ? 'bg-accent-primary/15 text-accent-primary'
-                  : 'text-text-secondary hover:bg-bg-tertiary hover:text-text-primary'
-              )}
-            >
-              {label}
-            </button>
+    <div className="absolute left-1/2 top-full z-50 w-[560px] -translate-x-1/2 pt-3">
+      <div className="rounded-3xl border border-line bg-bg-primary p-3 shadow-float">
+        <ul className="grid grid-cols-2 gap-1">
+          {items.map((it, i) => (
+            <li key={it.href} className={cn(id === 'services' && i === 0 && 'col-span-2')}>
+              <Link
+                href={it.href}
+                onClick={onClose}
+                className="group flex h-full flex-col gap-1 rounded-2xl p-4 transition-colors hover:bg-bg-secondary"
+              >
+                <span className="flex items-center gap-2 text-[15px] font-semibold text-text-primary">
+                  {it.title}
+                  {id === 'services' && i === 0 && (
+                    <span className="rounded-full bg-accent-primary/10 px-2 py-0.5 text-[11px] font-semibold text-accent-ink">
+                      {tS('featured')}
+                    </span>
+                  )}
+                </span>
+                <span className="line-clamp-2 text-[13px] leading-relaxed text-text-muted">{it.text}</span>
+              </Link>
+            </li>
           ))}
-        </div>
-      )}
+        </ul>
+        <Link
+          href={`/${locale}/${id}`}
+          onClick={onClose}
+          className="mt-1 flex items-center justify-between rounded-2xl bg-bg-secondary px-4 py-3 text-sm font-semibold text-text-primary transition-colors hover:text-accent-ink"
+        >
+          {id === 'services' ? tNav('allServices') : tNav('allProducts')}
+          <ArrowRight size={15} aria-hidden="true" />
+        </Link>
+      </div>
     </div>
   )
 }
 
 export function Header() {
   const locale = useLocale()
-  const tHero = useTranslations('home.hero')
-  const tCommon = useTranslations('common.cta')
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+  const t = useTranslations('site.nav')
+  const tCta = useTranslations('site.cta')
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [menu, setMenu] = useState<MenuId | null>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setScrolled(window.scrollY > 12)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(tHero('whatsappText'))}`
+  useEffect(() => {
+    setMenu(null)
+    setMobileOpen(false)
+  }, [pathname])
+
+  // The phone bottom bar opens this same menu.
+  useEffect(() => {
+    const openMenu = () => setMobileOpen(true)
+    window.addEventListener(OPEN_MENU_EVENT, openMenu)
+    return () => window.removeEventListener(OPEN_MENU_EVENT, openMenu)
+  }, [])
+
+  useEffect(() => {
+    if (!menu) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenu(null)
+    const onDown = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) setMenu(null)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('mousedown', onDown)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('mousedown', onDown)
+    }
+  }, [menu])
+
+  useEffect(() => () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+  }, [])
+
+  const closeMobile = useCallback(() => setMobileOpen(false), [])
+
+  const open = (id: MenuId) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setMenu(id)
+  }
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setMenu(null), 140)
+  }
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-30">
-        <div
-          className={cn(
-            'w-full flex items-center justify-between gap-4 transition-all duration-300',
-            'px-4 sm:px-6 lg:px-8',
-            scrolled
-              ? 'py-3 bg-bg-primary/95 backdrop-blur-xl border-b border-white/10 shadow-lg'
-              : 'py-4 bg-bg-primary/60 backdrop-blur-md border-b border-white/5'
-          )}
-        >
-          {/* Logo */}
-          <Link
-            href={`/${locale}`}
-            className="flex items-center shrink-0"
-            aria-label="Cradex Agency — Ana Səhifə"
-          >
-            <img
-              src="/logo.svg"
-              alt="Cradex Agency"
-              className="h-10 sm:h-12 w-auto object-contain"
-            />
+      <header
+        className={cn(
+          'fixed inset-x-0 top-0 z-40 transition-all duration-300',
+          scrolled || mobileOpen
+            ? 'border-b border-line bg-bg-primary/85 backdrop-blur-xl'
+            : 'border-b border-transparent bg-bg-primary/0'
+        )}
+      >
+        <div className="container-x flex h-[72px] items-center gap-4 xl:max-w-[1440px]">
+          <Link href={`/${locale}`} aria-label={t('home')} className="shrink-0">
+            <Logo className="h-8 sm:h-9" />
           </Link>
 
-          {/* Desktop nav */}
-          <Navbar />
+          <nav ref={navRef} aria-label={t('mainNav')} className="hidden flex-1 justify-center xl:flex">
+            <ul className="flex items-center gap-0.5 2xl:gap-1">
+              {NAV_ITEMS.map((item) => {
+                const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact)
+                const href = `/${locale}${item.href}`
+                const linkCls = cn(
+                  'relative inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[14px] font-medium transition-colors 2xl:px-3',
+                  active ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'
+                )
 
-          {/* Right: lang + CTA */}
-          <div className="hidden md:flex items-center gap-3 shrink-0">
+                if ('menu' in item) {
+                  const id = item.menu as MenuId
+                  return (
+                    <li key={item.key} className="relative" onMouseEnter={() => open(id)} onMouseLeave={scheduleClose}>
+                      <button
+                        type="button"
+                        className={linkCls}
+                        aria-expanded={menu === id}
+                        aria-haspopup="true"
+                        onClick={() => (menu === id ? setMenu(null) : open(id))}
+                      >
+                        {t(item.key)}
+                        <ChevronDown size={13} aria-hidden="true" className={cn('transition-transform', menu === id && 'rotate-180')} />
+                        {active && <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent-primary" />}
+                      </button>
+                      {menu === id && <Dropdown id={id} onClose={() => setMenu(null)} />}
+                    </li>
+                  )
+                }
+
+                return (
+                  <li key={item.key}>
+                    <Link href={href} className={linkCls} aria-current={active ? 'page' : undefined}>
+                      {t(item.key)}
+                      {active && <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent-primary" />}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+
+          <div className="ml-auto hidden items-center gap-2 xl:flex">
             <LangDropdown />
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-accent-primary to-accent-secondary text-white text-sm font-semibold hover:opacity-90 transition-all duration-200 shadow-[0_0_16px_rgba(108,99,255,0.4)] hover:shadow-[0_0_24px_rgba(108,99,255,0.6)] min-h-[36px] whitespace-nowrap"
-            >
-              {tCommon('freeConsultation')} ↗
-            </a>
+            <ThemeToggle />
+            <WhatsAppButton size="md" label={tCta('demo')} className="ml-1 whitespace-nowrap" />
           </div>
 
-          {/* Mobile: lang switcher + hamburger */}
-          <div className="md:hidden flex items-center gap-2">
-            <MobileLangSwitcher />
+          <div className="ml-auto flex items-center gap-2 xl:hidden">
+            <LangDropdown />
+            <ThemeToggle />
             <button
+              type="button"
               onClick={() => setMobileOpen(true)}
-              className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-tertiary transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center"
-              aria-label="Menyunu aç"
+              aria-label={t('openMenu')}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-text-primary text-bg-primary transition-opacity hover:opacity-85"
             >
-              <Menu size={20} />
+              <Menu size={18} aria-hidden="true" />
             </button>
           </div>
         </div>
       </header>
 
-      <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <MobileMenu isOpen={mobileOpen} onClose={closeMobile} />
     </>
   )
 }

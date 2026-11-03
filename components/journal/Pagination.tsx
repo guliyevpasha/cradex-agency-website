@@ -38,7 +38,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
           className={cn(
             'w-10 h-10 rounded-xl text-sm font-medium transition-all duration-200',
             currentPage === page
-              ? 'bg-accent-primary text-white shadow-[0_0_16px_rgba(108,99,255,0.4)]'
+              ? 'bg-accent-primary text-snow shadow-[0_0_16px_rgba(36,160,255,0.4)]'
               : 'glass-card text-text-secondary hover:text-text-primary'
           )}
         >

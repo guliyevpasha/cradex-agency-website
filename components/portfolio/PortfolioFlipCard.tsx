@@ -76,7 +76,7 @@ export function PortfolioFlipCard({ item, className }: PortfolioFlipCardProps) {
           </div>
 
           {/* ── BACK SIDE ─────────────────────────────────────────── */}
-          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#12121a] to-[#0a0a0f] border border-white/5">
+          <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl overflow-hidden bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary border border-white/5">
             <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
               {/* Top Section */}
               <div className="space-y-3">

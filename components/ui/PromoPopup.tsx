@@ -74,9 +74,9 @@ export function PromoPopup() {
                   className="absolute inset-0 opacity-30"
                   animate={{
                     background: [
-                      'linear-gradient(135deg, rgba(108,99,255,0.3) 0%, rgba(0,212,255,0.3) 100%)',
-                      'linear-gradient(135deg, rgba(0,212,255,0.3) 0%, rgba(108,99,255,0.3) 100%)',
-                      'linear-gradient(135deg, rgba(108,99,255,0.3) 0%, rgba(0,212,255,0.3) 100%)',
+                      'linear-gradient(135deg, rgba(36,160,255,0.3) 0%, rgba(124,200,255,0.3) 100%)',
+                      'linear-gradient(135deg, rgba(124,200,255,0.3) 0%, rgba(36,160,255,0.3) 100%)',
+                      'linear-gradient(135deg, rgba(36,160,255,0.3) 0%, rgba(124,200,255,0.3) 100%)',
                     ],
                   }}
                   transition={{
@@ -105,8 +105,8 @@ export function PromoPopup() {
                     transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
                     className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, #6C63FF, #00D4FF)',
-                      boxShadow: '0 8px 32px rgba(108,99,255,0.4)',
+                      background: 'linear-gradient(135deg, #24A0FF, #7CC8FF)',
+                      boxShadow: '0 8px 32px rgba(36,160,255,0.4)',
                     }}
                   >
                     <TrendingUp size={32} className="text-white" />

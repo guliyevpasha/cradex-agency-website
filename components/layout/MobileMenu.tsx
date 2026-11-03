@@ -1,356 +1,176 @@
 'use client'
+/**
+ * Burger menu for phones and tablets: full menu, expandable Services and
+ * Products, language and theme.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
-import { X, Globe, ChevronDown } from 'lucide-react'
-import { useTranslations, useLocale } from 'next-intl'
+import { ChevronDown, X } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils/cn'
-import { MEGA_MENU_SERVICES } from '@/lib/data/megaMenuServices'
+import { Logo } from '@/components/brand/Logo'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { LOCALES, NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, isActive, localizedPath } from '@/lib/site/navigation'
 
-interface MobileMenuProps {
-  isOpen: boolean
-  onClose: () => void
-}
+type Props = { isOpen: boolean; onClose: () => void }
 
-const LOCALES = [
-  { code: 'az', label: 'AZ' },
-  { code: 'en', label: 'EN' },
-  { code: 'ru', label: 'RU' },
-  { code: 'tr', label: 'TR' },
-]
-
-// Stagger animation for nav links
-const listVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.06, delayChildren: 0.15 } },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, x: 24 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
-}
-
-const panelVariants = {
-  hidden: { x: '100%', opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] } },
-  exit:   { x: '100%', opacity: 0, transition: { duration: 0.28, ease: [0.22, 1, 0.36, 1] } },
-}
-
-export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
-  const t = useTranslations('common.nav')
-  const tServices = useTranslations('services.megaMenu')
+export function MobileMenu({ isOpen, onClose }: Props) {
+  const t = useTranslations('site.nav')
+  const tS = useTranslations('site.services')
+  const tP = useTranslations('site.products')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
-  const closeButtonRef = useRef<HTMLButtonElement>(null)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [aboutOpen, setAboutOpen] = useState(false)
+  const closeRef = useRef<HTMLButtonElement>(null)
+  const [expanded, setExpanded] = useState<string | null>(null)
 
   useEffect(() => {
-    if (isOpen) closeButtonRef.current?.focus()
-  }, [isOpen])
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape' && isOpen) onClose() }
-    document.addEventListener('keydown', handler)
-    return () => document.removeEventListener('keydown', handler)
+    if (!isOpen) return
+    closeRef.current?.focus()
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
   }, [isOpen, onClose])
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [isOpen])
-
-  function switchLocale(code: string) {
+  function pickLocale(code: string) {
     if (code === locale) return
-    localStorage.setItem('preferred-locale', code)
-    const segments = pathname.split('/')
-    segments[1] = code
-    router.push(segments.join('/'))
+    try {
+      localStorage.setItem('preferred-locale', code)
+    } catch {}
+    router.push(localizedPath(pathname, code) + window.location.search + window.location.hash)
     onClose()
   }
 
-  const navLinks = [
-    { href: `/${locale}`,             label: t('home') },
-    // About will be handled separately with dropdown
-    // Services will be handled separately with dropdown
-    { href: `/${locale}/journal`,     label: t('journal') },
-    { href: `/${locale}/calculator`,  label: t('calculator') },
-    { href: `/${locale}/portfolio`,   label: t('portfolio') },
-    { href: `/${locale}/contact`,     label: t('contact') },
-  ]
+  const sub = {
+    services: SERVICE_IDS.map((s) => ({ href: `/${locale}/services#${s}`, label: tS(`${s}.title`) })),
+    products: PRODUCT_LINKS.map((p) => ({ href: `/${locale}/products#${p.id}`, label: tP(p.key) })),
+  }
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 bg-black/65 backdrop-blur-sm z-40"
-            onClick={onClose}
-            aria-hidden="true"
-          />
-
-          {/* Panel */}
-          <motion.div
-            variants={panelVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="fixed top-0 right-0 h-full w-4/5 max-w-sm z-50 flex flex-col"
-            style={{
-              background: 'rgba(17,17,24,0.97)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
-              borderLeft: '1px solid rgba(255,255,255,0.08)',
-            }}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-              <div className="flex items-center gap-2">
-                <img src="/logo.svg" alt="Cradex Agency" className="h-7 w-auto" />
-              </div>
+    <>
+      <div
+        className={cn(
+          'fixed inset-0 z-50 bg-ink/50 backdrop-blur-sm transition-opacity duration-200',
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        )}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <div
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('menu')}
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={cn(
+          'fixed inset-y-0 right-0 z-50 flex w-full max-w-[400px] flex-col bg-bg-primary shadow-float',
+          'transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
+          isOpen ? 'translate-x-0' : 'pointer-events-none translate-x-full'
+        )}
+      >
+            <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-line px-5">
+              <Link href={`/${locale}`} onClick={onClose} aria-label={t('home')}>
+                <Logo className="h-8" />
+              </Link>
               <button
-                ref={closeButtonRef}
+                ref={closeRef}
+                type="button"
                 onClick={onClose}
-                className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-tertiary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                aria-label="Close menu"
+                aria-label={t('closeMenu')}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-text-primary"
               >
-                <X size={20} />
+                <X size={18} aria-hidden="true" />
               </button>
             </div>
 
-            {/* Nav links — staggered */}
-            <nav className="flex-1 overflow-y-auto px-4 py-6">
-              <motion.ul
-                variants={listVariants}
-                initial="hidden"
-                animate="visible"
-                className="space-y-1"
-                role="list"
-              >
-                {navLinks.map((link, index) => {
-                  const isActive = pathname === link.href
-                  
-                  // Insert About and Services dropdowns after "Home"
-                  if (index === 0) {
-                    const isAboutActive = pathname.includes('/about') || pathname.includes('/clients')
-                    const isServicesActive = pathname.includes('/services')
-                    
+            <nav aria-label={t('mainNav')} className="flex-1 overflow-y-auto px-3 py-4">
+              <ul className="flex flex-col">
+                {NAV_ITEMS.map((item) => {
+                  const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact)
+                  const rowCls = cn(
+                    'flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-[17px] font-semibold transition-colors',
+                    active ? 'bg-bg-secondary text-text-primary' : 'text-text-primary hover:bg-bg-secondary'
+                  )
+
+                  if ('menu' in item) {
+                    const id = item.menu as keyof typeof sub
+                    const isExp = expanded === id
                     return (
-                      <div key="nav-group">
-                        {/* Home link */}
-                        <motion.li variants={itemVariants}>
-                          <Link
-                            href={link.href}
-                            onClick={onClose}
-                            className={cn(
-                              'flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
-                              isActive
-                                ? 'bg-accent-primary/15 text-accent-primary'
-                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                            )}
-                          >
-                            {isActive && (
-                              <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
-                            )}
-                            {link.label}
-                          </Link>
-                        </motion.li>
-                        
-                        {/* About dropdown */}
-                        <motion.li variants={itemVariants}>
-                          <button
-                            onClick={() => setAboutOpen(!aboutOpen)}
-                            className={cn(
-                              'w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
-                              isAboutActive
-                                ? 'bg-accent-primary/15 text-accent-primary'
-                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                            )}
-                          >
-                            <span className="flex items-center">
-                              {isAboutActive && (
-                                <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
-                              )}
-                              {t('about')}
-                            </span>
-                            <ChevronDown
-                              size={16}
-                              className={cn('transition-transform duration-200', aboutOpen && 'rotate-180')}
-                            />
-                          </button>
-                          
-                          {/* About submenu */}
-                          <AnimatePresence>
-                            {aboutOpen && (
-                              <motion.ul
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="mt-1 ml-4 space-y-1 overflow-hidden"
-                              >
-                                <li>
-                                  <Link
-                                    href={`/${locale}/about`}
-                                    onClick={onClose}
-                                    className={cn(
-                                      'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
-                                      pathname.includes('/about') && !pathname.includes('/clients')
-                                        ? 'bg-accent-primary/10 text-accent-primary'
-                                        : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
-                                    )}
-                                  >
-                                    {t('about')}
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href={`/${locale}/clients`}
-                                    onClick={onClose}
-                                    className={cn(
-                                      'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
-                                      pathname.includes('/clients')
-                                        ? 'bg-accent-primary/10 text-accent-primary'
-                                        : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
-                                    )}
-                                  >
-                                    {t('clients')}
-                                  </Link>
-                                </li>
-                              </motion.ul>
-                            )}
-                          </AnimatePresence>
-                        </motion.li>
-                        
-                        {/* Services dropdown */}
-                        <motion.li variants={itemVariants}>
-                          <button
-                            onClick={() => setServicesOpen(!servicesOpen)}
-                            className={cn(
-                              'w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
-                              isServicesActive
-                                ? 'bg-accent-primary/15 text-accent-primary'
-                                : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                            )}
-                          >
-                            <span className="flex items-center">
-                              {isServicesActive && (
-                                <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
-                              )}
-                              {t('services')}
-                            </span>
-                            <ChevronDown
-                              size={16}
-                              className={cn('transition-transform duration-200', servicesOpen && 'rotate-180')}
-                            />
-                          </button>
-                          
-                          {/* Services submenu */}
-                          <AnimatePresence>
-                            {servicesOpen && (
-                              <motion.ul
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="mt-1 ml-4 space-y-1 overflow-hidden"
-                              >
-                                {MEGA_MENU_SERVICES.map((service) => {
-                                  const serviceHref = `/${locale}/services/${service.slug}`
-                                  const isServiceActive = pathname === serviceHref
-                                  const Icon = service.icon
-                                  
-                                  return (
-                                    <li key={service.id}>
-                                      <Link
-                                        href={serviceHref}
-                                        onClick={onClose}
-                                        className={cn(
-                                          'flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
-                                          isServiceActive
-                                            ? 'bg-accent-primary/10 text-accent-primary'
-                                            : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/50'
-                                        )}
-                                      >
-                                        <Icon size={14} strokeWidth={2} />
-                                        {tServices(`${service.translationKey}.title`)}
-                                      </Link>
-                                    </li>
-                                  )
-                                })}
-                              </motion.ul>
-                            )}
-                          </AnimatePresence>
-                        </motion.li>
-                      </div>
+                      <li key={item.key}>
+                        <button
+                          type="button"
+                          className={rowCls}
+                          aria-expanded={isExp}
+                          aria-controls={`mm-${id}`}
+                          onClick={() => setExpanded(isExp ? null : id)}
+                        >
+                          {t(item.key)}
+                          <ChevronDown size={18} aria-hidden="true" className={cn('text-text-muted transition-transform', isExp && 'rotate-180')} />
+                        </button>
+                        {isExp && (
+                          <ul id={`mm-${id}`} className="mb-2 ml-4 border-l border-line pl-3">
+                            {sub[id].map((s) => (
+                              <li key={s.href}>
+                                <Link href={s.href} onClick={onClose} className="block rounded-xl px-3 py-2.5 text-[15px] text-text-secondary hover:text-text-primary">
+                                  {s.label}
+                                </Link>
+                              </li>
+                            ))}
+                            <li>
+                              <Link href={`/${locale}/${id}`} onClick={onClose} className="block rounded-xl px-3 py-2.5 text-[15px] font-semibold text-accent-ink">
+                                {id === 'services' ? t('allServices') : t('allProducts')}
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
                     )
                   }
-                  
+
                   return (
-                    <motion.li key={link.href} variants={itemVariants}>
-                      <Link
-                        href={link.href}
-                        onClick={onClose}
-                        className={cn(
-                          'flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 min-h-[48px]',
-                          isActive
-                            ? 'bg-accent-primary/15 text-accent-primary'
-                            : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                        )}
-                      >
-                        {isActive && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent-primary mr-3 shadow-[0_0_6px_rgba(108,99,255,0.8)]" aria-hidden="true" />
-                        )}
-                        {link.label}
+                    <li key={item.key}>
+                      <Link href={`/${locale}${item.href}`} onClick={onClose} className={rowCls} aria-current={active ? 'page' : undefined}>
+                        {t(item.key)}
                       </Link>
-                    </motion.li>
+                    </li>
                   )
                 })}
-              </motion.ul>
+              </ul>
             </nav>
 
-            {/* Language switcher — only label, no country code prefix */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              className="px-6 py-5 border-t border-white/10"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Globe size={13} className="text-text-muted" />
-                <span className="text-text-muted text-xs uppercase tracking-wider">Dil / Language</span>
+            <div className="shrink-0 space-y-4 border-t border-line px-5 py-5 pb-safe">
+              <div className="flex items-center justify-between gap-3">
+                <div role="group" aria-label={t('language')} className="flex rounded-full border border-line p-1">
+                  {LOCALES.map(({ code, label, name }) => (
+                    <button
+                      key={code}
+                      type="button"
+                      lang={code}
+                      aria-label={name}
+                      aria-pressed={code === locale}
+                      onClick={() => pickLocale(code)}
+                      className={cn(
+                        'rounded-full px-3.5 py-2 text-xs font-bold transition-colors',
+                        code === locale ? 'bg-text-primary text-bg-primary' : 'text-text-secondary hover:text-text-primary'
+                      )}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <ThemeToggle />
               </div>
-              <div className="flex gap-2">
-                {LOCALES.map(({ code, label }) => (
-                  <button
-                    key={code}
-                    onClick={() => switchLocale(code)}
-                    aria-pressed={locale === code}
-                    className={cn(
-                      'flex-1 py-2 rounded-xl text-sm font-medium transition-all duration-200',
-                      locale === code
-                        ? 'bg-accent-primary text-white shadow-[0_0_12px_rgba(108,99,255,0.4)]'
-                        : 'bg-bg-tertiary text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/80'
-                    )}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+              <WhatsAppButton className="w-full" />
+            </div>
+      </div>
+    </>
   )
 }

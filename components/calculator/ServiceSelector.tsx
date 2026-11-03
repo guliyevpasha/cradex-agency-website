@@ -88,7 +88,7 @@ export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) 
             className={cn(
               'rounded-2xl border transition-all duration-200',
               selected
-                ? 'border-accent-primary/50 bg-accent-primary/5 shadow-[0_0_20px_rgba(108,99,255,0.1)]'
+                ? 'border-accent-primary/50 bg-accent-primary/5 shadow-[0_0_20px_rgba(36,160,255,0.1)]'
                 : 'border-white/10 bg-bg-secondary/50 hover:border-white/20'
             )}
           >
@@ -143,7 +143,7 @@ export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) 
                           className={cn(
                             'px-3 py-1.5 rounded-lg text-xs font-medium transition-all',
                             sel.duration === d
-                              ? 'bg-accent-primary text-white shadow-[0_0_10px_rgba(108,99,255,0.4)]'
+                              ? 'bg-accent-primary text-white shadow-[0_0_10px_rgba(36,160,255,0.4)]'
                               : 'bg-bg-tertiary text-text-secondary hover:text-text-primary hover:bg-bg-tertiary/80'
                           )}
                         >
@@ -166,7 +166,7 @@ export function ServiceSelector({ selections, onChange }: ServiceSelectorProps) 
                           className={cn(
                             'px-3 py-1.5 rounded-lg text-xs font-medium transition-all',
                             sel.platformCount === p
-                              ? 'bg-accent-secondary text-bg-primary shadow-[0_0_10px_rgba(0,212,255,0.4)]'
+                              ? 'bg-accent-secondary text-bg-primary shadow-[0_0_10px_rgba(124,200,255,0.4)]'
                               : 'bg-bg-tertiary text-text-secondary hover:text-text-primary'
                           )}
                         >

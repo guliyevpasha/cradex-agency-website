@@ -30,7 +30,7 @@ export function StatsSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `radial-gradient(ellipse 80% 60% at 50% 50%,
-            rgba(108,99,255,0.06) 0%, transparent 70%)`,
+            rgba(36,160,255,0.06) 0%, transparent 70%)`,
         }}
       />
 
@@ -50,7 +50,7 @@ export function StatsSection() {
                   className="font-display font-bold leading-none"
                   style={{
                     fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
-                    background: 'linear-gradient(135deg, #6C63FF 0%, #00D4FF 100%)',
+                    background: 'linear-gradient(135deg, #24A0FF 0%, #7CC8FF 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -70,7 +70,7 @@ export function StatsSection() {
                   className="font-display font-bold pb-0.5"
                   style={{
                     fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
-                    background: 'linear-gradient(135deg, #6C63FF 0%, #00D4FF 100%)',
+                    background: 'linear-gradient(135deg, #24A0FF 0%, #7CC8FF 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',

@@ -94,7 +94,7 @@ function ContactContent() {
                 className="flex items-center gap-4 p-5 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0">
-                  <MessageCircle size={22} className="text-white" />
+                  <MessageCircle size={22} className="text-snow" />
                 </div>
                 <div>
                   <p className="text-text-primary font-semibold">WhatsApp</p>

@@ -956,6 +956,138 @@
           }
         ],
         "ctaButton": "WhatsApp'tan sor"
+      },
+      "portfolioShowcase": {
+        "label": "WEB SİTESİ ÖRNEKLERİ",
+        "title": "Sektörünüzü seçin. Demonuzu 48 saatte gönderelim.",
+        "subtitle": "18 hazır web sitesi tasarımı. İşinize uygun olanı seçin, biz de markanıza göre uyarlayalım.",
+        "categories": {
+          "all": "Tümü",
+          "medical": "Klinik",
+          "automotive": "Otomotiv",
+          "realestate": "Gayrimenkul",
+          "beauty": "Güzellik",
+          "law": "Hukuk / danışmanlık",
+          "education": "Eğitim",
+          "other": "Diğer"
+        },
+        "viewDetails": "Büyük görüntüle"
+      },
+      "pricing": {
+        "label": "KİŞİSEL WEB SİTELERİ İÇİN",
+        "title": "Fiyatı görüşmeden önce öğrenin.",
+        "subtitle": "Kişisel web siteleri için açık paketler. Mağaza, ödeme sistemi, mobil uygulama veya yapay zekâ asistanı gerekiyorsa, fiyat ücretsiz görüşmeden sonra yazılı teklifte verilir.",
+        "monthlyLabel": "Aylık",
+        "yearlyLabel": "Yıllık",
+        "saveLabel": "%26 tasarruf edin",
+        "perMonthLabel": "aylık",
+        "tiers": {
+          "start": {
+            "name": "Start",
+            "subtitle": "Küçük site, hızlı başlangıç.",
+            "monthlyPrice": 299,
+            "yearlyPrice": 2988,
+            "cta": "Başla",
+            "features": [
+              "5 sayfaya kadar, 1 dil, mobil uyumlu tasarım",
+              "Hosting ve SSL sertifikası",
+              "WhatsApp butonu ve iletişim formu",
+              "Ayda 1 küçük düzenleme"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "subtitle": "Büyüyen kişisel marka için. Fiyat ve özellikler arasında dengeli bir seçim.",
+            "monthlyPrice": 399,
+            "yearlyPrice": 3996,
+            "cta": "Başla",
+            "popular": true,
+            "features": [
+              "Start'taki her şey",
+              "10 sayfaya kadar",
+              "AZ, RU, EN dil seçeneği",
+              "Kurumsal e-posta (ad@siteniz.az) kişisel e-postanıza yönlendirilir",
+              "Temel SEO ve Google'da görünürlük",
+              "Ayda 3 düzenleme, 24 saatte yanıt"
+            ]
+          },
+          "max": {
+            "name": "Max",
+            "subtitle": "Tam özellikler: site, entegrasyonlar ve öncelikli destek.",
+            "monthlyPrice": 599,
+            "yearlyPrice": 5988,
+            "cta": "Başla",
+            "features": [
+              "Pro'daki her şey",
+              "Sınırsız sayfa, blog ve 2 entegrasyon (ör. Google Analytics, Telegram)",
+              "Kurumsal e-posta (ad@siteniz.az) kişisel e-postanıza yönlendirilir",
+              "Aylık rapor, öncelikli destek"
+            ]
+          }
+        },
+        "corporate": {
+          "title": "Büyük proje mi? Konuşalım",
+          "description": "Online mağaza, ödeme ve rezervasyon sistemleri, mobil uygulama veya yapay zekâ asistanı mı gerekiyor? Fiyat, projenin kapsamına göre bireysel olarak hesaplanır.",
+          "button": "Görüşme için zaman seçin"
+        }
+      },
+      "processCards": {
+        "title": "Neden bizim site paketimiz?",
+        "cards": [
+          {
+            "title": "48 saatte demo",
+            "description": "Ödemeden önce işinize uygun site demosunu görürsünüz."
+          },
+          {
+            "title": "Fiyat baştan belli",
+            "description": "299, 399 veya 599 AZN yıllık paket. Gizli ücret yok."
+          },
+          {
+            "title": "Her şey sizin adınıza",
+            "description": "Alan adı ve hesaplar sizin adınıza kaydedilir. Site size aittir."
+          },
+          {
+            "title": "WhatsApp ile iletişim",
+            "description": "Mobil uyumlu site. WhatsApp butonu ve iletişim formu. Müşterileriniz size tek dokunuşla yazabilir."
+          }
+        ]
+      },
+      "processTimeline": {
+        "title": "Nasıl çalışıyoruz?",
+        "subtitle": "Adım adım süreç, sitenizin profesyonel ve zamanında hazırlanmasını sağlar.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Brifing ve analiz",
+            "description": "İşletmeniz, hedef kitleniz ve rakipleriniz hakkında bilgi toplarız. Sitenin amacını ve işlevselliğini belirleriz."
+          },
+          {
+            "number": "02",
+            "title": "Demo hazırlığı",
+            "description": "48 saat içinde markanıza uygun bir site demosu hazırlar ve sizinle paylaşırız. Beğenmezseniz ödeme yok.",
+            "highlighted": true
+          },
+          {
+            "number": "03",
+            "title": "Tasarım ve geliştirme",
+            "description": "Demoyu onayladıktan sonra siteyi tam işlevsel hale getiririz. Tüm sayfalar, entegrasyonlar ve mobil sürüm hazırlanır."
+          },
+          {
+            "number": "04",
+            "title": "Test ve optimizasyon",
+            "description": "Siteyi tüm cihazlarda test eder, hız ve SEO optimizasyonu yaparız. Gerekli tüm düzeltmeler yapılır."
+          },
+          {
+            "number": "05",
+            "title": "Yayına alma ve destek",
+            "description": "Siteyi canlı sunucuya yükler, alan adı bağlantısını tamamlarız. Sürekli teknik destek ve aylık düzenlemeler sağlanır."
+          }
+        ]
+      },
+      "finalCTA": {
+        "title": "Sitenizi bugün sipariş edin",
+        "subtitle": "48 saat içinde ücretsiz demo alın ve işinizi online dünyaya taşıyın.",
+        "primaryButton": "Ücretsiz demo istiyorum"
       }
     },
     "benefits": "Avantajlar",
@@ -1950,7 +2082,7 @@
       "title": "2020'den bugüne —",
       "titleAccent": "kesintisiz büyümenin hikâyesi.",
       "titleEnd": "",
-      "archiveLink": "",
+      "archiveLink": "Tüm arşiv",
       "events": [
         {
           "year": "2020",
@@ -2086,6 +2218,232 @@
           "label": "Müşteri Memnuniyeti"
         }
       ]
+    }
+  },
+  "site": {
+    "meta": {
+      "homeTitle": "Cradex Agency — Bakü'de Web Sitesi Geliştirme",
+      "homeDescription": "Web sitenizin demosunu 2 saatte ücretsiz alın. Web sitesi, mobil uygulama, SEO, GEO ve dijital reklam hizmetleri.",
+      "servicesTitle": "Hizmetlerimiz",
+      "servicesDescription": "Web sitesi ve mobil uygulama geliştirme, SEO ve GEO, Meta, TikTok, LinkedIn ve Google reklamları, teknik destek.",
+      "productsTitle": "Ürünlerimiz",
+      "productsDescription": "Chatbot ile Instagram, TikTok ve YouTube için sosyal medya kombo paketleri.",
+      "pricingTitle": "Fiyatlar",
+      "pricingDescription": "Site demosu ücretsizdir. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alırız."
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetlerimiz",
+      "products": "Ürünlerimiz",
+      "work": "Projelerimiz",
+      "about": "Hakkımızda",
+      "pricing": "Fiyatlar",
+      "blog": "Blog",
+      "contact": "İletişim",
+      "menu": "Menü",
+      "openMenu": "Menüyü aç",
+      "closeMenu": "Menüyü kapat",
+      "skip": "Ana içeriğe geç",
+      "language": "Dil",
+      "allServices": "Tüm hizmetler",
+      "allProducts": "Tüm ürünler",
+      "mainNav": "Ana gezinme",
+      "mobileNav": "Mobil gezinme"
+    },
+    "theme": {
+      "toLight": "Açık moda geç",
+      "toDark": "Koyu moda geç"
+    },
+    "cta": {
+      "discuss": "Projenizi konuşalım",
+      "work": "Projelerimize göz atın",
+      "demo": "Ücretsiz demo",
+      "whatsappMessage": "Merhaba, demo versiyon bir web sitesi istiyorum",
+      "details": "Ayrıntılar"
+    },
+    "hero": {
+      "eyebrow": "Ücretsiz demo · 2 saatte",
+      "titleStart": "Web sitenizin demosunu",
+      "titleAccent": "2 saat içinde",
+      "titleEnd": "alın, 2 ay beklemeyin.",
+      "titleFree": "Üstelik ücretsiz!",
+      "subtitle": "İşletmeniz, kişisel markanız veya içerik projeniz için önce site demosunu hazırlıyoruz. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alırız.",
+      "fine": "Demo ücretsizdir. Beğenmezseniz ödeme yapmazsınız.",
+      "card": {
+        "building": "Demo hazırlanıyor",
+        "ready": "Demo hazır",
+        "hoursLeft": "{hours} sa {minutes} dk kaldı",
+        "minutesLeft": "{minutes} dk kaldı",
+        "done": "Hazır",
+        "steps": {
+          "structure": "Yapı",
+          "design": "Tasarım",
+          "content": "Metinler",
+          "ready": "Hazır"
+        },
+        "kinds": {
+          "business": "Kurumsal site",
+          "personal": "Kişisel marka",
+          "content": "İçerik projesi"
+        }
+      },
+      "preview": {
+        "url": "markaniz.az",
+        "brand": "Nova",
+        "link1": "Hakkımızda",
+        "link2": "Hizmetler",
+        "link3": "Projeler",
+        "cta": "İletişim",
+        "eyebrow": "Yeni koleksiyon",
+        "title": "Markanızı dijital dünyada güçlü gösterin",
+        "text": "Müşterileriniz sizi ilk kez web sitenizde görür. Bu ilk izlenimi özenle tasarlıyoruz.",
+        "primary": "Başlayalım",
+        "secondary": "Ayrıntılar",
+        "stat1": "dil",
+        "stat2": "mobil uyumlu",
+        "stat3": "çevrimiçi"
+      }
+    },
+    "process": {
+      "eyebrow": "Nasıl çalışır",
+      "title": "Üç adım, ilk adım ücretsiz",
+      "step1Title": "Bize yazarsınız",
+      "step1Text": "WhatsApp'tan işletmeniz hakkında 2–3 cümle gönderirsiniz: ne iş yaptığınızı ve sitede neler olması gerektiğini.",
+      "step2Title": "Demoyu hazırlarız",
+      "step2Text": "2 saat içinde sektörünüze ve markanıza uygun site demosunu size göndeririz.",
+      "step3Title": "Siz karar verirsiniz",
+      "step3Text": "Beğenirseniz siteyi tamamlayıp yıllık paketle yayına alırız. Beğenmezseniz hiçbir ödeme yapmazsınız."
+    },
+    "services": {
+      "eyebrow": "Hizmetlerimiz",
+      "title": "Asıl işimiz web siteleri",
+      "subtitle": "Diğer hizmetler, sitenizin daha çok müşteri getirmesi ve güvenle çalışması içindir.",
+      "featured": "Ana hizmet",
+      "web": {
+        "title": "Web Sitesi Geliştirme",
+        "text": "Kurumsal siteler, açılış sayfaları, e-ticaret siteleri ve web uygulamaları. Strateji, tasarım, yazılım ve yayın tek ekipte.",
+        "p1": "Kurumsal site",
+        "p2": "Açılış sayfası",
+        "p3": "E-ticaret sitesi",
+        "p4": "Web uygulaması"
+      },
+      "mobile": {
+        "title": "Mobil Uygulama Geliştirme",
+        "text": "iOS ve Android için uygulamalar: tasarım, yazılım, App Store ve Google Play'de yayın.",
+        "p1": "iOS",
+        "p2": "Android"
+      },
+      "seo": {
+        "title": "SEO ve GEO",
+        "text": "Sitenizin Google'da ve ChatGPT, Gemini, Perplexity gibi yapay zeka arama sistemlerinde bulunması.",
+        "p1": "SEO optimizasyonu",
+        "p2": "GEO — yapay zeka aramalarında görünürlük"
+      },
+      "ads": {
+        "title": "Dijital Reklam",
+        "text": "Hedefli reklam kampanyalarının kurulumu, yönetimi ve raporlanması.",
+        "p1": "Meta Ads",
+        "p2": "TikTok Ads",
+        "p3": "LinkedIn Ads",
+        "p4": "Google Ads"
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "text": "Web sitenizin ve sosyal medya hesaplarınızın teknik optimizasyonu, güvenliği ve kurtarılması.",
+        "webTitle": "Web sitesi",
+        "w1": "Teknik SEO optimizasyonu",
+        "w2": "Güvenlik optimizasyonu",
+        "w3": "Dış bağlantılar (Backlink)",
+        "w4": "Site içi bağlantı yapısı (Internal Linking)",
+        "socialTitle": "Sosyal medya hesapları",
+        "s1": "Kapatılan sosyal medya hesaplarının yeniden açılması",
+        "s2": "Çalınan ve silinen hesapların kurtarılması",
+        "s3": "Sahte hesapların ve taklitçi profillerin kapattırılması",
+        "s4": "Reklam hesaplarının kurtarılması",
+        "s5": "Kısıtlanan hesapların kısıtlamasının kaldırılması",
+        "s6": "Hesap güvenliğinin sağlanması"
+      }
+    },
+    "products": {
+      "eyebrow": "Ürünlerimiz",
+      "title": "Hazır çözümler, hızlı başlangıç",
+      "subtitle": "İşletmenizin hemen kullanmaya başlayabileceği ürünler.",
+      "chatbot": {
+        "title": "Chatbot",
+        "text": "Web sitenizde ve mesajlaşma kanallarınızda müşteri sorularını 7/24 yanıtlayan yapay zeka asistanı.",
+        "user": "Yarın saat 15:00'te boş yer var mı?",
+        "bot": "Evet, 15:00 ve 16:30 boş. Hangi saate yazayım?"
+      },
+      "combo": {
+        "title": "Sosyal Medya Kombo Paketleri",
+        "text": "İçerik, tasarım ve yönetim tek pakette. Platformunuzu seçin.",
+        "instagramTitle": "Instagram Kombo Paketi",
+        "instagramText": "Instagram sayfanızın içeriği, tasarımı ve yönetimi.",
+        "tiktokTitle": "TikTok Kombo Paketi",
+        "tiktokText": "TikTok için kısa videoların planlanması, hazırlanması ve paylaşılması.",
+        "youtubeTitle": "YouTube Kombo Paketi",
+        "youtubeText": "YouTube kanalınız için video içeriği, tasarım ve kanal optimizasyonu."
+      }
+    },
+    "pricing": {
+      "eyebrow": "Fiyatlar",
+      "title": "Önce görün, sonra ödeyin",
+      "subtitle": "Gizli ücret yok. Kesin fiyat, projenin kapsamına göre yazılı teklifte verilir.",
+      "demoName": "Demo",
+      "demoPrice": "0 ₼",
+      "demoPeriod": "2 saatte hazır",
+      "demoText": "İşletmenize uygun site demosu. İnceleyin, karar verin.",
+      "demoP1": "Sektörünüze uygun tasarım",
+      "demoP2": "Mobil uyumlu",
+      "demoP3": "Taahhüt yok",
+      "launchName": "Yayın paketi",
+      "launchPrice": "399 ₼'den",
+      "launchPeriod": "yıllık",
+      "launchBadge": "Demoyu beğendiyseniz",
+      "launchText": "Demoyu temel alarak sitenizi tamamlar ve yayına alırız.",
+      "launchP1": "Demoya dayalı hazır site",
+      "launchP2": "Yayın ve teknik destek",
+      "launchP3": "Kesin fiyat yazılı teklifte",
+      "customName": "Özel proje",
+      "customPrice": "Özel",
+      "customPeriod": "görüşme ile",
+      "customText": "E-ticaret sitesi, web uygulaması, mobil uygulama veya entegrasyonlar.",
+      "customP1": "Projeye göre hesaplanır",
+      "customP2": "Aşamalı ödeme",
+      "customP3": "Yazılı teklif",
+      "note": "Fiyatlar manat (₼) cinsindendir.",
+      "teaserTitle": "Demo ücretsiz, yayın yıllık 399 ₼'den",
+      "teaserLink": "Fiyatlara göz atın"
+    },
+    "faq": {
+      "eyebrow": "Sorular",
+      "title": "Sık sorulan sorular",
+      "q1": "Demo gerçekten ücretsiz mi?",
+      "a1": "Evet. Demoyu biz hazırlarız, siz incelersiniz. Beğenmezseniz hiçbir ödeme yapmazsınız.",
+      "q2": "Demo için ne göndermem gerekiyor?",
+      "a2": "WhatsApp'tan işletmeniz hakkında 2–3 cümle yazın: ne iş yaptığınızı ve sitede neler olması gerektiğini. Logonuz varsa onu da gönderin.",
+      "q3": "Beğenirsem sonra ne olur?",
+      "a3": "Siteyi isteklerinize göre tamamlar ve yıllık 399 ₼'den başlayan paketle yayına alırız.",
+      "q4": "E-ticaret sitesi veya mobil uygulama gerekirse?",
+      "a4": "Bu tür projelerin fiyatı kapsama göre hesaplanır. Bize yazın, yazılı teklif gönderelim."
+    },
+    "final": {
+      "title": "Tek bir mesaj yazın, demonuz 2 saatte hazır olsun",
+      "text": "İşletmeniz hakkında kısaca yazın. Demoyu gördükten sonra karar verirsiniz."
+    },
+    "mobileNav": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "demo": "Demo",
+      "work": "Projeler",
+      "menu": "Menü"
+    },
+    "footer": {
+      "tagline": "Web siteleri, mobil uygulamalar ve dijital reklam. Bakü, Azerbaycan.",
+      "company": "Şirket",
+      "services": "Hizmetler",
+      "contact": "İletişim",
+      "rights": "Tüm hakları saklıdır."
     }
   }
 }

@@ -62,7 +62,7 @@ export function FAQ({ title, subtitle, items, ctaText, ctaButton }: FAQProps) {
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-snow font-semibold transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle size={18} />
                 {ctaButton}

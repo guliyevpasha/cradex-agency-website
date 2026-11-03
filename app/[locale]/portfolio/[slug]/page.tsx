@@ -68,16 +68,6 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
   const t = useTranslations('portfolio')
   const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
 
-  // Debug: Log media gallery data
-  if (item.mediaGallery) {
-    console.log('[Portfolio] Media Gallery:', {
-      socialMediaPosts: item.mediaGallery.socialMediaPosts?.length || 0,
-      motionDesigns: item.mediaGallery.motionDesigns?.map(m => ({ url: m.url, caption: m.caption?.[locale] })),
-      videoContent: item.mediaGallery.videoContent?.map(v => ({ url: v.url, caption: v.caption?.[locale] })),
-      adResults: item.mediaGallery.adResults?.length || 0,
-    })
-  }
-
   // Get localized content - prioritize locale-specific object if available, fallback to string key
   const title = item.title?.[locale] || item.titleKey
   const description = item.description?.[locale] || item.descriptionKey  
@@ -362,12 +352,12 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             {post.caption?.[locale] && (
                               <div className="absolute bottom-0 left-0 right-0 p-4">
-                                <p className="text-white text-sm font-medium">{post.caption[locale]}</p>
+                                <p className="text-snow text-sm font-medium">{post.caption[locale]}</p>
                               </div>
                             )}
                           </div>
                           {/* Format badge */}
-                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-snow text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                             {aspectRatio === '9:16' ? 'Story' : 'Feed'}
                           </div>
                         </div>
@@ -420,11 +410,11 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                           )}
                           {motion.caption?.[locale] && (
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
-                              <p className="text-white text-sm font-medium">{motion.caption[locale]}</p>
+                              <p className="text-snow text-sm font-medium">{motion.caption[locale]}</p>
                             </div>
                           )}
                           {/* Format badge */}
-                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-snow text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                             {aspectRatio === '4:5' ? 'Feed' : 'Story'}
                           </div>
                         </div>
@@ -477,11 +467,11 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                           )}
                           {video.caption?.[locale] && (
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
-                              <p className="text-white text-sm font-medium">{video.caption[locale]}</p>
+                              <p className="text-snow text-sm font-medium">{video.caption[locale]}</p>
                             </div>
                           )}
                           {/* Format badge */}
-                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-snow text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                             {aspectRatio === '4:5' ? 'Feed' : 'Reels'}
                           </div>
                         </div>
@@ -525,7 +515,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         )}
                         {result.caption?.[locale] && (
                           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6">
-                            <p className="text-white font-medium">{result.caption[locale]}</p>
+                            <p className="text-snow font-medium">{result.caption[locale]}</p>
                           </div>
                         )}
                       </div>

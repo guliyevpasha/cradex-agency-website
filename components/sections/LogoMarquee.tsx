@@ -103,20 +103,24 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
       {/* Colour-reveal styles — pure CSS class toggle, no React state */}
       <style>{`
         .lm-card {
-          border-color: rgba(255,255,255,0.1);
-          background: rgba(255,255,255,0.03);
+          border-color: rgb(var(--line));
+          background: rgb(var(--bg-secondary));
           box-shadow: none;
           transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
         }
         .lm-card.lm-lit {
-          border-color: rgba(108,99,255,0.4);
-          background: rgba(108,99,255,0.05);
-          box-shadow: 0 0 16px rgba(108,99,255,0.18);
+          border-color: rgba(36,160,255,0.4);
+          background: rgba(36,160,255,0.05);
+          box-shadow: 0 0 16px rgba(36,160,255,0.18);
         }
         .lm-card img {
+          filter: brightness(0) grayscale(1);
+          opacity: 0.55;
+          transition: filter 0.4s ease, opacity 0.4s ease;
+        }
+        .dark .lm-card img {
           filter: brightness(0) invert(1) grayscale(1);
           opacity: 0.45;
-          transition: filter 0.4s ease, opacity 0.4s ease;
         }
         .lm-card.lm-lit img {
           filter: none;

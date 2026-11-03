@@ -95,7 +95,7 @@ function BadgeCard({ badge }: { badge: BadgeItem }) {
       
       {/* Icon with gradient */}
       <div className={`relative p-2 rounded-lg bg-gradient-to-br ${badge.gradient} shadow-lg`}>
-        <Icon className="w-4 h-4 text-white" strokeWidth={2.5} />
+        <Icon className="w-4 h-4 text-snow" strokeWidth={2.5} />
       </div>
       
       {/* Text */}

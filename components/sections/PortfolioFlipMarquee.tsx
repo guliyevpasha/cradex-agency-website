@@ -107,17 +107,6 @@ function FlipCard({ item }: FlipCardProps) {
     .replace(/-+/g, '-')
     .replace(/^-+|-+$/g, '')
 
-  // Debug log
-  if (typeof window !== 'undefined') {
-    console.log('[FlipCard] Item data:', {
-      originalSlug: item.slug,
-      sanitizedSlug,
-      titleType: typeof item.title,
-      title: title,
-      locale
-    })
-  }
-
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50
 
@@ -193,13 +182,13 @@ function FlipCard({ item }: FlipCardProps) {
               {/* Top Section */}
               <div className="space-y-1.5 sm:space-y-2 md:space-y-2.5">
                 {/* Title - Optimized for smaller mobile cards */}
-                <h3 className="text-white font-display font-bold text-[11px] sm:text-sm md:text-base lg:text-lg leading-tight line-clamp-2">
+                <h3 className="text-snow font-display font-bold text-[11px] sm:text-sm md:text-base lg:text-lg leading-tight line-clamp-2">
                   {item.clientName} üçün hazırlanmış {t(`categories.${item.serviceCategory}` as any).toLowerCase()}
                 </h3>
 
                 {/* Description - Visible on all screens */}
                 {description && (
-                  <p className="text-white/60 text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-2">
+                  <p className="text-snow/60 text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-2">
                     {description}
                   </p>
                 )}
@@ -208,8 +197,8 @@ function FlipCard({ item }: FlipCardProps) {
               {/* Bottom Section */}
               <div className="space-y-1.5 sm:space-y-2">
                 {/* Meta Row - Client & Year */}
-                <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 text-white/50 text-[10px] sm:text-xs md:text-sm">
-                  <span className="font-medium text-white/70 truncate">{item.clientName}</span>
+                <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 text-snow/50 text-[10px] sm:text-xs md:text-sm">
+                  <span className="font-medium text-snow/70 truncate">{item.clientName}</span>
                   {year && (
                     <>
                       <span>•</span>
@@ -222,13 +211,13 @@ function FlipCard({ item }: FlipCardProps) {
                 <div className="flex items-center justify-between gap-1.5 sm:gap-2">
                   {/* Category Badge */}
                   <div className="inline-flex items-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-lg bg-white/5 border border-white/10">
-                    <span className="text-white/80 text-[9px] sm:text-[10px] md:text-xs font-medium truncate max-w-[60px] sm:max-w-none">
+                    <span className="text-snow/80 text-[9px] sm:text-[10px] md:text-xs font-medium truncate max-w-[60px] sm:max-w-none">
                       {t(`categories.${item.serviceCategory}` as any)}
                     </span>
                   </div>
 
                   {/* View Project Button */}
-                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-white text-[10px] sm:text-xs md:text-sm font-medium group-hover:text-accent-primary transition-colors whitespace-nowrap">
+                  <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-snow text-[10px] sm:text-xs md:text-sm font-medium group-hover:text-accent-primary transition-colors whitespace-nowrap">
                     <span className="hidden sm:inline">Layihəyə keçid et</span>
                     <span className="sm:hidden">Keçid</span>
                     <ArrowRight size={12} className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-0.5 transition-transform" />

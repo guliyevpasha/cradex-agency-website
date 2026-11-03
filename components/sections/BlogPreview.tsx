@@ -46,7 +46,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
         className="absolute inset-0 pointer-events-none opacity-10"
         style={{
           background: `
-            radial-gradient(ellipse 60% 40% at 30% 50%, rgba(108,99,255,0.2) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 40% at 30% 50%, rgba(36,160,255,0.2) 0%, transparent 50%),
             radial-gradient(ellipse 60% 40% at 70% 50%, rgba(151,71,255,0.15) 0%, transparent 50%)
           `,
         }}
@@ -173,7 +173,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
         >
           <Link
             href={`/${locale}/journal`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#06B6D4] text-white font-semibold shadow-lg hover:shadow-[0_0_40px_rgba(79,70,229,0.5)] transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#06B6D4] text-snow font-semibold shadow-lg hover:shadow-[0_0_40px_rgba(79,70,229,0.5)] transition-all duration-300 hover:scale-105"
           >
             {t('viewAll')}
             <ArrowRight size={18} />

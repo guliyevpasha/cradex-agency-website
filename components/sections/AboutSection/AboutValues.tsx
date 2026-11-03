@@ -46,7 +46,7 @@ export function AboutValues({
       ref={ref}
       className="relative py-24 lg:py-32 overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #1a1a2e 0%, #16213e 100%)',
+        background: 'rgb(var(--bg-secondary))',
       }}
     >
       {/* Subtle gradient overlay */}
@@ -54,8 +54,8 @@ export function AboutValues({
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           background: `
-            radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108,99,255,0.1) 0%, transparent 50%),
-            radial-gradient(ellipse 60% 50% at 50% 100%, rgba(0,212,255,0.1) 0%, transparent 50%)
+            radial-gradient(ellipse 60% 50% at 50% 0%, rgba(36,160,255,0.1) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 50% at 50% 100%, rgba(124,200,255,0.1) 0%, transparent 50%)
           `,
         }}
         aria-hidden="true"
