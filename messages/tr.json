@@ -2386,16 +2386,50 @@
         "title": "Sosyal Medya Kombo Paketleri",
         "text": "Uygun fiyatlı ve keşfet etkili kombo paketlerimiz.",
         "instagramTitle": "Instagram Kombo Paketi",
-        "instagramText": "Instagram sayfanızın içeriği, tasarımı ve yönetimi.",
         "tiktokTitle": "TikTok Kombo Paketi",
-        "tiktokText": "TikTok için kısa videoların planlanması, hazırlanması ve paylaşılması.",
         "youtubeTitle": "YouTube Kombo Paketi",
-        "youtubeText": "YouTube kanalınız için video içeriği, tasarım ve kanal optimizasyonu.",
         "instagramPrice": "20 ₼",
         "tiktokPrice": "20 ₼",
         "youtubePrice": "35 ₼",
         "order": "Sipariş ver",
-        "orderMessage": "Merhaba, {package} sipariş etmek istiyorum"
+        "orderMessage": "Merhaba, {package} sipariş etmek istiyorum",
+        "instagramFeatures": [
+          "1000 Takipçi",
+          "1000 Beğeni",
+          "50.000 İzlenme",
+          "500 Kaydetme",
+          "500 Paylaşım",
+          "500 Etkileşim",
+          "500 Erişim",
+          "500 Ziyaret",
+          "7/24 Telafi",
+          "Keşfet etkisi"
+        ],
+        "tiktokFeatures": [
+          "500 Takipçi",
+          "1000 Beğeni",
+          "10.000 İzlenme",
+          "500 Kaydetme",
+          "500 Paylaşım",
+          "500 Etkileşim",
+          "500 Erişim",
+          "500 Ziyaret",
+          "7/24 Telafi",
+          "Keşfet etkisi"
+        ],
+        "youtubeFeatures": [
+          "250 Abone",
+          "500 Beğeni",
+          "500 İzlenme",
+          "500 Kaydetme",
+          "500 Paylaşım",
+          "500 Etkileşim",
+          "500 Erişim",
+          "500 Ziyaret",
+          "7/24 Telafi",
+          "Keşfet etkisi"
+        ],
+        "included": "Her şey dahil"
       }
     },
     "pricing": {
@@ -2501,6 +2535,24 @@
       "all": "Tüm yazılar",
       "read": "Oku",
       "minutes": "{minutes} dk"
+    },
+    "email": {
+      "eyebrow": "Kurumsal e-posta",
+      "title": "E-postanızda da şirketinizin adı olsun",
+      "text": "E-posta adreslerini kendi alan adınızla oluşturun. Hesap sayısını ve gönderim limitlerini ihtiyacınıza göre birlikte belirleyelim.",
+      "example": "Adres örneği",
+      "nameLabel": "Ad",
+      "domainLabel": "Alan adı",
+      "name": "info",
+      "domain": "isletmeniz.com",
+      "p1": "Her müşteriye profesyonel bir görünüm",
+      "p2": "Spam filtresi ve güvenli giriş",
+      "p3": "Telefonda ve bilgisayarda çalışır",
+      "inboxFrom": "Yeni müşteri",
+      "inboxSubject": "Fiyat talebi",
+      "inboxPreview": "Merhaba! Web sitenizde hizmetlerinizi inceledim…",
+      "cta": "Kurumsal e-posta istiyorum",
+      "message": "Merhaba, {email} adresiyle kurumsal e-posta oluşturmak istiyorum"
     }
   }
 }

@@ -4,7 +4,8 @@
  */
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowRight, Bot, Instagram, Music2, Youtube } from 'lucide-react'
+import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react'
+import { Tilt } from '@/components/ui/Tilt'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { SectionHeading } from './SectionHeading'
 
@@ -31,52 +32,75 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
           )}
         </div>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-[1fr_1.2fr]">
-          <article id="chatbot" className="scroll-mt-28 rounded-3xl bg-ink p-7 text-snow ring-1 ring-transparent dark:ring-snow/10 sm:p-9">
+        {/* Chatbot */}
+        <article
+          id="chatbot"
+          className="mt-12 grid scroll-mt-28 gap-8 rounded-[32px] bg-ink p-7 text-snow ring-1 ring-transparent dark:ring-snow/10 sm:p-10 lg:grid-cols-2 lg:items-center"
+        >
+          <div>
             <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-strong text-snow">
               <Bot size={22} aria-hidden="true" />
             </span>
-            <h3 className="mt-6 text-2xl font-bold tracking-tight">{t('chatbot.title')}</h3>
-            <p className="mt-2 max-w-md leading-relaxed text-[#A6B0BD]">{t('chatbot.text')}</p>
-            <div className="mt-8 space-y-3" aria-hidden="true">
-              <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm text-snow">{t('chatbot.user')}</p>
-              <p className="w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#1C2129] px-4 py-2.5 text-sm text-[#E6EAEF]">
-                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5CB8FF]">Cradex AI</span>
-                {t('chatbot.bot')}
-              </p>
-            </div>
-          </article>
+            <h3 className="mt-6 text-3xl font-bold tracking-tight">{t('chatbot.title')}</h3>
+            <p className="mt-3 max-w-md text-lg leading-relaxed text-[#A6B0BD]">{t('chatbot.text')}</p>
+          </div>
+          <div className="space-y-3 rounded-3xl bg-[#13171D] p-5 sm:p-6" aria-hidden="true">
+            <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm text-snow">{t('chatbot.user')}</p>
+            <p className="w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#1C2129] px-4 py-2.5 text-sm text-[#E6EAEF]">
+              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5CB8FF]">Cradex AI</span>
+              {t('chatbot.bot')}
+            </p>
+          </div>
+        </article>
 
-          <article className="rounded-3xl border border-line bg-bg-secondary p-7 sm:p-9">
-            <h3 className="text-2xl font-bold tracking-tight text-text-primary">{t('combo.title')}</h3>
-            <p className="mt-2 max-w-lg leading-relaxed text-text-secondary">{t('combo.text')}</p>
-            <ul className="mt-7 grid gap-3">
-              {COMBOS.map(({ id, icon: Icon, tint }) => (
-                <li key={id} id={id} className="flex scroll-mt-28 flex-wrap items-center gap-4 rounded-2xl border border-line bg-bg-primary p-4 sm:flex-nowrap">
-                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${tint} text-snow`}>
-                    <Icon size={20} aria-hidden="true" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold text-text-primary">{t(`combo.${id}Title`)}</span>
-                    <span className="mt-0.5 block text-sm leading-relaxed text-text-secondary">{t(`combo.${id}Text`)}</span>
-                  </span>
-                  <span className="flex shrink-0 items-center gap-3">
-                    <span className="rounded-full bg-[#16A34A]/10 px-3 py-1 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
-                      {t(`combo.${id}Price`)}
-                    </span>
-                    <a
-                      href={whatsappUrl(t('combo.orderMessage', { package: t(`combo.${id}Title`) }))}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-full bg-text-primary px-4 py-2 text-sm font-semibold text-bg-primary transition-opacity hover:opacity-85"
-                    >
-                      {t('combo.order')}
-                    </a>
-                  </span>
+        {/* Social media combo packages */}
+        <div className="mt-16">
+          <h3 className="text-center text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl">{t('combo.title')}</h3>
+          <p className="mt-3 text-center text-lg text-text-secondary">{t('combo.text')}</p>
+
+          <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {COMBOS.map(({ id, icon: Icon, tint }) => {
+              const title = t(`combo.${id}Title`)
+              const price = t(`combo.${id}Price`)
+              const features = t.raw(`combo.${id}Features`) as string[]
+              return (
+                <li key={id} id={id} className="scroll-mt-28">
+                  <Tilt max={5} className="h-full" innerClassName="h-full">
+                    <article className="relative flex h-full flex-col rounded-[28px] border border-line bg-bg-primary p-7 shadow-card">
+                      <span className="tilt-glare" />
+                      <div className="tilt-z1 flex items-center gap-4">
+                        <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${tint} text-snow shadow-card`}>
+                          <Icon size={26} aria-hidden="true" />
+                        </span>
+                        <span>
+                          <span className="block text-lg font-bold text-text-primary">{title}</span>
+                          <span className="mt-1 inline-flex rounded-full bg-[#16A34A]/10 px-2.5 py-0.5 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
+                            {t('combo.included')} · {price}
+                          </span>
+                        </span>
+                      </div>
+                      <ul className="tilt-z1 mt-7 grid flex-1 grid-cols-2 gap-x-4 gap-y-3">
+                        {features.map((f) => (
+                          <li key={f} className="flex items-center gap-2 text-[14px] text-text-secondary">
+                            <Check size={15} className="shrink-0 text-accent-primary" aria-hidden="true" />
+                            <span className="min-w-0">{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href={whatsappUrl(t('combo.orderMessage', { package: title }))}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tilt-z2 mt-8 inline-flex items-center justify-center rounded-full bg-text-primary px-5 py-3.5 text-[15px] font-semibold text-bg-primary transition-opacity hover:opacity-85"
+                      >
+                        {t('combo.order')} · {price}
+                      </a>
+                    </article>
+                  </Tilt>
                 </li>
-              ))}
-            </ul>
-          </article>
+              )
+            })}
+          </ul>
         </div>
       </div>
     </section>

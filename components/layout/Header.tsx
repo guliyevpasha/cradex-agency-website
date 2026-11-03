@@ -33,7 +33,10 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
       : PRODUCT_LINKS.map((p) => ({
           href: `/${locale}/products#${p.id}`,
           title: tP(p.key),
-          text: p.id === 'chatbot' ? tP('chatbot.text') : tP(`combo.${p.id}Text`),
+          text:
+            p.id === 'chatbot'
+              ? tP('chatbot.text')
+              : (tP.raw(`combo.${p.id}Features`) as string[]).slice(0, 4).join(' · '),
         }))
 
   return (

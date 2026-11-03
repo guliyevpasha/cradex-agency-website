@@ -8,7 +8,7 @@ import { DemoHero } from '@/components/home/DemoHero'
 import { ProcessSteps } from '@/components/home/ProcessSteps'
 import { ServicesGrid } from '@/components/home/ServicesGrid'
 import { ProductsShowcase } from '@/components/home/ProductsShowcase'
-import { PricingPlans } from '@/components/home/PricingPlans'
+import { CorporateEmail } from '@/components/home/CorporateEmail'
 import { DemoFaq } from '@/components/home/DemoFaq'
 import { FinalCta } from '@/components/home/FinalCta'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
@@ -49,7 +49,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <ServicesGrid />
       <WorkShowcase />
       <ProductsShowcase />
-      <PricingPlans />
+      <CorporateEmail />
       <ReviewsSection testimonials={testimonials} />
       <DemoFaq />
       <BlogShowcase articles={recentArticles} />

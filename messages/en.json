@@ -2386,16 +2386,50 @@
         "title": "Social Media Combo Packages",
         "text": "Affordable combo packages with Explore-page boost.",
         "instagramTitle": "Instagram Combo Package",
-        "instagramText": "Content, design and management for your Instagram page.",
         "tiktokTitle": "TikTok Combo Package",
-        "tiktokText": "Planning, producing and publishing short videos for TikTok.",
         "youtubeTitle": "YouTube Combo Package",
-        "youtubeText": "Video content, design and channel optimization for your YouTube channel.",
         "instagramPrice": "20 ₼",
         "tiktokPrice": "20 ₼",
         "youtubePrice": "35 ₼",
         "order": "Order",
-        "orderMessage": "Hello, I would like to order the {package}"
+        "orderMessage": "Hello, I would like to order the {package}",
+        "instagramFeatures": [
+          "1,000 Followers",
+          "1,000 Likes",
+          "50,000 Views",
+          "500 Saves",
+          "500 Shares",
+          "500 Engagements",
+          "500 Reach",
+          "500 Profile visits",
+          "24/7 Refill",
+          "Explore boost"
+        ],
+        "tiktokFeatures": [
+          "500 Followers",
+          "1,000 Likes",
+          "10,000 Views",
+          "500 Saves",
+          "500 Shares",
+          "500 Engagements",
+          "500 Reach",
+          "500 Profile visits",
+          "24/7 Refill",
+          "For You boost"
+        ],
+        "youtubeFeatures": [
+          "250 Subscribers",
+          "500 Likes",
+          "500 Views",
+          "500 Saves",
+          "500 Shares",
+          "500 Engagements",
+          "500 Reach",
+          "500 Channel visits",
+          "24/7 Refill",
+          "Recommendations boost"
+        ],
+        "included": "All included"
       }
     },
     "pricing": {
@@ -2501,6 +2535,24 @@
       "all": "All articles",
       "read": "Read",
       "minutes": "{minutes} min"
+    },
+    "email": {
+      "eyebrow": "Business email",
+      "title": "Put your company name in your email too",
+      "text": "Create email addresses on your own domain. We will choose the number of accounts and sending limits that fit your needs together.",
+      "example": "Address example",
+      "nameLabel": "Name",
+      "domainLabel": "Domain",
+      "name": "info",
+      "domain": "yourbusiness.com",
+      "p1": "A professional look to every client",
+      "p2": "Spam filtering and secure sign-in",
+      "p3": "Works on phone and computer",
+      "inboxFrom": "New client",
+      "inboxSubject": "Price request",
+      "inboxPreview": "Hi! I came across your services on your website…",
+      "cta": "I want business email",
+      "message": "Hi, I would like to set up a business email at {email}"
     }
   }
 }

@@ -2390,16 +2390,50 @@
         "title": "Sosial Media Kombo Paketləri",
         "text": "Əlverişli və kəşfet effektli kombo paketlərimiz!",
         "instagramTitle": "Instagram Kombo Paketi",
-        "instagramText": "Instagram səhifənizin kontenti, dizaynı və idarə olunması.",
         "tiktokTitle": "TikTok Kombo Paketi",
-        "tiktokText": "TikTok üçün qısa videoların planlanması, hazırlanması və paylaşılması.",
         "youtubeTitle": "YouTube Kombo Paketi",
-        "youtubeText": "YouTube kanalınız üçün video kontent, dizayn və kanal optimallaşdırılması.",
         "instagramPrice": "20 ₼",
         "tiktokPrice": "20 ₼",
         "youtubePrice": "35 ₼",
         "order": "Sifariş et",
-        "orderMessage": "Salam, {package} sifariş etmək istəyirəm"
+        "orderMessage": "Salam, {package} sifariş etmək istəyirəm",
+        "instagramFeatures": [
+          "1000 İzləyici",
+          "1000 Bəyənmə",
+          "50.000 Baxış",
+          "500 Yadda saxlama",
+          "500 Paylaşım",
+          "500 Qarşılıqlı əlaqə",
+          "500 Əhatə",
+          "500 Ziyarət",
+          "7/24 Kompensasiya",
+          "Kəşfet effekti"
+        ],
+        "tiktokFeatures": [
+          "500 İzləyici",
+          "1000 Bəyənmə",
+          "10.000 Baxış",
+          "500 Yadda saxlama",
+          "500 Paylaşım",
+          "500 Qarşılıqlı əlaqə",
+          "500 Əhatə",
+          "500 Ziyarət",
+          "7/24 Kompensasiya",
+          "Kəşfet effekti"
+        ],
+        "youtubeFeatures": [
+          "250 Abunəçi",
+          "500 Bəyənmə",
+          "500 Baxış",
+          "500 Yadda saxlama",
+          "500 Paylaşım",
+          "500 Qarşılıqlı əlaqə",
+          "500 Əhatə",
+          "500 Ziyarət",
+          "7/24 Kompensasiya",
+          "Kəşfet effekti"
+        ],
+        "included": "Hər şey daxil"
       }
     },
     "pricing": {
@@ -2505,6 +2539,24 @@
       "all": "Bütün yazılar",
       "read": "Oxu",
       "minutes": "{minutes} dəq"
+    },
+    "email": {
+      "eyebrow": "Korporativ e-poçt",
+      "title": "E-poçtunuzda da şirkətinizin adı olsun",
+      "text": "E-poçt ünvanlarını öz domeninizlə yaradın. Hesab sayını və göndəriş limitlərini ehtiyacınıza görə birlikdə seçək.",
+      "example": "Ünvan nümunəsi",
+      "nameLabel": "Ad",
+      "domainLabel": "Domen",
+      "name": "info",
+      "domain": "sizinbiznesiniz.az",
+      "p1": "Müştərilərin gözündə peşəkar görünüş",
+      "p2": "Spam filtri və təhlükəsiz giriş",
+      "p3": "Telefonda və kompüterdə işləyir",
+      "inboxFrom": "Yeni müştəri",
+      "inboxSubject": "Qiymət sorğusu",
+      "inboxPreview": "Salam! Saytınızda xidmətlərinizlə tanış oldum…",
+      "cta": "Korporativ e-poçt istəyirəm",
+      "message": "Salam, {email} ünvanı ilə korporativ e-poçt yaratmaq istəyirəm"
     }
   }
 }
