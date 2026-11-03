@@ -90,21 +90,22 @@ export function CorporateEmail() {
                     <span className="min-w-0 flex-1 truncate text-[15px] font-bold text-text-primary">{address}</span>
                     <span className="rounded-full bg-brand-strong px-2 py-0.5 text-xs font-bold text-snow">3</span>
                   </div>
-                  {[0, 1, 2].map((i) => (
+                  {(['', '2', '3'] as const).map((n, i) => (
                     <div key={i} className="flex items-start gap-3 border-b border-line px-5 py-4 last:border-0">
-                      <span className={i === 0 ? 'mt-1 h-2 w-2 shrink-0 rounded-full bg-brand' : 'mt-1 h-2 w-2 shrink-0'} />
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand" />
                       <span className="min-w-0 flex-1">
                         <span className="flex items-center justify-between gap-3">
-                          <span className={i === 0 ? 'truncate text-sm font-bold text-text-primary' : 'truncate text-sm font-semibold text-text-secondary'}>
-                            {i === 0 ? t('inboxFrom') : i === 1 ? 'Google Workspace' : 'Cradex Agency'}
-                          </span>
-                          <span className="shrink-0 text-xs text-text-muted">{['09:41', '08:15', '07:30'][i]}</span>
+                          <span className="truncate text-sm font-bold text-text-primary">{t(`inbox${n}From`)}</span>
+                          <span className="shrink-0 text-xs text-text-muted">{['09:41', '09:12', '08:30'][i]}</span>
                         </span>
                         <span className="mt-0.5 flex items-center gap-1.5 truncate text-sm text-text-secondary">
-                          {i === 0 && <Star size={13} className="shrink-0 fill-[#F5B301] text-[#F5B301]" />}
-                          {i === 0 ? t('inboxSubject') : <Mail size={13} className="shrink-0" />}
-                          {i === 0 && <span className="truncate text-text-muted">— {t('inboxPreview')}</span>}
-                          {i > 0 && <span className="h-2 w-40 rounded-full bg-bg-tertiary" />}
+                          {i === 0 ? (
+                            <Star size={13} className="shrink-0 fill-[#F5B301] text-[#F5B301]" />
+                          ) : (
+                            <Mail size={13} className="shrink-0 text-accent-ink" />
+                          )}
+                          <span className="shrink-0 font-medium">{t(`inbox${n}Subject`)}</span>
+                          <span className="truncate text-text-muted">— {t(`inbox${n}Preview`)}</span>
                         </span>
                       </span>
                     </div>

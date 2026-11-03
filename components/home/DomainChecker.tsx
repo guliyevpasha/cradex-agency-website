@@ -47,15 +47,15 @@ export function DomainChecker() {
   }
 
   return (
-    <div className="mx-auto mt-16 max-w-4xl text-center">
-      <span className="inline-flex items-center gap-2 rounded-full border border-[#16A34A]/30 bg-[#16A34A]/10 px-3.5 py-1.5 text-[13px] font-semibold text-[#15803D] dark:text-[#4ADE80]">
+    <div className="relative left-1/2 mt-20 w-screen max-w-[1680px] -translate-x-1/2 px-4 text-center sm:px-6 lg:px-12">
+      <span className="inline-flex items-center gap-2 rounded-full border border-accent-primary/30 bg-accent-primary/10 px-3.5 py-1.5 text-[13px] font-semibold text-accent-ink">
         <span className="h-1.5 w-1.5 rounded-full bg-current" />
         {t('badge')}
       </span>
       <h3 className="mt-5 text-display-md font-extrabold tracking-tight text-text-primary">{t('title')}</h3>
       <p className="mx-auto mt-3 max-w-xl text-text-secondary">{t('text')}</p>
 
-      <div className="mt-8 rounded-3xl border border-line bg-bg-primary p-6 text-left shadow-card sm:p-8">
+      <div className="mt-10 rounded-[32px] border border-line bg-bg-secondary p-6 text-left shadow-card sm:p-10 lg:p-12">
         <h4 className="text-xl font-bold text-text-primary">{t('formTitle')}</h4>
         <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">{t('formText')}</p>
 
@@ -77,13 +77,13 @@ export function DomainChecker() {
               placeholder={t('placeholder')}
               aria-invalid={Boolean(error)}
               aria-describedby={error ? 'domain-error' : undefined}
-              className="h-14 w-full rounded-2xl border border-line bg-bg-secondary pl-11 pr-4 text-[15px] text-text-primary outline-none transition-colors placeholder:text-text-muted focus:border-accent-primary"
+              className="h-14 w-full rounded-2xl border border-line bg-bg-primary pl-11 pr-4 text-[15px] text-text-primary outline-none transition-colors placeholder:text-text-muted focus:border-accent-primary"
             />
           </div>
           <button
             type="submit"
             disabled={busy}
-            className="h-14 rounded-2xl bg-[#15803D] px-7 text-[15px] font-semibold text-snow transition-colors hover:bg-[#166534] disabled:opacity-60"
+            className="h-14 rounded-2xl bg-brand-strong px-8 text-[15px] font-semibold text-snow shadow-brand transition-colors hover:bg-[#0967B5] disabled:opacity-60"
           >
             {busy ? t('checking') : t('button')}
           </button>
@@ -99,9 +99,9 @@ export function DomainChecker() {
 
         {results && (
           <>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
               {results.map(({ domain, status }) => (
-                <li key={domain} className="flex items-center justify-between gap-3 rounded-xl border border-line bg-bg-secondary px-4 py-3">
+                <li key={domain} className="flex items-center justify-between gap-3 rounded-xl border border-line bg-bg-primary px-4 py-3">
                   <span className="truncate text-[15px] font-semibold text-text-primary">{domain}</span>
                   <span className="flex shrink-0 items-center gap-2">
                     <span

@@ -2469,14 +2469,70 @@
     "faq": {
       "eyebrow": "Suallar",
       "title": "Tez-tez verilən suallar",
-      "q1": "Demo həqiqətən pulsuzdur?",
-      "a1": "Bəli. Demonu hazırlayırıq, siz baxırsınız. Bəyənməsəniz, heç nə ödəmirsiniz.",
-      "q2": "Demo üçün nə göndərməliyəm?",
-      "a2": "WhatsApp-a biznesiniz haqqında 2–3 cümlə yazın: nə ilə məşğul olursunuz və saytda nə olmalıdır. Loqonuz varsa, onu da göndərin.",
-      "q3": "Bəyənsəm, sonra nə olur?",
-      "a3": "Saytı istəklərinizə görə tamamlayır və illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
-      "q4": "Onlayn mağaza və ya mobil tətbiq lazımdırsa?",
-      "a4": "Bu cür layihələrin qiyməti həcmə görə hesablanır. Bizə yazın, yazılı təklif göndərək."
+      "subtitle": "Xidmətlərimiz və məhsullarımız haqqında ən çox soruşulanlar. Cavabını tapmadınız? Bizə yazın.",
+      "ask": "Sualınızı WhatsApp-da verin",
+      "askMessage": "Salam, bir sualım var",
+      "groups": {
+        "all": "Hamısı",
+        "web": "Veb sayt",
+        "mobile": "Mobil tətbiq",
+        "seo": "SEO və GEO",
+        "ads": "Reklam",
+        "support": "Texniki xidmət",
+        "products": "Məhsullar"
+      },
+      "items": [
+        {
+          "g": "web",
+          "q": "Demo həqiqətən pulsuzdur?",
+          "a": "Bəli. Biznesiniz üçün sayt demosunu hazırlayırıq, siz baxırsınız. Bəyənməsəniz, heç nə ödəmirsiniz."
+        },
+        {
+          "g": "web",
+          "q": "Sayt neçə günə hazır olur?",
+          "a": "Demo 2 saat ərzində hazırlanır. Tam sayt layihənin həcmindən asılıdır: vizit kart və landing page adətən bir neçə günə, korporativ sayt və onlayn mağaza daha uzun müddətə hazır olur. Dəqiq tarixi yazılı təklifdə göstəririk."
+        },
+        {
+          "g": "web",
+          "q": "Domen və sayt kimə məxsus olur?",
+          "a": "Domen sizin adınıza qeydiyyatdan keçir, sayt tamamilə sizə məxsusdur."
+        },
+        {
+          "g": "mobile",
+          "q": "Mobil tətbiq həm iOS, həm Android üçün hazırlanır?",
+          "a": "Bəli. Tətbiqi hər iki platforma üçün hazırlayır, App Store və Google Play-də yayımlanmasına da kömək edirik."
+        },
+        {
+          "g": "seo",
+          "q": "SEO ilə GEO arasında fərq nədir?",
+          "a": "SEO saytınızın Google kimi axtarış sistemlərində yuxarı çıxmasıdır. GEO isə ChatGPT, Gemini və Perplexity kimi süni intellekt axtarışlarının cavablarında biznesinizin adının çəkilməsi üçün işdir."
+        },
+        {
+          "g": "ads",
+          "q": "Hansı platformalarda reklam qurursunuz?",
+          "a": "Meta (Instagram və Facebook), TikTok, LinkedIn və Google. Kampaniyanı qurur, idarə edir və nəticələr barədə hesabat veririk."
+        },
+        {
+          "g": "support",
+          "q": "Bağlanmış və ya oğurlanmış hesabı bərpa edə bilirsiniz?",
+          "a": "Bəli. Bağlanmış, məhdudlaşdırılmış, oğurlanmış və silinmiş sosial media və reklam hesablarının bərpası ilə məşğul oluruq, saxta profillərin bağlanmasına da kömək edirik."
+        },
+        {
+          "g": "support",
+          "q": "Mövcud saytımın texniki xidmətini götürürsünüz?",
+          "a": "Bəli. Texniki SEO, təhlükəsizlik, backlink, daxili linkləmə və gündəlik texniki dəstəyi biz yerinə yetiririk."
+        },
+        {
+          "g": "products",
+          "q": "Chatbot nə edir?",
+          "a": "Saytınızda və mesajlaşma kanallarınızda müştəri suallarını 7/24 cavablandırır, sifariş və qəbul qeydə alır."
+        },
+        {
+          "g": "products",
+          "q": "Kombo paketlərə nə daxildir?",
+          "a": "Hər paketdə izləyici, bəyənmə, baxış, yadda saxlama, paylaşım, qarşılıqlı əlaqə və kəşfet effekti var. Instagram və TikTok paketi 20 ₼, YouTube paketi 35 ₼-dir."
+        }
+      ]
     },
     "final": {
       "title": "Bir mesaj yazın, demonuz 2 saata hazır olsun",
@@ -2533,9 +2589,7 @@
       "goTo": "{n}-ci rəyə keç"
     },
     "blog": {
-      "eyebrow": "Bloq",
       "title": "Son yazılar",
-      "subtitle": "Veb sayt, SEO və rəqəmsal reklam haqqında praktik məqalələr.",
       "all": "Bütün yazılar",
       "read": "Oxu",
       "minutes": "{minutes} dəq"
@@ -2556,7 +2610,42 @@
       "inboxSubject": "Qiymət sorğusu",
       "inboxPreview": "Salam! Saytınızda xidmətlərinizlə tanış oldum…",
       "cta": "Korporativ e-poçt istəyirəm",
-      "message": "Salam, {email} ünvanı ilə korporativ e-poçt yaratmaq istəyirəm"
+      "message": "Salam, {email} ünvanı ilə korporativ e-poçt yaratmaq istəyirəm",
+      "inbox2From": "Yeni müştəri",
+      "inbox2Subject": "Əməkdaşlıq təklifi",
+      "inbox2Preview": "Şirkətimiz üçün korporativ sayt sifariş etmək istəyirik…",
+      "inbox3From": "Yeni müştəri",
+      "inbox3Subject": "Görüş vaxtı",
+      "inbox3Preview": "Sabah saat 11:00-da ofisinizə gələ bilərəm?"
+    },
+    "talk": {
+      "title": "Layihənizi danışaq!",
+      "online": "Onlayn",
+      "person": "Paşa Quliyev",
+      "role": "Cradex Agency",
+      "button": "WhatsApp-da yazın",
+      "message": "Salam, layihəm haqqında danışmaq istəyirəm"
+    },
+    "top": {
+      "label": "Yuxarı qayıt"
+    },
+    "bot": {
+      "open": "Söhbəti aç",
+      "close": "Söhbəti bağla",
+      "name": "Cradex köməkçi",
+      "status": "Onlayn · bir neçə dəqiqəyə cavab",
+      "teaser": "Sualınız var? 👋",
+      "hello": "Salam! Mən Cradex köməkçisiyəm. Nə ilə maraqlanırsınız?",
+      "q1": "Pulsuz demo",
+      "a1": "Biznesiniz üçün sayt demosunu 2 saata pulsuz hazırlayırıq. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
+      "q2": "Xidmətlər",
+      "a2": "Veb sayt, mobil tətbiq, SEO və GEO, Meta, TikTok, LinkedIn və Google reklamları, texniki xidmət.",
+      "q3": "Kombo paketlər",
+      "a3": "Instagram və TikTok kombo paketləri 20 ₼, YouTube kombo paketi 35 ₼-dir. Hər şey daxildir.",
+      "q4": "Əlaqə",
+      "a4": "Telefon və WhatsApp: +994 50 778 68 87. Ünvan: Rəşid Behbudov 55, Bakı.",
+      "human": "Operatorla WhatsApp-da yazın",
+      "humanMessage": "Salam, saytınızdakı köməkçidən yazıram"
     }
   }
 }

@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MobileBottomNav } from '@/components/navigation/MobileBottomNav'
+import { FloatingActions } from '@/components/layout/FloatingActions'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import { ThemeScript } from '@/components/theme/ThemeScript'
@@ -108,6 +109,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
             <MobileBottomNav locale={locale} />
+            <FloatingActions />
           </ErrorBoundary>
         </NextIntlClientProvider>
       </body>

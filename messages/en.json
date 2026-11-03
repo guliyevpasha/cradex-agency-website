@@ -2463,16 +2463,72 @@
       "teaserLink": "See pricing"
     },
     "faq": {
-      "eyebrow": "Questions",
+      "eyebrow": "FAQ",
       "title": "Frequently asked questions",
-      "q1": "Is the demo really free?",
-      "a1": "Yes. We build the demo, you take a look. If you don't like it, you pay nothing.",
-      "q2": "What do I need to send for the demo?",
-      "a2": "Write 2–3 sentences about your business on WhatsApp: what you do and what the website needs. If you have a logo, send that too.",
-      "q3": "What happens if I like it?",
-      "a3": "We finish the site to your requirements and launch it with a yearly package from 399 ₼.",
-      "q4": "What if I need an online store or a mobile app?",
-      "a4": "Pricing for these projects depends on scope. Message us and we'll send a written proposal."
+      "subtitle": "The questions we hear most about our services and products. Can't find your answer? Write to us.",
+      "ask": "Ask your question on WhatsApp",
+      "askMessage": "Hello, I have a question",
+      "groups": {
+        "all": "All",
+        "web": "Website",
+        "mobile": "Mobile app",
+        "seo": "SEO and GEO",
+        "ads": "Advertising",
+        "support": "Maintenance",
+        "products": "Products"
+      },
+      "items": [
+        {
+          "g": "web",
+          "q": "Is the demo really free?",
+          "a": "Yes. We build a demo of your website and you review it. If you don't like it, you pay nothing."
+        },
+        {
+          "g": "web",
+          "q": "How long does a website take?",
+          "a": "The demo is ready within 2 hours. The full site depends on scope: a business card site or landing page usually takes a few days, a corporate site or online store takes longer. We state the exact date in a written proposal."
+        },
+        {
+          "g": "web",
+          "q": "Who owns the domain and the website?",
+          "a": "The domain is registered in your name and the website belongs entirely to you."
+        },
+        {
+          "g": "mobile",
+          "q": "Is the mobile app built for both iOS and Android?",
+          "a": "Yes. We build the app for both platforms and help you publish it on the App Store and Google Play."
+        },
+        {
+          "g": "seo",
+          "q": "What is the difference between SEO and GEO?",
+          "a": "SEO helps your website rank higher in search engines like Google. GEO makes sure your business is mentioned in answers from AI search tools such as ChatGPT, Gemini and Perplexity."
+        },
+        {
+          "g": "ads",
+          "q": "Which platforms do you run ads on?",
+          "a": "Meta (Instagram and Facebook), TikTok, LinkedIn and Google. We set up and manage the campaign and report on results."
+        },
+        {
+          "g": "support",
+          "q": "Can you recover a banned or hacked account?",
+          "a": "Yes. We recover banned, restricted, hacked and deleted social media and ad accounts, and help take down fake profiles."
+        },
+        {
+          "g": "support",
+          "q": "Do you maintain existing websites?",
+          "a": "Yes. We handle technical SEO, security, backlinks, internal linking and day-to-day technical support."
+        },
+        {
+          "g": "products",
+          "q": "What does the chatbot do?",
+          "a": "It answers customer questions on your website and messaging channels 24/7, and records orders and appointments."
+        },
+        {
+          "g": "products",
+          "q": "What is included in the combo packages?",
+          "a": "Every package includes followers, likes, views, saves, shares, engagement and an Explore-page boost. The Instagram and TikTok package costs 20 ₼, the YouTube package 35 ₼."
+        }
+      ]
     },
     "final": {
       "title": "Send one message, get your demo in 2 hours",
@@ -2529,10 +2585,8 @@
       "goTo": "Go to review {n}"
     },
     "blog": {
-      "eyebrow": "Blog",
-      "title": "Latest articles",
-      "subtitle": "Practical articles on websites, SEO and digital advertising.",
-      "all": "All articles",
+      "title": "Latest posts",
+      "all": "All posts",
       "read": "Read",
       "minutes": "{minutes} min"
     },
@@ -2552,7 +2606,42 @@
       "inboxSubject": "Price request",
       "inboxPreview": "Hi! I came across your services on your website…",
       "cta": "I want business email",
-      "message": "Hi, I would like to set up a business email at {email}"
+      "message": "Hi, I would like to set up a business email at {email}",
+      "inbox2From": "New client",
+      "inbox2Subject": "Partnership proposal",
+      "inbox2Preview": "We'd like to order a corporate website for our company…",
+      "inbox3From": "New client",
+      "inbox3Subject": "Meeting time",
+      "inbox3Preview": "Could I visit your office tomorrow at 11:00?"
+    },
+    "talk": {
+      "title": "Let's talk about your project",
+      "online": "Online",
+      "person": "Paşa Quliyev",
+      "role": "Cradex Agency",
+      "button": "Message us on WhatsApp",
+      "message": "Hello, I'd like to talk about my project"
+    },
+    "top": {
+      "label": "Back to top"
+    },
+    "bot": {
+      "open": "Open chat",
+      "close": "Close chat",
+      "name": "Cradex Assistant",
+      "status": "Online · replies within minutes",
+      "teaser": "Have a question? 👋",
+      "hello": "Hello! I'm the Cradex assistant. What are you interested in?",
+      "q1": "Free demo",
+      "a1": "We build a demo of your website in 2 hours, free of charge. If you like it, we launch it with a plan starting at 399 ₼ per year.",
+      "q2": "Services",
+      "a2": "Website development, mobile apps, SEO and GEO, Meta, TikTok, LinkedIn and Google ads, and maintenance.",
+      "q3": "Combo packages",
+      "a3": "Instagram and TikTok combo packages cost 20 ₼, the YouTube combo package 35 ₼. Everything is included.",
+      "q4": "Contact",
+      "a4": "Phone and WhatsApp: +994 50 778 68 87. Address: 55 Rashid Behbudov St, Baku.",
+      "human": "Chat with an operator on WhatsApp",
+      "humanMessage": "Hello, I'm writing from the assistant on your website"
     }
   }
 }

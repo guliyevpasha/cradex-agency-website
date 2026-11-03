@@ -2464,15 +2464,71 @@
     },
     "faq": {
       "eyebrow": "Sorular",
-      "title": "Sık sorulan sorular",
-      "q1": "Demo gerçekten ücretsiz mi?",
-      "a1": "Evet. Demoyu biz hazırlarız, siz incelersiniz. Beğenmezseniz hiçbir ödeme yapmazsınız.",
-      "q2": "Demo için ne göndermem gerekiyor?",
-      "a2": "WhatsApp'tan işletmeniz hakkında 2–3 cümle yazın: ne iş yaptığınızı ve sitede neler olması gerektiğini. Logonuz varsa onu da gönderin.",
-      "q3": "Beğenirsem sonra ne olur?",
-      "a3": "Siteyi isteklerinize göre tamamlar ve yıllık 399 ₼'den başlayan paketle yayına alırız.",
-      "q4": "E-ticaret sitesi veya mobil uygulama gerekirse?",
-      "a4": "Bu tür projelerin fiyatı kapsama göre hesaplanır. Bize yazın, yazılı teklif gönderelim."
+      "title": "Sıkça sorulan sorular",
+      "subtitle": "Hizmetlerimiz ve ürünlerimiz hakkında en çok sorulanlar. Cevabı bulamadınız mı? Bize yazın.",
+      "ask": "Sorunuzu WhatsApp'tan sorun",
+      "askMessage": "Merhaba, bir sorum var",
+      "groups": {
+        "all": "Tümü",
+        "web": "Web sitesi",
+        "mobile": "Mobil uygulama",
+        "seo": "SEO ve GEO",
+        "ads": "Reklam",
+        "support": "Teknik destek",
+        "products": "Ürünler"
+      },
+      "items": [
+        {
+          "g": "web",
+          "q": "Demo gerçekten ücretsiz mi?",
+          "a": "Evet. İşletmeniz için web sitesi demosu hazırlıyoruz, siz inceliyorsunuz. Beğenmezseniz hiçbir ücret ödemezsiniz."
+        },
+        {
+          "g": "web",
+          "q": "Web sitesi kaç günde hazır olur?",
+          "a": "Demo 2 saat içinde hazırlanır. Tam site projenin kapsamına bağlıdır: tanıtım sitesi ve landing page genellikle birkaç günde, kurumsal site ve e-ticaret sitesi daha uzun sürede tamamlanır. Kesin tarihi yazılı teklifte belirtiriz."
+        },
+        {
+          "g": "web",
+          "q": "Alan adı ve site kime ait olur?",
+          "a": "Alan adı sizin adınıza tescil edilir, site tamamen size aittir."
+        },
+        {
+          "g": "mobile",
+          "q": "Mobil uygulama hem iOS hem Android için mi hazırlanır?",
+          "a": "Evet. Uygulamayı her iki platform için geliştiriyor, App Store ve Google Play'de yayınlanmasına da yardımcı oluyoruz."
+        },
+        {
+          "g": "seo",
+          "q": "SEO ile GEO arasındaki fark nedir?",
+          "a": "SEO, sitenizin Google gibi arama motorlarında üst sıralara çıkmasıdır. GEO ise ChatGPT, Gemini ve Perplexity gibi yapay zekâ aramalarının yanıtlarında işletmenizin adının geçmesi için yapılan çalışmadır."
+        },
+        {
+          "g": "ads",
+          "q": "Hangi platformlarda reklam yönetiyorsunuz?",
+          "a": "Meta (Instagram ve Facebook), TikTok, LinkedIn ve Google. Kampanyayı kurar, yönetir ve sonuçlar hakkında rapor veririz."
+        },
+        {
+          "g": "support",
+          "q": "Kapatılmış veya çalınmış hesabı geri alabiliyor musunuz?",
+          "a": "Evet. Kapatılmış, kısıtlanmış, çalınmış ve silinmiş sosyal medya ve reklam hesaplarının kurtarılmasıyla ilgileniyor, sahte profillerin kapatılmasına da yardımcı oluyoruz."
+        },
+        {
+          "g": "support",
+          "q": "Mevcut sitemin teknik bakımını üstleniyor musunuz?",
+          "a": "Evet. Teknik SEO, güvenlik, backlink, site içi bağlantı yapısı ve günlük teknik desteği biz yürütüyoruz."
+        },
+        {
+          "g": "products",
+          "q": "Chatbot ne yapar?",
+          "a": "Sitenizde ve mesajlaşma kanallarınızda müşteri sorularını 7/24 yanıtlar, sipariş ve randevuları kaydeder."
+        },
+        {
+          "g": "products",
+          "q": "Kombo paketlere neler dahil?",
+          "a": "Her pakette takipçi, beğeni, izlenme, kaydetme, paylaşım, etkileşim ve keşfet etkisi bulunur. Instagram ve TikTok paketi 20 ₼, YouTube paketi 35 ₼'dir."
+        }
+      ]
     },
     "final": {
       "title": "Tek bir mesaj yazın, demonuz 2 saatte hazır olsun",
@@ -2529,9 +2585,7 @@
       "goTo": "{n}. yoruma git"
     },
     "blog": {
-      "eyebrow": "Blog",
       "title": "Son yazılar",
-      "subtitle": "Web siteleri, SEO ve dijital reklam üzerine pratik yazılar.",
       "all": "Tüm yazılar",
       "read": "Oku",
       "minutes": "{minutes} dk"
@@ -2552,7 +2606,42 @@
       "inboxSubject": "Fiyat talebi",
       "inboxPreview": "Merhaba! Web sitenizde hizmetlerinizi inceledim…",
       "cta": "Kurumsal e-posta istiyorum",
-      "message": "Merhaba, {email} adresiyle kurumsal e-posta oluşturmak istiyorum"
+      "message": "Merhaba, {email} adresiyle kurumsal e-posta oluşturmak istiyorum",
+      "inbox2From": "Yeni müşteri",
+      "inbox2Subject": "İş birliği teklifi",
+      "inbox2Preview": "Şirketimiz için kurumsal web sitesi yaptırmak istiyoruz…",
+      "inbox3From": "Yeni müşteri",
+      "inbox3Subject": "Görüşme saati",
+      "inbox3Preview": "Yarın saat 11:00'de ofisinize gelebilir miyim?"
+    },
+    "talk": {
+      "title": "Projenizi konuşalım",
+      "online": "Çevrimiçi",
+      "person": "Paşa Quliyev",
+      "role": "Cradex Agency",
+      "button": "WhatsApp'tan yazın",
+      "message": "Merhaba, projem hakkında konuşmak istiyorum"
+    },
+    "top": {
+      "label": "Yukarı çık"
+    },
+    "bot": {
+      "open": "Sohbeti aç",
+      "close": "Sohbeti kapat",
+      "name": "Cradex Asistan",
+      "status": "Çevrimiçi · birkaç dakikada yanıt",
+      "teaser": "Sorunuz mu var? 👋",
+      "hello": "Merhaba! Ben Cradex asistanıyım. Neyle ilgileniyorsunuz?",
+      "q1": "Ücretsiz demo",
+      "a1": "İşletmeniz için web sitesi demosunu 2 saatte ücretsiz hazırlıyoruz. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alıyoruz.",
+      "q2": "Hizmetler",
+      "a2": "Web sitesi geliştirme, mobil uygulama, SEO ve GEO, Meta, TikTok, LinkedIn ve Google reklamları, teknik destek.",
+      "q3": "Kombo paketler",
+      "a3": "Instagram ve TikTok kombo paketleri 20 ₼, YouTube kombo paketi 35 ₼'dir. Her şey dahildir.",
+      "q4": "İletişim",
+      "a4": "Telefon ve WhatsApp: +994 50 778 68 87. Adres: Reşid Behbudov Cad. 55, Bakü.",
+      "human": "Operatörle WhatsApp'tan yazışın",
+      "humanMessage": "Merhaba, sitenizdeki asistandan yazıyorum"
     }
   }
 }
