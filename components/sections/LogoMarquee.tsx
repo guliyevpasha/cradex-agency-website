@@ -102,32 +102,25 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
 
       {/* Colour-reveal styles — pure CSS class toggle, no React state */}
       <style>{`
+        /* Most partner logos are drawn for dark backgrounds, so the cards
+           stay dark in both themes and the logos keep their own colours. */
         .lm-card {
-          border-color: rgb(var(--line));
-          background: rgb(var(--bg-secondary));
-          box-shadow: none;
-          transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+          border-color: rgba(255,255,255,0.08);
+          background: linear-gradient(160deg, #161B23, #0B0D10);
+          box-shadow: 0 10px 24px -14px rgba(11,13,16,0.55);
+          transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
         }
         .lm-card.lm-lit {
-          border-color: rgba(36,160,255,0.4);
-          background: rgba(36,160,255,0.05);
-          box-shadow: 0 0 16px rgba(36,160,255,0.18);
+          border-color: rgba(36,160,255,0.55);
+          box-shadow: 0 0 0 1px rgba(36,160,255,0.25), 0 12px 28px -12px rgba(36,160,255,0.55);
+          transform: translateY(-2px);
         }
-        /* Light theme: most partner logos are drawn white for dark
-           backgrounds, so they stay as solid dark silhouettes here. */
         .lm-card img {
-          filter: brightness(0);
+          filter: brightness(0) invert(1) grayscale(1);
           opacity: 0.6;
           transition: filter 0.4s ease, opacity 0.4s ease;
         }
         .lm-card.lm-lit img {
-          opacity: 1;
-        }
-        .dark .lm-card img {
-          filter: brightness(0) invert(1) grayscale(1);
-          opacity: 0.5;
-        }
-        .dark .lm-card.lm-lit img {
           filter: none;
           opacity: 1;
         }
