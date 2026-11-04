@@ -45,7 +45,7 @@ export function ClientsGrid({ partners }: ClientsGridProps) {
                 {/* Logo */}
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
-                    quality={92}
+                    quality={85}
                     src={partner.logo}
                     alt={partner.name}
                     fill

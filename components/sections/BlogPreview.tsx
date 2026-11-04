@@ -90,7 +90,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                   <div className="relative aspect-[16/9] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 overflow-hidden">
                     {((article as any).image || (article as any).coverImage) ? (
                       <Image
-                        quality={92}
+                        quality={85}
                         src={(article as any).image || (article as any).coverImage}
                         alt={(article as any).title || (article as any).titleKey || 'Article'}
                         fill

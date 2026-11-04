@@ -15,8 +15,8 @@ import type { Article } from '@/types'
 
 const locales = ['az', 'en', 'ru', 'tr']
 
-// ISR: Revalidate every 60 seconds
-export const revalidate = 60
+// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   const slugs = await getArticleSlugs()
@@ -126,7 +126,7 @@ function ArticleContent({ article }: { article: Article }) {
             <ScrollReveal animation="scaleIn" className="mb-10">
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                 <Image
-                  quality={92}
+                  quality={85}
                   src={article.coverImage}
                   alt={article.titleKey}
                   fill

@@ -48,7 +48,7 @@ export function FeaturedPost({ post, href, labels, eyebrow }: { post: BlogPost; 
           <div className="tilt-z2 relative aspect-[16/10] overflow-hidden rounded-[28px] bg-snow/5">
             {post.image ? (
               <Image
-                quality={92}
+                quality={85}
                 src={post.image}
                 alt=""
                 fill
@@ -94,7 +94,7 @@ export function PostCard({ post, href, labels, index }: { post: BlogPost; href: 
           <div className="tilt-z2 relative mt-6 aspect-[16/10] overflow-hidden rounded-2xl bg-snow/40">
             {post.image ? (
               <Image
-                quality={92}
+                quality={85}
                 src={post.image}
                 alt=""
                 fill

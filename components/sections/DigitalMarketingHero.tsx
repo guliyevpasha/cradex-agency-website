@@ -134,7 +134,7 @@ export function DigitalMarketingHero({
                 }}
               >
                 <Image
-                  quality={92}
+                  quality={85}
                   src={imagePath}
                   alt="Digital Marketing Platforms - Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads"
                   width={1024}

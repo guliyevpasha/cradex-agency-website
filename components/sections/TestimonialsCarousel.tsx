@@ -264,7 +264,7 @@ function TestimonialCard({
             {/^(\/|https?:\/\/)/.test(testimonial.photo) ? (
               /* Real photo */
               <Image
-                quality={92}
+                quality={85}
                 src={testimonial.photo}
                 alt={name}
                 width={80}

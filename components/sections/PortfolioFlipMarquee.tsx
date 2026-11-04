@@ -162,7 +162,7 @@ function FlipCard({ item }: FlipCardProps) {
           <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-2xl overflow-hidden bg-bg-tertiary border-2 border-white/5">
             {item.coverImage ? (
               <Image
-                quality={92}
+                quality={85}
                 src={item.coverImage}
                 alt={title}
                 fill

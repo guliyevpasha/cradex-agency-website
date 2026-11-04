@@ -48,10 +48,13 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }],
-    // Sharp source captures, served as AVIF/WebP at high quality.
-    formats: ['image/avif', 'image/webp'],
-    qualities: [75, 92],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 2560, 3840],
+    // One format and one quality keep the number of generated variants low (the
+    // hosting plan counts every transformation). WebP at 85 is visually lossless
+    // for the screenshots; 2560 still covers retina laptops.
+    formats: ['image/webp'],
+    qualities: [85],
+    deviceSizes: [640, 828, 1200, 1920, 2560],
+    imageSizes: [64, 128, 256, 384],
     minimumCacheTTL: 2678400,
   },
   transpilePackages: ['swiper', 'next-sanity', 'sanity'],

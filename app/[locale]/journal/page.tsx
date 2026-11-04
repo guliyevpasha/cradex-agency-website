@@ -14,7 +14,8 @@ import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/lib/utils/cn'
 import type { Article } from '@/types'
 
-export const revalidate = 60
+// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
+export const revalidate = 3600
 
 const PER_PAGE = 9
 

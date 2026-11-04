@@ -62,7 +62,7 @@ export async function BlogShowcase({ articles }: { articles: Article[] }) {
                     <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] bg-bg-secondary shadow-card transition-shadow duration-500 group-hover:shadow-float">
                       {post.image ? (
                         <Image
-                          quality={92}
+                          quality={85}
                           src={post.image}
                           alt=""
                           fill

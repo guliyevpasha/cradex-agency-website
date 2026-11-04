@@ -39,7 +39,7 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
         <div className="rounded-[1.6cqw] bg-[#1B1E24] p-[0.85cqw] shadow-[0_2.6cqw_4.4cqw_-1.6cqw_rgba(11,13,16,0.55)] ring-1 ring-black/40">
           <div className="relative aspect-[16/10] overflow-hidden rounded-[0.5cqw] bg-snow">
             <Image
-              quality={92}
+              quality={85}
               src={shots.desktop}
               alt={alt}
               fill
@@ -59,7 +59,7 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
         <div className="device-float rounded-[2.8cqw] bg-[#1B1E24] p-[0.6cqw] shadow-[0_3cqw_5cqw_-1.6cqw_rgba(11,13,16,0.65)] ring-1 ring-black/40">
           <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.2cqw] bg-snow">
             <Image
-              quality={92}
+              quality={85}
               src={shots.mobile ?? shots.desktop}
               alt=""
               fill

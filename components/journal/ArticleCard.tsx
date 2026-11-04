@@ -24,7 +24,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
         <div className="relative aspect-[16/9] bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 overflow-hidden">
           {article.coverImage ? (
             <Image
-              quality={92}
+              quality={85}
               src={article.coverImage}
               alt={article.titleKey}
               fill

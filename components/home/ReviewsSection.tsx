@@ -44,7 +44,7 @@ function Avatar({ t, size }: { t: Review; size: number }) {
       className="relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-strong text-sm font-bold text-snow ring-2 ring-bg-primary"
       style={{ width: size, height: size }}
     >
-      {isImage(t.photo) ? <Image quality={92} src={t.photo} alt="" fill sizes={`${size}px`} className="object-cover" /> : initials}
+      {isImage(t.photo) ? <Image quality={85} src={t.photo} alt="" fill sizes={`${size}px`} className="object-cover" /> : initials}
     </span>
   )
 }

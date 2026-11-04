@@ -214,7 +214,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                     src="/images/team/pasha-quliyev.jpg"
                     alt={t('founderName')}
                     fill
-                    quality={92}
+                    quality={85}
                     sizes="(min-width: 640px) 112px, 96px"
                     className="object-cover"
                   />

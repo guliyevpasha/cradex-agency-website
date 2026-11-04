@@ -20,7 +20,8 @@ import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 import { getRecentBlogPosts } from '@/sanity/lib/queries'
 
-export const revalidate = 60
+// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
+export const revalidate = 3600
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
