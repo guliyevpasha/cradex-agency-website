@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react'
 import { Logo } from '@/components/brand/Logo'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS } from '@/lib/site/navigation'
+import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS, serviceHref } from '@/lib/site/navigation'
 
 // Maps always gets the Azerbaijani address; it geocodes reliably.
 const MAPS_URL =
@@ -73,7 +73,7 @@ export function Footer() {
           <ul className="space-y-2.5 text-sm">
             {SERVICE_IDS.map((s) => (
               <li key={s}>
-                <Link href={`/${locale}/services#${s}`} className="text-text-secondary transition-colors hover:text-text-primary">
+                <Link href={serviceHref(locale, s)} className="text-text-secondary transition-colors hover:text-text-primary">
                   {tS(`${s}.title`)}
                 </Link>
               </li>

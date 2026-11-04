@@ -28,6 +28,20 @@ export function localizedPath(pathname: string, code: string): string {
 export const SERVICE_IDS = ['web', 'mobile', 'seo', 'ads', 'support'] as const
 export type ServiceId = (typeof SERVICE_IDS)[number]
 
+/** Azerbaijani slugs for the service pages, the same in every language (local SEO). */
+export const SERVICE_SLUGS: Record<ServiceId, string> = {
+  web: 'veb-sayt-hazirlanmasi',
+  mobile: 'mobil-tetbiq',
+  seo: 'seo-geo',
+  ads: 'reqemsal-reklam',
+  support: 'texniki-xidmet',
+}
+
+export const serviceIdBySlug = (slug: string) =>
+  SERVICE_IDS.find((id) => SERVICE_SLUGS[id] === slug)
+
+export const serviceHref = (locale: string, id: ServiceId) => `/${locale}/services/${SERVICE_SLUGS[id]}`
+
 export const PRODUCT_LINKS = [
   { id: 'chatbot', key: 'chatbot.title' },
   { id: 'instagram', key: 'combo.instagramTitle' },

@@ -20,7 +20,7 @@ type Props = {
   /** Pre-filled WhatsApp text; defaults to the demo request. */
   message?: string
   size?: 'md' | 'lg'
-  variant?: 'primary' | 'dark'
+  variant?: 'primary' | 'dark' | 'light'
   className?: string
 }
 
@@ -38,7 +38,9 @@ export function WhatsAppButton({ label, message, size = 'lg', variant = 'primary
         size === 'lg' ? 'px-7 py-4 text-[15px]' : 'px-5 py-2.5 text-sm',
         variant === 'primary'
           ? 'bg-brand-strong text-snow shadow-brand hover:bg-[#0967B5]'
-          : 'bg-text-primary text-bg-primary hover:opacity-90',
+          : variant === 'light'
+            ? 'bg-snow text-[#0A74CC] shadow-card hover:bg-snow/90'
+            : 'bg-text-primary text-bg-primary hover:opacity-90',
         className
       )}
     >

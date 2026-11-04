@@ -57,7 +57,15 @@ const nextConfig = {
   transpilePackages: ['swiper', 'next-sanity', 'sanity'],
   async redirects() {
     // Calculator is archived (see archive/calculator); old links land on pricing.
-    return [{ source: '/:locale(az|en|ru|tr)/calculator', destination: '/:locale/pricing', permanent: false }]
+    const L = '/:locale(az|en|ru|tr)'
+    // Old service slugs (see archive/services-legacy) point at the new pages.
+    const moved = { 'web-mobile-dev': 'veb-sayt-hazirlanmasi', 'digital-marketing': 'reqemsal-reklam' }
+    const dropped = ['traditional-marketing', 'smm', 'graphic-motion-design', 'photo-video', 'branding', 'copywriting']
+    return [
+      { source: `${L}/calculator`, destination: '/:locale/pricing', permanent: false },
+      ...Object.entries(moved).map(([from, to]) => ({ source: `${L}/services/${from}`, destination: `/:locale/services/${to}`, permanent: true })),
+      ...dropped.map((from) => ({ source: `${L}/services/${from}`, destination: '/:locale/services', permanent: true })),
+    ]
   },
   async headers() {
     return [

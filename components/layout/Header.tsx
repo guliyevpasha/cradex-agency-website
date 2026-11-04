@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, isActive } from '@/lib/site/navigation'
+import { NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, serviceHref, isActive } from '@/lib/site/navigation'
 import { LangDropdown } from './LangDropdown'
 import { MobileMenu } from './MobileMenu'
 import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
@@ -29,7 +29,7 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
 
   const items =
     id === 'services'
-      ? SERVICE_IDS.map((s) => ({ href: `/${locale}/services#${s}`, title: tS(`${s}.title`), text: tS(`${s}.text`) }))
+      ? SERVICE_IDS.map((s) => ({ href: serviceHref(locale, s), title: tS(`${s}.title`), text: tS(`${s}.text`) }))
       : PRODUCT_LINKS.map((p) => ({
           href: `/${locale}/products#${p.id}`,
           title: tP(p.key),

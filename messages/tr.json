@@ -2825,6 +2825,525 @@
         ]
       },
       "seller": "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582"
+    },
+    "servicePage": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetlerimiz",
+      "cta": "WhatsApp'tan yazın",
+      "pricing": "Fiyatları görün",
+      "more": "Detaylı bilgi",
+      "includesTitle": "Neler dahil",
+      "processTitle": "Nasıl çalışıyoruz",
+      "faqTitle": "Sık sorulan sorular",
+      "otherTitle": "Diğer hizmetlerimiz",
+      "workTitle": "Hazırladığımız web siteleri",
+      "workAll": "Tüm projeler",
+      "step": "Adım",
+      "web": {
+        "metaTitle": "Web Sitesi Geliştirme",
+        "metaDescription": "Kurumsal site, landing page, e-ticaret sitesi ve diğer site türleri. Ücretsiz demo, hızlı ve güvenli web siteleri — Cradex Agency.",
+        "eyebrow": "Ana hizmet",
+        "title": "İşletmenize uygun web sitesini sıfırdan kuruyoruz",
+        "text": "Önce hedefi anlıyor, sonra site türünü seçiyoruz. Tasarım, yazılım, metinler ve arama motoru hazırlığı tek bir ekipte yapılır. Karar vermeden önce ücretsiz demoyu görürsünüz.",
+        "message": "Merhaba, web sitesi yaptırmak istiyorum",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Kurumsal web sitesi",
+                "d": "Şirketi, hizmetleri ve ekibi tanıtan, güven oluşturan ana site."
+              },
+              {
+                "t": "Landing page",
+                "d": "Tek bir ürün veya kampanya için, başvuru toplamaya odaklı tek sayfa."
+              },
+              {
+                "t": "E-ticaret sitesi",
+                "d": "Katalog, sepet, sipariş ve ödeme sistemiyle eksiksiz satış sitesi."
+              },
+              {
+                "t": "Web uygulaması",
+                "d": "Tarayıcıda çalışan iç sistemler: müşteri panelleri, yönetim ekranları, rezervasyon."
+              },
+              {
+                "t": "Blog ve haber portalı",
+                "d": "Kolay yönetilen, aramalarda iyi görünen makale ve haber sitesi."
+              },
+              {
+                "t": "Kişisel ve portfolyo sitesi",
+                "d": "Uzmanlar ve yaratıcı profesyoneller için çalışmalarını sergileyen site."
+              },
+              {
+                "t": "Kampanya ve etkinlik sitesi",
+                "d": "Kayıt, program ve geri sayım içeren kısa süreli proje sitesi."
+              },
+              {
+                "t": "Kartvizit sitesi",
+                "d": "Temel bilgiler ve iletişim kanallarını içeren sade, hızlı site."
+              },
+              {
+                "t": "Katalog sitesi",
+                "d": "Ürünleri kategorilerle gösteren, siparişi telefon veya mesajla alan site."
+              },
+              {
+                "t": "Pazaryeri sitesi",
+                "d": "Birden fazla satıcının ürünlerini tek platformda toplayan sistem."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Brief ve hedef",
+            "d": "İşletmenizi, hedef kitlenizi ve siteden beklentinizi dinliyoruz."
+          },
+          {
+            "t": "Ücretsiz demo",
+            "d": "Kısa sürede sitenin ilk görünümünü hazırlayıp size gösteriyoruz."
+          },
+          {
+            "t": "Tasarım ve yazılım",
+            "d": "Beğendiğiniz yönde tüm sayfaları kuruyor, metinleri yerleştiriyoruz."
+          },
+          {
+            "t": "Test ve yayın",
+            "d": "Telefonda, bilgisayarda ve aramada kontrol edip siteyi yayına alıyoruz."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Demo gerçekten ücretsiz mi?",
+            "a": "Evet. Demoyu beğenmezseniz hiçbir ödeme yapmazsınız ve herhangi bir yükümlülük doğmaz."
+          },
+          {
+            "q": "Site kaç günde hazır olur?",
+            "a": "Süre, site türüne ve sayfa sayısına bağlıdır. Net takvimi briften sonra yazılı olarak bildiriyoruz."
+          },
+          {
+            "q": "Siteyi sonradan kendim yönetebilir miyim?",
+            "a": "Evet. Metin, görsel ve ürünleri değiştirebileceğiniz kolay bir yönetim paneli kuruyor ve nasıl kullanılacağını gösteriyoruz."
+          },
+          {
+            "q": "Alan adı ve hosting kimin adına olur?",
+            "a": "Sizin adınıza. Site, alan adı ve tüm erişim bilgileri teslimden sonra size verilir."
+          }
+        ]
+      },
+      "mobile": {
+        "metaTitle": "Mobil Uygulama Geliştirme",
+        "metaDescription": "iOS ve Android için mobil uygulamalar: tasarım, yazılım, App Store ve Google Play yayını — Cradex Agency.",
+        "eyebrow": "iOS ve Android",
+        "title": "Müşterinizin telefonunda yer alan uygulama",
+        "text": "Fikirden App Store ve Google Play'deki uygulamaya kadar: arayüz tasarımı, yazılım, yönetim paneli ve yayın.",
+        "message": "Merhaba, mobil uygulama yaptırmak istiyorum",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "iOS uygulaması",
+                "d": "iPhone ve iPad için, Apple kurallarına uygun uygulama."
+              },
+              {
+                "t": "Android uygulaması",
+                "d": "Farklı ekran boyutlarında sorunsuz çalışan Android uygulaması."
+              },
+              {
+                "t": "UI/UX tasarım",
+                "d": "Kullanıcının tek bakışta anladığı, kullanımı kolay arayüz."
+              },
+              {
+                "t": "Yönetim paneli ve API",
+                "d": "Uygulamanın içeriğini ve siparişleri yönettiğiniz panel."
+              },
+              {
+                "t": "Mağazalarda yayın",
+                "d": "App Store ve Google Play'de hesap hazırlığı ve uygulamanın yayınlanması."
+              },
+              {
+                "t": "Destek ve güncellemeler",
+                "d": "Yeni işletim sistemi sürümlerine uyum ve yeni özellikler."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Fikir ve özellikler",
+            "d": "Uygulamanın ne yapacağını ve ilk sürüme nelerin gireceğini belirliyoruz."
+          },
+          {
+            "t": "Tasarım",
+            "d": "Tüm ekranların etkileşimli prototipini hazırlayıp onayınıza sunuyoruz."
+          },
+          {
+            "t": "Yazılım",
+            "d": "Uygulamayı ve yönetim panelini kuruyor, gerçek cihazlarda test ediyoruz."
+          },
+          {
+            "t": "Yayın",
+            "d": "Uygulamayı mağazalarda yayınlıyor, ilk kullanıcı geri bildirimlerine göre geliştiriyoruz."
+          }
+        ],
+        "faq": [
+          {
+            "q": "iOS ve Android için ayrı ayrı ödeme yapmam gerekir mi?",
+            "a": "Çoğu zaman iki platformda da tek kodla çalışan bir uygulama kuruyoruz, bu da maliyeti düşürür. Seçimi projeye göre birlikte yapıyoruz."
+          },
+          {
+            "q": "Uygulamayı mağazaya kim yükler?",
+            "a": "Biz. Geliştirici hesabının açılmasına da yardımcı oluyoruz; hesap sizin adınıza olur."
+          },
+          {
+            "q": "Web sitem var, uygulama gerekir mi?",
+            "a": "Her zaman değil. Müşterileriniz sık sık tekrar sipariş veriyorsa uygulama faydalıdır; aksi halde iyi bir mobil site yeterli olabilir. Dürüst tavsiye veriyoruz."
+          },
+          {
+            "q": "Yayından sonra destek var mı?",
+            "a": "Evet. Hata düzeltmeleri, güncellemeler ve yeni özellikler için destek sunuyoruz."
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "SEO ve GEO Hizmeti",
+        "metaDescription": "Sitenizin Google'da ve ChatGPT, Gemini, Perplexity gibi yapay zeka aramalarında bulunması için SEO ve GEO — Cradex Agency.",
+        "eyebrow": "Google ve yapay zeka araması",
+        "title": "Müşteri aradığında sizi bulsun",
+        "text": "SEO, sitenizi Google sonuçlarında üst sıralara yaklaştırır. GEO ise ChatGPT, Gemini ve Perplexity gibi yapay zeka sistemleri cevap verirken işletmenizin adını anmasını hedefler.",
+        "message": "Merhaba, SEO ve GEO hizmetiyle ilgileniyorum",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Teknik analiz",
+                "d": "Hız, indeksleme, hatalar ve mobil uyumluluk kontrolü."
+              },
+              {
+                "t": "Anahtar kelime araştırması",
+                "d": "Müşterilerinizin gerçekte ne aradığını buluyoruz."
+              },
+              {
+                "t": "Sayfa ve içerik optimizasyonu",
+                "d": "Başlıkların, metinlerin ve yapının aramaya uygun hale getirilmesi."
+              },
+              {
+                "t": "Yerel SEO",
+                "d": "Google İşletme Profili ve haritada görünürlük."
+              },
+              {
+                "t": "GEO",
+                "d": "Yapay zeka arama sistemlerinin sitenizi kaynak olarak göstermesi için hazırlık."
+              },
+              {
+                "t": "Aylık rapor",
+                "d": "Sıralama, trafik ve başvurular hakkında net bir rapor."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Analiz",
+            "d": "Sitenin mevcut durumunu ve rakipleri inceliyoruz."
+          },
+          {
+            "t": "Plan",
+            "d": "Hangi sayfaların hangi aramalarda çıkacağını planlıyoruz."
+          },
+          {
+            "t": "Optimizasyon",
+            "d": "Teknik düzeltmeleri ve içerik çalışmalarını aşama aşama yapıyoruz."
+          },
+          {
+            "t": "Ölçüm",
+            "d": "Sonuçları her ay ölçüyor, planı rakamlara göre güncelliyoruz."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Sonuç ne zaman görünür?",
+            "a": "SEO uzun vadeli bir çalışmadır: ilk değişiklikler genellikle birkaç ay sonra görünür. Rekabetin yüksek olduğu alanlarda daha uzun sürebilir."
+          },
+          {
+            "q": "Birinci sıra garantisi veriyor musunuz?",
+            "a": "Hayır. Arama motorlarının kurallarını kimse yönetemez; garanti veren ajanslara temkinli yaklaşın. Biz işi şeffaf yürütüyor ve her ay rapor veriyoruz."
+          },
+          {
+            "q": "GEO nedir?",
+            "a": "Yapay zeka tabanlı arama sistemleri cevap verirken kaynaklara atıf yapar. GEO, sitenizin bu kaynaklar arasında yer alması için yapılan çalışmadır."
+          },
+          {
+            "q": "Siteyi siz yapmadıysanız da çalışıyor musunuz?",
+            "a": "Evet. Önce analiz yapıyor, ardından sitenizin altyapısına uygun bir plan öneriyoruz."
+          }
+        ]
+      },
+      "ads": {
+        "metaTitle": "Dijital Reklam Hizmeti",
+        "metaDescription": "Meta, TikTok, LinkedIn ve Google reklam kampanyalarının kurulumu, yönetimi ve raporlanması — Cradex Agency.",
+        "eyebrow": "Meta · TikTok · LinkedIn · Google",
+        "title": "Reklam bütçenizi başvuruya dönüştürüyoruz",
+        "text": "Doğru hedef kitleyi seçiyor, kampanyayı kuruyor ve her gün takip ediyoruz. Raporlarda beğeni sayısı değil, başvuru ve satış rakamları yer alır.",
+        "message": "Merhaba, reklam hizmetiyle ilgileniyorum",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Meta Ads",
+                "d": "Instagram ve Facebook'ta hedefli reklam kampanyaları."
+              },
+              {
+                "t": "TikTok Ads",
+                "d": "Genç ve aktif kitle için video reklamlar."
+              },
+              {
+                "t": "LinkedIn Ads",
+                "d": "Şirketlere ve karar vericilere yönelik B2B reklam."
+              },
+              {
+                "t": "Google Ads",
+                "d": "Arama, YouTube ve görüntülü reklam ağında reklam."
+              },
+              {
+                "t": "Takip ve dönüşüm",
+                "d": "Piksel, analitik ve başvuruların doğru ölçülmesi."
+              },
+              {
+                "t": "Optimizasyon ve raporlama",
+                "d": "Kampanyaların sürekli iyileştirilmesi ve net raporlama."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Hedef ve bütçe",
+            "d": "Neyi ölçeceğimizi ve bütçenin nasıl dağıtılacağını belirliyoruz."
+          },
+          {
+            "t": "Hedef kitle ve mesaj",
+            "d": "Kime, hangi platformda, hangi mesajla ulaşacağımızı seçiyoruz."
+          },
+          {
+            "t": "Kampanya kurulumu",
+            "d": "Reklamları, takip kodlarını ve test varyantlarını hazırlıyoruz."
+          },
+          {
+            "t": "Yönetim ve raporlama",
+            "d": "Sonuçları izliyor, zayıf reklamları durdurup güçlü olanları artırıyoruz."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Minimum bütçe ne kadar olmalı?",
+            "a": "Platforma ve hedefe bağlıdır. Bütçenize uygun en verimli dağılımı öneriyoruz."
+          },
+          {
+            "q": "Reklam bütçesi hizmet bedeline dahil mi?",
+            "a": "Hayır. Reklam bütçesi doğrudan platforma ödenir, hizmet bedeli ayrıca belirlenir."
+          },
+          {
+            "q": "Reklam hesabı kimin adına olur?",
+            "a": "Sizin adınıza. Biz yalnızca yönetim yetkisiyle çalışıyoruz."
+          },
+          {
+            "q": "Raporu ne zaman alırım?",
+            "a": "Belirlediğimiz takvime göre, genellikle haftalık ve aylık."
+          }
+        ]
+      },
+      "support": {
+        "metaTitle": "Teknik Hizmetler",
+        "metaDescription": "Web sitesi için teknik SEO, güvenlik, backlink ve teknik destek; sosyal medya hesaplarının kurtarılması ve korunması — Cradex Agency.",
+        "eyebrow": "Web sitesi ve sosyal medya",
+        "title": "Siteniz ve hesaplarınız güvenilir ellerde",
+        "text": "Sitenin hızını, güvenliğini ve aramadaki teknik durumunu yönetiyor; kapatılmış, çalınmış veya kısıtlanmış sosyal medya hesaplarıyla ilgili sorunları çözüyoruz.",
+        "message": "Merhaba, teknik hizmetlerle ilgili yazıyorum",
+        "includes": [
+          {
+            "h": "Web sitesi",
+            "items": [
+              {
+                "t": "Teknik SEO optimizasyonu",
+                "d": "Hız, indeksleme, yapı ve hataların düzeltilmesi."
+              },
+              {
+                "t": "Güvenlik optimizasyonu",
+                "d": "Açıkların kapatılması, SSL, yedekleme ve koruma."
+              },
+              {
+                "t": "Dış bağlantılar (Backlink)",
+                "d": "Güvenilir sitelerden kaliteli bağlantılar."
+              },
+              {
+                "t": "Site içi bağlantı yapısı",
+                "d": "Sayfalar arasında doğru bağlantıların kurulması."
+              },
+              {
+                "t": "Teknik destek",
+                "d": "Sitede oluşan sorunların hızlı çözümü ve güncellemeler."
+              }
+            ]
+          },
+          {
+            "h": "Sosyal medya hesapları",
+            "items": [
+              {
+                "t": "Kapatılmış hesapların açılması",
+                "d": "Engellenen sosyal medya hesaplarının kurtarılması için başvuru."
+              },
+              {
+                "t": "Çalınan ve silinen hesapların kurtarılması",
+                "d": "Hesaba erişimin geri kazandırılması."
+              },
+              {
+                "t": "Sahte hesapların kapatılması",
+                "d": "Adınızı kullanan taklit profillerin şikayetle kapatılması."
+              },
+              {
+                "t": "Reklam hesaplarının kurtarılması",
+                "d": "Kısıtlanan reklam hesaplarının yeniden açılması."
+              },
+              {
+                "t": "Kısıtlı hesapların açılması",
+                "d": "Özellikleri kısıtlanan hesapların normale döndürülmesi."
+              },
+              {
+                "t": "Hesap güvenliği",
+                "d": "İki adımlı doğrulama ve erişimlerin korunması."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Sorunu yazın",
+            "d": "WhatsApp'tan durumu ve mevcut bilgileri gönderirsiniz."
+          },
+          {
+            "t": "İnceleme",
+            "d": "Sorunun nedenini ve çözüm yollarını belirliyoruz."
+          },
+          {
+            "t": "Çözüm",
+            "d": "Gerekli teknik işlemleri ve başvuruları biz yapıyoruz."
+          },
+          {
+            "t": "Koruma",
+            "d": "Sorunun tekrarlanmaması için öneriler ve koruma önlemleri."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Hesabın kurtarılması için garanti veriyor musunuz?",
+            "a": "Nihai kararı platform verdiği için garanti vermiyoruz. Ancak her durumu önce inceliyor, şansları dürüstçe söylüyoruz."
+          },
+          {
+            "q": "Şifremi size vermem gerekir mi?",
+            "a": "Çoğu zaman hayır. Gerekirse iş biter bitmez şifrenizi değiştirmenizi öneriyoruz."
+          },
+          {
+            "q": "Site başka bir ajansta yapıldıysa?",
+            "a": "Sorun değil. Önce siteyi inceliyor, ardından işin kapsamını bildiriyoruz."
+          },
+          {
+            "q": "Acil bir sorunda ne kadar hızlı yanıt veriyorsunuz?",
+            "a": "Mesai saatlerinde WhatsApp'tan gelen taleplere kısa sürede yanıt veriyoruz."
+          }
+        ]
+      }
+    },
+    "aboutPage": {
+      "metaTitle": "Hakkımızda",
+      "metaDescription": "Cradex Agency; web sitesi, mobil uygulama, yapay zeka araçları ve chatbot, CRM ve otomasyon çözümleri geliştiren bir teknoloji ajansıdır.",
+      "eyebrow": "Hakkımızda",
+      "title": "İşletmeniz için dijital araçlar kuruyoruz",
+      "text": "Cradex Agency; web sitesi, yapay zeka asistanı ve chatbot, CRM ve otomasyon çözümleri geliştiren bir ekiptir. Hedefimiz basit: işinizi kolaylaştıran ve müşteri kazandıran teknoloji.",
+      "storyTitle": "Neden varız",
+      "story": [
+        "Birçok işletmenin web sitesi kartvizit olarak kalıyor: açılıyor ama başvuru getirmiyor. Mesajlara geç dönülüyor, müşteri bilgileri defterde veya tabloda kayboluyor.",
+        "Biz bu boşluğu dolduruyoruz. Site müşteriyi çekiyor, chatbot anında yanıtlıyor, CRM ise hiçbir başvurunun kaybolmamasını sağlıyor."
+      ],
+      "pillarsTitle": "Neler yapıyoruz",
+      "pillars": [
+        {
+          "t": "Web sitesi geliştirme",
+          "d": "Kurumsal siteden e-ticarete, sıfırdan ve ücretsiz demoyla."
+        },
+        {
+          "t": "Yapay zeka araçları ve chatbot",
+          "d": "Sitede, WhatsApp'ta ve Instagram'da 7/24 yanıt veren, sipariş alan asistanlar."
+        },
+        {
+          "t": "CRM ve otomasyon",
+          "d": "Başvuruları, müşterileri ve satış aşamalarını tek yerde toplayan sistemler."
+        },
+        {
+          "t": "Mobil uygulama, SEO ve teknik destek",
+          "d": "Uygulama, aramada görünürlük, reklam ve site güvenliği."
+        }
+      ],
+      "statsTitle": "Rakamlarla",
+      "statProjects": "tamamladığımız web sitesi projesi",
+      "statDemo": "saatte ücretsiz demo",
+      "statLanguages": "dilde hizmet",
+      "valuesTitle": "Nasıl çalışıyoruz",
+      "values": [
+        {
+          "t": "Önce gösteriyoruz",
+          "d": "Ödemeden önce demoyu görürsünüz. Beğenmezseniz yükümlülük yok."
+        },
+        {
+          "t": "Dürüst tavsiye",
+          "d": "İhtiyacınız olmayan hizmeti satmıyoruz. Bazen en iyi çözüm en sade olanıdır."
+        },
+        {
+          "t": "Her şey sizin adınıza",
+          "d": "Alan adı, hosting, hesaplar ve kod tesliminden sonra size aittir."
+        },
+        {
+          "t": "Güvenlik en başından",
+          "d": "Siteler modern standartlarla, koruma ve yedekleme ile kurulur."
+        }
+      ],
+      "founderTitle": "Kurucu",
+      "founderName": "Paşa Quliyev",
+      "founderRole": "Kurucu ve yönetici",
+      "founderText": "Cradex Agency'yi işletmelerin teknolojiden gerçek fayda görmesi için kurdum. Her projeyi kendi işim gibi takip ediyorum.",
+      "ctaTitle": "Projenizi birlikte kuralım",
+      "ctaText": "Sitenizin demosunu ücretsiz hazırlayalım, beğenirseniz devam edelim.",
+      "cta": "Ücretsiz demo istiyorum"
+    },
+    "portfolioPage": {
+      "metaTitle": "Projelerimiz — web sitesi çalışmaları",
+      "metaDescription": "Cradex Agency'nin hazırladığı web siteleri: kurumsal siteler, e-ticaret siteleri ve diğer projeler.",
+      "eyebrow": "Projelerimiz",
+      "title": "Hazırladığımız web siteleri",
+      "text": "Her proje, işletmesinin hedefine göre kuruldu. Siteleri telefonda ve bilgisayarda göründüğü gibi gösteriyoruz.",
+      "count": "{count} proje",
+      "empty": "Projeler yakında eklenecek."
+    },
+    "blogPage": {
+      "metaTitle": "Blog — web sitesi, teknoloji ve büyüme",
+      "metaDescription": "Web sitesi geliştirme, SEO, reklam, yapay zeka araçları ve işletmelerin dijital büyümesi hakkında pratik yazılar.",
+      "title": "Web sitesi, teknoloji ve büyüme üzerine yazılar",
+      "text": "Müşterilerin bize sorduğu soruların net cevapları: web sitesi nasıl seçilir, SEO ne zaman sonuç verir, chatbot ne zaman gerekir.",
+      "all": "Tümü",
+      "latest": "Son yazı",
+      "read": "Devamını oku",
+      "minutes": "{count} dk okuma",
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "page": "Sayfa {page}",
+      "empty": "Bu kategoride henüz yazı yok.",
+      "categories": {
+        "seo": "SEO",
+        "smm": "Sosyal medya",
+        "branding": "Markalaşma",
+        "design": "Tasarım",
+        "copywriting": "Metin yazarlığı",
+        "web-dev": "Web sitesi",
+        "marketing-strategy": "Strateji"
+      }
     }
   }
 }

@@ -2825,6 +2825,525 @@
         ]
       },
       "seller": "Sole proprietor Pasha Guliyev (Paşa Quliyev), Cradex Agency brand, TIN (VÖEN) 5800452582"
+    },
+    "servicePage": {
+      "home": "Home",
+      "services": "Services",
+      "cta": "Message us on WhatsApp",
+      "pricing": "View pricing",
+      "more": "Learn more",
+      "includesTitle": "What's included",
+      "processTitle": "How we work",
+      "faqTitle": "Frequently asked questions",
+      "otherTitle": "Other services",
+      "workTitle": "Websites we have built",
+      "workAll": "All projects",
+      "step": "Step",
+      "web": {
+        "metaTitle": "Website Development",
+        "metaDescription": "Corporate websites, landing pages, online stores and other site types. Free demo, fast and secure websites — Cradex Agency.",
+        "eyebrow": "Core service",
+        "title": "We build the right website for your business from scratch",
+        "text": "We start with your goal, then pick the site type. Design, development, copy and search readiness are handled by one team. You see a free demo before you decide.",
+        "message": "Hi, I'd like to get a website built",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Corporate website",
+                "d": "The main site that presents your company, services and team, and builds trust."
+              },
+              {
+                "t": "Landing page",
+                "d": "A single page for one product or campaign, built to collect inquiries."
+              },
+              {
+                "t": "Online store",
+                "d": "A full sales site with catalog, cart, checkout and payments."
+              },
+              {
+                "t": "Web application",
+                "d": "Browser-based internal systems: dashboards, client portals, booking."
+              },
+              {
+                "t": "Blog and news portal",
+                "d": "An article and news site that is easy to manage and visible in search."
+              },
+              {
+                "t": "Personal and portfolio site",
+                "d": "A site that showcases the work of specialists and creatives."
+              },
+              {
+                "t": "Campaign and event site",
+                "d": "A short-term project site with registration, agenda and countdown."
+              },
+              {
+                "t": "Business card site",
+                "d": "A simple, fast site with key information and contact details."
+              },
+              {
+                "t": "Catalog site",
+                "d": "Shows products by category and takes orders by phone or message."
+              },
+              {
+                "t": "Marketplace site",
+                "d": "A platform that brings products from multiple sellers together."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Brief and goals",
+            "d": "We listen to your business, your audience and what you expect from the site."
+          },
+          {
+            "t": "Free demo",
+            "d": "We quickly build a first look at the site and show it to you."
+          },
+          {
+            "t": "Design and development",
+            "d": "We build every page in the direction you approved and add the copy."
+          },
+          {
+            "t": "Testing and launch",
+            "d": "We check on phone, desktop and in search, then take the site live."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Is the demo really free?",
+            "a": "Yes. If you do not like the demo, you pay nothing and have no obligation."
+          },
+          {
+            "q": "How long does a website take?",
+            "a": "It depends on the site type and number of pages. After the brief we give you an exact timeline in writing."
+          },
+          {
+            "q": "Can I manage the site myself afterwards?",
+            "a": "Yes. We set up a simple admin panel for editing text, images and products, and show you how it works."
+          },
+          {
+            "q": "Who owns the domain and hosting?",
+            "a": "You do. The site, domain and all access credentials are handed over to you at delivery."
+          }
+        ]
+      },
+      "mobile": {
+        "metaTitle": "Mobile App Development",
+        "metaDescription": "Mobile apps for iOS and Android: design, development and publishing on the App Store and Google Play — Cradex Agency.",
+        "eyebrow": "iOS and Android",
+        "title": "An app that lives on your customer's phone",
+        "text": "From idea to a live app on the App Store and Google Play: interface design, development, an admin panel and publishing.",
+        "message": "Hi, I'd like to get a mobile app built",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "iOS app",
+                "d": "An app for iPhone and iPad that follows Apple guidelines."
+              },
+              {
+                "t": "Android app",
+                "d": "An Android app that runs reliably across screen sizes."
+              },
+              {
+                "t": "UI/UX design",
+                "d": "A clean interface users understand at a glance."
+              },
+              {
+                "t": "Admin panel and API",
+                "d": "A panel where you manage app content and orders."
+              },
+              {
+                "t": "Store publishing",
+                "d": "Setting up your store accounts and publishing on the App Store and Google Play."
+              },
+              {
+                "t": "Support and updates",
+                "d": "Compatibility with new OS versions and new features."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Idea and features",
+            "d": "We define what the app does and what goes into the first version."
+          },
+          {
+            "t": "Design",
+            "d": "We build an interactive prototype of every screen for your approval."
+          },
+          {
+            "t": "Development",
+            "d": "We build the app and admin panel and test on real devices."
+          },
+          {
+            "t": "Launch",
+            "d": "We publish to the stores and improve based on early user feedback."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do I pay separately for iOS and Android?",
+            "a": "In most cases we build one codebase that runs on both platforms, which lowers the cost. We choose the approach together based on the project."
+          },
+          {
+            "q": "Who uploads the app to the stores?",
+            "a": "We do. We also help you open a developer account, which is registered in your name."
+          },
+          {
+            "q": "I have a website. Do I need an app?",
+            "a": "Not always. An app makes sense if customers reorder often; otherwise a good mobile site may be enough. We give honest advice."
+          },
+          {
+            "q": "Is there support after launch?",
+            "a": "Yes. We offer support for bug fixes, updates and new features."
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "SEO and GEO Services",
+        "metaDescription": "SEO and GEO to get your site found on Google and in AI search such as ChatGPT, Gemini and Perplexity — Cradex Agency.",
+        "eyebrow": "Google and AI search",
+        "title": "Be the business customers find when they search",
+        "text": "SEO moves your site closer to the top results on Google. GEO works to get your business named when AI systems like ChatGPT, Gemini and Perplexity give an answer.",
+        "message": "Hi, I'm interested in SEO and GEO services",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Technical audit",
+                "d": "We check speed, indexing, errors and mobile compatibility."
+              },
+              {
+                "t": "Keyword research",
+                "d": "We find what your customers actually search for."
+              },
+              {
+                "t": "Page and content optimization",
+                "d": "Headlines, copy and structure adapted for search."
+              },
+              {
+                "t": "Local SEO",
+                "d": "Google Business Profile and visibility on the map."
+              },
+              {
+                "t": "GEO",
+                "d": "Preparing your site to be cited as a source by AI search systems."
+              },
+              {
+                "t": "Monthly report",
+                "d": "A clear report on rankings, traffic and inquiries."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Audit",
+            "d": "We analyze your site as it is today and your competitors."
+          },
+          {
+            "t": "Plan",
+            "d": "We map which pages should rank for which queries."
+          },
+          {
+            "t": "Optimization",
+            "d": "We carry out technical fixes and content work step by step."
+          },
+          {
+            "t": "Measurement",
+            "d": "We measure results every month and update the plan based on the numbers."
+          }
+        ],
+        "faq": [
+          {
+            "q": "When will I see results?",
+            "a": "SEO is long-term work: first changes usually appear after a few months. In competitive niches it can take longer."
+          },
+          {
+            "q": "Do you guarantee first place?",
+            "a": "No. Nobody controls search engine rules, so be careful with agencies that promise it. We work transparently and report every month."
+          },
+          {
+            "q": "What is GEO?",
+            "a": "AI-powered search systems cite sources when they answer. GEO is the work that gets your site included among those sources."
+          },
+          {
+            "q": "Do you work on sites you didn't build?",
+            "a": "Yes. We audit first, then propose a plan that fits your site platform."
+          }
+        ]
+      },
+      "ads": {
+        "metaTitle": "Digital Advertising Services",
+        "metaDescription": "Setup, management and reporting for Meta, TikTok, LinkedIn and Google ad campaigns — Cradex Agency.",
+        "eyebrow": "Meta · TikTok · LinkedIn · Google",
+        "title": "We turn your ad budget into inquiries",
+        "text": "We choose the right audience, build the campaign and monitor it daily. Our reports show inquiries and sales, not likes.",
+        "message": "Hi, I'm interested in advertising services",
+        "includes": [
+          {
+            "items": [
+              {
+                "t": "Meta Ads",
+                "d": "Targeted ad campaigns on Instagram and Facebook."
+              },
+              {
+                "t": "TikTok Ads",
+                "d": "Video ads for a young, active audience."
+              },
+              {
+                "t": "LinkedIn Ads",
+                "d": "B2B ads aimed at companies and decision makers."
+              },
+              {
+                "t": "Google Ads",
+                "d": "Ads on Search, YouTube and the display network."
+              },
+              {
+                "t": "Tracking and conversions",
+                "d": "Pixel, analytics and accurate measurement of inquiries."
+              },
+              {
+                "t": "Optimization and reporting",
+                "d": "Continuous campaign improvement and clear reports."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Goals and budget",
+            "d": "We agree on what we measure and how the budget is split."
+          },
+          {
+            "t": "Audience and message",
+            "d": "We decide who to reach, on which platform and with what message."
+          },
+          {
+            "t": "Campaign setup",
+            "d": "We prepare the ads, tracking codes and test variants."
+          },
+          {
+            "t": "Management and reporting",
+            "d": "We track results, stop weak ads and scale the strong ones."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What is the minimum budget?",
+            "a": "It depends on the platform and goal. We suggest the most efficient split for your budget."
+          },
+          {
+            "q": "Is the ad budget included in your fee?",
+            "a": "No. The ad budget is paid directly to the platform; our service fee is agreed separately."
+          },
+          {
+            "q": "Whose name is the ad account in?",
+            "a": "Yours. We work only with management access."
+          },
+          {
+            "q": "When do I get reports?",
+            "a": "On the schedule we agree, usually weekly and monthly."
+          }
+        ]
+      },
+      "support": {
+        "metaTitle": "Technical Support",
+        "metaDescription": "Technical SEO, security, backlinks and technical support for websites; recovery and protection of social media accounts — Cradex Agency.",
+        "eyebrow": "Website and social media",
+        "title": "Your website and accounts in safe hands",
+        "text": "We handle site speed, security and technical search health, and fix problems with blocked, stolen or restricted social media accounts.",
+        "message": "Hi, I'm writing about technical support",
+        "includes": [
+          {
+            "h": "Website",
+            "items": [
+              {
+                "t": "Technical SEO optimization",
+                "d": "Fixing speed, indexing, structure and errors."
+              },
+              {
+                "t": "Security hardening",
+                "d": "Closing vulnerabilities, SSL, backups and protection."
+              },
+              {
+                "t": "Backlinks",
+                "d": "Quality links from trusted websites."
+              },
+              {
+                "t": "Internal linking",
+                "d": "Building proper connections between pages."
+              },
+              {
+                "t": "Technical support",
+                "d": "Fast resolution of site issues and regular updates."
+              }
+            ]
+          },
+          {
+            "h": "Social media accounts",
+            "items": [
+              {
+                "t": "Reopening blocked accounts",
+                "d": "Filing appeals to recover blocked social media accounts."
+              },
+              {
+                "t": "Recovering stolen and deleted accounts",
+                "d": "Restoring your access to the account."
+              },
+              {
+                "t": "Removing fake accounts",
+                "d": "Reporting impersonator profiles that use your name."
+              },
+              {
+                "t": "Recovering ad accounts",
+                "d": "Reopening restricted advertising accounts."
+              },
+              {
+                "t": "Lifting account restrictions",
+                "d": "Returning accounts with limited features to normal."
+              },
+              {
+                "t": "Account security",
+                "d": "Two-factor login and protection of your access."
+              }
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "t": "Describe the problem",
+            "d": "You send us the situation and available details on WhatsApp."
+          },
+          {
+            "t": "Diagnosis",
+            "d": "We identify the cause and the possible solutions."
+          },
+          {
+            "t": "Fix",
+            "d": "We carry out the technical work and file the appeals."
+          },
+          {
+            "t": "Protection",
+            "d": "We give recommendations and safeguards so it does not happen again."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do you guarantee account recovery?",
+            "a": "The platform makes the final decision, so we cannot guarantee it. We review every case first and tell you the chances honestly."
+          },
+          {
+            "q": "Do I have to give you my password?",
+            "a": "Usually not. If it is needed, we recommend changing the password as soon as the work is done."
+          },
+          {
+            "q": "What if my site was built by another agency?",
+            "a": "No problem. We review the site first, then tell you the scope of work."
+          },
+          {
+            "q": "How fast do you respond to urgent issues?",
+            "a": "During business hours we reply to your WhatsApp message quickly."
+          }
+        ]
+      }
+    },
+    "aboutPage": {
+      "metaTitle": "About Us",
+      "metaDescription": "Cradex Agency is a technology agency building websites, mobile apps, AI tools and chatbots, CRM and automation solutions.",
+      "eyebrow": "About us",
+      "title": "We build digital tools for your business",
+      "text": "Cradex Agency is a team that builds websites, AI assistants and chatbots, CRM and automation solutions. Our goal is simple: technology that makes your work easier and brings you customers.",
+      "storyTitle": "Why we exist",
+      "story": [
+        "Many business websites stay as digital business cards: they open, but bring no inquiries. Messages get answered late, and customer details get lost in notebooks or spreadsheets.",
+        "We fill that gap. The website attracts the customer, the chatbot answers instantly, and the CRM makes sure no inquiry is lost."
+      ],
+      "pillarsTitle": "What we do",
+      "pillars": [
+        {
+          "t": "Website development",
+          "d": "From corporate sites to online stores, built from scratch with a free demo."
+        },
+        {
+          "t": "AI tools and chatbots",
+          "d": "Assistants that answer 24/7 on your site, WhatsApp and Instagram, and take orders."
+        },
+        {
+          "t": "CRM and automation",
+          "d": "Systems that bring inquiries, customers and sales stages into one place."
+        },
+        {
+          "t": "Mobile apps, SEO and technical support",
+          "d": "Apps, search visibility, advertising and website security."
+        }
+      ],
+      "statsTitle": "In numbers",
+      "statProjects": "website projects delivered",
+      "statDemo": "free demo in hours",
+      "statLanguages": "languages supported",
+      "valuesTitle": "How we work",
+      "values": [
+        {
+          "t": "Show first",
+          "d": "You see the demo before you pay. If you do not like it, there is no obligation."
+        },
+        {
+          "t": "Honest advice",
+          "d": "We do not sell what you do not need. Sometimes the best solution is the simpler one."
+        },
+        {
+          "t": "Everything in your name",
+          "d": "Domain, hosting, accounts and code belong to you after handover."
+        },
+        {
+          "t": "Security from the start",
+          "d": "Sites are built to modern standards, with protection and backups."
+        }
+      ],
+      "founderTitle": "Founder",
+      "founderName": "Pasha Guliyev",
+      "founderRole": "Founder and CEO",
+      "founderText": "I founded Cradex Agency so that businesses get real value from technology. I follow every project as if it were my own.",
+      "ctaTitle": "Let's build your project together",
+      "ctaText": "We will build a free demo of your site. If you like it, we continue.",
+      "cta": "I want a free demo"
+    },
+    "portfolioPage": {
+      "metaTitle": "Our Work — Website Projects",
+      "metaDescription": "Websites built by Cradex Agency: corporate sites, online stores and other projects.",
+      "eyebrow": "Our work",
+      "title": "Websites we have built",
+      "text": "Each project is built around the goals of its business. We show every site as it looks on phone and desktop.",
+      "count": "{count} projects",
+      "empty": "Projects will be added soon."
+    },
+    "blogPage": {
+      "metaTitle": "Blog — Websites, Technology and Growth",
+      "metaDescription": "Practical articles on website development, SEO, advertising, AI tools and digital business growth.",
+      "title": "Articles on websites, technology and growth",
+      "text": "Clear answers to the questions clients ask us: how to choose a website, when SEO pays off, when you need a chatbot.",
+      "all": "All",
+      "latest": "Latest article",
+      "read": "Read more",
+      "minutes": "{count} min read",
+      "prev": "Previous",
+      "next": "Next",
+      "page": "Page {page}",
+      "empty": "There are no articles in this category yet.",
+      "categories": {
+        "seo": "SEO",
+        "smm": "Social media",
+        "branding": "Branding",
+        "design": "Design",
+        "copywriting": "Copywriting",
+        "web-dev": "Websites",
+        "marketing-strategy": "Strategy"
+      }
     }
   }
 }

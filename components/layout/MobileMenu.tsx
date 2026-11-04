@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { LOCALES, NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, isActive, localizedPath } from '@/lib/site/navigation'
+import { LOCALES, NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
 
 type Props = { isOpen: boolean; onClose: () => void }
 
@@ -49,7 +49,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   }
 
   const sub = {
-    services: SERVICE_IDS.map((s) => ({ href: `/${locale}/services#${s}`, label: tS(`${s}.title`) })),
+    services: SERVICE_IDS.map((s) => ({ href: serviceHref(locale, s), label: tS(`${s}.title`) })),
     products: PRODUCT_LINKS.map((p) => ({ href: `/${locale}/products#${p.id}`, label: tP(p.key) })),
   }
 

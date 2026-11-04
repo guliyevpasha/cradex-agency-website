@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/Badge'
 import { Accordion } from '@/components/ui/Accordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import type { PortfolioItem } from '@/types'
+import { isShown } from '@/lib/site/portfolio'
 
 // Enable ISR with 60 second revalidation
 export const revalidate = 60
@@ -29,7 +30,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const item = await getPortfolioBySlug(slug)
-  if (!item) return {}
+  if (!item || !isShown(item)) return {}
   return {
     title: item.titleKey,
     description: item.descriptionKey,
@@ -51,7 +52,7 @@ export default async function PortfolioDetailPage({
   
   const item = await getPortfolioBySlug(slug)
   
-  if (!item) {
+  if (!item || !isShown(item)) {
     notFound()
   }
   

@@ -1,228 +1,208 @@
+/**
+ * One page per service: hero with a large 3D scene, what is included, how we
+ * work, FAQ, the other services and the closing CTA. Copy: site.servicePage.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { useTranslations, useLocale } from 'next-intl'
-import { MessageCircle, ArrowRight } from 'lucide-react'
-import { getAllServices, getServiceBySlug } from '@/lib/data/services'
-import { getPortfolioByCategory } from '@/lib/data/portfolio'
-import { ServiceHero } from '@/components/sections/ServiceHero'
-import { DigitalMarketingHero } from '@/components/sections/DigitalMarketingHero'
-import { PlatformsSection } from '@/components/sections/PlatformsSection'
-import { AuditStrategySection } from '@/components/sections/AuditStrategySection'
-import { StrategicApproach } from '@/components/sections/StrategicApproach'
-import { WhoIsThisFor } from '@/components/sections/WhoIsThisFor'
-import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
-import { Glossary } from '@/components/sections/Glossary'
-import { FAQ } from '@/components/sections/FAQ'
-import { RelatedPortfolioSection } from '@/components/sections/RelatedPortfolioSection'
-import WebMobileDevHero from '@/components/sections/WebMobileDevHero'
-import WebsiteTypesSection from '@/components/sections/WebsiteTypesSection'
-import { GlassCard } from '@/components/ui/GlassCard'
-import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { Button } from '@/components/ui/Button'
-import type { Service, PortfolioItem } from '@/types'
+import { ArrowUpRight, ChevronDown, ChevronRight } from 'lucide-react'
+import { LOCALES, SERVICE_IDS, SERVICE_SLUGS, serviceHref, serviceIdBySlug, type ServiceId } from '@/lib/site/navigation'
+import { ServiceScene } from '@/components/home/ServiceScene'
+import { WorkShowcase } from '@/components/home/WorkShowcase'
+import { FinalCta } from '@/components/home/FinalCta'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
+import { Reveal } from '@/components/ui/Reveal'
+import { Tilt } from '@/components/ui/Tilt'
+import { cn } from '@/lib/utils/cn'
 
-const locales = ['az', 'en', 'ru', 'tr']
+type Params = Promise<{ locale: string; slug: string }>
+type Item = { t: string; d: string }
+type Group = { h?: string; items: Item[] }
+type Faq = { q: string; a: string }
 
-// ISR revalidation - səhifə 60 saniyədə bir yenilənəcək
-export const revalidate = 60 // saniyə
+export const dynamicParams = false
 
-export async function generateStaticParams() {
-  const services = await getAllServices()
-  return locales.flatMap((locale) =>
-    services.map((service) => ({ locale, slug: service.slug }))
-  )
-  // 4 locales × 8 services = 32 static pages
+export function generateStaticParams() {
+  return LOCALES.flatMap(({ code }) => SERVICE_IDS.map((id) => ({ locale: code, slug: SERVICE_SLUGS[id] })))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale, slug } = await params
-  const service = await getServiceBySlug(slug)
-  if (!service) return {}
-  const t = await getTranslations({ locale, namespace: 'services' })
-  const key = slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+  const id = serviceIdBySlug(slug)
+  if (!id) return {}
+  const t = await getTranslations({ locale, namespace: `site.servicePage.${id}` })
   return {
-    title: t(`${key}.metaTitle` as any),
-    description: t(`${key}.metaDescription` as any),
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates: { canonical: `/${locale}/services/${slug}` },
   }
 }
 
-export default async function ServicePage({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>
-}) {
+export default async function ServicePage({ params }: { params: Params }) {
   const { locale, slug } = await params
+  const id = serviceIdBySlug(slug)
+  if (!id) notFound()
   setRequestLocale(locale)
-  const service = await getServiceBySlug(slug)
-  if (!service) notFound()
 
-  const relatedPortfolio = await getPortfolioByCategory(service.slug)
-
-  return <ServicePageContent service={service} relatedPortfolio={relatedPortfolio} />
-}
-
-function ServicePageContent({
-  service,
-  relatedPortfolio,
-}: {
-  service: Service
-  relatedPortfolio: PortfolioItem[]
-}) {
-  const t = useTranslations('services')
-  const locale = useLocale()
-  const key = service.slug.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase())
-  
-  // Special layout for digital-marketing, smm, and web-mobile-dev
-  const isDigitalMarketing = service.slug === 'digital-marketing'
-  const isSMM = service.slug === 'smm'
-  const isWebMobileDev = service.slug === 'web-mobile-dev'
-  const hasCustomLayout = isDigitalMarketing || isSMM
-
-  // Web-mobile-dev has special hero
-  if (isWebMobileDev) {
-    const heroData = {
-      title: t(`${key}.hero.title` as any),
-      titleAccent: t(`${key}.hero.titleAccent` as any),
-      subtitle: t(`${key}.hero.subtitle` as any),
-      description: t(`${key}.description` as any),
-      buttonText: t(`${key}.hero.primaryButton` as any),
-      note: t(`${key}.hero.demoNote` as any),
-    }
-
-    return (
-      <>
-        <WebMobileDevHero {...heroData} />
-        <ProcessTimeline steps={service.processSteps} />
-        <WebsiteTypesSection
-          title={t(`${key}.websiteTypes.title` as any)}
-          subtitle={t(`${key}.websiteTypes.subtitle` as any)}
-          types={t.raw(`${key}.websiteTypes.types` as any)}
-        />
-        <WhoIsThisFor
-          title={t(`${key}.whoIsThisFor.title` as any)}
-          subtitle={t(`${key}.whoIsThisFor.subtitle` as any)}
-          suitable={t.raw(`${key}.whoIsThisFor.suitable` as any)}
-          notSuitable={t.raw(`${key}.whoIsThisFor.notSuitable` as any)}
-          ctaText={t(`${key}.whoIsThisFor.ctaText` as any)}
-        />
-        <Glossary
-          title={t(`${key}.glossary.title` as any)}
-          subtitle={t(`${key}.glossary.subtitle` as any)}
-          terms={t.raw(`${key}.glossary.terms` as any)}
-        />
-        <FAQ
-          title={t(`${key}.faq.title` as any)}
-          subtitle={t(`${key}.faq.subtitle` as any)}
-          items={t.raw(`${key}.faq.items` as any)}
-          ctaButton={t(`${key}.faq.ctaButton` as any) || 'WhatsApp-dan soruş'}
-        />
-        <RelatedPortfolioSection portfolios={relatedPortfolio} />
-      </>
-    )
-  }
+  const t = await getTranslations({ locale, namespace: 'site.servicePage' })
+  const tS = await getTranslations({ locale, namespace: 'site.services' })
+  const groups = t.raw(`${id}.includes`) as Group[]
+  const steps = t.raw(`${id}.steps`) as Item[]
+  const faq = t.raw(`${id}.faq`) as Faq[]
+  const others = SERVICE_IDS.filter((s) => s !== id)
+  let n = 0
 
   return (
-    <>
-      {hasCustomLayout ? (
-        <>
-          <DigitalMarketingHero
-            title={t(`${key}.name` as any)}
-            description={t(`${key}.heroDescription` as any)}
-            ctaStart={t(`${key}.ctaStart` as any)}
-            ctaProcess={t(`${key}.ctaProcess` as any)}
-            locale={locale}
-            imagePath={isSMM ? '/images/smm-hero.webp' : '/images/digital-marketing-hero.webp'}
+    <div className="pt-24 lg:pt-28">
+      {/* Hero */}
+      <section className="container-x grid items-center gap-12 pb-16 pt-6 lg:grid-cols-[1.05fr_1fr] lg:pb-24">
+        <div>
+          <nav aria-label="breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-text-muted">
+            <Link href={`/${locale}`} className="hover:text-text-primary">{t('home')}</Link>
+            <ChevronRight size={14} aria-hidden="true" />
+            <Link href={`/${locale}/services`} className="hover:text-text-primary">{t('services')}</Link>
+            <ChevronRight size={14} aria-hidden="true" />
+            <span className="text-text-secondary">{tS(`${id}.title`)}</span>
+          </nav>
+          <p className="mt-8 inline-flex rounded-full bg-accent-primary/10 px-3 py-1 text-xs font-semibold text-accent-ink">{t(`${id}.eyebrow`)}</p>
+          <AnimatedHeading
+            as="h1"
+            className="mt-5 text-[2.6rem] font-extrabold leading-[1.04] tracking-[-0.04em] text-text-primary sm:text-6xl"
+            text={t(`${id}.title`)}
           />
-          <PlatformsSection
-            title={t(`${key}.platformsTitle` as any)}
-            subtitle={t(`${key}.platformsSubtitle` as any)}
-            platforms={t.raw(`${key}.platforms` as any)}
-          />
-          <AuditStrategySection
-            title={t(`${key}.auditTitle` as any)}
-            items={t.raw(`${key}.auditItems` as any)}
-          />
-          <StrategicApproach
-            title={t(`${key}.strategicApproach.title` as any)}
-            description={t(`${key}.strategicApproach.description` as any)}
-            highlights={t.raw(`${key}.strategicApproach.highlights` as any)}
-          />
-          <WhoIsThisFor
-            title={t(`${key}.whoIsThisFor.title` as any)}
-            subtitle={t(`${key}.whoIsThisFor.subtitle` as any)}
-            suitable={t.raw(`${key}.whoIsThisFor.suitable` as any)}
-            notSuitable={t.raw(`${key}.whoIsThisFor.notSuitable` as any)}
-            ctaText={t(`${key}.whoIsThisFor.ctaText` as any)}
-          />
-        </>
-      ) : (
-        <ServiceHero
-          serviceName={t(`${key}.name` as any)}
-          serviceDescription={t(`${key}.description` as any)}
-        />
-      )}
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary">{t(`${id}.text`)}</p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <WhatsAppButton label={t('cta')} message={t(`${id}.message`)} />
+            <Link
+              href={`/${locale}/pricing`}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-6 py-3 text-[15px] font-semibold text-text-primary transition-colors hover:bg-text-primary hover:text-bg-primary"
+            >
+              {t('pricing')}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
 
-      {/* Process timeline */}
-      <ProcessTimeline steps={service.processSteps} />
-
-      {/* Glossary and FAQ - only for services with custom layout */}
-      {hasCustomLayout && (
-        <>
-          <Glossary
-            title={t(`${key}.glossary.title` as any)}
-            subtitle={t(`${key}.glossary.subtitle` as any)}
-            terms={t.raw(`${key}.glossary.terms` as any)}
-          />
-          <FAQ
-            title={t(`${key}.faq.title` as any)}
-            subtitle={t(`${key}.faq.subtitle` as any)}
-            items={t.raw(`${key}.faq.items` as any)}
-            ctaButton={t(`${key}.faq.ctaButton` as any)}
-          />
-        </>
-      )}
-
-      {/* Related portfolio */}
-      <RelatedPortfolioSection portfolios={relatedPortfolio} />
-
-      {/* CTA - only for services without custom layout */}
-      {!hasCustomLayout && (
-        <section className="py-16">
-          <div className="max-w-2xl mx-auto px-4 text-center">
-            <ScrollReveal animation="scaleIn">
-              <GlassCard className="p-10">
-                <h2 className="text-display-md font-display font-bold text-text-primary mb-4">
-                  Bu xidməti sifariş et
-                </h2>
-                <p className="text-text-secondary mb-8">
-                  {t(`${key}.shortDesc` as any)} xidməti üçün bizimlə əlaqə saxlayın.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button href={`/${locale}/contact`} size="lg" icon={<ArrowRight size={18} />}>
-                    Əlaqə
-                  </Button>
-                  <Button
-                    href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'}`}
-                  variant="whatsapp"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  icon={<MessageCircle size={18} />}
-                >
-                  WhatsApp
-                </Button>
+        <Reveal className="rv-3d">
+          <Tilt max={10}>
+            <div className="svc-stage relative flex aspect-[5/4] items-center justify-center rounded-[36px] border border-line bg-bg-secondary shadow-card">
+              <span className="tilt-glare" />
+              <span className="svc-stage-grid" aria-hidden="true" />
+              <div className="tilt-z2">
+                <ServiceScene id={id} className="sc-xl" />
               </div>
-            </GlassCard>
-          </ScrollReveal>
+            </div>
+          </Tilt>
+        </Reveal>
+      </section>
+
+      {/* What is included */}
+      <section className="container-x py-16 lg:py-24">
+        <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('includesTitle')} />
+        {groups.map((g, gi) => (
+          <div key={gi} className={cn(g.h ? 'mt-12' : 'mt-10')}>
+            {g.h && <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.12em] text-accent-ink">{g.h}</h3>}
+            <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {g.items.map((item, i) => {
+                n += 1
+                return (
+                  <li key={item.t}>
+                    <Reveal className="rv-3d h-full" delay={(i % 3) * 90}>
+                      <Tilt max={7} className="h-full" innerClassName="h-full">
+                        <article className="svc relative h-full rounded-3xl border border-line bg-bg-secondary p-7 shadow-card">
+                          <span className="tilt-glare" />
+                          <span className="tilt-z3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong text-sm font-extrabold text-snow svc-icon">
+                            {String(n).padStart(2, '0')}
+                          </span>
+                          <h4 className="tilt-z1 mt-5 text-xl font-bold tracking-tight text-text-primary">{item.t}</h4>
+                          <p className="tilt-z1 mt-2 leading-relaxed text-text-secondary">{item.d}</p>
+                        </article>
+                      </Tilt>
+                    </Reveal>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      {id === 'web' && <WorkShowcase />}
+
+      {/* How we work */}
+      <section className="container-x py-16 lg:py-24">
+        <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('processTitle')} />
+        <ol className="relative mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <span className="absolute left-0 right-0 top-[38px] hidden h-px bg-gradient-to-r from-transparent via-accent-primary/50 to-transparent lg:block" aria-hidden="true" />
+          {steps.map((s, i) => (
+            <li key={s.t}>
+              <Reveal className="rv-3d h-full" delay={i * 110}>
+                <Tilt max={8} className="h-full" innerClassName="h-full">
+                  <div className="relative h-full rounded-3xl border border-line bg-bg-primary p-7 shadow-card">
+                    <span className="tilt-glare" />
+                    <span className="step-orb tilt-z3 flex h-12 w-12 items-center justify-center rounded-full bg-brand-strong text-lg font-extrabold text-snow">
+                      {i + 1}
+                    </span>
+                    <p className="tilt-z1 mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
+                      {t('step')} {i + 1}
+                    </p>
+                    <h3 className="tilt-z1 mt-1 text-xl font-bold text-text-primary">{s.t}</h3>
+                    <p className="tilt-z1 mt-2 leading-relaxed text-text-secondary">{s.d}</p>
+                  </div>
+                </Tilt>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* FAQ */}
+      <section className="container-x grid gap-10 py-16 lg:grid-cols-[1fr_1.6fr] lg:py-24">
+        <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
+        <div className="space-y-3">
+          {faq.map((f) => (
+            <details key={f.q} className="group rounded-3xl border border-line bg-bg-secondary px-6 py-5 open:shadow-card">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <ChevronDown size={20} className="shrink-0 text-accent-ink transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <p className="mt-3 leading-relaxed text-text-secondary">{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
-      )}
-    </>
+
+      {/* Other services */}
+      <section className="container-x py-16 lg:py-24">
+        <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('otherTitle')} />
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {others.map((o: ServiceId, i) => (
+            <li key={o}>
+              <Reveal className="rv-3d h-full" delay={i * 80}>
+                <Link href={serviceHref(locale, o)} className="group block h-full">
+                  <Tilt max={8} className="h-full" innerClassName="h-full">
+                    <div className="svc relative flex h-full flex-col rounded-3xl border border-line bg-bg-secondary p-6 shadow-card">
+                      <span className="tilt-glare" />
+                      <div className="tilt-z2 -mt-2 self-end">
+                        <ServiceScene id={o} />
+                      </div>
+                      <h3 className="tilt-z1 mt-2 text-lg font-bold text-text-primary group-hover:text-accent-ink">{tS(`${o}.title`)}</h3>
+                      <span className="tilt-z1 mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-ink">
+                        {t('more')} <ArrowUpRight size={15} aria-hidden="true" />
+                      </span>
+                    </div>
+                  </Tilt>
+                </Link>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <FinalCta />
+    </div>
   )
 }

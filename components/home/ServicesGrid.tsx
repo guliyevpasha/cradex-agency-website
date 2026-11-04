@@ -6,13 +6,13 @@
  */
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowRight, Check, Code2, Megaphone, Search, ShieldCheck, Smartphone } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check, Code2, Megaphone, Search, ShieldCheck, Smartphone } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
+import { serviceHref, type ServiceId } from '@/lib/site/navigation'
 import { SectionHeading } from './SectionHeading'
-
-type ServiceId = 'web' | 'mobile' | 'seo' | 'ads' | 'support'
+import { ServiceScene } from './ServiceScene'
 
 const ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const POINTS: Record<string, string[]> = {
@@ -38,95 +38,22 @@ function Points({ items }: { items: string[] }) {
   )
 }
 
-/** Decorative 3D scene for each service. Pure CSS, hidden from screen readers. */
-function Scene({ id }: { id: ServiceId }) {
-  if (id === 'web')
-    return (
-      <div className="sc sc-lg" aria-hidden="true">
-        <div className="sc-iso">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className={cn('sc-pane', i === 2 ? 'border-transparent bg-brand-strong' : 'border-line bg-bg-primary')}>
-              <span className="flex gap-1 p-2">
-                {[0, 1, 2].map((d) => (
-                  <i key={d} className={cn('h-1.5 w-1.5 rounded-full', i === 2 ? 'bg-snow/70' : 'bg-line')} />
-                ))}
-              </span>
-              <span className={cn('mx-2 block h-2 w-3/5 rounded', i === 2 ? 'bg-snow/90' : 'bg-text-primary/15')} />
-              <span className={cn('mx-2 mt-1.5 block h-1.5 w-2/5 rounded', i === 2 ? 'bg-snow/50' : 'bg-text-primary/10')} />
-              <span className={cn('mx-2 mt-2 block h-5 w-1/3 rounded-md', i === 2 ? 'bg-snow' : 'bg-accent-primary/30')} />
-            </div>
-          ))}
-        </div>
-      </div>
-    )
-
-  if (id === 'mobile')
-    return (
-      <div className="sc" aria-hidden="true">
-        <div className="sc-phone border-[3px] border-ink bg-bg-primary dark:border-snow/80">
-          <span className="mx-auto mt-1 block h-1 w-5 rounded-full bg-ink/60 dark:bg-snow/50" />
-          <span className="grid grid-cols-2 gap-1 p-1.5">
-            {[0, 1, 2, 3, 4, 5].map((k) => (
-              <i key={k} className={cn('sc-app h-4 rounded', k === 0 ? 'bg-brand-strong' : 'bg-accent-primary/25')} />
-            ))}
-          </span>
-        </div>
-        <span className="sc-note bg-brand-strong text-snow">
-          <i className="h-1.5 w-1.5 rounded-full bg-snow" />
-          <i className="h-1 w-6 rounded bg-snow/80" />
-        </span>
-      </div>
-    )
-
-  if (id === 'seo')
-    return (
-      <div className="sc" aria-hidden="true">
-        <div className="sc-chart border-line bg-bg-primary">
-          {[38, 55, 72, 92].map((h, k) => (
-            <i key={k} className={cn('sc-bar rounded-t', k === 3 ? 'bg-brand-strong' : 'bg-accent-primary/35')} style={{ height: `${h}%` }} />
-          ))}
-        </div>
-        <span className="sc-lens border-[3px] border-brand-strong bg-bg-primary/60">
-          <i className="sc-lens-handle bg-brand-strong" />
-        </span>
-      </div>
-    )
-
-  if (id === 'ads')
-    return (
-      <div className="sc" aria-hidden="true">
-        <div className="sc-ground">
-          {[0, 1, 2].map((k) => (
-            <i key={k} className="sc-ripple border-2 border-accent-primary/60" />
-          ))}
-        </div>
-        <span className="sc-core bg-brand-strong text-snow">
-          <Megaphone size={18} />
-        </span>
-        {['M', 'G', 'in', 'T'].map((c, k) => (
-          <span key={c} className={cn('sc-chip border border-line bg-bg-primary text-text-primary', `sc-chip-${k}`)}>
-            {c}
-          </span>
-        ))}
-      </div>
-    )
-
+function MoreLink({ href, label }: { href: string; label: string }) {
   return (
-    <div className="sc" aria-hidden="true">
-      <i className="sc-orbit sc-orbit-a border-2 border-dashed border-accent-primary/60" />
-      <i className="sc-orbit sc-orbit-b border border-accent-primary/40">
-        <b className="sc-dot bg-brand-strong" />
-      </i>
-      <span className="sc-shield bg-brand-strong text-snow">
-        <ShieldCheck size={26} />
-      </span>
-    </div>
+    <Link
+      href={href}
+      className="tilt-z2 mt-6 inline-flex items-center gap-2 rounded-full bg-brand-strong px-5 py-2.5 text-sm font-semibold text-snow shadow-card transition-transform hover:-translate-y-0.5"
+    >
+      {label}
+      <ArrowUpRight size={16} aria-hidden="true" />
+    </Link>
   )
 }
 
 export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?: boolean; headingAs?: 'h1' | 'h2' }) {
   const t = useTranslations('site.services')
   const tCta = useTranslations('site.cta')
+  const tPage = useTranslations('site.servicePage')
   const locale = useLocale()
   const Card = detailed ? 'article' : 'div'
 
@@ -146,7 +73,7 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
             <Icon size={24} aria-hidden="true" />
           </span>
           <div className="tilt-z2 -mr-2 -mt-3">
-            <Scene id={id} />
+            <ServiceScene id={id} />
           </div>
         </div>
         <h3 className="tilt-z1 mt-4 text-2xl font-bold tracking-tight text-text-primary">{t(`${id}.title`)}</h3>
@@ -176,7 +103,10 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
                   <span className="tilt-z1 mb-4 inline-flex rounded-full bg-accent-primary/10 px-3 py-1 text-xs font-semibold text-accent-ink">{t('featured')}</span>
                   {head('web')}
                 </div>
-                <Points items={POINTS.web.map((p) => t(`web.${p}`))} />
+                <div>
+                  <Points items={POINTS.web.map((p) => t(`web.${p}`))} />
+                  <MoreLink href={serviceHref(locale, 'web')} label={tPage('more')} />
+                </div>
               </Card>
             </Tilt>
           </Reveal>
@@ -188,6 +118,7 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
                   <span className="tilt-glare" />
                   {head(id)}
                   <Points items={POINTS[id].map((p) => t(`${id}.${p}`))} />
+                  <MoreLink href={serviceHref(locale, id)} label={tPage('more')} />
                 </Card>
               </Tilt>
             </Reveal>
@@ -198,7 +129,10 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
               <Card id="support" className={cardCls}>
                 <span className="tilt-glare" />
                 <div className="lg:grid lg:grid-cols-[1fr_2fr] lg:gap-10">
-                  <div>{head('support')}</div>
+                  <div>
+                    {head('support')}
+                    <MoreLink href={serviceHref(locale, 'support')} label={tPage('more')} />
+                  </div>
                   <div className="tilt-z1 mt-6 grid gap-6 sm:grid-cols-2 lg:mt-0">
                     {(
                       [

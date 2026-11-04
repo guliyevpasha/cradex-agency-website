@@ -1,14 +1,15 @@
 import type { MetadataRoute } from 'next'
-import { getServiceSlugs } from '@/lib/data/services'
-import { getPortfolioSlugs } from '@/lib/data/portfolio'
+import { getAllPortfolio } from '@/lib/data/portfolio'
+import { cleanSlug, isShown } from '@/lib/site/portfolio'
+import { SERVICE_IDS, SERVICE_SLUGS } from '@/lib/site/navigation'
 import { getArticleSlugs } from '@/lib/data/journal'
 
 const baseUrl = 'https://cradexagency.com'
 const locales = ['az', 'en', 'ru', 'tr']
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const serviceSlugs = await getServiceSlugs()
-  const portfolioSlugs = await getPortfolioSlugs()
+  const serviceSlugs = SERVICE_IDS.map((id) => SERVICE_SLUGS[id])
+  const portfolioSlugs = (await getAllPortfolio()).filter(isShown).map((p) => cleanSlug(p.slug))
   const articleSlugs = await getArticleSlugs()
 
   const staticPages = [

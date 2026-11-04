@@ -30,6 +30,14 @@ export function shotsFor(item: PortfolioItem): { desktop: string; mobile?: strin
 export const isWebsite = (item: PortfolioItem) =>
   (item.category ?? item.serviceCategory) === 'web-mobile-dev' && Boolean(item.coverImage)
 
+/**
+ * The site shows website work only. Other projects stay in Sanity; set this to
+ * false to bring them back (see archive/portfolio-all/README.md).
+ */
+export const WEBSITES_ONLY = true
+
+export const isShown = (item: PortfolioItem) => !WEBSITES_ONLY || isWebsite(item)
+
 /** Some Sanity slugs were saved with spaces or capitals. */
 export function cleanSlug(slug: string): string {
   return slug
