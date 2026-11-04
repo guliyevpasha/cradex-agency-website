@@ -30,32 +30,32 @@ export const INITIAL_RATE: Record<PlanCategory, number> = { cms: 0.25, code: 0.1
 export const PLAN_CATEGORIES: PlanCategory[] = ['cms', 'code']
 
 export const PLANS: Plan[] = [
-  { id: 'start', category: 'cms', total: 800, pages: 3, languages: 1, design: 'standard' },
-  { id: 'business', category: 'cms', total: 1200, pages: 8, languages: 1, design: 'standard', recommended: true },
-  { id: 'professional', category: 'cms', total: 1600, pages: 20, languages: 2, design: 'detailed' },
-  { id: 'premium', category: 'cms', total: 2400, pages: 30, languages: 3, design: 'custom' },
-  { id: 'codeStart', category: 'code', total: 3200, pages: 5, languages: 1, design: 'standard' },
-  { id: 'codeBusiness', category: 'code', total: 4800, pages: 10, languages: 1, design: 'detailed', recommended: true },
-  { id: 'codePro', category: 'code', total: 6400, pages: 15, languages: 2, design: 'detailed' },
-  { id: 'codeEnterprise', category: 'code', total: 8000, pages: 25, languages: 3, design: 'custom' },
+  { id: 'start', category: 'cms', total: 400, pages: 3, languages: 1, design: 'standard' },
+  { id: 'business', category: 'cms', total: 560, pages: 8, languages: 1, design: 'standard', recommended: true },
+  { id: 'professional', category: 'cms', total: 800, pages: 20, languages: 2, design: 'detailed' },
+  { id: 'premium', category: 'cms', total: 1200, pages: 30, languages: 3, design: 'custom' },
+  { id: 'codeStart', category: 'code', total: 1080, pages: 5, languages: 1, design: 'standard' },
+  { id: 'codeBusiness', category: 'code', total: 1600, pages: 10, languages: 1, design: 'detailed', recommended: true },
+  { id: 'codePro', category: 'code', total: 2120, pages: 15, languages: 2, design: 'detailed' },
+  { id: 'codeEnterprise', category: 'code', total: 2680, pages: 25, languages: 3, design: 'custom' },
 ]
 
 /*
- * Add-on prices follow the Baku market (one extra page ≈ 100 ₼, language
- * ≈ 300 ₼, logo ≈ 300 ₼, branding ≈ 800 ₼, chatbot ≈ 900 ₼) but are set to
- * multiples of 80 ₼: with 25% up front the rest splits into 12 whole-manat
- * instalments only when the total divides by 80 (by 40 for custom code).
+ * Every price here is a multiple of 80 ₼ (custom-code packages: of 40 ₼):
+ * with 25% up front the rest splits into 12 whole-manat instalments only
+ * when the total divides by 80 (by 40 at 10% up front). That is why a page
+ * stays 80 ₼ although the other add-ons were halved.
  */
 export const PAGE_PRICE = 80
-export const LANGUAGE_PRICE = 320
+export const LANGUAGE_PRICE = 160
 export const MAX_PAGES = 40
 export const SITE_LANGUAGES = ['az', 'en', 'ru', 'tr'] as const
 export type SiteLanguage = (typeof SITE_LANGUAGES)[number]
 
 export const DESIGN_LEVELS: DesignLevel[] = ['standard', 'detailed', 'custom']
-export const DESIGN_PRICE: Record<DesignLevel, number> = { standard: 0, detailed: 640, custom: 960 }
+export const DESIGN_PRICE: Record<DesignLevel, number> = { standard: 0, detailed: 320, custom: 480 }
 
-export const EXTRAS: Record<ExtraId, number> = { logo: 320, branding: 800, chatbot: 880 }
+export const EXTRAS: Record<ExtraId, number> = { logo: 160, branding: 400, chatbot: 400 }
 export const EXTRA_IDS = Object.keys(EXTRAS) as ExtraId[]
 
 /** Monthly SEO is a running service: billed per month, never part of the project instalments. */

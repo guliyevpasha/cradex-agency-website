@@ -16,14 +16,14 @@ describe('website packages', () => {
 
   it('takes 25% up front for CMS sites', () => {
     for (const p of plansIn('cms')) expect(quote(p).initialRate).toBe(0.25)
-    expect(quote(byId('start'))).toMatchObject({ initial: 200, monthly: 50, annual: 640, saving: 160 })
-    expect(quote(byId('premium'))).toMatchObject({ initial: 600, monthly: 150, annual: 1920 })
+    expect(quote(byId('start'))).toMatchObject({ initial: 100, monthly: 25, annual: 320, saving: 80 })
+    expect(quote(byId('premium'))).toMatchObject({ initial: 300, monthly: 75, annual: 960 })
   })
 
   it('takes 10% up front for custom-code sites', () => {
     for (const p of plansIn('code')) expect(quote(p).initialRate).toBe(0.1)
-    expect(quote(byId('codeStart'))).toMatchObject({ initial: 320, monthly: 240, annual: 2560 })
-    expect(quote(byId('codeEnterprise'))).toMatchObject({ initial: 800, monthly: 600, annual: 6400 })
+    expect(quote(byId('codeStart'))).toMatchObject({ initial: 108, monthly: 81, annual: 864 })
+    expect(quote(byId('codeEnterprise'))).toMatchObject({ initial: 268, monthly: 201, annual: 2144 })
   })
 
   it('adds up: initial + 12 instalments = total, annual = total - 20%', () => {
@@ -50,13 +50,13 @@ describe('website packages', () => {
 
   it('charges only for what the package does not include', () => {
     const business = byId('business')
-    expect(totalOf(priceLines(business, defaultOptions(business)))).toBe(1200)
+    expect(totalOf(priceLines(business, defaultOptions(business)))).toBe(560)
     // 10 pages (2 extra), AZ+EN (1 extra), detailed design, logo
     const o = { pages: 10, languages: 2, design: 'detailed' as const, extras: ['logo' as const] }
-    expect(totalOf(priceLines(business, o))).toBe(1200 + 160 + 320 + 640 + 320)
+    expect(totalOf(priceLines(business, o))).toBe(560 + 160 + 160 + 320 + 160)
     // premium already has custom design and 3 languages
     const premium = byId('premium')
-    expect(totalOf(priceLines(premium, { pages: 30, languages: 3, design: 'standard', extras: [] }))).toBe(2400)
+    expect(totalOf(priceLines(premium, { pages: 30, languages: 3, design: 'standard', extras: [] }))).toBe(1200)
   })
 
   it('keeps any configured total in whole manats', () => {
