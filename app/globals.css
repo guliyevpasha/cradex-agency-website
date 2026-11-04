@@ -1419,3 +1419,116 @@
 .om-step:not(:disabled):active { transform: translateY(2px); box-shadow: 0 1px 0 rgb(11 13 16 / 0.12); }
 
 .founder-photo { box-shadow: 0 0 0 4px rgb(var(--bg-secondary, 245 247 250)), 0 0 0 6px rgb(36 160 255 / 0.55), 0 18px 34px -16px rgb(10 116 204 / 0.8); }
+
+/* ---- Pricing: selector, live panel, cards ---- */
+.pr-option {
+  position: relative;
+  display: flex;
+  min-height: 64px;
+  cursor: pointer;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--bg-primary));
+  padding: 14px 16px;
+  color: rgb(var(--text-primary));
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.pr-option:hover { border-color: rgb(36 160 255 / 0.5); transform: translateY(-1px); }
+.pr-option:has(input:focus-visible) { outline: 2px solid #24A0FF; outline-offset: 2px; }
+.pr-option-col { flex-direction: column; align-items: flex-start; gap: 0; }
+.pr-option-on {
+  border-color: transparent;
+  background: #0B0D10;
+  color: #FFFFFF;
+  box-shadow: 0 18px 34px -20px rgb(11 13 16 / 0.7);
+}
+.dark .pr-option-on { background: #0A74CC; box-shadow: 0 18px 34px -20px rgb(10 116 204 / 0.9); }
+
+.pr-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 2px solid rgb(var(--text-muted));
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pr-option-on .pr-radio { border-color: #FFFFFF; box-shadow: inset 0 0 0 4px #0B0D10, inset 0 0 0 10px #FFFFFF; }
+.dark .pr-option-on .pr-radio { box-shadow: inset 0 0 0 4px #0A74CC, inset 0 0 0 10px #FFFFFF; }
+
+/* two-way switch with a sliding thumb */
+.pr-segment {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--bg-primary));
+  padding: 4px;
+}
+.pr-segment-thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  border-radius: 999px;
+  background: #0A74CC;
+  box-shadow: 0 10px 20px -10px rgb(10 116 204 / 0.9);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pr-segment[data-active='annual'] .pr-segment-thumb { transform: translateX(100%); }
+.pr-segment-item {
+  position: relative;
+  display: flex;
+  min-height: 46px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(var(--text-primary));
+  transition: color 0.25s ease;
+}
+.pr-segment-item:has(input:focus-visible) { outline: 2px solid #24A0FF; outline-offset: 2px; }
+
+.pr-panel::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  border: 36px solid rgb(36 160 255 / 0.14);
+  pointer-events: none;
+}
+.pr-bar { transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+
+.pr-card { transform-style: preserve-3d; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.pr-card-on { box-shadow: 0 0 0 2px #24A0FF, 0 24px 48px -26px rgb(10 116 204 / 0.7); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-option, .pr-segment-thumb, .pr-bar { transition: none; }
+}
+/* hero example: the 12 instalments light up one by one */
+.pr-month { animation: pr-month 3.6s ease-in-out infinite; }
+@keyframes pr-month {
+  0%, 15% { background: rgb(255 255 255 / 0.1); }
+  30%, 80% { background: #24A0FF; }
+  100% { background: rgb(255 255 255 / 0.1); }
+}
+@media (prefers-reduced-motion: reduce) { .pr-month { animation: none; background: rgb(36 160 255 / 0.6); } }
+/* on phones the −20% tag sits on the switch's corner so the labels keep their width */
+.pr-badge { position: absolute; top: -12px; right: 10px; box-shadow: 0 6px 14px -6px rgb(10 116 204 / 0.8); }
+@media (min-width: 640px) { .pr-badge { position: static; margin-left: 8px; box-shadow: none; } }
+@media (max-width: 400px) { .pr-segment-item { font-size: 14px; line-height: 1.2; } }
+.dark .pr-panel { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08); }
+/* the label sitting on the blue thumb is always white (beats the base colour above) */
+.pr-segment[data-active='monthly'] .pr-segment-item:nth-of-type(1),
+.pr-segment[data-active='annual'] .pr-segment-item:nth-of-type(2) { color: #FFFFFF; }

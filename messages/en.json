@@ -2228,8 +2228,8 @@
       "servicesDescription": "Website and mobile app development, SEO and GEO, Meta, TikTok, LinkedIn and Google ads, technical support.",
       "productsTitle": "Our Products",
       "productsDescription": "Chatbot and social media combo packages for Instagram, TikTok and YouTube.",
-      "pricingTitle": "Pricing",
-      "pricingDescription": "The website demo is free. If you like it, we launch it with a yearly package from 399 ₼."
+      "pricingTitle": "Pricing — website packages and installment payment",
+      "pricingDescription": "CMS and custom-coded website packages: 10–25% down payment, the rest split over 12 months, 20% off when you pay annually."
     },
     "nav": {
       "home": "Home",
@@ -2269,7 +2269,7 @@
       "titleAccent": "2 hours,",
       "titleEnd": "not 2 months.",
       "titleFree": "And it's free!",
-      "subtitle": "We build a demo of your site first, for your business, personal brand or content project. If you like it, we launch it with a yearly package from 399 ₼.",
+      "subtitle": "We build a demo of your site first, for your business, personal brand or content project. If you like it, we launch it with a 200 ₼ initial payment, and the remaining amount is split over 12 months.",
       "fine": "The demo is free. If you don't like it, you pay nothing.",
       "card": {
         "building": "Building your demo",
@@ -2590,7 +2590,7 @@
       "teaser": "Have a question? 👋",
       "hello": "Hello! I'm the Cradex assistant. What are you interested in?",
       "q1": "Free demo",
-      "a1": "We build a demo of your website in 2 hours, free of charge. If you like it, we launch it with a plan starting at 399 ₼ per year.",
+      "a1": "We build a demo of your website in 2 hours, free of charge. If you like it, we launch it with a 200 ₼ initial payment, and the rest is split over 12 months.",
       "q2": "Services",
       "a2": "Website development, mobile apps, SEO and GEO, Meta, TikTok, LinkedIn and Google ads, and maintenance.",
       "q3": "Combo packages",
@@ -3386,6 +3386,220 @@
         "web-dev": "Websites",
         "marketing-strategy": "Strategy"
       }
+    },
+    "pricingPage": {
+      "metaTitle": "Pricing — website packages and installment payment",
+      "metaDescription": "CMS and custom-coded website packages: 10–25% down payment, the rest split over 12 months, 20% off when you pay annually.",
+      "eyebrow": "Pricing",
+      "title": "Owning a website is now within reach.",
+      "text": "We build a professional website for your business, manage the technical side and split the payment into parts that fit your budget.",
+      "perks": [
+        "Start with a down payment",
+        "Up to 12 monthly installments",
+        "20% off annual payment",
+        "Professional technical support",
+        "Technology that fits your business"
+      ],
+      "ctaPlans": "Explore packages",
+      "ctaCustom": "Contact us for a custom project",
+      "pickerTitle": "Which website do you need?",
+      "categories": {
+        "cms": {
+          "label": "CMS-based websites",
+          "short": "CMS",
+          "text": "WordPress, WooCommerce, Shopify, Wix and other CMS platforms."
+        },
+        "code": {
+          "label": "Custom-coded websites",
+          "short": "Custom code",
+          "text": "Next.js, React, TypeScript, Node.js, Sanity CMS. Custom admin panels and CRM belong to this category."
+        }
+      },
+      "billingTitle": "Payment type",
+      "billing": {
+        "monthly": "Monthly installments",
+        "annual": "Annual payment"
+      },
+      "discountBadge": "20% OFF",
+      "packageTitle": "Package",
+      "recommended": "Recommended",
+      "summaryTitle": "Payment plan",
+      "totalLabel": "Total project cost",
+      "initialLabel": "Down payment ({rate})",
+      "initialNote": "before work starts",
+      "monthlyLabel": "Monthly payment",
+      "monthlyValue": "12 months × {amount}",
+      "annualLabel": "One-time payment",
+      "annualNote": "20% annual discount",
+      "savingLabel": "You save",
+      "perMonth": "/mo",
+      "then": "then 12 months × {amount}",
+      "upfront": "{amount} down payment",
+      "includes": "What's included",
+      "order": "Order this package",
+      "choose": "Select package",
+      "chosen": "Selected",
+      "summaryNote": "Domain and hosting are not included in the price. Installments are formalized with a 12-month contract.",
+      "messageMonthly": "Hello, Cradex Agency. I would like to order the {plan} package with monthly installments ({total}, down payment {initial}, then 12 × {monthly}).",
+      "messageAnnual": "Hello, Cradex Agency. I would like to order the {plan} package with annual payment ({annual}, with the 20% discount).",
+      "cardsTitle": "All packages",
+      "cardsText": "Compare the packages. Prices update instantly when you change the payment type.",
+      "plans": {
+        "start": {
+          "name": "Start",
+          "text": "For small businesses and a first website.",
+          "features": [
+            "1–3 pages",
+            "Adapted ready-made design",
+            "Mobile and tablet friendly",
+            "Contact form",
+            "WhatsApp integration",
+            "Initial technical SEO"
+          ]
+        },
+        "business": {
+          "name": "Business",
+          "text": "For companies that showcase services and a portfolio.",
+          "features": [
+            "5–8 pages",
+            "Customized design",
+            "Services and portfolio section",
+            "Blog or news section",
+            "Google Analytics and Search Console setup",
+            "Technical SEO"
+          ]
+        },
+        "professional": {
+          "name": "Professional",
+          "text": "For content-rich and multilingual websites.",
+          "features": [
+            "10–20 pages",
+            "Extensive design customization",
+            "Multilingual structure",
+            "Blog and CMS management",
+            "Advanced SEO",
+            "Performance optimization"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "text": "A feature-rich website that sets your brand apart.",
+          "features": [
+            "Extended page structure",
+            "Custom UI/UX design",
+            "Multilingual management",
+            "Extended CMS capabilities",
+            "Additional technical optimization",
+            "Extended functionality"
+          ]
+        },
+        "codeStart": {
+          "name": "Code Start",
+          "text": "A fast website coded from scratch.",
+          "features": [
+            "Custom-coded website",
+            "Simple admin panel",
+            "Content management",
+            "Contact forms",
+            "Responsive design"
+          ]
+        },
+        "codeBusiness": {
+          "name": "Code Business",
+          "text": "For businesses with teams and reporting needs.",
+          "features": [
+            "Custom admin panel",
+            "User and content management",
+            "Dashboard and reports",
+            "Roles and permissions system",
+            "Basic API integration"
+          ]
+        },
+        "codePro": {
+          "name": "Code Pro",
+          "text": "To automate sales and customer processes.",
+          "features": [
+            "Extended admin panel",
+            "Custom CRM features",
+            "Customer and order management",
+            "Automated processes",
+            "API and third-party integrations"
+          ]
+        },
+        "codeEnterprise": {
+          "name": "Code Enterprise",
+          "text": "A complete system built around your business processes.",
+          "features": [
+            "Fully custom management panel",
+            "Extensive CRM capabilities",
+            "Multi-level user and role system",
+            "Custom business processes",
+            "Advanced reporting and analytics"
+          ]
+        }
+      },
+      "customTitle": "Have a project that doesn't fit a standard package?",
+      "customText": "E-commerce systems, marketplaces, complex CRM and ERP solutions, special integrations and feature-heavy projects are quoted individually based on technical requirements.",
+      "customItems": [
+        "Large e-commerce projects",
+        "Marketplaces and classifieds platforms",
+        "Complex payment integrations",
+        "Integration with ERP and accounting systems",
+        "Custom CRM and ERP systems",
+        "User accounts",
+        "Large API integrations",
+        "Custom business applications"
+      ],
+      "customCta": "Let's discuss your project",
+      "customMessage": "Hello, Cradex Agency. I would like to get a quote for a custom web project.",
+      "faqTitle": "Frequently asked questions",
+      "faq": [
+        {
+          "q": "How much is the down payment?",
+          "a": "For CMS-based website packages, 25% of the total project cost is paid before work starts. For custom-coded website packages, it is 10%."
+        },
+        {
+          "q": "How do I pay the remaining amount?",
+          "a": "After the down payment, the remaining amount is paid in equal installments over 12 months."
+        },
+        {
+          "q": "Is there a discount for annual payment?",
+          "a": "Yes. If you choose a one-time annual payment, a 20% discount is applied to the total project cost."
+        },
+        {
+          "q": "Are domain and hosting included in the price?",
+          "a": "No. Domain, hosting and paid third-party services are paid by the client directly."
+        },
+        {
+          "q": "Is technical support provided for the website?",
+          "a": "Yes. Technical support is provided within the scope of the package and the contract."
+        },
+        {
+          "q": "Can I order additional features later?",
+          "a": "Yes. Additional features, new integrations and extensions are quoted separately."
+        },
+        {
+          "q": "How long does it take to build the website?",
+          "a": "The timeline is set according to the scope of the package and the technical requirements."
+        },
+        {
+          "q": "How does the installment contract work?",
+          "a": "Installments are formalized with a 12-month contract. The down payment is made before work starts, and the remaining amount is paid according to the schedule specified in the contract."
+        }
+      ],
+      "notesTitle": "Additional terms",
+      "notes": [
+        "Domain and hosting are paid by the client directly.",
+        "Paid plugins, premium themes and third-party services are not included in the package price.",
+        "Additional features and integrations are charged separately.",
+        "The scope of pages and functionality in each package is confirmed in the technical brief.",
+        "The scope of technical support is defined in the contract.",
+        "Installment payment is a 12-month contractual commitment.",
+        "Development and delivery time is set according to the scope of the project."
+      ],
+      "notesFooter": "The client's rights to the website and data, code handover, admin access, contract term and payment obligations are governed by a separate contract.",
+      "closing": "We build your website, launch it and manage its technical side. You focus on your business.",
+      "priceWarning": "The price table contains an amount that does not divide into whole manats. Check lib/site/pricing.ts."
     }
   }
 }

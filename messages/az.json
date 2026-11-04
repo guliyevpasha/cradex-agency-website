@@ -2232,8 +2232,8 @@
       "servicesDescription": "Veb sayt və mobil tətbiq hazırlanması, SEO və GEO, Meta, TikTok, LinkedIn və Google reklamları, texniki xidmət.",
       "productsTitle": "Məhsullarımız",
       "productsDescription": "Chatbot və Instagram, TikTok, YouTube üçün sosial media kombo paketləri.",
-      "pricingTitle": "Qiymətlər",
-      "pricingDescription": "Sayt demosu pulsuzdur. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq."
+      "pricingTitle": "Qiymətlər — veb sayt paketləri və hissəli ödəniş",
+      "pricingDescription": "CMS və fərdi kodla hazırlanan veb sayt paketləri: 10–25% ilkin ödəniş, qalan məbləğ 12 aya bölünür, illik ödənişdə 20% endirim."
     },
     "nav": {
       "home": "Əsas Səhifə",
@@ -2273,7 +2273,7 @@
       "titleAccent": "2 saata",
       "titleEnd": "əldə edin.",
       "titleFree": "Özü də pulsuz!",
-      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün sayt demosunu əvvəlcə hazırlayırıq. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
+      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün sayt demosunu əvvəlcə hazırlayırıq. Bəyənsəniz, 200 ₼ ilkin ödənişlə yayımlayırıq, qalan məbləğ 12 aya bölünür.",
       "fine": "Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.",
       "card": {
         "building": "Demo hazırlanır",
@@ -2594,7 +2594,7 @@
       "teaser": "Sualınız var? 👋",
       "hello": "Salam! Mən Cradex köməkçisiyəm. Nə ilə maraqlanırsınız?",
       "q1": "Pulsuz demo",
-      "a1": "Biznesiniz üçün sayt demosunu 2 saata pulsuz hazırlayırıq. Bəyənsəniz, illik 399 ₼-dən başlayan paketlə yayımlayırıq.",
+      "a1": "Biznesiniz üçün sayt demosunu 2 saata pulsuz hazırlayırıq. Bəyənsəniz, 200 ₼ ilkin ödənişlə yayımlayırıq, qalanı 12 aya bölünür.",
       "q2": "Xidmətlər",
       "a2": "Veb sayt, mobil tətbiq, SEO və GEO, Meta, TikTok, LinkedIn və Google reklamları, texniki xidmət.",
       "q3": "Kombo paketlər",
@@ -3390,6 +3390,220 @@
         "web-dev": "Veb sayt",
         "marketing-strategy": "Strategiya"
       }
+    },
+    "pricingPage": {
+      "metaTitle": "Qiymətlər — veb sayt paketləri və hissəli ödəniş",
+      "metaDescription": "CMS və fərdi kodla hazırlanan veb sayt paketləri: 10–25% ilkin ödəniş, qalan məbləğ 12 aya bölünür, illik ödənişdə 20% endirim.",
+      "eyebrow": "Qiymətlər",
+      "title": "Veb-sayt sahibi olmaq artıq daha əlçatandır.",
+      "text": "Biznesiniz üçün peşəkar veb-sayt hazırlayır, texniki tərəfini idarə edir və ödənişi büdcənizə uyğun hissələrə bölürük.",
+      "perks": [
+        "İlkin ödənişlə işə başlama",
+        "12 ayadək hissəli ödəniş",
+        "İllik ödənişdə 20% endirim",
+        "Peşəkar texniki dəstək",
+        "Biznesinizə uyğun texnologiya"
+      ],
+      "ctaPlans": "Paketləri kəşf et",
+      "ctaCustom": "Fərdi layihə üçün əlaqə",
+      "pickerTitle": "Sizə hansı sayt lazımdır?",
+      "categories": {
+        "cms": {
+          "label": "CMS əsaslı saytlar",
+          "short": "CMS",
+          "text": "WordPress, WooCommerce, Shopify, Wix və digər CMS sistemləri."
+        },
+        "code": {
+          "label": "Fərdi kodlaşdırılmış saytlar",
+          "short": "Fərdi kod",
+          "text": "Next.js, React, TypeScript, Node.js, Sanity CMS. Fərdi admin panel və CRM bu kateqoriyadadır."
+        }
+      },
+      "billingTitle": "Ödəniş növü",
+      "billing": {
+        "monthly": "Aylıq hissəli",
+        "annual": "İllik ödəniş"
+      },
+      "discountBadge": "20% ENDİRİM",
+      "packageTitle": "Paket",
+      "recommended": "Tövsiyə olunur",
+      "summaryTitle": "Ödəniş planı",
+      "totalLabel": "Ümumi layihə dəyəri",
+      "initialLabel": "İlkin ödəniş ({rate})",
+      "initialNote": "işə başlamazdan əvvəl",
+      "monthlyLabel": "Aylıq ödəniş",
+      "monthlyValue": "12 ay × {amount}",
+      "annualLabel": "Birdəfəlik ödəniş",
+      "annualNote": "20% illik endirim",
+      "savingLabel": "Qənaətiniz",
+      "perMonth": "/ay",
+      "then": "sonra 12 ay × {amount}",
+      "upfront": "{amount} ilkin ödəniş",
+      "includes": "Paketə daxildir",
+      "order": "Bu paketi sifariş et",
+      "choose": "Paketi seç",
+      "chosen": "Seçilib",
+      "summaryNote": "Domen və hosting qiymətə daxil deyil. Hissəli ödəniş 12 aylıq müqavilə ilə rəsmiləşdirilir.",
+      "messageMonthly": "Salam, Cradex Agency. {plan} paketini aylıq hissəli ödənişlə sifariş etmək istəyirəm ({total}, ilkin ödəniş {initial}, sonra 12 × {monthly}).",
+      "messageAnnual": "Salam, Cradex Agency. {plan} paketini illik ödənişlə sifariş etmək istəyirəm ({annual}, 20% endirimlə).",
+      "cardsTitle": "Bütün paketlər",
+      "cardsText": "Paketləri müqayisə edin. Ödəniş növünü dəyişdikdə qiymətlər dərhal yenilənir.",
+      "plans": {
+        "start": {
+          "name": "Start",
+          "text": "Kiçik biznes və ilk sayt üçün.",
+          "features": [
+            "1–3 səhifə",
+            "Hazır dizaynın uyğunlaşdırılması",
+            "Mobil və planşet uyğunluğu",
+            "Əlaqə forması",
+            "WhatsApp inteqrasiyası",
+            "İlkin texniki SEO"
+          ]
+        },
+        "business": {
+          "name": "Business",
+          "text": "Xidmət və portfolio göstərən şirkətlər üçün.",
+          "features": [
+            "5–8 səhifə",
+            "Fərdiləşdirilmiş dizayn",
+            "Xidmətlər və portfolio bölməsi",
+            "Blog və ya xəbər bölməsi",
+            "Google Analytics və Search Console sazlamaları",
+            "Texniki SEO"
+          ]
+        },
+        "professional": {
+          "name": "Professional",
+          "text": "Geniş məzmunlu və çoxdilli saytlar üçün.",
+          "features": [
+            "10–20 səhifə",
+            "Geniş dizayn fərdiləşdirilməsi",
+            "Çoxdilli struktur",
+            "Blog və CMS idarəetməsi",
+            "Təkmilləşdirilmiş SEO",
+            "Performans optimallaşdırılması"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "text": "Brendi fərqləndirən, geniş funksiyalı sayt.",
+          "features": [
+            "Geniş səhifə strukturu",
+            "Fərdi UI/UX dizayn",
+            "Çoxdilli idarəetmə",
+            "Genişləndirilmiş CMS imkanları",
+            "Əlavə texniki optimallaşdırma",
+            "Genişləndirilmiş funksionallıq"
+          ]
+        },
+        "codeStart": {
+          "name": "Code Start",
+          "text": "Sıfırdan kodlaşdırılmış, sürətli sayt.",
+          "features": [
+            "Fərdi kodlaşdırılmış veb-sayt",
+            "Sadə admin panel",
+            "Məzmunun idarə edilməsi",
+            "Əlaqə formaları",
+            "Responsive dizayn"
+          ]
+        },
+        "codeBusiness": {
+          "name": "Code Business",
+          "text": "Komandası və hesabatları olan bizneslər üçün.",
+          "features": [
+            "Fərdi admin panel",
+            "İstifadəçi və məzmun idarəetməsi",
+            "Dashboard və hesabatlar",
+            "Rol və icazə sistemi",
+            "Baza API inteqrasiyası"
+          ]
+        },
+        "codePro": {
+          "name": "Code Pro",
+          "text": "Satış və müştəri proseslərini avtomatlaşdırmaq üçün.",
+          "features": [
+            "Genişləndirilmiş admin panel",
+            "Fərdi CRM funksiyaları",
+            "Müştəri və sifariş idarəetməsi",
+            "Avtomatlaşdırılmış proseslər",
+            "API və xarici sistemlərlə inteqrasiyalar"
+          ]
+        },
+        "codeEnterprise": {
+          "name": "Code Enterprise",
+          "text": "Öz biznes proseslərinə uyğun tam sistem.",
+          "features": [
+            "Tam fərdi idarəetmə paneli",
+            "Geniş CRM imkanları",
+            "Çoxsəviyyəli istifadəçi və rol sistemi",
+            "Fərdi biznes prosesləri",
+            "Geniş hesabat və analitika"
+          ]
+        }
+      },
+      "customTitle": "Standart paketlərə sığmayan layihəniz var?",
+      "customText": "E-commerce sistemləri, marketplace, kompleks CRM və ERP həlləri, xüsusi inteqrasiyalar və geniş funksional layihələr texniki tələblərə uyğun fərdi qiymətləndirilir.",
+      "customItems": [
+        "Böyük e-commerce layihələri",
+        "Marketplace və elan platformaları",
+        "Kompleks ödəniş inteqrasiyaları",
+        "ERP və mühasibat sistemləri ilə inteqrasiya",
+        "Xüsusi CRM və ERP sistemləri",
+        "İstifadəçi kabinetləri",
+        "Böyük API inteqrasiyaları",
+        "Xüsusi biznes proqramları"
+      ],
+      "customCta": "Layihənizi müzakirə edək",
+      "customMessage": "Salam, Cradex Agency. Fərdi veb-layihə üçün qiymət təklifi almaq istəyirəm.",
+      "faqTitle": "Tez-tez verilən suallar",
+      "faq": [
+        {
+          "q": "İlkin ödəniş nə qədərdir?",
+          "a": "CMS əsaslı veb-sayt paketlərində ümumi layihə dəyərinin 25%-i, fərdi kodlaşdırılmış veb-sayt paketlərində isə 10%-i işə başlamazdan əvvəl ödənilir."
+        },
+        {
+          "q": "Qalan məbləği necə ödəyirəm?",
+          "a": "İlkin ödənişdən sonra qalan məbləğ 12 ay ərzində bərabər hissələrlə ödənilir."
+        },
+        {
+          "q": "İllik ödənişdə endirim varmı?",
+          "a": "Bəli. Birdəfəlik illik ödənişi seçdikdə ümumi layihə dəyərinə 20% endirim tətbiq edilir."
+        },
+        {
+          "q": "Domen və hosting qiymətə daxildirmi?",
+          "a": "Xeyr. Domen, hosting və ödənişli üçüncü tərəf xidmətləri müştəri tərəfindən birbaşa ödənilir."
+        },
+        {
+          "q": "Saytın texniki dəstəyi göstərilirmi?",
+          "a": "Bəli. Paket və müqavilə çərçivəsində texniki dəstək təqdim edilir."
+        },
+        {
+          "q": "Sonradan əlavə funksiyalar sifariş edə bilərəmmi?",
+          "a": "Bəli. Əlavə funksiyalar, yeni inteqrasiyalar və genişləndirmələr ayrıca qiymətləndirilir."
+        },
+        {
+          "q": "Saytın hazırlanması nə qədər vaxt aparır?",
+          "a": "Müddət paketin həcminə və texniki tələblərə uyğun müəyyən edilir."
+        },
+        {
+          "q": "Hissəli ödəniş müqaviləsi necə işləyir?",
+          "a": "Hissəli ödəniş 12 aylıq müqavilə əsasında rəsmiləşdirilir. İlkin ödəniş işə başlamazdan əvvəl, qalan məbləğ isə müqavilədə göstərilən qrafikə uyğun ödənilir."
+        }
+      ],
+      "notesTitle": "Əlavə şərtlər",
+      "notes": [
+        "Domen və hosting müştəri tərəfindən birbaşa ödənilir.",
+        "Ödənişli plaginlər, premium mövzular və üçüncü tərəf xidmətləri paket qiymətinə daxil deyil.",
+        "Əlavə funksiyalar və inteqrasiyalar ayrıca hesablanır.",
+        "Paketlərdəki səhifə və funksionallıq həcmi texniki tapşırıqla dəqiqləşdirilir.",
+        "Texniki dəstəyin əhatə dairəsi müqavilədə müəyyən edilir.",
+        "Hissəli ödəniş 12 aylıq müqavilə öhdəliyidir.",
+        "Saytın hazırlanması və təhvil müddəti layihənin həcminə uyğun müəyyən edilir."
+      ],
+      "notesFooter": "Müştərinin sayt və məlumatlar üzərində hüquqları, kodun təhvil verilməsi, admin girişləri, müqavilə müddəti və ödəniş öhdəlikləri ayrıca müqavilə ilə tənzimlənir.",
+      "closing": "Veb-saytınızı hazırlayırıq, yayımlayırıq və texniki tərəfini idarə edirik. Siz isə biznesinizə fokuslanırsınız.",
+      "priceWarning": "Qiymət cədvəlində tam manata bölünməyən məbləğ var. lib/site/pricing.ts faylını yoxlayın."
     }
   }
 }

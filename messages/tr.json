@@ -2228,8 +2228,8 @@
       "servicesDescription": "Web sitesi ve mobil uygulama geliştirme, SEO ve GEO, Meta, TikTok, LinkedIn ve Google reklamları, teknik destek.",
       "productsTitle": "Ürünlerimiz",
       "productsDescription": "Chatbot ile Instagram, TikTok ve YouTube için sosyal medya kombo paketleri.",
-      "pricingTitle": "Fiyatlar",
-      "pricingDescription": "Site demosu ücretsizdir. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alırız."
+      "pricingTitle": "Fiyatlar — web sitesi paketleri ve taksitli ödeme",
+      "pricingDescription": "CMS tabanlı ve özel kodlanmış web sitesi paketleri: %10–25 ön ödeme, kalan tutar 12 aya bölünür, yıllık ödemede %20 indirim."
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2269,7 +2269,7 @@
       "titleAccent": "2 saat içinde",
       "titleEnd": "alın, 2 ay beklemeyin.",
       "titleFree": "Üstelik ücretsiz!",
-      "subtitle": "İşletmeniz, kişisel markanız veya içerik projeniz için önce site demosunu hazırlıyoruz. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alırız.",
+      "subtitle": "İşletmeniz, kişisel markanız veya içerik projeniz için önce site demosunu hazırlıyoruz. Beğenirseniz 200 ₼ ön ödemeyle yayına alırız, kalan tutar 12 aya bölünür.",
       "fine": "Demo ücretsizdir. Beğenmezseniz ödeme yapmazsınız.",
       "card": {
         "building": "Demo hazırlanıyor",
@@ -2590,7 +2590,7 @@
       "teaser": "Sorunuz mu var? 👋",
       "hello": "Merhaba! Ben Cradex asistanıyım. Neyle ilgileniyorsunuz?",
       "q1": "Ücretsiz demo",
-      "a1": "İşletmeniz için web sitesi demosunu 2 saatte ücretsiz hazırlıyoruz. Beğenirseniz yıllık 399 ₼'den başlayan paketle yayına alıyoruz.",
+      "a1": "İşletmeniz için web sitesi demosunu 2 saatte ücretsiz hazırlıyoruz. Beğenirseniz 200 ₼ ön ödemeyle yayına alıyoruz, kalanı 12 aya bölünür.",
       "q2": "Hizmetler",
       "a2": "Web sitesi geliştirme, mobil uygulama, SEO ve GEO, Meta, TikTok, LinkedIn ve Google reklamları, teknik destek.",
       "q3": "Kombo paketler",
@@ -3386,6 +3386,220 @@
         "web-dev": "Web sitesi",
         "marketing-strategy": "Strateji"
       }
+    },
+    "pricingPage": {
+      "metaTitle": "Fiyatlar — web sitesi paketleri ve taksitli ödeme",
+      "metaDescription": "CMS tabanlı ve özel kodlanmış web sitesi paketleri: %10–25 ön ödeme, kalan tutar 12 aya bölünür, yıllık ödemede %20 indirim.",
+      "eyebrow": "Fiyatlar",
+      "title": "Web sitesi sahibi olmak artık çok daha kolay.",
+      "text": "İşletmeniz için profesyonel bir web sitesi hazırlıyor, teknik tarafını yönetiyor ve ödemeyi bütçenize uygun parçalara bölüyoruz.",
+      "perks": [
+        "Ön ödemeyle işe başlama",
+        "12 aya kadar taksitli ödeme",
+        "Yıllık ödemede %20 indirim",
+        "Profesyonel teknik destek",
+        "İşletmenize uygun teknoloji"
+      ],
+      "ctaPlans": "Paketleri keşfedin",
+      "ctaCustom": "Özel proje için iletişime geçin",
+      "pickerTitle": "Hangi web sitesine ihtiyacınız var?",
+      "categories": {
+        "cms": {
+          "label": "CMS tabanlı web siteleri",
+          "short": "CMS",
+          "text": "WordPress, WooCommerce, Shopify, Wix ve diğer CMS sistemleri."
+        },
+        "code": {
+          "label": "Özel kodlanmış web siteleri",
+          "short": "Özel kod",
+          "text": "Next.js, React, TypeScript, Node.js, Sanity CMS. Özel yönetim paneli ve CRM bu kategoridedir."
+        }
+      },
+      "billingTitle": "Ödeme türü",
+      "billing": {
+        "monthly": "Aylık taksit",
+        "annual": "Yıllık ödeme"
+      },
+      "discountBadge": "%20 İNDİRİM",
+      "packageTitle": "Paket",
+      "recommended": "Önerilen",
+      "summaryTitle": "Ödeme planı",
+      "totalLabel": "Toplam proje bedeli",
+      "initialLabel": "Ön ödeme ({rate})",
+      "initialNote": "işe başlamadan önce",
+      "monthlyLabel": "Aylık ödeme",
+      "monthlyValue": "12 ay × {amount}",
+      "annualLabel": "Tek seferlik ödeme",
+      "annualNote": "%20 yıllık indirim",
+      "savingLabel": "Tasarrufunuz",
+      "perMonth": "/ay",
+      "then": "sonra 12 ay × {amount}",
+      "upfront": "{amount} ön ödeme",
+      "includes": "Pakete dahil olanlar",
+      "order": "Bu paketi sipariş et",
+      "choose": "Paketi seç",
+      "chosen": "Seçildi",
+      "summaryNote": "Alan adı ve hosting fiyata dahil değildir. Taksitli ödeme 12 aylık sözleşmeyle resmileştirilir.",
+      "messageMonthly": "Merhaba, Cradex Agency. {plan} paketini aylık taksitli ödemeyle sipariş etmek istiyorum ({total}, ön ödeme {initial}, sonra 12 × {monthly}).",
+      "messageAnnual": "Merhaba, Cradex Agency. {plan} paketini yıllık ödemeyle sipariş etmek istiyorum ({annual}, %20 indirimli).",
+      "cardsTitle": "Tüm paketler",
+      "cardsText": "Paketleri karşılaştırın. Ödeme türünü değiştirdiğinizde fiyatlar anında güncellenir.",
+      "plans": {
+        "start": {
+          "name": "Start",
+          "text": "Küçük işletmeler ve ilk web sitesi için.",
+          "features": [
+            "1–3 sayfa",
+            "Hazır tasarımın uyarlanması",
+            "Mobil ve tablet uyumu",
+            "İletişim formu",
+            "WhatsApp entegrasyonu",
+            "Temel teknik SEO"
+          ]
+        },
+        "business": {
+          "name": "Business",
+          "text": "Hizmetlerini ve portföyünü sergileyen şirketler için.",
+          "features": [
+            "5–8 sayfa",
+            "Özelleştirilmiş tasarım",
+            "Hizmetler ve portföy bölümü",
+            "Blog veya haber bölümü",
+            "Google Analytics ve Search Console kurulumu",
+            "Teknik SEO"
+          ]
+        },
+        "professional": {
+          "name": "Professional",
+          "text": "Zengin içerikli ve çok dilli web siteleri için.",
+          "features": [
+            "10–20 sayfa",
+            "Kapsamlı tasarım özelleştirmesi",
+            "Çok dilli yapı",
+            "Blog ve CMS yönetimi",
+            "Gelişmiş SEO",
+            "Performans optimizasyonu"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "text": "Markanızı öne çıkaran, zengin işlevli web sitesi.",
+          "features": [
+            "Geniş sayfa yapısı",
+            "Özel UI/UX tasarım",
+            "Çok dilli yönetim",
+            "Genişletilmiş CMS olanakları",
+            "Ek teknik optimizasyon",
+            "Genişletilmiş işlevsellik"
+          ]
+        },
+        "codeStart": {
+          "name": "Code Start",
+          "text": "Sıfırdan kodlanmış, hızlı web sitesi.",
+          "features": [
+            "Özel kodlanmış web sitesi",
+            "Basit yönetim paneli",
+            "İçerik yönetimi",
+            "İletişim formları",
+            "Responsive tasarım"
+          ]
+        },
+        "codeBusiness": {
+          "name": "Code Business",
+          "text": "Ekibi ve raporlama ihtiyacı olan işletmeler için.",
+          "features": [
+            "Özel yönetim paneli",
+            "Kullanıcı ve içerik yönetimi",
+            "Dashboard ve raporlar",
+            "Rol ve yetki sistemi",
+            "Temel API entegrasyonu"
+          ]
+        },
+        "codePro": {
+          "name": "Code Pro",
+          "text": "Satış ve müşteri süreçlerini otomatikleştirmek için.",
+          "features": [
+            "Genişletilmiş yönetim paneli",
+            "Özel CRM işlevleri",
+            "Müşteri ve sipariş yönetimi",
+            "Otomatikleştirilmiş süreçler",
+            "API ve harici sistem entegrasyonları"
+          ]
+        },
+        "codeEnterprise": {
+          "name": "Code Enterprise",
+          "text": "İş süreçlerinize göre tasarlanan eksiksiz sistem.",
+          "features": [
+            "Tamamen özel yönetim paneli",
+            "Kapsamlı CRM olanakları",
+            "Çok seviyeli kullanıcı ve rol sistemi",
+            "Özel iş süreçleri",
+            "Kapsamlı raporlama ve analitik"
+          ]
+        }
+      },
+      "customTitle": "Standart paketlere sığmayan bir projeniz mi var?",
+      "customText": "E-ticaret sistemleri, pazar yerleri, karmaşık CRM ve ERP çözümleri, özel entegrasyonlar ve geniş kapsamlı projeler teknik gereksinimlere göre ayrıca fiyatlandırılır.",
+      "customItems": [
+        "Büyük e-ticaret projeleri",
+        "Pazar yeri ve ilan platformları",
+        "Karmaşık ödeme entegrasyonları",
+        "ERP ve muhasebe sistemleriyle entegrasyon",
+        "Özel CRM ve ERP sistemleri",
+        "Kullanıcı panelleri",
+        "Kapsamlı API entegrasyonları",
+        "Özel iş uygulamaları"
+      ],
+      "customCta": "Projenizi görüşelim",
+      "customMessage": "Merhaba, Cradex Agency. Özel bir web projesi için fiyat teklifi almak istiyorum.",
+      "faqTitle": "Sık sorulan sorular",
+      "faq": [
+        {
+          "q": "Ön ödeme ne kadar?",
+          "a": "CMS tabanlı web sitesi paketlerinde toplam proje bedelinin %25'i, özel kodlanmış web sitesi paketlerinde ise %10'u işe başlamadan önce ödenir."
+        },
+        {
+          "q": "Kalan tutarı nasıl öderim?",
+          "a": "Ön ödemeden sonra kalan tutar 12 ay boyunca eşit taksitlerle ödenir."
+        },
+        {
+          "q": "Yıllık ödemede indirim var mı?",
+          "a": "Evet. Tek seferlik yıllık ödemeyi seçtiğinizde toplam proje bedeline %20 indirim uygulanır."
+        },
+        {
+          "q": "Alan adı ve hosting fiyata dahil mi?",
+          "a": "Hayır. Alan adı, hosting ve ücretli üçüncü taraf hizmetleri müşteri tarafından doğrudan ödenir."
+        },
+        {
+          "q": "Web sitesi için teknik destek sağlanıyor mu?",
+          "a": "Evet. Teknik destek paket ve sözleşme kapsamında sunulur."
+        },
+        {
+          "q": "Daha sonra ek özellik sipariş edebilir miyim?",
+          "a": "Evet. Ek özellikler, yeni entegrasyonlar ve geliştirmeler ayrıca fiyatlandırılır."
+        },
+        {
+          "q": "Web sitesinin hazırlanması ne kadar sürer?",
+          "a": "Süre, paketin kapsamına ve teknik gereksinimlere göre belirlenir."
+        },
+        {
+          "q": "Taksitli ödeme sözleşmesi nasıl işler?",
+          "a": "Taksitli ödeme 12 aylık sözleşmeyle resmileştirilir. Ön ödeme işe başlamadan önce yapılır, kalan tutar ise sözleşmede belirtilen takvime göre ödenir."
+        }
+      ],
+      "notesTitle": "Ek koşullar",
+      "notes": [
+        "Alan adı ve hosting müşteri tarafından doğrudan ödenir.",
+        "Ücretli eklentiler, premium temalar ve üçüncü taraf hizmetleri paket fiyatına dahil değildir.",
+        "Ek özellikler ve entegrasyonlar ayrıca ücretlendirilir.",
+        "Paketlerdeki sayfa ve işlevsellik kapsamı teknik şartnameyle netleştirilir.",
+        "Teknik desteğin kapsamı sözleşmede belirlenir.",
+        "Taksitli ödeme 12 aylık sözleşme yükümlülüğüdür.",
+        "Web sitesinin hazırlanma ve teslim süresi projenin kapsamına göre belirlenir."
+      ],
+      "notesFooter": "Müşterinin web sitesi ve veriler üzerindeki hakları, kodun teslimi, yönetim paneli erişimleri, sözleşme süresi ve ödeme yükümlülükleri ayrı bir sözleşmeyle düzenlenir.",
+      "closing": "Web sitenizi hazırlıyor, yayına alıyor ve teknik tarafını yönetiyoruz. Siz işletmenize odaklanın.",
+      "priceWarning": "Fiyat tablosunda tam manata bölünmeyen bir tutar var. lib/site/pricing.ts dosyasını kontrol edin."
     }
   }
 }
