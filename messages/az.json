@@ -2381,7 +2381,7 @@
       "title": "Hazır həllər, sürətli başlanğıc",
       "subtitle": "Biznesiniz üçün dərhal işə salına bilən məhsullar.",
       "chatbot": {
-        "title": "Chatbot",
+        "title": "Çatbot",
         "text": "Saytınızda və mesajlaşma kanallarınızda müştəri suallarını 7/24 cavablandıran süni intellekt köməkçisi.",
         "user": "Sabah saat 15:00-da boş yer var?",
         "bot": "Bəli, 15:00 və 16:30 boşdur. Hansı saata yazım?",
@@ -3701,9 +3701,178 @@
         }
       ],
       "faqAskTitle": "Sualınız qaldı?",
-      "faqAskText": "Cavabını burada tapmadığınız sualı WhatsApp-da yazın. Paket, ödəniş və ya müddətlə bağlı adətən elə həmin gün cavab veririk.",
+      "faqAskText": "Cavabını burada tapmadığınız sualı WhatsApp-da yazın. Sualınızı 1 dəqiqə ərzində cavablayırıq.",
       "faqAskCta": "Sual verin",
-      "faqAskMessage": "Salam, Cradex Agency. Qiymətlər və paketlər barədə sualım var: "
+      "faqAskMessage": "Salam, Cradex Agency. Qiymətlər və paketlər barədə sualım var: ",
+      "faqAskQ": "Demo həqiqətən pulsuzdur?",
+      "faqAskA": "Bəli. Bəyənməsəniz, heç nə ödəmirsiniz."
+    },
+    "productMenu": {
+      "chatbot": {
+        "title": "Çatbot hazırlanması və AI köməkçi",
+        "text": "WhatsApp, Instagram, Telegram və saytınızda müştərilərə 7/24 cavab verən köməkçi.",
+        "badge": "700 ₼-dən"
+      },
+      "combo": {
+        "title": "Sosial Media Kombo Paketləri",
+        "text": "Instagram, TikTok və YouTube hesablarınız üçün izləyici, bəyənmə və baxış paketləri.",
+        "badge": "20 ₼-dən"
+      },
+      "more": "Ətraflı"
+    },
+    "chatbotPage": {
+      "metaTitle": "Çatbot hazırlanması və AI köməkçi",
+      "metaDescription": "WhatsApp, Instagram, Telegram və sayt üçün AI köməkçi: suallara 7/24 cavab, qeydiyyat və müraciətlərin sizə ötürülməsi. Qurulum 700 AZN, 10 günə hazır.",
+      "home": "Əsas səhifə",
+      "products": "Məhsullarımız",
+      "title": "Çatbot hazırlanması və AI köməkçi",
+      "text": "Gecə yarısı Instagram direktdə eyni suallara cavab yazmağa ehtiyac qalmır. AI köməkçi qiymət, ünvan və iş saatı ilə bağlı suallara cavab verir, müştərini qeydiyyata alır, ciddi müraciətləri isə sizə ötürür.",
+      "chips": [
+        "700 AZN qurulum",
+        "aylıq 300 AZN-dən",
+        "10 günə hazır"
+      ],
+      "ask": "Sualınız var?",
+      "askMessage": "Salam, Cradex Agency. Çatbot hazırlanması ilə bağlı sualım var: ",
+      "apply": "Müraciət et",
+      "demoTitle": "AI köməkçi",
+      "demoOnline": "onlayn",
+      "forTitle": "Kimə uyğundur",
+      "forItems": [
+        "Klinika və gözəllik salonları: qeydiyyat və xatırlatmalar",
+        "Daşınmaz əmlak agentlikləri: sorğulara dərhal cavab",
+        "Avtosalonlar: qiymət, texniki məlumat və test-sürüşə yazılma",
+        "Instagram-da satış edən mağazalar: sifariş toplama və tez-tez verilən suallar",
+        "Restoran və kafelər: rezervasiya və menyu sualları"
+      ],
+      "includesTitle": "Nə daxildir",
+      "includes": [
+        "WhatsApp, Instagram, Telegram və ya saytda işləyən köməkçi",
+        "Cavablar yalnız sizin qiymət siyahınıza və məlumatlarınıza əsaslanır",
+        "Bilmədiyi sualda söhbəti dərhal sizə ötürür",
+        "Qeydiyyat və müştəri əlaqə məlumatlarının toplanması",
+        "Müştərilərin nə soruşduğu barədə həftəlik hesabat",
+        "Azərbaycan, rus, ingilis və türk dillərində cavab"
+      ],
+      "stepsTitle": "Necə işləyirik",
+      "steps": [
+        {
+          "t": "Suallar və qaydalar",
+          "d": "Ən çox verilən sualları, qiymətləri və hansı hallarda söhbətin sizə ötürüləcəyini birlikdə müəyyənləşdiririk."
+        },
+        {
+          "t": "Hesabların qoşulması",
+          "d": "Rəsmi WhatsApp Business, Instagram və ya Telegram hesabınızı sizin adınıza qoşuruq."
+        },
+        {
+          "t": "Sınaq",
+          "d": "Köməkçini real müştəri suallarınızla yoxlayırıq. Cavabları siz oxuyur, biz düzəldirik."
+        },
+        {
+          "t": "İşə salınma",
+          "d": "Köməkçi işə düşür, ilk günlərdə söhbətləri birlikdə izləyir, lazım olanı təkmilləşdiririk."
+        }
+      ],
+      "priceTitle": "Qiymət və müddət",
+      "priceItems": [
+        {
+          "n": "700 AZN",
+          "l": "birdəfəlik qurulum"
+        },
+        {
+          "n": "300 AZN-dən",
+          "l": "aylıq xidmət"
+        },
+        {
+          "n": "10 gün",
+          "l": "hazır olma müddəti"
+        }
+      ],
+      "priceText": [
+        "Aylıq məbləğ mesajların sayından və lazım olan inteqrasiyalardan asılıdır. Dəqiq qiyməti ilk söhbətdən sonra yazılı bildiririk.",
+        "Köməkçi təxminən 10 günə işə düşür. Meta-nın hesab yoxlaması bu müddətə təsir edə bilər.",
+        "Müştəri sizə yazanda verilən cavablar ödənişsizdir və ya çox ucuzdur. Yalnız sizin başlatdığınız kampaniya mesajları ayrıca ödənilir."
+      ],
+      "faqTitle": "Tez-tez verilən suallar",
+      "faq": [
+        {
+          "q": "Çatbot Azərbaycan dilini başa düşür?",
+          "a": "Bəli. Müasir dil modelləri Azərbaycan dilini yaxşı anlayır. Yenə də işə salmazdan əvvəl köməkçini sizin real müştəri suallarınızla yoxlayırıq."
+        },
+        {
+          "q": "WhatsApp nömrəm bloklana bilər?",
+          "a": "Rəsmi WhatsApp Business API ilə işlədiyimiz üçün bu risk minimaldır. Qaydaları pozan qeyri-rəsmi alətlərdən istifadə etmirik."
+        },
+        {
+          "q": "Köməkçi səhv cavab versə nə olacaq?",
+          "a": "Köməkçi yalnız sizin verdiyiniz məlumata əsaslanır. Bilmədiyi sualda cavab uydurmur, söhbəti sizə ötürür. Hesabatda hansı suallara cavab verdiyini görürsünüz."
+        },
+        {
+          "q": "Klinikalar üçün təhlükəsizdirmi?",
+          "a": "Köməkçi diaqnoz qoymur və tibbi məsləhət vermir. Ağrı, təcili hal kimi həssas sözlər gələndə söhbəti dərhal həkimə və ya administratora ötürür."
+        },
+        {
+          "q": "Müştəri yazışmaları harada saxlanılır?",
+          "a": "Yazışmalar sizin adınıza açılmış hesablarda saxlanılır. Saxlama müddətini və razılıq mətnini birlikdə müəyyən edirik."
+        },
+        {
+          "q": "Mən özüm də cavab yaza bilərəm?",
+          "a": "Bəli. İstənilən söhbəti öz üzərinizə götürə bilərsiniz, köməkçi yalnız təkrarlanan işi görür."
+        }
+      ],
+      "formTitle": "Çatbot ideyanızı bizə yazın",
+      "formText": "Uzun zəng və təqdimat yoxdur. Layihənizi dinləyir, yazılı və sabit qiymət təqdim edirik.",
+      "formName": "Adınız",
+      "formContact": "E-poçt və ya WhatsApp",
+      "formTopic": "Nə hazırlamaq istəyirsiniz?",
+      "topics": [
+        "Çatbot",
+        "Veb sayt",
+        "AI inteqrasiyası",
+        "Mövcud sistemə qoşulma",
+        "Hələ qərar verməmişəm"
+      ],
+      "formMessage": "Layihə haqqında qısaca danışın",
+      "formSend": "Pulsuz danışaq",
+      "formEmail": "və ya e-poçt ilə göndərin",
+      "formError": "Zəhmət olmasa adınızı və e-poçt və ya WhatsApp nömrənizi yazın.",
+      "formSent": "WhatsApp açıldı. Mesajı göndərməyi unutmayın.",
+      "formMail": "Salam, Cradex Agency.\nAd: {name}\nƏlaqə: {contact}\nMövzu: {topic}\n{message}",
+      "formSubject": "Çatbot müraciəti — {name}"
+    },
+    "comboPage": {
+      "metaTitle": "Sosial Media Kombo Paketləri",
+      "metaDescription": "Instagram, TikTok və YouTube üçün izləyici, bəyənmə və baxış kombo paketləri. 24 saat ərzində başlayır, təhlükəsiz ödəniş.",
+      "home": "Əsas səhifə",
+      "products": "Məhsullarımız",
+      "title": "Sosial Media Kombo Paketləri",
+      "text": "Hesabınıza ilk təəssüratı gücləndirən hazır paketlər: izləyici, bəyənmə, baxış və yadda saxlama bir sifarişdə.",
+      "chips": [
+        "24 saat ərzində başlayır",
+        "1–7 günə tamamlanır",
+        "Şifrə tələb olunmur"
+      ],
+      "stepsTitle": "Necə sifariş edilir",
+      "steps": [
+        {
+          "t": "Paketi seçin",
+          "d": "Platformanı və neçə paket istədiyinizi seçin."
+        },
+        {
+          "t": "Hesabı yazın",
+          "d": "İstifadəçi adınızı və ya kanal linkinizi daxil edin. Şifrə soruşmuruq."
+        },
+        {
+          "t": "Ödəniş edin",
+          "d": "Ödəniş bankın təhlükəsiz 3D Secure səhifəsində aparılır."
+        },
+        {
+          "t": "Nəticəni izləyin",
+          "d": "İcra 24 saat ərzində başlayır və 1–7 gün ərzində tamamlanır."
+        }
+      ],
+      "ask": "Sualınız var?",
+      "askMessage": "Salam, Cradex Agency. Sosial media kombo paketləri ilə bağlı sualım var: "
     }
   }
 }

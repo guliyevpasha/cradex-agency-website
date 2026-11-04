@@ -5,6 +5,8 @@
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react'
+import { cn } from '@/lib/utils/cn'
+import { productHref } from '@/lib/site/navigation'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import { OrderButton } from './OrderModal'
@@ -46,6 +48,12 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
             </span>
             <h3 className="mt-6 text-3xl font-bold tracking-tight">{t('chatbot.title')}</h3>
             <p className="mt-3 max-w-md text-lg leading-relaxed text-[#A6B0BD]">{t('chatbot.text')}</p>
+            <Link
+              href={productHref(locale, 'chatbot')}
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-strong px-5 py-3 text-sm font-semibold text-snow shadow-brand transition-transform hover:-translate-y-0.5"
+            >
+              {tCta('details')} <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
           {/* Bubbles appear one after another once the card scrolls into view. */}
           <Reveal className="chat-demo flex flex-col gap-3 rounded-3xl bg-[#13171D] p-5 sm:p-6">
@@ -84,44 +92,57 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
         <div className="mt-16">
           <AnimatedHeading as="h3" className="text-center text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl" text={t('combo.title')} />
           <p className="mt-3 text-center text-lg text-text-secondary">{t('combo.text')}</p>
+          <p className="mt-4 text-center">
+            <Link href={productHref(locale, 'combo')} className="inline-flex items-center gap-2 text-[15px] font-semibold text-accent-ink hover:underline">
+              {tCta('details')} <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </p>
 
-          <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {COMBOS.map(({ id, icon: Icon, tint }) => {
-              const title = t(`combo.${id}Title`)
-              const features = t.raw(`combo.${id}Features`) as string[]
-              return (
-                <li key={id} id={id} className="scroll-mt-28">
-                  <Tilt max={5} className="h-full" innerClassName="h-full">
-                    <article className="relative flex h-full flex-col rounded-[28px] border border-line bg-bg-primary p-7 shadow-card">
-                      <span className="tilt-glare" />
-                      <div className="tilt-z1 flex items-center gap-4">
-                        <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${tint} text-snow shadow-card`}>
-                          <Icon size={26} aria-hidden="true" />
-                        </span>
-                        <span>
-                          <span className="block text-lg font-bold text-text-primary">{title}</span>
-                          <span className="mt-1 inline-flex rounded-full bg-[#16A34A]/10 px-2.5 py-0.5 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
-                            {t('combo.included')} · <PriceTag pkg={id} />
-                          </span>
-                        </span>
-                      </div>
-                      <ul className="tilt-z1 mt-7 grid flex-1 grid-cols-2 gap-x-4 gap-y-3">
-                        {features.map((f) => (
-                          <li key={f} className="flex items-center gap-2 text-[14px] text-text-secondary">
-                            <Check size={15} className="shrink-0 text-accent-primary" aria-hidden="true" />
-                            <span className="min-w-0">{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <OrderButton pkg={id} title={title} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
-                    </article>
-                  </Tilt>
-                </li>
-              )
-            })}
-          </ul>
+          <ComboCards className="mt-10" />
         </div>
       </div>
     </section>
+  )
+}
+
+/** The three combo package cards with their order buttons. */
+export function ComboCards({ className }: { className?: string }) {
+  const t = useTranslations('site.products')
+  return (
+    <ul className={cn('grid gap-5 md:grid-cols-2 lg:grid-cols-3', className)}>
+      {COMBOS.map(({ id, icon: Icon, tint }) => {
+        const title = t(`combo.${id}Title`)
+        const features = t.raw(`combo.${id}Features`) as string[]
+        return (
+          <li key={id} id={id} className="scroll-mt-28">
+            <Tilt max={5} className="h-full" innerClassName="h-full">
+              <article className="relative flex h-full flex-col rounded-[28px] border border-line bg-bg-primary p-7 shadow-card">
+                <span className="tilt-glare" />
+                <div className="tilt-z1 flex items-center gap-4">
+                  <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${tint} text-snow shadow-card`}>
+                    <Icon size={26} aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block text-lg font-bold text-text-primary">{title}</span>
+                    <span className="mt-1 inline-flex rounded-full bg-[#16A34A]/10 px-2.5 py-0.5 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
+                      {t('combo.included')} · <PriceTag pkg={id} />
+                    </span>
+                  </span>
+                </div>
+                <ul className="tilt-z1 mt-7 grid flex-1 grid-cols-2 gap-x-4 gap-y-3">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-[14px] text-text-secondary">
+                      <Check size={15} className="shrink-0 text-accent-primary" aria-hidden="true" />
+                      <span className="min-w-0">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <OrderButton pkg={id} title={title} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
+              </article>
+            </Tilt>
+          </li>
+        )
+      })}
+    </ul>
   )
 }

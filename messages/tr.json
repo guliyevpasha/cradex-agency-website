@@ -3697,9 +3697,178 @@
         }
       ],
       "faqAskTitle": "Aklınıza takılan mı var?",
-      "faqAskText": "Cevabını burada bulamadığınız soruyu WhatsApp'tan yazın. Paket, ödeme veya süreyle ilgili genellikle aynı gün yanıt veriyoruz.",
+      "faqAskText": "Cevabını burada bulamadığınız soruyu WhatsApp'tan yazın. Sorunuzu 1 dakika içinde yanıtlıyoruz.",
       "faqAskCta": "Soru sorun",
-      "faqAskMessage": "Merhaba, Cradex Agency. Fiyatlar ve paketler hakkında bir sorum var: "
+      "faqAskMessage": "Merhaba, Cradex Agency. Fiyatlar ve paketler hakkında bir sorum var: ",
+      "faqAskQ": "Demo gerçekten ücretsiz mi?",
+      "faqAskA": "Evet. Beğenmezseniz hiçbir ücret ödemezsiniz."
+    },
+    "productMenu": {
+      "chatbot": {
+        "title": "Chatbot Geliştirme ve AI Asistan",
+        "text": "WhatsApp, Instagram, Telegram ve web sitenizde müşterilere 7/24 yanıt veren asistan.",
+        "badge": "700 ₼'den"
+      },
+      "combo": {
+        "title": "Sosyal Medya Kombo Paketleri",
+        "text": "Instagram, TikTok ve YouTube hesaplarınız için takipçi, beğeni ve izlenme paketleri.",
+        "badge": "20 ₼'den"
+      },
+      "more": "Detaylar"
+    },
+    "chatbotPage": {
+      "metaTitle": "Chatbot Geliştirme ve AI Asistan",
+      "metaDescription": "WhatsApp, Instagram, Telegram ve web siteniz için AI asistan: sorulara 7/24 yanıt, randevu kaydı ve ciddi taleplerin size iletilmesi. Kurulum 700 AZN, 10 günde hazır.",
+      "home": "Ana Sayfa",
+      "products": "Ürünlerimiz",
+      "title": "Chatbot Geliştirme ve AI Asistan",
+      "text": "Gece yarısı Instagram DM'de aynı sorulara yanıt yazmanıza gerek kalmaz. AI asistan fiyat, adres ve çalışma saatleri hakkındaki soruları yanıtlar, müşteriyi kayda alır, ciddi talepleri ise size iletir.",
+      "chips": [
+        "700 AZN kurulum",
+        "aylık 300 AZN'den",
+        "10 günde hazır"
+      ],
+      "ask": "Sorunuz mu var?",
+      "askMessage": "Merhaba, Cradex Agency. Chatbot geliştirme ile ilgili bir sorum var: ",
+      "apply": "Başvur",
+      "demoTitle": "AI asistan",
+      "demoOnline": "çevrimiçi",
+      "forTitle": "Kimler için uygun",
+      "forItems": [
+        "Klinikler ve güzellik salonları: randevu ve hatırlatmalar",
+        "Emlak ofisleri: taleplere anında yanıt",
+        "Oto galeriler: fiyat, teknik bilgi ve test sürüşü randevusu",
+        "Instagram'da satış yapan mağazalar: sipariş toplama ve sık sorulan sorular",
+        "Restoran ve kafeler: rezervasyon ve menü soruları"
+      ],
+      "includesTitle": "Neler dahil",
+      "includes": [
+        "WhatsApp, Instagram, Telegram veya web sitenizde çalışan asistan",
+        "Yanıtlar yalnızca sizin fiyat listenize ve bilgilerinize dayanır",
+        "Bilmediği soruda sohbeti hemen size devreder",
+        "Randevu ve müşteri iletişim bilgilerinin toplanması",
+        "Müşterilerin neler sorduğuna dair haftalık rapor",
+        "Azerbaycanca, Rusça, İngilizce ve Türkçe yanıt"
+      ],
+      "stepsTitle": "Nasıl çalışıyoruz",
+      "steps": [
+        {
+          "t": "Sorular ve kurallar",
+          "d": "En sık sorulan soruları, fiyatları ve sohbetin hangi durumlarda size devredileceğini birlikte belirliyoruz."
+        },
+        {
+          "t": "Hesapların bağlanması",
+          "d": "Resmi WhatsApp Business, Instagram veya Telegram hesabınızı sizin adınıza bağlıyoruz."
+        },
+        {
+          "t": "Test",
+          "d": "Asistanı gerçek müşteri sorularınızla deniyoruz. Yanıtları siz okursunuz, biz düzeltiriz."
+        },
+        {
+          "t": "Yayına alma",
+          "d": "Asistan çalışmaya başlar, ilk günlerde sohbetleri birlikte izler, gerekenleri geliştiririz."
+        }
+      ],
+      "priceTitle": "Fiyat ve süre",
+      "priceItems": [
+        {
+          "n": "700 AZN",
+          "l": "tek seferlik kurulum"
+        },
+        {
+          "n": "300 AZN'den",
+          "l": "aylık hizmet"
+        },
+        {
+          "n": "10 gün",
+          "l": "hazır olma süresi"
+        }
+      ],
+      "priceText": [
+        "Aylık tutar mesaj sayısına ve gerekli entegrasyonlara göre değişir. Net fiyatı ilk görüşmeden sonra yazılı olarak bildiriyoruz.",
+        "Asistan yaklaşık 10 günde devreye girer. Meta'nın hesap doğrulaması bu süreyi etkileyebilir.",
+        "Müşteri size yazdığında verilen yanıtlar ücretsizdir ya da çok düşük maliyetlidir. Yalnızca sizin başlattığınız kampanya mesajları ayrıca ücretlendirilir."
+      ],
+      "faqTitle": "Sık sorulan sorular",
+      "faq": [
+        {
+          "q": "Chatbot Azerbaycan Türkçesini anlıyor mu?",
+          "a": "Evet. Güncel dil modelleri Azerbaycan Türkçesini iyi anlıyor. Yine de yayına almadan önce asistanı sizin gerçek müşteri sorularınızla test ediyoruz."
+        },
+        {
+          "q": "WhatsApp numaram engellenebilir mi?",
+          "a": "Resmi WhatsApp Business API ile çalıştığımız için bu risk minimumdur. Kuralları ihlal eden gayriresmi araçlar kullanmıyoruz."
+        },
+        {
+          "q": "Asistan yanlış yanıt verirse ne olur?",
+          "a": "Asistan yalnızca sizin verdiğiniz bilgilere dayanır. Bilmediği soruda cevap uydurmaz, sohbeti size devreder. Raporda hangi sorulara yanıt verdiğini görürsünüz."
+        },
+        {
+          "q": "Klinikler için güvenli mi?",
+          "a": "Asistan teşhis koymaz ve tıbbi tavsiye vermez. Ağrı, acil durum gibi hassas ifadeler geldiğinde sohbeti hemen doktora veya yöneticiye devreder."
+        },
+        {
+          "q": "Müşteri yazışmaları nerede saklanır?",
+          "a": "Yazışmalar sizin adınıza açılmış hesaplarda saklanır. Saklama süresini ve onay metnini birlikte belirliyoruz."
+        },
+        {
+          "q": "Ben de kendim yanıt yazabilir miyim?",
+          "a": "Evet. İstediğiniz sohbeti dilediğiniz zaman üstlenebilirsiniz; asistan yalnızca tekrarlayan işi yapar."
+        }
+      ],
+      "formTitle": "Chatbot fikrinizi bize yazın",
+      "formText": "Uzun telefon görüşmeleri ve sunumlar yok. Projenizi dinler, yazılı ve sabit bir fiyat sunarız.",
+      "formName": "Adınız",
+      "formContact": "E-posta veya WhatsApp",
+      "formTopic": "Ne geliştirmek istiyorsunuz?",
+      "topics": [
+        "Chatbot",
+        "Web sitesi",
+        "AI entegrasyonu",
+        "Mevcut sisteme bağlanma",
+        "Henüz karar vermedim"
+      ],
+      "formMessage": "Proje hakkında kısaca bilgi verin",
+      "formSend": "Ücretsiz görüşelim",
+      "formEmail": "veya e-posta ile gönderin",
+      "formError": "Lütfen adınızı ve e-posta adresinizi ya da WhatsApp numaranızı yazın.",
+      "formSent": "WhatsApp açıldı. Mesajı göndermeyi unutmayın.",
+      "formMail": "Merhaba, Cradex Agency.\nAd: {name}\nİletişim: {contact}\nKonu: {topic}\n{message}",
+      "formSubject": "Chatbot başvurusu — {name}"
+    },
+    "comboPage": {
+      "metaTitle": "Sosyal Medya Kombo Paketleri",
+      "metaDescription": "Instagram, TikTok ve YouTube için takipçi, beğeni ve izlenme kombo paketleri. 24 saat içinde başlar, güvenli ödeme.",
+      "home": "Ana Sayfa",
+      "products": "Ürünlerimiz",
+      "title": "Sosyal Medya Kombo Paketleri",
+      "text": "Hesabınızın ilk izlenimini güçlendiren hazır paketler: takipçi, beğeni, izlenme ve kaydetme tek siparişte.",
+      "chips": [
+        "24 saat içinde başlar",
+        "1–7 günde tamamlanır",
+        "Şifre gerekmez"
+      ],
+      "stepsTitle": "Nasıl sipariş verilir",
+      "steps": [
+        {
+          "t": "Paketi seçin",
+          "d": "Platformu ve kaç paket istediğinizi seçin."
+        },
+        {
+          "t": "Hesabı yazın",
+          "d": "Kullanıcı adınızı veya kanal bağlantınızı girin. Şifre istemiyoruz."
+        },
+        {
+          "t": "Ödemeyi yapın",
+          "d": "Ödeme, bankanın güvenli 3D Secure sayfasında alınır."
+        },
+        {
+          "t": "Sonucu takip edin",
+          "d": "İşlem 24 saat içinde başlar ve 1–7 gün içinde tamamlanır."
+        }
+      ],
+      "ask": "Sorunuz mu var?",
+      "askMessage": "Merhaba, Cradex Agency. Sosyal medya kombo paketleri ile ilgili bir sorum var: "
     }
   }
 }

@@ -12,6 +12,7 @@ import { PLANS, planProblems } from '@/lib/site/pricing'
 import { PricingConfigurator } from '@/components/pricing/PricingConfigurator'
 import { HeroDevices } from '@/components/pricing/HeroDevices'
 import { PriceFactors } from '@/components/pricing/PriceFactors'
+import { DomainChecker } from '@/components/home/DomainChecker'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
@@ -105,6 +106,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
       <PricingConfigurator />
 
+      <section className="overflow-x-clip pb-6">
+        <DomainChecker />
+      </section>
+
       {/* Projects outside the packages */}
       <section className="container-x py-14 lg:py-20">
         <Reveal className="rv-3d">
@@ -142,9 +147,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 <span className="tilt-glare" />
                 {/* a short chat, just to say "people ask us this all the time" */}
                 <div className="tilt-z2 space-y-2" aria-hidden="true">
-                  <span className="faq-bubble block w-fit max-w-[80%] rounded-2xl rounded-bl-md bg-snow/10 px-4 py-2.5 text-sm">{faq[0]?.q}</span>
+                  <span className="faq-bubble block w-fit max-w-[80%] rounded-2xl rounded-bl-md bg-snow/10 px-4 py-2.5 text-sm">{t('faqAskQ')}</span>
                   <span className="faq-bubble faq-bubble-2 ml-auto block w-fit max-w-[80%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm">
-                    {t('categories.cms.short')} 25% · {t('categories.code.short')} 10%
+                    {t('faqAskA')}
                   </span>
                   <span className="faq-typing flex w-fit gap-1 rounded-2xl rounded-bl-md bg-snow/10 px-4 py-3">
                     <i /><i /><i />

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPortfolio } from '@/lib/data/portfolio'
 import { cleanSlug, isShown } from '@/lib/site/portfolio'
-import { SERVICE_IDS, SERVICE_SLUGS } from '@/lib/site/navigation'
+import { PRODUCT_LINKS, SERVICE_IDS, SERVICE_SLUGS } from '@/lib/site/navigation'
 import { getArticleSlugs } from '@/lib/data/journal'
 
 const baseUrl = 'https://cradexagency.com'
@@ -37,6 +37,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: page === '' ? 1.0 : 0.8,
       })
+    }
+
+    for (const p of PRODUCT_LINKS) {
+      entries.push({ url: `${baseUrl}/${locale}/products/${p.slug}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 })
     }
 
     // Service pages

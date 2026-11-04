@@ -3697,9 +3697,178 @@
         }
       ],
       "faqAskTitle": "Still have a question?",
-      "faqAskText": "If you didn't find your answer here, ask us on WhatsApp. We usually reply about packages, payment or timelines the same day.",
+      "faqAskText": "Can't find your answer here? Write to us on WhatsApp. We reply within 1 minute.",
       "faqAskCta": "Ask a question",
-      "faqAskMessage": "Hello, Cradex Agency. I have a question about pricing and packages: "
+      "faqAskMessage": "Hello, Cradex Agency. I have a question about pricing and packages: ",
+      "faqAskQ": "Is the demo really free?",
+      "faqAskA": "Yes. If you don't like it, you pay nothing."
+    },
+    "productMenu": {
+      "chatbot": {
+        "title": "Chatbot Development and AI Assistant",
+        "text": "An assistant that answers your customers 24/7 on WhatsApp, Instagram, Telegram and your website.",
+        "badge": "from 700 ₼"
+      },
+      "combo": {
+        "title": "Social Media Combo Packages",
+        "text": "Follower, like and view packages for your Instagram, TikTok and YouTube accounts.",
+        "badge": "from 20 ₼"
+      },
+      "more": "Learn more"
+    },
+    "chatbotPage": {
+      "metaTitle": "Chatbot Development and AI Assistant",
+      "metaDescription": "An AI assistant for WhatsApp, Instagram, Telegram and your website: 24/7 answers, bookings, and handover of serious enquiries to you. 700 AZN setup, ready in 10 days.",
+      "home": "Home",
+      "products": "Products",
+      "title": "Chatbot Development and AI Assistant",
+      "text": "No more answering the same questions in Instagram Direct at midnight. The AI assistant replies about prices, address and opening hours, books customers in, and passes serious enquiries on to you.",
+      "chips": [
+        "700 AZN setup",
+        "from 300 AZN/month",
+        "ready in 10 days"
+      ],
+      "ask": "Have a question?",
+      "askMessage": "Hello, Cradex Agency. I have a question about chatbot development: ",
+      "apply": "Apply",
+      "demoTitle": "AI assistant",
+      "demoOnline": "online",
+      "forTitle": "Who it is for",
+      "forItems": [
+        "Clinics and beauty salons: bookings and reminders",
+        "Real estate agencies: instant replies to enquiries",
+        "Car dealerships: prices, specs and test drive bookings",
+        "Instagram shops: order collection and frequently asked questions",
+        "Restaurants and cafes: reservations and menu questions"
+      ],
+      "includesTitle": "What's included",
+      "includes": [
+        "An assistant working on WhatsApp, Instagram, Telegram or your website",
+        "Answers based only on your price list and your information",
+        "Hands the conversation over to you right away when it doesn't know the answer",
+        "Collection of bookings and customer contact details",
+        "A weekly report on what customers are asking",
+        "Replies in Azerbaijani, Russian, English and Turkish"
+      ],
+      "stepsTitle": "How we work",
+      "steps": [
+        {
+          "t": "Questions and rules",
+          "d": "Together we define the most common questions, the prices, and the cases where a conversation is handed over to you."
+        },
+        {
+          "t": "Connecting accounts",
+          "d": "We connect your official WhatsApp Business, Instagram or Telegram account in your name."
+        },
+        {
+          "t": "Testing",
+          "d": "We test the assistant with your real customer questions. You read the answers, we fix them."
+        },
+        {
+          "t": "Launch",
+          "d": "The assistant goes live. We watch the conversations with you in the first days and refine what is needed."
+        }
+      ],
+      "priceTitle": "Price and timeline",
+      "priceItems": [
+        {
+          "n": "700 AZN",
+          "l": "one-time setup"
+        },
+        {
+          "n": "from 300 AZN",
+          "l": "monthly service"
+        },
+        {
+          "n": "10 days",
+          "l": "time to launch"
+        }
+      ],
+      "priceText": [
+        "The monthly amount depends on message volume and the integrations you need. We confirm the exact price in writing after the first conversation.",
+        "The assistant goes live in about 10 days. Meta's account verification can affect this timeline.",
+        "Replies sent when a customer writes to you are free or very cheap. Only campaign messages that you start are charged separately."
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faq": [
+        {
+          "q": "Does the chatbot understand Azerbaijani?",
+          "a": "Yes. Modern language models understand Azerbaijani well. Even so, before launch we test the assistant with your real customer questions."
+        },
+        {
+          "q": "Can my WhatsApp number get blocked?",
+          "a": "We work through the official WhatsApp Business API, so the risk is minimal. We do not use unofficial tools that break the rules."
+        },
+        {
+          "q": "What if the assistant gives a wrong answer?",
+          "a": "The assistant relies only on the information you provide. If it doesn't know, it doesn't invent an answer; it passes the conversation to you. The report shows which questions it answered."
+        },
+        {
+          "q": "Is it safe for clinics?",
+          "a": "The assistant does not diagnose or give medical advice. When sensitive words such as pain or emergency appear, it immediately hands the conversation to a doctor or administrator."
+        },
+        {
+          "q": "Where are customer conversations stored?",
+          "a": "Conversations are stored in accounts opened in your name. We agree on the retention period and the consent text together."
+        },
+        {
+          "q": "Can I reply myself too?",
+          "a": "Yes. You can take over any conversation at any time; the assistant only handles the repetitive work."
+        }
+      ],
+      "formTitle": "Tell us about your chatbot idea",
+      "formText": "No long calls or presentations. We listen to your project and give you a written, fixed price.",
+      "formName": "Your name",
+      "formContact": "Email or WhatsApp",
+      "formTopic": "What would you like to build?",
+      "topics": [
+        "Chatbot",
+        "Website",
+        "AI integration",
+        "Connect to an existing system",
+        "Not decided yet"
+      ],
+      "formMessage": "Tell us briefly about the project",
+      "formSend": "Let's talk, free of charge",
+      "formEmail": "or send by email",
+      "formError": "Please enter your name and your email or WhatsApp number.",
+      "formSent": "WhatsApp has opened. Don't forget to send the message.",
+      "formMail": "Hello, Cradex Agency.\nName: {name}\nContact: {contact}\nTopic: {topic}\n{message}",
+      "formSubject": "Chatbot enquiry — {name}"
+    },
+    "comboPage": {
+      "metaTitle": "Social Media Combo Packages",
+      "metaDescription": "Follower, like and view combo packages for Instagram, TikTok and YouTube. Starts within 24 hours, secure payment.",
+      "home": "Home",
+      "products": "Products",
+      "title": "Social Media Combo Packages",
+      "text": "Ready-made packages that strengthen the first impression of your account: followers, likes, views and saves in a single order.",
+      "chips": [
+        "Starts within 24 hours",
+        "Done in 1–7 days",
+        "No password required"
+      ],
+      "stepsTitle": "How to order",
+      "steps": [
+        {
+          "t": "Choose a package",
+          "d": "Pick the platform and how many packages you want."
+        },
+        {
+          "t": "Enter your account",
+          "d": "Enter your username or channel link. We never ask for a password."
+        },
+        {
+          "t": "Pay",
+          "d": "Payment is made on the bank's secure 3D Secure page."
+        },
+        {
+          "t": "Track the result",
+          "d": "Work starts within 24 hours and is completed within 1–7 days."
+        }
+      ],
+      "ask": "Have a question?",
+      "askMessage": "Hello, Cradex Agency. I have a question about the social media combo packages: "
     }
   }
 }

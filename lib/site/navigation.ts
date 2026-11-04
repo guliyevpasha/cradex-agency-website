@@ -42,12 +42,16 @@ export const serviceIdBySlug = (slug: string) =>
 
 export const serviceHref = (locale: string, id: ServiceId) => `/${locale}/services/${SERVICE_SLUGS[id]}`
 
+/** Product pages, Azerbaijani slugs in every language (like the services). */
 export const PRODUCT_LINKS = [
-  { id: 'chatbot', key: 'chatbot.title' },
-  { id: 'instagram', key: 'combo.instagramTitle' },
-  { id: 'tiktok', key: 'combo.tiktokTitle' },
-  { id: 'youtube', key: 'combo.youtubeTitle' },
+  { id: 'chatbot', slug: 'catbot-hazirlanmasi' },
+  { id: 'combo', slug: 'sosial-media-kombo-paketleri' },
 ] as const
+
+export type ProductId = (typeof PRODUCT_LINKS)[number]['id']
+
+export const productHref = (locale: string, id: ProductId) =>
+  `/${locale}/products/${PRODUCT_LINKS.find((p) => p.id === id)!.slug}`
 
 /** Top-level menu, in display order. `menu` marks items with a dropdown. */
 export const NAV_ITEMS = [

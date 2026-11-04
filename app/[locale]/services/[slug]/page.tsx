@@ -12,6 +12,7 @@ import { LOCALES, SERVICE_IDS, SERVICE_SLUGS, serviceHref, serviceIdBySlug, type
 import { ServiceScene } from '@/components/home/ServiceScene'
 import { WorkShowcase } from '@/components/home/WorkShowcase'
 import { FinalCta } from '@/components/home/FinalCta'
+import { DomainChecker } from '@/components/home/DomainChecker'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -201,6 +202,13 @@ export default async function ServicePage({ params }: { params: Params }) {
           ))}
         </ul>
       </section>
+
+      {/* a site needs a name: let visitors check theirs right here */}
+      {id === 'web' && (
+        <section className="overflow-x-clip pb-16">
+          <DomainChecker />
+        </section>
+      )}
 
       <FinalCta />
     </div>
