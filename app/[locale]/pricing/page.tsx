@@ -1,17 +1,19 @@
 /**
  * Pricing (website as a service): CMS and custom-code packages, monthly
- * instalments or annual payment with 20% off, custom projects, FAQ and terms.
+ * instalments or annual payment with 20% off, options that change the total,
+ * custom projects, FAQ, terms and what drives the final amount.
  * The old plans block (components/home/PricingPlans) stays in code.
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowDown, Check, ChevronDown, Info } from 'lucide-react'
-import { PLANS, azn, planProblems, quote } from '@/lib/site/pricing'
+import { PLANS, planProblems } from '@/lib/site/pricing'
 import { PricingConfigurator } from '@/components/pricing/PricingConfigurator'
+import { HeroDashboard } from '@/components/pricing/HeroDashboard'
+import { PriceFactors } from '@/components/pricing/PriceFactors'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 type Faq = { q: string; a: string }
@@ -41,9 +43,6 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
   // A price that does not split into whole manats is a data mistake: say so, never round it.
   const problems = planProblems()
   if (problems.length > 0) console.error('[pricing]', problems.join('; '))
-
-  const sample = PLANS.find((p) => p.id === 'business') ?? PLANS[0]
-  const sq = quote(sample)
 
   const offers = {
     '@context': 'https://schema.org',
@@ -97,33 +96,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
           </div>
         </div>
 
-        {/* A real example from the table, so the idea is clear at a glance. */}
-        <Reveal className="rv-3d hidden lg:block">
-          <Tilt max={9}>
-            <div className="svc-stage relative rounded-[36px] border border-line bg-bg-secondary p-8 shadow-card">
-              <span className="tilt-glare" />
-              <span className="svc-stage-grid" aria-hidden="true" />
-              <div className="tilt-z2 relative rounded-3xl bg-ink p-6 text-snow shadow-float">
-                <p className="text-sm text-snow/60">{t(`plans.${sample.id}.name`)} · {t('categories.cms.short')}</p>
-                <p className="mt-3 text-5xl font-extrabold tracking-[-0.04em] tabular-nums">{azn(sq.initial)}</p>
-                <p className="mt-1 text-snow/75">{t('initialNote')}</p>
-                <div className="mt-5 grid grid-cols-6 gap-1.5" aria-hidden="true">
-                  {Array.from({ length: 12 }).map((_, i) => (
-                    <span key={i} className="pr-month h-7 rounded-md bg-snow/10" style={{ animationDelay: `${i * 90}ms` }} />
-                  ))}
-                </div>
-                <p className="mt-4 font-semibold">{t('then', { amount: azn(sq.monthly) })}</p>
-              </div>
-              <div className="tilt-z3 relative -mb-2 ml-auto mt-[-18px] w-max rounded-2xl border border-line bg-bg-primary px-5 py-3 shadow-float">
-                <p className="text-xs text-text-muted">{t('billing.annual')}</p>
-                <p className="flex items-baseline gap-2">
-                  <span className="text-2xl font-extrabold text-text-primary tabular-nums">{azn(sq.annual)}</span>
-                  <s className="text-sm text-text-muted tabular-nums">{azn(sq.total)}</s>
-                </p>
-                <span className="mt-1 inline-flex rounded-full bg-brand-strong px-2.5 py-0.5 text-[11px] font-extrabold text-snow">{t('discountBadge')}</span>
-              </div>
-            </div>
-          </Tilt>
+        {/* What the customer gets: a live site they can follow, not just a page. */}
+        <Reveal className="rv-3d mx-auto w-full max-w-[560px] pb-6 pr-3 sm:pr-6">
+          <HeroDashboard locale={locale} />
         </Reveal>
       </section>
 
@@ -190,9 +165,11 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      <section className="container-x pb-24 text-center">
+      <section className="container-x pb-4 text-center">
         <p className="mx-auto max-w-3xl text-2xl font-extrabold leading-snug tracking-[-0.02em] text-text-primary sm:text-3xl">{t('closing')}</p>
       </section>
+
+      <PriceFactors />
 
       <script
         type="application/ld+json"

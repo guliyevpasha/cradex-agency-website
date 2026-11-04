@@ -3444,10 +3444,10 @@
       "choose": "Paketi seç",
       "chosen": "Seçilib",
       "summaryNote": "Domen və hosting qiymətə daxil deyil. Hissəli ödəniş 12 aylıq müqavilə ilə rəsmiləşdirilir.",
-      "messageMonthly": "Salam, Cradex Agency. {plan} paketini aylıq hissəli ödənişlə sifariş etmək istəyirəm ({total}, ilkin ödəniş {initial}, sonra 12 × {monthly}).",
-      "messageAnnual": "Salam, Cradex Agency. {plan} paketini illik ödənişlə sifariş etmək istəyirəm ({annual}, 20% endirimlə).",
+      "messageMonthly": "Salam, Cradex Agency. {plan} paketini aylıq hissəli ödənişlə sifariş etmək istəyirəm: {details}. Məbləğ {total}, ilkin ödəniş {initial}, sonra 12 × {monthly}.",
+      "messageAnnual": "Salam, Cradex Agency. {plan} paketini illik ödənişlə sifariş etmək istəyirəm: {details}. Məbləğ {annual} (20% endirimlə).",
       "cardsTitle": "Bütün paketlər",
-      "cardsText": "Paketləri müqayisə edin. Ödəniş növünü dəyişdikdə qiymətlər dərhal yenilənir.",
+      "cardsText": "Kartlarda paketin başlanğıc qiyməti göstərilir. Səhifə, dil, dizayn və əlavə xidmətləri yuxarıda seçə bilərsiniz.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3603,7 +3603,101 @@
       ],
       "notesFooter": "Müştərinin sayt və məlumatlar üzərində hüquqları, kodun təhvil verilməsi, admin girişləri, müqavilə müddəti və ödəniş öhdəlikləri ayrıca müqavilə ilə tənzimlənir.",
       "closing": "Veb-saytınızı hazırlayırıq, yayımlayırıq və texniki tərəfini idarə edirik. Siz isə biznesinizə fokuslanırsınız.",
-      "priceWarning": "Qiymət cədvəlində tam manata bölünməyən məbləğ var. lib/site/pricing.ts faylını yoxlayın."
+      "priceWarning": "Qiymət cədvəlində tam manata bölünməyən məbləğ var. lib/site/pricing.ts faylını yoxlayın.",
+      "optionsTitle": "Saytınızı tənzimləyin",
+      "reset": "Sıfırla",
+      "pagesTitle": "Səhifə sayı",
+      "pagesValue": "{count} səhifə",
+      "pagesHint": "Paketə {count} səhifə daxildir, hər əlavə səhifə {price}.",
+      "languagesTitle": "Saytın dilləri",
+      "languagesHint": "Paketə {count} dil daxildir, hər əlavə dil {price}.",
+      "languageNames": {
+        "az": "Azərbaycan dili",
+        "en": "İngilis dili",
+        "ru": "Rus dili",
+        "tr": "Türk dili"
+      },
+      "designTitle": "Dizayn səviyyəsi",
+      "design": {
+        "standard": {
+          "label": "Standart",
+          "text": "Sadə və yığcam dizayn, hazır bölmələr əsasında."
+        },
+        "detailed": {
+          "label": "Ətraflı",
+          "text": "Fərdi bölmələr, illüstrasiyalar və yumşaq animasiyalar."
+        },
+        "custom": {
+          "label": "Eksklüziv",
+          "text": "Brendinizə görə sıfırdan qurulan dizayn və hərəkət effektləri."
+        }
+      },
+      "designIncluded": "Bu paketə {level} dizayn daxildir.",
+      "extrasTitle": "Əlavə xidmətlər",
+      "extras": {
+        "logo": "Loqo",
+        "branding": "Brendinq",
+        "chatbot": "Chatbot",
+        "seo": "SEO"
+      },
+      "seoNote": "aylıq",
+      "included": "daxildir",
+      "lineBase": "{plan} paketi",
+      "linePages": "{count} əlavə səhifə",
+      "lineLanguages": "{count} əlavə dil",
+      "lineDesign": "{level} dizayn",
+      "monthlyServices": "Aylıq xidmətlər",
+      "monthlyServicesNote": "Ayrıca, hər ay ödənilir",
+      "fromPrice": "başlanğıc qiymət",
+      "detailsPages": "{count} səhifə",
+      "detailsLanguages": "dillər: {list}",
+      "detailsDesign": "{level} dizayn",
+      "detailsExtras": "əlavə: {list}",
+      "detailsSeo": "aylıq SEO ({price}/ay)",
+      "dash": {
+        "site": "sizinbiznesiniz.az",
+        "title": "İdarəetmə paneli",
+        "live": "Canlı",
+        "visitors": "Ziyarətçi",
+        "leads": "Müraciət",
+        "speed": "Sürət balı",
+        "chart": "Son 30 gün",
+        "sources": "Mənbələr",
+        "google": "Google",
+        "social": "Sosial media",
+        "direct": "Birbaşa",
+        "toastTitle": "Yeni müraciət",
+        "toastText": "Business paketi · WhatsApp",
+        "uptime": "Sayt aktivdir"
+      },
+      "factorsTitle": "Yekun məbləğə nə təsir edir",
+      "factorsText": "Paket qiyməti başlanğıc nöqtədir. Yekun məbləğ aşağıdakı seçimlərə görə dəyişir və müqavilədən əvvəl yazılı təklifdə dəqiq göstərilir.",
+      "factors": [
+        {
+          "t": "Səhifə sayı",
+          "d": "Hər səhifə öz dizaynı, mətni, şəkilləri və mobil yoxlaması ilə ayrıca işdir. Üç səhifəlik təqdimat saytı ilə iyirmi səhifəlik kataloq eyni vaxt tələb etmir."
+        },
+        {
+          "t": "Dizayn səviyyəsi",
+          "d": "Standart dizayn sınanmış bölmələrdən qurulur və tez hazır olur. Eksklüziv dizaynda isə rənglər, tipoqrafiya, illüstrasiya və animasiyalar yalnız sizin brendiniz üçün hazırlanır."
+        },
+        {
+          "t": "Dillər",
+          "d": "Hər yeni dil təkcə tərcümə deyil: menyu, formalar, SEO başlıqları və bütün səhifələr həmin dildə yenidən yoxlanılır."
+        },
+        {
+          "t": "Funksionallıq",
+          "d": "Məlumat saytı ilə onlayn sifariş, rezervasiya və ya istifadəçi kabineti olan sayt fərqli həcmdir. Hər yeni funksiya əlavə proqramlaşdırma və test deməkdir."
+        },
+        {
+          "t": "İnteqrasiyalar",
+          "d": "CRM, ödəniş sistemi, çatdırılma və ya mühasibat proqramı ilə əlaqə saytı biznesinizin daxili işinə bağlayır. Bu işlər görünmür, amma layihənin ən məsuliyyətli hissəsidir."
+        },
+        {
+          "t": "Dəstək və idarəetmə",
+          "d": "Sayt yayımlanandan sonra da işləməlidir: yeniləmələr, təhlükəsizlik və kiçik dəyişikliklər. Dəstəyin həcmi müqavilədə əvvəlcədən razılaşdırılır."
+        }
+      ]
     }
   }
 }

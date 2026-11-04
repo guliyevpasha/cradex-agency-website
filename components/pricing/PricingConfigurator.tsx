@@ -1,18 +1,43 @@
 'use client'
 /**
  * Package picker: category (CMS / custom code) → billing (monthly
- * instalments / annual −20%) → package, with a live payment plan on the
- * right whose figures count to the new value. The cards below share the
- * same state. All numbers come from lib/site/pricing.ts.
- * Styles: ".pr-*" in app/globals.css.
+ * instalments / annual −20%) → package → pages, languages, design and
+ * extras, with a live, itemised payment plan on the right whose figures
+ * count to the new value. The cards below share the same state. All
+ * numbers come from lib/site/pricing.ts. Styles: ".pr-*" in app/globals.css.
  * @author Paşa Quliyev — Cradex Agency
  */
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, Check, Code2, LayoutTemplate } from 'lucide-react'
+import { ArrowUpRight, Check, Code2, LayoutTemplate, RotateCcw } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
-import { PLAN_CATEGORIES, azn, percent, plansIn, quote, type Billing, type Plan, type PlanCategory } from '@/lib/site/pricing'
+import {
+  DESIGN_LEVELS,
+  DESIGN_PRICE,
+  EXTRAS,
+  EXTRA_IDS,
+  LANGUAGE_PRICE,
+  MAX_PAGES,
+  PAGE_PRICE,
+  PLAN_CATEGORIES,
+  SEO_MONTHLY,
+  SITE_LANGUAGES,
+  azn,
+  defaultOptions,
+  percent,
+  plansIn,
+  priceLines,
+  quote,
+  type Billing,
+  type DesignLevel,
+  type ExtraId,
+  type Line,
+  type Options,
+  type Plan,
+  type PlanCategory,
+  type SiteLanguage,
+} from '@/lib/site/pricing'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
@@ -50,8 +75,25 @@ function useCountUp(value: number, ms = 550) {
 
 function Money({ value, className }: { value: number; className?: string }) {
   // The final figure is announced once by the summary below, not every frame.
-  return <span aria-hidden="true" className={cn('tabular-nums', className)}>{azn(useCountUp(value))}</span>
+  return (
+    <span aria-hidden="true" className={cn('tabular-nums', className)}>
+      {azn(useCountUp(value))}
+    </span>
+  )
 }
+
+function Toggle({ on, onChange, label, price }: { on: boolean; onChange: () => void; label: string; price: string }) {
+  return (
+    <label className={cn('pr-toggle', on && 'pr-toggle-on')}>
+      <input type="checkbox" checked={on} onChange={onChange} className="sr-only" />
+      <span className="pr-switch" aria-hidden="true" />
+      <span className="min-w-0 flex-1 font-semibold">{label}</span>
+      <span className="shrink-0 text-sm font-bold tabular-nums">{price}</span>
+    </label>
+  )
+}
+
+const baseLangs = (p: Plan): SiteLanguage[] => SITE_LANGUAGES.slice(0, p.languages)
 
 export function PricingConfigurator() {
   const t = useTranslations('site.pricingPage')
@@ -60,31 +102,89 @@ export function PricingConfigurator() {
   const plans = plansIn(category)
   const [planId, setPlanId] = useState(plans.find((p) => p.recommended)?.id ?? plans[0].id)
   const plan = plans.find((p) => p.id === planId) ?? plans[0]
-  const q = quote(plan)
+  const [pages, setPages] = useState(plan.pages)
+  const [langs, setLangs] = useState<SiteLanguage[]>(() => baseLangs(plan))
+  const [design, setDesign] = useState<DesignLevel>(plan.design)
+  const [extras, setExtras] = useState<ExtraId[]>([])
+  const [seo, setSeo] = useState(false)
+  const options: Options = { pages, languages: langs.length, design, extras }
+  const lines = priceLines(plan, options)
+  const q = quote(plan, options)
   const panelRef = useRef<HTMLDivElement>(null)
+
+  // A new package starts from what it includes; chosen languages and extras stay.
+  function pickPlan(p: Plan) {
+    setPlanId(p.id)
+    setPages(p.pages)
+    setDesign(p.design)
+    setLangs((cur) => (cur.length >= p.languages ? cur : baseLangs(p)))
+  }
 
   function pickCategory(c: PlanCategory) {
     setCategory(c)
     const list = plansIn(c)
-    setPlanId(list.find((p) => p.recommended)?.id ?? list[0].id)
+    pickPlan(list.find((p) => p.recommended) ?? list[0])
+  }
+
+  function reset() {
+    pickPlan(plan)
+    setLangs(baseLangs(plan))
+    setExtras([])
+    setSeo(false)
   }
 
   function choose(p: Plan) {
-    setPlanId(p.id)
+    pickPlan(p)
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     panelRef.current?.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' })
   }
 
-  const name = (p: Plan) => t(`plans.${p.id}.name`)
+  // One language always stays on; the list keeps the AZ, EN, RU, TR order.
+  const toggleLang = (l: SiteLanguage) =>
+    setLangs((cur) =>
+      cur.includes(l) ? (cur.length > 1 ? cur.filter((x) => x !== l) : cur) : SITE_LANGUAGES.filter((x) => x === l || cur.includes(x))
+    )
+  const toggleExtra = (id: ExtraId) => setExtras((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id]))
 
-  const message = (p: Plan) => {
-    const x = quote(p)
-    return billing === 'monthly'
-      ? t('messageMonthly', { plan: name(p), total: azn(x.total), initial: azn(x.initial), monthly: azn(x.monthly) })
-      : t('messageAnnual', { plan: name(p), annual: azn(x.annual) })
+  const name = (p: Plan) => t(`plans.${p.id}.name`)
+  const designName = (d: DesignLevel) => t(`design.${d}.label`)
+
+  const lineLabel = (l: Line) => {
+    switch (l.kind) {
+      case 'base':
+        return t('lineBase', { plan: name(plan) })
+      case 'pages':
+        return t('linePages', { count: l.count })
+      case 'languages':
+        return t('lineLanguages', { count: l.count })
+      case 'design':
+        return t('lineDesign', { level: designName(l.level) })
+      default:
+        return t(`extras.${l.id}`)
+    }
   }
 
+  function message(p: Plan, o: Options, langList: readonly string[], withSeo: boolean) {
+    const x = quote(p, o)
+    const parts = [
+      t('detailsPages', { count: o.pages }),
+      t('detailsLanguages', { list: langList.map((l) => l.toUpperCase()).join(', ') }),
+      t('detailsDesign', { level: designName(o.design) }),
+    ]
+    if (o.extras.length) parts.push(t('detailsExtras', { list: o.extras.map((e) => t(`extras.${e}`)).join(', ') }))
+    if (withSeo) parts.push(t('detailsSeo', { price: azn(SEO_MONTHLY) }))
+    const details = parts.join(', ')
+    return billing === 'monthly'
+      ? t('messageMonthly', { plan: name(p), details, total: azn(x.total), initial: azn(x.initial), monthly: azn(x.monthly) })
+      : t('messageAnnual', { plan: name(p), details, annual: azn(x.annual) })
+  }
+
+  // Cards always quote the package as it comes.
+  const cardMessage = (p: Plan) => message(p, defaultOptions(p), baseLangs(p), false)
+
   const features = t.raw(`plans.${plan.id}.features`) as string[]
+  const has = (kind: Line['kind']) => lines.some((l) => l.kind === kind)
+  const shownDesign = DESIGN_PRICE[design] < DESIGN_PRICE[plan.design] ? plan.design : design
 
   return (
     <>
@@ -92,7 +192,7 @@ export function PricingConfigurator() {
         <div className="grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-6">
           {/* Choices */}
           <div className="space-y-5">
-            <fieldset className="rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
+            <fieldset className="min-w-0 rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
               <legend className="sr-only">{t('pickerTitle')}</legend>
               <p aria-hidden="true" className="text-lg font-bold text-text-primary">{t('pickerTitle')}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -107,7 +207,7 @@ export function PricingConfigurator() {
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block font-bold">{t(`categories.${c}.label`)}</span>
-                        <span className={cn('mt-0.5 block text-[13px] leading-snug', on ? 'text-snow/75' : 'text-text-muted')}>{t(`categories.${c}.text`)}</span>
+                        <span className={cn('mt-0.5 block text-[13px] leading-snug', on ? 'text-snow/90' : 'text-text-muted')}>{t(`categories.${c}.text`)}</span>
                       </span>
                       <span className="pr-radio" aria-hidden="true" />
                     </label>
@@ -116,13 +216,13 @@ export function PricingConfigurator() {
               </div>
             </fieldset>
 
-            <fieldset className="rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
+            <fieldset className="min-w-0 rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
               <legend className="sr-only">{t('billingTitle')}</legend>
               <p aria-hidden="true" className="text-lg font-bold text-text-primary">{t('billingTitle')}</p>
               <div className="pr-segment mt-4" data-active={billing}>
                 <span className="pr-segment-thumb" aria-hidden="true" />
                 {(['monthly', 'annual'] as const).map((b) => (
-                  <label key={b} className={cn('pr-segment-item', b === billing && 'text-snow')}>
+                  <label key={b} className="pr-segment-item">
                     <input type="radio" name="pr-billing" value={b} checked={b === billing} onChange={() => setBilling(b)} className="sr-only" />
                     {t(`billing.${b}`)}
                     {b === 'annual' && (
@@ -135,7 +235,7 @@ export function PricingConfigurator() {
               </div>
             </fieldset>
 
-            <fieldset className="rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
+            <fieldset className="min-w-0 rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
               <legend className="sr-only">{t('packageTitle')}</legend>
               <p aria-hidden="true" className="text-lg font-bold text-text-primary">{t('packageTitle')}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -144,7 +244,7 @@ export function PricingConfigurator() {
                   const x = quote(p)
                   return (
                     <label key={p.id} className={cn('pr-option pr-option-col', on && 'pr-option-on')}>
-                      <input type="radio" name="pr-plan" value={p.id} checked={on} onChange={() => setPlanId(p.id)} className="sr-only" />
+                      <input type="radio" name="pr-plan" value={p.id} checked={on} onChange={() => pickPlan(p)} className="sr-only" />
                       <span className="flex w-full items-center justify-between gap-3">
                         <span className="font-bold">{name(p)}</span>
                         <span className="pr-radio" aria-hidden="true" />
@@ -172,13 +272,106 @@ export function PricingConfigurator() {
                 })}
               </div>
             </fieldset>
+
+            <fieldset className="min-w-0 rounded-[28px] border border-line bg-bg-secondary p-5 sm:p-6">
+              <legend className="sr-only">{t('optionsTitle')}</legend>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p aria-hidden="true" className="text-lg font-bold text-text-primary">{t('optionsTitle')}</p>
+                <button
+                  type="button"
+                  onClick={reset}
+                  className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-line px-3 text-sm font-semibold text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  <RotateCcw size={14} aria-hidden="true" />
+                  {t('reset')}
+                </button>
+              </div>
+
+              <div className="mt-5">
+                <div className="flex items-baseline justify-between gap-3">
+                  <label htmlFor="pr-pages" className="font-semibold text-text-primary">
+                    {t('pagesTitle')}
+                  </label>
+                  <span className="text-lg font-extrabold text-text-primary tabular-nums">{t('pagesValue', { count: pages })}</span>
+                </div>
+                <input
+                  id="pr-pages"
+                  type="range"
+                  min={plan.pages}
+                  max={MAX_PAGES}
+                  value={pages}
+                  onChange={(e) => setPages(Number(e.target.value))}
+                  aria-valuetext={t('pagesValue', { count: pages })}
+                  className="pr-range mt-3 w-full"
+                  style={
+                    {
+                      '--fill': `${((pages - plan.pages) / Math.max(1, MAX_PAGES - plan.pages)) * 100}%`,
+                    } as React.CSSProperties
+                  }
+                />
+                <p className="mt-2 text-[13px] text-text-muted">{t('pagesHint', { count: plan.pages, price: azn(PAGE_PRICE) })}</p>
+              </div>
+
+              <div className="mt-6">
+                <p id="pr-langs" className="font-semibold text-text-primary">{t('languagesTitle')}</p>
+                <div role="group" aria-labelledby="pr-langs" className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                  {SITE_LANGUAGES.map((l) => {
+                    const on = langs.includes(l)
+                    return (
+                      <label key={l} className={cn('pr-chip', on && 'pr-chip-on')}>
+                        <input type="checkbox" checked={on} onChange={() => toggleLang(l)} className="sr-only" />
+                        <span className="text-[15px] font-extrabold">{l.toUpperCase()}</span>
+                        <span className={cn('min-w-0 break-words text-[12px] leading-tight', on ? 'opacity-100' : 'opacity-75')}>{t(`languageNames.${l}`)}</span>
+                      </label>
+                    )
+                  })}
+                </div>
+                <p className="mt-2 text-[13px] text-text-muted">{t('languagesHint', { count: plan.languages, price: azn(LANGUAGE_PRICE) })}</p>
+              </div>
+
+              <div className="mt-6">
+                <p id="pr-design" className="font-semibold text-text-primary">{t('designTitle')}</p>
+                <div role="radiogroup" aria-labelledby="pr-design" className="pr-segment pr-segment-3 mt-3" data-active={design}>
+                  <span className="pr-segment-thumb" aria-hidden="true" />
+                  {DESIGN_LEVELS.map((d) => {
+                    const below = DESIGN_PRICE[d] < DESIGN_PRICE[plan.design]
+                    return (
+                      <label key={d} className={cn('pr-segment-item', below && 'pr-segment-off')}>
+                        <input type="radio" name="pr-design" value={d} checked={d === design} disabled={below} onChange={() => setDesign(d)} className="sr-only" />
+                        {designName(d)}
+                      </label>
+                    )
+                  })}
+                </div>
+                <p className="mt-2 text-[13px] text-text-muted">
+                  {t(`design.${design}.text`)}
+                  {plan.design !== 'standard' && <> {t('designIncluded', { level: designName(plan.design) })}</>}
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <p id="pr-extras" className="font-semibold text-text-primary">{t('extrasTitle')}</p>
+                <div role="group" aria-labelledby="pr-extras" className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {EXTRA_IDS.map((id) => (
+                    <Toggle key={id} on={extras.includes(id)} onChange={() => toggleExtra(id)} label={t(`extras.${id}`)} price={`+${azn(EXTRAS[id])}`} />
+                  ))}
+                  <Toggle
+                    on={seo}
+                    onChange={() => setSeo((v) => !v)}
+                    label={`${t('extras.seo')} · ${t('seoNote')}`}
+                    price={`${azn(SEO_MONTHLY)}${t('perMonth')}`}
+                  />
+                </div>
+              </div>
+            </fieldset>
           </div>
 
           {/* Live payment plan */}
           <div ref={panelRef} className="lg:sticky lg:top-24 lg:self-start">
             <div className="pr-panel relative overflow-hidden rounded-[32px] bg-ink p-6 text-snow sm:p-8">
               <p className="sr-only" aria-live="polite">
-                {name(plan)}: {billing === 'monthly' ? `${azn(q.initial)}, ${t('then', { amount: azn(q.monthly) })}` : azn(q.annual)}
+                {name(plan)}, {t('totalLabel')} {azn(q.total)}:{' '}
+                {billing === 'monthly' ? `${t('initialLabel', { rate: percent(q.initialRate) })} ${azn(q.initial)}, ${t('then', { amount: azn(q.monthly) })}` : `${t('annualLabel')} ${azn(q.annual)}`}
               </p>
               <p className="text-sm text-snow/60">
                 {t('summaryTitle')} · {t(`categories.${category}.short`)}
@@ -191,9 +384,7 @@ export function PricingConfigurator() {
                     <Money value={q.initial} className="text-5xl font-extrabold tracking-[-0.04em] sm:text-6xl" />
                     <span className="text-snow/70">{t('initialNote')}</span>
                   </p>
-                  <p className="mt-2 text-lg text-snow/80">
-                    {t('then', { amount: azn(q.monthly) })}
-                  </p>
+                  <p className="mt-2 text-lg text-snow/80">{t('then', { amount: azn(q.monthly) })}</p>
                   {/* share paid up front vs. instalments */}
                   <div className="mt-6 flex h-2.5 overflow-hidden rounded-full bg-snow/10" aria-hidden="true">
                     <span className="pr-bar rounded-full bg-brand" style={{ width: percent(q.initialRate) }} />
@@ -211,16 +402,60 @@ export function PricingConfigurator() {
                 </>
               )}
 
-              <dl className="mt-6 divide-y divide-snow/10 border-y border-snow/10 text-[15px]">
+              {/* what the total is made of */}
+              <ul className="mt-6 space-y-2 text-[14px]">
+                {lines.map((l) => (
+                  <li key={l.kind === 'extra' ? l.id : l.kind} className="pr-line flex justify-between gap-4">
+                    <span className="flex items-center gap-2 text-snow/85">
+                      <span className={cn('h-1.5 w-1.5 shrink-0 rounded-full', l.kind === 'base' ? 'bg-snow' : 'bg-brand')} aria-hidden="true" />
+                      {lineLabel(l)}
+                    </span>
+                    <span className="font-bold tabular-nums">{l.kind === 'base' ? azn(l.amount) : `+${azn(l.amount)}`}</span>
+                  </li>
+                ))}
+                {!has('pages') && (
+                  <li className="flex justify-between gap-4 text-snow/55">
+                    <span className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full border border-snow/40" aria-hidden="true" />
+                      {t('pagesValue', { count: pages })}
+                    </span>
+                    <span>{t('included')}</span>
+                  </li>
+                )}
+                {!has('languages') && (
+                  <li className="flex justify-between gap-4 text-snow/55">
+                    <span className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full border border-snow/40" aria-hidden="true" />
+                      {langs.map((l) => l.toUpperCase()).join(' · ')}
+                    </span>
+                    <span>{t('included')}</span>
+                  </li>
+                )}
+                {!has('design') && (
+                  <li className="flex justify-between gap-4 text-snow/55">
+                    <span className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full border border-snow/40" aria-hidden="true" />
+                      {t('lineDesign', { level: designName(shownDesign) })}
+                    </span>
+                    <span>{t('included')}</span>
+                  </li>
+                )}
+              </ul>
+
+              <dl className="mt-5 divide-y divide-snow/10 border-y border-snow/10 text-[15px]">
                 <div className="flex justify-between gap-4 py-3">
                   <dt className="text-snow/70">{t('totalLabel')}</dt>
-                  <dd className={cn('font-bold tabular-nums', billing === 'annual' && 'text-snow/50 line-through')}>{azn(q.total)}</dd>
+                  <dd className={cn('font-bold', billing === 'annual' && 'text-snow/50 line-through')}>
+                    <Money value={q.total} />
+                  </dd>
                 </div>
                 {billing === 'monthly' ? (
                   <>
                     <div className="flex justify-between gap-4 py-3">
                       <dt className="text-snow/70">{t('initialLabel', { rate: percent(q.initialRate) })}</dt>
-                      <dd className="font-bold"><Money value={q.initial} /></dd>
+                      <dd className="font-bold">
+                        <Money value={q.initial} />
+                      </dd>
                     </div>
                     <div className="flex justify-between gap-4 py-3">
                       <dt className="text-snow/70">{t('monthlyLabel')}</dt>
@@ -231,15 +466,32 @@ export function PricingConfigurator() {
                   <>
                     <div className="flex justify-between gap-4 py-3">
                       <dt className="text-snow/70">{t('savingLabel')}</dt>
-                      <dd className="font-bold text-brand">−<Money value={q.saving} /></dd>
+                      <dd className="font-bold text-brand">
+                        −<Money value={q.saving} />
+                      </dd>
                     </div>
                     <div className="flex justify-between gap-4 py-3">
                       <dt className="text-snow/70">{t('annualLabel')}</dt>
-                      <dd className="font-bold"><Money value={q.annual} /></dd>
+                      <dd className="font-bold">
+                        <Money value={q.annual} />
+                      </dd>
                     </div>
                   </>
                 )}
               </dl>
+
+              {seo && (
+                <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-snow/5 px-4 py-3 text-[14px]">
+                  <span>
+                    {t('monthlyServices')} · {t('extras.seo')}
+                    <span className="block text-xs text-snow/50">{t('monthlyServicesNote')}</span>
+                  </span>
+                  <span className="font-bold tabular-nums">
+                    {azn(SEO_MONTHLY)}
+                    {t('perMonth')}
+                  </span>
+                </div>
+              )}
 
               <p className="mt-6 text-sm font-semibold text-snow/60">{t('includes')}</p>
               <ul className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -252,7 +504,7 @@ export function PricingConfigurator() {
               </ul>
 
               <a
-                href={whatsappUrl(message(plan))}
+                href={whatsappUrl(message(plan, options, langs, seo))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-7 flex w-full items-center justify-center gap-2.5 rounded-full bg-brand-strong px-6 py-4 font-semibold text-snow shadow-brand transition-transform hover:-translate-y-0.5"
@@ -266,7 +518,7 @@ export function PricingConfigurator() {
         </div>
       </section>
 
-      {/* All four packages side by side */}
+      {/* All four packages side by side, at their starting price */}
       <section className="container-x py-14 lg:py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -286,7 +538,13 @@ export function PricingConfigurator() {
             return (
               <li key={p.id}>
                 <Tilt max={5} className="h-full" innerClassName="h-full">
-                  <article className={cn('pr-card relative flex h-full flex-col rounded-[28px] border bg-bg-primary p-6 shadow-card', p.recommended ? 'border-brand-strong' : 'border-line', on && 'pr-card-on')}>
+                  <article
+                    className={cn(
+                      'pr-card relative flex h-full flex-col rounded-[28px] border bg-bg-primary p-6 shadow-card',
+                      p.recommended ? 'border-brand-strong' : 'border-line',
+                      on && 'pr-card-on'
+                    )}
+                  >
                     <span className="tilt-glare" />
                     {p.recommended && (
                       <span className="tilt-z2 absolute -top-3 left-6 rounded-full bg-brand-strong px-3 py-1 text-[11px] font-bold text-snow shadow-card">
@@ -306,8 +564,10 @@ export function PricingConfigurator() {
                       ) : (
                         <>
                           <p className="text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">{azn(x.total)}</p>
-                          <p className="text-xs text-text-muted">{t('totalLabel')}</p>
-                          <p className="mt-3 text-[15px] font-bold text-text-primary">{t('upfront', { amount: azn(x.initial) })} <span className="font-semibold text-text-muted">({percent(x.initialRate)})</span></p>
+                          <p className="text-xs text-text-muted">{t('fromPrice')}</p>
+                          <p className="mt-3 text-[15px] font-bold text-text-primary">
+                            {t('upfront', { amount: azn(x.initial) })} <span className="font-semibold text-text-muted">({percent(x.initialRate)})</span>
+                          </p>
                           <p className="text-sm text-text-secondary">{t('then', { amount: azn(x.monthly) })}</p>
                         </>
                       )}
@@ -324,7 +584,7 @@ export function PricingConfigurator() {
 
                     <div className="tilt-z2 mt-6 grid gap-2">
                       <a
-                        href={whatsappUrl(message(p))}
+                        href={whatsappUrl(cardMessage(p))}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={cn(

@@ -3440,10 +3440,10 @@
       "choose": "Paketi seç",
       "chosen": "Seçildi",
       "summaryNote": "Alan adı ve hosting fiyata dahil değildir. Taksitli ödeme 12 aylık sözleşmeyle resmileştirilir.",
-      "messageMonthly": "Merhaba, Cradex Agency. {plan} paketini aylık taksitli ödemeyle sipariş etmek istiyorum ({total}, ön ödeme {initial}, sonra 12 × {monthly}).",
-      "messageAnnual": "Merhaba, Cradex Agency. {plan} paketini yıllık ödemeyle sipariş etmek istiyorum ({annual}, %20 indirimli).",
+      "messageMonthly": "Merhaba, Cradex Agency. {plan} paketini aylık taksitli ödemeyle sipariş etmek istiyorum: {details}. Toplam {total}, ön ödeme {initial}, ardından 12 × {monthly}.",
+      "messageAnnual": "Merhaba, Cradex Agency. {plan} paketini yıllık ödemeyle sipariş etmek istiyorum: {details}. Tutar {annual} (%20 indirimli).",
       "cardsTitle": "Tüm paketler",
-      "cardsText": "Paketleri karşılaştırın. Ödeme türünü değiştirdiğinizde fiyatlar anında güncellenir.",
+      "cardsText": "Kartlarda paketin başlangıç fiyatı gösterilir. Sayfa, dil, tasarım ve ek hizmetleri yukarıdan seçebilirsiniz.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3599,7 +3599,101 @@
       ],
       "notesFooter": "Müşterinin web sitesi ve veriler üzerindeki hakları, kodun teslimi, yönetim paneli erişimleri, sözleşme süresi ve ödeme yükümlülükleri ayrı bir sözleşmeyle düzenlenir.",
       "closing": "Web sitenizi hazırlıyor, yayına alıyor ve teknik tarafını yönetiyoruz. Siz işletmenize odaklanın.",
-      "priceWarning": "Fiyat tablosunda tam manata bölünmeyen bir tutar var. lib/site/pricing.ts dosyasını kontrol edin."
+      "priceWarning": "Fiyat tablosunda tam manata bölünmeyen bir tutar var. lib/site/pricing.ts dosyasını kontrol edin.",
+      "optionsTitle": "Web sitenizi yapılandırın",
+      "reset": "Sıfırla",
+      "pagesTitle": "Sayfa sayısı",
+      "pagesValue": "{count} sayfa",
+      "pagesHint": "Pakete {count} sayfa dahildir, her ek sayfa {price}.",
+      "languagesTitle": "Site dilleri",
+      "languagesHint": "Pakete {count} dil dahildir, her ek dil {price}.",
+      "languageNames": {
+        "az": "Azerbaycanca",
+        "en": "İngilizce",
+        "ru": "Rusça",
+        "tr": "Türkçe"
+      },
+      "designTitle": "Tasarım seviyesi",
+      "design": {
+        "standard": {
+          "label": "Standart",
+          "text": "Hazır bölümlere dayanan sade ve derli toplu tasarım."
+        },
+        "detailed": {
+          "label": "Detaylı",
+          "text": "Özel bölümler, illüstrasyonlar ve yumuşak animasyonlar."
+        },
+        "custom": {
+          "label": "Özel",
+          "text": "Markanıza göre sıfırdan kurulan tasarım ve hareket efektleri."
+        }
+      },
+      "designIncluded": "Bu pakete {level} tasarım dahildir.",
+      "extrasTitle": "Ek hizmetler",
+      "extras": {
+        "logo": "Logo",
+        "branding": "Kurumsal kimlik",
+        "chatbot": "Chatbot",
+        "seo": "SEO"
+      },
+      "seoNote": "aylık",
+      "included": "dahil",
+      "lineBase": "{plan} paketi",
+      "linePages": "{count} ek sayfa",
+      "lineLanguages": "{count} ek dil",
+      "lineDesign": "{level} tasarım",
+      "monthlyServices": "Aylık hizmetler",
+      "monthlyServicesNote": "Ayrıca, her ay ödenir",
+      "fromPrice": "başlangıç fiyatı",
+      "detailsPages": "{count} sayfa",
+      "detailsLanguages": "diller: {list}",
+      "detailsDesign": "{level} tasarım",
+      "detailsExtras": "ek: {list}",
+      "detailsSeo": "aylık SEO ({price}/ay)",
+      "dash": {
+        "site": "isletmeniz.az",
+        "title": "Yönetim paneli",
+        "live": "Canlı",
+        "visitors": "Ziyaretçi",
+        "leads": "Başvuru",
+        "speed": "Hız puanı",
+        "chart": "Son 30 gün",
+        "sources": "Kaynaklar",
+        "google": "Google",
+        "social": "Sosyal medya",
+        "direct": "Doğrudan",
+        "toastTitle": "Yeni başvuru",
+        "toastText": "Business paketi · WhatsApp",
+        "uptime": "Site yayında"
+      },
+      "factorsTitle": "Nihai tutarı ne etkiler",
+      "factorsText": "Paket fiyatı başlangıç noktasıdır. Nihai tutar aşağıdaki seçimlere göre değişir ve sözleşmeden önce yazılı teklifte net olarak belirtilir.",
+      "factors": [
+        {
+          "t": "Sayfa sayısı",
+          "d": "Her sayfa kendi tasarımı, metni, görselleri ve mobil kontrolüyle ayrı bir iştir. Üç sayfalık tanıtım sitesi ile yirmi sayfalık katalog aynı süreyi gerektirmez."
+        },
+        {
+          "t": "Tasarım seviyesi",
+          "d": "Standart tasarım denenmiş bölümlerden kurulur ve hızlı hazırlanır. Özel tasarımda renkler, tipografi, illüstrasyonlar ve animasyonlar yalnızca markanız için hazırlanır."
+        },
+        {
+          "t": "Diller",
+          "d": "Her yeni dil yalnızca çeviri değildir: menü, formlar, SEO başlıkları ve tüm sayfalar o dilde yeniden kontrol edilir."
+        },
+        {
+          "t": "İşlevsellik",
+          "d": "Bilgilendirme sitesi ile online sipariş, rezervasyon veya kullanıcı hesabı olan site farklı kapsamdadır. Her yeni özellik ek yazılım geliştirme ve test demektir."
+        },
+        {
+          "t": "Entegrasyonlar",
+          "d": "CRM, ödeme sistemi, teslimat veya muhasebe yazılımıyla bağlantı, siteyi işletmenizin iç işleyişine bağlar. Bu işler görünmez, ancak projenin en sorumluluk gerektiren kısmıdır."
+        },
+        {
+          "t": "Destek ve yönetim",
+          "d": "Site yayına alındıktan sonra da çalışmalıdır: güncellemeler, güvenlik ve küçük değişiklikler. Destek kapsamı sözleşmede önceden kararlaştırılır."
+        }
+      ]
     }
   }
 }

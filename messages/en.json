@@ -3440,10 +3440,10 @@
       "choose": "Select package",
       "chosen": "Selected",
       "summaryNote": "Domain and hosting are not included in the price. Installments are formalized with a 12-month contract.",
-      "messageMonthly": "Hello, Cradex Agency. I would like to order the {plan} package with monthly installments ({total}, down payment {initial}, then 12 × {monthly}).",
-      "messageAnnual": "Hello, Cradex Agency. I would like to order the {plan} package with annual payment ({annual}, with the 20% discount).",
+      "messageMonthly": "Hello, Cradex Agency. I would like to order the {plan} package with monthly installments: {details}. Total {total}, down payment {initial}, then 12 × {monthly}.",
+      "messageAnnual": "Hello, Cradex Agency. I would like to order the {plan} package with annual payment: {details}. Total {annual} (with the 20% discount).",
       "cardsTitle": "All packages",
-      "cardsText": "Compare the packages. Prices update instantly when you change the payment type.",
+      "cardsText": "Cards show each package's starting price. Choose pages, languages, design and extras above.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3599,7 +3599,101 @@
       ],
       "notesFooter": "The client's rights to the website and data, code handover, admin access, contract term and payment obligations are governed by a separate contract.",
       "closing": "We build your website, launch it and manage its technical side. You focus on your business.",
-      "priceWarning": "The price table contains an amount that does not divide into whole manats. Check lib/site/pricing.ts."
+      "priceWarning": "The price table contains an amount that does not divide into whole manats. Check lib/site/pricing.ts.",
+      "optionsTitle": "Configure your website",
+      "reset": "Reset",
+      "pagesTitle": "Number of pages",
+      "pagesValue": "{count} pages",
+      "pagesHint": "The package includes {count} pages; each extra page is {price}.",
+      "languagesTitle": "Website languages",
+      "languagesHint": "The package includes {count} language(s); each extra language is {price}.",
+      "languageNames": {
+        "az": "Azerbaijani",
+        "en": "English",
+        "ru": "Russian",
+        "tr": "Turkish"
+      },
+      "designTitle": "Design level",
+      "design": {
+        "standard": {
+          "label": "Standard",
+          "text": "Clean, compact design built from ready-made sections."
+        },
+        "detailed": {
+          "label": "Detailed",
+          "text": "Custom sections, illustrations and subtle animations."
+        },
+        "custom": {
+          "label": "Exclusive",
+          "text": "Design built from scratch around your brand, with motion effects."
+        }
+      },
+      "designIncluded": "{level} design is included in this package.",
+      "extrasTitle": "Extra services",
+      "extras": {
+        "logo": "Logo",
+        "branding": "Branding",
+        "chatbot": "Chatbot",
+        "seo": "SEO"
+      },
+      "seoNote": "monthly",
+      "included": "included",
+      "lineBase": "{plan} package",
+      "linePages": "{count} extra pages",
+      "lineLanguages": "{count} extra languages",
+      "lineDesign": "{level} design",
+      "monthlyServices": "Monthly services",
+      "monthlyServicesNote": "Billed separately, every month",
+      "fromPrice": "starting price",
+      "detailsPages": "{count} pages",
+      "detailsLanguages": "languages: {list}",
+      "detailsDesign": "{level} design",
+      "detailsExtras": "extras: {list}",
+      "detailsSeo": "monthly SEO ({price}/mo)",
+      "dash": {
+        "site": "yourbusiness.com",
+        "title": "Dashboard",
+        "live": "Live",
+        "visitors": "Visitors",
+        "leads": "Inquiries",
+        "speed": "Speed score",
+        "chart": "Last 30 days",
+        "sources": "Sources",
+        "google": "Google",
+        "social": "Social media",
+        "direct": "Direct",
+        "toastTitle": "New inquiry",
+        "toastText": "Business package · WhatsApp",
+        "uptime": "Website is online"
+      },
+      "factorsTitle": "What affects the final price",
+      "factorsText": "The package price is a starting point. The final amount depends on the choices below and is stated exactly in a written quote before the contract.",
+      "factors": [
+        {
+          "t": "Number of pages",
+          "d": "Each page is its own piece of work: design, copy, images and mobile checks. A three-page presentation site and a twenty-page catalog do not take the same time."
+        },
+        {
+          "t": "Design level",
+          "d": "Standard design is assembled from proven sections and is ready quickly. With exclusive design, colors, typography, illustrations and animations are created only for your brand."
+        },
+        {
+          "t": "Languages",
+          "d": "A new language is more than translation: the menu, forms, SEO titles and every page are re-checked in that language."
+        },
+        {
+          "t": "Functionality",
+          "d": "An informational site and one with online orders, bookings or a user account are different in scope. Every new feature means extra development and testing."
+        },
+        {
+          "t": "Integrations",
+          "d": "Connecting to a CRM, payment system, delivery or accounting software ties the site into your business operations. This work is invisible, but it is the most critical part of the project."
+        },
+        {
+          "t": "Support and management",
+          "d": "A website has to keep working after launch: updates, security and small changes. The scope of support is agreed in the contract in advance."
+        }
+      ]
     }
   }
 }
