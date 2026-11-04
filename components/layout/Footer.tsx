@@ -113,7 +113,7 @@ export function Footer() {
             © {year} Cradex Agency. {t('rights')}
             <span className="mx-2 hidden md:inline">·</span>
             <br className="md:hidden" />
-            {tLegal('sellerShort')} · {tLegal('taxId')}
+            {tLegal('taxId')}
           </p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {LEGAL_PAGES.map((p) => (
