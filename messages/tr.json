@@ -3664,7 +3664,9 @@
         "direct": "Doğrudan",
         "toastTitle": "Yeni başvuru",
         "toastText": "Business paketi · WhatsApp",
-        "uptime": "Site yayında"
+        "uptime": "Site yayında",
+        "conversion": "Mobil ziyaretçi",
+        "conversionValue": "+64%"
       },
       "factorsTitle": "Nihai tutarı ne etkiler",
       "factorsText": "Paket fiyatı başlangıç noktasıdır. Nihai tutar aşağıdaki seçimlere göre değişir ve sözleşmeden önce yazılı teklifte net olarak belirtilir.",
@@ -3693,7 +3695,11 @@
           "t": "Destek ve yönetim",
           "d": "Site yayına alındıktan sonra da çalışmalıdır: güncellemeler, güvenlik ve küçük değişiklikler. Destek kapsamı sözleşmede önceden kararlaştırılır."
         }
-      ]
+      ],
+      "faqAskTitle": "Aklınıza takılan mı var?",
+      "faqAskText": "Cevabını burada bulamadığınız soruyu WhatsApp'tan yazın. Paket, ödeme veya süreyle ilgili genellikle aynı gün yanıt veriyoruz.",
+      "faqAskCta": "Soru sorun",
+      "faqAskMessage": "Merhaba, Cradex Agency. Fiyatlar ve paketler hakkında bir sorum var: "
     }
   }
 }

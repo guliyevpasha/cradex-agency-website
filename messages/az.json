@@ -3668,7 +3668,9 @@
         "direct": "Birbaşa",
         "toastTitle": "Yeni müraciət",
         "toastText": "Business paketi · WhatsApp",
-        "uptime": "Sayt aktivdir"
+        "uptime": "Sayt aktivdir",
+        "conversion": "Mobil ziyarətçi",
+        "conversionValue": "+64%"
       },
       "factorsTitle": "Yekun məbləğə nə təsir edir",
       "factorsText": "Paket qiyməti başlanğıc nöqtədir. Yekun məbləğ aşağıdakı seçimlərə görə dəyişir və müqavilədən əvvəl yazılı təklifdə dəqiq göstərilir.",
@@ -3697,7 +3699,11 @@
           "t": "Dəstək və idarəetmə",
           "d": "Sayt yayımlanandan sonra da işləməlidir: yeniləmələr, təhlükəsizlik və kiçik dəyişikliklər. Dəstəyin həcmi müqavilədə əvvəlcədən razılaşdırılır."
         }
-      ]
+      ],
+      "faqAskTitle": "Sualınız qaldı?",
+      "faqAskText": "Cavabını burada tapmadığınız sualı WhatsApp-da yazın. Paket, ödəniş və ya müddətlə bağlı adətən elə həmin gün cavab veririk.",
+      "faqAskCta": "Sual verin",
+      "faqAskMessage": "Salam, Cradex Agency. Qiymətlər və paketlər barədə sualım var: "
     }
   }
 }

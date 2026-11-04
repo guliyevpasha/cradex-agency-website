@@ -112,12 +112,13 @@ export function PricingConfigurator() {
   const q = quote(plan, options)
   const panelRef = useRef<HTMLDivElement>(null)
 
-  // A new package starts from what it includes; chosen languages and extras stay.
+  // A package switch starts from exactly what that package includes: its
+  // pages, languages and design. Only the paid extras the visitor ticked stay.
   function pickPlan(p: Plan) {
     setPlanId(p.id)
     setPages(p.pages)
     setDesign(p.design)
-    setLangs((cur) => (cur.length >= p.languages ? cur : baseLangs(p)))
+    setLangs(baseLangs(p))
   }
 
   function pickCategory(c: PlanCategory) {
@@ -241,7 +242,7 @@ export function PricingConfigurator() {
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {plans.map((p) => {
                   const on = p.id === plan.id
-                  const x = quote(p)
+                  const x = on ? q : quote(p, { ...defaultOptions(p), extras })
                   return (
                     <label key={p.id} className={cn('pr-option pr-option-col', on && 'pr-option-on')}>
                       <input type="radio" name="pr-plan" value={p.id} checked={on} onChange={() => pickPlan(p)} className="sr-only" />

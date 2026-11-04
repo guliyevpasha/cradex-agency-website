@@ -3664,7 +3664,9 @@
         "direct": "Direct",
         "toastTitle": "New inquiry",
         "toastText": "Business package · WhatsApp",
-        "uptime": "Website is online"
+        "uptime": "Website is online",
+        "conversion": "Mobile visitors",
+        "conversionValue": "+64%"
       },
       "factorsTitle": "What affects the final price",
       "factorsText": "The package price is a starting point. The final amount depends on the choices below and is stated exactly in a written quote before the contract.",
@@ -3693,7 +3695,11 @@
           "t": "Support and management",
           "d": "A website has to keep working after launch: updates, security and small changes. The scope of support is agreed in the contract in advance."
         }
-      ]
+      ],
+      "faqAskTitle": "Still have a question?",
+      "faqAskText": "If you didn't find your answer here, ask us on WhatsApp. We usually reply about packages, payment or timelines the same day.",
+      "faqAskCta": "Ask a question",
+      "faqAskMessage": "Hello, Cradex Agency. I have a question about pricing and packages: "
     }
   }
 }

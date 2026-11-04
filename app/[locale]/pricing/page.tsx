@@ -10,10 +10,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowDown, Check, ChevronDown, Info } from 'lucide-react'
 import { PLANS, planProblems } from '@/lib/site/pricing'
 import { PricingConfigurator } from '@/components/pricing/PricingConfigurator'
-import { HeroDashboard } from '@/components/pricing/HeroDashboard'
+import { HeroDevices } from '@/components/pricing/HeroDevices'
 import { PriceFactors } from '@/components/pricing/PriceFactors'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 type Faq = { q: string; a: string }
@@ -67,7 +68,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
       )}
 
       {/* Hero */}
-      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-6 pt-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:pb-10">
+      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-6 pt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-8 lg:pb-10">
         <div>
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
           <AnimatedHeading
@@ -96,9 +97,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
           </div>
         </div>
 
-        {/* What the customer gets: a live site they can follow, not just a page. */}
-        <Reveal className="rv-3d mx-auto w-full max-w-[560px] pb-6 pr-3 sm:pr-6">
-          <HeroDashboard locale={locale} />
+        {/* What the customer gets: one site that works on every screen. */}
+        <Reveal className="rv-3d mx-auto w-full max-w-[680px] px-3 pb-8 pt-6 sm:px-6">
+          <HeroDevices locale={locale} />
         </Reveal>
       </section>
 
@@ -131,16 +132,43 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* FAQ */}
-      <section className="container-x grid grid-cols-[minmax(0,1fr)] gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:py-20">
-        <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
+      <section className="container-x grid grid-cols-[minmax(0,1fr)] gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:py-20">
+        {/* Left side stays in view while the questions scroll, so it never sits empty. */}
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
+          <Reveal className="rv-3d mt-8">
+            <Tilt max={6}>
+              <div className="faq-ask relative overflow-hidden rounded-[32px] bg-ink p-7 text-snow shadow-float sm:p-8">
+                <span className="tilt-glare" />
+                {/* a short chat, just to say "people ask us this all the time" */}
+                <div className="tilt-z2 space-y-2" aria-hidden="true">
+                  <span className="faq-bubble block w-fit max-w-[80%] rounded-2xl rounded-bl-md bg-snow/10 px-4 py-2.5 text-sm">{faq[0]?.q}</span>
+                  <span className="faq-bubble faq-bubble-2 ml-auto block w-fit max-w-[80%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm">
+                    {t('categories.cms.short')} 25% · {t('categories.code.short')} 10%
+                  </span>
+                  <span className="faq-typing flex w-fit gap-1 rounded-2xl rounded-bl-md bg-snow/10 px-4 py-3">
+                    <i /><i /><i />
+                  </span>
+                </div>
+                <h3 className="tilt-z1 mt-7 text-2xl font-extrabold">{t('faqAskTitle')}</h3>
+                <p className="tilt-z1 mt-2 leading-relaxed text-snow/75">{t('faqAskText')}</p>
+                <div className="tilt-z2 mt-6">
+                  <WhatsAppButton label={t('faqAskCta')} message={t('faqAskMessage')} size="md" />
+                </div>
+              </div>
+            </Tilt>
+          </Reveal>
+        </div>
+
         <div className="space-y-3">
-          {faq.map((f) => (
-            <details key={f.q} className="group rounded-3xl border border-line bg-bg-secondary px-6 py-5 open:shadow-card">
-              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
-                {f.q}
+          {faq.map((f, i) => (
+            <details key={f.q} className="group rounded-3xl border border-line bg-bg-secondary px-5 py-4 transition-shadow open:shadow-card sm:px-6 sm:py-5" open={i === 0}>
+              <summary className="flex min-h-11 cursor-pointer list-none items-center gap-4 text-lg font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
+                <span className="w-7 shrink-0 text-sm font-bold text-accent-ink tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                <span className="min-w-0 flex-1">{f.q}</span>
                 <ChevronDown size={20} className="shrink-0 text-accent-ink transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
               </summary>
-              <p className="mt-3 leading-relaxed text-text-secondary">{f.a}</p>
+              <p className="mt-3 pl-11 leading-relaxed text-text-secondary">{f.a}</p>
             </details>
           ))}
         </div>
