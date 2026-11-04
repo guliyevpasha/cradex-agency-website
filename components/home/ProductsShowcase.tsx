@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react'
 import { Tilt } from '@/components/ui/Tilt'
+import { Reveal } from '@/components/ui/Reveal'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { SectionHeading } from './SectionHeading'
 
@@ -44,13 +45,37 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
             <h3 className="mt-6 text-3xl font-bold tracking-tight">{t('chatbot.title')}</h3>
             <p className="mt-3 max-w-md text-lg leading-relaxed text-[#A6B0BD]">{t('chatbot.text')}</p>
           </div>
-          <div className="space-y-3 rounded-3xl bg-[#13171D] p-5 sm:p-6" aria-hidden="true">
-            <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm text-snow">{t('chatbot.user')}</p>
-            <p className="w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#1C2129] px-4 py-2.5 text-sm text-[#E6EAEF]">
-              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5CB8FF]">Cradex AI</span>
-              {t('chatbot.bot')}
-            </p>
-          </div>
+          {/* Bubbles appear one after another once the card scrolls into view. */}
+          <Reveal className="chat-demo flex flex-col gap-3 rounded-3xl bg-[#13171D] p-5 sm:p-6">
+            {(
+              [
+                ['me', 'user'],
+                ['bot', 'bot'],
+                ['me', 'user2'],
+                ['bot', 'bot2'],
+                ['me', 'user3'],
+              ] as const
+            ).map(([from, key], i) =>
+              from === 'me' ? (
+                <p
+                  key={key}
+                  className="chat-pop ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-brand-strong px-4 py-2.5 text-sm text-snow"
+                  style={{ '--d': `${i * 0.7}s` } as React.CSSProperties}
+                >
+                  {t(`chatbot.${key}`)}
+                </p>
+              ) : (
+                <p
+                  key={key}
+                  className="chat-pop w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#1C2129] px-4 py-2.5 text-sm text-[#E6EAEF]"
+                  style={{ '--d': `${i * 0.7}s` } as React.CSSProperties}
+                >
+                  <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5CB8FF]">{t('chatbot.label')}</span>
+                  {t(`chatbot.${key}`)}
+                </p>
+              )
+            )}
+          </Reveal>
         </article>
 
         {/* Social media combo packages */}

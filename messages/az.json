@@ -2384,7 +2384,11 @@
         "title": "Chatbot",
         "text": "Saytınızda və mesajlaşma kanallarınızda müştəri suallarını 7/24 cavablandıran süni intellekt köməkçisi.",
         "user": "Sabah saat 15:00-da boş yer var?",
-        "bot": "Bəli, 15:00 və 16:30 boşdur. Hansı saata yazım?"
+        "bot": "Bəli, 15:00 və 16:30 boşdur. Hansı saata yazım?",
+        "label": "AI köməkçi",
+        "user2": "16:30, zəhmət olmasa.",
+        "bot2": "Sizi sabah saat 16:30 üçün qeydə aldıq. ✅",
+        "user3": "Təşəkkürlər!"
       },
       "combo": {
         "title": "Sosial Media Kombo Paketləri",

@@ -48,6 +48,11 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }],
+    // Sharp source captures, served as AVIF/WebP at high quality.
+    formats: ['image/avif', 'image/webp'],
+    qualities: [75, 92],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 2560, 3840],
+    minimumCacheTTL: 2678400,
   },
   transpilePackages: ['swiper', 'next-sanity', 'sanity'],
   async redirects() {

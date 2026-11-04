@@ -78,6 +78,7 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary border-2 border-transparent group-hover:border-accent-primary/60 transition-all duration-300">
               {item.coverImage ? (
                 <Image
+                  quality={92}
                   src={item.coverImage}
                   alt={item.title?.[locale as 'az' | 'en' | 'ru' | 'tr'] ?? item.titleKey}
                   fill

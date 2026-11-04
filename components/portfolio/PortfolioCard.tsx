@@ -27,6 +27,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
       {/* ── Cover image ─────────────────────────────────────────── */}
       {item.coverImage ? (
         <Image
+          quality={92}
           src={item.coverImage}
           alt={title}
           fill

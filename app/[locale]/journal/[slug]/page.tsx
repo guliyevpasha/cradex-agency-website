@@ -126,6 +126,7 @@ function ArticleContent({ article }: { article: Article }) {
             <ScrollReveal animation="scaleIn" className="mb-10">
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                 <Image
+                  quality={92}
                   src={article.coverImage}
                   alt={article.titleKey}
                   fill

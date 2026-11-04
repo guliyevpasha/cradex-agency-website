@@ -10,6 +10,7 @@ import { getAllPortfolio } from '@/lib/data/portfolio'
 import { clientName, cleanSlug, domainOf, isWebsite, shortSummary, shotsFor } from '@/lib/site/portfolio'
 import { WebProjectCard } from '@/components/portfolio/WebProjectCard'
 import { Reveal } from '@/components/ui/Reveal'
+import { ScrollFillText } from '@/components/ui/ScrollFillText'
 
 const LIMIT = 6
 
@@ -51,7 +52,10 @@ export async function WorkShowcase() {
             <h2 className="mt-3 text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem] 2xl:text-[5.25rem]">
               {t('title')}
             </h2>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-text-secondary sm:text-xl">{t('subtitle')}</p>
+            <ScrollFillText
+              className="mt-6 max-w-lg text-xl leading-relaxed text-text-primary sm:text-2xl"
+              segments={[{ text: t('subtitle') }]}
+            />
             <Link
               href={`/${locale}/portfolio`}
               className="mt-10 inline-flex items-center gap-3 rounded-full border-2 border-text-primary px-7 py-3.5 text-[17px] font-semibold text-text-primary transition-colors hover:bg-text-primary hover:text-bg-primary"

@@ -150,6 +150,7 @@ function LogoCard({ partner, logo, uid }: { partner: PartnerLogo; logo: string; 
         <img src={logo} alt={partner.name} className="h-8 w-auto max-w-[120px]" />
       ) : (
         <Image
+          quality={92}
           src={logo}
           alt={partner.name}
           width={120}

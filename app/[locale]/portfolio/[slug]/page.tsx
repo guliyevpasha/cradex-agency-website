@@ -167,6 +167,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-tertiary shadow-2xl ring-1 ring-white/5">
                 {item.coverImage ? (
                   <Image
+                    quality={92}
                     src={item.coverImage}
                     alt={title}
                     fill
@@ -341,6 +342,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         <div className={`relative ${aspectClass} rounded-xl overflow-hidden bg-bg-tertiary shadow-lg group cursor-pointer border border-white/5 hover:border-accent-primary/30 transition-all duration-300`}>
                           {post.url && (
                             <Image
+                              quality={92}
                               src={post.url}
                               alt={post.caption?.[locale] || `Post ${index + 1}`}
                               fill
@@ -505,6 +507,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                       <div className="relative aspect-video rounded-xl overflow-hidden bg-bg-tertiary shadow-xl border border-white/5 hover:border-accent-primary/30 transition-all duration-300 group cursor-pointer">
                         {result.url && (
                           <Image
+                            quality={92}
                             src={result.url}
                             alt={result.caption?.[locale] || `Result ${index + 1}`}
                             fill
@@ -567,6 +570,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                 <ScrollReveal key={index} animation="scaleIn" delay={index * 80}>
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-bg-tertiary shadow-lg group cursor-pointer">
                     <Image
+                      quality={92}
                       src={img}
                       alt={`${title} — ${index + 1}`}
                       fill
@@ -617,6 +621,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                       <div className="relative aspect-[4/3] bg-bg-tertiary overflow-hidden flex-shrink-0">
                         {project.coverImage ? (
                           <Image
+                            quality={92}
                             src={project.coverImage}
                             alt={projectTitle}
                             fill

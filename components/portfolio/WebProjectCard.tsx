@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils/cn'
 import { Tilt } from '@/components/ui/Tilt'
+import { ScrollFillText } from '@/components/ui/ScrollFillText'
 
 type Shots = { desktop: string; mobile?: string }
 
@@ -38,6 +39,7 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
         <div className="rounded-[1.6cqw] bg-[#1B1E24] p-[0.85cqw] shadow-[0_2.6cqw_4.4cqw_-1.6cqw_rgba(11,13,16,0.55)] ring-1 ring-black/40">
           <div className="relative aspect-[16/10] overflow-hidden rounded-[0.5cqw] bg-snow">
             <Image
+              quality={92}
               src={shots.desktop}
               alt={alt}
               fill
@@ -57,6 +59,7 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
         <div className="device-float rounded-[2.8cqw] bg-[#1B1E24] p-[0.6cqw] shadow-[0_3cqw_5cqw_-1.6cqw_rgba(11,13,16,0.65)] ring-1 ring-black/40">
           <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.2cqw] bg-snow">
             <Image
+              quality={92}
               src={shots.mobile ?? shots.desktop}
               alt=""
               fill
@@ -84,10 +87,11 @@ export function WebProjectCard({ href, shots, client, summary, tags, className, 
           ))}
         </ul>
       </Tilt>
-      <h3 className="mt-6 px-2 text-xl leading-snug text-text-secondary sm:text-[1.6rem] sm:leading-[1.3]">
-        <span className="font-bold text-text-primary transition-colors group-hover:text-accent-ink">{client}</span>
-        {summary ? <> {summary}</> : null}
-      </h3>
+      <ScrollFillText
+        as="h3"
+        className="mt-6 px-2 text-xl leading-snug text-text-primary sm:text-[1.6rem] sm:leading-[1.3]"
+        segments={[{ text: client, className: 'font-bold' }, ...(summary ? [{ text: summary }] : [])]}
+      />
     </Link>
   )
 }

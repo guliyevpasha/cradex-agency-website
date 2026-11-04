@@ -2380,7 +2380,11 @@
         "title": "Chatbot",
         "text": "An AI assistant that answers customer questions 24/7 on your website and messaging channels.",
         "user": "Is there a free slot tomorrow at 3 PM?",
-        "bot": "Yes, 3:00 PM and 4:30 PM are open. Which time should I book?"
+        "bot": "Yes, 3:00 PM and 4:30 PM are open. Which time should I book?",
+        "label": "AI assistant",
+        "user2": "4:30 PM, please.",
+        "bot2": "You are booked for 4:30 PM tomorrow. ✅",
+        "user3": "Thank you!"
       },
       "combo": {
         "title": "Social Media Combo Packages",

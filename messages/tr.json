@@ -2380,7 +2380,11 @@
         "title": "Chatbot",
         "text": "Web sitenizde ve mesajlaşma kanallarınızda müşteri sorularını 7/24 yanıtlayan yapay zeka asistanı.",
         "user": "Yarın saat 15:00'te boş yer var mı?",
-        "bot": "Evet, 15:00 ve 16:30 boş. Hangi saate yazayım?"
+        "bot": "Evet, 15:00 ve 16:30 boş. Hangi saate yazayım?",
+        "label": "AI asistan",
+        "user2": "16:30 lütfen.",
+        "bot2": "Sizi yarın saat 16:30 için kaydettik. ✅",
+        "user3": "Teşekkürler!"
       },
       "combo": {
         "title": "Sosyal Medya Kombo Paketleri",
