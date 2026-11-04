@@ -2607,11 +2607,12 @@
     "tech": {
       "eyebrow": "Texnologiyalar",
       "title": "İstifadə etdiyimiz texnologiyalar",
-      "text": "Hər layihəni müasir, sürətli və etibarlı alətlərlə qururuq.",
+      "text": "Saytları müasir və etibarlı texnologiyalarla, chatbot, kontent və avtomatlaşdırma işlərini isə peşəkar AI alətləri ilə qururuq.",
       "web": "Veb sayt",
       "mobile": "Mobil tətbiq",
       "marketing": "Rəqəmsal marketinq",
-      "pm": "Layihə idarəetməsi"
+      "pm": "Layihə idarəetməsi",
+      "ai": "Süni intellekt"
     },
     "order": {
       "title": "Sifarişi tamamlayın",
@@ -2643,8 +2644,12 @@
       "secure": "3D Secure ilə qorunur",
       "unavailable": "Onlayn ödəniş hazırda qoşulma mərhələsindədir. Sifarişinizi WhatsApp ilə tamamlaya bilərsiniz.",
       "whatsapp": "Sifarişi WhatsApp ilə tamamla",
-      "whatsappMessage": "Salam, {package} sifariş edirəm.\nHesab: {username}\nAd: {name}\nTelefon: {phone}\nE-poçt: {email}",
-      "error": "Xəta baş verdi. Bir az sonra yenidən cəhd edin."
+      "whatsappMessage": "Salam, {package} sifariş edirəm.\nSay: {quantity}\nMəbləğ: {total}\nHesab: {username}\nAd: {name}\nTelefon: {phone}\nE-poçt: {email}",
+      "error": "Xəta baş verdi. Bir az sonra yenidən cəhd edin.",
+      "quantity": "Paket sayı",
+      "quantityHint": "1-dən {max}-dək seçin",
+      "less": "Azalt",
+      "more": "Artır"
     },
     "legal": {
       "updated": "Son yenilənmə: {date}",
@@ -3311,11 +3316,48 @@
       ],
       "founderTitle": "Təsisçi",
       "founderName": "Paşa Quliyev",
-      "founderRole": "Təsisçi və rəhbər",
-      "founderText": "Cradex Agency-ni bizneslərin texnologiyadan real fayda görməsi üçün qurdum. Hər layihəni öz işim kimi izləyirəm.",
+      "founderRole": "Cradex Agency-nin təsisçisi",
+      "founderText": "Proqram mühəndisliyində 5 ildən çox təcrübəsi olan, eyni zamanda rəqəmsal marketinq kanalları ilə işləyən mütəxəssis. 2000-dən çox uğurlu reklam kampaniyası qurub, sosial media və veb saytlarla bağlı texniki problemləri həll edir. Bizneslərə həm texniki, həm də marketinq tərəfdən bir yerdə baxır və hər layihəni şəxsən izləyir.",
       "ctaTitle": "Layihənizi birlikdə quraq",
       "ctaText": "Saytınızın demosunu pulsuz hazırlayaq, bəyənsəniz davam edək.",
-      "cta": "Pulsuz demo istəyirəm"
+      "cta": "Pulsuz demo istəyirəm",
+      "founderHeading": "Layihənizə Paşa Quliyev rəhbərlik edir",
+      "founderStats": [
+        {
+          "n": "5+",
+          "l": "il proqram mühəndisliyində"
+        },
+        {
+          "n": "2000+",
+          "l": "uğurlu reklam kampaniyası"
+        },
+        {
+          "n": "70+",
+          "l": "layihə"
+        },
+        {
+          "n": "5",
+          "l": "fərqli ölkədə təcrübə"
+        },
+        {
+          "n": "100+",
+          "l": "sahibkara texniki dəstək"
+        },
+        {
+          "n": "2021",
+          "l": "ildən AI ilə"
+        }
+      ],
+      "founderSkills": [
+        "Veb və proqramlaşdırma",
+        "Rəqəmsal marketinq",
+        "Meta, TikTok və Google reklamları",
+        "Sosial media texniki həlləri",
+        "Hesab bərpası və təhlükəsizlik",
+        "AI alətləri və avtomatlaşdırma"
+      ],
+      "founderCta": "Layihənizi göndərin",
+      "founderWork": "İşlərimizə baxın"
     },
     "portfolioPage": {
       "metaTitle": "İşlərimiz — veb sayt layihələri",

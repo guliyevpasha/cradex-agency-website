@@ -57,10 +57,10 @@ export function Footer() {
 
         <div>
           <h2 className="mb-4 text-sm font-semibold text-text-primary">{t('company')}</h2>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-0.5 text-sm">
             {NAV_ITEMS.filter((i) => i.key !== 'services' && i.key !== 'home').map((i) => (
               <li key={i.key}>
-                <Link href={`/${locale}${i.href}`} className="text-text-secondary transition-colors hover:text-text-primary">
+                <Link href={`/${locale}${i.href}`} className="inline-flex min-h-9 items-center text-text-secondary transition-colors hover:text-text-primary">
                   {tNav(i.key)}
                 </Link>
               </li>
@@ -70,10 +70,10 @@ export function Footer() {
 
         <div>
           <h2 className="mb-4 text-sm font-semibold text-text-primary">{t('services')}</h2>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-0.5 text-sm">
             {SERVICE_IDS.map((s) => (
               <li key={s}>
-                <Link href={serviceHref(locale, s)} className="text-text-secondary transition-colors hover:text-text-primary">
+                <Link href={serviceHref(locale, s)} className="inline-flex min-h-9 items-center text-text-secondary transition-colors hover:text-text-primary">
                   {tS(`${s}.title`)}
                 </Link>
               </li>
@@ -83,21 +83,21 @@ export function Footer() {
 
         <div className="space-y-5">
           <h2 className="text-sm font-semibold text-text-primary">{t('contact')}</h2>
-          <ul className="space-y-3 text-sm text-text-secondary">
+          <ul className="space-y-1 text-sm text-text-secondary">
             <li>
-              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 hover:text-text-primary">
+              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-start gap-2.5 py-1.5 hover:text-text-primary">
                 <MapPin size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
                 {tOld('location')}
               </a>
             </li>
             <li>
-              <a href="tel:+994507786887" className="flex items-center gap-2.5 hover:text-text-primary">
+              <a href="tel:+994507786887" className="flex min-h-9 items-center gap-2.5 hover:text-text-primary">
                 <Phone size={16} className="shrink-0" aria-hidden="true" />
                 +994 50 778 68 87
               </a>
             </li>
             <li>
-              <a href="mailto:info@cradexagency.com" className="flex items-center gap-2.5 hover:text-text-primary">
+              <a href="mailto:info@cradexagency.com" className="flex min-h-9 items-center gap-2.5 hover:text-text-primary">
                 <Mail size={16} className="shrink-0" aria-hidden="true" />
                 info@cradexagency.com
               </a>
@@ -118,7 +118,7 @@ export function Footer() {
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {LEGAL_PAGES.map((p) => (
               <li key={p}>
-                <Link href={`/${locale}/${p}`} className="transition-colors hover:text-text-primary">
+                <Link href={`/${locale}/${p}`} className="inline-flex min-h-9 items-center transition-colors hover:text-text-primary">
                   {tLegal(`${p}.nav`)}
                 </Link>
               </li>

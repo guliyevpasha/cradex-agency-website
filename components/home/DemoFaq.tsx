@@ -33,7 +33,7 @@ export function DemoFaq() {
 
   return (
     <section className="py-20 lg:py-28">
-      <div className="container-x grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <div className="container-x grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>

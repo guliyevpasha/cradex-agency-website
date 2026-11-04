@@ -9,10 +9,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowLeft, AtSign, Bell, Lock, Mail, Phone, ShieldCheck, User, X } from 'lucide-react'
+import { ArrowLeft, AtSign, Bell, Lock, Mail, Minus, Phone, Plus, ShieldCheck, User, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
-import { formatPrice, validateOrder, type FieldError, type PackageId } from '@/lib/site/orders'
+import { MAX_QTY, clampQty, formatAmount, formatPrice, priceOf, validateOrder, type FieldError, type PackageId } from '@/lib/site/orders'
 import { useCurrency } from '@/lib/site/useCurrency'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
@@ -32,7 +32,12 @@ type Props = { pkg: PackageId; title: string; label: string; icon: React.ReactNo
 
 export function OrderButton({ pkg, title, label, icon, tint }: Props) {
   const t = useTranslations('site.order')
-  const price = formatPrice(pkg, useCurrency())
+  const currency = useCurrency()
+  const price = formatPrice(pkg, currency)
+  const [qty, setQty] = useState(1)
+  // While the field is being typed in, its raw text wins over the number.
+  const [qtyDraft, setQtyDraft] = useState<string | null>(null)
+  const total = formatAmount(priceOf(pkg, currency) * qty, currency)
   const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [step, setStep] = useState<1 | 2>(1)
@@ -66,12 +71,23 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
       setStep(1)
       setState('idle')
       setErrors({})
+      changeQty(1)
     }, 300)
   }
 
   function set(k: keyof Fields, v: string) {
     setFields((f) => ({ ...f, [k]: v }))
     if (errors[k]) setErrors((e) => ({ ...e, [k]: undefined }))
+  }
+
+  function changeQty(n: number) {
+    setQty(clampQty(n))
+    setQtyDraft(null)
+  }
+
+  function stepQty(d: number) {
+    setQtyDraft(null)
+    setQty((q) => clampQty(q + d))
   }
 
   function next(e: React.FormEvent) {
@@ -88,7 +104,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
       const res = await fetch('/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ package: pkg, locale, ...fields }),
+        body: JSON.stringify({ package: pkg, quantity: qty, locale, ...fields }),
       })
       const data = await res.json().catch(() => ({}))
       if (res.ok && data.status === 'redirect' && typeof data.url === 'string') {
@@ -117,6 +133,8 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
 
   const waText = t('whatsappMessage', {
     package: title,
+    quantity: qty,
+    total,
     username: fields.username,
     name: fields.name,
     phone: fields.phone,
@@ -156,7 +174,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-bold text-text-primary">{title}</span>
                     <span className="text-sm text-text-secondary">
-                      {t('amount')}: <b className="text-accent-ink">{price}</b>
+                      {t('amount')}: <b className="text-accent-ink">{total}</b>
                     </span>
                   </span>
                   <button
@@ -204,6 +222,60 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
                       <Bell size={18} className="mt-0.5 shrink-0 text-accent-ink" aria-hidden="true" />
                       {t('notice')}
                     </p>
+
+                    <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-bg-secondary px-4 py-3">
+                      <span className="min-w-0">
+                        <label htmlFor={`om-${pkg}-qty`} className="block text-sm font-semibold text-text-primary">
+                          {t('quantity')}
+                        </label>
+                        <span className="block text-xs text-text-muted">
+                          {price} × {qty} = <b className="text-accent-ink">{total}</b>
+                        </span>
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => stepQty(-1)}
+                          disabled={qty <= 1}
+                          aria-label={t('less')}
+                          className="om-step flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary text-text-primary disabled:opacity-40"
+                        >
+                          <Minus size={16} aria-hidden="true" />
+                        </button>
+                        <input
+                          id={`om-${pkg}-qty`}
+                          role="spinbutton"
+                          aria-valuemin={1}
+                          aria-valuemax={MAX_QTY}
+                          aria-valuenow={qty}
+                          inputMode="numeric"
+                          pattern="[0-9]*"
+                          value={qtyDraft ?? String(qty)}
+                          onChange={(e) => {
+                            let v = e.target.value.replace(/\D/g, '').slice(0, 3)
+                            if (Number(v) > MAX_QTY) v = String(MAX_QTY)
+                            setQtyDraft(v)
+                            if (v) setQty(clampQty(Number(v)))
+                          }}
+                          onBlur={() => changeQty(qtyDraft ? Number(qtyDraft) : qty)}
+                          aria-describedby={`om-${pkg}-qty-max`}
+                          className="h-12 w-12 rounded-full bg-brand-strong text-center text-lg font-extrabold text-snow outline-none focus:ring-2 focus:ring-accent-primary/50"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => stepQty(1)}
+                          disabled={qty >= MAX_QTY}
+                          aria-label={t('more')}
+                          className="om-step flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary text-text-primary disabled:opacity-40"
+                        >
+                          <Plus size={16} aria-hidden="true" />
+                        </button>
+                      </span>
+                      <span id={`om-${pkg}-qty-max`} className="sr-only">
+                        {t('quantityHint', { max: MAX_QTY })}
+                      </span>
+                    </div>
+
                     {inputs.map(({ k, label: l, icon: ic, type, auto }, i) => (
                       <div key={k}>
                         <label htmlFor={`om-${pkg}-${k}`} className="sr-only">
@@ -271,6 +343,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
                       <p className="text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">{t('summary')}</p>
                       <dl className="mt-3 space-y-2 text-sm">
                         {[
+                          [t('quantity'), `${qty} × ${price}`],
                           [t('account'), fields.username],
                           [t('name'), fields.name],
                           [t('phone'), fields.phone],
@@ -283,7 +356,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
                         ))}
                         <div className="flex justify-between gap-4 border-t border-line pt-3 text-base">
                           <dt className="font-semibold text-text-primary">{t('amount')}</dt>
-                          <dd className="font-extrabold text-accent-ink">{price}</dd>
+                          <dd className="font-extrabold text-accent-ink">{total}</dd>
                         </div>
                       </dl>
                     </div>
@@ -342,7 +415,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
                         className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-ink px-5 py-4 text-[15px] font-semibold text-snow ring-1 ring-snow/10 hover:bg-[#1B1E24] disabled:opacity-60 dark:bg-brand-strong dark:hover:bg-[#0967B5]"
                       >
                         <Lock size={16} aria-hidden="true" />
-                        {busy ? t('paying') : `${t('pay')} · ${price}`}
+                        {busy ? t('paying') : `${t('pay')} · ${total}`}
                       </button>
                     </div>
                   </div>

@@ -24,8 +24,17 @@ export const countryOf = (headers: Headers) =>
 export const priceOf = (pkg: PackageId, currency: Currency) =>
   currency === 'USD' ? PACKAGES[pkg].usd : PACKAGES[pkg].amount
 
-export const formatPrice = (pkg: PackageId, currency: Currency) =>
-  currency === 'USD' ? `$${PACKAGES[pkg].usd}` : `${PACKAGES[pkg].amount} ₼`
+export const formatAmount = (amount: number, currency: Currency) =>
+  currency === 'USD' ? `$${amount}` : `${amount} ₼`
+
+export const formatPrice = (pkg: PackageId, currency: Currency) => formatAmount(priceOf(pkg, currency), currency)
+
+/** How many of one package fit in a single order. */
+export const MAX_QTY = 100
+
+export const clampQty = (n: number) => (Number.isFinite(n) ? Math.min(MAX_QTY, Math.max(1, Math.round(n))) : 1)
+
+export const isQty = (v: unknown): v is number => Number.isInteger(v) && (v as number) >= 1 && (v as number) <= MAX_QTY
 
 export type PackageId = keyof typeof PACKAGES
 

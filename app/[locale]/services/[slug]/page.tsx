@@ -61,9 +61,9 @@ export default async function ServicePage({ params }: { params: Params }) {
       <section className="container-x grid items-center gap-12 pb-16 pt-6 lg:grid-cols-[1.05fr_1fr] lg:pb-24">
         <div>
           <nav aria-label="breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-text-muted">
-            <Link href={`/${locale}`} className="hover:text-text-primary">{t('home')}</Link>
+            <Link href={`/${locale}`} className="inline-flex min-h-9 items-center hover:text-text-primary">{t('home')}</Link>
             <ChevronRight size={14} aria-hidden="true" />
-            <Link href={`/${locale}/services`} className="hover:text-text-primary">{t('services')}</Link>
+            <Link href={`/${locale}/services`} className="inline-flex min-h-9 items-center hover:text-text-primary">{t('services')}</Link>
             <ChevronRight size={14} aria-hidden="true" />
             <span className="text-text-secondary">{tS(`${id}.title`)}</span>
           </nav>

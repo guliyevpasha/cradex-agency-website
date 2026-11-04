@@ -2603,11 +2603,12 @@
     "tech": {
       "eyebrow": "Technologies",
       "title": "Technologies we use",
-      "text": "We build every project with modern, fast and reliable tools.",
+      "text": "We build websites with modern, reliable technologies, and handle chatbots, content and automation with professional AI tools.",
       "web": "Website",
       "mobile": "Mobile app",
       "marketing": "Digital marketing",
-      "pm": "Project management"
+      "pm": "Project management",
+      "ai": "AI"
     },
     "order": {
       "title": "Complete your order",
@@ -2639,8 +2640,12 @@
       "secure": "Protected by 3D Secure",
       "unavailable": "Online payment is currently being connected. You can complete your order via WhatsApp.",
       "whatsapp": "Complete order via WhatsApp",
-      "whatsappMessage": "Hello, I would like to order {package}.\nAccount: {username}\nName: {name}\nPhone: {phone}\nEmail: {email}",
-      "error": "Something went wrong. Please try again later."
+      "whatsappMessage": "Hello, I would like to order {package}.\nQuantity: {quantity}\nTotal: {total}\nAccount: {username}\nName: {name}\nPhone: {phone}\nEmail: {email}",
+      "error": "Something went wrong. Please try again later.",
+      "quantity": "Number of packages",
+      "quantityHint": "Choose from 1 to {max}",
+      "less": "Decrease",
+      "more": "Increase"
     },
     "legal": {
       "updated": "Last updated: {date}",
@@ -3307,11 +3312,48 @@
       ],
       "founderTitle": "Founder",
       "founderName": "Pasha Guliyev",
-      "founderRole": "Founder and CEO",
-      "founderText": "I founded Cradex Agency so that businesses get real value from technology. I follow every project as if it were my own.",
+      "founderRole": "Founder of Cradex Agency",
+      "founderText": "A software engineer with over 5 years of experience who also works with digital marketing channels. He has launched more than 2000 successful ad campaigns and solves technical problems with social media accounts and websites. He looks at every business from both the technical and the marketing side, and oversees each project personally.",
       "ctaTitle": "Let's build your project together",
       "ctaText": "We will build a free demo of your site. If you like it, we continue.",
-      "cta": "I want a free demo"
+      "cta": "I want a free demo",
+      "founderHeading": "Your project is led by Pasha Guliyev",
+      "founderStats": [
+        {
+          "n": "5+",
+          "l": "years in software engineering"
+        },
+        {
+          "n": "2000+",
+          "l": "successful ad campaigns"
+        },
+        {
+          "n": "70+",
+          "l": "projects"
+        },
+        {
+          "n": "5",
+          "l": "countries of experience"
+        },
+        {
+          "n": "100+",
+          "l": "business owners given technical support"
+        },
+        {
+          "n": "2021",
+          "l": "working with AI since"
+        }
+      ],
+      "founderSkills": [
+        "Web and software development",
+        "Digital marketing",
+        "Meta, TikTok and Google ads",
+        "Technical social media solutions",
+        "Account recovery and security",
+        "AI tools and automation"
+      ],
+      "founderCta": "Send us your project",
+      "founderWork": "See our work"
     },
     "portfolioPage": {
       "metaTitle": "Our Work — Website Projects",

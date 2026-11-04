@@ -6,7 +6,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
-import { countryOf, currencyFor, isPackage, normalizePhone, priceOf, validateOrder } from '@/lib/site/orders'
+import { countryOf, currencyFor, isPackage, isQty, normalizePhone, priceOf, validateOrder } from '@/lib/site/orders'
 import { createPayment } from '@/lib/payments'
 
 const hits = new Map<string, number[]>()
@@ -39,6 +39,8 @@ export async function POST(request: NextRequest) {
 
   const pkg = body.package
   if (!isPackage(pkg)) return NextResponse.json({ error: 'invalid' }, { status: 400 })
+  const quantity = body.quantity ?? 1
+  if (!isQty(quantity)) return NextResponse.json({ error: 'invalid' }, { status: 400 })
 
   const fields = {
     username: String(body.username ?? '').slice(0, 200),
@@ -56,9 +58,9 @@ export async function POST(request: NextRequest) {
 
   const result = await createPayment({
     orderId,
-    amount: priceOf(pkg, currency),
+    amount: priceOf(pkg, currency) * quantity,
     currency,
-    description: `Cradex ${pkg} combo`,
+    description: `Cradex ${pkg} combo x${quantity}`,
     email: fields.email.trim(),
     phone: normalizePhone(fields.phone),
     locale,

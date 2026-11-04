@@ -37,6 +37,16 @@ import {
   siVercel,
   siVuedotjs,
   siAngular,
+  siDeepl,
+  siElevenlabs,
+  siGooglegemini,
+  siHuggingface,
+  siLangchain,
+  siMake,
+  siN8n,
+  siOpenai,
+  siPerplexity,
+  siZapier,
 } from 'simple-icons'
 
 type Icon = { path: string; hex: string }
@@ -61,6 +71,22 @@ export const TECH_GROUPS = {
     t('Sanity', siSanity),
     t('Vercel', siVercel),
     t('Figma', siFigma),
+  ],
+  // AI tools behind our chatbots, content and automations.
+  ai: [
+    t('ChatGPT', siOpenai),
+    t('OpenAI API', siOpenai),
+    t('Gemini', siGooglegemini),
+    t('Perplexity', siPerplexity),
+    t('Midjourney', undefined, '#FFFFFF'),
+    t('ElevenLabs', siElevenlabs),
+    t('Runway', undefined, '#FFFFFF'),
+    t('Hugging Face', siHuggingface),
+    t('LangChain', siLangchain),
+    t('n8n', siN8n),
+    t('Make', siMake),
+    t('Zapier', siZapier),
+    t('DeepL', siDeepl),
   ],
   mobile: [
     t('Flutter', siFlutter),

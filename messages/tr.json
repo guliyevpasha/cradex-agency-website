@@ -2603,11 +2603,12 @@
     "tech": {
       "eyebrow": "Teknolojiler",
       "title": "Kullandığımız teknolojiler",
-      "text": "Her projeyi modern, hızlı ve güvenilir araçlarla geliştiriyoruz.",
+      "text": "Web sitelerini modern ve güvenilir teknolojilerle, chatbot, içerik ve otomasyon işlerini ise profesyonel yapay zekâ araçlarıyla kuruyoruz.",
       "web": "Web sitesi",
       "mobile": "Mobil uygulama",
       "marketing": "Dijital pazarlama",
-      "pm": "Proje yönetimi"
+      "pm": "Proje yönetimi",
+      "ai": "Yapay zekâ"
     },
     "order": {
       "title": "Siparişi tamamlayın",
@@ -2639,8 +2640,12 @@
       "secure": "3D Secure ile korunur",
       "unavailable": "Online ödeme şu anda bağlanma aşamasında. Siparişinizi WhatsApp ile tamamlayabilirsiniz.",
       "whatsapp": "Siparişi WhatsApp ile tamamla",
-      "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nHesap: {username}\nAd: {name}\nTelefon: {phone}\nE-posta: {email}",
-      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+      "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nAdet: {quantity}\nTutar: {total}\nHesap: {username}\nAd: {name}\nTelefon: {phone}\nE-posta: {email}",
+      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      "quantity": "Paket adedi",
+      "quantityHint": "1 ile {max} arasında seçin",
+      "less": "Azalt",
+      "more": "Artır"
     },
     "legal": {
       "updated": "Son güncelleme: {date}",
@@ -3307,11 +3312,48 @@
       ],
       "founderTitle": "Kurucu",
       "founderName": "Paşa Quliyev",
-      "founderRole": "Kurucu ve yönetici",
-      "founderText": "Cradex Agency'yi işletmelerin teknolojiden gerçek fayda görmesi için kurdum. Her projeyi kendi işim gibi takip ediyorum.",
+      "founderRole": "Cradex Agency kurucusu",
+      "founderText": "Yazılım mühendisliğinde 5 yılı aşkın deneyime sahip, aynı zamanda dijital pazarlama kanallarıyla çalışan bir uzman. 2000'den fazla başarılı reklam kampanyası kurdu; sosyal medya ve web siteleriyle ilgili teknik sorunları çözüyor. İşletmelere hem teknik hem pazarlama tarafından birlikte bakıyor ve her projeyi bizzat takip ediyor.",
       "ctaTitle": "Projenizi birlikte kuralım",
       "ctaText": "Sitenizin demosunu ücretsiz hazırlayalım, beğenirseniz devam edelim.",
-      "cta": "Ücretsiz demo istiyorum"
+      "cta": "Ücretsiz demo istiyorum",
+      "founderHeading": "Projenize Paşa Quliyev liderlik ediyor",
+      "founderStats": [
+        {
+          "n": "5+",
+          "l": "yıl yazılım mühendisliği"
+        },
+        {
+          "n": "2000+",
+          "l": "başarılı reklam kampanyası"
+        },
+        {
+          "n": "70+",
+          "l": "proje"
+        },
+        {
+          "n": "5",
+          "l": "farklı ülkede deneyim"
+        },
+        {
+          "n": "100+",
+          "l": "girişimciye teknik destek"
+        },
+        {
+          "n": "2021",
+          "l": "yılından beri yapay zekâ ile"
+        }
+      ],
+      "founderSkills": [
+        "Web ve yazılım geliştirme",
+        "Dijital pazarlama",
+        "Meta, TikTok ve Google reklamları",
+        "Sosyal medya teknik çözümleri",
+        "Hesap kurtarma ve güvenlik",
+        "Yapay zekâ araçları ve otomasyon"
+      ],
+      "founderCta": "Projenizi gönderin",
+      "founderWork": "Projelerimizi inceleyin"
     },
     "portfolioPage": {
       "metaTitle": "Projelerimiz — web sitesi çalışmaları",

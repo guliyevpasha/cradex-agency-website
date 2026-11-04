@@ -1413,3 +1413,9 @@
 @media (prefers-reduced-motion: reduce) {
   .bl-pill i { animation: none; }
 }
+
+.om-step { transition: transform 0.15s ease, box-shadow 0.2s ease, color 0.2s ease; box-shadow: 0 3px 0 rgb(11 13 16 / 0.12); }
+.om-step:not(:disabled):hover { color: #0A74CC; transform: translateY(-1px); }
+.om-step:not(:disabled):active { transform: translateY(2px); box-shadow: 0 1px 0 rgb(11 13 16 / 0.12); }
+
+.founder-photo { box-shadow: 0 0 0 4px rgb(var(--bg-secondary, 245 247 250)), 0 0 0 6px rgb(36 160 255 / 0.55), 0 18px 34px -16px rgb(10 116 204 / 0.8); }
