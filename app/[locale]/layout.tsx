@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     authors: [{ name: 'Paşa Quliyev', url: baseUrl }],
     creator: 'Cradex Agency',
     publisher: 'Cradex Agency',
-    icons: { icon: '/logos/cradex.svg', shortcut: '/logos/cradex.svg', apple: '/logos/cradex.svg' },
+    // app/icon.png, app/apple-icon.png and app/favicon.ico (scripts/make-icons.mjs) are picked up by Next.
     openGraph: {
       type: 'website',
       siteName: 'Cradex Agency',
