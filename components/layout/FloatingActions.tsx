@@ -2,12 +2,13 @@
 /**
  * Floating helpers in the bottom-right corner:
  *  - back-to-top button with a scroll-progress ring
- *  - 3D robot assistant with a "Got a question?" teaser and quick answers
+ *  - 3D robot assistant: quick answers, free questions answered from the
+ *    site FAQs and Studio; unknown ones go to the owner (see app/api/chat)
  * Styles: ".fab-*" and ".bot-*" in app/globals.css.
  * @author Paşa Quliyev — Cradex Agency
  */
 import { useEffect, useRef, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { ArrowUp, Send, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
@@ -15,7 +16,10 @@ import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
 const TEASER_KEY = 'cradex-bot-teaser'
 const QUICK = ['1', '2', '3', '4'] as const
-type Msg = { from: 'bot' | 'me'; text: string }
+const SESSION_KEY = 'cradex-chat-session'
+const PENDING_KEY = 'cradex-chat-pending'
+type Msg = { from: 'bot' | 'me' | 'admin'; text: string }
+type Pending = { id: string; question: string; at: number }
 
 function RobotHead({ small }: { small?: boolean }) {
   return (
@@ -83,11 +87,38 @@ function BackToTop({ label }: { label: string }) {
 export function FloatingActions() {
   const t = useTranslations('site.bot')
   const tTop = useTranslations('site.top')
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [teaser, setTeaser] = useState(false)
   const [typing, setTyping] = useState(false)
   const [msgs, setMsgs] = useState<Msg[]>([])
+  const [draft, setDraft] = useState('')
+  const [pending, setPending] = useState<Pending[]>([])
+  // the question waiting for a contact (only the latest forwarded one)
+  const [contactFor, setContactFor] = useState<string | null>(null)
+  const [contact, setContact] = useState('')
+  const [unread, setUnread] = useState(false)
   const listRef = useRef<HTMLDivElement>(null)
+  const session = useRef('')
+
+  // One anonymous id per browser ties the owner's reply to this chat.
+  useEffect(() => {
+    try {
+      session.current = localStorage.getItem(SESSION_KEY) || crypto.randomUUID()
+      localStorage.setItem(SESSION_KEY, session.current)
+      const saved = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]') as Pending[]
+      // Older than a week: the owner has answered by WhatsApp or e-mail by then.
+      setPending(saved.filter((p) => Date.now() - p.at < 7 * 86_400_000))
+    } catch {
+      session.current = crypto.randomUUID()
+    }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(PENDING_KEY, JSON.stringify(pending))
+    } catch {}
+  }, [pending])
 
   // Show the teaser once per visit, a few seconds after landing.
   useEffect(() => {
@@ -102,7 +133,7 @@ export function FloatingActions() {
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' })
-  }, [msgs, typing])
+  }, [msgs, typing, contactFor])
 
   useEffect(() => {
     if (!open) return
@@ -110,6 +141,32 @@ export function FloatingActions() {
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
   }, [open])
+
+  // Ask for the owner's replies every 10 s while the tab is visible.
+  useEffect(() => {
+    if (pending.length === 0) return
+    let stop = false
+    const check = async () => {
+      if (document.hidden) return
+      for (const p of pending) {
+        try {
+          const res = await fetch(`/api/chat?id=${encodeURIComponent(p.id)}`, { headers: { 'x-chat-session': session.current } })
+          if (!res.ok) continue
+          const data = (await res.json()) as { answer?: string | null }
+          if (stop || !data.answer) continue
+          setMsgs((m) => [...m, { from: 'me', text: p.question }, { from: 'admin', text: data.answer! }])
+          setPending((list) => list.filter((x) => x.id !== p.id))
+          setUnread(true)
+        } catch {}
+      }
+    }
+    check()
+    const timer = setInterval(check, 10_000)
+    return () => {
+      stop = true
+      clearInterval(timer)
+    }
+  }, [pending])
 
   function dismissTeaser() {
     setTeaser(false)
@@ -120,18 +177,71 @@ export function FloatingActions() {
 
   function toggle() {
     dismissTeaser()
+    setUnread(false)
     setOpen((v) => !v)
     if (msgs.length === 0) setMsgs([{ from: 'bot', text: t('hello') }])
   }
 
-  function ask(n: (typeof QUICK)[number]) {
+  const say = (text: string, from: Msg['from'] = 'bot') => setMsgs((m) => [...m, { from, text }])
+
+  function quick(n: (typeof QUICK)[number]) {
     if (typing) return
-    setMsgs((m) => [...m, { from: 'me', text: t(`q${n}`) }])
+    say(t(`q${n}`), 'me')
     setTyping(true)
     setTimeout(() => {
       setTyping(false)
-      setMsgs((m) => [...m, { from: 'bot', text: t(`a${n}`) }])
-    }, 900)
+      say(t(`a${n}`))
+    }, 700)
+  }
+
+  async function send(e: React.FormEvent) {
+    e.preventDefault()
+    const text = draft.trim()
+    if (!text || typing) return
+    if (text.length > 500) return say(t('tooLong'))
+    setDraft('')
+    say(text, 'me')
+    setTyping(true)
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'ask', message: text, locale, session: session.current, page: window.location.pathname }),
+      })
+      const data = (await res.json().catch(() => ({}))) as { type?: string; text?: string; id?: string }
+      if (data.type === 'answer' && data.text) say(data.text)
+      else if (data.type === 'greeting') say(t('greeting'))
+      else if (data.type === 'forwarded' && data.id) {
+        say(t('forwarded'))
+        say(t('askContact'))
+        setPending((list) => [...list, { id: data.id!, question: text, at: Date.now() }])
+        setContactFor(data.id)
+      } else say(t(res.ok ? 'offline' : 'error'))
+    } catch {
+      say(t('error'))
+    } finally {
+      setTyping(false)
+    }
+  }
+
+  async function saveContact(e: React.FormEvent) {
+    e.preventDefault()
+    const value = contact.trim()
+    if (!contactFor || value.length < 5) return
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'contact', id: contactFor, session: session.current, contact: value }),
+      })
+      if (!res.ok) throw new Error()
+      say(value, 'me')
+      say(t('contactThanks'))
+      setContactFor(null)
+      setContact('')
+    } catch {
+      say(t('error'))
+    }
   }
 
   return (
@@ -160,17 +270,20 @@ export function FloatingActions() {
           </button>
         </div>
 
-        <div ref={listRef} className="flex h-[300px] flex-col gap-3 overflow-y-auto bg-bg-secondary px-4 py-5" aria-live="polite">
+        <div ref={listRef} className="flex h-[min(300px,calc(100dvh-520px))] min-h-[140px] flex-col gap-3 overflow-y-auto bg-bg-secondary px-4 py-5" aria-live="polite">
           {msgs.map((m, i) => (
             <p
               key={i}
               className={cn(
-                'max-w-[85%] rounded-2xl px-4 py-2.5 text-[14px] leading-relaxed',
-                m.from === 'bot'
-                  ? 'self-start rounded-bl-md border border-line bg-bg-primary text-text-primary'
-                  : 'self-end rounded-br-md bg-brand-strong text-snow'
+                'max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-2.5 text-[14px] leading-relaxed',
+                m.from === 'me'
+                  ? 'self-end rounded-br-md bg-brand-strong text-snow'
+                  : m.from === 'admin'
+                    ? 'self-start rounded-bl-md border-2 border-brand-strong bg-bg-primary text-text-primary'
+                    : 'self-start rounded-bl-md border border-line bg-bg-primary text-text-primary'
               )}
             >
+              {m.from === 'admin' && <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.1em] text-accent-ink">{t('admin')}</span>}
               {m.text}
             </p>
           ))}
@@ -181,6 +294,22 @@ export function FloatingActions() {
               <i />
             </span>
           )}
+          {contactFor && (
+            <form onSubmit={saveContact} className="flex gap-2 self-stretch">
+              <label className="sr-only" htmlFor="bot-contact">{t('askContact')}</label>
+              <input
+                id="bot-contact"
+                value={contact}
+                onChange={(e) => setContact(e.target.value.slice(0, 120))}
+                placeholder={t('contactPlaceholder')}
+                autoComplete="email"
+                className="min-w-0 flex-1 rounded-xl border border-line bg-bg-primary px-3 py-2 text-[16px] text-text-primary outline-none focus:border-accent-primary sm:text-sm"
+              />
+              <button type="submit" className="shrink-0 rounded-xl bg-brand-strong px-3 text-sm font-semibold text-snow">
+                {t('contactSave')}
+              </button>
+            </form>
+          )}
         </div>
 
         <div className="space-y-3 border-t border-line bg-bg-primary p-4">
@@ -189,7 +318,7 @@ export function FloatingActions() {
               <button
                 key={n}
                 type="button"
-                onClick={() => ask(n)}
+                onClick={() => quick(n)}
                 disabled={typing}
                 className="rounded-full border border-accent-primary/40 bg-accent-primary/10 px-3 py-1.5 text-[13px] font-semibold text-accent-ink transition-colors hover:bg-accent-primary/20 disabled:opacity-50"
               >
@@ -197,15 +326,34 @@ export function FloatingActions() {
               </button>
             ))}
           </div>
+          <form onSubmit={send} className="flex gap-2">
+            <label className="sr-only" htmlFor="bot-input">{t('placeholder')}</label>
+            <input
+              id="bot-input"
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              placeholder={t('placeholder')}
+              maxLength={500}
+              autoComplete="off"
+              className="min-w-0 flex-1 rounded-2xl border border-line bg-bg-secondary px-4 py-3 text-[16px] text-text-primary outline-none transition-colors placeholder:text-text-muted focus:border-accent-primary sm:text-sm"
+            />
+            <button
+              type="submit"
+              disabled={typing || !draft.trim()}
+              aria-label={t('send')}
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-strong text-snow transition-opacity disabled:opacity-50"
+            >
+              <Send size={18} aria-hidden="true" />
+            </button>
+          </form>
           <a
             href={whatsappUrl(t('humanMessage'))}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-2xl bg-brand-strong px-4 py-3 text-sm font-semibold text-snow hover:bg-[#0967B5]"
+            className="flex items-center justify-center gap-2 text-[13px] font-semibold text-accent-ink hover:underline"
           >
             <WhatsAppIcon className="h-4 w-4" />
             {t('human')}
-            <Send size={14} aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -225,7 +373,7 @@ export function FloatingActions() {
         <span className="bot-ring" aria-hidden="true" />
         {!open && <span className="bot-wave" aria-hidden="true" />}
         <span className="bot-core">{open ? <X size={24} className="text-snow" aria-hidden="true" /> : <RobotHead />}</span>
-        {!open && teaser && <span className="bot-badge">1</span>}
+        {!open && (teaser || unread) && <span className="bot-badge">1</span>}
       </button>
     </div>
   )
