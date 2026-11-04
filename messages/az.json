@@ -2500,8 +2500,8 @@
       ]
     },
     "final": {
-      "title": "Bir mesaj yazın, demonuz 2 saata hazır olsun",
-      "text": "Biznesiniz haqqında qısa yazın. Demonu görəndən sonra qərar verirsiniz."
+      "title": "Saytınızın pulsuz demosunu 2 saata hazırlayaq",
+      "text": "Biznesiniz haqqında bir neçə cümlə yazın. Sizin üçün veb sayt demosu hazırlayaq, bəyənsəniz yayımlayaq."
     },
     "mobileNav": {
       "home": "Əsas",
@@ -2603,6 +2603,48 @@
       "a4": "Telefon və WhatsApp: +994 50 778 68 87. Ünvan: Rəşid Behbudov 55, Bakı.",
       "human": "Operatorla WhatsApp-da yazın",
       "humanMessage": "Salam, saytınızdakı köməkçidən yazıram"
+    },
+    "tech": {
+      "eyebrow": "Texnologiyalar",
+      "title": "İstifadə etdiyimiz texnologiyalar",
+      "text": "Hər layihəni müasir, sürətli və etibarlı alətlərlə qururuq.",
+      "web": "Veb sayt",
+      "mobile": "Mobil tətbiq",
+      "marketing": "Rəqəmsal marketinq",
+      "pm": "Layihə idarəetməsi"
+    },
+    "order": {
+      "title": "Sifarişi tamamlayın",
+      "stepDetails": "Məlumatlar",
+      "stepPayment": "Ödəniş",
+      "notice": "Sifariş tamamlanana qədər hesabınızın gizlilik ayarı \"Hər kəsə açıq\" olmalıdır.",
+      "account": "Hesab",
+      "usernameInstagram": "Instagram istifadəçi adı",
+      "usernameTiktok": "TikTok istifadəçi adı",
+      "usernameYoutube": "YouTube kanal linki",
+      "name": "Ad və soyad",
+      "phone": "Telefon nömrəsi",
+      "email": "E-poçt ünvanı",
+      "errRequired": "Bu xananı doldurun",
+      "errUsername": "Düzgün istifadəçi adı daxil edin",
+      "errYoutube": "Düzgün YouTube kanal linki daxil edin",
+      "errName": "Ad və soyadınızı tam yazın",
+      "errPhone": "Düzgün nömrə daxil edin, məsələn +994 50 123 45 67",
+      "errEmail": "Düzgün e-poçt ünvanı daxil edin",
+      "continue": "Ödənişə keç",
+      "back": "Geri qayıt",
+      "close": "Bağla",
+      "summary": "Sifariş",
+      "amount": "Məbləğ",
+      "payTitle": "Təhlükəsiz ödəniş",
+      "payText": "Ödəniş bankın 3D Secure səhifəsində aparılır. Kart məlumatlarınız Cradex saytına daxil edilmir və saxlanmır.",
+      "pay": "Ödəniş et",
+      "paying": "Bank səhifəsi açılır…",
+      "secure": "3D Secure ilə qorunur",
+      "unavailable": "Onlayn ödəniş hazırda qoşulma mərhələsindədir. Sifarişinizi WhatsApp ilə tamamlaya bilərsiniz.",
+      "whatsapp": "Sifarişi WhatsApp ilə tamamla",
+      "whatsappMessage": "Salam, {package} sifariş edirəm.\nHesab: {username}\nAd: {name}\nTelefon: {phone}\nE-poçt: {email}",
+      "error": "Xəta baş verdi. Bir az sonra yenidən cəhd edin."
     }
   }
 }

@@ -10,6 +10,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import type { Article } from '@/types'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 type Post = { slug: string; title: string; image?: string; date?: string }
 
@@ -38,9 +39,10 @@ export async function BlogShowcase({ articles }: { articles: Article[] }) {
       <div className="mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-12">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <Reveal>
-            <h2 className="text-[2.75rem] font-extrabold leading-none tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem]">
-              {t('title')}
-            </h2>
+            <AnimatedHeading
+              className="text-[2.75rem] font-extrabold leading-none tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem]"
+              text={t('title')}
+            />
           </Reveal>
           <Link
             href={`/${locale}/journal`}

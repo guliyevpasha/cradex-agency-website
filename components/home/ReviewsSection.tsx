@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils/cn'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import type { Testimonial } from '@/lib/data/testimonials'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 type Locale = 'az' | 'en' | 'ru' | 'tr'
 type Review = { id: string; name: string; role: string; company: string; photo: string; rating: number; text: string }
@@ -87,7 +88,7 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
           <div className="relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <Reveal>
               <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
-              <h2 className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary">{t('title')}</h2>
+              <AnimatedHeading className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary" text={t('title')} />
 
               <div className="mt-10 flex items-end gap-5">
                 <span className="text-7xl font-extrabold leading-none tracking-tight text-text-primary">{avg.toFixed(1)}</span>

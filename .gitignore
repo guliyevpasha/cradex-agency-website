@@ -47,3 +47,4 @@ cradex-agency-*.json
 
 # local tooling
 /.claude/
+/CLAUDE.md

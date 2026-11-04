@@ -7,8 +7,9 @@ import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
-import { whatsappUrl } from '@/lib/site/navigation'
+import { OrderButton } from './OrderModal'
 import { SectionHeading } from './SectionHeading'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 const COMBOS = [
   { id: 'instagram', icon: Instagram, tint: 'from-[#F58529] via-[#DD2A7B] to-[#8134AF]' },
@@ -80,7 +81,7 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
 
         {/* Social media combo packages */}
         <div className="mt-16">
-          <h3 className="text-center text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl">{t('combo.title')}</h3>
+          <AnimatedHeading as="h3" className="text-center text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl" text={t('combo.title')} />
           <p className="mt-3 text-center text-lg text-text-secondary">{t('combo.text')}</p>
 
           <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -112,14 +113,7 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
                           </li>
                         ))}
                       </ul>
-                      <a
-                        href={whatsappUrl(t('combo.orderMessage', { package: title }))}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="tilt-z2 mt-8 inline-flex items-center justify-center rounded-full bg-text-primary px-5 py-3.5 text-[15px] font-semibold text-bg-primary transition-opacity hover:opacity-85"
-                      >
-                        {t('combo.order')} · {price}
-                      </a>
+                      <OrderButton pkg={id} title={title} price={price} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
                     </article>
                   </Tilt>
                 </li>

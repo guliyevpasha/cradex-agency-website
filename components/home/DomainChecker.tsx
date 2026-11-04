@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 import { Search } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 type Status = 'available' | 'taken' | 'unknown'
 type Result = { domain: string; status: Status }
@@ -52,7 +53,7 @@ export function DomainChecker() {
         <span className="h-1.5 w-1.5 rounded-full bg-current" />
         {t('badge')}
       </span>
-      <h3 className="mt-5 text-display-md font-extrabold tracking-tight text-text-primary">{t('title')}</h3>
+      <AnimatedHeading as="h3" className="mt-5 text-display-md font-extrabold tracking-tight text-text-primary" text={t('title')} />
       <p className="mx-auto mt-3 max-w-xl text-text-secondary">{t('text')}</p>
 
       <div className="mt-10 rounded-[32px] border border-line bg-bg-secondary p-6 text-left shadow-card sm:p-10 lg:p-12">

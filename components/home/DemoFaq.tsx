@@ -10,6 +10,7 @@ import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { Reveal } from '@/components/ui/Reveal'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 type Item = { q: string; a: string }
 
@@ -36,7 +37,7 @@ export function DemoFaq() {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
-            <h2 className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary">{t('title')}</h2>
+            <AnimatedHeading className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary" text={t('title')} />
             <p className="mt-4 max-w-md text-lg leading-relaxed text-text-secondary">{t('subtitle')}</p>
             <Orb />
             <WhatsAppButton size="md" label={t('ask')} message={t('askMessage')} />

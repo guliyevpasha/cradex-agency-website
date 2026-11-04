@@ -11,6 +11,7 @@ import { clientName, cleanSlug, domainOf, isWebsite, shortSummary, shotsFor } fr
 import { WebProjectCard } from '@/components/portfolio/WebProjectCard'
 import { Reveal } from '@/components/ui/Reveal'
 import { ScrollFillText } from '@/components/ui/ScrollFillText'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 const LIMIT = 6
 
@@ -49,9 +50,10 @@ export async function WorkShowcase() {
         <div className="flex flex-col gap-14 lg:gap-24">
           <Reveal className="lg:pt-6">
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
-            <h2 className="mt-3 text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem] 2xl:text-[5.25rem]">
-              {t('title')}
-            </h2>
+            <AnimatedHeading
+              className="mt-3 text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem] 2xl:text-[5.25rem]"
+              text={t('title')}
+            />
             <ScrollFillText
               className="mt-6 max-w-lg text-xl leading-relaxed text-text-primary sm:text-2xl"
               segments={[{ text: t('subtitle') }]}

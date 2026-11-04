@@ -2496,8 +2496,8 @@
       ]
     },
     "final": {
-      "title": "Tek bir mesaj yazın, demonuz 2 saatte hazır olsun",
-      "text": "İşletmeniz hakkında kısaca yazın. Demoyu gördükten sonra karar verirsiniz."
+      "title": "Web sitenizin ücretsiz demosunu 2 saatte hazırlayalım",
+      "text": "İşletmeniz hakkında birkaç cümle yazın. Sizin için web sitesi demosu hazırlayalım, beğenirseniz yayına alalım."
     },
     "mobileNav": {
       "home": "Ana Sayfa",
@@ -2599,6 +2599,48 @@
       "a4": "Telefon ve WhatsApp: +994 50 778 68 87. Adres: Reşid Behbudov Cad. 55, Bakü.",
       "human": "Operatörle WhatsApp'tan yazışın",
       "humanMessage": "Merhaba, sitenizdeki asistandan yazıyorum"
+    },
+    "tech": {
+      "eyebrow": "Teknolojiler",
+      "title": "Kullandığımız teknolojiler",
+      "text": "Her projeyi modern, hızlı ve güvenilir araçlarla geliştiriyoruz.",
+      "web": "Web sitesi",
+      "mobile": "Mobil uygulama",
+      "marketing": "Dijital pazarlama",
+      "pm": "Proje yönetimi"
+    },
+    "order": {
+      "title": "Siparişi tamamlayın",
+      "stepDetails": "Bilgiler",
+      "stepPayment": "Ödeme",
+      "notice": "Sipariş tamamlanana kadar hesabınızın gizlilik ayarı \"Herkese Açık\" olmalıdır.",
+      "account": "Hesap",
+      "usernameInstagram": "Instagram kullanıcı adı",
+      "usernameTiktok": "TikTok kullanıcı adı",
+      "usernameYoutube": "YouTube kanal bağlantısı",
+      "name": "Ad ve soyad",
+      "phone": "Telefon numarası",
+      "email": "E-posta adresi",
+      "errRequired": "Bu alanı doldurun",
+      "errUsername": "Geçerli bir kullanıcı adı girin",
+      "errYoutube": "Geçerli bir YouTube kanal bağlantısı girin",
+      "errName": "Ad ve soyadınızı eksiksiz yazın",
+      "errPhone": "Geçerli bir numara girin, örneğin +994 50 123 45 67",
+      "errEmail": "Geçerli bir e-posta adresi girin",
+      "continue": "Ödemeye geç",
+      "back": "Geri dön",
+      "close": "Kapat",
+      "summary": "Sipariş",
+      "amount": "Tutar",
+      "payTitle": "Güvenli ödeme",
+      "payText": "Ödeme bankanın 3D Secure sayfasında yapılır. Kart bilgileriniz Cradex sitesine girilmez ve saklanmaz.",
+      "pay": "Ödeme yap",
+      "paying": "Banka sayfası açılıyor…",
+      "secure": "3D Secure ile korunur",
+      "unavailable": "Online ödeme şu anda bağlanma aşamasında. Siparişinizi WhatsApp ile tamamlayabilirsiniz.",
+      "whatsapp": "Siparişi WhatsApp ile tamamla",
+      "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nHesap: {username}\nAd: {name}\nTelefon: {phone}\nE-posta: {email}",
+      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin."
     }
   }
 }

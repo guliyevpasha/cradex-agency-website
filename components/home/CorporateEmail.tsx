@@ -11,6 +11,7 @@ import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { DomainChecker } from './DomainChecker'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
 const clean = (s: string, re: RegExp) => s.toLowerCase().replace(re, '').slice(0, 40)
 
@@ -27,7 +28,7 @@ export function CorporateEmail() {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
-            <h2 className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary">{t('title')}</h2>
+            <AnimatedHeading className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary" text={t('title')} />
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-text-secondary">{t('text')}</p>
             <ul className="mt-8 space-y-3">
               {(['p1', 'p2', 'p3'] as const).map((k) => (

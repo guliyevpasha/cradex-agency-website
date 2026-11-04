@@ -2496,8 +2496,8 @@
       ]
     },
     "final": {
-      "title": "Send one message, get your demo in 2 hours",
-      "text": "Tell us briefly about your business. You decide after you see the demo."
+      "title": "Let's build a free demo of your website in 2 hours",
+      "text": "Write a few sentences about your business. We'll prepare a website demo for you, and publish it if you like it."
     },
     "mobileNav": {
       "home": "Home",
@@ -2599,6 +2599,48 @@
       "a4": "Phone and WhatsApp: +994 50 778 68 87. Address: 55 Rashid Behbudov St, Baku.",
       "human": "Chat with an operator on WhatsApp",
       "humanMessage": "Hello, I'm writing from the assistant on your website"
+    },
+    "tech": {
+      "eyebrow": "Technologies",
+      "title": "Technologies we use",
+      "text": "We build every project with modern, fast and reliable tools.",
+      "web": "Website",
+      "mobile": "Mobile app",
+      "marketing": "Digital marketing",
+      "pm": "Project management"
+    },
+    "order": {
+      "title": "Complete your order",
+      "stepDetails": "Details",
+      "stepPayment": "Payment",
+      "notice": "Your account privacy setting must be \"Public\" until the order is completed.",
+      "account": "Account",
+      "usernameInstagram": "Instagram username",
+      "usernameTiktok": "TikTok username",
+      "usernameYoutube": "YouTube channel link",
+      "name": "Full name",
+      "phone": "Phone number",
+      "email": "Email address",
+      "errRequired": "Fill in this field",
+      "errUsername": "Enter a valid username",
+      "errYoutube": "Enter a valid YouTube channel link",
+      "errName": "Enter your full name",
+      "errPhone": "Enter a valid number, for example +994 50 123 45 67",
+      "errEmail": "Enter a valid email address",
+      "continue": "Continue to payment",
+      "back": "Go back",
+      "close": "Close",
+      "summary": "Order",
+      "amount": "Amount",
+      "payTitle": "Secure payment",
+      "payText": "Payment is processed on the bank's 3D Secure page. Your card details are never entered on or stored by the Cradex website.",
+      "pay": "Pay",
+      "paying": "Opening the bank page…",
+      "secure": "Protected by 3D Secure",
+      "unavailable": "Online payment is currently being connected. You can complete your order via WhatsApp.",
+      "whatsapp": "Complete order via WhatsApp",
+      "whatsappMessage": "Hello, I would like to order {package}.\nAccount: {username}\nName: {name}\nPhone: {phone}\nEmail: {email}",
+      "error": "Something went wrong. Please try again later."
     }
   }
 }

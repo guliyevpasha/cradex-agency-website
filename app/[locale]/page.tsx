@@ -15,6 +15,7 @@ import { LogoMarquee } from '@/components/sections/LogoMarquee'
 import { WorkShowcase } from '@/components/home/WorkShowcase'
 import { ReviewsSection } from '@/components/home/ReviewsSection'
 import { BlogShowcase } from '@/components/home/BlogShowcase'
+import { TechStack } from '@/components/home/TechStack'
 import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 import { getRecentBlogPosts } from '@/sanity/lib/queries'
@@ -52,6 +53,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <CorporateEmail />
       <ReviewsSection testimonials={testimonials} />
       <DemoFaq />
+      <TechStack />
       <BlogShowcase articles={recentArticles} />
       <FinalCta />
     </>
