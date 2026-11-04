@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react'
 import { Logo } from '@/components/brand/Logo'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { NAV_ITEMS, SERVICE_IDS } from '@/lib/site/navigation'
+import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS } from '@/lib/site/navigation'
 
 // Maps always gets the Azerbaijani address; it geocodes reliably.
 const MAPS_URL =
@@ -27,6 +27,7 @@ export function Footer() {
   const tNav = useTranslations('site.nav')
   const tS = useTranslations('site.services')
   const tOld = useTranslations('footer')
+  const tLegal = useTranslations('site.legal')
   const year = new Date().getFullYear()
 
   return (
@@ -107,9 +108,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <p className="container-x py-6 text-xs text-text-muted">
-          © {year} Cradex Agency. {t('rights')}
-        </p>
+        <div className="container-x flex flex-col gap-4 py-6 text-xs text-text-muted md:flex-row md:items-center md:justify-between">
+          <p>
+            © {year} Cradex Agency. {t('rights')}
+            <span className="mx-2 hidden md:inline">·</span>
+            <br className="md:hidden" />
+            {tLegal('sellerShort')} · {tLegal('taxId')}
+          </p>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            {LEGAL_PAGES.map((p) => (
+              <li key={p}>
+                <Link href={`/${locale}/${p}`} className="transition-colors hover:text-text-primary">
+                  {tLegal(`${p}.nav`)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   )

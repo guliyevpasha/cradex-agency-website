@@ -4,11 +4,28 @@
  * @author Paşa Quliyev — Cradex Agency
  */
 
+// AZN for buyers in Azerbaijan, USD for everyone else.
 export const PACKAGES = {
-  instagram: { amount: 20 },
-  tiktok: { amount: 20 },
-  youtube: { amount: 35 },
+  instagram: { amount: 20, usd: 15 },
+  tiktok: { amount: 20, usd: 15 },
+  youtube: { amount: 35, usd: 25 },
 } as const
+
+export type Currency = 'AZN' | 'USD'
+
+/** Unknown country (local dev, no geo header) counts as Azerbaijan. */
+export const currencyFor = (country: string | null | undefined): Currency =>
+  !country || country.toUpperCase() === 'AZ' ? 'AZN' : 'USD'
+
+/** Country set by the hosting edge (Vercel or Cloudflare). */
+export const countryOf = (headers: Headers) =>
+  headers.get('x-vercel-ip-country') ?? headers.get('cf-ipcountry')
+
+export const priceOf = (pkg: PackageId, currency: Currency) =>
+  currency === 'USD' ? PACKAGES[pkg].usd : PACKAGES[pkg].amount
+
+export const formatPrice = (pkg: PackageId, currency: Currency) =>
+  currency === 'USD' ? `$${PACKAGES[pkg].usd}` : `${PACKAGES[pkg].amount} ₼`
 
 export type PackageId = keyof typeof PACKAGES
 

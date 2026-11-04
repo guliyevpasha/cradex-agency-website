@@ -2641,6 +2641,190 @@
       "whatsapp": "Siparişi WhatsApp ile tamamla",
       "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nHesap: {username}\nAd: {name}\nTelefon: {phone}\nE-posta: {email}",
       "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+    },
+    "legal": {
+      "updated": "Son güncelleme: {date}",
+      "footerTitle": "Hukuki bilgiler",
+      "sellerShort": "Paşa Quliyev Şahıs İşletmesi",
+      "taxId": "VKN (VÖEN): 5800452582",
+      "terms": {
+        "nav": "Kullanım Koşulları",
+        "title": "Kullanım Koşulları ve Kamuya Açık Teklif",
+        "intro": "Bu belge, cradexagency.com sitesinde sunulan hizmet ve ürünlerin satış koşullarını belirler. Sitede sipariş vererek veya ödeme yaparak bu koşulları kabul etmiş olursunuz.",
+        "sections": [
+          {
+            "h": "1. Taraflar",
+            "p": [
+              "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582. Adres: Reşid Behbudov Cad. 55, Bakü, Azerbaycan. Telefon: +994 50 778 68 87. E-posta: info@cradexagency.com.",
+              "Alıcı: sitede sipariş veren veya ödeme yapan gerçek veya tüzel kişi."
+            ]
+          },
+          {
+            "h": "2. Hizmet ve ürünler",
+            "p": [
+              "Satıcı; web sitesi ve mobil uygulama geliştirme, SEO ve GEO, dijital reklam, teknik hizmet, chatbot ve sosyal medya kombo paketleri sunar.",
+              "Sosyal medya kombo paketleri: Instagram Kombo Paketi, TikTok Kombo Paketi ve YouTube Kombo Paketi. Her paketin içeriği sitede paket kartında belirtilir."
+            ]
+          },
+          {
+            "h": "3. Fiyatlar",
+            "p": [
+              "Azerbaycan'dan yapılan ödemeler için fiyatlar manat (AZN) cinsinden gösterilir: Instagram Kombo Paketi 20 ₼, TikTok Kombo Paketi 20 ₼, YouTube Kombo Paketi 35 ₼.",
+              "Azerbaycan dışındaki alıcılar için fiyatlar ABD doları (USD) cinsinden gösterilir: 15 $, 15 $ ve 25 $.",
+              "Web sitesi, mobil uygulama ve diğer özel projelerin fiyatı, projenin kapsamına göre yazılı teklifte belirlenir. Fiyatlara tüm hizmet bedelleri dahildir, gizli ücret yoktur."
+            ]
+          },
+          {
+            "h": "4. Sipariş ve ödeme",
+            "p": [
+              "Alıcı, sipariş formunda hesap bilgilerini ve iletişim bilgilerini doğru belirtmelidir. Satıcı, hatalı bilgiden kaynaklanan gecikmelerden sorumlu değildir.",
+              "Ödeme, banka kartıyla bankanın güvenli 3D Secure sayfasında yapılır. Kart bilgileri Satıcının sitesine girilmez ve saklanmaz.",
+              "Ödemenin onaylanmasından sonra sipariş kabul edilmiş sayılır ve Alıcıya e-posta veya WhatsApp ile bildirim gönderilir."
+            ]
+          },
+          {
+            "h": "5. Hizmetin sunulması",
+            "p": [
+              "Kombo paketlerin uygulanması, ödemenin onaylanmasından sonra 24 saat içinde başlar ve genellikle 1–7 gün içinde tamamen teslim edilir.",
+              "Uygulama süresince Alıcının hesabının gizlilik ayarı \"Herkese açık\" olmalıdır. Hesap kapalı veya gizli olursa uygulama durdurulur.",
+              "Paket içeriğindeki göstergelerde azalma olursa, Satıcı bunları 7/24 telafi kapsamında ücretsiz olarak geri yükler.",
+              "Özel projelerin uygulama süresi ve aşamaları yazılı teklifte belirtilir."
+            ]
+          },
+          {
+            "h": "6. Tarafların yükümlülükleri",
+            "p": [
+              "Satıcı, hizmeti zamanında ve tanıma uygun şekilde sunmayı ve Alıcının bilgilerini korumayı taahhüt eder.",
+              "Alıcı, platformların (Instagram, TikTok, YouTube) kurallarına aykırı içerik için hizmet sipariş etmemeyi taahhüt eder. Bu durumda Satıcı siparişi iptal etme hakkına sahiptir."
+            ]
+          },
+          {
+            "h": "7. Sorumluluk",
+            "p": [
+              "Satıcı, üçüncü taraf platformların (Meta, TikTok, Google) kurallarında ve algoritmalarında yapılan değişikliklerden sorumlu değildir.",
+              "Tarafların iradesi dışındaki haller (mücbir sebep) yükümlülüklerin yerine getirilme süresini uzatır."
+            ]
+          },
+          {
+            "h": "8. Uyuşmazlıkların çözümü",
+            "p": [
+              "Uyuşmazlıklar öncelikle müzakere yoluyla çözülür. Uzlaşma sağlanamazsa uyuşmazlıklar Azerbaycan Cumhuriyeti mevzuatına uygun olarak mahkemede görülür."
+            ]
+          },
+          {
+            "h": "9. İletişim",
+            "p": [
+              "Sorularınız için: +994 50 778 68 87 (telefon ve WhatsApp), info@cradexagency.com."
+            ]
+          }
+        ]
+      },
+      "privacy": {
+        "nav": "Gizlilik Politikası",
+        "title": "Gizlilik Politikası",
+        "intro": "Bu politika, cradexagency.com sitesinde topladığımız kişisel verileri, bunları nasıl kullandığımızı ve nasıl koruduğumuzu açıklar. Veriler, Azerbaycan Cumhuriyeti Kişisel Veriler Hakkında Kanunu'na uygun olarak işlenir.",
+        "sections": [
+          {
+            "h": "1. Veri sorumlusu",
+            "p": [
+              "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582. Adres: Reşid Behbudov Cad. 55, Bakü, Azerbaycan. Telefon: +994 50 778 68 87."
+            ]
+          },
+          {
+            "h": "2. Hangi verileri topluyoruz",
+            "p": [
+              "Sipariş ve başvuru sırasında: ad ve soyad, telefon numarası, e-posta adresi, sosyal medya hesabının adı veya bağlantısı.",
+              "Siteyi kullanırken: tarayıcı türü, cihaz, yaklaşık ülke ve şehir, görüntülenen sayfalar (Google Analytics aracılığıyla, anonim biçimde).",
+              "Kart bilgilerini toplamıyoruz: ödeme bankanın sayfasında yapılır."
+            ]
+          },
+          {
+            "h": "3. Verilerin kullanım amacı",
+            "p": [
+              "Siparişi yerine getirmek, sizinle iletişim kurmak, ödemeyi onaylamak, hizmet kalitesini ve siteyi iyileştirmek.",
+              "Verilerinizi reklam amacıyla üçüncü taraflara satmıyoruz."
+            ]
+          },
+          {
+            "h": "4. Üçüncü taraflar",
+            "p": [
+              "Veriler yalnızca hizmetin sunulması için gerekli taraflarla paylaşılır: ödeme bankası, barındırma (Vercel), içerik yönetim sistemi (Sanity), analitik (Google Analytics), WhatsApp."
+            ]
+          },
+          {
+            "h": "5. Saklama süresi",
+            "p": [
+              "Sipariş verileri mevzuatın öngördüğü süre boyunca, diğer veriler ise amaca ulaşıldıktan sonra en geç 2 yıl saklanır."
+            ]
+          },
+          {
+            "h": "6. Güvenlik",
+            "p": [
+              "Site HTTPS ile şifrelenir, verilere erişim sınırlandırılmıştır ve düzenli güvenlik kontrolleri yapılır."
+            ]
+          },
+          {
+            "h": "7. Çerezler (cookies)",
+            "p": [
+              "Site, dil ve açık/koyu mod tercihinizi hatırlamak ve anonim istatistik toplamak için çerezleri ve yerel depolamayı kullanır. Tarayıcı ayarlarından çerezleri silebilir veya engelleyebilirsiniz."
+            ]
+          },
+          {
+            "h": "8. Haklarınız",
+            "p": [
+              "Verilerinize erişme, bunları düzeltme veya silinmesini talep etme hakkına sahipsiniz. Bunun için info@cradexagency.com adresine yazın."
+            ]
+          }
+        ]
+      },
+      "refund": {
+        "nav": "İade Politikası",
+        "title": "İade Politikası",
+        "intro": "Bu politika, ödemenin hangi hallerde ve nasıl iade edileceğini belirler.",
+        "sections": [
+          {
+            "h": "1. Tam iade",
+            "p": [
+              "Siparişin uygulanmasına başlanmamışsa ödemenin %100'ü iade edilir. Bunun için ödemeden sonra 24 saat içinde bize yazmanız yeterlidir."
+            ]
+          },
+          {
+            "h": "2. Kısmi iade",
+            "p": [
+              "Uygulama başlamışsa, paketin henüz teslim edilmeyen kısmına karşılık gelen tutar iade edilir.",
+              "Hizmet bizden kaynaklanan nedenlerle 7 gün içinde tamamen teslim edilmezse, teslim edilmeyen kısmın bedeli iade edilir."
+            ]
+          },
+          {
+            "h": "3. İade yapılmayan haller",
+            "p": [
+              "Paket tamamen teslim edilmişse.",
+              "Alıcı hatalı hesap bilgisi vermişse veya uygulama sırasında hesabı gizlemiş, kapatmış ya da kullanıcı adını değiştirmişse.",
+              "Hesap, platform kurallarının ihlali nedeniyle kapatılmışsa."
+            ]
+          },
+          {
+            "h": "4. Telafi (7/24)",
+            "p": [
+              "Teslim edilen göstergelerde azalma olursa, bunlar ücretsiz olarak geri yüklenir. Telafi, iadenin alternatifi değil, ek bir güvencedir."
+            ]
+          },
+          {
+            "h": "5. Özel projeler",
+            "p": [
+              "Web sitesi, mobil uygulama ve diğer özel projeler için iade koşulları, sözleşmede veya yazılı teklifte aşamalara göre belirlenir. Ücretsiz demo için herhangi bir ödeme alınmaz."
+            ]
+          },
+          {
+            "h": "6. Nasıl başvurulur",
+            "p": [
+              "WhatsApp: +994 50 778 68 87 veya info@cradexagency.com. Başvuruda sipariş tarihini, paketi ve ödemenin yapıldığı kartın son 4 hanesini belirtin.",
+              "Onaylanan iade, ödemenin yapıldığı karta 5–10 iş günü içinde aktarılır. Süre bankaya bağlıdır."
+            ]
+          }
+        ]
+      },
+      "seller": "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582"
     }
   }
 }

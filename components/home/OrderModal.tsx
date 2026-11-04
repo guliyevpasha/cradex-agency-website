@@ -12,7 +12,8 @@ import { useLocale, useTranslations } from 'next-intl'
 import { ArrowLeft, AtSign, Bell, Lock, Mail, Phone, ShieldCheck, User, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
-import { PACKAGES, validateOrder, type FieldError, type PackageId } from '@/lib/site/orders'
+import { formatPrice, validateOrder, type FieldError, type PackageId } from '@/lib/site/orders'
+import { useCurrency } from '@/lib/site/useCurrency'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
 type Fields = { username: string; name: string; phone: string; email: string }
@@ -27,10 +28,11 @@ const ERR_KEY: Record<FieldError, string> = {
   email: 'errEmail',
 }
 
-type Props = { pkg: PackageId; title: string; price: string; label: string; icon: React.ReactNode; tint: string }
+type Props = { pkg: PackageId; title: string; label: string; icon: React.ReactNode; tint: string }
 
-export function OrderButton({ pkg, title, price, label, icon, tint }: Props) {
+export function OrderButton({ pkg, title, label, icon, tint }: Props) {
   const t = useTranslations('site.order')
+  const price = formatPrice(pkg, useCurrency())
   const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [step, setStep] = useState<1 | 2>(1)
@@ -154,7 +156,7 @@ export function OrderButton({ pkg, title, price, label, icon, tint }: Props) {
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-bold text-text-primary">{title}</span>
                     <span className="text-sm text-text-secondary">
-                      {t('amount')}: <b className="text-accent-ink">{PACKAGES[pkg].amount}.00 ₼</b>
+                      {t('amount')}: <b className="text-accent-ink">{price}</b>
                     </span>
                   </span>
                   <button
@@ -281,7 +283,7 @@ export function OrderButton({ pkg, title, price, label, icon, tint }: Props) {
                         ))}
                         <div className="flex justify-between gap-4 border-t border-line pt-3 text-base">
                           <dt className="font-semibold text-text-primary">{t('amount')}</dt>
-                          <dd className="font-extrabold text-accent-ink">{PACKAGES[pkg].amount}.00 ₼</dd>
+                          <dd className="font-extrabold text-accent-ink">{price}</dd>
                         </div>
                       </dl>
                     </div>
@@ -340,7 +342,7 @@ export function OrderButton({ pkg, title, price, label, icon, tint }: Props) {
                         className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-ink px-5 py-4 text-[15px] font-semibold text-snow ring-1 ring-snow/10 hover:bg-[#1B1E24] disabled:opacity-60 dark:bg-brand-strong dark:hover:bg-[#0967B5]"
                       >
                         <Lock size={16} aria-hidden="true" />
-                        {busy ? t('paying') : `${t('pay')} · ${PACKAGES[pkg].amount} ₼`}
+                        {busy ? t('paying') : `${t('pay')} · ${price}`}
                       </button>
                     </div>
                   </div>

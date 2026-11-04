@@ -8,6 +8,7 @@ import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import { OrderButton } from './OrderModal'
+import { PriceTag } from './PriceTag'
 import { SectionHeading } from './SectionHeading'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
@@ -87,7 +88,6 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
           <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {COMBOS.map(({ id, icon: Icon, tint }) => {
               const title = t(`combo.${id}Title`)
-              const price = t(`combo.${id}Price`)
               const features = t.raw(`combo.${id}Features`) as string[]
               return (
                 <li key={id} id={id} className="scroll-mt-28">
@@ -101,7 +101,7 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
                         <span>
                           <span className="block text-lg font-bold text-text-primary">{title}</span>
                           <span className="mt-1 inline-flex rounded-full bg-[#16A34A]/10 px-2.5 py-0.5 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
-                            {t('combo.included')} · {price}
+                            {t('combo.included')} · <PriceTag pkg={id} />
                           </span>
                         </span>
                       </div>
@@ -113,7 +113,7 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
                           </li>
                         ))}
                       </ul>
-                      <OrderButton pkg={id} title={title} price={price} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
+                      <OrderButton pkg={id} title={title} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
                     </article>
                   </Tilt>
                 </li>

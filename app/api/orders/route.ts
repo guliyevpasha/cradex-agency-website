@@ -6,7 +6,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
-import { PACKAGES, isPackage, normalizePhone, validateOrder } from '@/lib/site/orders'
+import { countryOf, currencyFor, isPackage, normalizePhone, priceOf, validateOrder } from '@/lib/site/orders'
 import { createPayment } from '@/lib/payments'
 
 const hits = new Map<string, number[]>()
@@ -51,10 +51,13 @@ export async function POST(request: NextRequest) {
 
   const locale = ['az', 'en', 'ru', 'tr'].includes(String(body.locale)) ? String(body.locale) : 'az'
   const orderId = randomUUID()
+  // Currency follows the buyer's country, never the request body.
+  const currency = currencyFor(countryOf(request.headers))
 
   const result = await createPayment({
     orderId,
-    amount: PACKAGES[pkg].amount,
+    amount: priceOf(pkg, currency),
+    currency,
     description: `Cradex ${pkg} combo`,
     email: fields.email.trim(),
     phone: normalizePhone(fields.phone),

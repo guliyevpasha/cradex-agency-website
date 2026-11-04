@@ -2641,6 +2641,190 @@
       "whatsapp": "Complete order via WhatsApp",
       "whatsappMessage": "Hello, I would like to order {package}.\nAccount: {username}\nName: {name}\nPhone: {phone}\nEmail: {email}",
       "error": "Something went wrong. Please try again later."
+    },
+    "legal": {
+      "updated": "Last updated: {date}",
+      "footerTitle": "Legal information",
+      "sellerShort": "SP Pasha Guliyev",
+      "taxId": "TIN (VÖEN): 5800452582",
+      "terms": {
+        "nav": "Terms of Use",
+        "title": "Terms of Use and Public Offer",
+        "intro": "This document sets out the terms of sale of the services and products offered on cradexagency.com. By placing an order or making a payment on the website, you accept these terms.",
+        "sections": [
+          {
+            "h": "1. Parties",
+            "p": [
+              "Sole proprietor Pasha Guliyev (Paşa Quliyev) (Cradex Agency brand), TIN (VÖEN) 5800452582. Address: 55 Rashid Behbudov St, Baku, Azerbaijan. Phone: +994 50 778 68 87. Email: info@cradexagency.com.",
+              "Buyer: an individual or legal entity that places an order or makes a payment on the website."
+            ]
+          },
+          {
+            "h": "2. Services and products",
+            "p": [
+              "The Seller provides website and mobile app development, SEO and GEO, digital advertising, technical support, chatbots and social media combo packages.",
+              "Social media combo packages: Instagram Combo Package, TikTok Combo Package and YouTube Combo Package. The contents of each package are shown on the package card on the website."
+            ]
+          },
+          {
+            "h": "3. Prices",
+            "p": [
+              "For payments made from Azerbaijan, prices are shown in manat (AZN): Instagram Combo Package 20 ₼, TikTok Combo Package 20 ₼, YouTube Combo Package 35 ₼.",
+              "For Buyers outside Azerbaijan, prices are shown in US dollars (USD): 15 $, 15 $ and 25 $.",
+              "The price of websites, mobile apps and other custom projects is set in a written proposal according to the scope of the project. Prices include all service fees; there are no hidden charges."
+            ]
+          },
+          {
+            "h": "4. Orders and payment",
+            "p": [
+              "The Buyer must provide accurate account details and contact information in the order form. The Seller is not liable for delays caused by incorrect information.",
+              "Payment is made by bank card on the bank's secure 3D Secure page. Card details are not entered into or stored on the Seller's website.",
+              "Once payment is confirmed, the order is deemed accepted and a notification is sent to the Buyer by email or WhatsApp."
+            ]
+          },
+          {
+            "h": "5. Service delivery",
+            "p": [
+              "Fulfilment of combo packages begins within 24 hours after payment is confirmed and is usually completed within 1–7 days.",
+              "During fulfilment, the privacy setting of the Buyer's account must be \"Public\". If the account is private or closed, fulfilment is suspended.",
+              "If any metrics included in the package decrease, the Seller restores them free of charge under the 7/24 compensation guarantee.",
+              "The timeline and stages of custom projects are specified in the written proposal."
+            ]
+          },
+          {
+            "h": "6. Obligations of the parties",
+            "p": [
+              "The Seller undertakes to deliver the service on time and as described, and to protect the Buyer's data.",
+              "The Buyer undertakes not to order services for content that violates the rules of the platforms (Instagram, TikTok, YouTube). In that case, the Seller has the right to cancel the order."
+            ]
+          },
+          {
+            "h": "7. Liability",
+            "p": [
+              "The Seller is not liable for changes to the rules and algorithms of third-party platforms (Meta, TikTok, Google).",
+              "Circumstances beyond the control of the parties (force majeure) extend the time for performance of obligations."
+            ]
+          },
+          {
+            "h": "8. Dispute resolution",
+            "p": [
+              "Disputes are resolved first through negotiation. If no agreement is reached, disputes shall be heard in court in accordance with the legislation of the Republic of Azerbaijan."
+            ]
+          },
+          {
+            "h": "9. Contact",
+            "p": [
+              "For questions: +994 50 778 68 87 (phone and WhatsApp), info@cradexagency.com."
+            ]
+          }
+        ]
+      },
+      "privacy": {
+        "nav": "Privacy Policy",
+        "title": "Privacy Policy",
+        "intro": "This policy explains what personal data we collect on cradexagency.com, how we use it and how we protect it. Data is processed in accordance with the Law of the Republic of Azerbaijan on Personal Data.",
+        "sections": [
+          {
+            "h": "1. Data controller",
+            "p": [
+              "Sole proprietor Pasha Guliyev (Paşa Quliyev) (Cradex Agency brand), TIN (VÖEN) 5800452582. Address: 55 Rashid Behbudov St, Baku, Azerbaijan. Phone: +994 50 778 68 87."
+            ]
+          },
+          {
+            "h": "2. What data we collect",
+            "p": [
+              "When you place an order or submit a request: first and last name, phone number, email address, social media account name or link.",
+              "When you use the website: browser type, device, approximate country and city, pages viewed (through Google Analytics, in anonymous form).",
+              "We do not collect card details: payment is made on the bank's page."
+            ]
+          },
+          {
+            "h": "3. Purpose of data use",
+            "p": [
+              "To fulfil orders, contact you, confirm payments, and improve service quality and the website.",
+              "We do not sell your data to third parties for advertising purposes."
+            ]
+          },
+          {
+            "h": "4. Third parties",
+            "p": [
+              "Data is shared only with parties necessary to provide the service: the payment bank, hosting (Vercel), content management system (Sanity), analytics (Google Analytics), WhatsApp."
+            ]
+          },
+          {
+            "h": "5. Retention period",
+            "p": [
+              "Order data is retained for the period required by law; other data is retained for no longer than 2 years after the purpose has been achieved."
+            ]
+          },
+          {
+            "h": "6. Security",
+            "p": [
+              "The website is encrypted with HTTPS, access to data is restricted, and regular security checks are carried out."
+            ]
+          },
+          {
+            "h": "7. Cookies",
+            "p": [
+              "The website uses cookies and local storage to remember your language and light/dark mode choice and to collect anonymous statistics. You can delete or block cookies in your browser settings."
+            ]
+          },
+          {
+            "h": "8. Your rights",
+            "p": [
+              "You have the right to access your data, correct it or request its deletion. To do so, write to info@cradexagency.com."
+            ]
+          }
+        ]
+      },
+      "refund": {
+        "nav": "Refund Policy",
+        "title": "Refund Policy",
+        "intro": "This policy defines when and how payments are refunded.",
+        "sections": [
+          {
+            "h": "1. Full refund",
+            "p": [
+              "If fulfilment of the order has not started, 100% of the payment is refunded. To request it, simply write to us within 24 hours after payment."
+            ]
+          },
+          {
+            "h": "2. Partial refund",
+            "p": [
+              "If fulfilment has started, the amount corresponding to the part of the package not yet delivered is refunded.",
+              "If the service is not fully delivered within 7 days for reasons attributable to us, the value of the undelivered part is refunded."
+            ]
+          },
+          {
+            "h": "3. Non-refundable cases",
+            "p": [
+              "The package has been fully delivered.",
+              "The Buyer provided incorrect account details, or made the account private, closed it or changed the username during fulfilment.",
+              "The account was closed for violating platform rules."
+            ]
+          },
+          {
+            "h": "4. Compensation (7/24)",
+            "p": [
+              "If delivered metrics decrease, they are restored free of charge. Compensation is not an alternative to a refund; it is an additional guarantee."
+            ]
+          },
+          {
+            "h": "5. Custom projects",
+            "p": [
+              "For websites, mobile apps and other custom projects, refund terms are set by stage in the contract or written proposal. No payment is charged for a free demo."
+            ]
+          },
+          {
+            "h": "6. How to submit a request",
+            "p": [
+              "WhatsApp: +994 50 778 68 87 or info@cradexagency.com. In your request, state the order date, the package and the last 4 digits of the card used for payment.",
+              "An approved refund is transferred to the card used for payment within 5–10 business days. The timing depends on the bank."
+            ]
+          }
+        ]
+      },
+      "seller": "Sole proprietor Pasha Guliyev (Paşa Quliyev), Cradex Agency brand, TIN (VÖEN) 5800452582"
     }
   }
 }

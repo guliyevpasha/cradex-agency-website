@@ -52,3 +52,6 @@ export function isActive(pathname: string, locale: string, href: string, exact =
   if (exact) return pathname === full || pathname === `${full}/`
   return pathname === full || pathname.startsWith(`${full}/`)
 }
+
+export const LEGAL_PAGES = ['terms', 'privacy', 'refund'] as const
+export type LegalPageId = (typeof LEGAL_PAGES)[number]

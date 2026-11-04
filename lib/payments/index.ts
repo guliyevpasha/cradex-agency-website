@@ -18,7 +18,8 @@
 
 export type PaymentRequest = {
   orderId: string
-  amount: number // AZN
+  amount: number
+  currency: 'AZN' | 'USD'
   description: string
   email: string
   phone: string
