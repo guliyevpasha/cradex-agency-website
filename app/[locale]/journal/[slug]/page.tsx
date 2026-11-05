@@ -58,6 +58,7 @@ export default async function ArticlePage({
 
 function ArticleContent({ article }: { article: Article }) {
   const t = useTranslations('journal')
+  const tNav = useTranslations('site.nav')
   const locale = useLocale()
 
   const formattedDate = formatArticleDate(article.publishedAt)
@@ -84,7 +85,7 @@ function ArticleContent({ article }: { article: Article }) {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-text-muted mb-8">
-            <Link href={`/${locale}`} className="hover:text-text-primary transition-colors">Ana Səhifə</Link>
+            <Link href={`/${locale}`} className="hover:text-text-primary transition-colors">{tNav('home')}</Link>
             <ChevronRight size={14} />
             <Link href={`/${locale}/journal`} className="hover:text-text-primary transition-colors">{t('title')}</Link>
             <ChevronRight size={14} />

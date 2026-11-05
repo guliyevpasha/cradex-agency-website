@@ -1175,6 +1175,7 @@
     "info": {
       "title": "Contact Information",
       "address": "Address",
+      "addressValue": "55 Rashid Behbudov St, Baku, Azerbaijan",
       "phone": "Phone",
       "email": "Email",
       "whatsapp": "WhatsApp",

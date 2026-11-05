@@ -100,6 +100,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
               <Badge variant="accent" className="mb-6">
                 {t(`categories.${item.serviceCategory}` as any)}
               </Badge>
+              <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-[-0.03em] text-text-primary sm:text-5xl">{title}</h1>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">{description}</p>
 
               {/* Meta Info Grid - Compact 2-column layout */}

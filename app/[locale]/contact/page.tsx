@@ -30,7 +30,7 @@ function ContactContent() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '994507786887'
 
   const contactInfo = [
-    { icon: MapPin, label: t('info.address'), value: 'Bakı, Azərbaycan' },
+    { icon: MapPin, label: t('info.address'), value: t('info.addressValue') },
     { icon: Phone, label: t('info.phone'), value: '+994 50 778 68 87', href: 'tel:+994507786887' },
     { icon: Mail, label: t('info.email'), value: 'info@cradexagency.com', href: 'mailto:info@cradexagency.com' },
     { icon: Clock, label: t('info.workingHours'), value: t('info.workingHoursValue') },

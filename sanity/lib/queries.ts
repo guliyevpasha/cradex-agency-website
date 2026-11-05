@@ -16,7 +16,7 @@ export async function getAllBlogPosts(locale: string = 'az'): Promise<Article[]>
     "readingTime": readingTime,
     "image": mainImage.asset->url
   }`
-  
+
   return toArticles(await client.fetch(query))
 }
 
@@ -33,7 +33,7 @@ export async function getBlogPostBySlug(slug: string, locale: string = 'az') {
     "readingTime": readingTime,
     "image": mainImage.asset->url
   }`
-  
+
   return toArticle(await client.fetch(query, { slug }))
 }
 
@@ -52,7 +52,7 @@ export async function getBlogPostsByCategory(
     "readingTime": readingTime,
     "image": mainImage.asset->url
   }`
-  
+
   return toArticles(await client.fetch(query, { category }))
 }
 
@@ -64,9 +64,9 @@ export async function getPaginatedBlogPosts(
 ) {
   const start = (page - 1) * perPage
   const end = start + perPage
-  
+
   const categoryFilter = category ? `&& category == "${category}"` : ''
-  
+
   const query = `{
     "posts": *[_type == "blog" ${categoryFilter}] | order(publishedAt desc) [$start...$end] {
       "id": _id,
@@ -81,15 +81,11 @@ export async function getPaginatedBlogPosts(
     },
     "total": count(*[_type == "blog" ${categoryFilter}])
   }`
-  
-  console.log('[Sanity] Executing query:', { page, perPage, category, locale, start, end })
-  
+
   const result = await client.fetch(query, { start, end })
-  
+
   const total = result?.total ?? 0
-  
-  console.log('[Sanity] Query result:', { posts: result.posts?.length || 0, total })
-  
+
   return {
     articles: toArticles(result?.posts),
     total,
@@ -109,7 +105,7 @@ export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az
     "readingTime": readingTime,
     "image": mainImage.asset->url
   }`
-  
+
   return toArticles(await client.fetch(query))
 }
 
@@ -132,7 +128,7 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
     "completedAt": completedAt,
     "featured": featured
   }`
-  
+
   const result = await client.fetch(query)
   return toPortfolioItems(result)
 }
@@ -184,13 +180,13 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "completedAt": completedAt,
     "featured": featured
   }`
-  
+
   return toPortfolioItem(await client.fetch(query, { slug }))
 }
 
 export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'): Promise<PortfolioItem[]> {
   const limitClause = limit ? `[0...${limit}]` : ''
-  
+
   const query = `*[_type == "portfolio" && featured == true] | order(completedAt desc) ${limitClause} {
     "id": _id,
     "slug": slug.current,
@@ -207,7 +203,7 @@ export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'
     "completedAt": completedAt,
     "featured": featured
   }`
-  
+
   return toPortfolioItems(await client.fetch(query))
 }
 
@@ -231,7 +227,7 @@ export async function getPortfolioByCategory(
     "completedAt": completedAt,
     "featured": featured
   }`
-  
+
   return toPortfolioItems(await client.fetch(query, { category }))
 }
 
@@ -253,7 +249,7 @@ export async function getAllPartners(): Promise<Partner[]> {
     "website": website,
     "order": order
   }`
-  
+
   return client.fetch(query)
 }
 

@@ -17,22 +17,15 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
 }
 
 export async function getPortfolioBySlug(slug: string, locale: string = 'az'): Promise<PortfolioItem | null> {
-  console.log('[Portfolio Data] getPortfolioBySlug called with:', { slug, locale, USE_SANITY })
-  
   if (USE_SANITY) {
     try {
-      const result = await getSanityPortfolioBySlug(slug, locale)
-      console.log('[Portfolio Data] Sanity result:', result ? 'Found' : 'Not found')
-      return result
+      return await getSanityPortfolioBySlug(slug, locale)
     } catch (error) {
       console.error('Failed to fetch from Sanity, using fallback data:', error)
     }
   }
-  
-  const fallbackItem = (portfolioData.portfolio as PortfolioItem[]).find((i) => i.slug === slug)
-  console.log('[Portfolio Data] Fallback result:', fallbackItem ? `Found: ${fallbackItem.titleKey}` : 'Not found')
-  
-  return fallbackItem ?? null
+
+  return (portfolioData.portfolio as PortfolioItem[]).find((i) => i.slug === slug) ?? null
 }
 
 export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'): Promise<PortfolioItem[]> {
