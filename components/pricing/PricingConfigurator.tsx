@@ -526,19 +526,31 @@ export function PricingConfigurator() {
             <h2 className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl">{t('cardsTitle')}</h2>
             <p className="mt-3 max-w-xl text-lg text-text-secondary">{t('cardsText')}</p>
           </div>
-          <div className="pr-segment" data-active={billing} role="radiogroup" aria-label={t('billingTitle')}>
-            <span className="pr-segment-thumb" aria-hidden="true" />
-            {(['monthly', 'annual'] as const).map((b) => (
-              <label key={b} className="pr-segment-item">
-                <input type="radio" name="pr-cards-billing" value={b} checked={b === billing} onChange={() => setBilling(b)} className="sr-only" />
-                {t(`billing.${b}`)}
-                {b === 'annual' && (
-                  <span className={cn('pr-badge rounded-full px-2 py-0.5 text-[11px] font-extrabold', b === billing ? 'bg-snow text-[#0A74CC]' : 'bg-brand-strong text-snow')}>
-                    −20%
-                  </span>
-                )}
-              </label>
-            ))}
+          {/* The cards have their own switches so both site types and both billings are one tap away. */}
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <div className="pr-segment" data-active={category} role="radiogroup" aria-label={t('pickerTitle')}>
+              <span className="pr-segment-thumb" aria-hidden="true" />
+              {PLAN_CATEGORIES.map((c) => (
+                <label key={c} className="pr-segment-item">
+                  <input type="radio" name="pr-cards-category" value={c} checked={c === category} onChange={() => pickCategory(c)} className="sr-only" />
+                  {t(`categories.${c}.short`)}
+                </label>
+              ))}
+            </div>
+            <div className="pr-segment" data-active={billing} role="radiogroup" aria-label={t('billingTitle')}>
+              <span className="pr-segment-thumb" aria-hidden="true" />
+              {(['monthly', 'annual'] as const).map((b) => (
+                <label key={b} className="pr-segment-item">
+                  <input type="radio" name="pr-cards-billing" value={b} checked={b === billing} onChange={() => setBilling(b)} className="sr-only" />
+                  {t(`billing.${b}`)}
+                  {b === 'annual' && (
+                    <span className={cn('pr-badge rounded-full px-2 py-0.5 text-[11px] font-extrabold', b === billing ? 'bg-snow text-[#0A74CC]' : 'bg-brand-strong text-snow')}>
+                      −20%
+                    </span>
+                  )}
+                </label>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -567,23 +579,30 @@ export function PricingConfigurator() {
                     <p className="tilt-z1 mt-1 text-sm leading-snug text-text-secondary">{t(`plans.${p.id}.text`)}</p>
 
                     <div className="tilt-z2 mt-6">
+                      {/* Same three rows in both modes so the switch does not make the cards jump. */}
                       {billing === 'annual' ? (
                         <>
-                          <s className="text-sm text-text-muted tabular-nums">{azn(x.total)}</s>
-                          <p className="text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">
+                          <p className="flex items-center gap-2 text-sm">
+                            <s className="text-text-muted tabular-nums">{azn(x.total)}</s>
+                            <span className="rounded-full bg-accent-primary/10 px-2 py-0.5 text-[11px] font-extrabold text-accent-ink">−20%</span>
+                          </p>
+                          <p className="mt-1 text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">
                             {azn(x.annual)} <span className="text-base font-bold text-text-muted">{t('perYear')}</span>
                           </p>
-                          <p className="mt-1 text-sm font-semibold text-accent-ink">{t('annualNote')}</p>
                           <p className="mt-2 text-sm leading-snug text-text-secondary">{t('annualOnce')}</p>
                         </>
                       ) : (
                         <>
-                          <p className="text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">{azn(x.total)}</p>
-                          <p className="text-xs text-text-muted">{t('fromPrice')}</p>
-                          <p className="mt-3 text-[15px] font-bold text-text-primary">
-                            {t('upfront', { amount: azn(x.initial) })} <span className="font-semibold text-text-muted">({percent(x.initialRate)})</span>
+                          <p className="text-sm text-text-muted">
+                            {t('totalLabel')}: <span className="tabular-nums">{azn(x.total)}</span>
                           </p>
-                          <p className="text-sm text-text-secondary">{t('then', { amount: azn(x.monthly) })}</p>
+                          <p className="mt-1 text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">
+                            {azn(x.monthly)} <span className="text-base font-bold text-text-muted">{t('perMonth')}</span>
+                          </p>
+                          <p className="mt-2 text-sm leading-snug text-text-secondary">
+                            {t('initialLabel', { rate: percent(x.initialRate) })}: <span className="font-bold text-text-primary tabular-nums">{azn(x.initial)}</span>
+                            <span className="block">{t('monthlyValue', { amount: azn(x.monthly) })}</span>
+                          </p>
                         </>
                       )}
                     </div>

@@ -3635,7 +3635,7 @@
       "messageMonthly": "Hello, Cradex Agency. I would like to order the {plan} package with monthly installments: {details}. Total {total}, down payment {initial}, then 12 × {monthly}.",
       "messageAnnual": "Hello, Cradex Agency. I would like to order the {plan} package with annual payment: {details}. Total {annual} (with the 20% discount).",
       "cardsTitle": "All packages",
-      "cardsText": "Cards show each package's starting price. Choose pages, languages, design and extras above.",
+      "cardsText": "Choose the site type and billing: monthly shows the monthly payment, annual shows the annual payment with 20% off. Pages, languages, design and extras can be chosen above.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3911,7 +3911,7 @@
           "Corporate email setup"
         ]
       },
-      "perYear": "/ year",
+      "perYear": "/yr",
       "annualOnce": "One payment for 1 year, no monthly fees"
     },
     "productMenu": {

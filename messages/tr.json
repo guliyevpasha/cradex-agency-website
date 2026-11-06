@@ -3635,7 +3635,7 @@
       "messageMonthly": "Merhaba, Cradex Agency. {plan} paketini aylık taksitli ödemeyle sipariş etmek istiyorum: {details}. Toplam {total}, ön ödeme {initial}, ardından 12 × {monthly}.",
       "messageAnnual": "Merhaba, Cradex Agency. {plan} paketini yıllık ödemeyle sipariş etmek istiyorum: {details}. Tutar {annual} (%20 indirimli).",
       "cardsTitle": "Tüm paketler",
-      "cardsText": "Kartlarda paketin başlangıç fiyatı gösterilir. Sayfa, dil, tasarım ve ek hizmetleri yukarıdan seçebilirsiniz.",
+      "cardsText": "Site türünü ve ödeme yöntemini seçin: aylık seçtiğinizde aylık ödeme, yıllık seçtiğinizde %20 indirimli yıllık ödeme gösterilir. Sayfa, dil, tasarım ve ek hizmetleri yukarıdan seçebilirsiniz.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3911,7 +3911,7 @@
           "Kurumsal e-posta kurulumu"
         ]
       },
-      "perYear": "/ yıl",
+      "perYear": "/yıl",
       "annualOnce": "1 yıl için tek seferlik ödeme, aylık ödeme yok"
     },
     "productMenu": {

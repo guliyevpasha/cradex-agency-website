@@ -3639,7 +3639,7 @@
       "messageMonthly": "Salam, Cradex Agency. {plan} paketini aylıq hissəli ödənişlə sifariş etmək istəyirəm: {details}. Məbləğ {total}, ilkin ödəniş {initial}, sonra 12 × {monthly}.",
       "messageAnnual": "Salam, Cradex Agency. {plan} paketini illik ödənişlə sifariş etmək istəyirəm: {details}. Məbləğ {annual} (20% endirimlə).",
       "cardsTitle": "Bütün paketlər",
-      "cardsText": "Kartlarda paketin başlanğıc qiyməti göstərilir. Səhifə, dil, dizayn və əlavə xidmətləri yuxarıda seçə bilərsiniz.",
+      "cardsText": "Sayt növünü və ödəniş üsulunu seçin: aylıq seçəndə aylıq ödəniş, illik seçəndə 20% endirimli illik ödəniş görünür. Səhifə, dil, dizayn və əlavə xidmətləri yuxarıda seçə bilərsiniz.",
       "plans": {
         "start": {
           "name": "Start",
@@ -3915,7 +3915,7 @@
           "Korporativ e-poçt quraşdırması"
         ]
       },
-      "perYear": "/ il",
+      "perYear": "/il",
       "annualOnce": "1 il üçün birdəfəlik ödəniş, aylıq ödəniş yoxdur"
     },
     "productMenu": {
