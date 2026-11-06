@@ -17,6 +17,7 @@ import { AdsDashboard } from '@/components/services/AdsDashboard'
 import { AdsCta, AdsManage, AdsPricing, AdsPrinciple } from '@/components/services/AdsSections'
 import { WebIncluded } from '@/components/services/WebIncluded'
 import { HERO_MOCKS } from '@/components/services/HeroMocks'
+import { HeroDevices } from '@/components/pricing/HeroDevices'
 import { getAllArticles } from '@/lib/data/journal'
 import type { Article } from '@/types'
 import { DomainChecker } from '@/components/home/DomainChecker'
@@ -105,16 +106,9 @@ export default async function ServicePage({ params }: { params: Params }) {
             </Tilt>
           </Reveal>
         ) : (
-        <Reveal className="rv-3d">
-          <Tilt max={10}>
-            <div className="svc-stage relative flex aspect-[5/4] items-center justify-center rounded-[36px] border border-line bg-bg-secondary shadow-card">
-              <span className="tilt-glare" />
-              <span className="svc-stage-grid" aria-hidden="true" />
-              <div className="tilt-z2">
-                <ServiceScene id={id} className="sc-xl" />
-              </div>
-            </div>
-          </Tilt>
+        // web: the same site on desktop, tablet and phone, as on the pricing page
+        <Reveal className="rv-3d mx-auto w-full max-w-[680px] px-3 pb-8 pt-6 sm:px-6">
+          <HeroDevices locale={locale} />
         </Reveal>
         )}
       </section>
