@@ -570,8 +570,11 @@ export function PricingConfigurator() {
                       {billing === 'annual' ? (
                         <>
                           <s className="text-sm text-text-muted tabular-nums">{azn(x.total)}</s>
-                          <p className="text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">{azn(x.annual)}</p>
+                          <p className="text-4xl font-extrabold tracking-[-0.03em] text-text-primary tabular-nums">
+                            {azn(x.annual)} <span className="text-base font-bold text-text-muted">{t('perYear')}</span>
+                          </p>
                           <p className="mt-1 text-sm font-semibold text-accent-ink">{t('annualNote')}</p>
+                          <p className="mt-2 text-sm leading-snug text-text-secondary">{t('annualOnce')}</p>
                         </>
                       ) : (
                         <>

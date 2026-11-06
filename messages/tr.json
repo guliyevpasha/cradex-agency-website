@@ -3910,7 +3910,9 @@
           "Şablon veya sıfırdan tasarım",
           "Kurumsal e-posta kurulumu"
         ]
-      }
+      },
+      "perYear": "/ yıl",
+      "annualOnce": "1 yıl için tek seferlik ödeme, aylık ödeme yok"
     },
     "productMenu": {
       "chatbot": {

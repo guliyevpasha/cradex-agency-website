@@ -3910,7 +3910,9 @@
           "Template or custom design",
           "Corporate email setup"
         ]
-      }
+      },
+      "perYear": "/ year",
+      "annualOnce": "One payment for 1 year, no monthly fees"
     },
     "productMenu": {
       "chatbot": {

@@ -3914,7 +3914,9 @@
           "Şablon və ya sıfırdan dizayn",
           "Korporativ e-poçt quraşdırması"
         ]
-      }
+      },
+      "perYear": "/ il",
+      "annualOnce": "1 il üçün birdəfəlik ödəniş, aylıq ödəniş yoxdur"
     },
     "productMenu": {
       "chatbot": {

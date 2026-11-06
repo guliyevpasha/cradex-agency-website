@@ -66,7 +66,8 @@ export default async function ServicePage({ params }: { params: Params }) {
   return (
     <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="container-x grid items-center gap-12 pb-16 pt-6 lg:grid-cols-[1.05fr_1fr] lg:pb-24">
+      {/* The ads monitor needs the width of a full column, so it stacks until xl. */}
+      <section className={cn('container-x grid items-center gap-12 pb-16 pt-6 lg:pb-24', id === 'ads' ? 'xl:grid-cols-[1.05fr_1fr]' : 'lg:grid-cols-[1.05fr_1fr]')}>
         <div>
           <nav aria-label="breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-text-muted">
             <Link href={`/${locale}`} className="inline-flex min-h-9 items-center hover:text-text-primary">{t('home')}</Link>
@@ -94,17 +95,25 @@ export default async function ServicePage({ params }: { params: Params }) {
           </div>
         </div>
 
+        {id === 'ads' ? (
+          <Reveal className="rv-3d">
+            <Tilt max={6}>
+              <AdsDashboard />
+            </Tilt>
+          </Reveal>
+        ) : (
         <Reveal className="rv-3d">
           <Tilt max={10}>
             <div className="svc-stage relative flex aspect-[5/4] items-center justify-center rounded-[36px] border border-line bg-bg-secondary shadow-card">
               <span className="tilt-glare" />
               <span className="svc-stage-grid" aria-hidden="true" />
               <div className="tilt-z2">
-                {id === 'ads' ? <AdsDashboard /> : <ServiceScene id={id} className="sc-xl" />}
+                <ServiceScene id={id} className="sc-xl" />
               </div>
             </div>
           </Tilt>
         </Reveal>
+        )}
       </section>
 
       {/* What is included */}
