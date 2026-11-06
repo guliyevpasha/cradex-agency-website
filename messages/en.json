@@ -2945,7 +2945,67 @@
             "q": "Who owns the domain and hosting?",
             "a": "You do. The site, domain and all access credentials are handed over to you at delivery."
           }
-        ]
+        ],
+        "included": {
+          "title": "Included in every plan",
+          "text": "Website build, hosting, security, monthly edits and direct support: from the simplest plan up, everything is part of the subscription.",
+          "items": [
+            {
+              "t": "Design and development",
+              "d": "A fast site that works flawlessly on every screen. We adapt a ready template to your brand or design from scratch.",
+              "points": [
+                "Mobile, tablet and desktop ready",
+                "Ready within 1 month, or 10 days or 3 business days if urgent"
+              ]
+            },
+            {
+              "t": "Direct support",
+              "d": "Direct contact with the team that built your site. No call centre.",
+              "points": [
+                "Replies during business hours, Mon–Fri, 09:00–18:00",
+                "Messaging through the portal and email notifications"
+              ]
+            },
+            {
+              "t": "Managed hosting",
+              "d": "Fast, reliable hosting on edge infrastructure. You don't need a separate hosting account.",
+              "points": [
+                "99.9% uptime target",
+                "Global CDN",
+                "We check your site every week"
+              ]
+            },
+            {
+              "t": "Security",
+              "d": "No extra charge for the SSL certificate, domain connection or security updates.",
+              "points": [
+                "Free domain for the first year (annual price up to $20)",
+                "SSL / HTTPS and DNS setup",
+                "Security updates"
+              ]
+            },
+            {
+              "t": "Speed and technical SEO",
+              "d": "The technical basics that let search engines read your site correctly are built into every site. Local SEO and Google Business Profile start from the Business plan; monthly SEO work comes with the Premium plan.",
+              "points": [
+                "Meta tags and sitemap",
+                "Core Web Vitals optimisation",
+                "Search-friendly page structure"
+              ]
+            },
+            {
+              "t": "Monthly edits",
+              "d": "Need new text, an image or a new section? Send a request through the portal. Every plan includes a monthly edit allowance, and the amount depends on the plan.",
+              "points": [
+                "Small edit: text, image, price, link (within 1 business day)",
+                "Medium change: new section, form or page layout (within 3 business days)",
+                "Larger job: new page, feature or integration (within 5 business days)"
+              ]
+            }
+          ],
+          "cta": "View plans"
+        },
+        "blogTitle": "Articles about websites"
       },
       "mobile": {
         "metaTitle": "Mobile App Development",
@@ -3167,7 +3227,126 @@
             "q": "When do I get reports?",
             "a": "On the schedule we agree, usually weekly and monthly."
           }
-        ]
+        ],
+        "manage": {
+          "title": "We manage your ads end to end",
+          "text": "From strategy and targeting to budget optimisation and reporting.",
+          "items": [
+            {
+              "t": "Campaign strategy",
+              "d": "Goal, budget and target audience are set up front, so you know exactly what every manat is spent on."
+            },
+            {
+              "t": "Audience targeting",
+              "d": "Interests, lookalike audiences and retargeting, so your ads reach the right people."
+            },
+            {
+              "t": "Ad copy",
+              "d": "We write the ad copy for the images and videos you send, then set up the ads and launch them."
+            },
+            {
+              "t": "Ad testing",
+              "d": "We test your images and videos with different copy and audiences and find what performs best."
+            },
+            {
+              "t": "Budget optimisation",
+              "d": "Weak ads are paused and the budget moves to the campaigns that deliver results."
+            },
+            {
+              "t": "Weekly and monthly reports",
+              "d": "A short update every week and a detailed report every month: how many enquiries came in, what each one cost, how the budget was spent."
+            }
+          ]
+        },
+        "principle": {
+          "title": "Our principle.",
+          "text": "We don't launch ads and forget them. We track results regularly, pause what doesn't work and move the budget to what does. The goal is not likes but enquiries and sales.",
+          "quote": "“Not clicks, customers. Not likes, sales.”",
+          "quoteBy": "This is how Cradex Agency manages ads"
+        },
+        "pricing": {
+          "title": "How the price is calculated.",
+          "text": "There is no ready-made package or price list. We learn your goal and budget, then calculate the monthly management fee for you individually.",
+          "cards": [
+            {
+              "t": "Size of the ad budget",
+              "d": "How much you want to spend on ad platforms each month. The larger the budget, the more ads and tests we can manage."
+            },
+            {
+              "t": "Number of campaigns and goals",
+              "d": "Collecting enquiries, online sales and showing ads again on Instagram and Facebook to people who already contacted you are separate campaigns."
+            }
+          ],
+          "termsTitle": "Terms of cooperation",
+          "terms": [
+            {
+              "k": "Management fee",
+              "v": "Paid monthly; the amount is calculated individually for you."
+            },
+            {
+              "k": "Ad budget",
+              "v": "The money paid to the platforms to show your ads. You pay it directly to the platform with your own card. It is not paid to us and is not part of our management fee."
+            },
+            {
+              "k": "Minimum ad budget",
+              "v": "You need to spend at least 500 ₼ a month on ads on the platforms. This is not our fee: the amount is paid directly to the platform and goes towards showing your ads."
+            },
+            {
+              "k": "Ad account",
+              "v": "It is in your name and always stays with you."
+            },
+            {
+              "k": "Creatives",
+              "v": "You provide the images and videos; we write the ad copy."
+            },
+            {
+              "k": "Reporting",
+              "v": "A short update every week and a detailed report every month."
+            },
+            {
+              "k": "Term",
+              "v": "No minimum term: you can stop at any time. A month already paid is not refunded."
+            }
+          ],
+          "cta": "Get a quote",
+          "ctaText": "Tell us your goal and budget. We will calculate the monthly fee and reply during business hours.",
+          "ctaMessage": "Hello, I would like a quote for the advertising service"
+        },
+        "cta": {
+          "title": "Let's discuss your project",
+          "text": "Let's plan your ad budget and goal together. The consultation is free. If you don't like it, you pay nothing."
+        },
+        "dash": {
+          "tabs": [
+            "Campaigns",
+            "Audiences",
+            "Ads",
+            "Report"
+          ],
+          "period": "This week",
+          "leads": "Enquiries",
+          "cpl": "Cost per enquiry",
+          "spent": "Budget spent",
+          "campaigns": [
+            {
+              "t": "Lead generation",
+              "s": "Interests"
+            },
+            {
+              "t": "Online sales",
+              "s": "Lookalike audience"
+            },
+            {
+              "t": "Retargeting",
+              "s": "Followers"
+            }
+          ],
+          "active": "Active",
+          "abTest": "Ad test",
+          "winner": "Winner",
+          "weekly": "Weekly update"
+        },
+        "blogTitle": "Articles about advertising"
       },
       "support": {
         "metaTitle": "Technical Support",
@@ -3714,7 +3893,24 @@
       "faqAskCta": "Ask a question",
       "faqAskMessage": "Hello, Cradex Agency. I have a question about pricing and packages: ",
       "faqAskQ": "Is the demo really free?",
-      "faqAskA": "Yes. If you don't like it, you pay nothing."
+      "faqAskA": "Yes. If you don't like it, you pay nothing.",
+      "start": {
+        "title": "Start with a down payment",
+        "bullets": [
+          "Instalments of up to 12 months",
+          "20% off with annual payment",
+          "Professional technical support",
+          "Technology that fits your business"
+        ],
+        "includedTitle": "In every plan",
+        "included": [
+          "1 year of free domain and hosting",
+          "A fast website",
+          "Direct support",
+          "Template or custom design",
+          "Corporate email setup"
+        ]
+      }
     },
     "productMenu": {
       "chatbot": {

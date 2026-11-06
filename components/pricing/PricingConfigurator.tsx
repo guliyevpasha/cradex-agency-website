@@ -526,9 +526,20 @@ export function PricingConfigurator() {
             <h2 className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl">{t('cardsTitle')}</h2>
             <p className="mt-3 max-w-xl text-lg text-text-secondary">{t('cardsText')}</p>
           </div>
-          <p className="text-sm font-semibold text-accent-ink">
-            {t(`categories.${category}.label`)} · {t(`billing.${billing}`)}
-          </p>
+          <div className="pr-segment" data-active={billing} role="radiogroup" aria-label={t('billingTitle')}>
+            <span className="pr-segment-thumb" aria-hidden="true" />
+            {(['monthly', 'annual'] as const).map((b) => (
+              <label key={b} className="pr-segment-item">
+                <input type="radio" name="pr-cards-billing" value={b} checked={b === billing} onChange={() => setBilling(b)} className="sr-only" />
+                {t(`billing.${b}`)}
+                {b === 'annual' && (
+                  <span className={cn('pr-badge rounded-full px-2 py-0.5 text-[11px] font-extrabold', b === billing ? 'bg-snow text-[#0A74CC]' : 'bg-brand-strong text-snow')}>
+                    −20%
+                  </span>
+                )}
+              </label>
+            ))}
+          </div>
         </div>
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -611,6 +622,31 @@ export function PricingConfigurator() {
             )
           })}
         </ul>
+
+        <div className="mt-8 grid gap-5 rounded-[28px] border border-line bg-bg-secondary p-6 sm:p-8 lg:grid-cols-2">
+          <div>
+            <h3 className="text-xl font-extrabold text-text-primary">{t('start.title')}</h3>
+            <ul className="mt-4 space-y-2.5">
+              {(t.raw('start.bullets') as string[]).map((b) => (
+                <li key={b} className="flex gap-2.5 text-[15px] leading-snug text-text-secondary">
+                  <Check size={17} className="mt-0.5 shrink-0 text-accent-ink" aria-hidden="true" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lg:border-l lg:border-line lg:pl-8">
+            <h3 className="text-xl font-extrabold text-text-primary">{t('start.includedTitle')}</h3>
+            <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+              {(t.raw('start.included') as string[]).map((b) => (
+                <li key={b} className="flex gap-2.5 text-[15px] leading-snug text-text-secondary">
+                  <Check size={17} className="mt-0.5 shrink-0 text-accent-ink" aria-hidden="true" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
     </>
   )

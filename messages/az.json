@@ -2949,7 +2949,67 @@
             "q": "Domen və hostinq kimin adına olur?",
             "a": "Sizin adınıza. Sayt, domen və bütün girişlər təhvildən sonra sizə verilir."
           }
-        ]
+        ],
+        "included": {
+          "title": "Hər paketə daxildir",
+          "text": "Saytın hazırlanması, hostinq, təhlükəsizlik, aylıq düzəlişlər və birbaşa dəstək — ən sadə paketdən başlayaraq hamısı abunəliyə daxildir.",
+          "items": [
+            {
+              "t": "Dizayn və hazırlanma",
+              "d": "Hər ekranda qüsursuz işləyən sürətli sayt — hazır şablonu brendinizə uyğunlaşdırırıq və ya dizaynı sıfırdan hazırlayırıq.",
+              "points": [
+                "Mobil, planşet və kompüter uyğunluğu",
+                "1 ay ərzində hazır — təcili olsa, 10 gün və ya 3 iş günü"
+              ]
+            },
+            {
+              "t": "Birbaşa dəstək",
+              "d": "Saytınızı quran komanda ilə birbaşa əlaqə — çağrı mərkəzi yoxdur.",
+              "points": [
+                "İş saatlarında cavab — B.e.–C., 09:00–18:00",
+                "Portal üzərindən yazışma və e-poçt bildirişləri"
+              ]
+            },
+            {
+              "t": "İdarə olunan hostinq",
+              "d": "Edge infrastrukturunda sürətli və etibarlı hostinq — ayrıca hostinq hesabı açmağa ehtiyac yoxdur.",
+              "points": [
+                "99,9% fasiləsiz iş hədəfi",
+                "Qlobal CDN",
+                "Saytınızı hər həftə yoxlayırıq"
+              ]
+            },
+            {
+              "t": "Təhlükəsizlik",
+              "d": "SSL sertifikatı, domenin qoşulması və təhlükəsizlik yeniləmələri üçün ayrıca ödəniş yoxdur.",
+              "points": [
+                "İlk il domen pulsuz (illik qiyməti 20 $-dək)",
+                "SSL / HTTPS və DNS quraşdırması",
+                "Təhlükəsizlik yeniləmələri"
+              ]
+            },
+            {
+              "t": "Sürət və texniki SEO",
+              "d": "Axtarış sistemlərinin saytınızı düzgün oxuması üçün texniki əsaslar hər saytda qurulur. Lokal SEO və Google Biznes Profili Biznes paketindən başlayaraq, aylıq SEO işi Premium paketində.",
+              "points": [
+                "Meta teqlər və sitemap",
+                "Core Web Vitals optimallaşdırması",
+                "Axtarışa uyğun səhifə strukturu"
+              ]
+            },
+            {
+              "t": "Aylıq düzəlişlər",
+              "d": "Mətn, şəkil və ya yeni bölmə lazımdır? Portal üzərindən sorğu göndərin — hər paketə aylıq düzəliş kvotası daxildir, həcmi paketə görə dəyişir.",
+              "points": [
+                "Kiçik düzəliş — mətn, şəkil, qiymət, link (1 iş günündə)",
+                "Orta dəyişiklik — yeni bölmə, forma və ya səhifə düzəni (3 iş günündə)",
+                "Böyük iş — yeni səhifə, funksiya və ya inteqrasiya (5 iş günündə)"
+              ]
+            }
+          ],
+          "cta": "Paketlərə baxın"
+        },
+        "blogTitle": "Veb sayt haqqında yazılar"
       },
       "mobile": {
         "metaTitle": "Mobil tətbiq hazırlanması",
@@ -3171,7 +3231,126 @@
             "q": "Hesabatı nə vaxt alıram?",
             "a": "Razılaşdığımız qrafikə görə, adətən həftəlik və aylıq."
           }
-        ]
+        ],
+        "manage": {
+          "title": "Reklamlarınızı tam idarə edirik",
+          "text": "Strategiya və hədəfləmədən tutmuş büdcə optimallaşdırmasına və hesabatlara qədər.",
+          "items": [
+            {
+              "t": "Kampaniya strategiyası",
+              "d": "Məqsəd, büdcə və hədəf auditoriya əvvəlcədən müəyyənləşir — hər manatın nəyə xərcləndiyini bilirsiniz."
+            },
+            {
+              "t": "Auditoriya hədəfləməsi",
+              "d": "Maraqlar, bənzər auditoriyalar və retargetinq — reklamınız doğru insanlara çatır."
+            },
+            {
+              "t": "Reklam mətnləri",
+              "d": "Göndərdiyiniz şəkil və videolar üçün reklam mətnlərini biz yazırıq, reklamları qurub yayıma çıxarırıq."
+            },
+            {
+              "t": "Reklam testləri",
+              "d": "Göndərdiyiniz şəkil və videoları fərqli mətn və auditoriyalarla sınayır, ən yaxşı nəticə verəni tapırıq."
+            },
+            {
+              "t": "Büdcə optimallaşdırması",
+              "d": "Zəif reklamlar dayandırılır, büdcə nəticə verən kampaniyalara yönəldilir."
+            },
+            {
+              "t": "Həftəlik və aylıq hesabat",
+              "d": "Hər həftə qısa yeniləmə, hər ay ətraflı hesabat: neçə müraciət gəldi, hər biri neçəyə başa gəldi, büdcə necə xərcləndi."
+            }
+          ]
+        },
+        "principle": {
+          "title": "İş prinsipimiz.",
+          "text": "Reklamı işə salıb unutmuruq. Nəticələri müntəzəm izləyir, işləməyən reklamları dayandırır, büdcəni nəticə verənlərə yönəldirik. Məqsəd bəyənmə deyil — müraciət və satışdır.",
+          "quote": "“Klik yox, müştəri. Bəyənmə yox, satış.”",
+          "quoteBy": "Cradex Agency reklamlarını belə idarə edir"
+        },
+        "pricing": {
+          "title": "Qiymət necə hesablanır.",
+          "text": "Hazır paket və qiymət cədvəli yoxdur. Məqsədinizi və büdcənizi öyrənir, aylıq idarəetmə haqqını sizin üçün ayrıca hesablayırıq.",
+          "cards": [
+            {
+              "t": "Reklam büdcəsinin həcmi",
+              "d": "Reklam platformalarında ayda nə qədər xərcləmək istədiyiniz. Büdcə böyüdükcə idarə olunan reklam və test sayı da artır."
+            },
+            {
+              "t": "Kampaniya və məqsəd sayı",
+              "d": "Müraciət toplamaq, onlayn satış və reklamı Instagram və Facebook-da sizinlə artıq əlaqə quranlara təkrar göstərmək ayrı-ayrı kampaniyalardır."
+            }
+          ],
+          "termsTitle": "Əməkdaşlıq şərtləri",
+          "terms": [
+            {
+              "k": "İdarəetmə haqqı",
+              "v": "Aylıq ödənilir, məbləğ sizin üçün ayrıca hesablanır."
+            },
+            {
+              "k": "Reklam büdcəsi",
+              "v": "Reklamlarınızın göstərilməsi üçün platformalara ödənilən puldur. Onu öz kartınızla birbaşa platformaya ödəyirsiniz — bizə ödənilmir və idarəetmə haqqımıza daxil deyil."
+            },
+            {
+              "k": "Minimum reklam büdcəsi",
+              "v": "Reklamlara platformalarda ayda ən azı 500 ₼ xərcləməlisiniz. Bu, bizim haqqımız deyil: məbləğ birbaşa platformaya ödənilir və reklamlarınızın göstərilməsinə gedir."
+            },
+            {
+              "k": "Reklam hesabı",
+              "v": "Sizin adınızadır və həmişə sizdə qalır."
+            },
+            {
+              "k": "Vizuallar",
+              "v": "Şəkil və videoları siz verirsiniz, reklam mətnlərini biz yazırıq."
+            },
+            {
+              "k": "Hesabat",
+              "v": "Hər həftə qısa yeniləmə, hər ay ətraflı hesabat."
+            },
+            {
+              "k": "Müddət",
+              "v": "Minimum müddət yoxdur — istədiyiniz vaxt dayandıra bilərsiniz. Ödənilmiş ay geri qaytarılmır."
+            }
+          ],
+          "cta": "Qiymət təklifi alın",
+          "ctaText": "Məqsədinizi və büdcənizi yazın — aylıq haqqı hesablayıb iş saatlarında sizə cavab veririk.",
+          "ctaMessage": "Salam, reklam xidməti üçün qiymət təklifi istəyirəm"
+        },
+        "cta": {
+          "title": "Layihənizi müzakirə edək",
+          "text": "Reklam büdcənizi və hədəfinizi birlikdə planlayaq. Konsultasiya pulsuzdur. Bəyənməsəniz, ödəniş yoxdur."
+        },
+        "dash": {
+          "tabs": [
+            "Kampaniyalar",
+            "Auditoriyalar",
+            "Reklamlar",
+            "Hesabat"
+          ],
+          "period": "Bu həftə",
+          "leads": "Müraciətlər",
+          "cpl": "Müraciət qiyməti",
+          "spent": "Xərclənən büdcə",
+          "campaigns": [
+            {
+              "t": "Müraciət toplama",
+              "s": "Maraqlar"
+            },
+            {
+              "t": "Onlayn satış",
+              "s": "Bənzər auditoriya"
+            },
+            {
+              "t": "Retargetinq",
+              "s": "İzləyicilər"
+            }
+          ],
+          "active": "Aktiv",
+          "abTest": "Reklam testi",
+          "winner": "Qalib",
+          "weekly": "Həftəlik yeniləmə"
+        },
+        "blogTitle": "Reklam haqqında yazılar"
       },
       "support": {
         "metaTitle": "Texniki xidmət",
@@ -3718,7 +3897,24 @@
       "faqAskCta": "Sual verin",
       "faqAskMessage": "Salam, Cradex Agency. Qiymətlər və paketlər barədə sualım var: ",
       "faqAskQ": "Demo həqiqətən pulsuzdur?",
-      "faqAskA": "Bəli. Bəyənməsəniz, heç nə ödəmirsiniz."
+      "faqAskA": "Bəli. Bəyənməsəniz, heç nə ödəmirsiniz.",
+      "start": {
+        "title": "İlkin ödənişlə işə başlama",
+        "bullets": [
+          "12 ayadək hissəli ödəniş",
+          "İllik ödənişdə 20% endirim",
+          "Peşəkar texniki dəstək",
+          "Biznesinizə uyğun texnologiya"
+        ],
+        "includedTitle": "Hər paketdə",
+        "included": [
+          "1 il pulsuz domen və hostinq",
+          "Sürətli sayt",
+          "Birbaşa dəstək",
+          "Şablon və ya sıfırdan dizayn",
+          "Korporativ e-poçt quraşdırması"
+        ]
+      }
     },
     "productMenu": {
       "chatbot": {

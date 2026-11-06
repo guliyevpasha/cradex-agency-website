@@ -2945,7 +2945,67 @@
             "q": "Alan adı ve hosting kimin adına olur?",
             "a": "Sizin adınıza. Site, alan adı ve tüm erişim bilgileri teslimden sonra size verilir."
           }
-        ]
+        ],
+        "included": {
+          "title": "Her pakete dahildir",
+          "text": "Sitenin hazırlanması, hosting, güvenlik, aylık düzenlemeler ve doğrudan destek: en basit paketten başlayarak hepsi aboneliğe dahildir.",
+          "items": [
+            {
+              "t": "Tasarım ve geliştirme",
+              "d": "Her ekranda kusursuz çalışan hızlı bir site. Hazır şablonu markanıza uyarlıyor ya da tasarımı sıfırdan hazırlıyoruz.",
+              "points": [
+                "Mobil, tablet ve bilgisayar uyumu",
+                "1 ay içinde hazır; acilse 10 gün veya 3 iş günü"
+              ]
+            },
+            {
+              "t": "Doğrudan destek",
+              "d": "Sitenizi kuran ekiple doğrudan iletişim; çağrı merkezi yok.",
+              "points": [
+                "Mesai saatlerinde yanıt: Pzt–Cum, 09:00–18:00",
+                "Portal üzerinden yazışma ve e-posta bildirimleri"
+              ]
+            },
+            {
+              "t": "Yönetilen hosting",
+              "d": "Edge altyapısında hızlı ve güvenilir hosting; ayrıca hosting hesabı açmanıza gerek yok.",
+              "points": [
+                "%99,9 kesintisiz çalışma hedefi",
+                "Global CDN",
+                "Sitenizi her hafta kontrol ediyoruz"
+              ]
+            },
+            {
+              "t": "Güvenlik",
+              "d": "SSL sertifikası, alan adı bağlantısı ve güvenlik güncellemeleri için ayrı ücret yok.",
+              "points": [
+                "İlk yıl alan adı ücretsiz (yıllık fiyatı 20 $’a kadar)",
+                "SSL / HTTPS ve DNS kurulumu",
+                "Güvenlik güncellemeleri"
+              ]
+            },
+            {
+              "t": "Hız ve teknik SEO",
+              "d": "Arama motorlarının sitenizi doğru okuması için teknik temeller her sitede kurulur. Yerel SEO ve Google İşletme Profili Business paketinden itibaren, aylık SEO çalışması Premium pakette.",
+              "points": [
+                "Meta etiketler ve sitemap",
+                "Core Web Vitals optimizasyonu",
+                "Aramaya uygun sayfa yapısı"
+              ]
+            },
+            {
+              "t": "Aylık düzenlemeler",
+              "d": "Metin, görsel ya da yeni bir bölüm mü gerekiyor? Portal üzerinden talep gönderin; her pakete aylık düzenleme hakkı dahildir, kapsamı pakete göre değişir.",
+              "points": [
+                "Küçük düzenleme: metin, görsel, fiyat, bağlantı (1 iş gününde)",
+                "Orta değişiklik: yeni bölüm, form veya sayfa düzeni (3 iş gününde)",
+                "Büyük iş: yeni sayfa, özellik veya entegrasyon (5 iş gününde)"
+              ]
+            }
+          ],
+          "cta": "Paketlere göz atın"
+        },
+        "blogTitle": "Web sitesi hakkında yazılar"
       },
       "mobile": {
         "metaTitle": "Mobil Uygulama Geliştirme",
@@ -3167,7 +3227,126 @@
             "q": "Raporu ne zaman alırım?",
             "a": "Belirlediğimiz takvime göre, genellikle haftalık ve aylık."
           }
-        ]
+        ],
+        "manage": {
+          "title": "Reklamlarınızı baştan sona yönetiyoruz",
+          "text": "Strateji ve hedeflemeden bütçe optimizasyonuna ve raporlamaya kadar.",
+          "items": [
+            {
+              "t": "Kampanya stratejisi",
+              "d": "Hedef, bütçe ve hedef kitle baştan belirlenir; her manatın nereye harcandığını bilirsiniz."
+            },
+            {
+              "t": "Kitle hedefleme",
+              "d": "İlgi alanları, benzer kitleler ve retargetinq ile reklamınız doğru insanlara ulaşır."
+            },
+            {
+              "t": "Reklam metinleri",
+              "d": "Gönderdiğiniz görsel ve videolar için reklam metinlerini biz yazıyor, reklamları kurup yayına alıyoruz."
+            },
+            {
+              "t": "Reklam testleri",
+              "d": "Gönderdiğiniz görsel ve videoları farklı metin ve kitlelerle deneyip en iyi sonucu vereni buluyoruz."
+            },
+            {
+              "t": "Bütçe optimizasyonu",
+              "d": "Zayıf reklamlar durdurulur, bütçe sonuç getiren kampanyalara yönlendirilir."
+            },
+            {
+              "t": "Haftalık ve aylık rapor",
+              "d": "Her hafta kısa bir güncelleme, her ay ayrıntılı bir rapor: kaç başvuru geldi, her biri kaça mal oldu, bütçe nasıl harcandı."
+            }
+          ]
+        },
+        "principle": {
+          "title": "Çalışma prensibimiz.",
+          "text": "Reklamı başlatıp unutmuyoruz. Sonuçları düzenli takip ediyor, işe yaramayan reklamları durduruyor, bütçeyi sonuç getirenlere aktarıyoruz. Amaç beğeni değil, başvuru ve satış.",
+          "quote": "“Tıklama değil, müşteri. Beğeni değil, satış.”",
+          "quoteBy": "Cradex Agency reklamları böyle yönetir"
+        },
+        "pricing": {
+          "title": "Fiyat nasıl hesaplanır.",
+          "text": "Hazır paket ve fiyat tablosu yok. Hedefinizi ve bütçenizi öğrenip aylık yönetim ücretini size özel hesaplıyoruz.",
+          "cards": [
+            {
+              "t": "Reklam bütçesinin büyüklüğü",
+              "d": "Reklam platformlarında ayda ne kadar harcamak istediğiniz. Bütçe büyüdükçe yönetilen reklam ve test sayısı da artar."
+            },
+            {
+              "t": "Kampanya ve hedef sayısı",
+              "d": "Başvuru toplama, online satış ve reklamı Instagram ve Facebook’ta sizinle zaten iletişime geçenlere tekrar gösterme ayrı kampanyalardır."
+            }
+          ],
+          "termsTitle": "İş birliği koşulları",
+          "terms": [
+            {
+              "k": "Yönetim ücreti",
+              "v": "Aylık ödenir, tutar sizin için ayrıca hesaplanır."
+            },
+            {
+              "k": "Reklam bütçesi",
+              "v": "Reklamlarınızın gösterilmesi için platformlara ödenen paradır. Bunu kendi kartınızla doğrudan platforma ödersiniz; bize ödenmez ve yönetim ücretimize dahil değildir."
+            },
+            {
+              "k": "Minimum reklam bütçesi",
+              "v": "Platformlarda reklamlara ayda en az 500 ₼ harcamanız gerekir. Bu bizim ücretimiz değil: tutar doğrudan platforma ödenir ve reklamlarınızın gösterilmesine gider."
+            },
+            {
+              "k": "Reklam hesabı",
+              "v": "Sizin adınızadır ve her zaman sizde kalır."
+            },
+            {
+              "k": "Görseller",
+              "v": "Görsel ve videoları siz verirsiniz, reklam metinlerini biz yazarız."
+            },
+            {
+              "k": "Raporlama",
+              "v": "Her hafta kısa güncelleme, her ay ayrıntılı rapor."
+            },
+            {
+              "k": "Süre",
+              "v": "Minimum süre yok, istediğiniz zaman durdurabilirsiniz. Ödenmiş ay iade edilmez."
+            }
+          ],
+          "cta": "Fiyat teklifi alın",
+          "ctaText": "Hedefinizi ve bütçenizi yazın; aylık ücreti hesaplayıp mesai saatlerinde size dönüş yapalım.",
+          "ctaMessage": "Merhaba, reklam hizmeti için fiyat teklifi almak istiyorum"
+        },
+        "cta": {
+          "title": "Projenizi konuşalım",
+          "text": "Reklam bütçenizi ve hedefinizi birlikte planlayalım. Danışmanlık ücretsizdir. Beğenmezseniz ödeme yok."
+        },
+        "dash": {
+          "tabs": [
+            "Kampanyalar",
+            "Kitleler",
+            "Reklamlar",
+            "Rapor"
+          ],
+          "period": "Bu hafta",
+          "leads": "Başvurular",
+          "cpl": "Başvuru maliyeti",
+          "spent": "Harcanan bütçe",
+          "campaigns": [
+            {
+              "t": "Başvuru toplama",
+              "s": "İlgi alanları"
+            },
+            {
+              "t": "Online satış",
+              "s": "Benzer kitle"
+            },
+            {
+              "t": "Retargetinq",
+              "s": "Takipçiler"
+            }
+          ],
+          "active": "Aktif",
+          "abTest": "Reklam testi",
+          "winner": "Kazanan",
+          "weekly": "Haftalık güncelleme"
+        },
+        "blogTitle": "Reklam hakkında yazılar"
       },
       "support": {
         "metaTitle": "Teknik Hizmetler",
@@ -3714,7 +3893,24 @@
       "faqAskCta": "Soru sorun",
       "faqAskMessage": "Merhaba, Cradex Agency. Fiyatlar ve paketler hakkında bir sorum var: ",
       "faqAskQ": "Demo gerçekten ücretsiz mi?",
-      "faqAskA": "Evet. Beğenmezseniz hiçbir ücret ödemezsiniz."
+      "faqAskA": "Evet. Beğenmezseniz hiçbir ücret ödemezsiniz.",
+      "start": {
+        "title": "Peşinatla işe başlayın",
+        "bullets": [
+          "12 aya kadar taksit",
+          "Yıllık ödemede %20 indirim",
+          "Profesyonel teknik destek",
+          "İşletmenize uygun teknoloji"
+        ],
+        "includedTitle": "Her pakette",
+        "included": [
+          "1 yıl ücretsiz alan adı ve hosting",
+          "Hızlı site",
+          "Doğrudan destek",
+          "Şablon veya sıfırdan tasarım",
+          "Kurumsal e-posta kurulumu"
+        ]
+      }
     },
     "productMenu": {
       "chatbot": {

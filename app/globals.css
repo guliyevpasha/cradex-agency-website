@@ -177,6 +177,23 @@
 }
 
 /* ─── Marquees ──────────────────────────────────────────────────────────── */
+/* Ads page visuals: bars grow and rise on load, orbits drift. */
+.ads-panel { transform: translateZ(0); }
+.ads-grow { width: 0; animation: ads-grow 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards; }
+@keyframes ads-grow { to { width: var(--w, 100%); } }
+.ads-bar { height: 0; animation: ads-bar 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards; }
+@keyframes ads-bar { to { height: var(--h, 50%); } }
+.ads-rise { opacity: 0; transform: translateY(10px); animation: ads-rise 0.7s ease-out forwards; }
+@keyframes ads-rise { to { opacity: 1; transform: none; } }
+.ads-orbit { animation: ads-orbit 6s ease-in-out infinite alternate; }
+.ads-orbit-2 { animation-duration: 7.5s; animation-direction: alternate-reverse; }
+@keyframes ads-orbit { from { transform: translateX(0) rotate(0deg); } to { transform: translateX(10px) rotate(8deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .ads-grow, .ads-bar, .ads-rise, .ads-orbit { animation: none; opacity: 1; transform: none; }
+  .ads-grow { width: var(--w, 100%); }
+  .ads-bar { height: var(--h, 50%); }
+}
+
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

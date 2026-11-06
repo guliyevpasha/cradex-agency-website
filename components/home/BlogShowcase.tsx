@@ -26,7 +26,7 @@ function toPost(a: Article): Post {
   }
 }
 
-export async function BlogShowcase({ articles }: { articles: Article[] }) {
+export async function BlogShowcase({ articles, title }: { articles: Article[]; title?: string }) {
   const locale = await getLocale()
   const t = await getTranslations('site.blog')
   const posts = articles.slice(0, 3).map(toPost).filter((p) => p.slug && p.title)
@@ -41,7 +41,7 @@ export async function BlogShowcase({ articles }: { articles: Article[] }) {
           <Reveal>
             <AnimatedHeading
               className="text-[2.75rem] font-extrabold leading-none tracking-[-0.045em] text-text-primary sm:text-6xl xl:text-[4.4rem]"
-              text={t('title')}
+              text={title ?? t('title')}
             />
           </Reveal>
           <Link

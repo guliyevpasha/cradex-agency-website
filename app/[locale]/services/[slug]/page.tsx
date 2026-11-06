@@ -12,6 +12,12 @@ import { LOCALES, SERVICE_IDS, SERVICE_SLUGS, serviceHref, serviceIdBySlug, type
 import { ServiceScene } from '@/components/home/ServiceScene'
 import { WorkShowcase } from '@/components/home/WorkShowcase'
 import { FinalCta } from '@/components/home/FinalCta'
+import { BlogShowcase } from '@/components/home/BlogShowcase'
+import { AdsDashboard } from '@/components/services/AdsDashboard'
+import { AdsCta, AdsManage, AdsPricing, AdsPrinciple } from '@/components/services/AdsSections'
+import { WebIncluded } from '@/components/services/WebIncluded'
+import { getAllArticles } from '@/lib/data/journal'
+import type { Article } from '@/types'
 import { DomainChecker } from '@/components/home/DomainChecker'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
@@ -54,6 +60,7 @@ export default async function ServicePage({ params }: { params: Params }) {
   const steps = t.raw(`${id}.steps`) as Item[]
   const faq = t.raw(`${id}.faq`) as Faq[]
   const others = SERVICE_IDS.filter((s) => s !== id)
+  const articles = id === 'web' || id === 'ads' ? await getAllArticles(locale) : []
   let n = 0
 
   return (
@@ -93,7 +100,7 @@ export default async function ServicePage({ params }: { params: Params }) {
               <span className="tilt-glare" />
               <span className="svc-stage-grid" aria-hidden="true" />
               <div className="tilt-z2">
-                <ServiceScene id={id} className="sc-xl" />
+                {id === 'ads' ? <AdsDashboard /> : <ServiceScene id={id} className="sc-xl" />}
               </div>
             </div>
           </Tilt>
@@ -130,6 +137,12 @@ export default async function ServicePage({ params }: { params: Params }) {
           </div>
         ))}
       </section>
+
+      {id === 'ads' && <AdsManage />}
+      {id === 'ads' && <AdsPrinciple />}
+      {id === 'ads' && <AdsPricing />}
+      {id === 'web' && <WebIncluded />}
+      {id === 'web' && <BlogShowcase articles={pickArticles(articles, WEB_CATEGORIES)} title={t('web.blogTitle')} />}
 
       {id === 'web' && <WorkShowcase />}
 
@@ -176,6 +189,8 @@ export default async function ServicePage({ params }: { params: Params }) {
         </div>
       </section>
 
+      {id === 'ads' && <BlogShowcase articles={pickArticles(articles, ADS_CATEGORIES)} title={t('ads.blogTitle')} />}
+
       {/* Other services */}
       <section className="container-x py-16 lg:py-24">
         <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('otherTitle')} />
@@ -210,7 +225,16 @@ export default async function ServicePage({ params }: { params: Params }) {
         </section>
       )}
 
-      <FinalCta />
+      {id === 'ads' ? <AdsCta /> : <FinalCta />}
     </div>
   )
+}
+
+const WEB_CATEGORIES = ['web-dev']
+const ADS_CATEGORIES = ['smm', 'marketing-strategy']
+
+/** Posts of the given categories first, then the rest, newest first, three in all. */
+function pickArticles(articles: Article[], categories: string[]) {
+  const sorted = [...articles].sort((a, b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
+  return [...sorted.filter((a) => categories.includes(a.category)), ...sorted.filter((a) => !categories.includes(a.category))].slice(0, 3)
 }
