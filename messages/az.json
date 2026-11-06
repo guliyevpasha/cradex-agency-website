@@ -3490,8 +3490,8 @@
       "valuesTitle": "Necə işləyirik",
       "values": [
         {
-          "t": "Əvvəl göstəririk",
-          "d": "Ödənişdən öncə demonu görürsünüz. Bəyənməsəniz, öhdəlik yoxdur."
+          "t": "Əvvəl plan, sonra iş",
+          "d": "Sayt, mobil tətbiq, reklam, SEO və ya çatbot — hər layihədə məqsədi, qiyməti və müddəti işə başlamazdan əvvəl yazılı razılaşdırırıq."
         },
         {
           "t": "Dürüst tövsiyə",
@@ -3499,20 +3499,20 @@
         },
         {
           "t": "Hər şey sizin adınıza",
-          "d": "Domen, hostinq, hesablar və kod təhvildən sonra sizə məxsusdur."
+          "d": "Domen, hostinq, reklam və sosial media hesabları, kod və məlumatlar həmişə sizə məxsusdur."
         },
         {
-          "t": "Təhlükəsizlik əvvəldən",
-          "d": "Saytlar müasir standartlarla, qorunma və yedəkləmə ilə qurulur."
+          "t": "Təhvildən sonra da yanınızdayıq",
+          "d": "Rəqəmləri açıq göstəririk, yeniləmələri və təhlükəsizliyi izləyirik, ehtiyac olanda birbaşa dəstək veririk."
         }
       ],
       "founderTitle": "Təsisçi",
       "founderName": "Paşa Quliyev",
       "founderRole": "Cradex Agency-nin təsisçisi",
       "founderText": "Proqram mühəndisliyində 5 ildən çox təcrübəsi olan, eyni zamanda rəqəmsal marketinq kanalları ilə işləyən mütəxəssis. 2000-dən çox uğurlu reklam kampaniyası qurub, sosial media və veb saytlarla bağlı texniki problemləri həll edir. Bizneslərə həm texniki, həm də marketinq tərəfdən bir yerdə baxır və hər layihəni şəxsən izləyir.",
-      "ctaTitle": "Layihənizi birlikdə quraq",
-      "ctaText": "Saytınızın demosunu pulsuz hazırlayaq, bəyənsəniz davam edək.",
-      "cta": "Pulsuz demo istəyirəm",
+      "ctaTitle": "Biznesinizi birlikdə böyüdək",
+      "ctaText": "Sayt, mobil tətbiq, reklam, SEO, çatbot və ya texniki dəstək — ehtiyacınızı yazın, sizə uyğun həlli və qiyməti pulsuz konsultasiyada deyək.",
+      "cta": "Pulsuz konsultasiya",
       "founderHeading": "Layihənizə Paşa Quliyev rəhbərlik edir",
       "founderStats": [
         {
@@ -3607,7 +3607,8 @@
           "Korporativ infrastruktur",
           "Regional genişlənmə"
         ]
-      }
+      },
+      "ctaMessage": "Salam, xidmətləriniz haqqında məlumat almaq istəyirəm"
     },
     "portfolioPage": {
       "metaTitle": "İşlərimiz — veb sayt layihələri",

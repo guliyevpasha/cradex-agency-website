@@ -3486,29 +3486,29 @@
       "valuesTitle": "How we work",
       "values": [
         {
-          "t": "Show first",
-          "d": "You see the demo before you pay. If you do not like it, there is no obligation."
+          "t": "Plan first, then work",
+          "d": "Website, mobile app, ads, SEO or chatbot — on every project we agree the goal, price and timeline in writing before work starts."
         },
         {
           "t": "Honest advice",
-          "d": "We do not sell what you do not need. Sometimes the best solution is the simpler one."
+          "d": "We do not sell services you do not need. Sometimes the best solution is the simpler one."
         },
         {
           "t": "Everything in your name",
-          "d": "Domain, hosting, accounts and code belong to you after handover."
+          "d": "Domain, hosting, ad and social media accounts, code and data always belong to you."
         },
         {
-          "t": "Security from the start",
-          "d": "Sites are built to modern standards, with protection and backups."
+          "t": "Support after handover",
+          "d": "We show the numbers openly, monitor updates and security, and give direct support when you need it."
         }
       ],
       "founderTitle": "Founder",
       "founderName": "Pasha Guliyev",
       "founderRole": "Founder of Cradex Agency",
       "founderText": "A software engineer with over 5 years of experience who also works with digital marketing channels. He has launched more than 2000 successful ad campaigns and solves technical problems with social media accounts and websites. He looks at every business from both the technical and the marketing side, and oversees each project personally.",
-      "ctaTitle": "Let's build your project together",
-      "ctaText": "We will build a free demo of your site. If you like it, we continue.",
-      "cta": "I want a free demo",
+      "ctaTitle": "Let's grow your business together",
+      "ctaText": "Website, mobile app, ads, SEO, chatbot or technical support — tell us what you need and we will suggest the right solution and price in a free consultation.",
+      "cta": "Free consultation",
       "founderHeading": "Your project is led by Pasha Guliyev",
       "founderStats": [
         {
@@ -3603,7 +3603,8 @@
           "Corporate infrastructure",
           "Regional expansion"
         ]
-      }
+      },
+      "ctaMessage": "Hello, I would like to learn more about your services"
     },
     "portfolioPage": {
       "metaTitle": "Our Work — Website Projects",

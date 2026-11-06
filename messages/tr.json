@@ -3486,29 +3486,29 @@
       "valuesTitle": "Nasıl çalışıyoruz",
       "values": [
         {
-          "t": "Önce gösteriyoruz",
-          "d": "Ödemeden önce demoyu görürsünüz. Beğenmezseniz yükümlülük yok."
+          "t": "Önce plan, sonra iş",
+          "d": "Web sitesi, mobil uygulama, reklam, SEO veya chatbot — her projede hedefi, fiyatı ve süreyi işe başlamadan önce yazılı olarak netleştiriyoruz."
         },
         {
           "t": "Dürüst tavsiye",
-          "d": "İhtiyacınız olmayan hizmeti satmıyoruz. Bazen en iyi çözüm en sade olanıdır."
+          "d": "İhtiyacınız olmayan hizmeti satmıyoruz. Bazen en iyi çözüm daha sade olanıdır."
         },
         {
           "t": "Her şey sizin adınıza",
-          "d": "Alan adı, hosting, hesaplar ve kod tesliminden sonra size aittir."
+          "d": "Alan adı, hosting, reklam ve sosyal medya hesapları, kod ve veriler her zaman size aittir."
         },
         {
-          "t": "Güvenlik en başından",
-          "d": "Siteler modern standartlarla, koruma ve yedekleme ile kurulur."
+          "t": "Tesliminden sonra da yanınızdayız",
+          "d": "Rakamları açıkça gösteriyor, güncellemeleri ve güvenliği takip ediyor, ihtiyaç olduğunda doğrudan destek veriyoruz."
         }
       ],
       "founderTitle": "Kurucu",
       "founderName": "Paşa Quliyev",
       "founderRole": "Cradex Agency kurucusu",
       "founderText": "Yazılım mühendisliğinde 5 yılı aşkın deneyime sahip, aynı zamanda dijital pazarlama kanallarıyla çalışan bir uzman. 2000'den fazla başarılı reklam kampanyası kurdu; sosyal medya ve web siteleriyle ilgili teknik sorunları çözüyor. İşletmelere hem teknik hem pazarlama tarafından birlikte bakıyor ve her projeyi bizzat takip ediyor.",
-      "ctaTitle": "Projenizi birlikte kuralım",
-      "ctaText": "Sitenizin demosunu ücretsiz hazırlayalım, beğenirseniz devam edelim.",
-      "cta": "Ücretsiz demo istiyorum",
+      "ctaTitle": "İşinizi birlikte büyütelim",
+      "ctaText": "Web sitesi, mobil uygulama, reklam, SEO, chatbot veya teknik destek — ihtiyacınızı yazın, size uygun çözümü ve fiyatı ücretsiz danışmanlıkta söyleyelim.",
+      "cta": "Ücretsiz danışmanlık",
       "founderHeading": "Projenize Paşa Quliyev liderlik ediyor",
       "founderStats": [
         {
@@ -3603,7 +3603,8 @@
           "Kurumsal altyapı",
           "Bölgesel büyüme"
         ]
-      }
+      },
+      "ctaMessage": "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum"
     },
     "portfolioPage": {
       "metaTitle": "Projelerimiz — web sitesi çalışmaları",

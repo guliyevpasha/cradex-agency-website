@@ -9,9 +9,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowUpRight, Bot, Code2, Layers, Workflow } from 'lucide-react'
-import { getAllPortfolio } from '@/lib/data/portfolio'
-import { isShown } from '@/lib/site/portfolio'
-import { LOCALES } from '@/lib/site/navigation'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { ScrollFillText } from '@/components/ui/ScrollFillText'
 import { Reveal } from '@/components/ui/Reveal'
@@ -91,13 +88,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   // Founder figures as given by the owner.
   const founderStats = t.raw('founderStats') as { n: string; l: string }[]
   const founderSkills = t.raw('founderSkills') as string[]
-  const projects = (await getAllPortfolio(locale)).filter(isShown).length
-
-  const stats = [
-    ...(projects > 0 ? [{ n: `${projects}`, label: t('statProjects') }] : []),
-    { n: '2', label: t('statDemo') },
-    { n: `${LOCALES.length}`, label: t('statLanguages') },
-  ]
 
   return (
     <div className="pt-24 lg:pt-28">
@@ -160,23 +150,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             )
           })}
         </ul>
-      </section>
-
-      {/* Numbers */}
-      <section className="container-x py-12">
-        <Reveal className="rv-3d">
-          <div className="ab-stats relative overflow-hidden rounded-[36px] bg-ink px-8 py-12 text-snow sm:px-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-snow/60">{t('statsTitle')}</p>
-            <ul className="mt-8 grid gap-10 sm:grid-cols-3">
-              {stats.map((s) => (
-                <li key={s.label}>
-                  <span className="block text-6xl font-extrabold tracking-[-0.04em] text-brand sm:text-7xl">{s.n}</span>
-                  <span className="mt-2 block text-lg text-snow/80">{s.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
       </section>
 
       {/* How we work */}
@@ -270,7 +243,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <h2 className="text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl">{t('ctaTitle')}</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-snow/85">{t('ctaText')}</p>
           <div className="mt-8 flex justify-center">
-            <WhatsAppButton label={t('cta')} variant="light" />
+            <WhatsAppButton label={t('cta')} message={t('ctaMessage')} variant="light" />
           </div>
         </div>
       </section>
