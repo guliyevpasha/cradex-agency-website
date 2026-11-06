@@ -14,15 +14,16 @@ import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, productHref, serviceHref, isActive } from '@/lib/site/navigation'
+import { NAV_ITEMS, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive } from '@/lib/site/navigation'
 import { LangDropdown } from './LangDropdown'
 import { MobileMenu } from './MobileMenu'
 import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
 
-type MenuId = 'services' | 'products'
+type MenuId = 'services' | 'products' | 'pricing'
 
 const SERVICE_ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const PRODUCT_ICONS = { chatbot: Bot, combo: Share2 }
+const PRICING_ICONS = { web: Code2, ads: Megaphone }
 
 /*
  * Mega menu. Texts are shown in full (no clamping): the panel is wide enough
@@ -33,6 +34,7 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
   const tNav = useTranslations('site.nav')
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
+  const tP = useTranslations('site.pricingMenu')
 
   const footer = (
     <Link
@@ -44,6 +46,44 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
       <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
     </Link>
   )
+
+  if (id === 'pricing') {
+    return (
+      <div className="dd-panel absolute left-1/2 top-full z-50 w-[620px] -translate-x-1/2 pt-3">
+        <ul className="grid grid-cols-2 gap-3 rounded-[28px] border border-line bg-bg-primary p-3 shadow-float">
+          {PRICING_LINKS.map((p, i) => {
+            const Icon = PRICING_ICONS[p.id]
+            return (
+              <li key={p.id}>
+                <Link
+                  href={pricingHref(locale, p.id)}
+                  onClick={onClose}
+                  className={cn(
+                    'group flex h-full flex-col rounded-[22px] p-5 transition-transform hover:-translate-y-0.5',
+                    i === 0 ? 'bg-ink text-snow dark:bg-[#151A22]' : 'bg-bg-secondary text-text-primary'
+                  )}
+                >
+                  <span className="flex items-center justify-between">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong text-snow shadow-card">
+                      <Icon size={20} aria-hidden="true" />
+                    </span>
+                    <span className={cn('rounded-full px-2.5 py-1 text-[12px] font-bold', i === 0 ? 'bg-snow/10 text-snow' : 'bg-accent-primary/10 text-accent-ink')}>
+                      {tP(`${p.id}.badge`)}
+                    </span>
+                  </span>
+                  <span className="mt-4 text-[16px] font-bold leading-snug">{tP(`${p.id}.title`)}</span>
+                  <span className={cn('mt-1.5 text-[13.5px] leading-relaxed', i === 0 ? 'text-snow/75' : 'text-text-secondary')}>{tP(`${p.id}.text`)}</span>
+                  <span className={cn('mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold', i === 0 ? 'text-brand' : 'text-accent-ink')}>
+                    {tM('more')} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    )
+  }
 
   if (id === 'products') {
     return (

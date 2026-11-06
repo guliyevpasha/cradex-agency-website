@@ -53,6 +53,17 @@ export type ProductId = (typeof PRODUCT_LINKS)[number]['id']
 export const productHref = (locale: string, id: ProductId) =>
   `/${locale}/products/${PRODUCT_LINKS.find((p) => p.id === id)!.slug}`
 
+/** Pricing pages: websites at /pricing, digital ads under it (Azerbaijani slug in every language). */
+export const PRICING_LINKS = [
+  { id: 'web', path: '' },
+  { id: 'ads', path: '/reqemsal-reklam' },
+] as const
+
+export type PricingId = (typeof PRICING_LINKS)[number]['id']
+
+export const pricingHref = (locale: string, id: PricingId) =>
+  `/${locale}/pricing${PRICING_LINKS.find((p) => p.id === id)!.path}`
+
 /** Top-level menu, in display order. `menu` marks items with a dropdown. */
 export const NAV_ITEMS = [
   { key: 'home', href: '', exact: true },
@@ -60,7 +71,7 @@ export const NAV_ITEMS = [
   { key: 'products', href: '/products', menu: 'products' },
   { key: 'work', href: '/portfolio' },
   { key: 'about', href: '/about' },
-  { key: 'pricing', href: '/pricing' },
+  { key: 'pricing', href: '/pricing', menu: 'pricing' },
   { key: 'blog', href: '/journal' },
   { key: 'contact', href: '/contact' },
 ] as const

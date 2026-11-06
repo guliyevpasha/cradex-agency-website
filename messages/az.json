@@ -4084,6 +4084,221 @@
       ],
       "ask": "Sualınız var?",
       "askMessage": "Salam, Cradex Agency. Sosial media kombo paketləri ilə bağlı sualım var: "
+    },
+    "pricingMenu": {
+      "web": {
+        "title": "Veb sayt hazırlanması",
+        "text": "CMS və fərdi kod paketləri: aylıq hissəli və ya 20% endirimli illik ödəniş.",
+        "badge": "25 ₼/ay-dan"
+      },
+      "ads": {
+        "title": "Rəqəmsal reklamlar",
+        "text": "Meta, Google, TikTok və LinkedIn reklamlarının aylıq idarəetmə paketləri.",
+        "badge": "300 ₼/ay-dan"
+      }
+    },
+    "adsPricingPage": {
+      "metaTitle": "Rəqəmsal reklam qiymətləri — Meta, Google, TikTok, LinkedIn",
+      "metaDescription": "Meta, Google, TikTok və LinkedIn reklamlarının idarə olunması üçün aylıq paketlər: nələr daxildir, minimum reklam büdcəsi və əməkdaşlıq şərtləri.",
+      "eyebrow": "Qiymətlər · Rəqəmsal reklam",
+      "title": "Reklam büdcənizi peşəkar idarə edək",
+      "text": "Meta, Google, TikTok və LinkedIn reklamlarınızı qurur, hər həftə optimallaşdırır və aydın hesabat veririk. İdarəetmə haqqı sabitdir, reklam büdcəsini isə öz kartınızla birbaşa platformaya ödəyirsiniz.",
+      "perks": [
+        "Sabit aylıq idarəetmə haqqı",
+        "Reklam hesabı sizin adınıza",
+        "Həftəlik optimallaşdırma",
+        "Aylıq ətraflı hesabat",
+        "İllik ödənişdə 20% endirim"
+      ],
+      "ctaPlans": "Paketlərə baxın",
+      "ctaConsult": "Pulsuz konsultasiya",
+      "consultMessage": "Salam, reklam xidməti üzrə pulsuz konsultasiya istəyirəm",
+      "cardsTitle": "Reklam paketləri",
+      "cardsText": "Ödəniş üsulunu seçin: aylıq seçəndə aylıq idarəetmə haqqı, illik seçəndə 20% endirimli illik məbləğ görünür. Reklam büdcəsi hər iki halda ayrıca platformaya ödənilir.",
+      "billingTitle": "Ödəniş növü",
+      "billing": {
+        "monthly": "Aylıq",
+        "annual": "İllik"
+      },
+      "perMonth": "/ay",
+      "perYear": "/il",
+      "recommended": "Tövsiyə olunur",
+      "annualOnce": "12 ayın idarəetmə haqqı bir dəfəyə, 20% endirimlə",
+      "monthlyNote": "Hər ayın əvvəlində ödənilir",
+      "setupLabel": "Qurulum (birdəfəlik)",
+      "budgetLabel": "Minimum reklam büdcəsi",
+      "budgetValue": "{amount}/ay",
+      "budgetNote": "platformaya ödənilir, haqqımıza daxil deyil",
+      "includesTitle": "Daxildir",
+      "requirementsTitle": "Tələblər",
+      "order": "Sifariş et",
+      "orderMessage": "Salam, {plan} paketi ilə maraqlanıram ({billing})",
+      "packages": {
+        "meta": {
+          "name": "Meta Ads",
+          "sub": "Instagram + Facebook",
+          "text": "Müraciət, mesaj və onlayn satış üçün Instagram və Facebook reklamları.",
+          "features": [
+            "Strategiya və hədəf auditoriya araşdırması",
+            "Meta Pixel və Conversions API qurulması",
+            "GA4 / Google Tag Manager ilə izləmə",
+            "3 kampaniyaya qədər",
+            "Reklam mətnləri",
+            "A/B testlər",
+            "Həftəlik optimallaşdırma",
+            "Aylıq ətraflı hesabat"
+          ],
+          "requirements": [
+            "Biznes Meta hesabı və səhifəsi",
+            "Şəkil və videoları siz verirsiniz",
+            "Büdcə birbaşa Meta-ya ödənilir"
+          ]
+        },
+        "google": {
+          "name": "Google Ads",
+          "sub": "Axtarış · Performance Max · YouTube",
+          "text": "Sizi artıq axtaran müştərilərə Google axtarışında və şəbəkəsində çıxmaq üçün.",
+          "features": [
+            "Açar söz və rəqib araşdırması",
+            "Search və Performance Max kampaniyaları",
+            "Konversiya izləmə (GA4 / Tag Manager)",
+            "Mənfi açar sözlər siyahısı",
+            "Reklam mətnləri və genişləndirmələr",
+            "A/B testlər",
+            "Həftəlik optimallaşdırma",
+            "Aylıq ətraflı hesabat"
+          ],
+          "requirements": [
+            "İşlək sayt və ya açılış səhifəsi",
+            "Saytda izləmə kodunun quraşdırılmasına icazə",
+            "Büdcə birbaşa Google-a ödənilir"
+          ]
+        },
+        "tiktok": {
+          "name": "TikTok Ads",
+          "sub": "In-Feed · Spark Ads",
+          "text": "Gənc və aktiv auditoriyaya qısa videolarla çatmaq üçün.",
+          "features": [
+            "Strategiya və auditoriya seçimi",
+            "TikTok Pixel və Events API qurulması",
+            "Maraq və bənzər auditoriyalar",
+            "Reklam mətnləri və video üçün ilk saniyə ideyaları",
+            "Kreativ testləri",
+            "Həftəlik optimallaşdırma",
+            "Aylıq ətraflı hesabat"
+          ],
+          "requirements": [
+            "Şaquli video kreativləri siz verirsiniz",
+            "TikTok biznes hesabı",
+            "Büdcə birbaşa TikTok-a ödənilir"
+          ]
+        },
+        "linkedin": {
+          "name": "LinkedIn Ads",
+          "sub": "B2B · Lead Gen Forms",
+          "text": "Şirkətlərə və qərar verən mütəxəssislərə yönəlmiş B2B reklam.",
+          "features": [
+            "B2B auditoriya: vəzifə, sahə, şirkət ölçüsü",
+            "Insight Tag və konversiya izləmə",
+            "Sponsored Content kampaniyaları",
+            "Lead Gen Form qurulması",
+            "Reklam mətnləri",
+            "A/B testlər",
+            "Həftəlik optimallaşdırma",
+            "Aylıq ətraflı hesabat"
+          ],
+          "requirements": [
+            "Şirkətin LinkedIn səhifəsi",
+            "Klik qiyməti digər platformalardan yüksəkdir",
+            "Büdcə birbaşa LinkedIn-ə ödənilir"
+          ]
+        }
+      },
+      "commonTitle": "Hər paketə daxildir",
+      "commonText": "Hansı platformanı seçməyinizdən asılı olmayaraq, iş eyni qaydada aparılır.",
+      "common": [
+        {
+          "t": "Başlanğıc audit",
+          "d": "Mövcud hesab, sayt və rəqiblərə baxır, ilk ayın planını yazırıq."
+        },
+        {
+          "t": "Düzgün ölçmə",
+          "d": "Pixel, konversiyalar və analitika qurulmadan reklam işə salınmır."
+        },
+        {
+          "t": "Həftəlik optimallaşdırma",
+          "d": "Zəif reklamlar dayandırılır, büdcə nəticə verənlərə yönəldilir."
+        },
+        {
+          "t": "Aydın hesabat",
+          "d": "Hər həftə qısa yeniləmə, hər ay müraciət, qiymət və xərc üzrə ətraflı hesabat."
+        },
+        {
+          "t": "Birbaşa əlaqə",
+          "d": "Reklamlarınızı quran mütəxəssislə birbaşa yazışırsınız."
+        },
+        {
+          "t": "Şəffaf büdcə",
+          "d": "Reklam büdcəsi sizin kartınızdan platformaya gedir, hər manatı panelde görürsünüz."
+        }
+      ],
+      "termsTitle": "Şərtlərimiz və tələblərimiz",
+      "terms": [
+        {
+          "k": "İdarəetmə haqqı",
+          "v": "Aylıq ödənişdə hər ayın əvvəlində, illik ödənişdə bir dəfəyə 20% endirimlə ödənilir."
+        },
+        {
+          "k": "Qurulum",
+          "v": "Birdəfəlikdir: hesabın, izləmə kodlarının və ilk kampaniyaların qurulmasını əhatə edir."
+        },
+        {
+          "k": "Reklam büdcəsi",
+          "v": "Öz kartınızla birbaşa platformaya ödənilir, bizə ödənilmir və idarəetmə haqqına daxil deyil."
+        },
+        {
+          "k": "Reklam hesabı",
+          "v": "Sizin adınızadır və həmişə sizdə qalır. Biz yalnız idarəçi kimi qoşuluruq."
+        },
+        {
+          "k": "Vizuallar",
+          "v": "Şəkil və videoları siz verirsiniz, reklam mətnlərini biz yazırıq. Kreativ hazırlanması ayrıca razılaşdırılır."
+        },
+        {
+          "k": "Müddət",
+          "v": "Minimum müddət yoxdur — istədiyiniz vaxt dayandıra bilərsiniz. Ödənilmiş dövr geri qaytarılmır."
+        },
+        {
+          "k": "Nəticə",
+          "v": "Reklam nəticəsi bazardan, təklifdən və büdcədən asılıdır, ona görə konkret rəqəm vəd etmirik. Gördüyümüz işi və rəqəmləri hər ay açıq göstəririk."
+        }
+      ],
+      "resultsTitle": "Nəticələrimiz",
+      "resultsText": "Müştərilərimizin reklam panellərindən real nəticələr.",
+      "results": [],
+      "faqTitle": "Tez-tez verilən suallar",
+      "faq": [
+        {
+          "q": "Reklam büdcəsi idarəetmə haqqına daxildir?",
+          "a": "Xeyr. Reklam büdcəsini öz kartınızla birbaşa Meta, Google, TikTok və ya LinkedIn-ə ödəyirsiniz. Bizə yalnız idarəetmə haqqı və birdəfəlik qurulum ödənilir."
+        },
+        {
+          "q": "Minimum reklam büdcəsi niyə lazımdır?",
+          "a": "Platformaların alqoritmi öyrənmək üçün kifayət qədər göstərim və nəticə görməlidir. Çox kiçik büdcə ilə test aparmaq və etibarlı nəticə almaq mümkün olmur."
+        },
+        {
+          "q": "Bir neçə platformanı birlikdə götürə bilərəm?",
+          "a": "Bəli. Hər platforma üçün öz paketi hesablanır, birlikdə götürdükdə qurulumu və hesabatı bir yerdə aparırıq. Dəqiq məbləği konsultasiyada deyirik."
+        },
+        {
+          "q": "Nə vaxt nəticə görəcəyəm?",
+          "a": "Adətən ilk 2–4 həftə öyrənmə və test dövrüdür. Bundan sonra müraciətlərin qiyməti sabitləşir və büdcəni nəticə verən reklamlara yönəldirik."
+        },
+        {
+          "q": "Paketi dayandıra bilərəm?",
+          "a": "Bəli, minimum müddət yoxdur. Növbəti ayın ödənişini etməsəniz, reklamlar dayandırılır və hesab sizdə qalır."
+        }
+      ]
     }
   }
 }

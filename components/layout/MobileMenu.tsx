@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { LOCALES, NAV_ITEMS, PRODUCT_LINKS, SERVICE_IDS, productHref, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
+import { LOCALES, NAV_ITEMS, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
 
 type Props = { isOpen: boolean; onClose: () => void }
 
@@ -21,6 +21,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   const t = useTranslations('site.nav')
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
+  const tP = useTranslations('site.pricingMenu')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
@@ -51,6 +52,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   const sub = {
     services: SERVICE_IDS.map((s) => ({ href: serviceHref(locale, s), label: tS(`${s}.title`) })),
     products: PRODUCT_LINKS.map((p) => ({ href: productHref(locale, p.id), label: tM(`${p.id}.title`) })),
+    pricing: PRICING_LINKS.map((p) => ({ href: pricingHref(locale, p.id), label: tP(`${p.id}.title`) })),
   }
 
   return (
@@ -124,11 +126,14 @@ export function MobileMenu({ isOpen, onClose }: Props) {
                                 </Link>
                               </li>
                             ))}
-                            <li>
-                              <Link href={`/${locale}/${id}`} onClick={onClose} className="block rounded-xl px-3 py-2.5 text-[15px] font-semibold text-accent-ink">
-                                {id === 'services' ? t('allServices') : t('allProducts')}
-                              </Link>
-                            </li>
+                            {/* pricing has no overview page, both pages are listed above */}
+                            {id !== 'pricing' && (
+                              <li>
+                                <Link href={`/${locale}/${id}`} onClick={onClose} className="block rounded-xl px-3 py-2.5 text-[15px] font-semibold text-accent-ink">
+                                  {id === 'services' ? t('allServices') : t('allProducts')}
+                                </Link>
+                              </li>
+                            )}
                           </ul>
                         )}
                       </li>

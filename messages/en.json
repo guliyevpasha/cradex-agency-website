@@ -4080,6 +4080,221 @@
       ],
       "ask": "Have a question?",
       "askMessage": "Hello, Cradex Agency. I have a question about the social media combo packages: "
+    },
+    "pricingMenu": {
+      "web": {
+        "title": "Website Development",
+        "text": "CMS and custom-code packages: monthly instalments or a yearly payment with 20% off.",
+        "badge": "from 25 ₼/mo"
+      },
+      "ads": {
+        "title": "Digital Advertising",
+        "text": "Monthly management packages for Meta, Google, TikTok and LinkedIn ads.",
+        "badge": "from 300 ₼/mo"
+      }
+    },
+    "adsPricingPage": {
+      "metaTitle": "Digital Advertising Pricing — Meta, Google, TikTok, LinkedIn",
+      "metaDescription": "Monthly packages for managing Meta, Google, TikTok and LinkedIn ads: what is included, minimum ad budget and terms of cooperation.",
+      "eyebrow": "Pricing · Digital Advertising",
+      "title": "Let us manage your ad budget professionally",
+      "text": "We set up your Meta, Google, TikTok and LinkedIn ads, optimize them every week and report clearly. The management fee is fixed, and you pay the ad budget directly to the platform with your own card.",
+      "perks": [
+        "Fixed monthly management fee",
+        "Ad account in your name",
+        "Weekly optimization",
+        "Detailed monthly report",
+        "20% off on yearly payment"
+      ],
+      "ctaPlans": "View packages",
+      "ctaConsult": "Free consultation",
+      "consultMessage": "Hello, I would like a free consultation on advertising services",
+      "cardsTitle": "Advertising packages",
+      "cardsText": "Choose a billing option: monthly shows the monthly management fee, yearly shows the annual amount with 20% off. The ad budget is paid separately to the platform in both cases.",
+      "billingTitle": "Billing",
+      "billing": {
+        "monthly": "Monthly",
+        "annual": "Yearly"
+      },
+      "perMonth": "/mo",
+      "perYear": "/yr",
+      "recommended": "Recommended",
+      "annualOnce": "12 months of management fee in one payment, 20% off",
+      "monthlyNote": "Paid at the start of each month",
+      "setupLabel": "Setup (one-time)",
+      "budgetLabel": "Minimum ad budget",
+      "budgetValue": "{amount}/mo",
+      "budgetNote": "paid to the platform, not included in our fee",
+      "includesTitle": "Included",
+      "requirementsTitle": "Requirements",
+      "order": "Order",
+      "orderMessage": "Hello, I am interested in the {plan} package ({billing})",
+      "packages": {
+        "meta": {
+          "name": "Meta Ads",
+          "sub": "Instagram + Facebook",
+          "text": "Instagram and Facebook ads for leads, messages and online sales.",
+          "features": [
+            "Strategy and target audience research",
+            "Meta Pixel and Conversions API setup",
+            "Tracking with GA4 / Google Tag Manager",
+            "Up to 3 campaigns",
+            "Ad copywriting",
+            "A/B tests",
+            "Weekly optimization",
+            "Detailed monthly report"
+          ],
+          "requirements": [
+            "A business Meta account and page",
+            "You provide images and videos",
+            "Budget is paid directly to Meta"
+          ]
+        },
+        "google": {
+          "name": "Google Ads",
+          "sub": "Search · Performance Max · YouTube",
+          "text": "Appear on Google Search and its network for customers already looking for you.",
+          "features": [
+            "Keyword and competitor research",
+            "Search and Performance Max campaigns",
+            "Conversion tracking (GA4 / Tag Manager)",
+            "Negative keyword list",
+            "Ad copy and extensions",
+            "A/B tests",
+            "Weekly optimization",
+            "Detailed monthly report"
+          ],
+          "requirements": [
+            "A working website or landing page",
+            "Permission to install tracking code on the site",
+            "Budget is paid directly to Google"
+          ]
+        },
+        "tiktok": {
+          "name": "TikTok Ads",
+          "sub": "In-Feed · Spark Ads",
+          "text": "Reach a young, active audience with short videos.",
+          "features": [
+            "Strategy and audience selection",
+            "TikTok Pixel and Events API setup",
+            "Interest and lookalike audiences",
+            "Ad copy and first-second hook ideas for video",
+            "Creative testing",
+            "Weekly optimization",
+            "Detailed monthly report"
+          ],
+          "requirements": [
+            "You provide vertical video creatives",
+            "A TikTok business account",
+            "Budget is paid directly to TikTok"
+          ]
+        },
+        "linkedin": {
+          "name": "LinkedIn Ads",
+          "sub": "B2B · Lead Gen Forms",
+          "text": "B2B advertising aimed at companies and decision-makers.",
+          "features": [
+            "B2B audience: job title, industry, company size",
+            "Insight Tag and conversion tracking",
+            "Sponsored Content campaigns",
+            "Lead Gen Form setup",
+            "Ad copywriting",
+            "A/B tests",
+            "Weekly optimization",
+            "Detailed monthly report"
+          ],
+          "requirements": [
+            "A company LinkedIn page",
+            "Cost per click is higher than on other platforms",
+            "Budget is paid directly to LinkedIn"
+          ]
+        }
+      },
+      "commonTitle": "Included in every package",
+      "commonText": "Whichever platform you choose, the work follows the same process.",
+      "common": [
+        {
+          "t": "Initial audit",
+          "d": "We review your current account, website and competitors, then write the plan for the first month."
+        },
+        {
+          "t": "Proper measurement",
+          "d": "No ads go live until the pixel, conversions and analytics are set up."
+        },
+        {
+          "t": "Weekly optimization",
+          "d": "Weak ads are paused and budget moves to the ones that perform."
+        },
+        {
+          "t": "Clear reporting",
+          "d": "A short update every week and a detailed report each month on leads, cost and spend."
+        },
+        {
+          "t": "Direct contact",
+          "d": "You talk directly to the specialist who runs your ads."
+        },
+        {
+          "t": "Transparent budget",
+          "d": "The ad budget goes from your card to the platform, and you see every manat in the dashboard."
+        }
+      ],
+      "termsTitle": "Our terms and requirements",
+      "terms": [
+        {
+          "k": "Management fee",
+          "v": "Paid at the start of each month on monthly billing, or once with 20% off on yearly billing."
+        },
+        {
+          "k": "Setup",
+          "v": "One-time: covers setting up the account, tracking codes and the first campaigns."
+        },
+        {
+          "k": "Ad budget",
+          "v": "Paid directly to the platform with your own card. It is not paid to us and is not part of the management fee."
+        },
+        {
+          "k": "Ad account",
+          "v": "It is in your name and always stays with you. We only join as a manager."
+        },
+        {
+          "k": "Visuals",
+          "v": "You provide images and videos, we write the ad copy. Creative production is agreed separately."
+        },
+        {
+          "k": "Term",
+          "v": "No minimum term — you can stop at any time. A paid period is non-refundable."
+        },
+        {
+          "k": "Results",
+          "v": "Ad results depend on the market, the offer and the budget, so we do not promise specific figures. We show the work done and the numbers openly every month."
+        }
+      ],
+      "resultsTitle": "Our results",
+      "resultsText": "Real results from our clients' ad dashboards.",
+      "results": [],
+      "faqTitle": "Frequently asked questions",
+      "faq": [
+        {
+          "q": "Is the ad budget included in the management fee?",
+          "a": "No. You pay the ad budget directly to Meta, Google, TikTok or LinkedIn with your own card. You pay us only the management fee and the one-time setup."
+        },
+        {
+          "q": "Why is a minimum ad budget needed?",
+          "a": "Platform algorithms need enough impressions and results to learn. With a very small budget it is hard to run tests and get reliable results."
+        },
+        {
+          "q": "Can I combine several platforms?",
+          "a": "Yes. Each platform has its own package, and when combined we handle setup and reporting together. We give the exact amount during the consultation."
+        },
+        {
+          "q": "When will I see results?",
+          "a": "The first 2–4 weeks are usually a learning and testing period. After that the cost per lead stabilizes and we move budget to the ads that perform."
+        },
+        {
+          "q": "Can I stop the package?",
+          "a": "Yes, there is no minimum term. If you do not pay for the next month, the ads are stopped and the account stays with you."
+        }
+      ]
     }
   }
 }
