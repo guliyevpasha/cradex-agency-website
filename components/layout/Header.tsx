@@ -9,20 +9,21 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowRight, Bot, ChevronDown, Code2, Megaphone, Menu, Search, Share2, ShieldCheck, Smartphone } from 'lucide-react'
+import { ArrowRight, Bot, ChevronDown, Code2, Megaphone, Menu, Search, Share2, ShieldCheck, Smartphone, Sparkles, Users } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { NAV_ITEMS, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive } from '@/lib/site/navigation'
+import { ABOUT_LINKS, NAV_ITEMS, PRICING_LINKS, aboutHref, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive } from '@/lib/site/navigation'
 import { LangDropdown } from './LangDropdown'
 import { MobileMenu } from './MobileMenu'
 import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
 
-type MenuId = 'services' | 'products' | 'pricing'
+type MenuId = 'services' | 'products' | 'pricing' | 'about'
 
 const SERVICE_ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const PRODUCT_ICONS = { chatbot: Bot, combo: Share2 }
+const ABOUT_ICONS = { who: Sparkles, clients: Users }
 const PRICING_ICONS = { web: Code2, ads: Megaphone, mobile: Smartphone, seo: Search, support: ShieldCheck }
 
 /*
@@ -34,6 +35,42 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
   const tP = useTranslations('site.pricingMenu')
+  const tA = useTranslations('site.aboutMenu')
+
+  if (id === 'about') {
+    return (
+      <div className="dd-panel absolute left-1/2 top-full z-50 w-[560px] -translate-x-1/2 pt-3">
+        <div className="rounded-[28px] border border-line bg-bg-primary p-3 shadow-float">
+          <ul className="grid grid-cols-2 gap-3">
+            {ABOUT_LINKS.map((p, i) => {
+              const Icon = ABOUT_ICONS[p.id]
+              return (
+                <li key={p.id}>
+                  <Link
+                    href={aboutHref(locale, p.id)}
+                    onClick={onClose}
+                    className={cn(
+                      'group flex h-full flex-col rounded-[22px] p-5 transition-transform hover:-translate-y-0.5',
+                      i === 0 ? 'bg-ink text-snow dark:bg-[#151A22]' : 'bg-bg-secondary text-text-primary'
+                    )}
+                  >
+                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong text-snow shadow-card">
+                      <Icon size={20} aria-hidden="true" />
+                    </span>
+                    <span className="mt-4 text-[16px] font-bold leading-snug">{tA(`${p.id}.title`)}</span>
+                    <span className={cn('mt-1.5 text-[13.5px] leading-relaxed', i === 0 ? 'text-snow/75' : 'text-text-secondary')}>{tA(`${p.id}.text`)}</span>
+                    <span className={cn('mt-auto inline-flex items-center gap-1.5 pt-4 text-[13px] font-semibold', i === 0 ? 'text-brand' : 'text-accent-ink')}>
+                      {tM('more')} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+    )
+  }
 
   if (id === 'pricing') {
     const [main, ...others] = PRICING_LINKS
@@ -243,7 +280,7 @@ export function Header() {
           <nav ref={navRef} aria-label={t('mainNav')} className="hidden flex-1 justify-center xl:flex">
             <ul className="flex items-center gap-0.5 2xl:gap-1">
               {NAV_ITEMS.map((item) => {
-                const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact)
+                const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact, 'also' in item ? item.also : [])
                 const href = `/${locale}${item.href}`
                 const linkCls = cn(
                   'relative inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[14px] font-medium transition-colors 2xl:px-3',

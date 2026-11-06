@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils/cn'
 import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { LOCALES, NAV_ITEMS, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
+import { ABOUT_LINKS, LOCALES, NAV_ITEMS, aboutHref, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
 
 type Props = { isOpen: boolean; onClose: () => void }
 
@@ -22,6 +22,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
   const tP = useTranslations('site.pricingMenu')
+  const tA = useTranslations('site.aboutMenu')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
@@ -52,6 +53,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   const sub = {
     services: SERVICE_IDS.map((s) => ({ href: serviceHref(locale, s), label: tS(`${s}.title`) })),
     products: PRODUCT_LINKS.map((p) => ({ href: productHref(locale, p.id), label: tM(`${p.id}.title`) })),
+    about: ABOUT_LINKS.map((p) => ({ href: aboutHref(locale, p.id), label: tA(`${p.id}.title`) })),
     pricing: PRICING_LINKS.map((p) => ({ href: pricingHref(locale, p.id), label: tP(`${p.id}.title`) })),
   }
 
@@ -96,7 +98,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
             <nav aria-label={t('mainNav')} className="flex-1 overflow-y-auto px-3 py-4">
               <ul className="flex flex-col">
                 {NAV_ITEMS.map((item) => {
-                  const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact)
+                  const active = isActive(pathname, locale, item.href, 'exact' in item && item.exact, 'also' in item ? item.also : [])
                   const rowCls = cn(
                     'flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-[17px] font-semibold transition-colors',
                     active ? 'bg-bg-secondary text-text-primary' : 'text-text-primary hover:bg-bg-secondary'

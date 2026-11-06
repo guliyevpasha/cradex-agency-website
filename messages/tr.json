@@ -1251,16 +1251,6 @@
     },
     "noItems": "Bu kategoride proje bulunamadı"
   },
-  "clients": {
-    "title": "Müşteriler",
-    "subtitle": "Bizimle Büyüyen Markalar",
-    "heading": "Birlikte Büyüdüğümüz",
-    "headingAccent": "Markalar",
-    "description": "2020'den beri 10'dan fazla sektörde 100'den fazla müşteriye hizmet veriyoruz. Onların başarısı bizim başarımızdır.",
-    "breadcrumb": {
-      "home": "Ana Sayfa"
-    }
-  },
   "notFound": {
     "title": "404 — Sayfa Bulunamadı",
     "subtitle": "Aradığınız sayfa mevcut değil",
@@ -4825,6 +4815,31 @@
           "dün"
         ]
       }
+    },
+    "aboutMenu": {
+      "who": {
+        "title": "Biz kimiz",
+        "text": "Ekibimiz, misyonumuz ve nasıl çalıştığımız."
+      },
+      "clients": {
+        "title": "Müşterilerimiz",
+        "text": "Bize güvenen markalar ve birlikte hayata geçirdiğimiz işler."
+      }
+    },
+    "clientsPage": {
+      "metaTitle": "Müşterilerimiz — Bize Güvenen Markalar | Cradex Agency",
+      "metaDescription": "Cradex Agency ile çalışan şirketler: web sitesi geliştirme, reklam, SEO ve teknik destek alanlarında iş birliği yaptığımız markalar.",
+      "eyebrow": "Müşterilerimiz",
+      "title": "Bize güvenen markalar",
+      "text": "Bankacılıktan sağlığa, lojistikten e-ticarete kadar farklı sektörlerden şirketler dijital işlerini bize emanet ediyor.",
+      "count": "<b>{n}</b> marka bizimle çalışıyor",
+      "portfolio": "Projelerimize göz atın",
+      "gridTitle": "Birlikte çalıştığımız şirketler",
+      "gridText": "Her logonun arkasında gerçek bir proje ve devam eden bir iş birliği var.",
+      "ctaTitle": "Sıradaki logo sizin olabilir",
+      "ctaText": "Web sitesi, reklam, SEO ya da teknik destek: işinize uygun çözümü birlikte seçelim.",
+      "cta": "Ücretsiz danışmanlık",
+      "ctaMessage": "Merhaba, Cradex Agency ile çalışmak istiyorum"
     }
   }
 }

@@ -1,90 +1,102 @@
 /**
- * Clients page: intro plus the partner logo grid.
+ * Clients: hero with the 3D logo wall, every logo on its own card, then a
+ * consultation call to action. Logos come from Sanity (static list as
+ * fallback), so the brand count is always the real one.
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { getPartners } from '@/lib/data/partners'
 import { ClientsGrid } from '@/components/clients/ClientsGrid'
-import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { ClientsWall } from '@/components/clients/ClientsWall'
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
+import { Reveal } from '@/components/ui/Reveal'
+import { Tilt } from '@/components/ui/Tilt'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
+type Params = Promise<{ locale: string }>
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'clients' })
+  const t = await getTranslations({ locale, namespace: 'site.clientsPage' })
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates: { canonical: `/${locale}/clients` },
   }
 }
 
-export default async function ClientsPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ClientsPage({ params }: { params: Params }) {
   const { locale } = await params
   setRequestLocale(locale)
-  
-  const t = await getTranslations('clients')
+  const t = await getTranslations({ locale, namespace: 'site.clientsPage' })
   const partners = await getPartners()
 
   return (
-    <div className="min-h-screen pt-20">
-      {/* Breadcrumb */}
-      <div className="bg-bg-secondary border-b border-border/10">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4">
-          <nav className="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
-            <Link
-              href={`/${locale}`}
-              className="text-text-secondary hover:text-text-primary transition-colors"
-            >
-              {t('breadcrumb.home')}
-            </Link>
-            <ChevronRight size={14} className="text-text-tertiary" />
-            <span className="text-text-primary font-medium">{t('title')}</span>
-          </nav>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-primary">
-        {/* Background gradient */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-20"
-          style={{
-            background: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(36,160,255,0.15) 0%, transparent 50%)
-            `,
-          }}
-          aria-hidden="true"
-        />
-
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          {/* Eyebrow */}
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 rounded-full bg-bg-tertiary/50 border border-accent-primary/20 text-sm font-medium text-text-secondary uppercase tracking-wider">
-              / {t('subtitle')} /
+    <div className="pt-24 lg:pt-28">
+      {/* Hero */}
+      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-10 pt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:pb-16">
+        <div>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
+          <AnimatedHeading
+            as="h1"
+            className="mt-4 text-[2.6rem] font-extrabold leading-[1.04] tracking-[-0.04em] text-text-primary sm:text-6xl"
+            text={t('title')}
+          />
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary">{t('text')}</p>
+          <p className="mt-7 inline-flex items-center gap-3 rounded-full border border-line bg-bg-secondary py-2 pl-2 pr-5 text-[15px] font-semibold text-text-primary">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-strong text-snow">
+              <BadgeCheck size={19} aria-hidden="true" />
             </span>
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
-            <span className="text-text-primary">{t('heading')} </span>
-            <span className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary bg-clip-text text-transparent">
-              {t('headingAccent')}
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-text-secondary text-lg lg:text-xl max-w-3xl mx-auto">
-            {t('description')}
+            <span>{t.rich('count', { n: partners.length, b: (chunks) => <b className="font-extrabold text-accent-ink">{chunks}</b> })}</span>
           </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <WhatsAppButton label={t('cta')} message={t('ctaMessage')} size="md" />
+            <Link
+              href={`/${locale}/portfolio`}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-5 py-2 text-sm font-semibold text-text-primary transition-colors hover:bg-text-primary hover:text-bg-primary"
+            >
+              {t('portfolio')}
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
         </div>
+
+        <Reveal className="rv-3d">
+          <ClientsWall partners={partners} />
+        </Reveal>
       </section>
 
-      {/* Clients Grid */}
-      <ClientsGrid partners={partners} />
+      {/* All logos */}
+      <section className="container-x py-16 lg:py-24">
+        <div className="mb-10 max-w-2xl">
+          <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('gridTitle')} />
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">{t('gridText')}</p>
+        </div>
+        <ClientsGrid partners={partners} />
+      </section>
+
+      {/* CTA */}
+      <section className="container-x pb-24 pt-4">
+        <Reveal className="rv-3d">
+          <Tilt max={3}>
+            <div className="relative overflow-hidden rounded-[36px] bg-brand-strong px-7 py-14 text-snow sm:px-14 sm:py-20">
+              <span className="tilt-glare" />
+              <span aria-hidden="true" className="hm-float absolute -right-20 -top-24 h-80 w-80 rounded-full bg-snow/15" />
+              <span aria-hidden="true" className="hm-float-slow absolute -bottom-28 right-32 h-64 w-64 rounded-full bg-ink/15" />
+              <div className="tilt-z1 relative max-w-2xl">
+                <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl" text={t('ctaTitle')} />
+                <p className="mt-4 text-lg text-snow/85">{t('ctaText')}</p>
+                <div className="mt-8">
+                  <WhatsAppButton label={t('cta')} message={t('ctaMessage')} variant="light" />
+                </div>
+              </div>
+            </div>
+          </Tilt>
+        </Reveal>
+      </section>
     </div>
   )
 }

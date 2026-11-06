@@ -1251,16 +1251,6 @@
     },
     "noItems": "No projects found in this category"
   },
-  "clients": {
-    "title": "Clients",
-    "subtitle": "Brands Growing With Us",
-    "heading": "Brands We Grow",
-    "headingAccent": "Together",
-    "description": "Since 2020, we've served over 100 clients across 10+ industries. Their success is our success.",
-    "breadcrumb": {
-      "home": "Home"
-    }
-  },
   "notFound": {
     "title": "404 â€” Page Not Found",
     "subtitle": "The page you are looking for does not exist",
@@ -4825,6 +4815,31 @@
           "yesterday"
         ]
       }
+    },
+    "aboutMenu": {
+      "who": {
+        "title": "Who we are",
+        "text": "Our team, our mission and how we work."
+      },
+      "clients": {
+        "title": "Our clients",
+        "text": "The brands that trust us and the work we build together."
+      }
+    },
+    "clientsPage": {
+      "metaTitle": "Our Clients — Brands That Trust Us | Cradex Agency",
+      "metaDescription": "Companies working with Cradex Agency: brands we partner with on website development, advertising, SEO and technical support.",
+      "eyebrow": "Our clients",
+      "title": "Brands that trust us",
+      "text": "From banking to healthcare, logistics to e-commerce, companies across industries rely on us for their digital work.",
+      "count": "<b>{n}</b> brands work with us",
+      "portfolio": "See our work",
+      "gridTitle": "Companies we work with",
+      "gridText": "Behind every logo is a real project and an ongoing partnership.",
+      "ctaTitle": "The next logo could be yours",
+      "ctaText": "Website, advertising, SEO or technical support: let's pick the right solution for your business.",
+      "cta": "Free consultation",
+      "ctaMessage": "Hello, I'd like to work with Cradex Agency"
     }
   }
 }

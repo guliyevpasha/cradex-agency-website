@@ -1524,16 +1524,6 @@
     },
     "noItems": "Bu kateqoriyada layihə tapılmadı"
   },
-  "clients": {
-    "title": "Müştərilər",
-    "subtitle": "Bizimlə Böyüdüyümüz Brendlər",
-    "heading": "Birlikdə Böyüdüyümüz",
-    "headingAccent": "Brendlər",
-    "description": "2020-ci ildən bəri 10-dan çox sektorda 100-dən artıq müştəriyə xidmət göstəririk. Onların uğuru bizim uğurumuzdur.",
-    "breadcrumb": {
-      "home": "Ana Səhifə"
-    }
-  },
   "notFound": {
     "title": "404 — Səhifə Tapılmadı",
     "subtitle": "Axtardığınız səhifə mövcud deyil",
@@ -4825,6 +4815,31 @@
           "dünən"
         ]
       }
+    },
+    "aboutMenu": {
+      "who": {
+        "title": "Biz kimik",
+        "text": "Komandamız, missiyamız və necə işlədiyimiz."
+      },
+      "clients": {
+        "title": "Müştərilərimiz",
+        "text": "Bizə güvənən brendlər və birlikdə qurduğumuz işlər."
+      }
+    },
+    "clientsPage": {
+      "metaTitle": "Müştərilərimiz — bizə güvənən brendlər | Cradex Agency",
+      "metaDescription": "Cradex Agency ilə işləyən şirkətlər: veb sayt, reklam, SEO və texniki dəstək üzrə əməkdaşlıq etdiyimiz brendlər.",
+      "eyebrow": "Müştərilərimiz",
+      "title": "Bizə güvənən brendlər",
+      "text": "Bankdan klinikaya, logistikadan e-ticarətə qədər fərqli sahələrdən şirkətlər rəqəmsal işlərini bizə etibar edir.",
+      "count": "<b>{n}</b> brend bizimlə işləyir",
+      "portfolio": "İşlərimizə baxın",
+      "gridTitle": "Birlikdə işlədiyimiz şirkətlər",
+      "gridText": "Hər loqonun arxasında real layihə və davam edən əməkdaşlıq var.",
+      "ctaTitle": "Növbəti loqo sizin ola bilər",
+      "ctaText": "Sayt, reklam, SEO və ya texniki dəstək — biznesinizə uyğun həlli birlikdə seçək.",
+      "cta": "Pulsuz konsultasiya",
+      "ctaMessage": "Salam, Cradex Agency ilə işləmək istəyirəm"
     }
   }
 }

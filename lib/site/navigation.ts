@@ -67,21 +67,32 @@ export type PricingId = (typeof PRICING_LINKS)[number]['id']
 export const pricingHref = (locale: string, id: PricingId) =>
   `/${locale}/pricing${PRICING_LINKS.find((p) => p.id === id)!.path}`
 
+/** "About" dropdown: who we are and the clients wall. */
+export const ABOUT_LINKS = [
+  { id: 'who', path: '/about' },
+  { id: 'clients', path: '/clients' },
+] as const
+
+export type AboutId = (typeof ABOUT_LINKS)[number]['id']
+
+export const aboutHref = (locale: string, id: AboutId) => `/${locale}${ABOUT_LINKS.find((p) => p.id === id)!.path}`
+
 /** Top-level menu, in display order. `menu` marks items with a dropdown. */
 export const NAV_ITEMS = [
   { key: 'home', href: '', exact: true },
   { key: 'services', href: '/services', menu: 'services' },
   { key: 'products', href: '/products', menu: 'products' },
   { key: 'work', href: '/portfolio' },
-  { key: 'about', href: '/about' },
+  { key: 'about', href: '/about', menu: 'about', also: ['/clients'] },
   { key: 'pricing', href: '/pricing', menu: 'pricing' },
   { key: 'blog', href: '/journal' },
   { key: 'contact', href: '/contact' },
 ] as const
 
-export function isActive(pathname: string, locale: string, href: string, exact = false): boolean {
+export function isActive(pathname: string, locale: string, href: string, exact = false, also: readonly string[] = []): boolean {
   const full = `/${locale}${href}`
   if (exact) return pathname === full || pathname === `${full}/`
+  if (also.some((a) => isActive(pathname, locale, a))) return true
   return pathname === full || pathname.startsWith(`${full}/`)
 }
 
