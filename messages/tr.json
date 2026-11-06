@@ -4708,6 +4708,60 @@
           "a": "Evet, minimum süre yoktur. Bir sonraki ayın ödemesini yapmazsanız reklamlar durdurulur ve hesap sizde kalır."
         }
       ]
+    },
+    "heroMocks": {
+      "mobile": {
+        "greeting": "Merhaba, Aysel 👋",
+        "summary": "Bu ayki siparişler",
+        "orders": [
+          "Sipariş #1042",
+          "Sipariş #1041",
+          "Sipariş #1040"
+        ],
+        "delivered": "Teslim edildi",
+        "onWay": "Yolda",
+        "tabs": [
+          "Ana Sayfa",
+          "Katalog",
+          "Sepet",
+          "Profil"
+        ],
+        "catalog": "Katalog",
+        "push": "Yeni sipariş",
+        "pushText": "2 ürün · 48 ₼",
+        "rating": "Mağaza puanı"
+      },
+      "seo": {
+        "query": "web sitesi yapımı bakü",
+        "site": "siteniz.az",
+        "resultTitle": "Bakü'de web sitesi yapımı — hızlı ve SEO'ya hazır",
+        "aiLabel": "Yapay zekâ yanıtı",
+        "aiSource": "Kaynak",
+        "position": "Sıra",
+        "traffic": "Organik trafik",
+        "speed": "Hız"
+      },
+      "support": {
+        "status": "Tüm sistemler çalışıyor",
+        "uptime": "Çalışma süresi · 30 gün",
+        "backup": "Yedekleme",
+        "backupValue": "Bugün, 03:00",
+        "ssl": "SSL sertifikası",
+        "sslValue": "Aktif · 284 gün",
+        "security": "Güvenlik taraması",
+        "securityValue": "Temiz",
+        "speed": "Hız",
+        "log": [
+          "Eklenti güncellendi",
+          "Yedek alındı",
+          "Güvenlik taraması tamamlandı"
+        ],
+        "ago": [
+          "2 dk önce",
+          "3 saat önce",
+          "dün"
+        ]
+      }
     }
   }
 }

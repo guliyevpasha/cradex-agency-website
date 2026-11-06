@@ -16,6 +16,7 @@ import { BlogShowcase } from '@/components/home/BlogShowcase'
 import { AdsDashboard } from '@/components/services/AdsDashboard'
 import { AdsCta, AdsManage, AdsPricing, AdsPrinciple } from '@/components/services/AdsSections'
 import { WebIncluded } from '@/components/services/WebIncluded'
+import { HERO_MOCKS } from '@/components/services/HeroMocks'
 import { getAllArticles } from '@/lib/data/journal'
 import type { Article } from '@/types'
 import { DomainChecker } from '@/components/home/DomainChecker'
@@ -61,13 +62,15 @@ export default async function ServicePage({ params }: { params: Params }) {
   const faq = t.raw(`${id}.faq`) as Faq[]
   const others = SERVICE_IDS.filter((s) => s !== id)
   const articles = id === 'web' || id === 'ads' ? await getAllArticles(locale) : []
+  // Services with a device mockup in the hero; web keeps its 3D scene.
+  const HeroMock = id === 'ads' ? AdsDashboard : id === 'web' ? null : HERO_MOCKS[id]
   let n = 0
 
   return (
     <div className="pt-24 lg:pt-28">
       {/* Hero */}
       {/* The ads monitor needs the width of a full column, so it stacks until xl. */}
-      <section className={cn('container-x grid items-center gap-12 pb-16 pt-6 lg:pb-24', id === 'ads' ? 'xl:grid-cols-[1.05fr_1fr]' : 'lg:grid-cols-[1.05fr_1fr]')}>
+      <section className={cn('container-x grid items-center gap-12 pb-16 pt-6 lg:pb-24', HeroMock ? 'xl:grid-cols-[1.05fr_1fr]' : 'lg:grid-cols-[1.05fr_1fr]')}>
         <div>
           <nav aria-label="breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-text-muted">
             <Link href={`/${locale}`} className="inline-flex min-h-9 items-center hover:text-text-primary">{t('home')}</Link>
@@ -95,10 +98,10 @@ export default async function ServicePage({ params }: { params: Params }) {
           </div>
         </div>
 
-        {id === 'ads' ? (
+        {HeroMock ? (
           <Reveal className="rv-3d">
             <Tilt max={6}>
-              <AdsDashboard />
+              <HeroMock />
             </Tilt>
           </Reveal>
         ) : (

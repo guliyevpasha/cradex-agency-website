@@ -4708,6 +4708,60 @@
           "a": "Yes, there is no minimum term. If you do not pay for the next month, the ads are stopped and the account stays with you."
         }
       ]
+    },
+    "heroMocks": {
+      "mobile": {
+        "greeting": "Hi, Aysel 👋",
+        "summary": "Orders this month",
+        "orders": [
+          "Order #1042",
+          "Order #1041",
+          "Order #1040"
+        ],
+        "delivered": "Delivered",
+        "onWay": "On the way",
+        "tabs": [
+          "Home",
+          "Catalog",
+          "Cart",
+          "Profile"
+        ],
+        "catalog": "Catalog",
+        "push": "New order",
+        "pushText": "2 items · 48 ₼",
+        "rating": "Store rating"
+      },
+      "seo": {
+        "query": "website development baku",
+        "site": "yoursite.az",
+        "resultTitle": "Website development in Baku — fast and SEO-ready",
+        "aiLabel": "AI answer",
+        "aiSource": "Source",
+        "position": "Position",
+        "traffic": "Organic traffic",
+        "speed": "Speed"
+      },
+      "support": {
+        "status": "All systems operational",
+        "uptime": "Uptime · 30 days",
+        "backup": "Backup",
+        "backupValue": "Today, 03:00",
+        "ssl": "SSL certificate",
+        "sslValue": "Active · 284 days",
+        "security": "Security scan",
+        "securityValue": "Clean",
+        "speed": "Speed",
+        "log": [
+          "Plugin updated",
+          "Backup completed",
+          "Security scan finished"
+        ],
+        "ago": [
+          "2 min ago",
+          "3 hours ago",
+          "yesterday"
+        ]
+      }
     }
   }
 }

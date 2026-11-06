@@ -12,7 +12,7 @@ import { ArrowDown, Check, ChevronDown } from 'lucide-react'
 import { LOCALES } from '@/lib/site/navigation'
 import { SERVICE_PRICING, SERVICE_PRICING_IDS, SERVICE_PRICING_SLUGS, annualOf, servicePricingIdBySlug, servicePricingProblems } from '@/lib/site/servicePricing'
 import { ServicePackages } from '@/components/pricing/ServicePackages'
-import { ServiceScene } from '@/components/home/ServiceScene'
+import { HERO_MOCKS } from '@/components/services/HeroMocks'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
@@ -54,6 +54,7 @@ export default async function ServicePricingPage({ params }: { params: Params })
   const perks = t.raw('perks') as string[]
   const terms = t.raw('terms') as { k: string; v: string }[]
   const faq = t.raw('faq') as Faq[]
+  const HeroMock = HERO_MOCKS[id]
 
   const problems = servicePricingProblems()
   if (problems.length > 0) console.error('[service pricing]', problems.join('; '))
@@ -77,7 +78,7 @@ export default async function ServicePricingPage({ params }: { params: Params })
   return (
     <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-6 pt-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-8 lg:pb-10">
+      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-6 pt-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] xl:gap-8 lg:pb-10">
         <div>
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
           <AnimatedHeading
@@ -107,14 +108,8 @@ export default async function ServicePricingPage({ params }: { params: Params })
         </div>
 
         <Reveal className="rv-3d">
-          <Tilt max={10}>
-            <div className="svc-stage relative flex aspect-[5/4] items-center justify-center rounded-[36px] border border-line bg-bg-secondary shadow-card">
-              <span className="tilt-glare" />
-              <span className="svc-stage-grid" aria-hidden="true" />
-              <div className="tilt-z2">
-                <ServiceScene id={id} className="sc-xl" />
-              </div>
-            </div>
+          <Tilt max={6}>
+            <HeroMock />
           </Tilt>
         </Reveal>
       </section>

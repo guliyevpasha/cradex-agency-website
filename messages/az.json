@@ -4712,6 +4712,60 @@
         },
         "message": "Salam, texniki xidmət ilə maraqlanıram"
       }
+    },
+    "heroMocks": {
+      "mobile": {
+        "greeting": "Salam, Aysel 👋",
+        "summary": "Bu ayın sifarişləri",
+        "orders": [
+          "Sifariş #1042",
+          "Sifariş #1041",
+          "Sifariş #1040"
+        ],
+        "delivered": "Çatdırıldı",
+        "onWay": "Yoldadır",
+        "tabs": [
+          "Əsas",
+          "Kataloq",
+          "Səbət",
+          "Profil"
+        ],
+        "catalog": "Kataloq",
+        "push": "Yeni sifariş",
+        "pushText": "2 məhsul · 48 ₼",
+        "rating": "Mağaza reytinqi"
+      },
+      "seo": {
+        "query": "veb sayt hazırlanması bakı",
+        "site": "sizinsaytiniz.az",
+        "resultTitle": "Veb sayt hazırlanması Bakıda — sürətli və SEO-ya hazır",
+        "aiLabel": "Süni intellekt cavabı",
+        "aiSource": "Mənbə",
+        "position": "Mövqe",
+        "traffic": "Orqanik trafik",
+        "speed": "Sürət"
+      },
+      "support": {
+        "status": "Bütün sistemlər işləkdir",
+        "uptime": "İşləklik · 30 gün",
+        "backup": "Ehtiyat nüsxə",
+        "backupValue": "Bu gün, 03:00",
+        "ssl": "SSL sertifikatı",
+        "sslValue": "Aktiv · 284 gün",
+        "security": "Təhlükəsizlik skanı",
+        "securityValue": "Təmiz",
+        "speed": "Sürət",
+        "log": [
+          "Plugin yeniləndi",
+          "Ehtiyat nüsxə alındı",
+          "Təhlükəsizlik skanı tamamlandı"
+        ],
+        "ago": [
+          "2 dəq əvvəl",
+          "3 saat əvvəl",
+          "dünən"
+        ]
+      }
     }
   }
 }
