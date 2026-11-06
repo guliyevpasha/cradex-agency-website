@@ -3598,7 +3598,35 @@
           "Regional genişlənmə"
         ]
       },
-      "ctaMessage": "Salam, xidmətləriniz haqqında məlumat almaq istəyirəm"
+      "ctaMessage": "Salam, xidmətləriniz haqqında məlumat almaq istəyirəm",
+      "hero": {
+        "badge": "Necə işləyirik",
+        "stories": [
+          {
+            "tag": "Bir komanda",
+            "text": "Sayt, tətbiq, reklam, SEO və dəstək eyni komandanın əlindən keçir."
+          },
+          {
+            "tag": "Özəl həll",
+            "text": "Hazır şablon yox: hər sayt, kampaniya və çatbot biznesinizə görə qurulur."
+          },
+          {
+            "tag": "Açıq qiymət",
+            "text": "Bütün xidmət və məhsulların qiymətləri saytda yazılıb."
+          },
+          {
+            "tag": "Müqavilə və dəstək",
+            "text": "Hər əməkdaşlıq rəsmi müqavilə ilə başlayır, təhvildən sonra da yanınızdayıq."
+          }
+        ],
+        "servicesTitle": "Bir ünvan",
+        "servicesText": "5 xidmət və 2 məhsul eyni komandadan.",
+        "servicesLink": "Qiymətlərə baxın",
+        "founderTitle": "Təsisçi",
+        "founderText": "5+ il təcrübə, 70+ layihə.",
+        "founderLink": "Təsisçi haqqında",
+        "storyLabel": "Hekayə {n} / {total}"
+      }
     },
     "portfolioPage": {
       "metaTitle": "İşlərimiz — veb sayt layihələri",
@@ -4823,23 +4851,77 @@
       },
       "clients": {
         "title": "Müştərilərimiz",
-        "text": "Bizə güvənən brendlər və birlikdə qurduğumuz işlər."
+        "text": "Əməkdaşlıq etdiyimiz brendlər və birlikdə gördüyümüz işlər."
       }
     },
     "clientsPage": {
       "metaTitle": "Müştərilərimiz — bizə güvənən brendlər | Cradex Agency",
-      "metaDescription": "Cradex Agency ilə işləyən şirkətlər: veb sayt, reklam, SEO və texniki dəstək üzrə əməkdaşlıq etdiyimiz brendlər.",
+      "metaDescription": "Cradex Agency-nin əməkdaşlıq etdiyi şirkətlər: veb sayt, reklam, SEO və texniki dəstək üzrə birlikdə işlədiyimiz brendlər.",
       "eyebrow": "Müştərilərimiz",
-      "title": "Bizə güvənən brendlər",
-      "text": "Bankdan klinikaya, logistikadan e-ticarətə qədər fərqli sahələrdən şirkətlər rəqəmsal işlərini bizə etibar edir.",
-      "count": "<b>{n}</b> brend bizimlə işləyir",
+      "title": "Əməkdaşlıq etdiyimiz brendlər",
+      "text": "Bankdan klinikaya, logistikadan e-ticarətə qədər fərqli sahələrdən şirkətlər rəqəmsal işlərini bizə etibar edib.",
+      "count": "<b>{n}</b> brendlə əməkdaşlıq etmişik",
       "portfolio": "İşlərimizə baxın",
       "gridTitle": "Birlikdə işlədiyimiz şirkətlər",
-      "gridText": "Hər loqonun arxasında real layihə və davam edən əməkdaşlıq var.",
-      "ctaTitle": "Növbəti loqo sizin ola bilər",
-      "ctaText": "Sayt, reklam, SEO və ya texniki dəstək — biznesinizə uyğun həlli birlikdə seçək.",
+      "gridText": "Hər loqonun arxasında birlikdə başa çatdırdığımız real layihə var.",
+      "ctaTitle": "Gəlin, növbəti uğur hekayəsini birlikdə yazaq",
+      "ctaText": "Hədəfinizi danışın: sayt, tətbiq, reklam, SEO və ya çatbot — sizə uyğun yol xəritəsini pulsuz hazırlayaq.",
       "cta": "Pulsuz konsultasiya",
-      "ctaMessage": "Salam, Cradex Agency ilə işləmək istəyirəm"
+      "ctaMessage": "Salam, Cradex Agency ilə işləmək istəyirəm",
+      "ctaEyebrow": "Növbəti addım",
+      "ctaPricing": "Qiymətlərə baxın",
+      "faqTitle": "Tez-tez verilən suallar",
+      "faqText": "Xidmətlərimiz, əməkdaşlıq və müqavilə haqqında ən çox soruşulanlar.",
+      "faq": [
+        {
+          "q": "Cradex Agency hansı xidmətləri göstərir?",
+          "a": "Veb sayt, mobil tətbiq, SEO və GEO, rəqəmsal reklam (Meta, TikTok, LinkedIn, Google) və texniki xidmət. Məhsullarımız: biznesiniz üçün çatbot və sosial media kombo paketləri."
+        },
+        {
+          "q": "Əməkdaşlıq necə başlayır?",
+          "a": "Pulsuz konsultasiyada hədəfinizi dinləyirik, sonra iş həcmi, müddət və qiyməti yazılı təklif kimi göndəririk. Razılaşdıqdan sonra müqavilə imzalanır və iş başlayır."
+        },
+        {
+          "q": "Müqavilə bağlayırsınız?",
+          "a": "Bəli. Hər layihə rəsmi xidmət müqaviləsi ilə başlayır. Müqaviləni fərdi sahibkar kimi, VÖEN ilə bağlayırıq."
+        },
+        {
+          "q": "Müqavilədə nələr yazılır?",
+          "a": "Görüləcək işlərin siyahısı, mərhələlər və tarixlər, qiymət və ödəniş qrafiki, təhvil-təslim qaydası, məxfilik və işdən sonrakı dəstək şərtləri."
+        },
+        {
+          "q": "Ödəniş necə aparılır?",
+          "a": "Ödəniş qrafiki müqavilədə razılaşdırılır. Veb saytlarda 100 ₼ ilkin ödənişlə başlayırıq, qalan məbləğ aylıq hissələrlə ödənilə bilər. Aylıq xidmətlərdə illik ödənişə 20% endirim var."
+        },
+        {
+          "q": "Qiymətləri haradan öyrənə bilərəm?",
+          "a": "Bütün xidmət və məhsulların qiymətləri saytdakı Qiymətlər bölməsində açıq yazılıb. Əlavə iş lazım olsa, əvvəlcə qiymətini razılaşdırırıq."
+        },
+        {
+          "q": "İş nə qədər vaxt aparır?",
+          "a": "Xidmətdən asılıdır: çatbot təxminən 10 günə, kombo paketlər 1–7 günə hazır olur. Sayt və tətbiqlərdə dəqiq tarix layihənin həcminə görə müqavilədə yazılır."
+        },
+        {
+          "q": "İş bitəndən sonra dəstək verirsiniz?",
+          "a": "Bəli. Təhvildən sonra da yanınızdayıq: texniki xidmət paketləri ilə saytınızı və hesablarınızı izləyir, yeniləyir və qoruyuruq."
+        },
+        {
+          "q": "Reklam hesabları kimin adına olur?",
+          "a": "Reklam hesabları sizin adınıza açılır, idarəni biz aparırıq. Əməkdaşlıq bitsə də hesab və onun bütün məlumatları sizdə qalır."
+        },
+        {
+          "q": "Ödəniş geri qaytarılırmı?",
+          "a": "Kombo paketlərdə iş başlamayıbsa məbləğ tam qaytarılır. Digər xidmətlərdə şərtlər müqavilədə və Geri qaytarma siyasəti səhifəsində yazılıb."
+        },
+        {
+          "q": "Məlumatlarım məxfi qalırmı?",
+          "a": "Bəli. Məxfilik müqavilədə təsbit olunur. Saytda kart məlumatı saxlanmır: onlayn ödəniş bankın 3D Secure səhifəsində aparılır."
+        },
+        {
+          "q": "Necə əlaqə saxlaya bilərəm?",
+          "a": "WhatsApp: +994 50 778 68 87, e-poçt: info@cradexagency.com. Əlaqə səhifəsindən də yaza bilərsiniz."
+        }
+      ]
     }
   }
 }

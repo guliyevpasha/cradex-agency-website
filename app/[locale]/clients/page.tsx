@@ -9,6 +9,8 @@ import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { getPartners } from '@/lib/data/partners'
+import { ClientLogo } from '@/components/clients/ClientLogo'
+import { ClientsFaq } from '@/components/clients/ClientsFaq'
 import { ClientsGrid } from '@/components/clients/ClientsGrid'
 import { ClientsWall } from '@/components/clients/ClientsWall'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
@@ -17,6 +19,9 @@ import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 type Params = Promise<{ locale: string }>
+
+// Where the four floating logo chips sit in the CTA visual.
+const CTA_SPOTS = ['left-0 top-2 rotate-[-6deg]', 'right-2 top-0 rotate-[5deg]', 'left-10 bottom-2 rotate-[4deg]', 'right-0 bottom-8 rotate-[-5deg]']
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale } = await params
@@ -33,6 +38,12 @@ export default async function ClientsPage({ params }: { params: Params }) {
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'site.clientsPage' })
   const partners = await getPartners()
+  const faq = t.raw('faq') as { q: string; a: string }[]
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  }
 
   return (
     <div className="pt-24 lg:pt-28">
@@ -78,25 +89,59 @@ export default async function ClientsPage({ params }: { params: Params }) {
         <ClientsGrid partners={partners} />
       </section>
 
+      {/* FAQ */}
+      <section className="container-x py-16 lg:py-24">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">{t('faqText')}</p>
+        </div>
+        <ClientsFaq items={faq} />
+      </section>
+
       {/* CTA */}
       <section className="container-x pb-24 pt-4">
         <Reveal className="rv-3d">
           <Tilt max={3}>
-            <div className="relative overflow-hidden rounded-[36px] bg-brand-strong px-7 py-14 text-snow sm:px-14 sm:py-20">
+            <div className="relative grid grid-cols-[minmax(0,1fr)] items-center gap-10 overflow-hidden rounded-[36px] bg-brand-strong px-7 py-14 text-snow sm:px-14 sm:py-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
               <span className="tilt-glare" />
               <span aria-hidden="true" className="hm-float absolute -right-20 -top-24 h-80 w-80 rounded-full bg-snow/15" />
-              <span aria-hidden="true" className="hm-float-slow absolute -bottom-28 right-32 h-64 w-64 rounded-full bg-ink/15" />
-              <div className="tilt-z1 relative max-w-2xl">
-                <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl" text={t('ctaTitle')} />
-                <p className="mt-4 text-lg text-snow/85">{t('ctaText')}</p>
-                <div className="mt-8">
+              <span aria-hidden="true" className="hm-float-slow absolute -bottom-28 left-1/3 h-64 w-64 rounded-full bg-ink/15" />
+              <div className="tilt-z1 relative">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-snow/75">{t('ctaEyebrow')}</p>
+                <AnimatedHeading className="mt-3 text-4xl font-extrabold leading-[1.08] tracking-[-0.035em] sm:text-5xl" text={t('ctaTitle')} />
+                <p className="mt-4 max-w-xl text-lg text-snow/85">{t('ctaText')}</p>
+                <div className="mt-8 flex flex-wrap items-center gap-3">
                   <WhatsAppButton label={t('cta')} message={t('ctaMessage')} variant="light" />
+                  <Link
+                    href={`/${locale}/pricing`}
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-snow/70 px-5 py-3 text-sm font-semibold text-snow transition-colors hover:bg-snow hover:text-brand-strong"
+                  >
+                    {t('ctaPricing')}
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </Link>
                 </div>
               </div>
+              {/* A few of the brands we worked with, floating on their own layer. */}
+              <ul className="tilt-z3 relative hidden h-56 lg:block" aria-hidden="true">
+                {partners.slice(0, 4).map((p, i) => (
+                  // rotate on the <li>, float on the inner chip: both use transform
+                  <li key={p.id} className={`absolute ${CTA_SPOTS[i]}`}>
+                    <span className="cl-cta-chip hm-float flex h-16 w-40 items-center justify-center rounded-2xl" style={{ animationDelay: `${i * -1.4}s` }}>
+                      <ClientLogo partner={p} decorative className="h-7 w-auto max-w-[70%] object-contain" />
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Tilt>
         </Reveal>
       </section>
+
+      <script
+        type="application/ld+json"
+        // Escape "<" so no answer text can close the script tag.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd).replace(/</g, '\\u003c') }}
+      />
     </div>
   )
 }

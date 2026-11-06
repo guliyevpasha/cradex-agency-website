@@ -3598,7 +3598,35 @@
           "Bölgesel büyüme"
         ]
       },
-      "ctaMessage": "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum"
+      "ctaMessage": "Merhaba, hizmetleriniz hakkında bilgi almak istiyorum",
+      "hero": {
+        "badge": "Nasıl çalışıyoruz",
+        "stories": [
+          {
+            "tag": "Tek ekip",
+            "text": "Web sitesi, uygulama, reklam, SEO ve destek aynı ekibin elinden çıkar."
+          },
+          {
+            "tag": "Size özel çözüm",
+            "text": "Hazır şablon yok: her web sitesi, kampanya ve chatbot işletmenize göre kurulur."
+          },
+          {
+            "tag": "Açık fiyat",
+            "text": "Tüm hizmet ve ürünlerin fiyatları sitede yazıyor."
+          },
+          {
+            "tag": "Sözleşme ve destek",
+            "text": "Her iş birliği resmi sözleşmeyle başlar, tesliminizden sonra da yanınızdayız."
+          }
+        ],
+        "servicesTitle": "Tek adres",
+        "servicesText": "Aynı ekipten 5 hizmet ve 2 ürün.",
+        "servicesLink": "Fiyatları görün",
+        "founderTitle": "Kurucu",
+        "founderText": "5+ yıl deneyim, 70+ proje.",
+        "founderLink": "Kurucu hakkında",
+        "storyLabel": "Hikâye {n} / {total}"
+      }
     },
     "portfolioPage": {
       "metaTitle": "Projelerimiz — web sitesi çalışmaları",
@@ -4823,23 +4851,77 @@
       },
       "clients": {
         "title": "Müşterilerimiz",
-        "text": "Bize güvenen markalar ve birlikte hayata geçirdiğimiz işler."
+        "text": "Birlikte çalıştığımız markalar ve birlikte hayata geçirdiğimiz projeler."
       }
     },
     "clientsPage": {
-      "metaTitle": "Müşterilerimiz — Bize Güvenen Markalar | Cradex Agency",
-      "metaDescription": "Cradex Agency ile çalışan şirketler: web sitesi geliştirme, reklam, SEO ve teknik destek alanlarında iş birliği yaptığımız markalar.",
+      "metaTitle": "Müşterilerimiz — bize güvenen markalar | Cradex Agency",
+      "metaDescription": "Cradex Agency'nin birlikte çalıştığı şirketler: web sitesi, reklam, SEO ve teknik destek alanında iş birliği yaptığımız markalar.",
       "eyebrow": "Müşterilerimiz",
-      "title": "Bize güvenen markalar",
-      "text": "Bankacılıktan sağlığa, lojistikten e-ticarete kadar farklı sektörlerden şirketler dijital işlerini bize emanet ediyor.",
-      "count": "<b>{n}</b> marka bizimle çalışıyor",
+      "title": "Birlikte çalıştığımız markalar",
+      "text": "Bankacılıktan sağlığa, lojistikten e-ticarete kadar farklı sektörlerden şirketler dijital işlerini bize emanet etti.",
+      "count": "<b>{n}</b> marka ile çalıştık",
       "portfolio": "Projelerimize göz atın",
       "gridTitle": "Birlikte çalıştığımız şirketler",
-      "gridText": "Her logonun arkasında gerçek bir proje ve devam eden bir iş birliği var.",
-      "ctaTitle": "Sıradaki logo sizin olabilir",
-      "ctaText": "Web sitesi, reklam, SEO ya da teknik destek: işinize uygun çözümü birlikte seçelim.",
+      "gridText": "Her logonun arkasında birlikte tamamladığımız gerçek bir proje var.",
+      "ctaTitle": "Bir sonraki başarı hikâyesini birlikte yazalım",
+      "ctaText": "Hedefinizi anlatın: web sitesi, mobil uygulama, reklam, SEO ya da chatbot — size uygun yol haritasını ücretsiz hazırlayalım.",
       "cta": "Ücretsiz danışmanlık",
-      "ctaMessage": "Merhaba, Cradex Agency ile çalışmak istiyorum"
+      "ctaMessage": "Merhaba, Cradex Agency ile çalışmak istiyorum",
+      "ctaEyebrow": "Sonraki adım",
+      "ctaPricing": "Fiyatları görün",
+      "faqTitle": "Sık sorulan sorular",
+      "faqText": "Hizmetlerimiz, iş birliği ve sözleşme hakkında en çok sorulanlar.",
+      "faq": [
+        {
+          "q": "Cradex Agency hangi hizmetleri sunuyor?",
+          "a": "Web Sitesi Geliştirme, mobil uygulama, SEO ve GEO, dijital reklam (Meta, TikTok, LinkedIn, Google) ve teknik hizmet. Ürünlerimiz: işletmeniz için chatbot ve sosyal medya kombo paketleri."
+        },
+        {
+          "q": "İş birliği nasıl başlar?",
+          "a": "Ücretsiz danışmanlıkta hedefinizi dinliyoruz, ardından iş kapsamı, süre ve fiyatı içeren yazılı bir teklif gönderiyoruz. Anlaştıktan sonra sözleşme imzalanır ve iş başlar."
+        },
+        {
+          "q": "Sözleşme yapıyor musunuz?",
+          "a": "Evet. Her proje resmi bir hizmet sözleşmesiyle başlar. Sözleşmeyi şahıs şirketi olarak, vergi numarası (VÖEN) ile yapıyoruz."
+        },
+        {
+          "q": "Sözleşmede neler yer alır?",
+          "a": "Yapılacak işlerin listesi, aşamalar ve tarihler, fiyat ve ödeme planı, teslim usulü, gizlilik ve teslim sonrası destek koşulları."
+        },
+        {
+          "q": "Ödeme nasıl yapılır?",
+          "a": "Ödeme planı sözleşmede belirlenir. Web sitelerinde 100 ₼ ön ödemeyle başlıyoruz, kalan tutar aylık taksitlerle ödenebilir. Aylık hizmetlerde yıllık ödemede %20 indirim var."
+        },
+        {
+          "q": "Fiyatları nereden öğrenebilirim?",
+          "a": "Tüm hizmet ve ürünlerin fiyatları sitedeki Fiyatlar bölümünde açıkça yazıyor. Ek iş gerekirse önce fiyatını netleştiriyoruz."
+        },
+        {
+          "q": "İş ne kadar sürer?",
+          "a": "Hizmete göre değişir: chatbot yaklaşık 10 günde, kombo paketler 1–7 günde hazır olur. Web sitesi ve uygulamalarda kesin tarih, projenin kapsamına göre sözleşmeye yazılır."
+        },
+        {
+          "q": "İş bittikten sonra destek veriyor musunuz?",
+          "a": "Evet. Tesliminizden sonra da yanınızdayız: teknik hizmet paketleriyle sitenizi ve hesaplarınızı izliyor, güncelliyor ve koruyoruz."
+        },
+        {
+          "q": "Reklam hesapları kimin adına açılır?",
+          "a": "Reklam hesapları sizin adınıza açılır, yönetimi biz üstleniriz. İş birliği sona erse de hesap ve tüm verileri sizde kalır."
+        },
+        {
+          "q": "Ödeme iade edilir mi?",
+          "a": "Kombo paketlerde iş başlamadıysa tutar tam olarak iade edilir. Diğer hizmetlerde koşullar sözleşmede ve İade Politikası sayfasında yazılıdır."
+        },
+        {
+          "q": "Bilgilerim gizli kalır mı?",
+          "a": "Evet. Gizlilik sözleşmede güvence altına alınır. Sitede kart bilgisi saklanmaz: online ödeme bankanın 3D Secure sayfasında yapılır."
+        },
+        {
+          "q": "Size nasıl ulaşabilirim?",
+          "a": "WhatsApp: +994 50 778 68 87, e-posta: info@cradexagency.com. İletişim sayfasından da yazabilirsiniz."
+        }
+      ]
     }
   }
 }

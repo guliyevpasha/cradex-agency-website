@@ -3598,7 +3598,35 @@
           "Regional expansion"
         ]
       },
-      "ctaMessage": "Hello, I would like to learn more about your services"
+      "ctaMessage": "Hello, I would like to learn more about your services",
+      "hero": {
+        "badge": "How we work",
+        "stories": [
+          {
+            "tag": "One team",
+            "text": "Website, app, advertising, SEO and support all come from the same team."
+          },
+          {
+            "tag": "Tailor-made",
+            "text": "No ready-made templates: every website, campaign and chatbot is built around your business."
+          },
+          {
+            "tag": "Transparent pricing",
+            "text": "Prices for all services and products are listed on the site."
+          },
+          {
+            "tag": "Contract and support",
+            "text": "Every project starts with a formal contract, and we stay with you after handover."
+          }
+        ],
+        "servicesTitle": "One address",
+        "servicesText": "5 services and 2 products from the same team.",
+        "servicesLink": "See pricing",
+        "founderTitle": "Founder",
+        "founderText": "5+ years of experience, 70+ projects.",
+        "founderLink": "About the founder",
+        "storyLabel": "Story {n} / {total}"
+      }
     },
     "portfolioPage": {
       "metaTitle": "Our Work — Website Projects",
@@ -4823,23 +4851,77 @@
       },
       "clients": {
         "title": "Our clients",
-        "text": "The brands that trust us and the work we build together."
+        "text": "Brands we have worked with and the projects we delivered together."
       }
     },
     "clientsPage": {
-      "metaTitle": "Our Clients — Brands That Trust Us | Cradex Agency",
-      "metaDescription": "Companies working with Cradex Agency: brands we partner with on website development, advertising, SEO and technical support.",
+      "metaTitle": "Our Clients — brands that trust us | Cradex Agency",
+      "metaDescription": "Companies Cradex Agency has worked with: brands we have delivered websites, advertising, SEO and technical support for.",
       "eyebrow": "Our clients",
-      "title": "Brands that trust us",
-      "text": "From banking to healthcare, logistics to e-commerce, companies across industries rely on us for their digital work.",
-      "count": "<b>{n}</b> brands work with us",
+      "title": "Brands we have worked with",
+      "text": "From banking to healthcare, logistics to e-commerce, companies from many industries have trusted us with their digital work.",
+      "count": "We have worked with <b>{n}</b> brands",
       "portfolio": "See our work",
-      "gridTitle": "Companies we work with",
-      "gridText": "Behind every logo is a real project and an ongoing partnership.",
-      "ctaTitle": "The next logo could be yours",
-      "ctaText": "Website, advertising, SEO or technical support: let's pick the right solution for your business.",
+      "gridTitle": "Companies we have worked with",
+      "gridText": "Behind every logo is a real project we completed together.",
+      "ctaTitle": "Let's write the next success story together",
+      "ctaText": "Tell us your goal: website, app, advertising, SEO or chatbot — we will prepare a roadmap that fits you, free of charge.",
       "cta": "Free consultation",
-      "ctaMessage": "Hello, I'd like to work with Cradex Agency"
+      "ctaMessage": "Hello, I would like to work with Cradex Agency",
+      "ctaEyebrow": "Next step",
+      "ctaPricing": "See pricing",
+      "faqTitle": "Frequently asked questions",
+      "faqText": "The most common questions about our services, cooperation and contracts.",
+      "faq": [
+        {
+          "q": "What services does Cradex Agency offer?",
+          "a": "Website development, mobile apps, SEO and GEO, digital advertising (Meta, TikTok, LinkedIn, Google) and technical maintenance. Our products: a chatbot for your business and social media combo packages."
+        },
+        {
+          "q": "How does cooperation start?",
+          "a": "In a free consultation we listen to your goal, then send a written proposal with scope, timeline and price. Once you agree, we sign a contract and start work."
+        },
+        {
+          "q": "Do you sign a contract?",
+          "a": "Yes. Every project starts with a formal service agreement. We sign it as a sole proprietor, with a tax ID (VÖEN)."
+        },
+        {
+          "q": "What does the contract include?",
+          "a": "The list of work, stages and dates, price and payment schedule, the handover procedure, confidentiality and post-launch support terms."
+        },
+        {
+          "q": "How does payment work?",
+          "a": "The payment schedule is agreed in the contract. For websites we start with a 100 ₼ down payment, and the rest can be paid in monthly instalments. Monthly services get 20% off with annual payment."
+        },
+        {
+          "q": "Where can I see your prices?",
+          "a": "Prices for all services and products are listed openly in the Pricing section of the site. If extra work is needed, we agree on the price first."
+        },
+        {
+          "q": "How long does a project take?",
+          "a": "It depends on the service: a chatbot takes about 10 days, combo packages 1–7 days. For websites and apps, the exact date is set in the contract based on project scope."
+        },
+        {
+          "q": "Do you provide support after delivery?",
+          "a": "Yes. We stay with you after handover: with technical maintenance plans we monitor, update and protect your website and accounts."
+        },
+        {
+          "q": "Whose name are the ad accounts under?",
+          "a": "Ad accounts are opened in your name and we manage them. Even if we stop working together, the account and all its data stay with you."
+        },
+        {
+          "q": "Are payments refundable?",
+          "a": "For combo packages the full amount is refunded if work has not started. For other services the terms are set out in the contract and on the Refund Policy page."
+        },
+        {
+          "q": "Is my information kept confidential?",
+          "a": "Yes. Confidentiality is written into the contract. The site does not store card data: online payment is processed on the bank's 3D Secure page."
+        },
+        {
+          "q": "How can I get in touch?",
+          "a": "WhatsApp: +994 50 778 68 87, e-mail: info@cradexagency.com. You can also write to us from the Contact page."
+        }
+      ]
     }
   }
 }

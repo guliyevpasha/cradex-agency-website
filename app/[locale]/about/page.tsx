@@ -1,6 +1,6 @@
 /**
  * About: a technology agency for websites, AI assistants / chatbots and CRM.
- * Numbers are real only: the project count comes from the portfolio.
+ * Hero: story card (how we work) with a services card and a founder card under it.
  * The previous about page lives on in components/sections/AboutSection.
  * @author Paşa Quliyev — Cradex Agency
  */
@@ -8,17 +8,20 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ArrowUpRight, Bot, Code2, Layers, Workflow } from 'lucide-react'
+import { ArrowDown, ArrowUpRight, Bot, Code2, Layers, Megaphone, Search, ShieldCheck, Smartphone, Workflow } from 'lucide-react'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { ScrollFillText } from '@/components/ui/ScrollFillText'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { AboutMore } from '@/components/about/AboutMore'
+import { AboutStory } from '@/components/about/AboutStory'
 
 type Item = { t: string; d: string }
 
 const PILLAR_ICONS = [Code2, Bot, Workflow, Layers]
+// web, mobile, SEO, ads, support — same order as the services menu
+const SERVICE_ICONS = [Code2, Smartphone, Search, Megaphone, ShieldCheck]
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -26,62 +29,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: t('metaTitle'), description: t('metaDescription') }
 }
 
-/** Website, chatbot and CRM pipeline floating in one 3D stack. */
-function AboutScene() {
-  return (
-    <div className="ab-scene" aria-hidden="true">
-      <div className="ab-card ab-site border border-line bg-bg-primary">
-        <span className="flex gap-1.5 border-b border-line px-4 py-3">
-          <i className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
-          <i className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
-          <i className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
-        </span>
-        <span className="block p-5">
-          <i className="block h-3.5 w-2/3 rounded bg-text-primary/80" />
-          <i className="mt-2.5 block h-2.5 w-1/2 rounded bg-text-primary/20" />
-          <i className="mt-5 block h-8 w-28 rounded-full bg-brand-strong" />
-          <span className="mt-5 grid grid-cols-3 gap-2">
-            {[0, 1, 2].map((k) => (
-              <i key={k} className="h-12 rounded-xl bg-accent-primary/15" />
-            ))}
-          </span>
-        </span>
-      </div>
-
-      <div className="ab-card ab-chat border border-line bg-bg-primary p-4">
-        <span className="flex items-center gap-2">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-strong text-snow">
-            <Bot size={15} />
-          </span>
-          <i className="h-2 w-16 rounded bg-text-primary/30" />
-        </span>
-        <i className="mt-3 block h-7 w-4/5 rounded-2xl rounded-tl-sm bg-bg-secondary" />
-        <i className="ml-auto mt-2 block h-7 w-3/5 rounded-2xl rounded-tr-sm bg-brand-strong" />
-        <span className="ab-typing mt-2 flex w-14 gap-1 rounded-2xl bg-bg-secondary px-3 py-2.5">
-          <i /><i /><i />
-        </span>
-      </div>
-
-      <div className="ab-card ab-crm border border-line bg-bg-primary p-4">
-        <span className="grid grid-cols-3 gap-2">
-          {[3, 2, 1].map((rows, c) => (
-            <span key={c} className="space-y-1.5">
-              <i className="block h-1.5 w-8 rounded bg-text-primary/30" />
-              {Array.from({ length: rows }).map((_, r) => (
-                <i key={r} className={`block h-5 rounded-md ${c === 2 ? 'bg-brand-strong' : 'bg-accent-primary/20'}`} />
-              ))}
-            </span>
-          ))}
-        </span>
-      </div>
-    </div>
-  )
-}
-
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'site.aboutPage' })
+  const hero = await getTranslations({ locale, namespace: 'site.aboutPage.hero' })
   const story = t.raw('story') as string[]
   const pillars = t.raw('pillars') as Item[]
   const values = t.raw('values') as Item[]
@@ -92,7 +44,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return (
     <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="container-x grid items-center gap-14 pb-16 pt-8 lg:grid-cols-[1.05fr_1fr] lg:pb-24">
+      <section className="container-x grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-16 pt-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:pb-24">
         <div>
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
           <AnimatedHeading
@@ -102,15 +54,56 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           />
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary">{t('text')}</p>
         </div>
-        <Reveal className="rv-3d">
-          <Tilt max={9}>
-            <div className="svc-stage relative aspect-[5/4] rounded-[36px] border border-line bg-bg-secondary shadow-card">
-              <span className="tilt-glare" />
-              <span className="svc-stage-grid" aria-hidden="true" />
-              <AboutScene />
-            </div>
-          </Tilt>
-        </Reveal>
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-3 sm:grid-cols-2">
+          <Reveal className="rv-3d sm:col-span-2">
+            <Tilt max={4}>
+              <AboutStory />
+            </Tilt>
+          </Reveal>
+          <Reveal className="rv-3d h-full" delay={120}>
+            <Link
+              href={`/${locale}/pricing`}
+              className="group relative flex h-full flex-col rounded-[26px] border border-line bg-bg-secondary p-5 shadow-card transition-transform duration-300 hover:-translate-y-1"
+            >
+              <span className="flex items-start justify-between gap-3">
+                <span className="text-lg font-bold text-text-primary">{hero('servicesTitle')}</span>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-text-primary text-bg-primary transition-transform duration-300 group-hover:rotate-45">
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </span>
+              </span>
+              <span className="mt-4 flex -space-x-2" aria-hidden="true">
+                {SERVICE_ICONS.map((Icon, i) => (
+                  <span key={i} className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-bg-secondary bg-brand-strong text-snow">
+                    <Icon size={17} />
+                  </span>
+                ))}
+              </span>
+              <span className="mt-3 text-sm text-text-secondary">{hero('servicesText')}</span>
+              <span className="sr-only">{hero('servicesLink')}</span>
+            </Link>
+          </Reveal>
+          <Reveal className="rv-3d h-full" delay={200}>
+            <a
+              href="#founder"
+              className="group relative flex h-full flex-col rounded-[26px] border border-line bg-bg-secondary p-5 shadow-card transition-transform duration-300 hover:-translate-y-1"
+            >
+              <span className="flex items-start justify-between gap-3">
+                <span className="text-lg font-bold text-text-primary">{hero('founderTitle')}</span>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-text-primary text-bg-primary transition-transform duration-300 group-hover:translate-y-0.5">
+                  <ArrowDown size={17} aria-hidden="true" />
+                </span>
+              </span>
+              <span className="mt-4 flex items-center gap-3">
+                <span className="founder-photo relative block h-11 w-11 shrink-0 overflow-hidden rounded-full">
+                  <Image src="/images/team/pasha-quliyev.png" alt="" fill quality={85} sizes="44px" className="object-cover" />
+                </span>
+                <span className="font-semibold text-text-primary">{t('founderName')}</span>
+              </span>
+              <span className="mt-3 text-sm text-text-secondary">{hero('founderText')}</span>
+              <span className="sr-only">{hero('founderLink')}</span>
+            </a>
+          </Reveal>
+        </div>
       </section>
 
       {/* Story */}
@@ -178,7 +171,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       </section>
 
       {/* Founder */}
-      <section className="container-x py-16 lg:py-24">
+      <section id="founder" className="container-x scroll-mt-28 py-16 lg:py-24">
         <Reveal className="rv-3d">
           <Tilt max={3}>
             <div className="svc relative rounded-[36px] border border-line bg-bg-secondary p-6 shadow-card sm:p-10 lg:p-14">
