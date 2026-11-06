@@ -72,14 +72,16 @@ export default defineType({
     }),
     defineField({
       name: 'services',
-      title: 'Xidmətlər',
+      title: 'Harada görünsün',
       description:
-        'Müştəri hansı xidmətdən və ya məhsuldan istifadə edib? Rəy yalnız seçilən xidmətin səhifəsində, qiymət səhifəsində və məhsul səhifəsində görünür. Boş qalsa, yalnız əsas səhifədə görünür.',
+        '"Əsas səhifə" və müştərinin istifadə etdiyi xidmət / məhsul. Rəy yalnız seçilən səhifələrdə görünür. Heç bir rəydə "Əsas səhifə" seçilməsə, əsas səhifədə bütün rəylər görünür.',
       type: 'array',
       of: [{ type: 'string' }],
-      options: { list: SERVICE_TAGS, layout: 'grid' },
+      options: { list: [{ title: 'Əsas səhifə', value: 'home' }, ...SERVICE_TAGS], layout: 'grid' },
       validation: (Rule) =>
-        Rule.custom((v) => (Array.isArray(v) && v.length > 0 ? true : 'Xidmət seçilməyib: rəy heç bir xidmət səhifəsində görünməyəcək.')).warning(),
+        Rule.custom((v) =>
+          Array.isArray(v) && v.some((x) => x !== 'home') ? true : 'Xidmət seçilməyib: rəy heç bir xidmət səhifəsində görünməyəcək.'
+        ).warning(),
     }),
     defineField({
       name: 'rating',
@@ -90,9 +92,10 @@ export default defineType({
     }),
     defineField({
       name: 'featured',
-      title: 'Featured',
+      title: 'Featured (köhnə)',
       type: 'boolean',
-      description: 'Show on homepage',
+      // replaced by the "Əsas səhifə" option above; kept so old data stays intact
+      hidden: true,
       initialValue: false,
     }),
     defineField({
@@ -133,7 +136,7 @@ export default defineType({
             : undefined),
         // the service tags first, so untagged reviews stand out in the list
         subtitle: [
-          (services as string[] | undefined)?.map((v) => SERVICE_TAGS.find((t) => t.value === v)?.title ?? v).join(', ') || 'Xidmət seçilməyib',
+          (services as string[] | undefined)?.map((v) => (v === 'home' ? 'Əsas səhifə' : SERVICE_TAGS.find((t) => t.value === v)?.title ?? v)).join(', ') || 'Xidmət seçilməyib',
           subtitle,
           `${rating}⭐`,
         ]

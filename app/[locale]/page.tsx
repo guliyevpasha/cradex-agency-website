@@ -52,7 +52,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <WorkShowcase />
       <ProductsShowcase />
       <CorporateEmail />
-      <ReviewsSection testimonials={testimonials} />
+      {/* Reviews given the "Əsas səhifə" option in Studio; all of them while none is. */}
+      <ReviewsSection testimonials={testimonials.some((r) => r.services?.includes('home')) ? testimonials.filter((r) => r.services?.includes('home')) : testimonials} />
       <DemoFaq />
       <TechStack />
       <BlogShowcase articles={recentArticles} />

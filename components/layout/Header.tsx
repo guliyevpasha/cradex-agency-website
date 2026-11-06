@@ -18,7 +18,9 @@ import { ABOUT_LINKS, NAV_ITEMS, PRICING_LINKS, aboutHref, PRODUCT_LINKS, SERVIC
 import { WORK_IDS, workHref } from '@/lib/site/work'
 import { LangDropdown } from './LangDropdown'
 import { MobileMenu } from './MobileMenu'
-import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
+import { OPEN_MENU_EVENT, type MenuSection } from '@/components/navigation/MobileBottomNav'
+
+const MENU_SECTIONS: MenuSection[] = ['services', 'products', 'work', 'pricing']
 
 type MenuId = 'services' | 'products' | 'pricing' | 'about' | 'work'
 
@@ -219,6 +221,8 @@ export function Header() {
   const tCta = useTranslations('site.cta')
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  // Section the bottom bar asked to open (services, products, work, pricing).
+  const [mobileSection, setMobileSection] = useState<MenuSection | null>(null)
   const [menu, setMenu] = useState<MenuId | null>(null)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navRef = useRef<HTMLElement>(null)
@@ -237,7 +241,11 @@ export function Header() {
 
   // The phone bottom bar opens this same menu.
   useEffect(() => {
-    const openMenu = () => setMobileOpen(true)
+    const openMenu = (e: Event) => {
+      const detail = (e as CustomEvent<unknown>).detail
+      setMobileSection(MENU_SECTIONS.includes(detail as MenuSection) ? (detail as MenuSection) : null)
+      setMobileOpen(true)
+    }
     window.addEventListener(OPEN_MENU_EVENT, openMenu)
     return () => window.removeEventListener(OPEN_MENU_EVENT, openMenu)
   }, [])
@@ -350,7 +358,7 @@ export function Header() {
         </div>
       </header>
 
-      <MobileMenu isOpen={mobileOpen} onClose={closeMobile} />
+      <MobileMenu isOpen={mobileOpen} onClose={closeMobile} section={mobileSection} />
     </>
   )
 }

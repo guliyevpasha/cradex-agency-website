@@ -53,6 +53,9 @@ export async function POST(request: NextRequest) {
       if (slug) LOCALES.forEach((l) => add(`/${l}/journal/${slug}`))
       LOCALES.forEach((l) => add(`/${l}`))
       servicePages()
+    } else if (_type === 'comboPackage') {
+      // cards on the home page, the products page and the combo page
+      LOCALES.forEach((l) => [`/${l}`, `/${l}/products`, ...PRODUCT_LINKS.map((p) => `/${l}/products/${p.slug}`)].forEach(add))
     } else if (_type === 'workCase') {
       LOCALES.forEach((l) => Object.values(WORK_SLUGS).forEach((w) => add(`/${l}/portfolio/${w}`)))
     } else if (_type === 'portfolio' || _type === 'portfolioItem') {

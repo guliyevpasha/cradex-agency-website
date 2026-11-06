@@ -2499,7 +2499,10 @@
       "services": "Xidmətlər",
       "demo": "Demo",
       "work": "İşlər",
-      "menu": "Menyu"
+      "menu": "Menyu",
+      "products": "Məhsullar",
+      "pricing": "Qiymətlər",
+      "demoMessage": "Salam, demo versiya sayt sifariş vermək istəyirəm"
     },
     "footer": {
       "tagline": "Veb saytlar, mobil tətbiqlər və rəqəmsal reklam. Bakı, Azərbaycan.",
@@ -2627,13 +2630,13 @@
       "usernameTiktok": "TikTok istifadəçi adı",
       "usernameYoutube": "YouTube kanal linki",
       "name": "Ad və soyad",
-      "phone": "Telefon nömrəsi",
+      "phone": "WhatsApp nömrəsi",
       "email": "E-poçt ünvanı",
       "errRequired": "Bu xananı doldurun",
       "errUsername": "Düzgün istifadəçi adı daxil edin",
       "errYoutube": "Düzgün YouTube kanal linki daxil edin",
       "errName": "Ad və soyadınızı tam yazın",
-      "errPhone": "Düzgün nömrə daxil edin, məsələn +994 50 123 45 67",
+      "errPhone": "WhatsApp nömrəsini ölkə kodu ilə yazın (məs. +994 50 123 45 67)",
       "errEmail": "Düzgün e-poçt ünvanı daxil edin",
       "continue": "Ödənişə keç",
       "back": "Geri qayıt",
@@ -2647,12 +2650,14 @@
       "secure": "3D Secure ilə qorunur",
       "unavailable": "Onlayn ödəniş hazırda qoşulma mərhələsindədir. Sifarişinizi WhatsApp ilə tamamlaya bilərsiniz.",
       "whatsapp": "Sifarişi WhatsApp ilə tamamla",
-      "whatsappMessage": "Salam, {package} sifariş edirəm.\nSay: {quantity}\nMəbləğ: {total}\nHesab: {username}\nAd: {name}\nTelefon: {phone}\nE-poçt: {email}",
+      "whatsappMessage": "Salam, {package} sifariş edirəm.\nSifariş: {number}\nSay: {quantity}\nMəbləğ: {total}\nHesab: {username}\nAd: {name}\nWhatsApp: {phone}\nE-poçt: {email}",
       "error": "Xəta baş verdi. Bir az sonra yenidən cəhd edin.",
       "quantity": "Paket sayı",
       "quantityHint": "1-dən {max}-dək seçin",
       "less": "Azalt",
-      "more": "Artır"
+      "more": "Artır",
+      "usernameFacebook": "Facebook səhifə linki",
+      "usernameTelegram": "Telegram kanal linki"
     },
     "legal": {
       "updated": "Son yenilənmə: {date}",

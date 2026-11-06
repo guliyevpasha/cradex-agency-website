@@ -12,7 +12,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { ArrowLeft, AtSign, Bell, Lock, Mail, Minus, Phone, Plus, ShieldCheck, User, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
-import { MAX_QTY, clampQty, formatAmount, formatPrice, priceOf, validateOrder, type FieldError, type PackageId } from '@/lib/site/orders'
+import { MAX_QTY, clampQty, formatAmount, formatPrice, priceOf, validateOrder, type ComboPackage, type FieldError } from '@/lib/site/orders'
 import { useCurrency } from '@/lib/site/useCurrency'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
@@ -28,16 +28,19 @@ const ERR_KEY: Record<FieldError, string> = {
   email: 'errEmail',
 }
 
-type Props = { pkg: PackageId; title: string; label: string; icon: React.ReactNode; tint: string }
+const USERNAME_KEYS = { instagram: 'usernameInstagram', tiktok: 'usernameTiktok', youtube: 'usernameYoutube', facebook: 'usernameFacebook', telegram: 'usernameTelegram' } as const
 
-export function OrderButton({ pkg, title, label, icon, tint }: Props) {
+type Props = { pack: ComboPackage; title: string; label: string; icon: React.ReactNode; tint: string }
+
+export function OrderButton({ pack, title, label, icon, tint }: Props) {
+  const pkg = pack.id
   const t = useTranslations('site.order')
   const currency = useCurrency()
-  const price = formatPrice(pkg, currency)
+  const price = formatPrice(pack, currency)
   const [qty, setQty] = useState(1)
   // While the field is being typed in, its raw text wins over the number.
   const [qtyDraft, setQtyDraft] = useState<string | null>(null)
-  const total = formatAmount(priceOf(pkg, currency) * qty, currency)
+  const total = formatAmount(Math.round(priceOf(pack, currency) * qty * 100) / 100, currency)
   const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [step, setStep] = useState<1 | 2>(1)
@@ -45,6 +48,8 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, FieldError>>>({})
   const [busy, setBusy] = useState(false)
   const [state, setState] = useState<'idle' | 'unavailable' | 'error'>('idle')
+  // Order number from the server, quoted in the WhatsApp message.
+  const [number, setNumber] = useState('')
   const firstRef = useRef<HTMLInputElement>(null)
   const [mounted, setMounted] = useState(false)
 
@@ -72,6 +77,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
       setState('idle')
       setErrors({})
       changeQty(1)
+      setNumber('')
     }, 300)
   }
 
@@ -92,7 +98,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
 
   function next(e: React.FormEvent) {
     e.preventDefault()
-    const errs = validateOrder(fields, pkg)
+    const errs = validateOrder(fields, pack.platform)
     setErrors(errs)
     if (Object.keys(errs).length === 0) setStep(2)
   }
@@ -111,6 +117,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
         window.location.assign(data.url)
         return
       }
+      if (typeof data.number === 'string') setNumber(data.number)
       if (res.ok && data.status === 'not_configured') setState('unavailable')
       else if (res.status === 422 && data.fields) {
         setErrors(data.fields)
@@ -123,7 +130,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
     }
   }
 
-  const usernameLabel = t(pkg === 'instagram' ? 'usernameInstagram' : pkg === 'tiktok' ? 'usernameTiktok' : 'usernameYoutube')
+  const usernameLabel = t(USERNAME_KEYS[pack.platform])
   const inputs: { k: keyof Fields; label: string; icon: React.ReactNode; type: string; auto: string }[] = [
     { k: 'username', label: usernameLabel, icon: <AtSign size={18} />, type: 'text', auto: 'off' },
     { k: 'name', label: t('name'), icon: <User size={18} />, type: 'text', auto: 'name' },
@@ -132,6 +139,7 @@ export function OrderButton({ pkg, title, label, icon, tint }: Props) {
   ]
 
   const waText = t('whatsappMessage', {
+    number: number || '—',
     package: title,
     quantity: qty,
     total,

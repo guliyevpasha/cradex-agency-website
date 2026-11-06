@@ -2499,7 +2499,10 @@
       "services": "Услуги",
       "demo": "Демо",
       "work": "Кейсы",
-      "menu": "Меню"
+      "menu": "Меню",
+      "products": "Продукты",
+      "pricing": "Цены",
+      "demoMessage": "Здравствуйте, хочу заказать демо-версию сайта"
     },
     "footer": {
       "tagline": "Сайты, мобильные приложения и цифровая реклама. Баку, Азербайджан.",
@@ -2627,13 +2630,13 @@
       "usernameTiktok": "Имя пользователя TikTok",
       "usernameYoutube": "Ссылка на канал YouTube",
       "name": "Имя и фамилия",
-      "phone": "Номер телефона",
+      "phone": "Номер WhatsApp",
       "email": "Адрес электронной почты",
       "errRequired": "Заполните это поле",
       "errUsername": "Введите корректное имя пользователя",
       "errYoutube": "Введите корректную ссылку на канал YouTube",
       "errName": "Введите имя и фамилию полностью",
-      "errPhone": "Введите корректный номер, например +994 50 123 45 67",
+      "errPhone": "Укажите номер WhatsApp с кодом страны (например, +994 50 123 45 67)",
       "errEmail": "Введите корректный адрес электронной почты",
       "continue": "Перейти к оплате",
       "back": "Назад",
@@ -2647,12 +2650,14 @@
       "secure": "Защищено 3D Secure",
       "unavailable": "Онлайн-оплата сейчас подключается. Вы можете оформить заказ через WhatsApp.",
       "whatsapp": "Оформить заказ через WhatsApp",
-      "whatsappMessage": "Здравствуйте, хочу заказать {package}.\nКоличество: {quantity}\nСумма: {total}\nАккаунт: {username}\nИмя: {name}\nТелефон: {phone}\nE-mail: {email}",
+      "whatsappMessage": "Здравствуйте, хочу заказать {package}.\nЗаказ: {number}\nКоличество: {quantity}\nСумма: {total}\nАккаунт: {username}\nИмя: {name}\nWhatsApp: {phone}\nE-mail: {email}",
       "error": "Произошла ошибка. Повторите попытку позже.",
       "quantity": "Количество пакетов",
       "quantityHint": "Выберите от 1 до {max}",
       "less": "Уменьшить",
-      "more": "Увеличить"
+      "more": "Увеличить",
+      "usernameFacebook": "Ссылка на страницу Facebook",
+      "usernameTelegram": "Ссылка на Telegram-канал"
     },
     "legal": {
       "updated": "Последнее обновление: {date}",

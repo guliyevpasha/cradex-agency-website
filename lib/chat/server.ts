@@ -9,9 +9,9 @@ import { getTranslations } from 'next-intl/server'
 import { apiVersion, dataset, projectId } from '@/sanity/env'
 import { PLANS, azn } from '@/lib/site/pricing'
 import { SERVICE_IDS, SERVICE_SLUGS } from '@/lib/site/navigation'
+import { storageReady, writer } from '@/lib/server/sanityWrite'
 import type { Entry } from './match'
 
-const token = process.env.SANITY_WRITE_TOKEN
 const resendKey = process.env.RESEND_API_KEY
 const notifyTo = process.env.CONTACT_EMAIL || 'info@cradexagency.com'
 const notifyFrom = process.env.CHAT_FROM_EMAIL || 'Cradex Agency <noreply@cradexagency.com>'
@@ -20,10 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cradexagency.com'
 // Placeholder values from .env.local.example must not count as configured.
 const real = (v?: string) => Boolean(v && v.length > 30 && !/your|xxx|placeholder/i.test(v))
 
-export const storageReady = () => Boolean(projectId) && real(token)
-
-const writer = () =>
-  createClient({ projectId: projectId || 'unconfigured', dataset, apiVersion, token, useCdn: false, perspective: 'published' })
+export { storageReady }
 
 type Faq = { q: string; a: string }
 

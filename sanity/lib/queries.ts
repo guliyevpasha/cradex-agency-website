@@ -98,7 +98,8 @@ export async function getPaginatedBlogPosts(
 }
 
 export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az'): Promise<Article[]> {
-  const query = `*[_type == "blog"] | order(publishedAt desc) [0...${limit}] {
+  // Posts ticked "Əsas səhifədə göstər" first, then the newest.
+  const query = `*[_type == "blog"] | order(coalesce(featured, false) desc, publishedAt desc) [0...${limit}] {
     "id": _id,
     "slug": slug.current,
     "title": title.${locale},

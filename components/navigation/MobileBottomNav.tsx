@@ -1,73 +1,77 @@
 'use client'
 /**
- * App-style bottom bar on phones. The centre button starts a demo request on
- * WhatsApp; "Menu" opens the same burger menu as the header.
+ * App-style bottom bar on phones, edge to edge. Services, products, work and
+ * pricing open the burger menu with that section already expanded; the
+ * centre button asks for a demo site on WhatsApp.
  * @author Paşa Quliyev — Cradex Agency
  */
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import { Briefcase, Home, LayoutGrid, Menu } from 'lucide-react'
+import { Briefcase, Home, LayoutGrid, Menu, Package, Tag } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { isActive, whatsappUrl } from '@/lib/site/navigation'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 
 export const OPEN_MENU_EVENT = 'cradex:open-menu'
 
+/** Which menu section to expand when the burger opens (none = just open). */
+export type MenuSection = 'services' | 'products' | 'work' | 'pricing'
+
+export const openMenu = (section?: MenuSection) =>
+  window.dispatchEvent(new CustomEvent<MenuSection | undefined>(OPEN_MENU_EVENT, { detail: section }))
+
+const ITEM = 'flex min-w-0 flex-col items-center gap-1 pb-1.5 pt-2 text-[10px] font-semibold leading-none transition-colors'
+
 export function MobileBottomNav({ locale }: { locale: string }) {
   const pathname = usePathname()
   const t = useTranslations('site.mobileNav')
   const tNav = useTranslations('site.nav')
-  const tCta = useTranslations('site.cta')
 
-  const links = [
-    { href: '', label: t('home'), icon: Home, exact: true },
-    { href: '/services', label: t('services'), icon: LayoutGrid },
-  ]
-  const linksRight = [{ href: '/portfolio', label: t('work'), icon: Briefcase }]
-
-  const item = (l: { href: string; label: string; icon: typeof Home; exact?: boolean }) => {
-    const active = isActive(pathname, locale, l.href, l.exact)
-    const Icon = l.icon
+  const section = (id: MenuSection, href: string, label: string, Icon: typeof Home) => {
+    const active = isActive(pathname, locale, href)
     return (
-      <Link
-        key={l.href}
-        href={`/${locale}${l.href}`}
-        aria-current={active ? 'page' : undefined}
-        className={cn(
-          'flex min-w-[58px] flex-col items-center gap-1 py-1.5 text-[11px] font-semibold transition-colors',
-          active ? 'text-snow' : 'text-[#8E98A6]'
-        )}
+      <button
+        key={id}
+        type="button"
+        onClick={() => openMenu(id)}
+        aria-haspopup="dialog"
+        aria-controls="mobile-menu"
+        className={cn(ITEM, active ? 'text-snow' : 'text-[#8E98A6] hover:text-snow')}
       >
-        <Icon size={21} strokeWidth={2} aria-hidden="true" />
-        <span>{l.label}</span>
-      </Link>
+        <Icon size={20} strokeWidth={2} aria-hidden="true" />
+        <span className="w-full truncate text-center">{label}</span>
+      </button>
     )
   }
 
+  const homeActive = isActive(pathname, locale, '', true)
+
   return (
-    <nav aria-label={tNav('mobileNav')} className="fixed inset-x-0 bottom-0 z-30 px-3 pb-safe md:hidden">
-      <div className="mb-3 grid grid-cols-5 items-center rounded-[26px] bg-ink/95 px-2 py-1.5 shadow-float backdrop-blur-xl ring-1 ring-snow/10">
-        {links.map(item)}
+    <nav aria-label={tNav('mobileNav')} className="fixed inset-x-0 bottom-0 z-30 md:hidden">
+      <div className="grid grid-cols-7 items-end rounded-t-[22px] border-t border-snow/10 bg-ink/95 px-1 pb-safe shadow-float backdrop-blur-xl">
+        <Link href={`/${locale}`} aria-current={homeActive ? 'page' : undefined} className={cn(ITEM, homeActive ? 'text-snow' : 'text-[#8E98A6]')}>
+          <Home size={20} strokeWidth={2} aria-hidden="true" />
+          <span className="w-full truncate text-center">{t('home')}</span>
+        </Link>
+        {section('services', '/services', t('services'), LayoutGrid)}
+        {section('products', '/products', t('products'), Package)}
         <a
-          href={whatsappUrl(tCta('whatsappMessage'))}
+          href={whatsappUrl(t('demoMessage'))}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center gap-1 text-[11px] font-semibold text-snow"
+          className={cn(ITEM, 'text-snow')}
         >
-          <span className="-mt-7 flex h-14 w-14 items-center justify-center rounded-[20px] bg-brand-strong text-snow shadow-brand ring-4 ring-bg-primary">
+          <span className="-mt-6 flex h-[52px] w-[52px] items-center justify-center rounded-[18px] bg-brand-strong text-snow shadow-brand ring-4 ring-bg-primary">
             <WhatsAppIcon className="h-6 w-6" />
           </span>
-          <span>{t('demo')}</span>
+          <span className="w-full truncate text-center">{t('demo')}</span>
         </a>
-        {linksRight.map(item)}
-        <button
-          type="button"
-          onClick={() => window.dispatchEvent(new Event(OPEN_MENU_EVENT))}
-          className="flex min-w-[58px] flex-col items-center gap-1 py-1.5 text-[11px] font-semibold text-[#8E98A6] transition-colors hover:text-snow"
-        >
-          <Menu size={21} aria-hidden="true" />
-          <span>{t('menu')}</span>
+        {section('work', '/portfolio', t('work'), Briefcase)}
+        {section('pricing', '/pricing', t('pricing'), Tag)}
+        <button type="button" onClick={() => openMenu()} aria-haspopup="dialog" aria-controls="mobile-menu" className={cn(ITEM, 'text-[#8E98A6] hover:text-snow')}>
+          <Menu size={20} aria-hidden="true" />
+          <span className="w-full truncate text-center">{t('menu')}</span>
         </button>
       </div>
     </nav>

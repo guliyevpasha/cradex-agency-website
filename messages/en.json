@@ -2499,7 +2499,10 @@
       "services": "Services",
       "demo": "Demo",
       "work": "Work",
-      "menu": "Menu"
+      "menu": "Menu",
+      "products": "Products",
+      "pricing": "Pricing",
+      "demoMessage": "Hello, I would like to order a demo version of a website"
     },
     "footer": {
       "tagline": "Websites, mobile apps and digital advertising. Baku, Azerbaijan.",
@@ -2627,13 +2630,13 @@
       "usernameTiktok": "TikTok username",
       "usernameYoutube": "YouTube channel link",
       "name": "Full name",
-      "phone": "Phone number",
+      "phone": "WhatsApp number",
       "email": "Email address",
       "errRequired": "Fill in this field",
       "errUsername": "Enter a valid username",
       "errYoutube": "Enter a valid YouTube channel link",
       "errName": "Enter your full name",
-      "errPhone": "Enter a valid number, for example +994 50 123 45 67",
+      "errPhone": "Enter your WhatsApp number with the country code (e.g. +994 50 123 45 67)",
       "errEmail": "Enter a valid email address",
       "continue": "Continue to payment",
       "back": "Go back",
@@ -2647,12 +2650,14 @@
       "secure": "Protected by 3D Secure",
       "unavailable": "Online payment is currently being connected. You can complete your order via WhatsApp.",
       "whatsapp": "Complete order via WhatsApp",
-      "whatsappMessage": "Hello, I would like to order {package}.\nQuantity: {quantity}\nTotal: {total}\nAccount: {username}\nName: {name}\nPhone: {phone}\nEmail: {email}",
+      "whatsappMessage": "Hello, I would like to order {package}.\nOrder: {number}\nQuantity: {quantity}\nTotal: {total}\nAccount: {username}\nName: {name}\nWhatsApp: {phone}\nEmail: {email}",
       "error": "Something went wrong. Please try again later.",
       "quantity": "Number of packages",
       "quantityHint": "Choose from 1 to {max}",
       "less": "Decrease",
-      "more": "Increase"
+      "more": "Increase",
+      "usernameFacebook": "Facebook page link",
+      "usernameTelegram": "Telegram channel link"
     },
     "legal": {
       "updated": "Last updated: {date}",

@@ -16,9 +16,9 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { WORK_IDS, workHref } from '@/lib/site/work'
 import { ABOUT_LINKS, LOCALES, NAV_ITEMS, aboutHref, PRICING_LINKS, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive, localizedPath } from '@/lib/site/navigation'
 
-type Props = { isOpen: boolean; onClose: () => void }
+type Props = { isOpen: boolean; onClose: () => void; section?: string | null }
 
-export function MobileMenu({ isOpen, onClose }: Props) {
+export function MobileMenu({ isOpen, onClose, section = null }: Props) {
   const t = useTranslations('site.nav')
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
@@ -30,6 +30,16 @@ export function MobileMenu({ isOpen, onClose }: Props) {
   const router = useRouter()
   const closeRef = useRef<HTMLButtonElement>(null)
   const [expanded, setExpanded] = useState<string | null>(null)
+
+  // Opened from the bottom bar: expand that section and bring it into view.
+  useEffect(() => {
+    if (!isOpen) return
+    setExpanded(section)
+    if (!section) return
+    // after the expanded list has rendered and the panel has started sliding in
+    const id = setTimeout(() => document.getElementById(`mm-${section}`)?.parentElement?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 120)
+    return () => clearTimeout(id)
+  }, [isOpen, section])
 
   useEffect(() => {
     if (!isOpen) return

@@ -6,6 +6,7 @@ import { projectId, dataset } from './sanity/env'
 import { DuplicateAction } from './sanity/lib/documentActions'
 import { analyticsPlugin } from './sanity/plugins/analyticsPlugin'
 import { structure, templates } from './sanity/structure'
+import { CompleteOrderAction, StartOrderAction } from './sanity/lib/orderActions'
 
 export default defineConfig({
   name: 'default',
@@ -24,9 +25,12 @@ export default defineConfig({
   },
 
   document: {
-    actions: (prev, context) => {
-      // Add duplicate action to all document types
-      return [...prev, DuplicateAction]
-    },
+    // Orders only come from the site: no "new", no duplicate (a copy would
+    // lose the private id), but the WhatsApp start / done buttons up front.
+    actions: (prev, context) =>
+      context.schemaType === 'comboOrder'
+        ? [StartOrderAction, CompleteOrderAction, ...prev.filter((a) => a.action !== 'duplicate')]
+        : [...prev, DuplicateAction],
+    newDocumentOptions: (prev) => prev.filter((t) => t.templateId !== 'comboOrder'),
   },
 })

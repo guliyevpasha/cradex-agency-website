@@ -1,13 +1,15 @@
 /**
  * Studio sidebar, grouped the way the site is: Our work by category (ads
  * split per platform), reviews and blog posts per service, then partners
- * and the chat inbox. Every filtered list creates new documents with its
+ * and the chat inbox, plus the combo packages and their orders (by status).
+ * Every filtered list creates new documents with its
  * category / service already filled in (templates below).
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { StructureBuilder, StructureResolver } from 'sanity/structure'
 import type { Template } from 'sanity'
-import { BookOpen, Briefcase, Globe, Handshake, Inbox, Megaphone, MessageSquareQuote, Search, ShieldCheck, Smartphone, Star, Tag } from 'lucide-react'
+import { BookOpen, Briefcase, Globe, Handshake, Inbox, Megaphone, MessageSquareQuote, Package, Search, ShieldCheck, ShoppingBag, Smartphone, Star, Tag } from 'lucide-react'
+import { ORDER_STATUSES } from './schemas/comboOrder'
 import { AD_PLATFORMS, WORK_CATEGORIES } from './schemas/workCase'
 import { SERVICE_TAGS } from './schemas/locale'
 
@@ -127,10 +129,40 @@ export const structure: StructureResolver = (S) =>
               .id('testimonial-home')
               .title('Əsas səhifədə')
               .icon(Star)
-              .child(S.documentList().title('Əsas səhifədə').schemaType('testimonial').filter('_type == "testimonial" && featured == true')),
+              .child(S.documentList().title('Əsas səhifədə').schemaType('testimonial').filter('_type == "testimonial" && "home" in services')),
           ])
         ),
       S.listItem().id('blog').title('Bloq yazıları').icon(BookOpen).child(byService(S, 'blog', 'Bloq yazıları')),
+      S.listItem()
+        .id('combo')
+        .title('Sosial media kombo')
+        .icon(ShoppingBag)
+        .child(
+          S.list()
+            .title('Sosial media kombo')
+            .items([
+              S.documentTypeListItem('comboPackage').title('Paketlər').icon(Package),
+              S.divider(),
+              ...ORDER_STATUSES.map((st) =>
+                S.listItem()
+                  .id(`orders-${st.value}`)
+                  .title(`Sifarişlər: ${st.title}`)
+                  .child(
+                    S.documentList()
+                      .title(`Sifarişlər: ${st.title}`)
+                      .schemaType('comboOrder')
+                      // orders written before "status" existed count as new
+                      .filter(st.value === 'new' ? '_type == "comboOrder" && (status == "new" || !defined(status))' : '_type == "comboOrder" && status == $s')
+                      .params({ s: st.value })
+                      .defaultOrdering([{ field: 'createdAt', direction: 'desc' }])
+                  )
+              ),
+              S.listItem()
+                .id('orders-all')
+                .title('Bütün sifarişlər')
+                .child(S.documentTypeList('comboOrder').title('Bütün sifarişlər').defaultOrdering([{ field: 'createdAt', direction: 'desc' }])),
+            ])
+        ),
       S.divider(),
       S.documentTypeListItem('partner').title('Tərəfdaşlar (loqolar)').icon(Handshake),
       S.listItem()

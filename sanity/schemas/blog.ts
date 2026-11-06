@@ -66,6 +66,13 @@ export default defineType({
       options: { list: SERVICE_TAGS, layout: 'grid' },
     }),
     defineField({
+      name: 'featured',
+      title: 'Əsas səhifədə göstər',
+      description: 'Seçilən yazılar əsas səhifənin bloq bölməsində birinci çıxır.',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'object',

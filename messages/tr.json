@@ -2499,7 +2499,10 @@
       "services": "Hizmetler",
       "demo": "Demo",
       "work": "Projeler",
-      "menu": "Menü"
+      "menu": "Menü",
+      "products": "Ürünler",
+      "pricing": "Fiyatlar",
+      "demoMessage": "Merhaba, demo versiyon bir web sitesi sipariş etmek istiyorum"
     },
     "footer": {
       "tagline": "Web siteleri, mobil uygulamalar ve dijital reklam. Bakü, Azerbaycan.",
@@ -2627,13 +2630,13 @@
       "usernameTiktok": "TikTok kullanıcı adı",
       "usernameYoutube": "YouTube kanal bağlantısı",
       "name": "Ad ve soyad",
-      "phone": "Telefon numarası",
+      "phone": "WhatsApp numarası",
       "email": "E-posta adresi",
       "errRequired": "Bu alanı doldurun",
       "errUsername": "Geçerli bir kullanıcı adı girin",
       "errYoutube": "Geçerli bir YouTube kanal bağlantısı girin",
       "errName": "Ad ve soyadınızı eksiksiz yazın",
-      "errPhone": "Geçerli bir numara girin, örneğin +994 50 123 45 67",
+      "errPhone": "WhatsApp numaranızı ülke koduyla yazın (örn. +994 50 123 45 67)",
       "errEmail": "Geçerli bir e-posta adresi girin",
       "continue": "Ödemeye geç",
       "back": "Geri dön",
@@ -2647,12 +2650,14 @@
       "secure": "3D Secure ile korunur",
       "unavailable": "Online ödeme şu anda bağlanma aşamasında. Siparişinizi WhatsApp ile tamamlayabilirsiniz.",
       "whatsapp": "Siparişi WhatsApp ile tamamla",
-      "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nAdet: {quantity}\nTutar: {total}\nHesap: {username}\nAd: {name}\nTelefon: {phone}\nE-posta: {email}",
+      "whatsappMessage": "Merhaba, {package} sipariş etmek istiyorum.\nSipariş: {number}\nAdet: {quantity}\nTutar: {total}\nHesap: {username}\nAd: {name}\nWhatsApp: {phone}\nE-posta: {email}",
       "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
       "quantity": "Paket adedi",
       "quantityHint": "1 ile {max} arasında seçin",
       "less": "Azalt",
-      "more": "Artır"
+      "more": "Artır",
+      "usernameFacebook": "Facebook sayfa bağlantısı",
+      "usernameTelegram": "Telegram kanal bağlantısı"
     },
     "legal": {
       "updated": "Son güncelleme: {date}",

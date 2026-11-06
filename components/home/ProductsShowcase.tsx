@@ -4,9 +4,12 @@
  */
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowRight, Bot, Check, Instagram, Music2, Youtube } from 'lucide-react'
+import { getLocale, getTranslations } from 'next-intl/server'
+import { ArrowRight, Bot, Check, Facebook, Instagram, Music2, Send, Youtube } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { productHref } from '@/lib/site/navigation'
+import { getComboPackages } from '@/lib/data/combos'
+import type { ComboPlatform } from '@/lib/site/orders'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
 import { OrderButton } from './OrderModal'
@@ -14,11 +17,14 @@ import { PriceTag } from './PriceTag'
 import { SectionHeading } from './SectionHeading'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
-const COMBOS = [
-  { id: 'instagram', icon: Instagram, tint: 'from-[#F58529] via-[#DD2A7B] to-[#8134AF]' },
-  { id: 'tiktok', icon: Music2, tint: 'from-[#25F4EE] via-[#111111] to-[#FE2C55]' },
-  { id: 'youtube', icon: Youtube, tint: 'from-[#FF0000] to-[#B30000]' },
-] as const
+// Icon and gradient per platform; the packages themselves come from Studio.
+const PLATFORM_STYLE: Record<ComboPlatform, { icon: typeof Instagram; tint: string }> = {
+  instagram: { icon: Instagram, tint: 'from-[#F58529] via-[#DD2A7B] to-[#8134AF]' },
+  tiktok: { icon: Music2, tint: 'from-[#25F4EE] via-[#111111] to-[#FE2C55]' },
+  youtube: { icon: Youtube, tint: 'from-[#FF0000] to-[#B30000]' },
+  facebook: { icon: Facebook, tint: 'from-[#1877F2] to-[#0A4FB8]' },
+  telegram: { icon: Send, tint: 'from-[#2AABEE] to-[#1E88C7]' },
+}
 
 export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detailed?: boolean; headingAs?: 'h1' | 'h2' }) {
   const t = useTranslations('site.products')
@@ -105,16 +111,18 @@ export function ProductsShowcase({ detailed = false, headingAs = 'h2' }: { detai
   )
 }
 
-/** The three combo package cards with their order buttons. */
-export function ComboCards({ className }: { className?: string }) {
-  const t = useTranslations('site.products')
+/** The combo package cards with their order buttons (packages from Studio). */
+export async function ComboCards({ className }: { className?: string }) {
+  const locale = await getLocale()
+  const t = await getTranslations('site.products')
+  const packages = await getComboPackages(locale)
   return (
     <ul className={cn('grid gap-5 md:grid-cols-2 lg:grid-cols-3', className)}>
-      {COMBOS.map(({ id, icon: Icon, tint }) => {
-        const title = t(`combo.${id}Title`)
-        const features = t.raw(`combo.${id}Features`) as string[]
+      {packages.map((pack) => {
+        const { icon: Icon, tint } = PLATFORM_STYLE[pack.platform]
+        const { title, features } = pack
         return (
-          <li key={id} id={id} className="scroll-mt-28">
+          <li key={pack.id} id={pack.id} className="scroll-mt-28">
             <Tilt max={5} className="h-full" innerClassName="h-full">
               <article className="relative flex h-full flex-col rounded-[28px] border border-line bg-bg-primary p-7 shadow-card">
                 <span className="tilt-glare" />
@@ -125,7 +133,7 @@ export function ComboCards({ className }: { className?: string }) {
                   <span>
                     <span className="block text-lg font-bold text-text-primary">{title}</span>
                     <span className="mt-1 inline-flex rounded-full bg-[#16A34A]/10 px-2.5 py-0.5 text-sm font-bold text-[#15803D] dark:text-[#4ADE80]">
-                      {t('combo.included')} · <PriceTag pkg={id} />
+                      {t('combo.included')} · <PriceTag pack={pack} />
                     </span>
                   </span>
                 </div>
@@ -137,7 +145,7 @@ export function ComboCards({ className }: { className?: string }) {
                     </li>
                   ))}
                 </ul>
-                <OrderButton pkg={id} title={title} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
+                <OrderButton pack={{ id: pack.id, platform: pack.platform, azn: pack.azn, usd: pack.usd }} title={title} label={t('combo.order')} tint={tint} icon={<Icon size={24} aria-hidden="true" />} />
               </article>
             </Tilt>
           </li>
