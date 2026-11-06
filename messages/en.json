@@ -4091,6 +4091,419 @@
         "title": "Digital Advertising",
         "text": "Monthly management packages for Meta, Google, TikTok and LinkedIn ads.",
         "badge": "from 300 ₼/mo"
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "text": "iOS and Android apps, from an MVP to a full platform.",
+        "badge": "from 3 500 ₼"
+      },
+      "seo": {
+        "title": "SEO and GEO",
+        "text": "Monthly packages to get found in Google and AI search.",
+        "badge": "from 450 ₼/mo"
+      },
+      "support": {
+        "title": "Technical Support",
+        "text": "Monthly site maintenance, security and one-off technical work.",
+        "badge": "from 60 ₼/mo"
+      }
+    },
+    "servicePricing": {
+      "common": {
+        "billingTitle": "Billing type",
+        "billing": {
+          "monthly": "Monthly",
+          "annual": "Annual"
+        },
+        "perMonth": "/mo",
+        "perYear": "/yr",
+        "once": "one-time",
+        "from": "starting price",
+        "recommended": "Recommended",
+        "annualOnce": "12 months in one payment, 20% off",
+        "monthlyNote": "Paid at the start of each month",
+        "includesTitle": "Included",
+        "order": "Order",
+        "orderMessage": "Hello, {service}: I'm interested in the {plan} package",
+        "extraMessage": "Hello, {service}: I'm interested in the {item} service",
+        "termsTitle": "Our terms",
+        "faqTitle": "Frequently asked questions",
+        "ctaButton": "Message us on WhatsApp"
+      },
+      "mobile": {
+        "metaTitle": "Mobile App Development Pricing — iOS and Android",
+        "metaDescription": "Mobile app packages: MVP, Business and Pro. What's included, timeline, milestone payments and monthly support pricing.",
+        "eyebrow": "Pricing · Mobile App",
+        "title": "Let's get your idea onto the App Store and Google Play",
+        "text": "We build one app for both iOS and Android from a single codebase: design, development, testing and store release. Payment is made in stages.",
+        "perks": [
+          "iOS + Android in one project",
+          "Staged payment: 40% · 30% · 30%",
+          "You own the source code",
+          "Free bug fixes after release"
+        ],
+        "cardsTitle": "App packages",
+        "cardsText": "The price is one-time and depends on the scope of the project. We give the exact amount in a written proposal once we've seen your requirements.",
+        "packages": {
+          "mvp": {
+            "name": "MVP",
+            "meta": "6–8 weeks",
+            "text": "A first version to test your idea in the market.",
+            "features": [
+              "5–7 screens",
+              "UI/UX design",
+              "Sign-up and login",
+              "Simple admin or API integration",
+              "Push notifications",
+              "Release on the App Store and Google Play",
+              "1 month of free bug fixes after release"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "10–14 weeks",
+            "text": "A complete app with customer accounts, payments and an admin panel.",
+            "features": [
+              "12–18 screens",
+              "Custom design system",
+              "User accounts and profiles",
+              "Admin panel, backend and database",
+              "Online payment integration",
+              "Analytics",
+              "2 languages",
+              "2 months of free bug fixes after release"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "16–24 weeks",
+            "text": "A platform with complex business logic and integrations.",
+            "features": [
+              "25+ screens",
+              "Admin panel and dashboard",
+              "Multilingual",
+              "CRM, payment and third-party API integrations",
+              "Real-time features: chat, maps",
+              "Security and performance testing",
+              "3 months of free bug fixes after release"
+            ]
+          }
+        },
+        "extrasTitle": "Monthly support after release",
+        "extrasText": "Once the app is live, we keep it running and up to date.",
+        "extras": {
+          "care": {
+            "name": "Care",
+            "text": "Bug fixes, store updates, server monitoring."
+          },
+          "carePlus": {
+            "name": "Care+",
+            "text": "Plus 8 hours a month for small features."
+          },
+          "carePro": {
+            "name": "Care Pro",
+            "text": "Priority response and 20 hours of development a month."
+          }
+        },
+        "terms": [
+          {
+            "k": "Payment",
+            "v": "40% at the start, 30% after design approval, 30% before handover."
+          },
+          {
+            "k": "Source code",
+            "v": "After full payment, all code and rights pass to you."
+          },
+          {
+            "k": "Store accounts",
+            "v": "Apple Developer ($99/yr) and Google Play ($25 one-time) accounts are opened in your name and paid separately."
+          },
+          {
+            "k": "Scope changes",
+            "v": "Features outside the agreed list are quoted separately."
+          },
+          {
+            "k": "Servers",
+            "v": "Monthly costs for hosting and third-party services (SMS, maps, etc.) are not included in the price."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Why is the price shown as a starting price?",
+            "a": "Every app has a different number of screens and features. The package price reflects an average scope, and we give the exact amount in a written proposal once we've seen the requirements."
+          },
+          {
+            "q": "Do you build separate iOS and Android apps?",
+            "a": "We build for both platforms from one codebase (Flutter or React Native). This cuts time and budget by roughly a third."
+          },
+          {
+            "q": "Who publishes the app to the stores?",
+            "a": "We do, and we handle the process until it passes review. The accounts are opened in your name."
+          },
+          {
+            "q": "What happens after release?",
+            "a": "Depending on the package, we fix bugs free of charge for 1–3 months. After that, you can choose one of the monthly support packages."
+          }
+        ],
+        "cta": {
+          "title": "Let's discuss your app idea",
+          "text": "Describe your idea in a few sentences, and we'll tell you which package fits and the estimated timeline. The consultation is free."
+        },
+        "message": "Hello, I'd like to order a mobile app"
+      },
+      "seo": {
+        "metaTitle": "SEO and GEO Pricing — Google and AI Search",
+        "metaDescription": "Monthly SEO and GEO packages: technical SEO, articles, backlinks, Google Business Profile and visibility in ChatGPT, Gemini and Perplexity answers.",
+        "eyebrow": "Pricing · SEO and GEO",
+        "title": "Get found on Google and in AI answers",
+        "text": "We prepare your website for search engines and for AI assistants such as ChatGPT, Gemini and Perplexity: technical foundations, content, links and a monthly report.",
+        "perks": [
+          "Technical SEO and audit",
+          "New articles every month",
+          "Quality backlinks",
+          "Optimization for AI answers",
+          "20% off with annual payment"
+        ],
+        "cardsTitle": "SEO packages",
+        "cardsText": "Choose monthly to see the monthly fee, or annual to see the yearly amount with 20% off.",
+        "packages": {
+          "local": {
+            "name": "Local",
+            "meta": "Up to 10 pages",
+            "text": "For businesses looking for customers in Baku or a single city.",
+            "features": [
+              "Initial audit",
+              "Technical SEO basics",
+              "On-page optimization",
+              "Google Business Profile management",
+              "2 articles per month",
+              "4 backlinks per month",
+              "Schema: Organization, LocalBusiness",
+              "Monthly report"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "Local + SEO and GEO",
+            "text": "For competitive niches and visibility in AI answers.",
+            "features": [
+              "Everything in Local",
+              "4 articles per month",
+              "8 backlinks per month",
+              "Keyword map and competitor analysis",
+              "FAQ and Article schema",
+              "Optimization for ChatGPT, Gemini, Perplexity",
+              "1 meeting per month"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "Multilingual and large sites",
+            "text": "For multilingual, content-heavy sites and active growth.",
+            "features": [
+              "Everything in Business",
+              "8 articles per month",
+              "15 backlinks per month",
+              "Full internal linking plan",
+              "Multilingual SEO",
+              "Brand tracking in AI answers",
+              "Conversion tracking",
+              "Weekly check-ins"
+            ]
+          }
+        },
+        "extrasTitle": "One-off services",
+        "extrasText": "You can also order these separately, without a monthly package.",
+        "extras": {
+          "audit": {
+            "name": "Technical SEO Audit",
+            "text": "3–5 days: a written report and a prioritized task list."
+          },
+          "backlinks": {
+            "name": "Backlink Package",
+            "text": "10 quality links from sites relevant to your topic."
+          }
+        },
+        "terms": [
+          {
+            "k": "Minimum term",
+            "v": "3 months — SEO takes time to show results."
+          },
+          {
+            "k": "Payment",
+            "v": "Monthly at the start of each month, or annually in one payment with 20% off."
+          },
+          {
+            "k": "Guarantee",
+            "v": "No search engine promises a specific position, so we don't guarantee rankings or traffic. We show the work and the numbers openly every month."
+          },
+          {
+            "k": "Access",
+            "v": "Changes to the site require access to the admin panel or the code."
+          },
+          {
+            "k": "Quota",
+            "v": "Article and backlink counts do not roll over to the next month."
+          },
+          {
+            "k": "Cancellation",
+            "v": "After 3 months you can cancel with 30 days' notice."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What is GEO?",
+            "a": "Generative Engine Optimization — optimizing your site so that AI assistants such as ChatGPT, Gemini and Perplexity can cite it as a source in their answers."
+          },
+          {
+            "q": "When do results appear?",
+            "a": "First changes usually show within 4–8 weeks, and steady growth within 3–6 months. Competition and the current state of the site affect this timeline."
+          },
+          {
+            "q": "Who writes the articles?",
+            "a": "We write them and you approve them. We collect industry details from you so the text is accurate."
+          },
+          {
+            "q": "My site wasn't built by you. Can you still work on it?",
+            "a": "Yes. We start with an audit in the first month and tell you which changes are possible on your site's platform."
+          }
+        ],
+        "cta": {
+          "title": "Let's check your site's SEO",
+          "text": "Send us your site address — we'll run a quick check and tell you which package fits. The consultation is free."
+        },
+        "message": "Hello, I'm interested in the SEO and GEO service"
+      },
+      "support": {
+        "metaTitle": "Technical Support Pricing — Site Maintenance and Security",
+        "metaDescription": "Monthly website maintenance, backups, security and one-off work: SEO audit, malware removal, backlinks, social account recovery.",
+        "eyebrow": "Pricing · Technical Support",
+        "title": "Keep your site running and secure every day",
+        "text": "We keep an eye on updates, backups and security while you focus on your business. One-off technical work can also be ordered separately.",
+        "perks": [
+          "Backups and updates",
+          "Security monitoring",
+          "Monthly edit quota",
+          "20% off with annual payment"
+        ],
+        "cardsTitle": "Monthly maintenance packages",
+        "cardsText": "Choose monthly to see the monthly fee, or annual to see the yearly amount with 20% off.",
+        "packages": {
+          "base": {
+            "name": "Basic",
+            "meta": "For small sites",
+            "text": "Core monitoring to keep your site running reliably.",
+            "features": [
+              "System and plugin updates",
+              "Weekly backups",
+              "Uptime monitoring",
+              "Basic security monitoring",
+              "1 small edit per month",
+              "Email support"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "Active business sites",
+            "text": "Daily backups and regular checks.",
+            "features": [
+              "Everything in Basic",
+              "Daily backups",
+              "Security scan",
+              "Speed check",
+              "4 small edits per month",
+              "Technical SEO check",
+              "2 hours of support per month"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "Online stores and large sites",
+            "text": "Priority response and extended support hours.",
+            "features": [
+              "Everything in Business",
+              "Priority response within 4 hours",
+              "10 edits per month",
+              "6 hours of support per month",
+              "WAF and CDN configuration",
+              "SSL and domain monitoring",
+              "Monthly report"
+            ]
+          }
+        },
+        "extrasTitle": "One-off technical work",
+        "extrasText": "Can also be ordered separately, without a package.",
+        "extras": {
+          "audit": {
+            "name": "Technical SEO Audit",
+            "text": "3–5 days: a written report and a prioritized task list."
+          },
+          "malware": {
+            "name": "Malware Removal",
+            "text": "1–3 days: cleanup, credential reset, firewall and 14 days of monitoring."
+          },
+          "backlinks": {
+            "name": "Backlink Package",
+            "text": "10 quality links."
+          },
+          "backlinksPlus": {
+            "name": "Backlink Package+",
+            "text": "25 quality links."
+          },
+          "linking": {
+            "name": "Internal Linking Setup",
+            "text": "For sites of up to 50 pages."
+          },
+          "recovery": {
+            "name": "Social Account Recovery",
+            "text": "Instagram, Facebook, TikTok: case analysis and requests through official channels. The platform makes the decision, and there is no guarantee of outcome."
+          }
+        },
+        "terms": [
+          {
+            "k": "Minimum term",
+            "v": "3 months for monthly maintenance packages."
+          },
+          {
+            "k": "Not included",
+            "v": "Hosting and domain are not included in the price."
+          },
+          {
+            "k": "Extra work",
+            "v": "Hours beyond the quota are 40 ₼."
+          },
+          {
+            "k": "Safe updates",
+            "v": "Major updates are tested in a staging environment first."
+          },
+          {
+            "k": "Account recovery",
+            "v": "We only use the platform's official channels and never ask for your password. The outcome depends on the platform's decision."
+          }
+        ],
+        "faq": [
+          {
+            "q": "My site wasn't built by you. Can you maintain it?",
+            "a": "Yes. In the first month we review the site and set up backups and monitoring, then maintain it according to your package."
+          },
+          {
+            "q": "What is a small edit?",
+            "a": "Tasks taking up to 30 minutes, such as changing text, an image, a price or a link."
+          },
+          {
+            "q": "What do you do if the site has been hacked?",
+            "a": "We remove the malicious code, reset credentials, close the security hole and monitor the site for 14 days."
+          },
+          {
+            "q": "Can you definitely recover my social account?",
+            "a": "No, and nobody can guarantee it: the platform makes the decision. We analyze the situation, prepare the right requests and go through the process with you."
+          }
+        ],
+        "cta": {
+          "title": "Let's check your site's technical health",
+          "text": "Send us the site address and the problem — we'll tell you what's needed and the price. The consultation is free."
+        },
+        "message": "Hello, I'm interested in technical support"
       }
     },
     "adsPricingPage": {

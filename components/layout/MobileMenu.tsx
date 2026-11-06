@@ -126,14 +126,6 @@ export function MobileMenu({ isOpen, onClose }: Props) {
                                 </Link>
                               </li>
                             ))}
-                            {/* pricing has no overview page, both pages are listed above */}
-                            {id !== 'pricing' && (
-                              <li>
-                                <Link href={`/${locale}/${id}`} onClick={onClose} className="block rounded-xl px-3 py-2.5 text-[15px] font-semibold text-accent-ink">
-                                  {id === 'services' ? t('allServices') : t('allProducts')}
-                                </Link>
-                              </li>
-                            )}
                           </ul>
                         )}
                       </li>

@@ -23,7 +23,7 @@ type MenuId = 'services' | 'products' | 'pricing'
 
 const SERVICE_ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const PRODUCT_ICONS = { chatbot: Bot, combo: Share2 }
-const PRICING_ICONS = { web: Code2, ads: Megaphone }
+const PRICING_ICONS = { web: Code2, ads: Megaphone, mobile: Smartphone, seo: Search, support: ShieldCheck }
 
 /*
  * Mega menu. Texts are shown in full (no clamping): the panel is wide enough
@@ -31,56 +31,53 @@ const PRICING_ICONS = { web: Code2, ads: Megaphone }
  */
 function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
   const locale = useLocale()
-  const tNav = useTranslations('site.nav')
   const tS = useTranslations('site.services')
   const tM = useTranslations('site.productMenu')
   const tP = useTranslations('site.pricingMenu')
 
-  const footer = (
-    <Link
-      href={`/${locale}/${id}`}
-      onClick={onClose}
-      className="group flex items-center justify-between rounded-2xl border border-line px-4 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary/40 hover:text-accent-ink"
-    >
-      {id === 'services' ? tNav('allServices') : tNav('allProducts')}
-      <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-    </Link>
-  )
-
   if (id === 'pricing') {
+    const [main, ...others] = PRICING_LINKS
+    const MainIcon = PRICING_ICONS[main.id]
     return (
-      <div className="dd-panel absolute left-1/2 top-full z-50 w-[620px] -translate-x-1/2 pt-3">
-        <ul className="grid grid-cols-2 gap-3 rounded-[28px] border border-line bg-bg-primary p-3 shadow-float">
-          {PRICING_LINKS.map((p, i) => {
-            const Icon = PRICING_ICONS[p.id]
-            return (
-              <li key={p.id}>
-                <Link
-                  href={pricingHref(locale, p.id)}
-                  onClick={onClose}
-                  className={cn(
-                    'group flex h-full flex-col rounded-[22px] p-5 transition-transform hover:-translate-y-0.5',
-                    i === 0 ? 'bg-ink text-snow dark:bg-[#151A22]' : 'bg-bg-secondary text-text-primary'
-                  )}
-                >
-                  <span className="flex items-center justify-between">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong text-snow shadow-card">
-                      <Icon size={20} aria-hidden="true" />
+      <div className="dd-panel absolute left-1/2 top-full z-50 w-[840px] -translate-x-1/2 pt-3">
+        <div className="grid grid-cols-[240px_1fr] gap-3 rounded-[28px] border border-line bg-bg-primary p-3 shadow-float">
+          <Link
+            href={pricingHref(locale, main.id)}
+            onClick={onClose}
+            className="group flex flex-col rounded-[22px] bg-ink p-5 text-snow transition-transform hover:-translate-y-0.5 dark:bg-[#151A22]"
+          >
+            <span className="flex items-center justify-between">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong shadow-card">
+                <MainIcon size={20} aria-hidden="true" />
+              </span>
+              <span className="rounded-full bg-snow/10 px-2.5 py-1 text-[12px] font-bold">{tP(`${main.id}.badge`)}</span>
+            </span>
+            <span className="mt-4 text-[17px] font-bold leading-snug">{tP(`${main.id}.title`)}</span>
+            <span className="mt-1.5 text-[13.5px] leading-relaxed text-snow/75">{tP(`${main.id}.text`)}</span>
+            <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13px] font-semibold text-brand">
+              {tM('more')} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </span>
+          </Link>
+          <ul className="grid grid-cols-2 gap-1">
+            {others.map((p) => {
+              const Icon = PRICING_ICONS[p.id]
+              return (
+                <li key={p.id}>
+                  <Link href={pricingHref(locale, p.id)} onClick={onClose} className="group flex h-full gap-3 rounded-2xl p-3.5 transition-colors hover:bg-bg-secondary">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent-primary/10 text-accent-ink transition-colors group-hover:bg-brand-strong group-hover:text-snow">
+                      <Icon size={17} aria-hidden="true" />
                     </span>
-                    <span className={cn('rounded-full px-2.5 py-1 text-[12px] font-bold', i === 0 ? 'bg-snow/10 text-snow' : 'bg-accent-primary/10 text-accent-ink')}>
-                      {tP(`${p.id}.badge`)}
+                    <span className="min-w-0">
+                      <span className="block text-[14.5px] font-semibold leading-snug text-text-primary">{tP(`${p.id}.title`)}</span>
+                      <span className="mt-1 block text-[12.5px] leading-relaxed text-text-muted">{tP(`${p.id}.text`)}</span>
+                      <span className="mt-2 inline-flex rounded-full bg-accent-primary/10 px-2 py-0.5 text-[11px] font-bold text-accent-ink">{tP(`${p.id}.badge`)}</span>
                     </span>
-                  </span>
-                  <span className="mt-4 text-[16px] font-bold leading-snug">{tP(`${p.id}.title`)}</span>
-                  <span className={cn('mt-1.5 text-[13.5px] leading-relaxed', i === 0 ? 'text-snow/75' : 'text-text-secondary')}>{tP(`${p.id}.text`)}</span>
-                  <span className={cn('mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold', i === 0 ? 'text-brand' : 'text-accent-ink')}>
-                    {tM('more')} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                  </span>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
     )
   }
@@ -120,7 +117,6 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
               )
             })}
           </ul>
-          <div className="mt-3">{footer}</div>
         </div>
       </div>
     )
@@ -165,7 +161,6 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
               )
             })}
           </ul>
-          <div className="mt-auto">{footer}</div>
         </div>
       </div>
     </div>

@@ -57,6 +57,9 @@ export const productHref = (locale: string, id: ProductId) =>
 export const PRICING_LINKS = [
   { id: 'web', path: '' },
   { id: 'ads', path: '/reqemsal-reklam' },
+  { id: 'mobile', path: '/mobil-tetbiq' },
+  { id: 'seo', path: '/seo-geo' },
+  { id: 'support', path: '/texniki-xidmet' },
 ] as const
 
 export type PricingId = (typeof PRICING_LINKS)[number]['id']

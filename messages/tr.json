@@ -4091,6 +4091,419 @@
         "title": "Dijital Reklam",
         "text": "Meta, Google, TikTok ve LinkedIn reklamları için aylık yönetim paketleri.",
         "badge": "300 ₼/ay'dan"
+      },
+      "mobile": {
+        "title": "Mobil Uygulama Geliştirme",
+        "text": "iOS ve Android uygulamaları: MVP'den tam platforma kadar.",
+        "badge": "3 500 ₼'den"
+      },
+      "seo": {
+        "title": "SEO ve GEO",
+        "text": "Google'da ve yapay zekâ aramalarında görünmek için aylık paketler.",
+        "badge": "450 ₼/ay'dan"
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "text": "Sitenin aylık bakımı, güvenlik ve tek seferlik teknik işler.",
+        "badge": "60 ₼/ay'dan"
+      }
+    },
+    "servicePricing": {
+      "common": {
+        "billingTitle": "Ödeme türü",
+        "billing": {
+          "monthly": "Aylık",
+          "annual": "Yıllık"
+        },
+        "perMonth": "/ay",
+        "perYear": "/yıl",
+        "once": "tek seferlik",
+        "from": "başlangıç fiyatı",
+        "recommended": "Önerilen",
+        "annualOnce": "12 ay tek seferde, %20 indirimli",
+        "monthlyNote": "Her ayın başında ödenir",
+        "includesTitle": "Dahil olanlar",
+        "order": "Sipariş ver",
+        "orderMessage": "Merhaba, {service}: {plan} paketiyle ilgileniyorum",
+        "extraMessage": "Merhaba, {service}: {item} hizmetiyle ilgileniyorum",
+        "termsTitle": "Şartlarımız",
+        "faqTitle": "Sık sorulan sorular",
+        "ctaButton": "WhatsApp'tan yazın"
+      },
+      "mobile": {
+        "metaTitle": "Mobil Uygulama Geliştirme Fiyatları — iOS ve Android",
+        "metaDescription": "Mobil uygulama paketleri: MVP, Business ve Pro. Neler dahil, süre, aşamalı ödeme ve aylık destek fiyatları.",
+        "eyebrow": "Fiyatlar · Mobil Uygulama",
+        "title": "Fikrinizi App Store ve Google Play'e taşıyalım",
+        "text": "Tek kod tabanıyla hem iOS hem Android için uygulama geliştiriyoruz: tasarım, yazılım, test ve mağazalarda yayın. Ödeme aşamalı olarak yapılır.",
+        "perks": [
+          "Tek projede iOS + Android",
+          "Aşamalı ödeme: %40 · %30 · %30",
+          "Kaynak kod size ait",
+          "Yayından sonra ücretsiz hata düzeltme"
+        ],
+        "cardsTitle": "Uygulama paketleri",
+        "cardsText": "Fiyat tek seferliktir ve projenin kapsamına göre değişir. Kesin tutarı, ihtiyaçlarınızı inceledikten sonra yazılı teklifte veriyoruz.",
+        "packages": {
+          "mvp": {
+            "name": "MVP",
+            "meta": "6–8 hafta",
+            "text": "Fikrinizi pazarda test etmek için ilk sürüm.",
+            "features": [
+              "5–7 ekran",
+              "UI/UX tasarım",
+              "Kayıt ve giriş",
+              "Basit yönetim paneli veya API entegrasyonu",
+              "Push bildirimleri",
+              "App Store ve Google Play'de yayın",
+              "Yayından sonra 1 ay ücretsiz hata düzeltme"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "10–14 hafta",
+            "text": "Müşteri hesapları, ödeme ve yönetim paneliyle eksiksiz uygulama.",
+            "features": [
+              "12–18 ekran",
+              "Özel tasarım sistemi",
+              "Kullanıcı hesapları ve profil",
+              "Yönetim paneli, backend ve veritabanı",
+              "Online ödeme entegrasyonu",
+              "Analitik",
+              "2 dil",
+              "Yayından sonra 2 ay ücretsiz hata düzeltme"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "16–24 hafta",
+            "text": "Karmaşık iş mantığı ve entegrasyonlar içeren platform.",
+            "features": [
+              "25+ ekran",
+              "Yönetim paneli ve dashboard",
+              "Çok dilli",
+              "CRM, ödeme ve harici API entegrasyonları",
+              "Gerçek zamanlı özellikler: sohbet, harita",
+              "Güvenlik ve performans testleri",
+              "Yayından sonra 3 ay ücretsiz hata düzeltme"
+            ]
+          }
+        },
+        "extrasTitle": "Yayından sonra aylık destek",
+        "extrasText": "Uygulama yayına girdikten sonra onu çalışır ve güncel tutuyoruz.",
+        "extras": {
+          "care": {
+            "name": "Destek",
+            "text": "Hata düzeltme, mağaza güncellemeleri, sunucu takibi."
+          },
+          "carePlus": {
+            "name": "Destek+",
+            "text": "Ek olarak ayda 8 saat küçük özellik geliştirme."
+          },
+          "carePro": {
+            "name": "Destek Pro",
+            "text": "Öncelikli yanıt ve ayda 20 saat geliştirme."
+          }
+        },
+        "terms": [
+          {
+            "k": "Ödeme",
+            "v": "Başlangıçta %40, tasarım onayından sonra %30, tesliminden önce %30."
+          },
+          {
+            "k": "Kaynak kod",
+            "v": "Ödemenin tamamından sonra tüm kod ve haklar size geçer."
+          },
+          {
+            "k": "Mağaza hesapları",
+            "v": "Apple Developer (99 $/yıl) ve Google Play (25 $ tek seferlik) hesapları adınıza açılır, ücretleri ayrıdır."
+          },
+          {
+            "k": "Kapsam değişikliği",
+            "v": "Üzerinde anlaşılan listenin dışındaki özellikler ayrıca fiyatlandırılır."
+          },
+          {
+            "k": "Sunucu",
+            "v": "Hosting ve üçüncü taraf hizmetlerin (SMS, harita vb.) aylık maliyeti fiyata dahil değildir."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Fiyat neden \"başlangıç\" olarak gösteriliyor?",
+            "a": "Her uygulamanın ekran sayısı ve özellikleri farklıdır. Paket fiyatı ortalama bir kapsama göre belirlenmiştir; kesin tutarı ihtiyaçları inceledikten sonra yazılı teklifte veriyoruz."
+          },
+          {
+            "q": "iOS ve Android için ayrı uygulama mı geliştiriyorsunuz?",
+            "a": "Tek kod tabanıyla (Flutter veya React Native) her iki platform için uygulama geliştiriyoruz. Bu, süreyi ve bütçeyi yaklaşık üçte bir oranında azaltır."
+          },
+          {
+            "q": "Uygulamayı mağazaya kim yüklüyor?",
+            "a": "Biz yüklüyoruz ve incelemeyi geçene kadar süreci yürütüyoruz. Hesaplar adınıza açılır."
+          },
+          {
+            "q": "Yayından sonra ne oluyor?",
+            "a": "Pakete göre 1–3 ay ücretsiz hata düzeltme yapıyoruz. Sonrasında aylık destek paketlerinden birini seçebilirsiniz."
+          }
+        ],
+        "cta": {
+          "title": "Uygulama fikrinizi konuşalım",
+          "text": "Fikrinizi birkaç cümleyle yazın; hangi paketin uygun olduğunu ve tahmini süreyi söyleyelim. Danışmanlık ücretsizdir."
+        },
+        "message": "Merhaba, mobil uygulama yaptırmak istiyorum"
+      },
+      "seo": {
+        "metaTitle": "SEO ve GEO Fiyatları — Google ve Yapay Zekâ Araması",
+        "metaDescription": "Aylık SEO ve GEO paketleri: teknik SEO, makaleler, backlink, Google İşletme Profili ve ChatGPT, Gemini, Perplexity yanıtlarında görünürlük.",
+        "eyebrow": "Fiyatlar · SEO ve GEO",
+        "title": "Google'da ve yapay zekâ yanıtlarında bulunun",
+        "text": "Sitenizi arama motorlarına ve ChatGPT, Gemini, Perplexity gibi yapay zekâ asistanlarına hazırlıyoruz: teknik altyapı, içerik, bağlantılar ve aylık rapor.",
+        "perks": [
+          "Teknik SEO ve denetim",
+          "Her ay yeni makaleler",
+          "Kaliteli backlink'ler",
+          "Yapay zekâ yanıtları için optimizasyon",
+          "Yıllık ödemede %20 indirim"
+        ],
+        "cardsTitle": "SEO paketleri",
+        "cardsText": "Aylık seçtiğinizde aylık ücret, yıllık seçtiğinizde %20 indirimli yıllık tutar görünür.",
+        "packages": {
+          "local": {
+            "name": "Yerel",
+            "meta": "10 sayfaya kadar",
+            "text": "Bakü'de veya tek bir şehirde müşteri arayan işletmeler için.",
+            "features": [
+              "İlk denetim",
+              "Teknik SEO temelleri",
+              "Sayfa içi optimizasyon",
+              "Google İşletme Profili yönetimi",
+              "Ayda 2 makale",
+              "Ayda 4 backlink",
+              "Schema: Organization, LocalBusiness",
+              "Aylık rapor"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "Yerel + SEO ve GEO",
+            "text": "Rekabetli sektörlerde ve yapay zekâ yanıtlarında görünmek için.",
+            "features": [
+              "Yerel paketin tamamı",
+              "Ayda 4 makale",
+              "Ayda 8 backlink",
+              "Anahtar kelime haritası ve rakip analizi",
+              "FAQ ve Article schema",
+              "ChatGPT, Gemini, Perplexity için optimizasyon",
+              "Ayda 1 görüşme"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "Çok dilli ve büyük siteler",
+            "text": "Çok dilli, geniş içerikli siteler ve aktif büyüme için.",
+            "features": [
+              "Business paketinin tamamı",
+              "Ayda 8 makale",
+              "Ayda 15 backlink",
+              "Tam iç bağlantı planı",
+              "Çok dilli SEO",
+              "Yapay zekâ yanıtlarında marka takibi",
+              "Dönüşüm takibi",
+              "Haftalık iletişim"
+            ]
+          }
+        },
+        "extrasTitle": "Tek seferlik hizmetler",
+        "extrasText": "Aylık paket olmadan da ayrıca sipariş edebilirsiniz.",
+        "extras": {
+          "audit": {
+            "name": "Teknik SEO Denetimi",
+            "text": "3–5 gün: yazılı rapor ve öncelik sırasına göre görev listesi."
+          },
+          "backlinks": {
+            "name": "Backlink Paketi",
+            "text": "Konunuza uygun sitelerden 10 kaliteli bağlantı."
+          }
+        },
+        "terms": [
+          {
+            "k": "Minimum süre",
+            "v": "3 ay — SEO'nun sonuç vermesi zaman alır."
+          },
+          {
+            "k": "Ödeme",
+            "v": "Aylık ödemede her ayın başında, yıllıkta %20 indirimle tek seferde."
+          },
+          {
+            "k": "Garanti",
+            "v": "Hiçbir arama motoru belirli bir sıralama vaat etmez; bu yüzden biz de sıralama veya trafik garantisi vermiyoruz. Yapılan işi ve rakamları her ay açıkça gösteriyoruz."
+          },
+          {
+            "k": "Erişim",
+            "v": "Sitede değişiklik yapmak için yönetim paneline veya koda erişim gerekir."
+          },
+          {
+            "k": "Kota",
+            "v": "Makale ve backlink sayıları bir sonraki aya devretmez."
+          },
+          {
+            "k": "Durdurma",
+            "v": "3 aydan sonra 30 gün önceden haber vererek durdurabilirsiniz."
+          }
+        ],
+        "faq": [
+          {
+            "q": "GEO nedir?",
+            "a": "Generative Engine Optimization — sitenizin ChatGPT, Gemini, Perplexity gibi yapay zekâ asistanlarının yanıtlarında kaynak olarak gösterilebilmesi için yapılan optimizasyon."
+          },
+          {
+            "q": "Sonuçlar ne zaman görünür?",
+            "a": "İlk değişiklikler genellikle 4–8 haftada, istikrarlı artış ise 3–6 ayda görülür. Rekabet ve sitenin mevcut durumu bu süreyi etkiler."
+          },
+          {
+            "q": "Makaleleri kim yazıyor?",
+            "a": "Biz yazıyoruz, siz onaylıyorsunuz. Metnin doğru olması için sektörünüzle ilgili bilgileri sizden alıyoruz."
+          },
+          {
+            "q": "Sitem sizde hazırlanmadı, yine de çalışır mısınız?",
+            "a": "Evet. İlk ay denetimle başlıyoruz ve sitenizin platformuna göre hangi değişikliklerin mümkün olduğunu söylüyoruz."
+          }
+        ],
+        "cta": {
+          "title": "Sitenizin SEO durumunu kontrol edelim",
+          "text": "Site adresinizi gönderin; kısa bir kontrol yapıp hangi paketin uygun olduğunu söyleyelim. Danışmanlık ücretsizdir."
+        },
+        "message": "Merhaba, SEO ve GEO hizmetiyle ilgileniyorum"
+      },
+      "support": {
+        "metaTitle": "Teknik Destek Fiyatları — Site Bakımı ve Güvenlik",
+        "metaDescription": "Sitenin aylık teknik bakımı, yedekleme, güvenlik ve tek seferlik işler: SEO denetimi, zararlı kod temizliği, backlink, sosyal medya hesabı kurtarma.",
+        "eyebrow": "Fiyatlar · Teknik Destek",
+        "title": "Siteniz her gün çalışır ve güvende olsun",
+        "text": "Güncellemeleri, yedekleri ve güvenliği biz takip ediyoruz, siz işinizle ilgilenin. Tek seferlik teknik işleri de ayrıca sipariş edebilirsiniz.",
+        "perks": [
+          "Yedekleme ve güncellemeler",
+          "Güvenlik takibi",
+          "Her ay düzenleme kotası",
+          "Yıllık ödemede %20 indirim"
+        ],
+        "cardsTitle": "Aylık bakım paketleri",
+        "cardsText": "Aylık seçtiğinizde aylık ücret, yıllık seçtiğinizde %20 indirimli yıllık tutar görünür.",
+        "packages": {
+          "base": {
+            "name": "Temel",
+            "meta": "Küçük siteler için",
+            "text": "Sitenin istikrarlı çalışması için temel takip.",
+            "features": [
+              "Sistem ve eklenti güncellemeleri",
+              "Haftalık yedekleme",
+              "Çalışma süresi (uptime) takibi",
+              "Temel güvenlik izleme",
+              "Ayda 1 küçük düzenleme",
+              "E-posta desteği"
+            ]
+          },
+          "business": {
+            "name": "Business",
+            "meta": "Aktif iş siteleri",
+            "text": "Günlük yedekleme ve düzenli kontroller.",
+            "features": [
+              "Temel paketin tamamı",
+              "Günlük yedekleme",
+              "Güvenlik taraması",
+              "Hız kontrolü",
+              "Ayda 4 küçük düzenleme",
+              "Teknik SEO kontrolü",
+              "Ayda 2 saat destek"
+            ]
+          },
+          "pro": {
+            "name": "Pro",
+            "meta": "E-ticaret ve büyük siteler",
+            "text": "Öncelikli yanıt ve geniş destek saatleri.",
+            "features": [
+              "Business paketinin tamamı",
+              "4 saat içinde öncelikli yanıt",
+              "Ayda 10 düzenleme",
+              "Ayda 6 saat destek",
+              "WAF ve CDN ayarları",
+              "SSL ve alan adı takibi",
+              "Aylık rapor"
+            ]
+          }
+        },
+        "extrasTitle": "Tek seferlik teknik işler",
+        "extrasText": "Paket olmadan da ayrıca sipariş edilebilir.",
+        "extras": {
+          "audit": {
+            "name": "Teknik SEO Denetimi",
+            "text": "3–5 gün: yazılı rapor ve öncelik sırasına göre görev listesi."
+          },
+          "malware": {
+            "name": "Zararlı Kod Temizliği",
+            "text": "1–3 gün: temizlik, erişim bilgilerinin yenilenmesi, firewall ve 14 gün takip."
+          },
+          "backlinks": {
+            "name": "Backlink Paketi",
+            "text": "10 kaliteli bağlantı."
+          },
+          "backlinksPlus": {
+            "name": "Backlink Paketi+",
+            "text": "25 kaliteli bağlantı."
+          },
+          "linking": {
+            "name": "İç Bağlantı Kurulumu",
+            "text": "50 sayfaya kadar olan siteler için."
+          },
+          "recovery": {
+            "name": "Sosyal Medya Hesabı Kurtarma",
+            "text": "Instagram, Facebook, TikTok: durum analizi ve resmi kanallar üzerinden başvuru. Kararı platform verir, sonuç garantisi yoktur."
+          }
+        },
+        "terms": [
+          {
+            "k": "Minimum süre",
+            "v": "Aylık bakım paketleri için 3 ay."
+          },
+          {
+            "k": "Dahil değil",
+            "v": "Hosting ve alan adı fiyata dahil değildir."
+          },
+          {
+            "k": "Ek iş",
+            "v": "Kotayı aşan iş saati 40 ₼."
+          },
+          {
+            "k": "Güvenli güncelleme",
+            "v": "Büyük güncellemeler önce test ortamında denenir."
+          },
+          {
+            "k": "Hesap kurtarma",
+            "v": "Yalnızca platformun resmi kanallarını kullanıyoruz, şifrenizi sormuyoruz. Sonuç platformun kararına bağlıdır."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Sitem sizde hazırlanmadı, bakımını yapar mısınız?",
+            "a": "Evet. İlk ay siteyi inceler, yedekleme ve takibi kurarız; ardından paketinize uygun bakımı sürdürürüz."
+          },
+          {
+            "q": "Küçük düzenleme nedir?",
+            "a": "Metin, görsel, fiyat veya bağlantı değişikliği gibi 30 dakikaya kadar süren işler."
+          },
+          {
+            "q": "Site hacklenmişse ne yapıyorsunuz?",
+            "a": "Zararlı kodu temizliyor, erişim bilgilerini yeniliyor, güvenlik açığını kapatıyor ve 14 gün boyunca izliyoruz."
+          },
+          {
+            "q": "Sosyal medya hesabımı kesinlikle kurtarabilir misiniz?",
+            "a": "Hayır, bunu kimse garanti edemez: kararı platform verir. Biz durumu analiz ediyor, doğru başvuruları hazırlıyor ve süreci sizinle birlikte yürütüyoruz."
+          }
+        ],
+        "cta": {
+          "title": "Sitenizin teknik durumunu kontrol edelim",
+          "text": "Site adresini ve sorunu yazın; neye ihtiyaç olduğunu ve fiyatını söyleyelim. Danışmanlık ücretsizdir."
+        },
+        "message": "Merhaba, teknik destekle ilgileniyorum"
       }
     },
     "adsPricingPage": {
