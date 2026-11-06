@@ -17,6 +17,7 @@ import { ScrollFillText } from '@/components/ui/ScrollFillText'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { AboutMore } from '@/components/about/AboutMore'
 
 type Item = { t: string; d: string }
 
@@ -132,6 +133,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           ))}
         </div>
       </section>
+
+      <AboutMore />
 
       {/* What we do */}
       <section className="container-x py-16 lg:py-24">

@@ -3545,7 +3545,65 @@
         "AI tools and automation"
       ],
       "founderCta": "Send us your project",
-      "founderWork": "See our work"
+      "founderWork": "See our work",
+      "more": {
+        "missionTitle": "We are modernizing Azerbaijan's digital landscape.",
+        "missionText": "We are a digital platform built on relentless pursuit of precision, transparency and quality. We create fast, reliable solutions that grow with your business and keep working for years.",
+        "problemLabel": "A common problem",
+        "problemTitle": "Unclear pricing. Missed deadlines. A website left without support after handover.",
+        "problemText": "Too often the price only becomes clear when the work is done, deadlines slip, and once the site is handed over, support is either a separate charge or simply not there.",
+        "solutionLabel": "The Cradex Agency solution",
+        "solutionTitle": "Full transparency. Uncompromising quality. Ongoing support.",
+        "solutionText": "We put the price and timeline in writing before work begins, show every stage in the portal, and keep supporting your site after it goes live.",
+        "principles": [
+          {
+            "t": "Precision",
+            "d": "Precision in execution. We measure twice, cut once — every line of code has a clear, optimized purpose."
+          },
+          {
+            "t": "Transparency",
+            "d": "Clear communication at every stage. No hidden fees, no confusing jargon. You see what we see."
+          },
+          {
+            "t": "Innovation",
+            "d": "Not innovation for its own sake, but technology that works in practice. We use proven modern technologies to build faster, more resilient systems."
+          }
+        ],
+        "platformTitle": "Much more than a website.",
+        "platformText": "Cradex Agency is not just a marketing site — it is a fully integrated platform. It is the foundation for how we manage clients, work together on projects and deliver services at scale.",
+        "platform": [
+          {
+            "t": "Client management system",
+            "d": "Centralized client accounts, profiles and project relationships, all managed through the platform."
+          },
+          {
+            "t": "Subscription management",
+            "d": "Transparent payments, invoice history, renewal tracking and plan upgrades, fully integrated."
+          },
+          {
+            "t": "Project collaboration",
+            "d": "Project messaging, file sharing, revision tracking and activity history in one place."
+          },
+          {
+            "t": "Notifications",
+            "d": "Portal notifications and email updates keep everyone informed."
+          },
+          {
+            "t": "A platform ready to scale",
+            "d": "As new services are added, the platform grows with them."
+          }
+        ],
+        "goalTitle": "Our goal: expand from Azerbaijan to the region.",
+        "goalText": "Our long-term aim is to be a trusted provider of the systems that run a business day to day — websites, advertising, automation and AI tools — starting in Azerbaijan and expanding across the region.",
+        "goalTags": [
+          "Performance marketing",
+          "Automation platforms",
+          "AI integrations",
+          "SaaS products",
+          "Corporate infrastructure",
+          "Regional expansion"
+        ]
+      }
     },
     "portfolioPage": {
       "metaTitle": "Our Work — Website Projects",

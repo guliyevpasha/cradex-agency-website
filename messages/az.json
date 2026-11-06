@@ -3549,7 +3549,65 @@
         "AI alətləri və avtomatlaşdırma"
       ],
       "founderCta": "Layihənizi göndərin",
-      "founderWork": "İşlərimizə baxın"
+      "founderWork": "İşlərimizə baxın",
+      "more": {
+        "missionTitle": "Azərbaycanın rəqəmsal mühitini müasirləşdiririk.",
+        "missionText": "Biz dəqiqlik, şəffaflıq və keyfiyyət uğrunda dayanmadan çalışmaq üzərində qurulmuş rəqəmsal platformayıq. Biznesinizlə birlikdə böyüyən, sürətli və uzun müddət etibarlı işləyən həllər hazırlayırıq.",
+        "problemLabel": "Tez-tez rast gəlinən problem",
+        "problemTitle": "Qeyri-şəffaf qiymətlər. Pozulan müddətlər. Təhvildən sonra dəstəksiz qalan sayt.",
+        "problemText": "Çox vaxt qiymət iş bitəndə aydın olur, müddətlər uzanır, sayt təhvil veriləndən sonra isə dəstək ya ayrıca ödənişlə olur, ya da heç olmur.",
+        "solutionLabel": "Cradex Agency həlli",
+        "solutionTitle": "Tam şəffaflıq. Güzəştsiz keyfiyyət. Davamlı dəstək.",
+        "solutionText": "Qiyməti və müddəti işə başlamazdan əvvəl yazılı təsbit edirik, hər mərhələni portalda göstəririk, sayt işə düşəndən sonra da dəstəyi davam etdiririk.",
+        "principles": [
+          {
+            "t": "Dəqiqlik",
+            "d": "İcrada dəqiqlik. Yeddi ölçüb bir biçirik — kodun hər sətrinin aydın və optimallaşdırılmış məqsədi var."
+          },
+          {
+            "t": "Şəffaflıq",
+            "d": "Hər mərhələdə aydın ünsiyyət. Gizli ödəniş yoxdur, anlaşılmaz terminlər yoxdur. Bizim gördüyümüzü siz də görürsünüz."
+          },
+          {
+            "t": "İnnovasiya",
+            "d": "Yenilik xatirinə yenilik yox, tətbiq olunan texnologiya. Daha sürətli və dayanıqlı sistemlər üçün özünü təsdiqləmiş müasir texnologiyalardan istifadə edirik."
+          }
+        ],
+        "platformTitle": "Sadəcə vebsaytdan daha çoxu.",
+        "platformText": "Cradex Agency sadəcə marketinq saytı deyil — tam inteqrasiya olunmuş platformadır. Müştəriləri idarə etməyimizin, layihələr üzərində birgə işləməyimizin və xidmətləri geniş miqyasda çatdırmağımızın əsasını təşkil edir.",
+        "platform": [
+          {
+            "t": "Müştəri idarəetmə sistemi",
+            "d": "Mərkəzləşdirilmiş müştəri hesabları, profillər və layihə əlaqələri — hamısı platforma üzərindən idarə olunur."
+          },
+          {
+            "t": "Abunəlik idarəetməsi",
+            "d": "Şəffaf ödənişlər, hesab-faktura tarixçəsi, yenilənmənin izlənməsi və paketin artırılması — hamısı tam inteqrasiya olunub."
+          },
+          {
+            "t": "Layihə üzərində birgə iş",
+            "d": "Layihə üzrə yazışma, fayl mübadiləsi, düzəlişlərin izlənməsi və fəaliyyət tarixçəsi bir yerdə."
+          },
+          {
+            "t": "Bildirişlər",
+            "d": "Portal bildirişləri və e-poçt yeniləmələri hər kəsi məlumatlı saxlayır."
+          },
+          {
+            "t": "Genişlənməyə hazır platforma",
+            "d": "Yeni xidmətlər əlavə olunduqca platforma da onlarla birlikdə böyüyür."
+          }
+        ],
+        "goalTitle": "Hədəfimiz: Azərbaycandan regiona genişlənmək.",
+        "goalText": "Uzunmüddətli məqsədimiz bizneslərin gündəlik işini quran sistemlərin — sayt, reklam, avtomatlaşdırma və süni intellekt alətlərinin — etibarlı təchizatçısı olmaqdır: Azərbaycandan başlayıb regiona genişlənərək.",
+        "goalTags": [
+          "Performans marketinqi",
+          "Avtomatlaşdırma platformaları",
+          "Süni intellekt inteqrasiyaları",
+          "SaaS məhsulları",
+          "Korporativ infrastruktur",
+          "Regional genişlənmə"
+        ]
+      }
     },
     "portfolioPage": {
       "metaTitle": "İşlərimiz — veb sayt layihələri",

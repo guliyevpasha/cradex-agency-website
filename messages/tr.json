@@ -3545,7 +3545,65 @@
         "Yapay zekâ araçları ve otomasyon"
       ],
       "founderCta": "Projenizi gönderin",
-      "founderWork": "Projelerimizi inceleyin"
+      "founderWork": "Projelerimizi inceleyin",
+      "more": {
+        "missionTitle": "Azerbaycan'ın dijital ortamını modernleştiriyoruz.",
+        "missionText": "Hassasiyet, şeffaflık ve kalite için durmadan çalışmak üzerine kurulu bir dijital platformuz. İşletmenizle birlikte büyüyen, hızlı ve uzun yıllar güvenle çalışan çözümler geliştiriyoruz.",
+        "problemLabel": "Sık karşılaşılan sorun",
+        "problemTitle": "Belirsiz fiyatlar. Aksayan teslim süreleri. Tesliminden sonra desteksiz kalan site.",
+        "problemText": "Çoğu zaman fiyat iş bittiğinde netleşir, süreler uzar, site teslim edildikten sonra ise destek ya ayrı ücretlidir ya da hiç yoktur.",
+        "solutionLabel": "Cradex Agency çözümü",
+        "solutionTitle": "Tam şeffaflık. Ödünsüz kalite. Sürekli destek.",
+        "solutionText": "Fiyatı ve süreyi işe başlamadan önce yazılı olarak netleştiriyoruz, her aşamayı portalda gösteriyoruz, site yayına girdikten sonra da desteği sürdürüyoruz.",
+        "principles": [
+          {
+            "t": "Hassasiyet",
+            "d": "Uygulamada hassasiyet. Yedi kez ölç, bir kez biç — kodun her satırının net ve optimize edilmiş bir amacı var."
+          },
+          {
+            "t": "Şeffaflık",
+            "d": "Her aşamada açık iletişim. Gizli ücret yok, anlaşılmaz terim yok. Biz ne görüyorsak siz de onu görürsünüz."
+          },
+          {
+            "t": "İnovasyon",
+            "d": "Yenilik olsun diye değil, işe yarayan teknoloji. Daha hızlı ve dayanıklı sistemler için kendini kanıtlamış modern teknolojiler kullanıyoruz."
+          }
+        ],
+        "platformTitle": "Sadece bir web sitesinden çok daha fazlası.",
+        "platformText": "Cradex Agency yalnızca bir pazarlama sitesi değil, tam entegre bir platformdur. Müşterileri yönetmemizin, projelerde birlikte çalışmamızın ve hizmetleri geniş ölçekte sunmamızın temelini oluşturur.",
+        "platform": [
+          {
+            "t": "Müşteri yönetim sistemi",
+            "d": "Merkezi müşteri hesapları, profiller ve proje bağlantıları — hepsi platform üzerinden yönetilir."
+          },
+          {
+            "t": "Abonelik yönetimi",
+            "d": "Şeffaf ödemeler, fatura geçmişi, yenileme takibi ve paket yükseltme — hepsi tam entegre."
+          },
+          {
+            "t": "Proje üzerinde ortak çalışma",
+            "d": "Proje yazışmaları, dosya paylaşımı, revizyon takibi ve işlem geçmişi tek yerde."
+          },
+          {
+            "t": "Bildirimler",
+            "d": "Portal bildirimleri ve e-posta güncellemeleri herkesi bilgili tutar."
+          },
+          {
+            "t": "Büyümeye hazır platform",
+            "d": "Yeni hizmetler eklendikçe platform da onlarla birlikte büyür."
+          }
+        ],
+        "goalTitle": "Hedefimiz: Azerbaycan'dan bölgeye açılmak.",
+        "goalText": "Uzun vadeli amacımız, işletmelerin günlük işleyişini kuran sistemlerin — web sitesi, reklam, otomasyon ve yapay zekâ araçlarının — güvenilir tedarikçisi olmak: Azerbaycan'dan başlayıp bölgeye açılarak.",
+        "goalTags": [
+          "Performans pazarlama",
+          "Otomasyon platformları",
+          "Yapay zekâ entegrasyonları",
+          "SaaS ürünleri",
+          "Kurumsal altyapı",
+          "Bölgesel büyüme"
+        ]
+      }
     },
     "portfolioPage": {
       "metaTitle": "Projelerimiz — web sitesi çalışmaları",
