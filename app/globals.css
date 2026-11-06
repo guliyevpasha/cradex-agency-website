@@ -149,33 +149,6 @@
   }
 }
 
-/* ─── Swiper (testimonials) ─────────────────────────────────────────────── */
-.testimonials-pagination .swiper-pagination-bullet {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 9999px;
-  background: rgb(var(--contrast) / 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.testimonials-pagination .swiper-pagination-bullet-active {
-  background: #24A0FF;
-  width: 24px;
-  border-radius: 4px;
-}
-
-.swiper-slide:not(.swiper-slide-active) {
-  opacity: 0.18;
-  transition: opacity 0.4s ease;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  transition: opacity 0.4s ease;
-}
-
 /* ─── Marquees ──────────────────────────────────────────────────────────── */
 /* Ads page visuals: bars grow and rise on load, orbits drift. */
 .ads-panel { transform: translateZ(0); }

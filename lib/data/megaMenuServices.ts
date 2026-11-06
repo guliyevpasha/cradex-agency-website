@@ -1,10 +1,8 @@
 /**
- * Mega Menu Services Configuration
- * 
- * Defines all services displayed in the services mega menu navigation.
- * Each service includes an icon, slug for routing, and translation key.
+ * Service entries (icon, slug, translation key) for the old services mega
+ * menu.
+ * @author Paşa Quliyev — Cradex Agency
  */
-
 import type { LucideIcon } from 'lucide-react'
 import {
   TrendingUp,  // Digital Marketing / SEO

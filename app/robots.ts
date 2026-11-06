@@ -1,3 +1,7 @@
+/**
+ * robots.txt rules and sitemap location.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {

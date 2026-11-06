@@ -1,3 +1,7 @@
+/**
+ * Translucent card surface.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { cn } from '@/lib/utils/cn'
 
 interface GlassCardProps {

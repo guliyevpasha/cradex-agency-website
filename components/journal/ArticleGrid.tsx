@@ -1,3 +1,7 @@
+/**
+ * Grid wrapper for article cards.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Article } from '@/types'
 import { ArticleCard } from './ArticleCard'
 

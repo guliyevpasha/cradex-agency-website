@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Number that counts up once it scrolls into view.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useRef, useEffect, useState } from 'react'
 import { useInView } from 'framer-motion'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'

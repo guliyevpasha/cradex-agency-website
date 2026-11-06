@@ -1,3 +1,7 @@
+/**
+ * Portfolio project detail page: case study, results and related work.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -133,7 +137,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                     <span className="text-text-muted text-xs uppercase tracking-wider font-medium block">{t('tools')}</span>
                     <div className="flex flex-wrap gap-2">
                       {item.tools.map((tool) => (
-                        <Badge key={tool} variant="outline" className="text-xs">{tool}</Badge>
+                        <Badge key={tool} variant="default" className="text-xs">{tool}</Badge>
                       ))}
                     </div>
                   </div>
@@ -638,7 +642,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       <div className="p-6 flex flex-col flex-grow">
-                        <Badge variant="outline" className="mb-3 w-fit">
+                        <Badge variant="default" className="mb-3 w-fit">
                           {t(`categories.${project.serviceCategory}` as any)}
                         </Badge>
                         <h3 className="text-xl font-display font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors line-clamp-2">

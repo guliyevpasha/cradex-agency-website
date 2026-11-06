@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Hero for the digital marketing page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

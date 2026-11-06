@@ -1,3 +1,7 @@
+/**
+ * Blog list card with cover, category, date and reading time.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'

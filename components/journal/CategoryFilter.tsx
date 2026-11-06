@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Category tabs above the blog list.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils/cn'
 import type { ArticleCategory } from '@/types'

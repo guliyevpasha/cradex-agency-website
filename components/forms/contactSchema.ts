@@ -1,3 +1,7 @@
+/**
+ * Zod schema for the contact form fields.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { z } from 'zod'
 
 export const contactSchema = z.object({

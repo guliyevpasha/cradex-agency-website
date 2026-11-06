@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Animated grid of client and partner logos.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

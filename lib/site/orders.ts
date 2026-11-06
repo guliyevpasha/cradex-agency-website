@@ -38,7 +38,7 @@ export const isQty = (v: unknown): v is number => Number.isInteger(v) && (v as n
 
 export type PackageId = keyof typeof PACKAGES
 
-export const isPackage = (v: unknown): v is PackageId => typeof v === 'string' && v in PACKAGES
+export const isPackage = (v: unknown): v is PackageId => typeof v === 'string' && Object.hasOwn(PACKAGES, v)
 
 export type OrderInput = {
   package: PackageId

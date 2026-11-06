@@ -1,10 +1,7 @@
 /**
- * Partner logos configuration.
- *
- * Now fetches from Sanity CMS in production.
- * Fallback to static data for development/testing.
+ * Partner logos from Sanity with a static list as fallback.
+ * @author Paşa Quliyev — Cradex Agency
  */
-
 import { getAllPartners as getSanityPartners, type Partner as SanityPartner } from '@/sanity/lib/queries'
 
 export interface PartnerLogo {

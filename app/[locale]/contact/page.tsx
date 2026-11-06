@@ -1,3 +1,7 @@
+/**
+ * Contact page with WhatsApp, phone and e-mail details and the contact form.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'

@@ -1,3 +1,7 @@
+/**
+ * Localised 404 page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations, useLocale } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 import { ArrowLeft } from 'lucide-react'

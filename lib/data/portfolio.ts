@@ -1,3 +1,7 @@
+/**
+ * Portfolio data access: Sanity first, bundled JSON as fallback.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { PortfolioItem, ServiceSlug } from '@/types'
 import portfolioData from './portfolio.data.json'
 import { getAllPortfolio as getSanityPortfolio, getPortfolioBySlug as getSanityPortfolioBySlug, getFeaturedPortfolio as getSanityFeaturedPortfolio, getPortfolioByCategory as getSanityPortfolioByCategory } from '@/sanity/lib/queries'

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Hook that tells when an element has scrolled into view, once.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 

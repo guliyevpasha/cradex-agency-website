@@ -1,3 +1,7 @@
+/**
+ * Card grid of all services.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Portfolio card that flips to show details on hover or tap.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useState } from 'react'
 import Link from 'next/link'

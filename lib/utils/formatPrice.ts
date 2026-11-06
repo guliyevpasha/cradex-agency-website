@@ -1,3 +1,7 @@
+/**
+ * Formats a price range as AZN text.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { PriceRange } from '@/types'
 
 /**

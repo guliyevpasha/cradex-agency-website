@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Scroll-driven company timeline of the old about page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'

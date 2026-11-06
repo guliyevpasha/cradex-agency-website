@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Auto-scrolling row of portfolio thumbnails.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'

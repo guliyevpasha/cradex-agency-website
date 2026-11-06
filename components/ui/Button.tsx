@@ -1,3 +1,7 @@
+/**
+ * Button/link component with size and variant props and a loading state.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import { cn } from '@/lib/utils/cn'
 import { Spinner } from './Spinner'

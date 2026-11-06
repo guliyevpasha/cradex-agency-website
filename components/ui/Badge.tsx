@@ -1,3 +1,7 @@
+/**
+ * Small pill label with colour variants.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { cn } from '@/lib/utils/cn'
 
 interface BadgeProps {

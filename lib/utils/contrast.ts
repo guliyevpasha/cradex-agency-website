@@ -1,4 +1,8 @@
 /**
+ * WCAG luminance and contrast ratio helpers for hex colours.
+ * @author Paşa Quliyev — Cradex Agency
+ */
+/**
  * Calculates the relative luminance of an sRGB color.
  * @param hex - Hex color string (e.g. "#F0F0FF")
  */

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Three-step audit, strategy and growth block for marketing pages.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Latest articles teaser for the home page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -131,9 +135,7 @@ export function BlogPreview({ articles }: BlogPreviewProps) {
                         {article.author && (
                           <>
                             <div className="w-6 h-6 rounded-full bg-accent-primary/10 flex items-center justify-center text-xs font-semibold text-accent-primary">
-                              {typeof article.author === 'string' 
-                                ? article.author.charAt(0) 
-                                : (article.author as any).name?.charAt(0) || 'A'}
+                              {(typeof article.author === 'string' ? article.author : article.author.name)?.charAt(0) || 'A'}
                             </div>
                             <span>
                               {typeof article.author === 'string' 

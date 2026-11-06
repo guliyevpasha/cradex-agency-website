@@ -1,3 +1,7 @@
+/**
+ * Shared framer-motion variants and easing.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Variants } from 'framer-motion'
 
 const easing = [0.22, 1, 0.36, 1] as const

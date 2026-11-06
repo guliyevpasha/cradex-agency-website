@@ -3,7 +3,7 @@
  * @author Paşa Quliyev — Cradex Agency
  */
 import { describe, expect, it } from 'vitest'
-import { countryOf, currencyFor, formatPrice, priceOf } from '@/lib/site/orders'
+import { countryOf, currencyFor, formatPrice, isPackage, priceOf } from '@/lib/site/orders'
 
 describe('combo currency', () => {
   it('uses AZN at home and when the country is unknown', () => {
@@ -25,5 +25,14 @@ describe('combo currency', () => {
   it('reads the edge country header', () => {
     expect(countryOf(new Headers({ 'cf-ipcountry': 'DE' }))).toBe('DE')
     expect(countryOf(new Headers())).toBeNull()
+  })
+})
+
+describe('package id', () => {
+  it('accepts only our own packages, not object prototype keys', () => {
+    expect(isPackage('instagram')).toBe(true)
+    expect(isPackage('constructor')).toBe(false)
+    expect(isPackage('toString')).toBe(false)
+    expect(isPackage(1)).toBe(false)
   })
 })

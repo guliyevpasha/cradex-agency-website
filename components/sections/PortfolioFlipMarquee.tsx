@@ -1,9 +1,13 @@
 'use client'
+/**
+ * Auto-scrolling row of flip cards for selected portfolio items.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
-import type { PortfolioItem } from '@/types'
+import type { PortfolioItem, PortfolioItemTitle } from '@/types'
 import { cn } from '@/lib/utils'
 import { ArrowRight, Building2, Calendar, Tag } from 'lucide-react'
 
@@ -94,8 +98,8 @@ function FlipCard({ item }: FlipCardProps) {
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
-  const title = item.title?.[locale] || item.titleKey
-  const description = item.description?.[locale] || item.descriptionKey
+  const title = item.title?.[locale as keyof PortfolioItemTitle] || item.titleKey
+  const description = item.description?.[locale as keyof PortfolioItemTitle] || item.descriptionKey
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
 
   // Sanitize slug for URL (handle cases where Sanity slug has spaces)

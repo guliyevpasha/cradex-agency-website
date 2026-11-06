@@ -42,10 +42,6 @@ const studioHeaders = [...baseHeaders, csp(true), { key: 'X-Robots-Tag', value: 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
-  // Older Sanity/portfolio files still carry type errors; new code is checked with `npx tsc`.
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }],
     // One format and one quality keep the number of generated variants low (the

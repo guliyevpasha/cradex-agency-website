@@ -1,4 +1,9 @@
 'use client'
+/**
+ * Sanity Studio tool that shows site analytics, fetched with the logged-in
+ * Studio token.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useEffect, useState, useCallback } from 'react'
 import { useClient } from 'sanity'

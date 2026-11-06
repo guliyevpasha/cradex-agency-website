@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Framer Motion scroll reveal with direction presets.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'

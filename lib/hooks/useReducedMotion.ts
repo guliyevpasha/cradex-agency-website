@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Hook that reports the prefers-reduced-motion setting.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useState } from 'react'
 
 /**

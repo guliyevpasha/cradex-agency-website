@@ -1,3 +1,7 @@
+/**
+ * Service list loaded from the bundled JSON.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Service } from '@/types'
 import servicesData from './services.data.json'
 

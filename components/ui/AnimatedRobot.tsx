@@ -1,4 +1,8 @@
 'use client'
+/**
+ * SVG robot mascot with idle animation, used by the chat assistant.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'

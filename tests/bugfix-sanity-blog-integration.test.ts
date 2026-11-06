@@ -82,7 +82,7 @@ describe('Bug Condition Exploration: Sanity Blog Integration', () => {
    */
 
   describe('Property 1: Blog Posts Should Query Sanity When Environment is Configured', () => {
-    const mockSanityArticles: Article[] = [
+    const mockSanityArticles = [
       {
         id: 'sanity-1',
         slug: 'test-blog-post-from-sanity',
@@ -95,7 +95,7 @@ describe('Bug Condition Exploration: Sanity Blog Integration', () => {
         readingTime: 5,
         image: 'https://cdn.sanity.io/images/test.jpg',
       },
-    ]
+    ] as unknown as Article[]
 
     it('should call getAllBlogPosts from Sanity for getAllArticles (az locale)', async () => {
       // Arrange: Mock Sanity to return test data
@@ -111,7 +111,7 @@ describe('Bug Condition Exploration: Sanity Blog Integration', () => {
       // Assert: Result should come from Sanity, not JSON fallback
       expect(result).toEqual(mockSanityArticles)
       expect(result[0].id).toBe('sanity-1')
-      expect(result[0].title).toBe('Test Blog Post from Sanity')
+      expect((result[0] as any).title).toBe('Test Blog Post from Sanity')
     })
 
     it('should call getBlogPostBySlug from Sanity for getArticleBySlug', async () => {
@@ -288,7 +288,7 @@ describe('Bug Condition Exploration: Sanity Blog Integration', () => {
           readingTime: 5,
           image: 'https://cdn.sanity.io/images/test.jpg',
         },
-      ]
+      ] as unknown as Article[]
       
       // Arrange: Mock Sanity (but it won't be called on unfixed code)
       vi.mocked(getAllBlogPosts).mockResolvedValue(mockSanityArticles)
@@ -353,7 +353,7 @@ describe('Preservation Tests: Fallback and Non-Blog Module Behavior', () => {
       if (result.length > 0) {
         expect(result[0]).toHaveProperty('id')
         expect(result[0]).toHaveProperty('slug')
-        expect(result[0]).toHaveProperty('titleKey' ||'title')
+        expect(result[0]).toHaveProperty('titleKey')
       }
     })
 
@@ -605,7 +605,7 @@ describe('Preservation Tests: Fallback and Non-Blog Module Behavior', () => {
       if (result.length > 0) {
         expect(result[0]).toHaveProperty('id')
         expect(result[0]).toHaveProperty('slug')
-        expect(result[0]).toHaveProperty('titleKey' || 'title')
+        expect(result[0]).toHaveProperty('titleKey')
       }
       
       // Assert: Sanity should never be called for sync functions

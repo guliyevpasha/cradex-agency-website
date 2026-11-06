@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Filterable portfolio grid with animated enter/exit.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLocale, useTranslations } from 'next-intl'
 import { PortfolioFlipCard } from './PortfolioFlipCard'

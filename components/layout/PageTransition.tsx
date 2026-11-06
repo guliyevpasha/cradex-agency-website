@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Fade/slide wrapper between route changes; skipped for reduced motion.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'

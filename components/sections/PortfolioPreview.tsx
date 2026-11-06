@@ -1,3 +1,7 @@
+/**
+ * Server wrapper that loads portfolio items for the home preview.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { getLocale } from 'next-intl/server'
 import { getAllPortfolio } from '@/lib/data/portfolio'
 import PortfolioPreviewClient from './PortfolioPreviewClient'

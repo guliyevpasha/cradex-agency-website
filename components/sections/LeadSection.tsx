@@ -1,3 +1,7 @@
+/**
+ * Home page block that wraps the lead form and contact shortcuts.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations } from 'next-intl'
 import { MessageCircle } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'

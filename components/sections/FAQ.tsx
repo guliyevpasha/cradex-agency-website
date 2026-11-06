@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Animated FAQ list with scroll-in headings.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'

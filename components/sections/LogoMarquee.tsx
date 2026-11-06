@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Infinite partner logo marquee; pauses on hover.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'

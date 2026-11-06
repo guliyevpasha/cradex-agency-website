@@ -1,3 +1,9 @@
+/**
+ * Renders article bodies stored as light markdown: headings, bullets,
+ * numbered items, quotes and **bold**. A plain paragraph map used to leak
+ * the asterisks and flatten numbered steps.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { Fragment } from 'react'
 
 /**

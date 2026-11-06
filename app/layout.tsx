@@ -1,3 +1,8 @@
+/**
+ * Root layout. Renders children untouched; the locale and studio layouts own
+ * their own html shell.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 // Pass-through on purpose. The two branches below render their own <html> and
 // <body>: app/[locale]/layout.tsx needs lang to follow the active locale, and
 // app/studio/layout.tsx sits outside locale routing entirely. Rendering a shell

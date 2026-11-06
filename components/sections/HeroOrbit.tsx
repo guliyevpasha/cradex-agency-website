@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Orbiting service icons used as the old home hero visual.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useTranslations } from 'next-intl'
 import { Search, Share2, Megaphone, Code2, Palette, BarChart3 } from 'lucide-react'

@@ -1,15 +1,15 @@
-import { DocumentActionComponent } from 'sanity'
+import { useClient, type DocumentActionComponent } from 'sanity'
 import { CopyIcon } from '@sanity/icons'
 
 export const DuplicateAction: DocumentActionComponent = (props) => {
   const { draft, published, onComplete } = props
+  const client = useClient({ apiVersion: '2024-01-01' })
 
   return {
     label: 'Duplicate',
     icon: CopyIcon,
     onHandle: async () => {
-      const { getClient } = await import('sanity')
-      const client = getClient({ apiVersion: '2024-01-01' })
+
       
       // Get the document to duplicate
       const doc = draft || published

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Loads the Google Analytics script when a measurement id is set.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import Script from 'next/script'
 
@@ -16,16 +20,16 @@ export function GoogleAnalytics() {
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
+          window.dataLayer = window.dataLayer || []
           function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+          gtag('js', new Date())
           gtag('config', '${GA_MEASUREMENT_ID}', {
             page_path: window.location.pathname,
             send_page_view: true,
             anonymize_ip: false,
             allow_google_signals: true,
             allow_ad_personalization_signals: true,
-          });
+          })
         `}
       </Script>
     </>

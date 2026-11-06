@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Related projects block at the bottom of a service page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useState } from 'react'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'

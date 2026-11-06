@@ -1,3 +1,7 @@
+/**
+ * Document shell for /studio, which sits outside the locale routes.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 
 // /studio sits outside the [locale] tree, so it carries its own document shell.

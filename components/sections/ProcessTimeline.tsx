@@ -1,4 +1,8 @@
-﻿'use client'
+'use client'
+/**
+ * Expandable step timeline for service pages.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -184,7 +188,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
           >
             {displaySteps.map((step, index) => {
               const isOpen = openIndex === index
-              const progress = 'progress' in step ? step.progress : undefined
+              const progress = 'progress' in step ? (step.progress as number) : undefined
               
               return (
                 <motion.div

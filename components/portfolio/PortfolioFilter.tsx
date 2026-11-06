@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Category filter chips for the portfolio grid.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { 

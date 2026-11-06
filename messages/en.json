@@ -884,14 +884,6 @@
           {
             "title": "Those not needing ongoing technical support",
             "description": "Sites require technical support, updates and optimization after launch — if you can't manage this yourself, support packages are recommended."
-          },
-          {
-            "title": "Those expecting maximum functionality with minimum budget",
-            "description": "Complex functionality (e-commerce, multilingual, custom integrations) requires appropriate budget — starting with realistic expectations is important."
-          },
-          {
-            "title": "Those not wanting to prepare content themselves",
-            "description": "Site content (text, images, video) is prepared by client; without content preparation, development process is delayed."
           }
         ],
         "ctaText": "Not sure? Get free consultation — let's evaluate your situation together."
@@ -902,35 +894,43 @@
         "terms": [
           {
             "term": "Responsive Design",
-            "definition": "Design that automatically adapts site to different screen sizes (desktop, tablet, mobile) — foundation of mobile-friendly website development."
+            "definition": "Design that automatically adapts site to different screen sizes (desktop, tablet, mobile) — foundation of mobile-friendly website development.",
+            "icon": "📱"
           },
           {
             "term": "UX/UI Design",
-            "definition": "UX (user experience) determines navigation comfort on site, UI (user interface) determines visual appearance."
+            "definition": "UX (user experience) determines navigation comfort on site, UI (user interface) determines visual appearance.",
+            "icon": "⚙️"
           },
           {
             "term": "WordPress",
-            "definition": "Most widely used CMS (content management system) in the world — easy-to-manage, expandable platform for WordPress site development."
+            "definition": "Most widely used CMS (content management system) in the world — easy-to-manage, expandable platform for WordPress site development.",
+            "icon": "🔍"
           },
           {
             "term": "Landing Page",
-            "definition": "Special landing page designed for only one purpose (lead collection, sales, registration), used for advertising campaigns."
+            "definition": "Special landing page designed for only one purpose (lead collection, sales, registration), used for advertising campaigns.",
+            "icon": "🎯"
           },
           {
             "term": "Core Web Vitals",
-            "definition": "Technical indicators Google uses to measure site speed and user experience — main criterion for fast web site development."
+            "definition": "Technical indicators Google uses to measure site speed and user experience — main criterion for fast web site development.",
+            "icon": "☁️"
           },
           {
             "term": "SEO Optimized Site",
-            "definition": "Site structure built according to search engine (Google) requirements, optimized to attract organic traffic."
+            "definition": "Site structure built according to search engine (Google) requirements, optimized to attract organic traffic.",
+            "icon": "🌐"
           },
           {
             "term": "CMS (Content Management System)",
-            "definition": "Platform allowing site content management without coding knowledge (WordPress, Shopify, custom CMS)."
+            "definition": "Platform allowing site content management without coding knowledge (WordPress, Shopify, custom CMS).",
+            "icon": "🔒"
           },
           {
             "term": "Conversion Rate",
-            "definition": "Percentage of site visitors who complete targeted action (purchase, contact form, call)."
+            "definition": "Percentage of site visitors who complete targeted action (purchase, contact form, call).",
+            "icon": "🎨"
           }
         ]
       },
@@ -957,6 +957,10 @@
           {
             "question": "What does SEO optimized site mean?",
             "answer": "During site development we apply technical SEO basics (URL structure, meta tags, site speed, schema markup, mobile compatibility) so your site is ready to rank high on Google. This is starting point for SEO services."
+          },
+          {
+            "question": "What if I need a mobile app or an online store?",
+            "answer": "These packages are for personal and small business websites. For a mobile app, an online store or payment systems we prepare a custom quote. Get in touch with us through the contact form."
           }
         ],
         "ctaButton": "Ask on WhatsApp"

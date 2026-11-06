@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Contact form with zod validation; posts to the contact API.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -51,7 +55,7 @@ export function ContactForm() {
       {/* Full name */}
       <div>
         <label htmlFor="fullName" className="block text-text-secondary text-sm mb-1.5">
-          {t('fullName')} <span className="text-red-400">*</span>
+          {t('fullName')} <span className="text-[#DC2626] dark:text-[#F87171]">*</span>
         </label>
         <input
           id="fullName"
@@ -64,7 +68,7 @@ export function ContactForm() {
           aria-invalid={!!errors.fullName}
         />
         {errors.fullName && (
-          <p id="fullName-error" role="alert" className="text-red-400 text-xs mt-1">
+          <p id="fullName-error" role="alert" className="text-[#DC2626] dark:text-[#F87171] text-xs mt-1">
             {errors.fullName.message}
           </p>
         )}
@@ -73,7 +77,7 @@ export function ContactForm() {
       {/* Email */}
       <div>
         <label htmlFor="email" className="block text-text-secondary text-sm mb-1.5">
-          {t('email')} <span className="text-red-400">*</span>
+          {t('email')} <span className="text-[#DC2626] dark:text-[#F87171]">*</span>
         </label>
         <input
           id="email"
@@ -86,7 +90,7 @@ export function ContactForm() {
           aria-invalid={!!errors.email}
         />
         {errors.email && (
-          <p id="email-error" role="alert" className="text-red-400 text-xs mt-1">
+          <p id="email-error" role="alert" className="text-[#DC2626] dark:text-[#F87171] text-xs mt-1">
             {errors.email.message}
           </p>
         )}
@@ -133,7 +137,7 @@ export function ContactForm() {
       {/* Message */}
       <div>
         <label htmlFor="message" className="block text-text-secondary text-sm mb-1.5">
-          {t('message')} <span className="text-red-400">*</span>
+          {t('message')} <span className="text-[#DC2626] dark:text-[#F87171]">*</span>
         </label>
         <textarea
           id="message"
@@ -145,7 +149,7 @@ export function ContactForm() {
           aria-invalid={!!errors.message}
         />
         {errors.message && (
-          <p id="message-error" role="alert" className="text-red-400 text-xs mt-1">
+          <p id="message-error" role="alert" className="text-[#DC2626] dark:text-[#F87171] text-xs mt-1">
             {errors.message.message}
           </p>
         )}
@@ -172,7 +176,7 @@ export function ContactForm() {
 
       {/* Error message */}
       {status === 'error' && (
-        <div role="alert" className="flex items-center gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400">
+        <div role="alert" className="flex items-center gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-[#DC2626] dark:text-[#F87171]">
           <AlertCircle size={18} className="shrink-0" />
           <p className="text-sm">{t('error')}</p>
         </div>

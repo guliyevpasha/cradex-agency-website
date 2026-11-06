@@ -1,3 +1,7 @@
+/**
+ * Single blog article page with metadata, body and related posts.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'

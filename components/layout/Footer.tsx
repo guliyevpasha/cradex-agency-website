@@ -4,7 +4,7 @@
  */
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import { Logo } from '@/components/brand/Logo'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS, serviceHref } from '@/lib/site/navigation'
@@ -18,7 +18,6 @@ const SOCIAL = [
   { href: 'https://instagram.com/cradexagency', icon: Instagram, label: 'Instagram' },
   { href: 'https://facebook.com/cradexagency', icon: Facebook, label: 'Facebook' },
   { href: 'https://linkedin.com/company/cradexagency', icon: Linkedin, label: 'LinkedIn' },
-  { href: 'https://youtube.com/@cradexagency', icon: Youtube, label: 'YouTube' },
 ]
 
 export function Footer() {

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Auto-dismissing success/error toast.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle, XCircle, X } from 'lucide-react'

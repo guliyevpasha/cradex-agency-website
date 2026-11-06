@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Portfolio list card linking to the project page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import Link from 'next/link'
 import Image from 'next/image'

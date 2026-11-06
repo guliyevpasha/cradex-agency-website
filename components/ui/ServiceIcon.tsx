@@ -1,3 +1,7 @@
+/**
+ * Maps a service id to its lucide icon.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import {
   Award,
   Camera,
@@ -14,7 +18,7 @@ import {
 /**
  * services.data.json stores an icon name per service, and those names were
  * always Lucide ones. Four separate components had each grown their own
- * name -> emoji lookup instead, so the same service showed a 📈 on the home
+ * name -> emoji lookup instead, so the same service showed a chart emoji on the home
  * page while the mega menu — which passes real Lucide components — drew the
  * proper icon. This is the single place that mapping lives now.
  */

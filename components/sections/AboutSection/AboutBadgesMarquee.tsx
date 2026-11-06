@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Scrolling strip of company badges on the old about page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { useTranslations } from 'next-intl'
 import { Sparkles, Target, Users, Zap, TrendingUp, Award, type LucideIcon } from 'lucide-react'

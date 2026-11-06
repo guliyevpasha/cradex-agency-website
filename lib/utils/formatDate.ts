@@ -1,4 +1,8 @@
 /**
+ * Article date formatting.
+ * @author Paşa Quliyev — Cradex Agency
+ */
+/**
  * Article dates, formatted as `DD.MM.YYYY`.
  *
  * The journal used `toLocaleDateString('az-AZ', { month: 'long' })`, which on

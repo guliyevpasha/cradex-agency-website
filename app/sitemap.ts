@@ -1,3 +1,8 @@
+/**
+ * Builds sitemap.xml for every locale: static pages, services, products and
+ * portfolio projects.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { MetadataRoute } from 'next'
 import { getAllPortfolio } from '@/lib/data/portfolio'
 import { cleanSlug, isShown } from '@/lib/site/portfolio'

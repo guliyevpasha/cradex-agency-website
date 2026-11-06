@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Home page FAQ accordion fed from translations.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'

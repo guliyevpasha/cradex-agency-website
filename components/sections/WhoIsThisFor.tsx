@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Fit / not-a-fit comparison list for a service.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

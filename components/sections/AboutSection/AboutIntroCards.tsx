@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Intro cards (who we are, what we do) of the old about page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Glossary of marketing terms for service pages.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

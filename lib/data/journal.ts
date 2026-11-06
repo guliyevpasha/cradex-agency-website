@@ -1,3 +1,7 @@
+/**
+ * Blog data access: Sanity first, bundled JSON as fallback.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Article, ArticleCategory } from '@/types'
 import journalData from './journal.data.json'
 import { getAllBlogPosts, getBlogPostBySlug, getBlogPostsByCategory, getPaginatedBlogPosts } from '@/sanity/lib/queries'

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Class error boundary that shows a small fallback instead of a blank page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { Component, ReactNode } from 'react'
 
 interface Props {

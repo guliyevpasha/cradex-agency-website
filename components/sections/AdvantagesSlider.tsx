@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Slider of the agency advantages shown on the home page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'

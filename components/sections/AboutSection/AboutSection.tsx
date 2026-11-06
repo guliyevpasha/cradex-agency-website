@@ -1,3 +1,7 @@
+/**
+ * Server component that stacks the old about page blocks in order.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { getTranslations } from 'next-intl/server'
 import { getLocale } from 'next-intl/server'
 import { AboutHero } from './AboutHero'

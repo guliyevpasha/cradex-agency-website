@@ -1,3 +1,7 @@
+/**
+ * Testimonials from Sanity with bundled JSON as fallback.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import testimonialsData from './testimonials.data.json'
 import { getAllTestimonials as getSanityTestimonials, getFeaturedTestimonials as getSanityFeaturedTestimonials } from '@/sanity/lib/queries'
 

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Short lead form (name, phone, service) used in the home page lead section.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'

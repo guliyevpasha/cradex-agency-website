@@ -1,17 +1,21 @@
-'use client';
+'use client'
+/**
+ * Hero for the web and mobile development page.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 interface WebMobileDevHeroProps {
-  title: string;
-  titleAccent: string;
-  subtitle: string;
-  description: string;
-  buttonText: string;
-  note: string;
+  title: string
+  titleAccent: string
+  subtitle: string
+  description: string
+  buttonText: string
+  note: string
 }
 
 export default function WebMobileDevHero({
@@ -145,5 +149,5 @@ export default function WebMobileDevHero({
       {/* Bottom Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
     </section>
-  );
+  )
 }

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Count-up statistics block with animated cards.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import CountUp from 'react-countup'

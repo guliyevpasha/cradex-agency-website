@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Previous/next and page number links for the blog list.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations } from 'next-intl'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'

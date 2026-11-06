@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Ad and social platforms we work with, shown as a grid.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

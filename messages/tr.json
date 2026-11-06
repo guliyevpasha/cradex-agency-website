@@ -720,7 +720,7 @@
         "progressLabel": "Tamamlanma oranı",
         "included": [
           {
-            "title": "Audit",
+            "title": "Denetim",
             "description": "Hesaplarınızın tüm yönlerini - profil optimizasyonu, içerik kalitesi, kitle davranışı - detaylı kontrol ediyor, öncelikli iyileştirme planı hazırlıyoruz."
           },
           {
@@ -880,14 +880,6 @@
           {
             "title": "Sürekli teknik desteğe ihtiyaç duymayanlar",
             "description": "Siteler yayından sonra teknik destek, güncelleme ve optimizasyon gerektirir — bunu kendiniz yönetemiyorsanız, destek paketleri önerilir."
-          },
-          {
-            "title": "Minimum bütçe ile maksimum işlevsellik bekleyenler",
-            "description": "Karmaşık işlevsellik (e-ticaret, çok dilli, özel entegrasyonlar) uygun bütçe gerektirir — gerçekçi beklentilerle başlamak önemlidir."
-          },
-          {
-            "title": "İçeriği kendileri hazırlamak istemeyenler",
-            "description": "Site içeriği (metin, resim, video) müşteri tarafından hazırlanır; içerik hazırlığı olmadan geliştirme süreci gecikir."
           }
         ],
         "ctaText": "Emin değil misiniz? Ücretsiz danışmanlık alın — durumunuzu birlikte değerlendirelim."
@@ -898,35 +890,43 @@
         "terms": [
           {
             "term": "Responsive Tasarım",
-            "definition": "Sitenin farklı ekran boyutlarına (masaüstü, tablet, mobil) otomatik uyum sağlayan tasarım — mobil uyumlu site geliştirmenin temeli."
+            "definition": "Sitenin farklı ekran boyutlarına (masaüstü, tablet, mobil) otomatik uyum sağlayan tasarım — mobil uyumlu site geliştirmenin temeli.",
+            "icon": "📱"
           },
           {
             "term": "UX/UI Tasarım",
-            "definition": "UX (kullanıcı deneyimi) sitede navigasyon rahatlığını, UI (kullanıcı arayüzü) görsel görünümü belirler."
+            "definition": "UX (kullanıcı deneyimi) sitede navigasyon rahatlığını, UI (kullanıcı arayüzü) görsel görünümü belirler.",
+            "icon": "⚙️"
           },
           {
             "term": "WordPress",
-            "definition": "Dünyada en yaygın kullanılan CMS (içerik yönetim sistemi) — WordPress site geliştirme için kolay yönetilen, genişletilebilir platform."
+            "definition": "Dünyada en yaygın kullanılan CMS (içerik yönetim sistemi) — WordPress site geliştirme için kolay yönetilen, genişletilebilir platform.",
+            "icon": "🔍"
           },
           {
             "term": "Landing Page",
-            "definition": "Sadece bir amaç için (lead toplama, satış, kayıt) tasarlanmış, reklam kampanyaları için kullanılan özel iniş sayfası."
+            "definition": "Sadece bir amaç için (lead toplama, satış, kayıt) tasarlanmış, reklam kampanyaları için kullanılan özel iniş sayfası.",
+            "icon": "🎯"
           },
           {
             "term": "Core Web Vitals",
-            "definition": "Google'ın site hızı ve kullanıcı deneyimini ölçmek için kullandığı teknik göstergeler — hızlı web sitesi geliştirmenin ana kriteri."
+            "definition": "Google'ın site hızı ve kullanıcı deneyimini ölçmek için kullandığı teknik göstergeler — hızlı web sitesi geliştirmenin ana kriteri.",
+            "icon": "☁️"
           },
           {
             "term": "SEO Optimize Site",
-            "definition": "Arama motorlarının (Google) gereksinimlerine uygun yapılan, organik trafik çekmek için optimize edilmiş site yapısı."
+            "definition": "Arama motorlarının (Google) gereksinimlerine uygun yapılan, organik trafik çekmek için optimize edilmiş site yapısı.",
+            "icon": "🌐"
           },
           {
             "term": "CMS (Content Management System)",
-            "definition": "Site içeriğini kodlama bilgisi olmadan yönetmeye olanak sağlayan platform (WordPress, Shopify, özel CMS)."
+            "definition": "Site içeriğini kodlama bilgisi olmadan yönetmeye olanak sağlayan platform (WordPress, Shopify, özel CMS).",
+            "icon": "🔒"
           },
           {
             "term": "Dönüşüm Oranı",
-            "definition": "Siteyi ziyaret eden kullanıcıların hedeflenen eylemi (satın alma, iletişim formu, arama) tamamlama yüzdesi."
+            "definition": "Siteyi ziyaret eden kullanıcıların hedeflenen eylemi (satın alma, iletişim formu, arama) tamamlama yüzdesi.",
+            "icon": "🎨"
           }
         ]
       },
@@ -953,6 +953,10 @@
           {
             "question": "SEO optimize site ne demektir?",
             "answer": "Site geliştirme sırasında teknik SEO temellerini (URL yapısı, meta etiketler, site hızı, schema markup, mobil uyumluluk) uyguluyoruz ki siteniz Google'da üst sıralara çıkmaya hazır olsun. Bu, SEO hizmetinin başlangıç noktasıdır."
+          },
+          {
+            "question": "Mobil uygulama veya e-ticaret sitesi gerekirse?",
+            "answer": "Bu paketler kişisel ve küçük işletme siteleri içindir. Mobil uygulama, e-ticaret sitesi veya ödeme sistemleri için özel fiyat teklifi hazırlıyoruz. İletişim formu üzerinden bizimle iletişime geçin."
           }
         ],
         "ctaButton": "WhatsApp'tan sor"
@@ -1279,7 +1283,7 @@
       "website": "Web Sitesi",
       "mobileApp": "Mobil Uygulama",
       "digitalAds": "Dijital Reklamlar",
-      "videoEditing": "Video Montaj",
+      "videoEditing": "Video Kurgu",
       "videoShooting": "Video Çekim",
       "socialMediaDesign": "Sosyal Medya Tasarım"
     },
@@ -1390,7 +1394,7 @@
       "ecommerceAdditional": {
         "cargoIntegration": "Kargo entegrasyonu",
         "multicurrency": "Çok para birimli sistem",
-        "marketplace": "Marketplace sistemi",
+        "marketplace": "Pazaryeri sistemi",
         "productFilter": "Ürün filtreleme sistemi",
         "loyaltySystem": "Müşteri sadakat sistemi",
         "smsNotification": "SMS bildirim sistemi",
@@ -1659,7 +1663,7 @@
       "metaAdditional": {
         "extraCampaign": "Ek reklam kampanyası",
         "extraCreative": "Ek reklam kreatifi",
-        "reelsEditing": "Reels montajı",
+        "reelsEditing": "Reels kurgusu",
         "motionDesign": "Motion tasarım reklamı",
         "adCopywriting": "Reklam metni yazımı",
         "whatsappCatalog": "WhatsApp katalog reklamı",
@@ -1683,7 +1687,7 @@
         "seoAudit": "SEO denetimi"
       },
       "tiktokAdditional": {
-        "videoEditing": "TikTok video montajı",
+        "videoEditing": "TikTok video kurgusu",
         "ugcScript": "UGC içerik senaryosu",
         "viralPlanning": "Viral içerik planlaması",
         "pixelSetup": "TikTok Pixel kurulumu",
@@ -1702,7 +1706,7 @@
       }
     },
     "videoEditing": {
-      "title": "Video Montaj",
+      "title": "Video Kurgu",
       "videoType": "Video Türü",
       "shortVideo": "Kısa Video (Reels/Shorts)",
       "longVideo": "Uzun Video (YouTube)",
@@ -2162,7 +2166,7 @@
         {
           "id": "video",
           "icon": "Video",
-          "title": "Video Montaj",
+          "title": "Video Kurgu",
           "description": "Reklam filmleri, YouTube içerikleri, Reels ve kurumsal prodüksiyonlar için profesyonel montaj hizmeti.",
           "href": "/services/photo-video"
         },
@@ -3337,7 +3341,7 @@
               "s": "Benzer kitle"
             },
             {
-              "t": "Retargetinq",
+              "t": "Retargeting",
               "s": "Takipçiler"
             }
           ],
@@ -4125,7 +4129,7 @@
           "d": "Platformu ve kaç paket istediğinizi seçin."
         },
         {
-          "t": "Hesabı yazın",
+          "t": "Hesap adını yazın",
           "d": "Kullanıcı adınızı veya kanal bağlantınızı girin. Şifre istemiyoruz."
         },
         {

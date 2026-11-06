@@ -1,3 +1,7 @@
+/**
+ * Hero with breadcrumb for the legacy service page template.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'

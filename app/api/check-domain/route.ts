@@ -35,7 +35,10 @@ function limited(ip: string): boolean {
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS)
   recent.push(now)
   hits.set(ip, recent)
-  if (hits.size > 5000) hits.clear()
+  if (hits.size > 5000) {
+    // drop the quiet keys only, never everyone's history at once
+    for (const [k, v] of hits) if (now - v[v.length - 1] > WINDOW_MS) hits.delete(k)
+  }
   return recent.length > MAX_PER_WINDOW
 }
 
@@ -105,7 +108,7 @@ async function check(domain: string, zone: string): Promise<Status> {
 }
 
 export async function GET(request: NextRequest) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'local'
+  const ip = request.headers.get('x-real-ip') || request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'local'
   if (limited(ip)) {
     return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   }

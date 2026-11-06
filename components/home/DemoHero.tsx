@@ -196,8 +196,8 @@ export function DemoHero() {
           </span>
 
           <h1 className="mt-6 text-[2.35rem] font-extrabold leading-[1.04] tracking-[-0.045em] text-text-primary sm:text-5xl xl:text-[3.6rem]">
-            {t('titleStart')} <span className="whitespace-nowrap text-brand">{t('titleAccent')}</span> {t('titleEnd')}{' '}
-            <span className="text-brand">{t('titleFree')}</span>
+            {t('titleStart')} <span className="whitespace-nowrap text-accent-ink">{t('titleAccent')}</span> {t('titleEnd')}{' '}
+            <span className="text-accent-ink">{t('titleFree')}</span>
           </h1>
 
           <p className="mt-6 max-w-[540px] text-base leading-relaxed text-text-secondary sm:text-lg">{t('subtitle')}</p>

@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Home page "how we work" steps with scroll-in animation.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion, useInView } from 'framer-motion'

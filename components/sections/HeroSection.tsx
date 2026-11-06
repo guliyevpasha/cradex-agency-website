@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Old home hero with headline, rating and calls to action.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'

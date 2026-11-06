@@ -1,4 +1,8 @@
 'use client'
+/**
+ * Delayed promo popup; remembers dismissal.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, MessageCircle, TrendingUp, Clock, Shield } from 'lucide-react'

@@ -1,3 +1,8 @@
+/**
+ * Tests for the revalidate webhook: token check, path mapping and error
+ * cases.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { POST } from './route'
 import { NextRequest } from 'next/server'

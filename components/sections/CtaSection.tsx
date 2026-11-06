@@ -1,3 +1,7 @@
+/**
+ * Closing call to action with a WhatsApp button.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import { useTranslations, useLocale } from 'next-intl'
 import { MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

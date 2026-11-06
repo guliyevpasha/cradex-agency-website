@@ -1,3 +1,7 @@
+/**
+ * Clients page: intro plus the partner logo grid.
+ * @author Paşa Quliyev — Cradex Agency
+ */
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getPartners } from '@/lib/data/partners'
