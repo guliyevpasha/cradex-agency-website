@@ -185,9 +185,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               <span className="tilt-glare" />
               <div className="tilt-z1 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
                 <span className="founder-photo relative block h-24 w-24 shrink-0 overflow-hidden rounded-full sm:h-28 sm:w-28">
-                  {/* 520px square crop of the original shot: sharp up to 3x screens, never upscaled. */}
+                  {/* 540px tight square crop of the original 900×1600 shot, edges darkened toward ink; never upscaled. */}
                   <Image
-                    src="/images/team/pasha-quliyev.jpg"
+                    src="/images/team/pasha-quliyev.png"
                     alt={t('founderName')}
                     fill
                     quality={85}
