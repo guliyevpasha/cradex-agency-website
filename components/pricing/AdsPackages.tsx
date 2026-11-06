@@ -69,7 +69,7 @@ export function AdsPackages() {
                       </span>
                     )}
 
-                    <div className="tilt-z2 flex items-center gap-3">
+                    <div className="tilt-z2 flex items-center gap-3 xl:min-h-[3.875rem]">
                       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-snow shadow-card dark:bg-snow dark:text-ink">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5">
                           <path d={ICONS[p.id].path} />
@@ -81,7 +81,7 @@ export function AdsPackages() {
                       </div>
                     </div>
                     {/* fixed height keeps the price rows level across the four cards */}
-                    <p className="tilt-z1 mt-4 text-sm leading-snug text-text-secondary xl:min-h-[3.75rem]">{t(`packages.${p.id}.text`)}</p>
+                    <p className="tilt-z1 mt-4 text-sm leading-snug text-text-secondary xl:min-h-[4.25rem]">{t(`packages.${p.id}.text`)}</p>
 
                     {/* Same rows in both modes so the cards do not jump on switch. */}
                     <div className="tilt-z2 mt-6">

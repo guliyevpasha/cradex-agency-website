@@ -20,6 +20,10 @@ const PLATFORMS: { icon: SimpleIcon; name: string }[] = [
 // Platforms each campaign runs on (indexes into PLATFORMS).
 const CAMPAIGN_PLATFORMS = [[0, 1], [2, 3], [0, 1, 4]]
 const BUDGET = [58, 30, 18]
+
+// Sample week: 1 000 leads at $0.60 each, so $600 spent (ad platforms bill in dollars).
+const LEADS = 1000
+const CPL_USD = 0.6
 const BARS = [38, 52, 46, 64, 58, 74, 100]
 
 function Icon({ icon, className }: { icon: SimpleIcon; className?: string }) {
@@ -72,9 +76,9 @@ export function AdsDashboard() {
               {/* metrics */}
               <div className="grid grid-cols-3 gap-2 sm:gap-3">
                 {[
-                  { label: t('leads'), value: '248', w: 72, tone: 'bg-brand-strong' },
-                  { label: t('cpl'), value: '4,2 ₼', w: 46, tone: 'bg-accent-primary/60' },
-                  { label: t('spent'), value: '1 240 ₼', w: 64, tone: 'bg-text-primary/70' },
+                  { label: t('leads'), value: String(LEADS).replace(/\B(?=(\d{3})+(?!\d))/g, ' '), w: 72, tone: 'bg-brand-strong' },
+                  { label: t('cpl'), value: `$${CPL_USD.toFixed(2)}`, w: 46, tone: 'bg-accent-primary/60' },
+                  { label: t('spent'), value: `$${String(Math.round(LEADS * CPL_USD)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}`, w: 64, tone: 'bg-text-primary/70' },
                 ].map((m, i) => (
                   <div key={m.label} className="ads-rise min-w-0 rounded-xl border border-line bg-bg-secondary p-2.5 sm:rounded-2xl sm:p-3" style={{ animationDelay: `${i * 120}ms` }}>
                     <p className="truncate text-[9px] font-semibold uppercase tracking-[0.06em] text-text-muted sm:text-[10px] sm:tracking-[0.08em]">{m.label}</p>

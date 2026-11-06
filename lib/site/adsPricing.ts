@@ -21,7 +21,7 @@ export type AdsPackage = {
 
 // TikTok asks for at least $50/day per campaign, LinkedIn about $10/day, hence the higher floors.
 export const ADS_PACKAGES: AdsPackage[] = [
-  { id: 'meta', fee: 300, setup: 100, minBudget: 500, recommended: true },
+  { id: 'meta', fee: 300, setup: 100, minBudget: 500 },
   { id: 'google', fee: 350, setup: 150, minBudget: 500 },
   { id: 'tiktok', fee: 350, setup: 100, minBudget: 1500 },
   { id: 'linkedin', fee: 450, setup: 150, minBudget: 1000 },
