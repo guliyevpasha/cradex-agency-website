@@ -2,12 +2,15 @@
 /**
  * Client reviews: rating summary on the left, a 3D deck of review cards on
  * the right. The deck advances on its own and pauses on hover or focus.
+ * All cards share one grid cell, so the deck is as tall as its longest
+ * review and no text is ever cut off. On service pages `badge` names the
+ * service the reviewers used.
  * @author Paşa Quliyev — Cradex Agency
  */
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowLeft, ArrowRight, Quote, Star } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BadgeCheck, Quote, Star } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { Tilt } from '@/components/ui/Tilt'
 import { Reveal } from '@/components/ui/Reveal'
@@ -49,7 +52,7 @@ function Avatar({ t, size }: { t: Review; size: number }) {
   )
 }
 
-export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonial[] }) {
+export function ReviewsSection({ testimonials: raw, badge }: { testimonials: Testimonial[]; badge?: string }) {
   const t = useTranslations('site.reviews')
   const locale = useLocale() as Locale
   const testimonials: Review[] = raw.map((r) => ({
@@ -81,13 +84,19 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
   return (
     <section className="py-20 lg:py-28">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-[40px] border border-line bg-bg-secondary px-6 py-14 sm:px-12 lg:px-16 lg:py-20">
+        <div className="relative overflow-clip rounded-[40px] border border-line bg-bg-secondary px-6 py-14 sm:px-12 lg:px-16 lg:py-20">
           <span aria-hidden="true" className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl" />
           <span aria-hidden="true" className="absolute -bottom-40 left-1/4 h-96 w-96 rounded-full bg-[#F5B301]/10 blur-3xl" />
 
-          <div className="relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
             <Reveal>
               <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-ink">{t('eyebrow')}</p>
+              {badge && (
+                <p className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-line bg-bg-primary px-3 py-1.5 text-[13px] font-semibold text-text-primary">
+                  <BadgeCheck size={15} className="text-accent-ink" aria-hidden="true" />
+                  {badge}
+                </p>
+              )}
               <AnimatedHeading className="mt-3 text-display-lg font-extrabold tracking-[-0.035em] text-text-primary" text={t('title')} />
 
               <div className="mt-10 flex items-end gap-5">
@@ -116,7 +125,8 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
               onFocusCapture={() => setPaused(true)}
               onBlurCapture={() => setPaused(false)}
             >
-              <div className="relative h-[400px] [perspective:1600px] sm:h-[360px]" aria-live="polite">
+              {/* one shared grid cell: the tallest card sets the height */}
+              <div className="relative grid grid-cols-[minmax(0,1fr)] [perspective:1600px]">
                 {testimonials.map((r, i) => {
                   const pos = (i - active + count) % count
                   const visible = pos < 3
@@ -124,7 +134,7 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
                     <div
                       key={r.id}
                       aria-hidden={pos !== 0}
-                      className="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      className="transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] [grid-area:1/1]"
                       style={{
                         transform: `translate3d(${pos * 26}px, ${pos * -22}px, ${pos * -90}px) rotateY(${pos * -5}deg)`,
                         opacity: visible ? 1 - pos * 0.28 : 0,
@@ -141,7 +151,7 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
                             </span>
                             <Stars value={r.rating || 5} />
                           </div>
-                          <blockquote className="tilt-z1 mt-6 line-clamp-6 flex-1 text-lg leading-relaxed text-text-primary sm:text-xl">
+                          <blockquote className={cn('tilt-z1 mt-6 flex-1 leading-relaxed text-text-primary', r.text.length > 320 ? 'text-base sm:text-lg' : 'text-lg sm:text-xl')}>
                             {r.text}
                           </blockquote>
                           <figcaption className="tilt-z2 mt-6 flex items-center gap-4 border-t border-line pt-6">
@@ -151,6 +161,7 @@ export function ReviewsSection({ testimonials: raw }: { testimonials: Testimonia
                               <span className="block truncate text-sm text-text-secondary">
                                 {[r.role, r.company].filter(Boolean).join(' · ')}
                               </span>
+                              {badge && <span className="mt-1 block truncate text-xs font-semibold text-accent-ink">{badge}</span>}
                             </span>
                           </figcaption>
                         </figure>

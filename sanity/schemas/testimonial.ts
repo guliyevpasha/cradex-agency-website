@@ -73,10 +73,13 @@ export default defineType({
     defineField({
       name: 'services',
       title: 'Xidmətlər',
-      description: 'Rəy hansı xidmətin və qiymət səhifəsinin rəylər bölməsində görünsün. Boş qalsa, yalnız əsas səhifədə görünür.',
+      description:
+        'Müştəri hansı xidmətdən və ya məhsuldan istifadə edib? Rəy yalnız seçilən xidmətin səhifəsində, qiymət səhifəsində və məhsul səhifəsində görünür. Boş qalsa, yalnız əsas səhifədə görünür.',
       type: 'array',
       of: [{ type: 'string' }],
       options: { list: SERVICE_TAGS, layout: 'grid' },
+      validation: (Rule) =>
+        Rule.custom((v) => (Array.isArray(v) && v.length > 0 ? true : 'Xidmət seçilməyib: rəy heç bir xidmət səhifəsində görünməyəcək.')).warning(),
     }),
     defineField({
       name: 'rating',
@@ -108,8 +111,9 @@ export default defineType({
       media: 'avatar',
       photoPath: 'photoPath',
       rating: 'rating',
+      services: 'services',
     },
-    prepare({ title, role, company, media, photoPath, rating }) {
+    prepare({ title, role, company, media, photoPath, rating, services }) {
       // company is blank on most entries, so lead with the role and only add
       // the company when there is one.
       const subtitle = [role, company].filter(Boolean).join(' · ')
@@ -127,7 +131,14 @@ export default defineType({
                 style: { width: '100%', height: '100%', objectFit: 'cover' },
               })
             : undefined),
-        subtitle: subtitle ? `${subtitle} — ${rating}⭐` : `${rating}⭐`,
+        // the service tags first, so untagged reviews stand out in the list
+        subtitle: [
+          (services as string[] | undefined)?.map((v) => SERVICE_TAGS.find((t) => t.value === v)?.title ?? v).join(', ') || 'Xidmət seçilməyib',
+          subtitle,
+          `${rating}⭐`,
+        ]
+          .filter(Boolean)
+          .join(' · '),
       }
     },
   },

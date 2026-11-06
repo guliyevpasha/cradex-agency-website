@@ -40,7 +40,7 @@ describe('reviewsFor', () => {
     expect(reviewsFor(reviews, 'seo').map((r) => r.id)).toEqual(['3'])
   })
 
-  it('falls back to every review while none is tagged', () => {
-    expect(reviewsFor(reviews, 'ads').map((r) => r.id)).toEqual(['1', '2', '3'])
+  it('shows no review from another service when none is tagged', () => {
+    expect(reviewsFor(reviews, 'ads')).toEqual([])
   })
 })

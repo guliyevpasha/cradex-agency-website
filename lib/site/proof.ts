@@ -1,7 +1,8 @@
 /**
  * Which reviews and blog posts a service, pricing or product page shows.
- * Tagged entries (Sanity "services") come first; the rest fills in so a page
- * never shows an empty block while the owner is still tagging content.
+ * Reviews: only the ones tagged for that service (Sanity "services"), so a
+ * page never quotes someone who bought something else. Posts: tagged first,
+ * then matching categories, so the blog block is never empty.
  * @author Paşa Quliyev — Cradex Agency
  */
 
@@ -37,9 +38,7 @@ export function postsFor<T extends Post>(posts: T[], service: ServiceTag, limit 
 
 type Review = { id: string; services?: string[] }
 
-/** Reviews tagged for the service; with none tagged yet, all of them (as on the home page). */
+/** Reviews from clients of this service only; none tagged yet means no reviews block. */
 export function reviewsFor<T extends Review>(reviews: T[], service: ServiceTag): T[] {
-  const tagged = reviews.filter((r) => r.services?.includes(service))
-  if (tagged.length > 0) return tagged
-  return reviews
+  return reviews.filter((r) => r.services?.includes(service))
 }
