@@ -9,7 +9,6 @@ import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { getPartners } from '@/lib/data/partners'
-import { ClientLogo } from '@/components/clients/ClientLogo'
 import { ClientsFaq } from '@/components/clients/ClientsFaq'
 import { ClientsGrid } from '@/components/clients/ClientsGrid'
 import { ClientsWall } from '@/components/clients/ClientsWall'
@@ -20,8 +19,6 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 type Params = Promise<{ locale: string }>
 
-// Where the four floating logo chips sit in the CTA visual.
-const CTA_SPOTS = ['left-0 top-2 rotate-[-6deg]', 'right-2 top-0 rotate-[5deg]', 'left-10 bottom-2 rotate-[4deg]', 'right-0 bottom-8 rotate-[-5deg]']
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale } = await params
@@ -121,17 +118,10 @@ export default async function ClientsPage({ params }: { params: Params }) {
                   </Link>
                 </div>
               </div>
-              {/* A few of the brands we worked with, floating on their own layer. */}
-              <ul className="tilt-z3 relative hidden h-56 lg:block" aria-hidden="true">
-                {partners.slice(0, 4).map((p, i) => (
-                  // rotate on the <li>, float on the inner chip: both use transform
-                  <li key={p.id} className={`absolute ${CTA_SPOTS[i]}`}>
-                    <span className="cl-cta-chip hm-float flex h-16 w-40 items-center justify-center rounded-2xl" style={{ animationDelay: `${i * -1.4}s` }}>
-                      <ClientLogo partner={p} decorative className="h-7 w-auto max-w-[70%] object-contain" />
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              {/* The same flowing logo wall as the hero, smaller and boxless. */}
+              <div className="relative -mx-7 -mb-14 sm:-mx-14 lg:-my-10 lg:mx-0">
+                <ClientsWall partners={partners} compact />
+              </div>
             </div>
           </Tilt>
         </Reveal>

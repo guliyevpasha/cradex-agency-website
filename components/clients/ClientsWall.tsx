@@ -9,7 +9,9 @@ import { ClientLogo } from './ClientLogo'
 
 const COLUMNS = 4
 
-export function ClientsWall({ partners }: { partners: PartnerLogo[] }) {
+// `compact` drops the dark box and fades the edges out with a mask, so the
+// wall can sit inside another coloured panel (the clients CTA).
+export function ClientsWall({ partners, compact = false }: { partners: PartnerLogo[]; compact?: boolean }) {
   // Deal the logos out round-robin, then offset each column so neighbours
   // never start on the same brand.
   const cols = Array.from({ length: COLUMNS }, (_, c) => {
@@ -20,7 +22,7 @@ export function ClientsWall({ partners }: { partners: PartnerLogo[] }) {
   })
 
   return (
-    <div className="cl-stage" aria-hidden="true">
+    <div className={compact ? 'cl-stage cl-compact' : 'cl-stage'} aria-hidden="true">
       <div className="cl-plane">
         {cols.map((col, c) => (
           <div key={c} className={c % 2 ? 'cl-col cl-down' : 'cl-col cl-up'} style={{ animationDuration: `${26 + c * 4}s` }}>
@@ -36,7 +38,7 @@ export function ClientsWall({ partners }: { partners: PartnerLogo[] }) {
           </div>
         ))}
       </div>
-      <span className="cl-fade" />
+      {!compact && <span className="cl-fade" />}
     </div>
   )
 }

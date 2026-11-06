@@ -212,6 +212,27 @@
     linear-gradient(to bottom, #0B0D10, transparent 22%, transparent 78%, #0B0D10),
     linear-gradient(to right, rgb(11 13 16 / 0.7), transparent 18%, transparent 82%, rgb(11 13 16 / 0.7));
 }
+/* smaller wall inside the blue CTA: no box, edges fade out through a mask */
+.cl-compact {
+  height: 260px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  /* two linear fades intersected, so every edge dissolves into the blue */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent),
+    linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent),
+    linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+  mask-composite: intersect;
+}
+@media (min-width: 1024px) { .cl-compact { height: 320px; } }
+.cl-compact .cl-plane { inset: -40% -30%; gap: 12px; }
+.cl-compact .cl-tile { height: 70px; margin-bottom: 12px; border-radius: 16px; border-color: rgb(255 255 255 / 0.12); }
+.cl-compact .cl-tile-img { max-height: 26px; }
 @keyframes cl-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 @keyframes cl-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
 
@@ -1534,12 +1555,6 @@
 
 /* FAQ answers slide in when a card opens */
 .faq-card[open] .faq-body { animation: ab-caption 0.35s ease; }
-/* floating logo chips in the clients CTA */
-.cl-cta-chip {
-  border: 1px solid rgb(255 255 255 / 0.12);
-  background: linear-gradient(160deg, #161B23, #0B0D10);
-  box-shadow: 0 22px 40px -18px rgb(11 13 16 / 0.7);
-}
 .ab-stats::after {
   content: '';
   position: absolute;
