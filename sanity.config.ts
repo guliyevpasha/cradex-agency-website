@@ -5,6 +5,7 @@ import { schemaTypes } from './sanity/schemas'
 import { projectId, dataset } from './sanity/env'
 import { DuplicateAction } from './sanity/lib/documentActions'
 import { analyticsPlugin } from './sanity/plugins/analyticsPlugin'
+import { structure, templates } from './sanity/structure'
 
 export default defineConfig({
   name: 'default',
@@ -15,10 +16,11 @@ export default defineConfig({
 
   basePath: '/studio',
 
-  plugins: [structureTool(), visionTool(), analyticsPlugin()],
+  plugins: [structureTool({ structure }), visionTool(), analyticsPlugin()],
 
   schema: {
     types: schemaTypes,
+    templates,
   },
 
   document: {

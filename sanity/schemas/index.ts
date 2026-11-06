@@ -4,5 +4,7 @@ import partner from './partner'
 import testimonial from './testimonial'
 import chatQuestion from './chatQuestion'
 import chatAnswer from './chatAnswer'
+import workCase from './workCase'
+import { localeString, localeText } from './locale'
 
-export const schemaTypes = [blog, portfolio, partner, testimonial, chatQuestion, chatAnswer]
+export const schemaTypes = [localeString, localeText, blog, portfolio, workCase, partner, testimonial, chatQuestion, chatAnswer]

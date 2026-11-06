@@ -250,7 +250,7 @@ describe('POST /api/revalidate', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.paths).toEqual([
+      expect(data.paths.slice(0, 8)).toEqual([
         '/az/journal',
         '/en/journal',
         '/ru/journal',
@@ -260,9 +260,14 @@ describe('POST /api/revalidate', () => {
         '/ru/journal/test-article',
         '/tr/journal/test-article',
       ])
+      // posts also show on the home, service, pricing and product pages
+      expect(data.paths).toContain('/az')
+      expect(data.paths).toContain('/en/services/seo-geo')
+      expect(data.paths).toContain('/ru/pricing/reqemsal-reklam')
+      expect(data.paths).toContain('/tr/products/sosial-media-kombo-paketleri')
     })
 
-    it('should revalidate only journal listing when slug is missing for blog', async () => {
+    it('should skip the article path when slug is missing for blog', async () => {
       const request = new NextRequest('http://localhost:3000/api/revalidate', {
         method: 'POST',
         headers: {
@@ -275,12 +280,13 @@ describe('POST /api/revalidate', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.paths).toEqual([
+      expect(data.paths.slice(0, 4)).toEqual([
         '/az/journal',
         '/en/journal',
         '/ru/journal',
         '/tr/journal',
       ])
+      expect(data.paths.some((p: string) => p.startsWith('/az/journal/'))).toBe(false)
     })
 
     it('should revalidate portfolio and homepage for portfolio/portfolioItem content type', async () => {
@@ -308,7 +314,7 @@ describe('POST /api/revalidate', () => {
       ])
     })
 
-    it('should revalidate only homepage for testimonial content type', async () => {
+    it('should revalidate homepage and service pages for testimonial content type', async () => {
       const request = new NextRequest('http://localhost:3000/api/revalidate', {
         method: 'POST',
         headers: {
@@ -321,15 +327,13 @@ describe('POST /api/revalidate', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.paths).toEqual([
-        '/az',
-        '/en',
-        '/ru',
-        '/tr',
-      ])
+      expect(data.paths.slice(0, 4)).toEqual(['/az', '/en', '/ru', '/tr'])
+      expect(data.paths).toContain('/az/services/veb-sayt-hazirlanmasi')
+      expect(data.paths).toContain('/en/pricing')
+      expect(data.paths).not.toContain('/az/journal')
     })
 
-    it('should revalidate only homepage for partner content type', async () => {
+    it('should revalidate homepage and clients page for partner content type', async () => {
       const request = new NextRequest('http://localhost:3000/api/revalidate', {
         method: 'POST',
         headers: {
@@ -342,12 +346,25 @@ describe('POST /api/revalidate', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.paths).toEqual([
-        '/az',
-        '/en',
-        '/ru',
-        '/tr',
-      ])
+      expect(data.paths).toEqual(['/az', '/en', '/ru', '/tr', '/az/clients', '/en/clients', '/ru/clients', '/tr/clients'])
+    })
+
+    it('should revalidate the work category pages for workCase content type', async () => {
+      const request = new NextRequest('http://localhost:3000/api/revalidate', {
+        method: 'POST',
+        headers: {
+          'authorization': 'Bearer test-token',
+        },
+        body: JSON.stringify({ _type: 'workCase' }),
+      })
+
+      const response = await POST(request)
+      const data = await response.json()
+
+      expect(response.status).toBe(200)
+      expect(data.paths).toHaveLength(16)
+      expect(data.paths).toContain('/az/portfolio/reqemsal-reklam')
+      expect(data.paths).toContain('/tr/portfolio/texniki-xidmet')
     })
 
     it('should return empty paths array for unknown content type', async () => {

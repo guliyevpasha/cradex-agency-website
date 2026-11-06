@@ -1,5 +1,6 @@
 import { createElement } from 'react'
 import { defineField, defineType } from 'sanity'
+import { SERVICE_TAGS } from './locale'
 
 // Where photoPath entries are served from. Studio can only render assets it
 // stores itself, so a path like /images/testimonials/kenan.jpg needs an absolute
@@ -68,6 +69,14 @@ export default defineType({
         { name: 'tr', type: 'text', title: 'Türkçe', rows: 4 },
       ],
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'services',
+      title: 'Xidmətlər',
+      description: 'Rəy hansı xidmətin və qiymət səhifəsinin rəylər bölməsində görünsün. Boş qalsa, yalnız əsas səhifədə görünür.',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { list: SERVICE_TAGS, layout: 'grid' },
     }),
     defineField({
       name: 'rating',

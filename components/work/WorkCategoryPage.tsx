@@ -1,8 +1,9 @@
 /**
  * One template for the work pages beyond websites (ads, mobile, SEO / GEO,
  * technical service): hero with the service's 3D mockup, the case cards,
- * the sample note while SAMPLE_RESULTS is on, and a consultation CTA.
- * Each route file is just `workPage('<id>')`.
+ * a note while any card is a built-in sample, and a consultation CTA.
+ * Cases come from Sanity (workCase); see lib/data/work.ts. Each route file
+ * is just `workPage('<id>')`.
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { Metadata } from 'next'
@@ -10,7 +11,8 @@ import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowUpRight, ChevronRight, Info } from 'lucide-react'
 import { pricingHref, serviceHref } from '@/lib/site/navigation'
-import { AD_CASES, SAMPLE_RESULTS, SEO_CASES, WORK_SLUGS, type AdPlatform, type WorkCategory } from '@/lib/site/work'
+import { WORK_SLUGS, type AdPlatform, type WorkCategory } from '@/lib/site/work'
+import { getWorkCases, type WorkCase } from '@/lib/data/work'
 import { AdsDashboard } from '@/components/services/AdsDashboard'
 import { HERO_MOCKS } from '@/components/services/HeroMocks'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
@@ -36,9 +38,9 @@ function Cell({ children, i }: { children: React.ReactNode; i: number }) {
   )
 }
 
-function AdsCases({ t, c, sample }: { t: T; c: T; sample?: string }) {
-  const cases = t.raw('cases') as { platform: AdPlatform; sector: string; goal: string; period: string; text: string; metrics: string[] }[]
-  const order: AdPlatform[] = ['meta', 'tiktok', 'google', 'linkedin']
+function AdsCases({ cases, c }: { cases: WorkCase[]; c: T }) {
+  // Only platforms that actually have cases get a tab and a section.
+  const order = (['meta', 'tiktok', 'google', 'linkedin'] as AdPlatform[]).filter((p) => cases.some((x) => x.platform === p))
   return (
     <>
       {/* Platform jump links */}
@@ -49,6 +51,7 @@ function AdsCases({ t, c, sample }: { t: T; c: T; sample?: string }) {
               <a href={`#${p}`} className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-text-secondary transition-colors hover:bg-bg-secondary hover:text-text-primary">
                 <BrandIcon icon={PLATFORMS[p].icon} className="h-4 w-4" />
                 {PLATFORMS[p].name}
+                <span className="rounded-full bg-bg-secondary px-1.5 text-[11px] font-bold tabular-nums text-text-muted">{cases.filter((x) => x.platform === p).length}</span>
               </a>
             </li>
           ))}
@@ -62,14 +65,14 @@ function AdsCases({ t, c, sample }: { t: T; c: T; sample?: string }) {
             </span>
             {PLATFORMS[p].name}
           </h2>
-          <ul className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2">
-            {cases.map((c, i) =>
-              c.platform === p ? (
-                <Cell key={i} i={i}>
-                  <AdCaseCard c={c} platform={p} values={AD_CASES[i].values} bars={AD_CASES[i].bars} sample={sample} />
+          <ul className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {cases
+              .filter((x) => x.platform === p)
+              .map((x, i) => (
+                <Cell key={x.id} i={i}>
+                  <AdCaseCard c={x} sample={c('sample')} />
                 </Cell>
-              ) : null
-            )}
+              ))}
           </ul>
         </section>
       ))}
@@ -77,25 +80,26 @@ function AdsCases({ t, c, sample }: { t: T; c: T; sample?: string }) {
   )
 }
 
-function SupportCases({ t, c, sample }: { t: T; c: T; sample?: string }) {
-  const cases = t.raw('cases') as { group: string; title: string; problem: string; solution: string; result: string }[]
+function SupportCases({ cases, t, c }: { cases: WorkCase[]; t: T; c: T }) {
   const labels = { problem: c('problem'), solution: c('solution') }
   return (
     <>
-      {(['web', 'social'] as const).map((g) => (
-        <section key={g} className="container-x py-10 lg:py-14">
-          <AnimatedHeading className={HEADING} text={t(`groups.${g}`)} />
-          <ul className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {cases.map((x, i) =>
-              x.group === g ? (
-                <Cell key={i} i={i}>
-                  <SupportCaseCard c={x} index={i} labels={labels} sample={sample} />
+      {(['web', 'social'] as const).map((g) => {
+        const list = cases.filter((x) => x.group === g)
+        if (list.length === 0) return null
+        return (
+          <section key={g} className="container-x py-10 lg:py-14">
+            <AnimatedHeading className={HEADING} text={t(`groups.${g}`)} />
+            <ul className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {list.map((x) => (
+                <Cell key={x.id} i={cases.indexOf(x)}>
+                  <SupportCaseCard c={x} index={cases.indexOf(x)} labels={labels} sample={c('sample')} />
                 </Cell>
-              ) : null
-            )}
-          </ul>
-        </section>
-      ))}
+              ))}
+            </ul>
+          </section>
+        )
+      })}
     </>
   )
 }
@@ -117,7 +121,8 @@ export function workPage(id: WorkCategory) {
     const t = await getTranslations({ locale, namespace: `site.workPages.${id}` })
     const c = await getTranslations({ locale, namespace: 'site.workPages.common' })
     const menu = await getTranslations({ locale, namespace: 'site.workMenu' })
-    const sample = SAMPLE_RESULTS ? c('sample') : undefined
+    const cases = await getWorkCases(id, locale)
+    const hasSamples = cases.some((x) => x.sample)
     const HeroMock = id === 'ads' ? AdsDashboard : HERO_MOCKS[id]
 
     return (
@@ -163,21 +168,21 @@ export function workPage(id: WorkCategory) {
           </div>
         </section>
 
-        {SAMPLE_RESULTS && (
+        {hasSamples && (
           <p className="container-x mt-4 flex items-start gap-2.5 text-sm leading-relaxed text-text-muted">
             <Info size={16} className="mt-0.5 shrink-0 text-accent-ink" aria-hidden="true" />
             {c('sampleNote')}
           </p>
         )}
 
-        {id === 'ads' && <AdsCases t={t} c={c} sample={sample} />}
+        {id === 'ads' && <AdsCases cases={cases} c={c} />}
 
         {id === 'mobile' && (
           <section className="container-x py-10 lg:py-14">
             <ul className="grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-2">
-              {(t.raw('cases') as { kind: string; title: string; sector: string; text: string; features: string[] }[]).map((x, i) => (
-                <Cell key={x.kind} i={i}>
-                  <MobileCaseCard c={x} sample={sample} />
+              {cases.map((x, i) => (
+                <Cell key={x.id} i={i}>
+                  <MobileCaseCard c={x} sample={c('sample')} />
                 </Cell>
               ))}
             </ul>
@@ -186,17 +191,17 @@ export function workPage(id: WorkCategory) {
 
         {id === 'seo' && (
           <section className="container-x py-10 lg:py-14">
-            <ul className="grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2">
-              {(t.raw('cases') as { sector: string; goal: string; period: string; text: string; metrics: string[] }[]).map((x, i) => (
-                <Cell key={i} i={i}>
-                  <SeoCaseCard c={x} id={String(i)} values={SEO_CASES[i].values} line={SEO_CASES[i].line} sample={sample} />
+            <ul className="grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {cases.map((x, i) => (
+                <Cell key={x.id} i={i}>
+                  <SeoCaseCard c={x} id={String(i)} sample={c('sample')} />
                 </Cell>
               ))}
             </ul>
           </section>
         )}
 
-        {id === 'support' && <SupportCases t={t} c={c} sample={sample} />}
+        {id === 'support' && <SupportCases cases={cases} t={t} c={c} />}
 
         {/* CTA */}
         <section className="container-x pb-24 pt-10">

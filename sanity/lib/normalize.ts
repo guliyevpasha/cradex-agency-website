@@ -146,6 +146,7 @@ export interface SanityBlogDoc {
   readingTime?: number
   image?: string
   tags?: string[]
+  services?: string[]
 }
 
 export function toArticle(doc: SanityBlogDoc | null | undefined): Article | null {
@@ -170,6 +171,7 @@ export function toArticle(doc: SanityBlogDoc | null | undefined): Article | null
     publishedAt,
     readingTimeMinutes: doc.readingTime ?? estimateReadingTime(contentKey),
     tags: doc.tags ?? [],
+    services: doc.services ?? [],
     metaTitleKey: titleKey,
     metaDescriptionKey: excerptKey,
     ogImage: coverImage,

@@ -5,6 +5,8 @@
 import { revalidatePath } from 'next/cache'
 import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'node:crypto'
+import { PRICING_LINKS, PRODUCT_LINKS, SERVICE_SLUGS } from '@/lib/site/navigation'
+import { WORK_SLUGS } from '@/lib/site/work'
 
 const LOCALES = ['az', 'en', 'ru', 'tr']
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,120}$/i
@@ -38,14 +40,28 @@ export async function POST(request: NextRequest) {
       paths.push(p)
     }
 
+    // Reviews and posts also appear on every service, pricing and product page.
+    const servicePages = () =>
+      LOCALES.forEach((l) =>
+        [...Object.values(SERVICE_SLUGS).map((s) => `/services/${s}`), '/pricing', ...PRICING_LINKS.filter((p) => p.path).map((p) => `/pricing${p.path}`), ...PRODUCT_LINKS.map((p) => `/products/${p.slug}`)].forEach((p) =>
+          add(`/${l}${p}`)
+        )
+      )
+
     if (_type === 'blog' || _type === 'article') {
       LOCALES.forEach((l) => add(`/${l}/journal`))
       if (slug) LOCALES.forEach((l) => add(`/${l}/journal/${slug}`))
+      LOCALES.forEach((l) => add(`/${l}`))
+      servicePages()
+    } else if (_type === 'workCase') {
+      LOCALES.forEach((l) => Object.values(WORK_SLUGS).forEach((w) => add(`/${l}/portfolio/${w}`)))
     } else if (_type === 'portfolio' || _type === 'portfolioItem') {
       LOCALES.forEach((l) => add(`/${l}/portfolio`))
       LOCALES.forEach((l) => add(`/${l}`))
     } else if (_type === 'testimonial' || _type === 'partner') {
       LOCALES.forEach((l) => add(`/${l}`))
+      if (_type === 'testimonial') servicePages()
+      else LOCALES.forEach((l) => add(`/${l}/clients`))
     }
 
     console.log(`[revalidate] ${_type}${slug ? `/${slug}` : ''}: ${paths.length} paths`)

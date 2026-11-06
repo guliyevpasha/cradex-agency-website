@@ -16,6 +16,10 @@ import { ComboDetails } from '@/components/products/ComboDetails'
 import { FaqCards } from '@/components/ui/FaqCards'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { ServiceProof } from '@/components/services/ServiceProof'
+
+// Hourly, like the home page: Studio publishes also refresh via /api/revalidate.
+export const revalidate = 3600
 
 type Params = Promise<{ locale: string; slug: string }>
 
@@ -118,6 +122,8 @@ async function ComboPage({ locale }: { locale: string }) {
         </div>
         <FaqCards items={faq} icons={COMBO_FAQ_ICONS} />
       </section>
+
+      <ServiceProof service="combo" locale={locale} />
 
       <FinalCta />
 

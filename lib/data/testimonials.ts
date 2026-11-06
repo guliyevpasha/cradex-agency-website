@@ -28,6 +28,9 @@ export interface Testimonial {
     ru: string
     tr: string
   }
+  /** Service pages the review belongs to (Sanity "services" tags). */
+  services?: string[]
+  featured?: boolean
 }
 
 // Static fallback data

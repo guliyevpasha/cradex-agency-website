@@ -12,20 +12,21 @@ import { LOCALES, SERVICE_IDS, SERVICE_SLUGS, serviceHref, serviceIdBySlug, type
 import { ServiceScene } from '@/components/home/ServiceScene'
 import { WorkShowcase } from '@/components/home/WorkShowcase'
 import { FinalCta } from '@/components/home/FinalCta'
-import { BlogShowcase } from '@/components/home/BlogShowcase'
+import { ServiceProof } from '@/components/services/ServiceProof'
 import { AdsDashboard } from '@/components/services/AdsDashboard'
 import { AdsCta, AdsManage, AdsPricing, AdsPrinciple } from '@/components/services/AdsSections'
 import { WebIncluded } from '@/components/services/WebIncluded'
 import { HERO_MOCKS } from '@/components/services/HeroMocks'
 import { HeroDevices } from '@/components/pricing/HeroDevices'
-import { getAllArticles } from '@/lib/data/journal'
-import type { Article } from '@/types'
 import { DomainChecker } from '@/components/home/DomainChecker'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { cn } from '@/lib/utils/cn'
+
+// Hourly, like the home page: Studio publishes also refresh via /api/revalidate.
+export const revalidate = 3600
 
 type Params = Promise<{ locale: string; slug: string }>
 type Item = { t: string; d: string }
@@ -62,7 +63,6 @@ export default async function ServicePage({ params }: { params: Params }) {
   const steps = t.raw(`${id}.steps`) as Item[]
   const faq = t.raw(`${id}.faq`) as Faq[]
   const others = SERVICE_IDS.filter((s) => s !== id)
-  const articles = id === 'web' || id === 'ads' ? await getAllArticles(locale) : []
   // Services with a device mockup in the hero; web keeps its 3D scene.
   const HeroMock = id === 'ads' ? AdsDashboard : id === 'web' ? null : HERO_MOCKS[id]
   let n = 0
@@ -148,8 +148,6 @@ export default async function ServicePage({ params }: { params: Params }) {
       {id === 'ads' && <AdsPrinciple />}
       {id === 'ads' && <AdsPricing />}
       {id === 'web' && <WebIncluded />}
-      {id === 'web' && <BlogShowcase articles={pickArticles(articles, WEB_CATEGORIES)} title={t('web.blogTitle')} />}
-
       {id === 'web' && <WorkShowcase />}
 
       {/* How we work */}
@@ -195,7 +193,8 @@ export default async function ServicePage({ params }: { params: Params }) {
         </div>
       </section>
 
-      {id === 'ads' && <BlogShowcase articles={pickArticles(articles, ADS_CATEGORIES)} title={t('ads.blogTitle')} />}
+      {/* Reviews and posts tagged for this service in Studio */}
+      <ServiceProof service={id} locale={locale} blogTitle={id === 'web' || id === 'ads' ? t(`${id}.blogTitle`) : undefined} />
 
       {/* Other services */}
       <section className="container-x py-16 lg:py-24">
@@ -234,13 +233,4 @@ export default async function ServicePage({ params }: { params: Params }) {
       {id === 'ads' ? <AdsCta /> : <FinalCta />}
     </div>
   )
-}
-
-const WEB_CATEGORIES = ['web-dev']
-const ADS_CATEGORIES = ['smm', 'marketing-strategy']
-
-/** Posts of the given categories first, then the rest, newest first, three in all. */
-function pickArticles(articles: Article[], categories: string[]) {
-  const sorted = [...articles].sort((a, b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
-  return [...sorted.filter((a) => categories.includes(a.category)), ...sorted.filter((a) => !categories.includes(a.category))].slice(0, 3)
 }

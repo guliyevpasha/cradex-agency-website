@@ -169,6 +169,8 @@ export interface Article {
   updatedAt?: string
   readingTimeMinutes: number
   tags: string[]
+  /** Service pages this post belongs to (Sanity "services" tags). */
+  services?: string[]
   metaTitleKey: string
   metaDescriptionKey: string
   ogImage: string

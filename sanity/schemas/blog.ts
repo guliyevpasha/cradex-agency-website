@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { SERVICE_TAGS } from './locale'
 
 export default defineType({
   name: 'blog',
@@ -55,6 +56,14 @@ export default defineType({
           { title: 'Marketinq Strategiyası', value: 'marketing-strategy' },
         ],
       },
+    }),
+    defineField({
+      name: 'services',
+      title: 'Xidmətlər',
+      description: 'Yazı hansı xidmət və qiymət səhifələrinin bloq bölməsində görünsün.',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { list: SERVICE_TAGS, layout: 'grid' },
     }),
     defineField({
       name: 'excerpt',

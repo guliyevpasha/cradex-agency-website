@@ -4,6 +4,9 @@
  */
 import { workPage } from '@/components/work/WorkCategoryPage'
 
+// Hourly, like the home page: Studio publishes also refresh via /api/revalidate.
+export const revalidate = 3600
+
 const { Page, generateMetadata } = workPage('ads')
 
 export { generateMetadata }

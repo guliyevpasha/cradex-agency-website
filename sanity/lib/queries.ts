@@ -11,6 +11,7 @@ export async function getAllBlogPosts(locale: string = 'az'): Promise<Article[]>
     "title": title.${locale},
     "excerpt": excerpt.${locale},
     "category": category,
+    "services": coalesce(services, []),
     "author": author,
     "publishedAt": publishedAt,
     "readingTime": readingTime,
@@ -28,6 +29,7 @@ export async function getBlogPostBySlug(slug: string, locale: string = 'az') {
     "excerpt": excerpt.${locale},
     "content": content.${locale},
     "category": category,
+    "services": coalesce(services, []),
     "author": author,
     "publishedAt": publishedAt,
     "readingTime": readingTime,
@@ -47,6 +49,7 @@ export async function getBlogPostsByCategory(
     "title": title.${locale},
     "excerpt": excerpt.${locale},
     "category": category,
+    "services": coalesce(services, []),
     "author": author,
     "publishedAt": publishedAt,
     "readingTime": readingTime,
@@ -74,6 +77,7 @@ export async function getPaginatedBlogPosts(
       "title": title.${locale},
       "excerpt": excerpt.${locale},
       "category": category,
+      "services": coalesce(services, []),
       "author": author,
       "publishedAt": publishedAt,
       "readingTime": readingTime,
@@ -100,6 +104,7 @@ export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az
     "title": title.${locale},
     "excerpt": excerpt.${locale},
     "category": category,
+    "services": coalesce(services, []),
     "author": author,
     "publishedAt": publishedAt,
     "readingTime": readingTime,
@@ -140,6 +145,7 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "title": title,
     "client": client,
     "category": category,
+    "services": coalesce(services, []),
     "serviceCategory": category,
     "description": description,
     "image": mainImage.asset->url,
@@ -271,6 +277,7 @@ export interface Testimonial {
   rating: number
   text: LocalizedText
   featured: boolean
+  services?: string[]
   order: number
 }
 
@@ -290,7 +297,8 @@ const TESTIMONIAL_FIELDS = `
   "rating": coalesce(rating, 5),
   "text": testimonial,
   "featured": coalesce(featured, false),
-  "order": coalesce(order, 0)
+  "order": coalesce(order, 0),
+  "services": coalesce(services, [])
 `
 
 export async function getAllTestimonials(): Promise<Testimonial[]> {

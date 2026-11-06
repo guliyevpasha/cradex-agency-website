@@ -10,6 +10,7 @@ import {
   Network, ShieldCheck, ShoppingBag, Unlock, UserX, Wrench,
 } from 'lucide-react'
 import type { AdPlatform } from '@/lib/site/work'
+import type { WorkCase } from '@/lib/data/work'
 import { cn } from '@/lib/utils/cn'
 
 export const PLATFORMS: Record<AdPlatform, { name: string; icon: SimpleIcon; color: string }> = {
@@ -35,10 +36,10 @@ const CARD = 'svc relative h-full rounded-[28px] border border-line bg-bg-second
 
 /* ---------- Ads ---------- */
 
-type AdCase = { sector: string; goal: string; period: string; text: string; metrics: string[] }
-
-export function AdCaseCard({ c, platform, values, bars, sample }: { c: AdCase; platform: AdPlatform; values: string[]; bars: number[]; sample?: string }) {
-  const p = PLATFORMS[platform]
+export function AdCaseCard({ c, sample }: { c: WorkCase; sample: string }) {
+  const p = PLATFORMS[c.platform ?? 'meta']
+  const bars = c.chart
+  const last = c.metrics.length - 1
   return (
     <article className={CARD}>
       <span className="tilt-glare" />
@@ -49,19 +50,19 @@ export function AdCaseCard({ c, platform, values, bars, sample }: { c: AdCase; p
           </span>
           {p.name}
         </span>
-        {sample && <SampleBadge label={sample} />}
+        {c.sample && <SampleBadge label={sample} />}
       </div>
       <h3 className="tilt-z1 mt-5 text-xl font-bold leading-snug text-text-primary">{c.sector}</h3>
       <p className="tilt-z1 mt-1 text-sm text-text-muted">
-        {c.goal} · {c.period}
+        {[c.goal, c.period].filter(Boolean).join(' · ')}
       </p>
 
       <div className="tilt-z2 mt-5 rounded-2xl border border-line bg-bg-primary p-4 shadow-card">
         <dl className="grid grid-cols-3 gap-2">
           {c.metrics.map((m, i) => (
-            <div key={m} className={cn('rounded-xl px-2.5 py-2', i === 2 ? 'bg-brand-strong text-snow' : 'bg-bg-secondary')}>
-              <dt className={cn('line-clamp-2 min-h-[2.5em] text-[11px] font-semibold leading-tight', i === 2 ? 'text-snow/80' : 'text-text-muted')}>{m}</dt>
-              <dd className={cn('mt-0.5 text-[17px] font-extrabold tracking-tight tabular-nums', i !== 2 && 'text-text-primary')}>{values[i]}</dd>
+            <div key={i} className={cn('rounded-xl px-2.5 py-2', i === last ? 'bg-brand-strong text-snow' : 'bg-bg-secondary')}>
+              <dt className={cn('line-clamp-2 min-h-[2.5em] text-[11px] font-semibold leading-tight', i === last ? 'text-snow/80' : 'text-text-muted')}>{m.label}</dt>
+              <dd className={cn('mt-0.5 text-[17px] font-extrabold tracking-tight tabular-nums', i !== last && 'text-text-primary')}>{m.value}</dd>
             </div>
           ))}
         </dl>
@@ -86,9 +87,7 @@ export function AdCaseCard({ c, platform, values, bars, sample }: { c: AdCase; p
 
 /* ---------- Mobile apps ---------- */
 
-type MobileCase = { kind: string; title: string; sector: string; text: string; features: string[] }
-
-function AppScreen({ kind }: { kind: string }) {
+function AppScreen({ kind }: { kind?: string }) {
   if (kind === 'delivery') {
     return (
       <span className="relative block h-full w-full overflow-hidden bg-[#E8F2FC] dark:bg-[#132233]">
@@ -171,7 +170,7 @@ function AppScreen({ kind }: { kind: string }) {
   )
 }
 
-export function MobileCaseCard({ c, sample }: { c: MobileCase; sample?: string }) {
+export function MobileCaseCard({ c, sample }: { c: WorkCase; sample: string }) {
   return (
     <article className={cn(CARD, 'grid grid-cols-[auto_minmax(0,1fr)] items-center gap-5 sm:gap-7')}>
       <span className="tilt-glare" />
@@ -186,7 +185,7 @@ export function MobileCaseCard({ c, sample }: { c: MobileCase; sample?: string }
       <div className="tilt-z1 min-w-0">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-accent-ink">{c.sector}</span>
-          {sample && <SampleBadge label={sample} />}
+          {c.sample && <SampleBadge label={sample} />}
         </div>
         <h3 className="mt-2 text-xl font-bold leading-snug text-text-primary sm:text-2xl">{c.title}</h3>
         <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">{c.text}</p>
@@ -202,9 +201,8 @@ export function MobileCaseCard({ c, sample }: { c: MobileCase; sample?: string }
 
 /* ---------- SEO / GEO ---------- */
 
-type SeoCase = { sector: string; goal: string; period: string; text: string; metrics: string[] }
-
-export function SeoCaseCard({ c, values, line, sample, id }: { c: SeoCase; values: string[]; line: number[]; sample?: string; id: string }) {
+export function SeoCaseCard({ c, sample, id }: { c: WorkCase; sample: string; id: string }) {
+  const line = c.chart
   // 300×100 box, line kept 8px clear of the edges so the end dot never clips
   const y = (v: number) => 92 - v * 0.84
   const pts = line.map((v, i) => `${(i / (line.length - 1)) * 292 + 4},${y(v)}`)
@@ -218,7 +216,7 @@ export function SeoCaseCard({ c, values, line, sample, id }: { c: SeoCase; value
           <h3 className="mt-1.5 text-xl font-bold leading-snug text-text-primary">{c.sector}</h3>
           <p className="mt-1 text-sm text-text-muted">{c.period}</p>
         </div>
-        {sample && <SampleBadge label={sample} />}
+        {c.sample && <SampleBadge label={sample} />}
       </div>
       <div className="tilt-z2 mt-5 rounded-2xl border border-line bg-bg-primary p-4 shadow-card">
         <svg viewBox="0 0 300 100" className="block h-auto w-full overflow-visible" aria-hidden="true">
@@ -237,9 +235,9 @@ export function SeoCaseCard({ c, values, line, sample, id }: { c: SeoCase; value
         </svg>
         <dl className="mt-3 grid grid-cols-3 gap-2">
           {c.metrics.map((m, i) => (
-            <div key={m} className="min-w-0">
-              <dt className="line-clamp-2 min-h-[2.5em] text-[11px] font-semibold leading-tight text-text-muted">{m}</dt>
-              <dd className={cn('mt-0.5 text-[17px] font-extrabold tracking-tight tabular-nums', i === 0 ? 'text-accent-ink' : 'text-text-primary')}>{values[i]}</dd>
+            <div key={i} className="min-w-0">
+              <dt className="line-clamp-2 min-h-[2.5em] text-[11px] font-semibold leading-tight text-text-muted">{m.label}</dt>
+              <dd className={cn('mt-0.5 text-[17px] font-extrabold tracking-tight tabular-nums', i === 0 ? 'text-accent-ink' : 'text-text-primary')}>{m.value}</dd>
             </div>
           ))}
         </dl>
@@ -251,12 +249,10 @@ export function SeoCaseCard({ c, values, line, sample, id }: { c: SeoCase; value
 
 /* ---------- Technical service ---------- */
 
-type SupportCase = { group: string; title: string; problem: string; solution: string; result: string }
-
 // One icon per case, in the order of site.workPages.support.cases.
 const SUPPORT_ICONS = [Gauge, ShieldCheck, Link2, Network, Wrench, Unlock, KeyRound, UserX, Megaphone, LockOpen, Fingerprint]
 
-export function SupportCaseCard({ c, index, labels, sample }: { c: SupportCase; index: number; labels: { problem: string; solution: string }; sample?: string }) {
+export function SupportCaseCard({ c, index, labels, sample }: { c: WorkCase; index: number; labels: { problem: string; solution: string }; sample: string }) {
   const Icon = SUPPORT_ICONS[index % SUPPORT_ICONS.length]
   return (
     <article className={CARD}>
@@ -265,7 +261,7 @@ export function SupportCaseCard({ c, index, labels, sample }: { c: SupportCase; 
         <span className="svc-icon tilt-z3 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-strong text-snow shadow-brand">
           <Icon size={21} aria-hidden="true" />
         </span>
-        {sample && <SampleBadge label={sample} />}
+        {c.sample && <SampleBadge label={sample} />}
       </div>
       <h3 className="tilt-z1 mt-5 text-lg font-bold leading-snug text-text-primary">{c.title}</h3>
       <dl className="tilt-z1 mt-4 space-y-3 text-[14.5px] leading-relaxed">

@@ -13,6 +13,7 @@ import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton, WhatsAppIcon } from '@/components/ui/WhatsAppButton'
 import { CONTACT_EMAIL, ChatbotForm } from './ChatbotForm'
+import { ServiceProof } from '@/components/services/ServiceProof'
 
 const PHONE = '+994 50 778 68 87'
 
@@ -221,6 +222,8 @@ export async function ChatbotPage({ locale }: { locale: string }) {
           ))}
         </div>
       </section>
+
+      <ServiceProof service="chatbot" locale={locale} />
 
       {/* Enquiry */}
       <section id="muraciet" className="container-x scroll-mt-24 pb-24">

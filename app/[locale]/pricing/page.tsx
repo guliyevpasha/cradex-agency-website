@@ -17,6 +17,10 @@ import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { ServiceProof } from '@/components/services/ServiceProof'
+
+// Hourly, like the home page: Studio publishes also refresh via /api/revalidate.
+export const revalidate = 3600
 
 type Faq = { q: string; a: string }
 
@@ -203,6 +207,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
       </section>
 
       <PriceFactors />
+
+      <ServiceProof service="web" locale={locale} />
 
       <script
         type="application/ld+json"
