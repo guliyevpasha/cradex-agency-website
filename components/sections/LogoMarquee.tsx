@@ -8,14 +8,8 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type { PartnerLogo } from '@/lib/data/partners'
 
-/**
- * Infinite Logo Marquee — Pure CSS animation + direct DOM classList.
- * NO React state → zero re-renders → smooth animation.
- *
- * Logos in the RIGHT half are greyscale.
- * Logos that have passed the centre (LEFT half) are coloured.
- * Cycle repeats continuously.
- */
+// Logos that have passed the centre get their colour back. The lit state is
+// toggled on the DOM directly so the scroll never re-renders React.
 export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
   const t = useTranslations('home.partners')
   const containerRef = useRef<HTMLDivElement>(null)
@@ -80,7 +74,8 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
           {/* ── Right: marquee track ── */}
           <div
             ref={containerRef}
-            className="relative flex-1 overflow-hidden"
+            // vertical padding keeps the lifted, glowing lit card from being clipped
+            className="relative -my-5 flex-1 overflow-hidden py-5"
             style={{
               maskImage:
                 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
