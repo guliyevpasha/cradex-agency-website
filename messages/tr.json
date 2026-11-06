@@ -4160,7 +4160,86 @@
         }
       ],
       "ask": "Sorunuz mu var?",
-      "askMessage": "Merhaba, Cradex Agency. Sosyal medya kombo paketleri ile ilgili bir sorum var: "
+      "askMessage": "Merhaba, Cradex Agency. Sosyal medya kombo paketleri ile ilgili bir sorum var: ",
+      "faqTitle": "Sık sorulan sorular",
+      "faqText": "Kombo paketler, sipariş ve güvenlik hakkında en çok sorulanlar.",
+      "faq": [
+        {
+          "q": "Kombo paketler hangi platformlar için?",
+          "a": "Instagram, TikTok ve YouTube için. Her pakette takipçi veya abone, beğeni, izlenme, kaydetme, paylaşım ve diğer etkileşimler tek siparişte gelir."
+        },
+        {
+          "q": "Gelen takipçiler gerçek hesaplar mı?",
+          "a": "Paketler, profilin ilk izlenimini güçlendirmek içindir. Gelen hesapların hepsi aktif kullanıcı olmayabilir; bu yüzden kombo paketi gerçek kitlenin yerine değil, ona destek olarak sunuyoruz. Bunu baştan açıkça söylüyoruz."
+        },
+        {
+          "q": "Sayı sonradan düşer mi?",
+          "a": "Platformlar zaman zaman aktif olmayan hesapları siler, bu yüzden kimse sıfır düşüşü garanti edemez. Düşüş olursa, paketteki telafi ile sayıyı yeniden tamamlıyoruz."
+        },
+        {
+          "q": "Hesabımın şifresini vermem gerekiyor mu?",
+          "a": "Hayır. Yalnızca kullanıcı adı veya kanal bağlantısı yeterli. Hesabınıza giriş yapmıyoruz ve hiçbir zaman şifre istemiyoruz."
+        },
+        {
+          "q": "Sipariş ne zaman başlar ve ne kadar sürer?",
+          "a": "Uygulama 24 saat içinde başlar ve paketin hacmine göre 1–7 gün içinde tamamlanır. Teslimat bir anda değil, kademeli yapılır; böylece büyüme doğal görünür."
+        },
+        {
+          "q": "Hesabın herkese açık olması gerekiyor mu?",
+          "a": "Evet, teslimat süresince profil herkese açık (public) olmalıdır. Gizli hesaba takipçi ve izlenme göndermek mümkün değildir."
+        },
+        {
+          "q": "Hesabıma zarar gelebilir mi?",
+          "a": "Hesabınıza giriş yapmıyor ve adınıza hiçbir şey paylaşmıyoruz. Kademeli teslimat riski azaltır. Platform kuralları değişebileceği için siparişten önce sorularınızı WhatsApp'tan sorabilirsiniz."
+        },
+        {
+          "q": "Aynı anda birden fazla paket alabilir miyim?",
+          "a": "Evet. Sipariş formunda adet seçersiniz, tek seferde 100 pakete kadar. Tutar otomatik hesaplanır."
+        },
+        {
+          "q": "Ödeme nasıl yapılır?",
+          "a": "Online ödeme bankanın güvenli 3D Secure sayfasında yapılır, kart bilgileri sitede saklanmaz. İsterseniz siparişi WhatsApp üzerinden de verebilirsiniz."
+        },
+        {
+          "q": "Param iade edilir mi?",
+          "a": "Uygulama henüz başlamadıysa tutar tamamen iade edilir. Ayrıntılı koşullar İade Politikası sayfasındadır."
+        },
+        {
+          "q": "Müşteri desteği nasıl çalışıyor?",
+          "a": "Sipariş, ödeme veya teslimatla ilgili soruları WhatsApp'ta (+994 50 778 68 87) ve info@cradexagency.com adresinde yanıtlıyoruz."
+        },
+        {
+          "q": "Neden Cradex Agency?",
+          "a": "Biz yalnızca paket satmıyoruz: web sitesi, reklam ve SEO ile de çalışan bir dijital ajansız. Açık fiyat, şifresiz sipariş, resmi şahıs şirketi statüsü ve hesabınızın büyümesi için ücretsiz danışmanlık bir arada."
+        }
+      ],
+      "details": {
+        "eyebrow": "Ürün detayları",
+        "title": "Kombo paketlerden doğru şekilde nasıl yararlanılır",
+        "lead": "Sosyal medya, kişisel hesaptan online mağazaya kadar herkes için ana vitrine dönüştü. Algoritmalar artık yalnızca paylaşımı değil, hesabın aktifliğini, içerik kalitesini ve kitlenin tepkisini birlikte değerlendiriyor. Kombo paketler Instagram, TikTok ve YouTube'da bu ilk ivmeyi güvenli ve hızlı şekilde verir.",
+        "sections": [
+          {
+            "t": "İlk izlenim neden önemli",
+            "d": "Yeni bir profile giren kişi önce genel görünüşüne bakar. Düzenli güncellenen ve aktif görünen hesaplar daha güvenilir bir izlenim bırakır. Kombo paket bu ilk izlenimi güçlendirir, ancak hesabın gerçek büyümesi ilgi çekici içerikten, paylaşım planından ve takipçilerle iletişimden gelir."
+          },
+          {
+            "t": "Rakamdan çok kalite",
+            "d": "Büyük rakamlar dikkat çeker, uzun vadeli sonucu ise kalite belirler. Paket seçerken yalnızca fiyata değil, teslimat şekline, koşulların açıklığına ve satıcının güvenilirliğine bakın. Biz her paketin içeriğini, süresini ve telafi koşulunu önceden yazıyoruz."
+          },
+          {
+            "t": "Düşüş ve telafi",
+            "d": "Platformlar sahte ve aktif olmayan hesapları zaman zaman temizler. Bu yüzden \"asla düşmeyecek\" sözü doğru değildir. Paketlerimizde telafi vardır: düşüş olursa sayı yeniden tamamlanır. Sürpriz olmasın diye paketin nasıl işlediğini baştan açıkça söylüyoruz."
+          },
+          {
+            "t": "Gerçek takipçi ile aktif takipçi aynı şey değildir",
+            "d": "Hesabın gerçek olması, her paylaşımı beğeneceği anlamına gelmez. Aktiflik içeriğin ilgi çekiciliğine ve paylaşımın takipçiye ulaşmasına bağlıdır. Azerbaycan kitlesine yönelik hesaplarda yerel konular, gündelik dil ve düzenli paylaşım gerçek sonucu verir."
+          },
+          {
+            "t": "Paketten sonra ne yapmalı",
+            "d": "Paket teslim edilirken paylaşımları durdurmayın: haftada en az 3–4 paylaşım, Reels veya kısa videolar, takipçi yorumlarına yanıt. Daha hızlı büyüme isterseniz reklam veya SEO ile birleştirebiliriz — ücretsiz danışmanlık için yazın."
+          }
+        ]
+      }
     },
     "pricingMenu": {
       "web": {
@@ -4922,6 +5001,358 @@
           "a": "WhatsApp: +994 50 778 68 87, e-posta: info@cradexagency.com. İletişim sayfasından da yazabilirsiniz."
         }
       ]
+    },
+    "workMenu": {
+      "web": {
+        "title": "Web Siteleri",
+        "text": "Hazırladığımız siteler, gerçek ekran görüntüleriyle.",
+        "badge": "Portföy"
+      },
+      "ads": {
+        "title": "Dijital Reklam",
+        "text": "Meta, TikTok, Google ve LinkedIn kampanyaları.",
+        "badge": "4 platform"
+      },
+      "mobile": {
+        "title": "Mobil Uygulamalar",
+        "text": "iOS ve Android için uygulama projeleri.",
+        "badge": "iOS · Android"
+      },
+      "seo": {
+        "title": "SEO ve GEO",
+        "text": "Google ve yapay zekâ aramalarında sonuçlar.",
+        "badge": "Google · AI"
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "text": "Web sitesi ve sosyal medya hesaplarında çözdüğümüz işler.",
+        "badge": "11 kategori"
+      }
+    },
+    "workPages": {
+      "common": {
+        "home": "Ana Sayfa",
+        "work": "Projelerimiz",
+        "sample": "Örnek",
+        "sampleNote": "Kartlardaki rakamlar, çalışma biçimimizi gösteren örneklerdir. Gerçek sonuçlar müşterilerimizin onayıyla eklenir.",
+        "service": "Hizmet hakkında",
+        "pricing": "Fiyatlar",
+        "ctaTitle": "Sizin projeniz de bu listede olabilir",
+        "ctaText": "Hedefinizi yazın, size uygun planı ve fiyatı ücretsiz hazırlayalım.",
+        "cta": "Ücretsiz danışmanlık",
+        "period": "Süre",
+        "goal": "Hedef",
+        "platforms": "Platformlar",
+        "problem": "Sorun",
+        "solution": "Ne yaptık",
+        "result": "Sonuç",
+        "all": "Tümü"
+      },
+      "ads": {
+        "metaTitle": "Dijital reklam projelerimiz — Meta, TikTok, Google, LinkedIn | Cradex Agency",
+        "metaDescription": "Meta, TikTok, Google ve LinkedIn reklam kampanyalarımız: hedef, bütçe ve sonuçlar tek bakışta.",
+        "eyebrow": "Projelerimiz · Dijital Reklam",
+        "title": "Bütçe, hedef ve sonuç tek bakışta",
+        "text": "Her platformda kampanyayı hedefe göre kuruyoruz: başvuru, satış, arama veya tanınırlık. Aşağıda platformlara göre kampanya örneklerini görebilirsiniz.",
+        "message": "Merhaba, reklam kampanyası hakkında konuşmak istiyorum",
+        "cases": [
+          {
+            "platform": "meta",
+            "sector": "Estetik kliniği",
+            "goal": "Başvuru toplama",
+            "period": "30 gün",
+            "text": "Instagram ve Facebook'ta lead formu ile danışmanlık randevusu kampanyası.",
+            "metrics": [
+              "Harcama",
+              "Başvuru",
+              "Başvuru başı maliyet"
+            ]
+          },
+          {
+            "platform": "meta",
+            "sector": "Online giyim mağazası",
+            "goal": "Satış",
+            "period": "45 gün",
+            "text": "Katalog reklamları ve retargeting ile siteden doğrudan satış.",
+            "metrics": [
+              "Harcama",
+              "Satış",
+              "ROAS"
+            ]
+          },
+          {
+            "platform": "tiktok",
+            "sector": "Restoran zinciri",
+            "goal": "Tanınırlık",
+            "period": "21 gün",
+            "text": "Yeni menü için Spark Ads ve kısa video serisi.",
+            "metrics": [
+              "İzlenme",
+              "Erişim",
+              "CPM"
+            ]
+          },
+          {
+            "platform": "tiktok",
+            "sector": "Kozmetik markası",
+            "goal": "Siteye trafik",
+            "period": "30 gün",
+            "text": "Ürün videolarıyla online mağazaya yönlendirme kampanyası.",
+            "metrics": [
+              "Tıklama",
+              "CTR",
+              "Tıklama başı maliyet"
+            ]
+          },
+          {
+            "platform": "google",
+            "sector": "Oto servis",
+            "goal": "Arama",
+            "period": "30 gün",
+            "text": "Arama reklamları ve arama uzantılarıyla yakın çevreden müşteri.",
+            "metrics": [
+              "Arama",
+              "CTR",
+              "Arama başı maliyet"
+            ]
+          },
+          {
+            "platform": "google",
+            "sector": "Eğitim merkezi",
+            "goal": "Kayıt",
+            "period": "60 gün",
+            "text": "Performance Max ve arama kampanyasıyla kurs kaydı.",
+            "metrics": [
+              "Harcama",
+              "Kayıt",
+              "Kayıt başı maliyet"
+            ]
+          },
+          {
+            "platform": "linkedin",
+            "sector": "Lojistik şirketi",
+            "goal": "B2B başvuru",
+            "period": "45 gün",
+            "text": "Karar verici pozisyonlara yönelik Lead gen formları.",
+            "metrics": [
+              "Harcama",
+              "Başvuru",
+              "Başvuru başı maliyet"
+            ]
+          },
+          {
+            "platform": "linkedin",
+            "sector": "BT şirketi",
+            "goal": "İşe alım",
+            "period": "30 gün",
+            "text": "Açık pozisyonlar için profesyonel kitleye yönelik kampanya.",
+            "metrics": [
+              "Başvuru",
+              "CTR",
+              "Başvuru başı maliyet"
+            ]
+          }
+        ]
+      },
+      "mobile": {
+        "metaTitle": "Mobil uygulama projelerimiz — iOS ve Android | Cradex Agency",
+        "metaDescription": "iOS ve Android için hazırladığımız mobil uygulama projeleri: teslimat, randevu, online mağaza ve fitness.",
+        "eyebrow": "Projelerimiz · Mobil Uygulama",
+        "title": "Cebinizdeki işletme",
+        "text": "Fikirden App Store ve Google Play'e kadar: tasarım, yazılım geliştirme, test ve yayın. Her uygulama işletmenin gerçek iş akışına göre kurulur.",
+        "message": "Merhaba, mobil uygulama yaptırmak istiyorum",
+        "cases": [
+          {
+            "kind": "delivery",
+            "title": "Teslimat uygulaması",
+            "sector": "Restoran ve market",
+            "text": "Menü, sepet, online ödeme ve kuryenin haritada canlı takibi.",
+            "features": [
+              "Canlı harita",
+              "Push bildirim",
+              "Online ödeme"
+            ]
+          },
+          {
+            "kind": "booking",
+            "title": "Randevu uygulaması",
+            "sector": "Klinik ve güzellik salonu",
+            "text": "Doktor veya uzman seçimi, boş saatler, hatırlatmalar ve online randevu.",
+            "features": [
+              "Takvim",
+              "Hatırlatma",
+              "Profil"
+            ]
+          },
+          {
+            "kind": "shop",
+            "title": "Online mağaza uygulaması",
+            "sector": "E-ticaret",
+            "text": "Katalog, filtre, favoriler, sipariş geçmişi ve puan sistemi.",
+            "features": [
+              "Katalog",
+              "Puan kartı",
+              "Sipariş takibi"
+            ]
+          },
+          {
+            "kind": "fitness",
+            "title": "Fitness uygulaması",
+            "sector": "Spor salonu",
+            "text": "Üyelik, antrenman programları, gelişim grafikleri ve antrenörle iletişim.",
+            "features": [
+              "Üyelik",
+              "Grafikler",
+              "Sohbet"
+            ]
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "SEO ve GEO projelerimiz — Google ve AI araması | Cradex Agency",
+        "metaDescription": "SEO ve GEO projelerimiz: Google'da sıralama, haritalarda görünürlük ve yapay zekâ yanıtlarında marka adı.",
+        "eyebrow": "Projelerimiz · SEO ve GEO",
+        "title": "Aramada bulunan işletmeler",
+        "text": "Google'da üst sıralar, haritalarda görünürlük ve ChatGPT gibi yapay zekâ yanıtlarında marka adının geçmesi için çalışıyoruz.",
+        "message": "Merhaba, SEO ve GEO hizmeti hakkında konuşmak istiyorum",
+        "cases": [
+          {
+            "sector": "Hukuk bürosu",
+            "goal": "Yerel SEO",
+            "period": "6 ay",
+            "text": "Hizmet sayfaları, Google İşletme Profili ve yerel referanslar.",
+            "metrics": [
+              "Organik trafik",
+              "İlk 10'daki kelimeler",
+              "Arama"
+            ]
+          },
+          {
+            "sector": "Online mağaza",
+            "goal": "Teknik SEO ve içerik",
+            "period": "8 ay",
+            "text": "Hız, yapı, kategori metinleri ve blog.",
+            "metrics": [
+              "Organik trafik",
+              "İlk 10'daki kelimeler",
+              "Satış"
+            ]
+          },
+          {
+            "sector": "Diş kliniği",
+            "goal": "Google Haritalar",
+            "period": "4 ay",
+            "text": "Profil optimizasyonu, yorumlar ve yerel anahtar kelimeler.",
+            "metrics": [
+              "Harita görüntüleme",
+              "Yol tarifi",
+              "Arama"
+            ]
+          },
+          {
+            "sector": "B2B yazılım şirketi",
+            "goal": "GEO — AI yanıtları",
+            "period": "5 ay",
+            "text": "Uzman makaleler, yapılandırılmış veri ve güvenilir kaynaklarda anılma.",
+            "metrics": [
+              "AI yanıtında anılma",
+              "Organik trafik",
+              "Demo talebi"
+            ]
+          }
+        ]
+      },
+      "support": {
+        "metaTitle": "Teknik destek projelerimiz — web sitesi ve sosyal medya | Cradex Agency",
+        "metaDescription": "Site hızı, güvenlik, backlink, iç bağlantı ve sosyal medya hesaplarının kurtarılması konusunda yaptığımız işler.",
+        "eyebrow": "Projelerimiz · Teknik Destek",
+        "title": "Sorun çıktığında yanınızda olan ekip",
+        "text": "Site hızından güvenliğine, engellenen hesaptan sahte profile kadar — teknik desteğin tüm kategorilerinde yaptığımız işler.",
+        "message": "Merhaba, teknik destekle ilgili yazıyorum",
+        "groups": {
+          "web": "Web sitesi",
+          "social": "Sosyal medya hesapları"
+        },
+        "cases": [
+          {
+            "group": "web",
+            "title": "Teknik SEO optimizasyonu",
+            "problem": "Site yavaş açılıyor, sayfalar Google'da indekslenmiyordu.",
+            "solution": "Görseller, kod ve sunucu ayarları optimize edildi, site haritası düzeltildi.",
+            "result": "Yüklenme 6,1 sn → 1,4 sn"
+          },
+          {
+            "group": "web",
+            "title": "Güvenlik optimizasyonu",
+            "problem": "Sitede zararlı kod bulunmuş, tarayıcı uyarı gösteriyordu.",
+            "solution": "Kod temizlendi, SSL ve koruma kuralları kuruldu, yedekleme açıldı.",
+            "result": "Uyarı 48 saatte kalktı"
+          },
+          {
+            "group": "web",
+            "title": "Dış bağlantılar (Backlink)",
+            "problem": "Sitenin güvenilir kaynaklardan neredeyse hiç bağlantısı yoktu.",
+            "solution": "Sektöre uygun haber ve dizin sitelerinde kaliteli bağlantılar.",
+            "result": "+35 güvenilir bağlantı"
+          },
+          {
+            "group": "web",
+            "title": "İç bağlantı yapısı",
+            "problem": "Önemli sayfalar sitenin derinliklerinde kayboluyordu.",
+            "solution": "Kategori ve blog sayfaları arasında mantıklı geçişler kuruldu.",
+            "result": "Önemli sayfalara 2 tıkla ulaşılıyor"
+          },
+          {
+            "group": "web",
+            "title": "Teknik destek",
+            "problem": "Güncellemeden sonra site çalışmıyor, sipariş formu durmuştu.",
+            "solution": "Hata bulundu, sürümler uyumlu hale getirildi, aylık izleme başladı.",
+            "result": "Site aynı gün düzeldi"
+          },
+          {
+            "group": "social",
+            "title": "Kapatılan hesabın açılması",
+            "problem": "İşletme hesabı sebepsiz yere engellenmişti.",
+            "solution": "Platforma belgelerle resmi başvuru hazırlandı.",
+            "result": "Hesap 5 günde açıldı"
+          },
+          {
+            "group": "social",
+            "title": "Çalınan hesabın kurtarılması",
+            "problem": "Hesap ele geçirilmiş, e-posta ve telefon numarası değiştirilmişti.",
+            "solution": "Kimlik doğrulama ve kurtarma süreci adım adım yürütüldü.",
+            "result": "Erişim sahibine geri verildi"
+          },
+          {
+            "group": "social",
+            "title": "Sahte hesabın kapatılması",
+            "problem": "Markanın adına açılan sahte profil müşterilerden para istiyordu.",
+            "solution": "Marka tescili ve kimlik belgeleri esas alınarak şikâyetler gönderildi.",
+            "result": "Sahte profil silindi"
+          },
+          {
+            "group": "social",
+            "title": "Reklam hesabının kurtarılması",
+            "problem": "Reklam hesabı kural ihlali gerekçesiyle durdurulmuştu.",
+            "solution": "Neden araştırıldı, reklamlar düzeltildi, yeniden inceleme istendi.",
+            "result": "Reklamlar yeniden aktif"
+          },
+          {
+            "group": "social",
+            "title": "Kısıtlanan hesabın açılması",
+            "problem": "Hesabın paylaşım ve canlı yayın özellikleri kapatılmıştı.",
+            "solution": "İhlal tespit edildi, içerik düzeltildi, başvuru yapıldı.",
+            "result": "Özellikler geri getirildi"
+          },
+          {
+            "group": "social",
+            "title": "Hesap güvenliği",
+            "problem": "Birkaç çalışanın aynı şifreyle giriş yapması risk oluşturuyordu.",
+            "solution": "İki adımlı doğrulama, roller ve güvenilir e-posta kuruldu.",
+            "result": "Girişler tam kontrol altında"
+          }
+        ]
+      }
     }
   }
 }

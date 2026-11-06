@@ -15,15 +15,17 @@ import { Logo } from '@/components/brand/Logo'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { ABOUT_LINKS, NAV_ITEMS, PRICING_LINKS, aboutHref, PRODUCT_LINKS, SERVICE_IDS, pricingHref, productHref, serviceHref, isActive } from '@/lib/site/navigation'
+import { WORK_IDS, workHref } from '@/lib/site/work'
 import { LangDropdown } from './LangDropdown'
 import { MobileMenu } from './MobileMenu'
 import { OPEN_MENU_EVENT } from '@/components/navigation/MobileBottomNav'
 
-type MenuId = 'services' | 'products' | 'pricing' | 'about'
+type MenuId = 'services' | 'products' | 'pricing' | 'about' | 'work'
 
 const SERVICE_ICONS = { web: Code2, mobile: Smartphone, seo: Search, ads: Megaphone, support: ShieldCheck }
 const PRODUCT_ICONS = { chatbot: Bot, combo: Share2 }
 const ABOUT_ICONS = { who: Sparkles, clients: Users }
+const WORK_ICONS = { web: Code2, ads: Megaphone, mobile: Smartphone, seo: Search, support: ShieldCheck }
 const PRICING_ICONS = { web: Code2, ads: Megaphone, mobile: Smartphone, seo: Search, support: ShieldCheck }
 
 /*
@@ -36,6 +38,7 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
   const tM = useTranslations('site.productMenu')
   const tP = useTranslations('site.pricingMenu')
   const tA = useTranslations('site.aboutMenu')
+  const tW = useTranslations('site.workMenu')
 
   if (id === 'about') {
     return (
@@ -72,14 +75,19 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
     )
   }
 
-  if (id === 'pricing') {
-    const [main, ...others] = PRICING_LINKS
-    const MainIcon = PRICING_ICONS[main.id]
+  if (id === 'pricing' || id === 'work') {
+    // Same layout for both: the main item on a dark card, the rest in a list.
+    const isWork = id === 'work'
+    const links = isWork
+      ? WORK_IDS.map((w) => ({ id: w, href: workHref(locale, w), Icon: WORK_ICONS[w], t: (k: string) => tW(`${w}.${k}`) }))
+      : PRICING_LINKS.map((p) => ({ id: p.id, href: pricingHref(locale, p.id), Icon: PRICING_ICONS[p.id], t: (k: string) => tP(`${p.id}.${k}`) }))
+    const [main, ...others] = links
+    const MainIcon = main.Icon
     return (
       <div className="dd-panel absolute left-1/2 top-full z-50 w-[840px] -translate-x-1/2 pt-3">
         <div className="grid grid-cols-[240px_1fr] gap-3 rounded-[28px] border border-line bg-bg-primary p-3 shadow-float">
           <Link
-            href={pricingHref(locale, main.id)}
+            href={main.href}
             onClick={onClose}
             className="group flex flex-col rounded-[22px] bg-ink p-5 text-snow transition-transform hover:-translate-y-0.5 dark:bg-[#151A22]"
           >
@@ -87,27 +95,27 @@ function Dropdown({ id, onClose }: { id: MenuId; onClose: () => void }) {
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-strong shadow-card">
                 <MainIcon size={20} aria-hidden="true" />
               </span>
-              <span className="rounded-full bg-snow/10 px-2.5 py-1 text-[12px] font-bold">{tP(`${main.id}.badge`)}</span>
+              <span className="rounded-full bg-snow/10 px-2.5 py-1 text-[12px] font-bold">{main.t('badge')}</span>
             </span>
-            <span className="mt-4 text-[17px] font-bold leading-snug">{tP(`${main.id}.title`)}</span>
-            <span className="mt-1.5 text-[13.5px] leading-relaxed text-snow/75">{tP(`${main.id}.text`)}</span>
+            <span className="mt-4 text-[17px] font-bold leading-snug">{main.t('title')}</span>
+            <span className="mt-1.5 text-[13.5px] leading-relaxed text-snow/75">{main.t('text')}</span>
             <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13px] font-semibold text-brand">
               {tM('more')} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
             </span>
           </Link>
           <ul className="grid grid-cols-2 gap-1">
             {others.map((p) => {
-              const Icon = PRICING_ICONS[p.id]
+              const Icon = p.Icon
               return (
                 <li key={p.id}>
-                  <Link href={pricingHref(locale, p.id)} onClick={onClose} className="group flex h-full gap-3 rounded-2xl p-3.5 transition-colors hover:bg-bg-secondary">
+                  <Link href={p.href} onClick={onClose} className="group flex h-full gap-3 rounded-2xl p-3.5 transition-colors hover:bg-bg-secondary">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent-primary/10 text-accent-ink transition-colors group-hover:bg-brand-strong group-hover:text-snow">
                       <Icon size={17} aria-hidden="true" />
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-[14.5px] font-semibold leading-snug text-text-primary">{tP(`${p.id}.title`)}</span>
-                      <span className="mt-1 block text-[12.5px] leading-relaxed text-text-muted">{tP(`${p.id}.text`)}</span>
-                      <span className="mt-2 inline-flex rounded-full bg-accent-primary/10 px-2 py-0.5 text-[11px] font-bold text-accent-ink">{tP(`${p.id}.badge`)}</span>
+                      <span className="block text-[14.5px] font-semibold leading-snug text-text-primary">{p.t('title')}</span>
+                      <span className="mt-1 block text-[12.5px] leading-relaxed text-text-muted">{p.t('text')}</span>
+                      <span className="mt-2 inline-flex rounded-full bg-accent-primary/10 px-2 py-0.5 text-[11px] font-bold text-accent-ink">{p.t('badge')}</span>
                     </span>
                   </Link>
                 </li>

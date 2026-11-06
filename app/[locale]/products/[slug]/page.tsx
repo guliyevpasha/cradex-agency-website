@@ -7,11 +7,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ChevronRight, ShieldCheck } from 'lucide-react'
+import { ChevronRight, Clock, CreditCard, Eye, Headset, KeyRound, Layers, PackagePlus, RotateCcw, ShieldCheck, Sparkles, TrendingDown, Users } from 'lucide-react'
 import { LOCALES, PRODUCT_LINKS } from '@/lib/site/navigation'
 import { ChatbotPage } from '@/components/products/ChatbotPage'
 import { ComboCards } from '@/components/home/ProductsShowcase'
 import { FinalCta } from '@/components/home/FinalCta'
+import { ComboDetails } from '@/components/products/ComboDetails'
+import { FaqCards } from '@/components/ui/FaqCards'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
@@ -22,6 +24,9 @@ export const dynamicParams = false
 export function generateStaticParams() {
   return LOCALES.flatMap(({ code }) => PRODUCT_LINKS.map((p) => ({ locale: code, slug: p.slug })))
 }
+
+// One icon per question, in the order of site.comboPage.faq.
+const COMBO_FAQ_ICONS = [Layers, Users, TrendingDown, KeyRound, Clock, Eye, ShieldCheck, PackagePlus, CreditCard, RotateCcw, Headset, Sparkles]
 
 const productBySlug = (slug: string) => PRODUCT_LINKS.find((p) => p.slug === slug)
 
@@ -41,6 +46,12 @@ async function ComboPage({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'site.comboPage' })
   const chips = t.raw('chips') as string[]
   const steps = t.raw('steps') as { t: string; d: string }[]
+  const faq = t.raw('faq') as { q: string; a: string }[]
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  }
 
   return (
     <div className="pt-24 lg:pt-28">
@@ -98,7 +109,23 @@ async function ComboPage({ locale }: { locale: string }) {
         </ol>
       </section>
 
+      <ComboDetails locale={locale} />
+
+      <section className="container-x py-14 lg:py-20">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">{t('faqText')}</p>
+        </div>
+        <FaqCards items={faq} icons={COMBO_FAQ_ICONS} />
+      </section>
+
       <FinalCta />
+
+      <script
+        type="application/ld+json"
+        // Escape "<" so no answer text can close the script tag.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd).replace(/</g, '\\u003c') }}
+      />
     </div>
   )
 }

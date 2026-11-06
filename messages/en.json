@@ -4160,7 +4160,86 @@
         }
       ],
       "ask": "Have a question?",
-      "askMessage": "Hello, Cradex Agency. I have a question about the social media combo packages: "
+      "askMessage": "Hello, Cradex Agency. I have a question about the social media combo packages: ",
+      "faqTitle": "Frequently asked questions",
+      "faqText": "The most common questions about combo packages, ordering and safety.",
+      "faq": [
+        {
+          "q": "Which platforms are the combo packages for?",
+          "a": "Instagram, TikTok and YouTube. Each package brings followers or subscribers, likes, views, saves, shares and other interactions in a single order."
+        },
+        {
+          "q": "Are the new followers real accounts?",
+          "a": "The packages are meant to strengthen the first impression of a profile. Not every account that arrives may be an active user, so we present a combo package as a support for a real audience, not a replacement for it. We say this openly up front."
+        },
+        {
+          "q": "Will the numbers drop later?",
+          "a": "Platforms periodically remove inactive accounts, so nobody can guarantee zero drop. If a drop happens, we top the count back up with the compensation included in the package."
+        },
+        {
+          "q": "Do I have to give my account password?",
+          "a": "No. Only your username or channel link is needed. We never log in to your account and never ask for a password."
+        },
+        {
+          "q": "When does an order start and how long does it take?",
+          "a": "Work starts within 24 hours and is completed within 1–7 days depending on the package size. Delivery is gradual, not all at once, so the growth looks natural."
+        },
+        {
+          "q": "Does my account have to be public?",
+          "a": "Yes, the profile must be public during delivery. Followers and views cannot be delivered to a private account."
+        },
+        {
+          "q": "Can my account be harmed?",
+          "a": "We do not log in to your account and do not post anything in your name. Gradual delivery lowers the risk. Platform rules can change, so you are welcome to ask any questions on WhatsApp before ordering."
+        },
+        {
+          "q": "Can I buy several packages at once?",
+          "a": "Yes. You choose the quantity in the order form, up to 100 packages at a time. The total is calculated automatically."
+        },
+        {
+          "q": "How does payment work?",
+          "a": "Online payment is made on the bank's secure 3D Secure page, and card details are not stored on the site. If you prefer, you can also place the order through WhatsApp."
+        },
+        {
+          "q": "Can I get a refund?",
+          "a": "If work has not started yet, the full amount is refunded. Detailed terms are on the Refund Policy page."
+        },
+        {
+          "q": "How does customer support work?",
+          "a": "We answer questions about orders, payment and delivery on WhatsApp (+994 50 778 68 87) and at info@cradexagency.com."
+        },
+        {
+          "q": "Why Cradex Agency?",
+          "a": "We do not just sell packages: we are a digital agency that also works on websites, advertising and SEO. Clear pricing, orders without passwords, an officially registered sole proprietor and free advice on growing your account all come together."
+        }
+      ],
+      "details": {
+        "eyebrow": "Product details",
+        "title": "How to use combo packages the right way",
+        "lead": "Social media has become the main storefront for everyone, from personal accounts to online stores. Algorithms no longer judge a post alone: they weigh account activity, content quality and audience response together. Combo packages give you that first push on Instagram, TikTok and YouTube, safely and quickly.",
+        "sections": [
+          {
+            "t": "Why the first impression matters",
+            "d": "Someone who lands on a new profile first looks at its overall appearance. Accounts that are updated regularly and look active feel more trustworthy. A combo package strengthens that first impression, but real growth comes from interesting content, a posting plan and engagement with your followers."
+          },
+          {
+            "t": "Quality over numbers",
+            "d": "Big numbers catch the eye, but quality decides the long-term result. When choosing a package, look beyond the price: check how delivery works, how clear the terms are and how reliable the seller is. We write down the contents, duration and compensation terms of every package in advance."
+          },
+          {
+            "t": "Drops and compensation",
+            "d": "Platforms periodically clean out fake and inactive accounts. That is why a promise that numbers will \"never drop\" is not honest. Our packages include compensation: if there is a drop, the count is topped up again. We explain how a package works up front, so there are no surprises."
+          },
+          {
+            "t": "A real follower and an active follower are not the same thing",
+            "d": "A real account does not mean it will like every post. Activity depends on how interesting the content is and whether your posts reach followers. For accounts aimed at an Azerbaijani audience, local topics, everyday language and regular posting are what deliver real results."
+          },
+          {
+            "t": "What to do after a package",
+            "d": "Do not stop posting while the package is being delivered: at least 3–4 posts a week, Reels or short videos, and replies to follower comments. If you want faster growth, we can combine it with advertising or SEO — write to us for free advice."
+          }
+        ]
+      }
     },
     "pricingMenu": {
       "web": {
@@ -4922,6 +5001,358 @@
           "a": "WhatsApp: +994 50 778 68 87, e-mail: info@cradexagency.com. You can also write to us from the Contact page."
         }
       ]
+    },
+    "workMenu": {
+      "web": {
+        "title": "Websites",
+        "text": "Sites we have built, with real screenshots.",
+        "badge": "Portfolio"
+      },
+      "ads": {
+        "title": "Digital advertising",
+        "text": "Meta, TikTok, Google and LinkedIn campaigns.",
+        "badge": "4 platforms"
+      },
+      "mobile": {
+        "title": "Mobile apps",
+        "text": "App projects for iOS and Android.",
+        "badge": "iOS · Android"
+      },
+      "seo": {
+        "title": "SEO and GEO",
+        "text": "Results in Google and AI search.",
+        "badge": "Google · AI"
+      },
+      "support": {
+        "title": "Technical support",
+        "text": "Problems we have solved for websites and social media accounts.",
+        "badge": "11 categories"
+      }
+    },
+    "workPages": {
+      "common": {
+        "home": "Home",
+        "work": "Our work",
+        "sample": "Sample",
+        "sampleNote": "The figures on the cards are samples that show the format of our work. Real results are added with our clients' consent.",
+        "service": "About the service",
+        "pricing": "Pricing",
+        "ctaTitle": "Your project could be on this list too",
+        "ctaText": "Tell us your goal and we will prepare a suitable plan and price for free.",
+        "cta": "Free consultation",
+        "period": "Period",
+        "goal": "Goal",
+        "platforms": "Platforms",
+        "problem": "Problem",
+        "solution": "What we did",
+        "result": "Result",
+        "all": "All"
+      },
+      "ads": {
+        "metaTitle": "Digital advertising work — Meta, TikTok, Google, LinkedIn | Cradex Agency",
+        "metaDescription": "Our Meta, TikTok, Google and LinkedIn ad campaigns: goal, budget and results at a glance.",
+        "eyebrow": "Our work · Digital advertising",
+        "title": "Budget, goal and result at a glance",
+        "text": "On every platform we build the campaign around the goal: leads, sales, calls or awareness. Below you can see campaign samples by platform.",
+        "message": "Hi, I would like to talk about an ad campaign",
+        "cases": [
+          {
+            "platform": "meta",
+            "sector": "Aesthetic clinic",
+            "goal": "Collecting leads",
+            "period": "30 days",
+            "text": "Consultation booking campaign on Instagram and Facebook with a lead form.",
+            "metrics": [
+              "Spend",
+              "Leads",
+              "Cost per lead"
+            ]
+          },
+          {
+            "platform": "meta",
+            "sector": "Online clothing store",
+            "goal": "Sales",
+            "period": "45 days",
+            "text": "Direct sales from the website with catalogue ads and retargeting.",
+            "metrics": [
+              "Spend",
+              "Sales",
+              "ROAS"
+            ]
+          },
+          {
+            "platform": "tiktok",
+            "sector": "Restaurant chain",
+            "goal": "Awareness",
+            "period": "21 days",
+            "text": "Spark Ads and a short video series for the new menu.",
+            "metrics": [
+              "Views",
+              "Reach",
+              "CPM"
+            ]
+          },
+          {
+            "platform": "tiktok",
+            "sector": "Cosmetics brand",
+            "goal": "Website traffic",
+            "period": "30 days",
+            "text": "Click-through campaign to the online store with product videos.",
+            "metrics": [
+              "Clicks",
+              "CTR",
+              "Cost per click"
+            ]
+          },
+          {
+            "platform": "google",
+            "sector": "Car service",
+            "goal": "Calls",
+            "period": "30 days",
+            "text": "Search ads and call extensions that bring customers from the nearby area.",
+            "metrics": [
+              "Calls",
+              "CTR",
+              "Cost per call"
+            ]
+          },
+          {
+            "platform": "google",
+            "sector": "Education centre",
+            "goal": "Sign-ups",
+            "period": "60 days",
+            "text": "Course sign-ups through Performance Max and a search campaign.",
+            "metrics": [
+              "Spend",
+              "Sign-ups",
+              "Cost per sign-up"
+            ]
+          },
+          {
+            "platform": "linkedin",
+            "sector": "Logistics company",
+            "goal": "B2B leads",
+            "period": "45 days",
+            "text": "Lead gen forms aimed at decision-maker roles.",
+            "metrics": [
+              "Spend",
+              "Leads",
+              "Cost per lead"
+            ]
+          },
+          {
+            "platform": "linkedin",
+            "sector": "IT company",
+            "goal": "Recruitment",
+            "period": "30 days",
+            "text": "Campaign for vacancies, targeted at a professional audience.",
+            "metrics": [
+              "Applications",
+              "CTR",
+              "Cost per application"
+            ]
+          }
+        ]
+      },
+      "mobile": {
+        "metaTitle": "Mobile app work — iOS and Android | Cradex Agency",
+        "metaDescription": "Mobile app projects we have built for iOS and Android: delivery, booking, online store and fitness.",
+        "eyebrow": "Our work · Mobile apps",
+        "title": "Your business in your pocket",
+        "text": "From idea to the App Store and Google Play: design, development, testing and publishing. Every app is built around the real workflow of the business.",
+        "message": "Hi, I would like to have a mobile app built",
+        "cases": [
+          {
+            "kind": "delivery",
+            "title": "Delivery app",
+            "sector": "Restaurants and grocery",
+            "text": "Menu, cart, online payment and live courier tracking on the map.",
+            "features": [
+              "Live map",
+              "Push notifications",
+              "Online payment"
+            ]
+          },
+          {
+            "kind": "booking",
+            "title": "Booking app",
+            "sector": "Clinics and beauty salons",
+            "text": "Choice of doctor or specialist, free slots, reminders and online booking.",
+            "features": [
+              "Calendar",
+              "Reminders",
+              "Profile"
+            ]
+          },
+          {
+            "kind": "shop",
+            "title": "Online store app",
+            "sector": "E-commerce",
+            "text": "Catalogue, filters, favourites, order history and a loyalty system.",
+            "features": [
+              "Catalogue",
+              "Loyalty card",
+              "Order tracking"
+            ]
+          },
+          {
+            "kind": "fitness",
+            "title": "Fitness app",
+            "sector": "Gym",
+            "text": "Membership, workout programmes, progress charts and contact with the trainer.",
+            "features": [
+              "Membership",
+              "Charts",
+              "Chat"
+            ]
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "SEO and GEO work — Google and AI search | Cradex Agency",
+        "metaDescription": "Our SEO and GEO projects: Google rankings, Maps visibility and brand mentions in AI answers.",
+        "eyebrow": "Our work · SEO and GEO",
+        "title": "Businesses that get found in search",
+        "text": "We work on higher Google rankings, visibility on Maps and getting your brand mentioned in AI answers such as ChatGPT.",
+        "message": "Hi, I would like to talk about SEO and GEO",
+        "cases": [
+          {
+            "sector": "Law firm",
+            "goal": "Local SEO",
+            "period": "6 months",
+            "text": "Service pages, Google Business Profile and local citations.",
+            "metrics": [
+              "Organic traffic",
+              "Top-10 keywords",
+              "Calls"
+            ]
+          },
+          {
+            "sector": "Online store",
+            "goal": "Technical SEO and content",
+            "period": "8 months",
+            "text": "Speed, structure, category copy and a blog.",
+            "metrics": [
+              "Organic traffic",
+              "Top-10 keywords",
+              "Sales"
+            ]
+          },
+          {
+            "sector": "Dental clinic",
+            "goal": "Google Maps",
+            "period": "4 months",
+            "text": "Profile optimization, reviews and local keywords.",
+            "metrics": [
+              "Map views",
+              "Directions",
+              "Calls"
+            ]
+          },
+          {
+            "sector": "B2B software company",
+            "goal": "GEO — AI answers",
+            "period": "5 months",
+            "text": "Expert articles, structured data and mentions on trusted sources.",
+            "metrics": [
+              "Mentions in AI answers",
+              "Organic traffic",
+              "Demo requests"
+            ]
+          }
+        ]
+      },
+      "support": {
+        "metaTitle": "Technical support work — websites and social media | Cradex Agency",
+        "metaDescription": "Work we have done on site speed, security, backlinks, internal linking and social media account recovery.",
+        "eyebrow": "Our work · Technical support",
+        "title": "The team that is there when something goes wrong",
+        "text": "From site speed and security to a blocked account or a fake profile — the work we have done across every category of technical support.",
+        "message": "Hi, I am writing about technical support",
+        "groups": {
+          "web": "Website",
+          "social": "Social media accounts"
+        },
+        "cases": [
+          {
+            "group": "web",
+            "title": "Technical SEO optimization",
+            "problem": "The site loaded slowly and pages were not being indexed by Google.",
+            "solution": "Images, code and server settings were optimized and the sitemap was fixed.",
+            "result": "Load time 6.1 s → 1.4 s"
+          },
+          {
+            "group": "web",
+            "title": "Security optimization",
+            "problem": "Malicious code was found on the site and the browser showed a warning.",
+            "solution": "The code was cleaned, SSL and protection rules were set up, and backups were enabled.",
+            "result": "Warning lifted within 48 hours"
+          },
+          {
+            "group": "web",
+            "title": "External links (backlinks)",
+            "problem": "The site had almost no links from trusted sources.",
+            "solution": "Quality links on news and directory sites relevant to the industry.",
+            "result": "+35 trusted links"
+          },
+          {
+            "group": "web",
+            "title": "Internal linking",
+            "problem": "Important pages were lost deep inside the site.",
+            "solution": "Logical links were built between category and blog pages.",
+            "result": "Key pages reachable in 2 clicks"
+          },
+          {
+            "group": "web",
+            "title": "Technical support",
+            "problem": "The site stopped working after an update and the order form was down.",
+            "solution": "The error was found, versions were aligned and monthly monitoring started.",
+            "result": "Site restored the same day"
+          },
+          {
+            "group": "social",
+            "title": "Reopening a blocked account",
+            "problem": "A business account was blocked without a reason.",
+            "solution": "An official appeal with supporting documents was prepared for the platform.",
+            "result": "Account reopened in 5 days"
+          },
+          {
+            "group": "social",
+            "title": "Recovering a stolen account",
+            "problem": "The account was hijacked and the e-mail and phone number were changed.",
+            "solution": "Identity verification and the recovery process were carried out step by step.",
+            "result": "Access returned to the owner"
+          },
+          {
+            "group": "social",
+            "title": "Removing a fake account",
+            "problem": "A fake profile in the brand's name was asking customers for money.",
+            "solution": "Reports were filed based on the trademark and the owner's identity.",
+            "result": "Fake profile removed"
+          },
+          {
+            "group": "social",
+            "title": "Recovering an ad account",
+            "problem": "The ad account was suspended for a policy violation.",
+            "solution": "The cause was investigated, the ads were fixed and a review was requested.",
+            "result": "Ads active again"
+          },
+          {
+            "group": "social",
+            "title": "Lifting account restrictions",
+            "problem": "Posting and live streaming were disabled on the account.",
+            "solution": "The violation was identified, the content was fixed and an appeal was filed.",
+            "result": "Features restored"
+          },
+          {
+            "group": "social",
+            "title": "Account security",
+            "problem": "Several employees logging in with the same password was a risk.",
+            "solution": "Two-step login, roles and a trusted e-mail were set up.",
+            "result": "Logins fully under control"
+          }
+        ]
+      }
     }
   }
 }

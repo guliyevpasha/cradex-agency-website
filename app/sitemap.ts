@@ -1,5 +1,5 @@
 /**
- * Builds sitemap.xml for every locale: static pages, services, products and
+ * Builds sitemap.xml for every locale: static pages, work categories, services, products and
  * portfolio projects.
  * @author Paşa Quliyev — Cradex Agency
  */
@@ -8,6 +8,7 @@ import { getAllPortfolio } from '@/lib/data/portfolio'
 import { cleanSlug, isShown } from '@/lib/site/portfolio'
 import { PRODUCT_LINKS, SERVICE_IDS, SERVICE_SLUGS } from '@/lib/site/navigation'
 import { getArticleSlugs } from '@/lib/data/journal'
+import { WORK_SLUGS } from '@/lib/site/work'
 
 const baseUrl = 'https://cradexagency.com'
 const locales = ['az', 'en', 'ru', 'tr']
@@ -21,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/about',
     '/clients',
+    ...Object.values(WORK_SLUGS).map((s) => `/portfolio/${s}`),
     '/services',
     '/products',
     '/pricing',

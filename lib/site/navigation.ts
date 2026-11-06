@@ -82,7 +82,7 @@ export const NAV_ITEMS = [
   { key: 'home', href: '', exact: true },
   { key: 'services', href: '/services', menu: 'services' },
   { key: 'products', href: '/products', menu: 'products' },
-  { key: 'work', href: '/portfolio' },
+  { key: 'work', href: '/portfolio', menu: 'work' },
   { key: 'about', href: '/about', menu: 'about', also: ['/clients'] },
   { key: 'pricing', href: '/pricing', menu: 'pricing' },
   { key: 'blog', href: '/journal' },

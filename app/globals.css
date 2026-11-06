@@ -260,6 +260,27 @@
   .cl-up, .cl-down { animation: none; }
 }
 
+/* ─── Work pages (ads, mobile, SEO, support cases) ─────────────────────── */
+/* charts start empty and grow once Reveal marks the card as in view */
+.wk-bar { height: 0; transition: height 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.rv-in .wk-bar { height: var(--h, 50%); }
+.wk-line { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s; }
+.rv-in .wk-line { stroke-dashoffset: 0; }
+.wk-area, .wk-dot { opacity: 0; transition: opacity 0.8s ease 1.2s; }
+.rv-in .wk-area, .rv-in .wk-dot { opacity: 1; }
+.wk-route { stroke-dasharray: 6 5; animation: wk-route 1.2s linear infinite; }
+@keyframes wk-route { to { stroke-dashoffset: -11; } }
+.wk-courier { left: 60%; top: 52%; box-shadow: 0 0 0 0 rgb(36 160 255 / 0.6); animation: wk-ping 1.8s ease-out infinite; }
+@keyframes wk-ping { 70% { box-shadow: 0 0 0 10px rgb(36 160 255 / 0); } 100% { box-shadow: 0 0 0 0 rgb(36 160 255 / 0); } }
+.wk-phone { transform: perspective(900px) rotateY(-16deg) rotateX(6deg); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.svc:hover .wk-phone { transform: perspective(900px) rotateY(-4deg) rotateX(2deg) translateY(-4px); }
+@media (prefers-reduced-motion: reduce) {
+  .wk-bar { height: var(--h, 50%); transition: none; }
+  .wk-line { stroke-dashoffset: 0; transition: none; }
+  .wk-area, .wk-dot { opacity: 1; transition: none; }
+  .wk-route, .wk-courier { animation: none; }
+}
+
 /* ─── Marquees ──────────────────────────────────────────────────────────── */
 /* Ads page visuals: bars grow and rise on load, orbits drift. */
 .ads-panel { transform: translateZ(0); }

@@ -1,22 +1,20 @@
 /**
- * FAQ about services, working together and the service contract. Cards sit
+ * FAQ cards with an icon each (clients page, combo packages). Cards sit
  * in CSS columns, so opening one only pushes its own column down. Native
  * <details>, so it works without JS and with the keyboard.
  * @author Paşa Quliyev — Cradex Agency
  */
-import { ChevronDown, Clock, CreditCard, FileSignature, FileText, Handshake, Headset, Layers, LifeBuoy, Lock, RotateCcw, Tag, UserCheck } from 'lucide-react'
+import { ChevronDown, type LucideIcon } from 'lucide-react'
 import { Reveal } from '@/components/ui/Reveal'
 
 type Faq = { q: string; a: string }
 
-// One icon per question, in the order of site.clientsPage.faq.
-const ICONS = [Layers, Handshake, FileSignature, FileText, CreditCard, Tag, Clock, LifeBuoy, UserCheck, RotateCcw, Lock, Headset]
-
-export function ClientsFaq({ items }: { items: Faq[] }) {
+/** The icons go with the questions in order and repeat if there are fewer. */
+export function FaqCards({ items, icons }: { items: Faq[]; icons: LucideIcon[] }) {
   return (
     <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
       {items.map((f, i) => {
-        const Icon = ICONS[i % ICONS.length]
+        const Icon = icons[i % icons.length]
         return (
           <Reveal key={f.q} className="rv-3d mb-4 break-inside-avoid" delay={(i % 3) * 80}>
             <details className="faq-card group rounded-[22px] border border-line bg-bg-secondary transition-[border-color,box-shadow] duration-300 open:border-accent-primary/40 open:shadow-card hover:border-accent-primary/30">

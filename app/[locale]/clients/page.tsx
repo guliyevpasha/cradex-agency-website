@@ -7,17 +7,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ArrowUpRight, BadgeCheck } from 'lucide-react'
+import { ArrowUpRight, BadgeCheck, Clock, CreditCard, FileSignature, FileText, Handshake, Headset, Layers, LifeBuoy, Lock, RotateCcw, Tag, UserCheck } from 'lucide-react'
 import { getPartners } from '@/lib/data/partners'
-import { ClientsFaq } from '@/components/clients/ClientsFaq'
 import { ClientsGrid } from '@/components/clients/ClientsGrid'
 import { ClientsWall } from '@/components/clients/ClientsWall'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
+import { FaqCards } from '@/components/ui/FaqCards'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 type Params = Promise<{ locale: string }>
+
+// One icon per question, in the order of site.clientsPage.faq.
+const FAQ_ICONS = [Layers, Handshake, FileSignature, FileText, CreditCard, Tag, Clock, LifeBuoy, UserCheck, RotateCcw, Lock, Headset]
 
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
@@ -92,7 +95,7 @@ export default async function ClientsPage({ params }: { params: Params }) {
           <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('faqTitle')} />
           <p className="mt-4 text-lg leading-relaxed text-text-secondary">{t('faqText')}</p>
         </div>
-        <ClientsFaq items={faq} />
+        <FaqCards items={faq} icons={FAQ_ICONS} />
       </section>
 
       {/* CTA */}
