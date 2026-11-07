@@ -207,25 +207,23 @@ export function DemoHero() {
 
           <p className="mt-6 max-w-[540px] text-base font-semibold leading-relaxed text-text-primary sm:text-lg">{t('subtitle')}</p>
 
-          <div className="mt-8 flex items-center gap-6">
-            <div className="flex flex-col items-center rounded-2xl border-2 border-accent-primary/20 bg-gradient-to-br from-accent-primary/5 to-transparent px-6 py-4 shadow-sm transition-all hover:border-accent-primary/30 hover:shadow-md dark:border-accent-primary/30 dark:hover:border-accent-primary/40">
-              {loading ? (
-                <div className="h-14 w-20 animate-pulse rounded-lg bg-text-primary/10" />
-              ) : (
-                <>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-extrabold tabular-nums tracking-tight text-text-primary">
-                      {price.currency === 'AZN' ? t('pricing.amount') : price.amount}
-                    </span>
-                    <span className="text-2xl font-bold text-text-primary">
-                      {price.currency === 'AZN' ? t('pricing.currency') : '$'}
-                    </span>
-                  </div>
-                  <div className="mt-0.5 text-center text-sm font-medium text-text-secondary">{t('pricing.period')}</div>
-                  <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-accent-ink">{t('pricing.label')}</div>
-                </>
-              )}
-            </div>
+          <div className="mt-8 flex items-baseline gap-2">
+            {loading ? (
+              <div className="h-12 w-32 animate-pulse rounded-lg bg-text-primary/10" />
+            ) : (
+              <>
+                <span className="text-5xl font-extrabold tabular-nums tracking-tight text-text-primary sm:text-6xl">
+                  {price.currency === 'AZN' ? t('pricing.amount') : price.amount}
+                </span>
+                <span className="text-3xl font-bold text-text-primary sm:text-4xl">
+                  {price.currency === 'AZN' ? t('pricing.currency') : '$'}
+                </span>
+                <span className="text-base font-medium text-text-secondary sm:text-lg">{t('pricing.period')}</span>
+                <span className="ml-2 text-xs font-semibold uppercase tracking-wider text-accent-ink sm:text-sm">
+                  {t('pricing.label')}
+                </span>
+              </>
+            )}
           </div>
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
