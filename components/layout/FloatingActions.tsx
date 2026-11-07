@@ -182,10 +182,9 @@ export function FloatingActions() {
           setMsgs((m) => [...m, { from: 'me', text: p.question }, { from: 'admin', text: data.answer! }])
           setPending((list) => list.filter((x) => x.id !== p.id))
           setUnread(true)
-          // Play sound when reply arrives
-          if (!open) {
-            playNotificationSound()
-          }
+          setTeaser(true) // Show teaser when reply comes
+          // Play sound when reply arrives (both open and closed)
+          playNotificationSound()
         } catch {}
       }
     }
@@ -392,7 +391,7 @@ export function FloatingActions() {
       {/* teaser */}
       <div className={cn('bot-teaser', teaser && !open ? 'bot-teaser-in' : 'bot-teaser-out')} aria-hidden={!teaser || open}>
         <button type="button" onClick={toggle} className="text-left text-sm font-semibold text-text-primary">
-          {t('teaser')}
+          {unread ? t('newReply') : t('teaser')}
         </button>
         <button type="button" onClick={dismissTeaser} aria-label={t('close')} className="ml-2 text-text-muted hover:text-text-primary">
           <X size={14} aria-hidden="true" />
