@@ -10,6 +10,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { ArrowUpRight, Check } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { useCurrency } from '@/lib/hooks/useCurrency'
 
 const BUILD_MS = 8000
 const HOLD_MS = 2600
@@ -168,6 +169,7 @@ export function DemoHero() {
   const locale = useLocale()
   const t = useTranslations('site.hero')
   const tCta = useTranslations('site.cta')
+  const { convertPrice, loading } = useCurrency()
   const barRef = useRef<HTMLSpanElement>(null)
   const wireRef = useRef<HTMLDivElement>(null)
 
@@ -183,6 +185,9 @@ export function DemoHero() {
     : hours > 0
       ? t('card.hoursLeft', { hours, minutes: String(minutes).padStart(2, '0') })
       : t('card.minutesLeft', { minutes })
+
+  // Convert price from 25 AZN to USD if needed
+  const price = convertPrice(25)
 
   return (
     <section className="relative overflow-hidden pb-16 pt-28 sm:pt-32 lg:pb-24 lg:pt-36">
@@ -200,9 +205,30 @@ export function DemoHero() {
             <span className="text-accent-ink">{t('titleFree')}</span>
           </h1>
 
-          <p className="mt-6 max-w-[540px] text-base leading-relaxed text-text-secondary sm:text-lg">{t('subtitle')}</p>
+          <p className="mt-6 max-w-[540px] text-base font-semibold leading-relaxed text-text-primary sm:text-lg">{t('subtitle')}</p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+          <div className="mt-8 flex items-center gap-6">
+            <div className="flex flex-col items-center rounded-2xl border-2 border-accent-primary/20 bg-gradient-to-br from-accent-primary/5 to-transparent px-6 py-4 shadow-sm transition-all hover:border-accent-primary/30 hover:shadow-md dark:border-accent-primary/30 dark:hover:border-accent-primary/40">
+              {loading ? (
+                <div className="h-14 w-20 animate-pulse rounded-lg bg-text-primary/10" />
+              ) : (
+                <>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold tabular-nums tracking-tight text-text-primary">
+                      {price.currency === 'AZN' ? t('pricing.amount') : price.amount}
+                    </span>
+                    <span className="text-2xl font-bold text-text-primary">
+                      {price.currency === 'AZN' ? t('pricing.currency') : '$'}
+                    </span>
+                  </div>
+                  <div className="mt-0.5 text-center text-sm font-medium text-text-secondary">{t('pricing.period')}</div>
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-accent-ink">{t('pricing.label')}</div>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <WhatsAppButton />
             <Link
               href={`/${locale}/portfolio`}

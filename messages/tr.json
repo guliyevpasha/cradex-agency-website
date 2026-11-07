@@ -39,8 +39,14 @@
     "hero": {
       "eyebrow": "360° Performans Pazarlama Ajansı",
       "title": "Cradex Agency ile Markanızı Büyütün",
-      "subtitle": "zamanında, şeffaf fiyatlarla.",
+      "subtitle": "İşiniz için web sitesi yapıyoruz: abonelik modeli ile, 100 ₼'den başlayan ilk ödeme ile, zamanında, şeffaf fiyatlarla.",
       "subtitleAccent": "sonuç odaklı strateji, ölçülebilir büyüme.",
+      "pricing": {
+        "amount": "25",
+        "currency": "₼",
+        "period": "/ ay",
+        "label": "başlangıç"
+      },
       "cta": "Ücretsiz danışmanlık al",
       "secondaryCta": "Hizmetlerimiz",
       "googleReviews": "Google Yorumları",

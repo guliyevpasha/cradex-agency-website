@@ -39,8 +39,14 @@
     "hero": {
       "eyebrow": "360Â° Performance Marketing Agency",
       "title": "Grow Your Brand with Cradex Agency",
-      "subtitle": "on time, with transparent pricing.",
+      "subtitle": "We build websites for your business: subscription model, starting from 100 ₼ initial payment, on time, with transparent pricing.",
       "subtitleAccent": "results-driven strategy, measurable growth.",
+      "pricing": {
+        "amount": "25",
+        "currency": "₼",
+        "period": "/ month",
+        "label": "starting"
+      },
       "cta": "Get free consultation",
       "secondaryCta": "Our Services",
       "googleReviews": "Google Reviews",
