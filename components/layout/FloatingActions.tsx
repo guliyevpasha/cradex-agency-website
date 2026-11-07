@@ -147,18 +147,13 @@ export function FloatingActions() {
 
   // Show the teaser once per visit, a few seconds after landing.
   useEffect(() => {
-    // Always show teaser after 7 seconds
-    const teaserTimer = setTimeout(() => setTeaser(true), 7000)
-    
-    // Play notification sound after 15 seconds
-    const soundTimer = setTimeout(() => {
+    // Show teaser and play sound at the same time after 7 seconds
+    const timer = setTimeout(() => {
+      setTeaser(true)
       playNotificationSound()
-    }, 15000)
+    }, 7000)
     
-    return () => {
-      clearTimeout(teaserTimer)
-      clearTimeout(soundTimer)
-    }
+    return () => clearTimeout(timer)
   }, [])
 
   useEffect(() => {
