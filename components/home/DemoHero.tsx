@@ -207,19 +207,19 @@ export function DemoHero() {
 
           <p className="mt-6 max-w-[540px] text-base font-semibold leading-relaxed text-text-primary sm:text-lg">{t('subtitle')}</p>
 
-          <div className="mt-8 flex items-baseline gap-2">
+          <div className="mt-8 flex items-baseline gap-2 sm:gap-3">
             {loading ? (
-              <div className="h-12 w-32 animate-pulse rounded-lg bg-text-primary/10" />
+              <div className="h-16 w-40 animate-pulse rounded-lg bg-text-primary/10 sm:h-20 sm:w-48" />
             ) : (
               <>
-                <span className="text-5xl font-extrabold tabular-nums tracking-tight text-text-primary sm:text-6xl">
+                <span className="text-[4.5rem] font-extrabold tabular-nums leading-none tracking-tight text-text-primary sm:text-[5.5rem] lg:text-[6.5rem]">
                   {price.currency === 'AZN' ? t('pricing.amount') : price.amount}
                 </span>
-                <span className="text-3xl font-bold text-text-primary sm:text-4xl">
+                <span className="text-[3rem] font-bold leading-none text-text-primary sm:text-[3.5rem] lg:text-[4.5rem]">
                   {price.currency === 'AZN' ? t('pricing.currency') : '$'}
                 </span>
-                <span className="text-base font-medium text-text-secondary sm:text-lg">{t('pricing.period')}</span>
-                <span className="ml-2 text-xs font-semibold uppercase tracking-wider text-accent-ink sm:text-sm">
+                <span className="text-lg font-medium text-text-secondary sm:text-xl lg:text-2xl">{t('pricing.period')}</span>
+                <span className="ml-2 text-sm font-semibold uppercase tracking-wider text-accent-ink sm:text-base lg:text-lg">
                   {t('pricing.label')}
                 </span>
               </>
