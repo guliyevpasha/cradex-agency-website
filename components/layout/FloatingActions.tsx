@@ -13,11 +13,13 @@ import { ArrowUp, Send, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
+import { Toast } from '@/components/ui/Toast'
 
 const TEASER_KEY = 'cradex-bot-teaser'
 const QUICK = ['1', '2', '3', '4'] as const
 const SESSION_KEY = 'cradex-chat-session'
 const PENDING_KEY = 'cradex-chat-pending'
+const WELCOME_SHOWN_KEY = 'cradex-welcome-shown'
 type Msg = { from: 'bot' | 'me' | 'admin'; text: string }
 type Pending = { id: string; question: string; at: number }
 
@@ -98,6 +100,8 @@ export function FloatingActions() {
   const [contactFor, setContactFor] = useState<string | null>(null)
   const [contact, setContact] = useState('')
   const [unread, setUnread] = useState(false)
+  const [showWelcomeToast, setShowWelcomeToast] = useState(false)
+  const [showReplyToast, setShowReplyToast] = useState(false)
   const listRef = useRef<HTMLDivElement>(null)
   const session = useRef('')
 
@@ -123,9 +127,31 @@ export function FloatingActions() {
   // Show the teaser once per visit, a few seconds after landing.
   useEffect(() => {
     let seen = false
+    let welcomeShown = false
     try {
       seen = sessionStorage.getItem(TEASER_KEY) === '1'
+      welcomeShown = sessionStorage.getItem(WELCOME_SHOWN_KEY) === '1'
     } catch {}
+    
+    if (!welcomeShown) {
+      const welcomeTimer = setTimeout(() => {
+        setShowWelcomeToast(true)
+        try {
+          sessionStorage.setItem(WELCOME_SHOWN_KEY, '1')
+        } catch {}
+      }, 3000)
+      
+      if (!seen) {
+        const teaserTimer = setTimeout(() => setTeaser(true), 7000)
+        return () => {
+          clearTimeout(welcomeTimer)
+          clearTimeout(teaserTimer)
+        }
+      }
+      
+      return () => clearTimeout(welcomeTimer)
+    }
+    
     if (seen) return
     const id = setTimeout(() => setTeaser(true), 4000)
     return () => clearTimeout(id)
@@ -157,6 +183,10 @@ export function FloatingActions() {
           setMsgs((m) => [...m, { from: 'me', text: p.question }, { from: 'admin', text: data.answer! }])
           setPending((list) => list.filter((x) => x.id !== p.id))
           setUnread(true)
+          // Show notification when reply arrives
+          if (!open) {
+            setShowReplyToast(true)
+          }
         } catch {}
       }
     }
@@ -166,7 +196,7 @@ export function FloatingActions() {
       stop = true
       clearInterval(timer)
     }
-  }, [pending])
+  }, [pending, open])
 
   function dismissTeaser() {
     setTeaser(false)
@@ -245,8 +275,9 @@ export function FloatingActions() {
   }
 
   return (
-    <div className="fab-stack">
-      <BackToTop label={tTop('label')} />
+    <>
+      <div className="fab-stack">
+        <BackToTop label={tTop('label')} />
 
       {/* chat panel */}
       <div
@@ -376,5 +407,26 @@ export function FloatingActions() {
         {!open && (teaser || unread) && <span className="bot-badge">1</span>}
       </button>
     </div>
+
+      {/* Welcome Toast */}
+      <Toast
+        show={showWelcomeToast && !open}
+        type="success"
+        title={t('notificationWelcome')}
+        message={t('notificationWelcomeMessage')}
+        onClose={() => setShowWelcomeToast(false)}
+        duration={4000}
+      />
+
+      {/* New Reply Toast */}
+      <Toast
+        show={showReplyToast && !open}
+        type="success"
+        title={t('notificationNewReply')}
+        message={t('notificationNewReplyMessage')}
+        onClose={() => setShowReplyToast(false)}
+        duration={5000}
+      />
+    </>
   )
 }

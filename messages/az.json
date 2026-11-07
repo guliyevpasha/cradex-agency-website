@@ -2256,7 +2256,7 @@
     "cta": {
       "discuss": "Layihənizi müzakirə edək",
       "work": "İşlərimizə baxın",
-      "demo": "Pulsuz demo",
+      "demo": "Demo sayt",
       "whatsappMessage": "Salam, demo versiya sayt istəyirəm",
       "details": "Ətraflı",
       "consult": "Ödənişsiz konsultasiya",
@@ -2268,7 +2268,7 @@
       "titleAccent": "2 saata",
       "titleEnd": "əldə edin.",
       "titleFree": "Özü də pulsuz!",
-      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün sayt demosunu əvvəlcə hazırlayırıq. Bəyənsəniz, 100 ₼ ilkin ödənişlə yayımlayırıq, qalan məbləğ 12 aya bölünür.",
+      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün saytınızı **abunəlik modeli ilə** hazırlayırıq. Əvvəlcə saytın demosunu təqdim edirik. Bəyəndiyiniz halda, **100 ₼-dən başlayan ilkin ödənişlə** saytınızı yayımlayır, qalan məbləği isə 12 ay ərzində hissə-hissə ödəmək imkanı yaradırıq.",
       "fine": "Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.",
       "card": {
         "building": "Demo hazırlanır",
@@ -2447,8 +2447,8 @@
       "demoP2": "Mobil uyğun",
       "demoP3": "Öhdəlik yoxdur",
       "launchName": "Yayım paketi",
-      "launchPrice": "399 ₼-dən",
-      "launchPeriod": "illik",
+      "launchPrice": "25 ₼",
+      "launchPeriod": "/ ay başlanğıc",
       "launchBadge": "Demonu bəyəndinizsə",
       "launchText": "Demo əsasında saytınızı tamamlayır və yayımlayırıq.",
       "launchP1": "Demo əsasında hazır sayt",
@@ -2462,7 +2462,7 @@
       "customP2": "Mərhələli ödəniş",
       "customP3": "Yazılı təklif",
       "note": "Qiymətlər manatla (₼) göstərilib.",
-      "teaserTitle": "Demo pulsuz, yayım illik 399 ₼-dən",
+      "teaserTitle": "Demo pulsuz, yayım aylıq 25 ₼-dən",
       "teaserLink": "Qiymətlərə baxın"
     },
     "faq": {
@@ -2614,7 +2614,11 @@
       "offline": "Hazırda sualınızı ötürə bilmədim. Zəhmət olmasa WhatsApp-da yazın, dərhal cavab verək.",
       "error": "Bağlantı alınmadı. Bir az sonra yenidən yoxlayın.",
       "admin": "Mütəxəssis cavabı",
-      "tooLong": "Sual çox uzundur, qısaca yazın."
+      "tooLong": "Sual çox uzundur, qısaca yazın.",
+      "notificationWelcome": "Sualınız var? 👋",
+      "notificationWelcomeMessage": "Köməkçiyə yaza bilərsiniz",
+      "notificationNewReply": "Yeni cavab ✓",
+      "notificationNewReplyMessage": "Sualınıza cavab yazdıq"
     },
     "tech": {
       "eyebrow": "Texnologiyalar",
@@ -2967,6 +2971,9 @@
       "processTitle": "Necə işləyirik",
       "faqTitle": "Tez-tez verilən suallar",
       "otherTitle": "Digər xidmətlərimiz",
+      "portfolioTitle": "İşlərimizə baxın",
+      "portfolioText": "Hazırladığımız layihələri, real nəticələri və müştəri rəylərini portfelimizədə görə bilərsiniz.",
+      "portfolioCta": "Portfolio işlərimizə baxın",
       "workTitle": "Hazırladığımız saytlar",
       "workAll": "Bütün işlər",
       "step": "Addım",
@@ -3568,7 +3575,7 @@
       "eyebrow": "Haqqımızda",
       "title": "Biznesiniz üçün rəqəmsal alətlər qururuq",
       "text": "Cradex Agency veb sayt, AI köməkçi və chatbot, CRM və avtomatlaşdırma həlləri hazırlayan komandadır. Məqsədimiz sadədir: işinizi asanlaşdıran və müştəri gətirən texnologiya.",
-      "storyTitle": "Nə üçün varıq",
+      "storyTitle": "Nə üçün varıq · Niyə bizi seçməlisiniz",
       "story": [
         "Bir çox biznes saytı vizit kart kimi qalır: açılır, amma müraciət gətirmir. Mesajlar gecikir, müştəri məlumatları dəftərdə və ya cədvəldə itir.",
         "Biz bu boşluğu doldururuq. Sayt müştərini cəlb edir, chatbot onu dərhal cavablandırır, CRM isə heç bir müraciətin itməməsini təmin edir."

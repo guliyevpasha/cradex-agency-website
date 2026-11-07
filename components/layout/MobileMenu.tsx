@@ -180,7 +180,7 @@ export function MobileMenu({ isOpen, onClose, section = null }: Props) {
                 </div>
                 <ThemeToggle />
               </div>
-              <WhatsAppButton className="w-full" />
+              <WhatsAppButton label={t('demo')} className="w-full" />
             </div>
       </div>
     </>

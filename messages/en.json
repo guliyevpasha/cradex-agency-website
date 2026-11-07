@@ -2256,7 +2256,7 @@
     "cta": {
       "discuss": "Discuss your project",
       "work": "See our work",
-      "demo": "Free demo",
+      "demo": "Demo website",
       "whatsappMessage": "Hi, I'd like a demo version of a website",
       "details": "Learn more",
       "consult": "Free consultation",
@@ -2268,7 +2268,7 @@
       "titleAccent": "2 hours,",
       "titleEnd": "not 2 months.",
       "titleFree": "And it's free!",
-      "subtitle": "We build a demo of your site first, for your business, personal brand or content project. If you like it, we launch it with a 100 ₼ initial payment, and the remaining amount is split over 12 months.",
+      "subtitle": "We build your website with a **subscription model**. We present the site demo first. If you like it, we launch your site **with an initial payment starting from 100 ₼**, and you can pay the remaining amount in installments over 12 months.",
       "fine": "The demo is free. If you don't like it, you pay nothing.",
       "card": {
         "building": "Building your demo",
@@ -2447,8 +2447,8 @@
       "demoP2": "Mobile-friendly",
       "demoP3": "No obligation",
       "launchName": "Launch package",
-      "launchPrice": "from 399 ₼",
-      "launchPeriod": "per year",
+      "launchPrice": "25 ₼",
+      "launchPeriod": "/ month starting",
       "launchBadge": "If you like the demo",
       "launchText": "We finish your website based on the demo and launch it.",
       "launchP1": "Finished site based on the demo",
@@ -2462,7 +2462,7 @@
       "customP2": "Staged payments",
       "customP3": "Written proposal",
       "note": "Prices are shown in Azerbaijani manat (₼).",
-      "teaserTitle": "Free demo, launch from 399 ₼ per year",
+      "teaserTitle": "Free demo, launch from 25 ₼ per month",
       "teaserLink": "See pricing"
     },
     "faq": {
@@ -2614,7 +2614,11 @@
       "offline": "I couldn't pass your question on right now. Please write to us on WhatsApp and we'll reply right away.",
       "error": "Connection failed. Please try again in a moment.",
       "admin": "Specialist reply",
-      "tooLong": "That question is too long. Please keep it short."
+      "tooLong": "That question is too long. Please keep it short.",
+      "notificationWelcome": "Have a question? 👋",
+      "notificationWelcomeMessage": "You can chat with the assistant",
+      "notificationNewReply": "New reply ✓",
+      "notificationNewReplyMessage": "We replied to your question"
     },
     "tech": {
       "eyebrow": "Technologies",
@@ -2967,6 +2971,9 @@
       "processTitle": "How we work",
       "faqTitle": "Frequently asked questions",
       "otherTitle": "Other services",
+      "portfolioTitle": "View our work",
+      "portfolioText": "See the projects we've built, real results, and client reviews in our portfolio.",
+      "portfolioCta": "View portfolio projects",
       "workTitle": "Websites we have built",
       "workAll": "All projects",
       "step": "Step",
@@ -3568,7 +3575,7 @@
       "eyebrow": "About us",
       "title": "We build digital tools for your business",
       "text": "Cradex Agency is a team that builds websites, AI assistants and chatbots, CRM and automation solutions. Our goal is simple: technology that makes your work easier and brings you customers.",
-      "storyTitle": "Why we exist",
+      "storyTitle": "Why we exist · Why choose us",
       "story": [
         "Many business websites stay as digital business cards: they open, but bring no inquiries. Messages get answered late, and customer details get lost in notebooks or spreadsheets.",
         "We fill that gap. The website attracts the customer, the chatbot answers instantly, and the CRM makes sure no inquiry is lost."

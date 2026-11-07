@@ -1,3 +1,4 @@
+'use client'
 /**
  * Pricing: free demo → yearly launch package → custom projects.
  * @author Paşa Quliyev — Cradex Agency
@@ -6,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { Price } from '@/components/ui/Price'
 import { DomainChecker } from './DomainChecker'
 import { SectionHeading } from './SectionHeading'
 
@@ -37,7 +39,11 @@ export function PricingPlans({ headingAs = 'h2' }: { headingAs?: 'h1' | 'h2' }) 
                 )}
                 <h3 className={cn('text-lg font-bold', featured ? 'text-snow' : 'text-text-primary')}>{t(`${p}Name`)}</h3>
                 <p className="mt-4 flex items-baseline gap-2">
-                  <span className={cn('text-4xl font-extrabold tracking-tight', featured ? 'text-snow' : 'text-text-primary')}>{t(`${p}Price`)}</span>
+                  {p === 'launch' ? (
+                    <Price azn={25} className={cn('text-4xl font-extrabold tracking-tight', featured ? 'text-snow' : 'text-text-primary')} />
+                  ) : (
+                    <span className={cn('text-4xl font-extrabold tracking-tight', featured ? 'text-snow' : 'text-text-primary')}>{t(`${p}Price`)}</span>
+                  )}
                   <span className={cn('text-sm', featured ? 'text-[#A6B0BD]' : 'text-text-muted')}>{t(`${p}Period`)}</span>
                 </p>
                 <p className={cn('mt-3 leading-relaxed', featured ? 'text-[#C9D1DB]' : 'text-text-secondary')}>{t(`${p}Text`)}</p>

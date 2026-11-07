@@ -150,6 +150,23 @@ export default async function ServicePage({ params }: { params: Params }) {
       {id === 'web' && <WebIncluded />}
       {id === 'web' && <WorkShowcase />}
 
+      {/* Portfolio Link */}
+      <section className="container-x pb-16">
+        <Reveal className="rv-3d">
+          <div className="flex flex-col items-center justify-center gap-6 rounded-3xl border border-line bg-gradient-to-br from-accent-primary/5 to-transparent p-8 text-center sm:p-12">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-text-primary sm:text-4xl">{t('portfolioTitle')}</h2>
+            <p className="max-w-2xl text-lg text-text-secondary">{t('portfolioText')}</p>
+            <Link
+              href={`/${locale}/portfolio`}
+              className="inline-flex items-center gap-2 rounded-full bg-brand-strong px-8 py-4 text-[15px] font-semibold text-snow shadow-brand transition-transform hover:scale-105"
+            >
+              {t('portfolioCta')}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
       {/* How we work */}
       <section className="container-x py-16 lg:py-24">
         <AnimatedHeading className="text-4xl font-extrabold tracking-[-0.035em] text-text-primary sm:text-5xl" text={t('processTitle')} />
