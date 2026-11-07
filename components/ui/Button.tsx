@@ -30,7 +30,7 @@ const variantStyles = {
   ghost:
     'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary',
   whatsapp:
-    'bg-[#25D366] text-snow hover:bg-[#20bd5a] shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] animate-pulse-slow',
+    'bg-[#0E7A3E] text-snow hover:bg-[#0B6633] shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] animate-pulse-slow',
 }
 
 const sizeStyles = {

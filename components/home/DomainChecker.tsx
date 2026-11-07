@@ -4,13 +4,13 @@
  * @author Paşa Quliyev — Cradex Agency
  */
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Search } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 
-type Status = 'available' | 'taken' | 'unknown'
+type Status = 'available' | 'taken' | 'unknown' | 'pending'
 type Result = { domain: string; status: Status }
 
 const LABEL_RE = /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/
@@ -21,6 +21,8 @@ export function DomainChecker() {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [results, setResults] = useState<Result[] | null>(null)
+  const [checkedAt, setCheckedAt] = useState<Date | null>(null)
+  const locale = useLocale()
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -32,12 +34,31 @@ export function DomainChecker() {
     }
     setBusy(true)
     setError(null)
+    setCheckedAt(null)
     try {
-      const res = await fetch(`/api/check-domain?name=${encodeURIComponent(label)}`)
+      const res = await fetch(`/api/check-domain?stream=1&name=${encodeURIComponent(label)}`)
       if (res.status === 429) throw new Error('limited')
-      if (!res.ok) throw new Error(res.status === 400 ? 'invalid' : 'error')
-      const data = await res.json()
-      setResults(data.results)
+      if (!res.ok || !res.body) throw new Error(res.status === 400 ? 'invalid' : 'error')
+      // One JSON line per domain, in the order the registries answer.
+      const reader = res.body.pipeThrough(new TextDecoderStream()).getReader()
+      let buffer = ''
+      for (;;) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += value
+        const lines = buffer.split('\n')
+        buffer = lines.pop() ?? ''
+        for (const line of lines) {
+          if (!line.trim()) continue
+          const msg = JSON.parse(line)
+          if (Array.isArray(msg.domains)) {
+            setResults(msg.domains.map((domain: string) => ({ domain, status: 'pending' as const })))
+          } else if (msg.domain) {
+            setResults((prev) => prev?.map((r) => (r.domain === msg.domain ? { domain: r.domain, status: msg.status } : r)) ?? null)
+          }
+        }
+      }
+      setCheckedAt(new Date())
     } catch (err) {
       const kind = err instanceof Error ? err.message : 'error'
       setError(kind === 'limited' ? t('limited') : kind === 'invalid' ? t('invalid') : t('error'))
@@ -100,20 +121,27 @@ export function DomainChecker() {
 
         {results && (
           <>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <p className="mt-6 flex items-center gap-2 text-xs font-semibold text-text-secondary" aria-live="polite">
+              <span className={cn('h-2 w-2 rounded-full bg-[#16A34A]', busy && 'animate-pulse')} aria-hidden="true" />
+              {busy || !checkedAt
+                ? t('live')
+                : t('checkedAt', { time: new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(checkedAt) })}
+            </p>
+            <ul className="mt-3 grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {results.map(({ domain, status }) => (
-                <li key={domain} className="flex items-center justify-between gap-3 rounded-xl border border-line bg-bg-primary px-4 py-3">
-                  <span className="truncate text-[15px] font-semibold text-text-primary">{domain}</span>
-                  <span className="flex shrink-0 items-center gap-2">
+                <li key={domain} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 rounded-xl border border-line bg-bg-primary px-4 py-3">
+                  <span className="min-w-0 break-all text-[15px] font-semibold text-text-primary">{domain}</span>
+                  <span className="ml-auto flex shrink-0 items-center gap-2">
                     <span
                       className={cn(
                         'rounded-full px-2.5 py-1 text-xs font-semibold',
                         status === 'available' && 'bg-[#16A34A]/15 text-[#15803D] dark:text-[#4ADE80]',
                         status === 'taken' && 'bg-[#DC2626]/10 text-[#B91C1C] dark:text-[#F87171]',
-                        status === 'unknown' && 'bg-bg-tertiary text-text-muted'
+                        status === 'unknown' && 'bg-bg-tertiary text-text-muted',
+                        status === 'pending' && 'animate-pulse bg-bg-tertiary text-text-muted'
                       )}
                     >
-                      {t(status)}
+                      {status === 'pending' ? t('checking') : t(status)}
                     </span>
                     {status === 'available' && (
                       <a

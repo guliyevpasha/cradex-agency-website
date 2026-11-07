@@ -9,6 +9,7 @@ import { ProcessSteps } from '@/components/home/ProcessSteps'
 import { ServicesGrid } from '@/components/home/ServicesGrid'
 import { ProductsShowcase } from '@/components/home/ProductsShowcase'
 import { CorporateEmail } from '@/components/home/CorporateEmail'
+import { MapsListing } from '@/components/home/MapsListing'
 import { DemoFaq } from '@/components/home/DemoFaq'
 import { FinalCta } from '@/components/home/FinalCta'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
@@ -52,6 +53,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <WorkShowcase />
       <ProductsShowcase />
       <CorporateEmail />
+      <MapsListing />
       {/* Reviews given the "Əsas səhifə" option in Studio; all of them while none is. */}
       <ReviewsSection testimonials={testimonials.some((r) => r.services?.includes('home')) ? testimonials.filter((r) => r.services?.includes('home')) : testimonials} />
       <DemoFaq />

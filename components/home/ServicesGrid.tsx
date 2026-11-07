@@ -6,7 +6,7 @@
  */
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { ArrowRight, ArrowUpRight, Check, Code2, Megaphone, Search, ShieldCheck, Smartphone } from 'lucide-react'
+import { ArrowUpRight, Check, Code2, Megaphone, Search, ShieldCheck, Smartphone } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
@@ -52,7 +52,6 @@ function MoreLink({ href, label }: { href: string; label: string }) {
 
 export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?: boolean; headingAs?: 'h1' | 'h2' }) {
   const t = useTranslations('site.services')
-  const tCta = useTranslations('site.cta')
   const tPage = useTranslations('site.servicePage')
   const locale = useLocale()
   const Card = detailed ? 'article' : 'div'
@@ -87,11 +86,6 @@ export function ServicesGrid({ detailed = false, headingAs = 'h2' }: { detailed?
       <div className="container-x">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading as={headingAs} eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
-          {!detailed && (
-            <Link href={`/${locale}/services`} className="inline-flex shrink-0 items-center gap-2 text-[15px] font-semibold text-text-primary hover:text-accent-ink">
-              {tCta('details')} <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-          )}
         </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-6">

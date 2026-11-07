@@ -5,18 +5,18 @@ import { urlForImage } from '../lib/image'
 
 export default defineType({
   name: 'partner',
-  title: 'Partners (Tərəfdaşlar)',
+  title: 'Tərəfdaş',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Partner Name',
+      title: 'Ad',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'logo',
-      title: 'Logo',
+      title: 'Loqo',
       type: 'image',
       options: {
         hotspot: true,
@@ -25,19 +25,19 @@ export default defineType({
     }),
     defineField({
       name: 'website',
-      title: 'Website URL',
+      title: 'Sayt',
       type: 'url',
     }),
     defineField({
       name: 'order',
-      title: 'Display Order',
+      title: 'Sıra',
       type: 'number',
       description: 'Lower numbers appear first',
       initialValue: 0,
     }),
     defineField({
       name: 'active',
-      title: 'Active',
+      title: 'Saytda göstər',
       type: 'boolean',
       description: 'Show this partner on the website',
       initialValue: true,

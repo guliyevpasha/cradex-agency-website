@@ -59,7 +59,7 @@ export function LeadSection() {
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#25D366] text-snow font-semibold text-base hover:bg-[#20bd5a] transition-all duration-300 shadow-[0_0_28px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] min-h-[56px]"
+              className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#0E7A3E] text-snow font-semibold text-base hover:bg-[#0B6633] transition-all duration-300 shadow-[0_0_28px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] min-h-[56px]"
               aria-label={t('whatsappCta')}
             >
               <MessageCircle size={22} />

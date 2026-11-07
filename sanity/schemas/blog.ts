@@ -3,12 +3,12 @@ import { SERVICE_TAGS } from './locale'
 
 export default defineType({
   name: 'blog',
-  title: 'Blog Posts (Jurnal)',
+  title: 'Bloq yazısı',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Başlıq',
       type: 'object',
       fields: [
         { name: 'az', type: 'string', title: 'Azərbaycan' },
@@ -20,7 +20,7 @@ export default defineType({
     }),
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Link (slug)',
       type: 'slug',
       options: {
         source: 'title.az',
@@ -30,12 +30,12 @@ export default defineType({
     }),
     defineField({
       name: 'author',
-      title: 'Author',
+      title: 'Müəllif',
       type: 'string',
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Örtük şəkli',
       type: 'image',
       options: {
         hotspot: true,
@@ -76,7 +76,7 @@ export default defineType({
     }),
     defineField({
       name: 'excerpt',
-      title: 'Excerpt',
+      title: 'Qısa təsvir (meta description)',
       type: 'object',
       fields: [
         { name: 'az', type: 'text', title: 'Azərbaycan', rows: 3 },
@@ -87,7 +87,7 @@ export default defineType({
     }),
     defineField({
       name: 'content',
-      title: 'Content',
+      title: 'Mətn',
       type: 'object',
       fields: [
         {
@@ -150,13 +150,13 @@ export default defineType({
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Dərc tarixi',
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'readingTime',
-      title: 'Reading Time (minutes)',
+      title: 'Oxuma müddəti (dəqiqə)',
       type: 'number',
     }),
   ],

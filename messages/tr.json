@@ -2541,7 +2541,9 @@
       "limited": "Çok fazla istek gönderildi. Lütfen bir dakika sonra tekrar deneyin.",
       "register": "Kaydını yaptır",
       "registerMessage": "Merhaba, {domain} alan adını kaydettirmek istiyorum",
-      "note": "Sonuç bilgilendirme amaçlıdır. Alan adının müsait olduğu, kayıt sırasında son kez doğrulanır."
+      "note": "Sonuçlar, alan adı kayıt kuruluşlarının RDAP sunucularından ve DNS'ten canlı olarak alınır. .az alan adlarında DNS yanıtı esas alınır. Son doğrulama kayıt sırasında yapılır.",
+      "live": "Canlı kontrol: kayıt kuruluşu sunucularına sorgu gönderiliyor",
+      "checkedAt": "Canlı kontrol edildi: {time}"
     },
     "reviews": {
       "eyebrow": "Müşteri yorumları",
@@ -2590,7 +2592,7 @@
       "name": "Cradex Asistan",
       "status": "Çevrimiçi · birkaç saniyede yanıt",
       "teaser": "Sorunuz mu var? 👋",
-      "hello": "Merhaba! Ben Cradex asistanıyım. Neyle ilgileniyorsunuz?",
+      "hello": "Merhaba! Ben Cradex Agency asistanıyım. Neyle ilgileniyorsunuz?",
       "q1": "Ücretsiz demo",
       "a1": "İşletmeniz için web sitesi demosunu 2 saatte ücretsiz hazırlıyoruz. Beğenirseniz 100 ₼ ön ödemeyle yayına alıyoruz, kalanı 12 aya bölünür.",
       "q2": "Hizmetler",
@@ -2670,72 +2672,125 @@
       "taxId": "VKN (VÖEN): 5800452582",
       "terms": {
         "nav": "Kullanım Koşulları",
-        "title": "Kullanım Koşulları ve Kamuya Açık Teklif",
-        "intro": "Bu belge, cradexagency.com sitesinde sunulan hizmet ve ürünlerin satış koşullarını belirler. Sitede sipariş vererek veya ödeme yaparak bu koşulları kabul etmiş olursunuz.",
+        "title": "Kullanım Koşulları ve Genel Teklif",
+        "intro": "Bu belge, cradexagency.com üzerinden sunulan hizmet ve ürünlerin koşullarını belirler. Siteyi kullanarak, sipariş vererek veya ödeme yaparak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız lütfen sipariş vermeyin.",
         "sections": [
           {
-            "h": "1. Taraflar",
+            "h": "1. Taraflar ve tanımlar",
             "p": [
-              "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582. Adres: Reşid Behbudov Cad. 55, Bakü, Azerbaycan. Telefon: +994 50 778 68 87. E-posta: info@cradexagency.com.",
-              "Alıcı: sitede sipariş veren veya ödeme yapan gerçek veya tüzel kişi."
+              "Satıcı (Yüklenici): şahıs işletmesi Paşa Quliyev, Cradex Agency markası, vergi numarası (VÖEN) 5800452582. Adres: Rəşid Behbudov Caddesi No: 55, Bakü, Azerbaycan. Telefon ve WhatsApp: +994 50 778 68 87. E-posta: info@cradexagency.com. Web sitesi: cradexagency.com.",
+              "Müşteri: sitede sipariş veren, ödeme yapan veya Satıcıdan hizmet talep eden gerçek veya tüzel kişi. Ticari veya mesleki olmayan amaçla sipariş veren gerçek kişi \"Tüketici\" sayılır ve Azerbaycan Cumhuriyeti'nin tüketici koruma mevzuatından yararlanır.",
+              "Hizmet: Satıcının yürüttüğü işler ve sunduğu dijital ürünler. Kombo paket: sitede satılan hazır Instagram, TikTok veya YouTube sosyal medya paketi. Bireysel proje: yazılı teklif veya sözleşme çerçevesinde yürütülen iş."
             ]
           },
           {
-            "h": "2. Hizmet ve ürünler",
+            "h": "2. Genel teklif ve kabul",
             "p": [
-              "Satıcı; web sitesi ve mobil uygulama geliştirme, SEO ve GEO, dijital reklam, teknik hizmet, chatbot ve sosyal medya kombo paketleri sunar.",
-              "Sosyal medya kombo paketleri: Instagram Kombo Paketi, TikTok Kombo Paketi ve YouTube Kombo Paketi. Her paketin içeriği sitede paket kartında belirtilir."
+              "Bu belge, Azerbaycan Cumhuriyeti Medeni Kanunu uyarınca belirsiz sayıda kişiye yöneltilmiş genel tekliftir. Müşteri sipariş formunu gönderdiğinde, ödeme yaptığında veya Satıcının teklifini yazılı olarak (e-posta, WhatsApp) onayladığında koşullar kabul edilmiş sayılır.",
+              "Bireysel projeler için taraflar arasında ayrı bir yazılı teklif veya sözleşme yapılırsa, o belge bu koşullara üstündür; onda düzenlenmeyen konularda bu koşullar uygulanır."
             ]
           },
           {
-            "h": "3. Fiyatlar",
+            "h": "3. Hizmetler",
             "p": [
-              "Azerbaycan'dan yapılan ödemeler için fiyatlar manat (AZN) cinsinden gösterilir: Instagram Kombo Paketi 20 ₼, TikTok Kombo Paketi 20 ₼, YouTube Kombo Paketi 35 ₼.",
-              "Azerbaycan dışındaki alıcılar için fiyatlar ABD doları (USD) cinsinden gösterilir: 15 $, 15 $ ve 25 $.",
-              "Web sitesi, mobil uygulama ve diğer özel projelerin fiyatı, projenin kapsamına göre yazılı teklifte belirlenir. Fiyatlara tüm hizmet bedelleri dahildir, gizli ücret yoktur."
+              "Satıcı şu hizmetleri sunar: web sitesi geliştirme (CMS tabanlı ve özel kodlu), mobil uygulama, SEO ve GEO, dijital reklam yönetimi (Meta, TikTok, Google, LinkedIn), teknik hizmet (site güvenliği, teknik SEO, backlink, sosyal medya hesaplarının kurtarılması için resmi başvuruların hazırlanması), yapay zekâ destekli sohbet botu (kurulum 700 AZN, aylık 300 AZN'den, yaklaşık 10 gün), CRM ve otomasyon, Google Haritalar ve Yandex Haritalar işletme kaydı ile sosyal medya kombo paketleri.",
+              "Harita kaydı hizmetinde Satıcı, adresin Google Haritalar ve Yandex Haritalar'da ve bunları kullanan Bolt, Yango gibi taksi uygulamalarında görünmesi için başvuruyu hazırlar ve iletir. Nihai onay ve yayın kararı platforma aittir.",
+              "Her hizmetin kapsamı sitedeki açıklamada, yazılı teklifte veya sözleşmede belirtilir. Kapsam dışı işler ayrıca kararlaştırılır ve ayrıca ücretlendirilir."
             ]
           },
           {
-            "h": "4. Sipariş ve ödeme",
+            "h": "4. Sipariş ve sözleşmenin kurulması",
             "p": [
-              "Alıcı, sipariş formunda hesap bilgilerini ve iletişim bilgilerini doğru belirtmelidir. Satıcı, hatalı bilgiden kaynaklanan gecikmelerden sorumlu değildir.",
-              "Ödeme, banka kartıyla bankanın güvenli 3D Secure sayfasında yapılır. Kart bilgileri Satıcının sitesine girilmez ve saklanmaz.",
-              "Ödemenin onaylanmasından sonra sipariş kabul edilmiş sayılır ve Alıcıya e-posta veya WhatsApp ile bildirim gönderilir."
+              "Müşteri; doğru adını, e-postasını, WhatsApp numarasını ve gerektiğinde hesap kullanıcı adını veya bağlantısını bildirmelidir. Yanlış veya eksik bilgiden kaynaklanan gecikme ve sonuçlardan Satıcı sorumlu değildir.",
+              "Sözleşme, Satıcı siparişi onayladığında (e-posta, WhatsApp veya sitede bildirim) kurulmuş sayılır. Satıcı haklı bir sebeple (örneğin hukuka aykırı içerik, platform kurallarının ihlali, ifanın imkânsızlığı) siparişi kabul etmeyebilir; bu durumda alınan ödeme iade edilir.",
+              "Web sitesi siparişinden önce Müşteri, hiçbir yükümlülük altına girmeden ücretsiz demo site talep edebilir. Demo yalnızca tanıtım amaçlıdır, üzerindeki haklar Satıcıya aittir ve tam ödeme yapılmadan ticari amaçla kullanılamaz."
             ]
           },
           {
-            "h": "5. Hizmetin sunulması",
+            "h": "5. Fiyatlar, ödeme ve taksit",
             "p": [
-              "Kombo paketlerin uygulanması, ödemenin onaylanmasından sonra 24 saat içinde başlar ve genellikle 1–7 gün içinde tamamen teslim edilir.",
-              "Uygulama süresince Alıcının hesabının gizlilik ayarı \"Herkese açık\" olmalıdır. Hesap kapalı veya gizli olursa uygulama durdurulur.",
-              "Paket içeriğindeki göstergelerde azalma olursa, Satıcı bunları 7/24 telafi kapsamında ücretsiz olarak geri yükler.",
-              "Özel projelerin uygulama süresi ve aşamaları yazılı teklifte belirtilir."
+              "Fiyatlar sitede gösterilir: Azerbaycan'dan verilen siparişlerde Azerbaycan manatı (AZN), diğer ülkelerden verilenlerde ABD doları (USD) ile. Toplam tutar ödemeden önce gösterilir. Satıcı fiyatları değiştirebilir; değişiklik onaylanmış siparişleri etkilemez.",
+              "Web sitesi aylık plan (taksit) modeliyle de sipariş edilebilir: CMS tabanlı sitelerde bedelin %25'i, özel kodlu sitelerde %10'u peşin ödenir, kalan tutar 12 ay boyunca eşit aylık taksitlerle ödenir. Bir yıllık bedelin tek seferde ödenmesi halinde %20 indirim uygulanır. Sitede geçen \"100 ₼ ön ödeme\" demo aşamasına ilişkindir ve ayrı koşullarla sunulur. Kesin tutarlar ve ödeme planı sipariş sırasında veya yazılı teklifte teyit edilir.",
+              "Sitede şu an gerçek zamanlı kartlı ödeme etkin değildir: onay ve ödeme WhatsApp veya e-posta ile kararlaştırılır. Banka bağlandığında kartlı ödeme yalnızca bankanın güvenli 3D Secure sayfasında yapılacaktır; kart bilgileri sitemize girilmez ve sitemizde saklanmaz.",
+              "Reklam bütçeleri (Meta, TikTok, Google, LinkedIn) hizmet bedeline dahil değildir. Doğrudan platformlara ödenir veya Müşterinin onayıyla ayrıca faturalandırılır.",
+              "Ödeme gecikirse Satıcı 12. bölüme göre hareket edebilir. Varsa vergiler ve banka komisyonları ayrıca belirtilir."
             ]
           },
           {
-            "h": "6. Tarafların yükümlülükleri",
+            "h": "6. Sosyal medya kombo paketleri",
             "p": [
-              "Satıcı, hizmeti zamanında ve tanıma uygun şekilde sunmayı ve Alıcının bilgilerini korumayı taahhüt eder.",
-              "Alıcı, platformların (Instagram, TikTok, YouTube) kurallarına aykırı içerik için hizmet sipariş etmemeyi taahhüt eder. Bu durumda Satıcı siparişi iptal etme hakkına sahiptir."
+              "Paketler: Instagram Kombo Paketi, TikTok Kombo Paketi ve YouTube Kombo Paketi (örneğin 20 ₼ ve 35 ₼; yurt dışında USD ile). Her paketin içeriği kartında gösterilir. Adet 1 ile 100 arasında seçilir ve toplam tutar birim fiyat ile adedin çarpımıdır.",
+              "Siparişte hesap kullanıcı adı veya bağlantısı, ad, e-posta ve zorunlu WhatsApp numarası bulunmalıdır. İş, ödemenin onayından sonra 24 saat içinde başlar ve genellikle 1–7 gün içinde tamamlanır.",
+              "Uygulama süresince hesap herkese açık olmalı ve kullanıcı adı değiştirilmemelidir. Hesap gizli veya kapalı hale gelirse uygulama durdurulabilir ve bu durum Satıcının kusuru sayılmaz.",
+              "Kombo paketler, paket açıklamasında belirtilenin ötesinde belirli bir sonuç (artış, görüntülenme vb.) garanti etmez; ücretsiz yenileme koşulları paket açıklamasında ve iade politikasında yer alır."
             ]
           },
           {
-            "h": "7. Sorumluluk",
+            "h": "7. Tarafların yükümlülükleri",
             "p": [
-              "Satıcı, üçüncü taraf platformların (Meta, TikTok, Google) kurallarında ve algoritmalarında yapılan değişikliklerden sorumlu değildir.",
-              "Tarafların iradesi dışındaki haller (mücbir sebep) yükümlülüklerin yerine getirilme süresini uzatır."
+              "Satıcı; hizmeti açıklamaya ve kararlaştırılan süreye uygun, profesyonel biçimde sunmayı, Müşterinin verilerini gizlilik politikasına uygun korumayı ve ilerleme sorularına makul sürede yanıt vermeyi üstlenir.",
+              "Müşteri; doğru bilgi vermeyi, gerekli materyal, erişim ve onayları zamanında sağlamayı, kararlaştırılan bedeli vaktinde ödemeyi ve kanuna, üçüncü kişilerin haklarına veya platform kurallarına aykırı hizmet sipariş etmemeyi üstlenir.",
+              "Müşterinin materyal, onay veya yanıt vermedeki gecikmesi teslim süresini aynı oranda uzatır. Proje aşaması onaylandıktan sonra istenen değişiklikler ayrıca kararlaştırılır ve ücretlendirilir."
             ]
           },
           {
-            "h": "8. Uyuşmazlıkların çözümü",
+            "h": "8. Müşteri içeriği ve fikri mülkiyet",
             "p": [
-              "Uyuşmazlıklar öncelikle müzakere yoluyla çözülür. Uzlaşma sağlanamazsa uyuşmazlıklar Azerbaycan Cumhuriyeti mevzuatına uygun olarak mahkemede görülür."
+              "Müşteri, sağladığı metin, görsel, logo, veri ve diğer materyallerin sahibi olduğunu veya bunları kullanma hakkına sahip olduğunu beyan eder ve bunlardan doğan üçüncü kişi taleplerinden sorumludur.",
+              "Proje için hazırlanan tasarım ve kaynak kodu üzerindeki mülkiyet ve kullanım hakkı, kararlaştırılan bedelin tamamı ödendiğinde Müşteriye geçer. O zamana kadar Müşteri yalnızca projenin kendisi için sınırlı kullanım hakkına sahiptir. Abonelik (taksit) modelinde hakların geçiş şekli yazılı teklifte belirtilir.",
+              "Satıcının çalışmalarında kullanılan genel şablonlar, kütüphaneler, araçlar ve açık kaynak bileşenler Satıcıya veya lisans sahiplerine ait kalır ve kendi lisans koşullarına tabidir.",
+              "Satıcı, tamamlanan işi portfolyosunda ve pazarlama çalışmalarında gösterme hakkına sahiptir. Müşteri bunu istemiyorsa yazılı (e-posta veya WhatsApp) bildirimde bulunmalıdır; bildirimden sonra Satıcı gösterimi durdurur. Gizli bilgiler asla gösterilmez."
             ]
           },
           {
-            "h": "9. İletişim",
+            "h": "9. Üçüncü taraf platformlar",
             "p": [
-              "Sorularınız için: +994 50 778 68 87 (telefon ve WhatsApp), info@cradexagency.com."
+              "Hizmetlerin bir kısmı Meta (Instagram, Facebook), TikTok, YouTube ve Google, LinkedIn, Yandex ve diğer platformların olanaklarına dayanır. Bu platformların kuralları, algoritmaları, fiyatları ve kararları (hesap kısıtlaması, reklam reddi, kaydın onaylanmaması vb.) Satıcının kontrolü dışındadır.",
+              "Hesap kurtarma hizmetinde Satıcı yalnızca platformların resmi başvuru yollarını kullanır ve platformun kararını garanti etmez. Yetkisiz erişim, kuralların aşılması veya gayriresmî yöntemler kullanılmaz.",
+              "Reklam bütçeleri platformlara ödenir ve Satıcı tarafından iade edilmez. Reklamın platform tarafından durdurulması veya hesabın engellenmesi Satıcının kusuru sayılmaz."
+            ]
+          },
+          {
+            "h": "10. Garanti ve sorumluluğun sınırlandırılması",
+            "p": [
+              "Satıcı hizmeti gereken özenle sunmayı üstlenir; ancak arama sıralaması, trafik, satış, reklam sonuçları, sosyal medya göstergeleri ve harita onayı gibi üçüncü kişilere ve piyasa koşullarına bağlı sonuçları garanti etmez. Öngörüler taahhüt değildir.",
+              "Kanunda aksi öngörülen haller saklı kalmak üzere, Satıcının herhangi bir talep nedeniyle toplam sorumluluğu Müşterinin ilgili hizmet için fiilen ödediği tutarla sınırlıdır ve yoksun kalınan kâr ile dolaylı ve sonuç zararları kapsamaz. Bu sınırlama kasıt veya ağır ihmale ve vazgeçilemeyecek tüketici haklarına uygulanmaz.",
+              "Web sitesinin tesliminden sonra teklifte belirtilen süre içinde, kararlaştırılan açıklamaya uymayan kusurların ücretsiz giderilmesi talep edilebilir. Müşteri veya üçüncü kişilerce sonradan yapılan değişiklikler ile barındırma ve alan adı sağlayıcılarının arızaları bu hakkın dışındadır."
+            ]
+          },
+          {
+            "h": "11. Mücbir sebep",
+            "p": [
+              "Taraflar, makul kontrollerinin dışındaki olaylar (doğal afet, savaş, grev, kamu makamlarının kararları, elektrik veya internet kesintileri, barındırma, bulut ve platform hizmetlerinde yaygın arızalar, siber saldırılar vb.) nedeniyle yükümlülüklerini yerine getiremezse sorumlu tutulmaz.",
+              "Olaydan etkilenen taraf diğerini makul sürede bilgilendirmelidir. Olay bir aydan uzun sürerse taraflardan biri sözleşmeyi feshedebilir; bu durumda ifa edilmeyen kısım için ödeme iade edilir."
+            ]
+          },
+          {
+            "h": "12. Ödeme yapılmaması halinde hizmetin durdurulması",
+            "p": [
+              "Ödeme (taksit dahil) zamanında yapılmazsa Satıcı, yazılı hatırlatma yapıp makul bir ek süre verdikten sonra işleri, siteye teknik desteği veya hizmetin sunulmasını geçici olarak durdurabilir.",
+              "Ek sürede de ödeme yapılmazsa Satıcı sözleşmeyi feshedebilir, yapılan işin bedelini talep edebilir ve tam ödenmemiş projenin kodu ile tasarımı üzerindeki haklarını elinde tutabilir. Kanundan doğan tüketici hakları saklıdır."
+            ]
+          },
+          {
+            "h": "13. Koşullarda değişiklik",
+            "p": [
+              "Satıcı bu koşulları güncelleyebilir. Yeni sürüm sitede yayımlandığı tarihte yürürlüğe girer ve sayfanın üstünde güncelleme tarihi olarak gösterilir. Değişiklikler onaylanmış siparişlere Müşteri aleyhine uygulanmaz.",
+              "Herhangi bir hükmün geçersiz sayılması halinde diğer hükümler yürürlükte kalır."
+            ]
+          },
+          {
+            "h": "14. Uygulanacak hukuk ve uyuşmazlıklar",
+            "p": [
+              "Bu koşullara ve bunlardan doğan ilişkilere Medeni Kanun ile \"Tüketici Haklarının Korunması Hakkında\", \"Elektronik Ticaret Hakkında\", \"Kişisel Veriler Hakkında\" ve \"Bilgi, Bilgilendirme ve Bilginin Korunması Hakkında\" kanunlar dahil Azerbaycan Cumhuriyeti mevzuatı uygulanır.",
+              "Uyuşmazlıklar öncelikle yazılı başvuru ve görüşme yoluyla çözülür; başvurulara 30 takvim günü içinde yanıt verilir. Anlaşma sağlanamazsa uyuşmazlık Azerbaycan Cumhuriyeti'nin yetkili mahkemelerinde görülür. Tüketici, kanunda öngörülen şekilde yetkili kamu kurumuna da başvurabilir.",
+              "Dijital hizmetin niteliği gereği (ifaya başlandıktan sonra) iadeyi sınırlayan hükümler, tüketicinin kanundan doğan vazgeçilemez haklarını etkilemez."
+            ]
+          },
+          {
+            "h": "15. İletişim",
+            "p": [
+              "Soru ve başvurular için: şahıs işletmesi Paşa Quliyev, Cradex Agency, Rəşid Behbudov Caddesi No: 55, Bakü; +994 50 778 68 87 (telefon ve WhatsApp); info@cradexagency.com."
             ]
           }
         ]
@@ -2743,57 +2798,84 @@
       "privacy": {
         "nav": "Gizlilik Politikası",
         "title": "Gizlilik Politikası",
-        "intro": "Bu politika, cradexagency.com sitesinde topladığımız kişisel verileri, bunları nasıl kullandığımızı ve nasıl koruduğumuzu açıklar. Veriler, Azerbaycan Cumhuriyeti Kişisel Veriler Hakkında Kanunu'na uygun olarak işlenir.",
+        "intro": "Bu politika, cradexagency.com üzerinde hangi kişisel verileri topladığımızı, neden ve ne kadar süre sakladığımızı, kimlerle paylaştığımızı ve haklarınızı nasıl kullanabileceğinizi açıklar. Veriler, Azerbaycan Cumhuriyeti'nin \"Kişisel Veriler Hakkında\" Kanunu ve yürürlükteki diğer mevzuata uygun olarak işlenir.",
         "sections": [
           {
             "h": "1. Veri sorumlusu",
             "p": [
-              "Şahıs işletmesi Paşa Quliyev (Cradex Agency markası), VKN (VÖEN) 5800452582. Adres: Reşid Behbudov Cad. 55, Bakü, Azerbaycan. Telefon: +994 50 778 68 87."
+              "Kişisel verilerin sorumlusu, şahıs işletmesi Paşa Quliyev'dir (Cradex Agency markası), vergi numarası (VÖEN) 5800452582. Adres: Rəşid Behbudov Caddesi No: 55, Bakü, Azerbaycan. Telefon ve WhatsApp: +994 50 778 68 87. E-posta: info@cradexagency.com."
             ]
           },
           {
-            "h": "2. Hangi verileri topluyoruz",
+            "h": "2. İşlediğimiz veriler",
             "p": [
-              "Sipariş ve başvuru sırasında: ad ve soyad, telefon numarası, e-posta adresi, sosyal medya hesabının adı veya bağlantısı.",
-              "Siteyi kullanırken: tarayıcı türü, cihaz, yaklaşık ülke ve şehir, görüntülenen sayfalar (Google Analytics aracılığıyla, anonim biçimde).",
-              "Kart bilgilerini toplamıyoruz: ödeme bankanın sayfasında yapılır."
+              "Sipariş verileri: ad, e-posta, WhatsApp numarası, sosyal medya hesap kullanıcı adı veya bağlantısı, siparişin içeriği, adedi, tutarı ve durumu. Bu veriler içerik yönetim sistemimizde (Sanity) gizli kimliklerle saklanır.",
+              "Sohbet asistanı: yazdığınız sorular ve verdiyseniz iletişim bilgisi. Hazır bilgi tabanında yanıtı bulunmayan sorular Sanity'de saklanır ve Resend hizmeti üzerinden e-posta ile bize iletilir.",
+              "İletişim: WhatsApp veya e-posta bağlantılarıyla bize gönderdiğiniz mesajlar. Sohbet botu sipariş formu yalnızca WhatsApp veya e-posta uygulamanızı açar; girdiğiniz bilgiler sitede saklanmaz.",
+              "Teknik veriler: tarayıcı, cihaz, yaklaşık ülke ve görüntülenen sayfalar (Google Analytics 4 ile, toplu istatistik olarak). Ülke bilgisi, fiyatları AZN veya USD olarak göstermek için barındırma ağının başlığından okunur ve saklanmaz. Tema, dil ve kapatılan bildirim tercihleriniz tarayıcınızın yerel depolamasında (localStorage) tutulur.",
+              "Banka kartı verilerini toplamıyor ve saklamıyoruz; kartlı ödeme etkinleştirildiğinde yalnızca bankanın 3D Secure sayfasında yapılacaktır."
             ]
           },
           {
-            "h": "3. Verilerin kullanım amacı",
+            "h": "3. Amaçlar ve hukuki sebepler",
             "p": [
-              "Siparişi yerine getirmek, sizinle iletişim kurmak, ödemeyi onaylamak, hizmet kalitesini ve siteyi iyileştirmek.",
-              "Verilerinizi reklam amacıyla üçüncü taraflara satmıyoruz."
+              "Siparişi almak ve yerine getirmek, sizinle iletişim kurmak, ödemeyi onaylamak (sebep: sözleşmenin ifası ve talebiniz). Sorularınızı yanıtlamak ve destek vermek (talebiniz ve meşru menfaatimiz).",
+              "Muhasebe, vergi ve diğer yasal yükümlülükleri yerine getirmek (hukuki yükümlülük). Siteyi ve hizmetleri geliştirmek, güvenliği sağlamak ve kötüye kullanımı önlemek (meşru menfaat; analitik için gerektiğinde açık rızanız).",
+              "Verilerinizi satmıyor ve reklam amacıyla üçüncü kişilere vermiyoruz. Yalnızca kanunun gerektirdiği hallerde yetkili kamu makamlarına açıklanabilir."
             ]
           },
           {
-            "h": "4. Üçüncü taraflar",
+            "h": "4. Çerezler ve analitik",
             "p": [
-              "Veriler yalnızca hizmetin sunulması için gerekli taraflarla paylaşılır: ödeme bankası, barındırma (Vercel), içerik yönetim sistemi (Sanity), analitik (Google Analytics), WhatsApp."
+              "Site, ziyaret istatistikleri için çerez kullanan Google Analytics 4'ü kullanır; sonuçlar yalnızca toplu biçimde incelenir. Dil ve gündüz/gece teması tercihiniz tarayıcının yerel depolamasında tutulur.",
+              "Çerezleri tarayıcı ayarlarından silebilir veya engelleyebilirsiniz; bu durumda bazı kolaylıklar (tercihlerin hatırlanması) çalışmayabilir. Google Analytics'i Google'ın sunduğu tarayıcı eklentisiyle de devre dışı bırakabilirsiniz."
             ]
           },
           {
-            "h": "5. Saklama süresi",
+            "h": "5. Veri işleyenler ve yurt dışına aktarım",
             "p": [
-              "Sipariş verileri mevzuatın öngördüğü süre boyunca, diğer veriler ise amaca ulaşıldıktan sonra en geç 2 yıl saklanır."
+              "Hizmeti sunmak için şu sağlayıcıları kullanıyoruz: barındırma (Vercel), içerik yönetimi ve veri tabanı (Sanity), e-posta gönderimi (Resend), analitik (Google Analytics) ve iletişim kanalı WhatsApp. Bunlar verileri yalnızca bizim talimatımızla ve kendi sözleşme koşullarına göre işler.",
+              "Bu sağlayıcıların sunucuları Azerbaycan dışında bulunabilir; dolayısıyla verileriniz sınır ötesine aktarılabilir. Yalnızca hizmet için gerekli olanı aktarır ve sağlayıcıların veri koruma taahhütlerini dikkate alırız. Sipariş vererek veya bize yazarak bu aktarıma onay vermiş olursunuz."
             ]
           },
           {
-            "h": "6. Güvenlik",
+            "h": "6. Saklama süresi",
             "p": [
-              "Site HTTPS ile şifrelenir, verilere erişim sınırlandırılmıştır ve düzenli güvenlik kontrolleri yapılır."
+              "Sipariş ve yazışma verileri sözleşmenin ifası için gereken süre boyunca ve vergi ile muhasebe kayıtları için yasal süre kadar saklanır. Sohbet sorularını amaç gerçekleştikten sonra gereğinden uzun tutmayız.",
+              "Analitik verileri Google Analytics ayarlarında belirlenen süre boyunca saklanır; süre sonunda silinir veya anonim hale getirilir."
             ]
           },
           {
-            "h": "7. Çerezler (cookies)",
+            "h": "7. Güvenlik",
             "p": [
-              "Site, dil ve açık/koyu mod tercihinizi hatırlamak ve anonim istatistik toplamak için çerezleri ve yerel depolamayı kullanır. Tarayıcı ayarlarından çerezleri silebilir veya engelleyebilirsiniz."
+              "Site HTTPS ile çalışır, yönetim paneline erişim kimlik doğrulamasına bağlıdır, erişim anahtarları ayrıca korunur ve verilere yalnızca gerekli kişiler erişir. Ancak internet üzerinden iletimin mutlak güvenliğini hiç kimse garanti edemez.",
+              "Verilerin hukuka aykırı biçimde ifşa edildiği anlaşılırsa, kanunun gerektirdiği hallerde etkilenen kişileri ve yetkili makamı bilgilendiririz."
             ]
           },
           {
-            "h": "8. Haklarınız",
+            "h": "8. Haklarınız ve başvuru yöntemi",
             "p": [
-              "Verilerinize erişme, bunları düzeltme veya silinmesini talep etme hakkına sahipsiniz. Bunun için info@cradexagency.com adresine yazın."
+              "Kanun uyarınca verilerinizin işlenip işlenmediğini öğrenme, bunlara erişme, yanlış verilerin düzeltilmesini, hukuka aykırı işlenen veya artık gerekmeyen verilerin silinmesini ya da engellenmesini isteme, rızanızı geri alma ve işlemeye itiraz etme hakkınız vardır.",
+              "Başvuru için info@cradexagency.com adresine yazın veya WhatsApp'tan bize ulaşın; kimliğinizi doğrulamak için ek bilgi isteyebiliriz. Başvurularınızı en geç 10 iş günü içinde yanıtlarız; karmaşık durumlarda sizi bilgilendirerek süreyi kanunun izin verdiği ölçüde uzatabiliriz.",
+              "Haklarınızın ihlal edildiğini düşünüyorsanız yetkili kamu kurumuna veya mahkemeye başvurabilirsiniz."
+            ]
+          },
+          {
+            "h": "9. Çocuklar",
+            "p": [
+              "Hizmetlerimiz 18 yaşın altındaki kişilere yönelik değildir. Reşit olmayanlardan bilerek veri toplamayız; tespit edersek sileriz. Ebeveyn veya vasi bu konuda bize yazabilir."
+            ]
+          },
+          {
+            "h": "10. Politikada değişiklik",
+            "p": [
+              "Bu politikayı mevzuattaki veya hizmetlerimizdeki değişikliklere göre güncelleyebiliriz. Yeni sürüm bu sayfada yayımlandığı tarihte yürürlüğe girer; güncelleme tarihi yukarıda gösterilir."
+            ]
+          },
+          {
+            "h": "11. İletişim",
+            "p": [
+              "Gizlilikle ilgili sorular için: şahıs işletmesi Paşa Quliyev, Cradex Agency, Rəşid Behbudov Caddesi No: 55, Bakü; info@cradexagency.com; +994 50 778 68 87."
             ]
           }
         ]
@@ -2801,46 +2883,74 @@
       "refund": {
         "nav": "İade Politikası",
         "title": "İade Politikası",
-        "intro": "Bu politika, ödemenin hangi hallerde ve nasıl iade edileceğini belirler.",
+        "intro": "Bu politika, ödemenin hangi hallerde ve nasıl iade edildiğini belirler. Kullanım koşullarının ayrılmaz parçasıdır ve kanundan doğan tüketici haklarınızı sınırlamaz.",
         "sections": [
           {
-            "h": "1. Tam iade",
+            "h": "1. Genel kural",
             "p": [
-              "Siparişin uygulanmasına başlanmamışsa ödemenin %100'ü iade edilir. Bunun için ödemeden sonra 24 saat içinde bize yazmanız yeterlidir."
+              "Hizmetlerimiz dijital hizmetlerdir: ifaya başlandıktan sonra sunulmuş iş geri alınamaz. Bu nedenle iade, ifanın ne ölçüde başladığına bağlıdır. Kanunun iadeyi zorunlu kıldığı hallerde kanun, bu politikadaki sınırlamalara üstündür.",
+              "Bireysel projeler için yazılı teklif veya sözleşmede farklı bir kural varsa o uygulanır."
             ]
           },
           {
-            "h": "2. Kısmi iade",
+            "h": "2. Tam iade",
             "p": [
-              "Uygulama başlamışsa, paketin henüz teslim edilmeyen kısmına karşılık gelen tutar iade edilir.",
-              "Hizmet bizden kaynaklanan nedenlerle 7 gün içinde tamamen teslim edilmezse, teslim edilmeyen kısmın bedeli iade edilir."
+              "İfa başlamamışsa ödemenin %100'ü iade edilir. Kombo paketlerde iş, ödeme onayından sonra 24 saat içinde başlar; bu süre içinde başvurur ve iş başlamamışsa tam iade alırsınız.",
+              "Satıcı siparişi kabul etmez, vazgeçer veya başlayamazsa ödeme tamamen iade edilir."
             ]
           },
           {
-            "h": "3. İade yapılmayan haller",
+            "h": "3. Kısmi iade",
             "p": [
-              "Paket tamamen teslim edilmişse.",
-              "Alıcı hatalı hesap bilgisi vermişse veya uygulama sırasında hesabı gizlemiş, kapatmış ya da kullanıcı adını değiştirmişse.",
-              "Hesap, platform kurallarının ihlali nedeniyle kapatılmışsa."
+              "İş başlamış ancak tamamlanmamışsa teslim edilmeyen kısmın bedeli iade edilir. Kombo paketlerde teslim edilen kısım ödemeden düşülür.",
+              "Hizmet Satıcının sebebiyle kararlaştırılan sürede (kombo paketlerde 7 gün) tam teslim edilmezse, teslim edilmeyen kısmın bedeli iade edilir veya Müşterinin tercihiyle teslimat sürdürülür.",
+              "Web siteleri ve diğer bireysel projelerde iade aşamalara göre hesaplanır: onaylanmış ve teslim edilmiş aşamaların bedeli iade edilmez, başlanmamış aşamaların bedeli iade edilir."
             ]
           },
           {
-            "h": "4. Telafi (7/24)",
+            "h": "4. İade edilmeyen haller",
             "p": [
-              "Teslim edilen göstergelerde azalma olursa, bunlar ücretsiz olarak geri yüklenir. Telafi, iadenin alternatifi değil, ek bir güvencedir."
+              "Hizmet tamamen sunulmuşsa veya Müşteri işi kabul etmişse.",
+              "Müşteri yanlış hesap bilgisi vermişse, uygulama sırasında hesabı gizli veya kapalı hale getirmişse, kullanıcı adını değiştirmişse ya da gerekli erişim ve materyalleri sağlamamışsa.",
+              "Hesap, reklam veya kayıt platform kurallarının ihlali nedeniyle kısıtlanmış ya da kapatılmışsa veya platformun kararı (hesabın geri verilmemesi, harita kaydının onaylanmaması) Satıcının kontrolü dışındaysa; bu durumda yapılan işin bedeli iade edilmez.",
+              "Müşteri hizmetin başlatılmasını istemiş ve hizmet sunulmuşsa, sunulan kısım için. Bu hüküm, kanunen iadenin zorunlu olduğu hallere uygulanmaz."
             ]
           },
           {
-            "h": "5. Özel projeler",
+            "h": "5. Sosyal medya kombo paketleri",
             "p": [
-              "Web sitesi, mobil uygulama ve diğer özel projeler için iade koşulları, sözleşmede veya yazılı teklifte aşamalara göre belirlenir. Ücretsiz demo için herhangi bir ödeme alınmaz."
+              "İş başlamamışsa tam iade uygulanır (2. bölüm). İş başladıktan sonra paket, Müşterinin talebiyle sunulan dijital hizmet sayılır: teslim edilen kısım için ödeme iade edilmez, teslim edilmeyen kısım 3. bölüme göre iade edilir.",
+              "Teslim edilen göstergelerde platform kaynaklı düşüş olursa, paket açıklamasında belirtilen süre içinde ücretsiz yenilenir. Bu, iadeye alternatif değil, ek bir güvencedir."
             ]
           },
           {
-            "h": "6. Nasıl başvurulur",
+            "h": "6. Reklam bütçeleri ve üçüncü taraf ücretleri",
             "p": [
-              "WhatsApp: +994 50 778 68 87 veya info@cradexagency.com. Başvuruda sipariş tarihini, paketi ve ödemenin yapıldığı kartın son 4 hanesini belirtin.",
-              "Onaylanan iade, ödemenin yapıldığı karta 5–10 iş günü içinde aktarılır. Süre bankaya bağlıdır."
+              "Meta, TikTok, Google, LinkedIn gibi platformlara ödenen reklam bütçeleri ile alan adı, barındırma, lisans ve platform veya harita ücretleri, tutar doğrudan platforma veya sağlayıcıya gittiği için Satıcı tarafından iade edilmez. Platformun kendi iade kuralları ayrıca geçerlidir.",
+              "Satıcının kendi yönetim ücreti, ifa edilmeyen kısım için bu politikaya göre iade edilebilir."
+            ]
+          },
+          {
+            "h": "7. Taksit planları ve iptal",
+            "p": [
+              "Abonelik (taksit) modelinde ön ödeme (CMS tabanlı sitelerde %25, özel kodlu sitelerde %10) işe başlamak için ayrılan masrafları ve yapılan aşamayı karşılar; işe başlandıktan sonra iade edilmez. İşe başlanmamışsa tamamen iade edilir.",
+              "Müşteri sözleşmeyi iptal edebilir. Bu durumda iptal tarihine kadar yapılan işlerin ve teslim edilen aşamaların bedeli ödenir; kalan gelecek taksitler tahsil edilmez. İptalde kod ve tasarım üzerindeki haklar yalnızca ödenen kısım oranında, yazılı anlaşmayla geçer.",
+              "Ödenmiş aylık taksitler, o ay için hizmet sunulmuşsa iade edilmez. Yıllık ödeme yapılmış ve sözleşme iptal edilmişse, kullanılmayan aylar için tutar indirim dikkate alınarak yeniden hesaplanır ve iade edilir."
+            ]
+          },
+          {
+            "h": "8. Hizmet sunulmazsa tazminat",
+            "p": [
+              "Hizmet Satıcının sebebiyle sunulmaz veya ciddi bir kusurla sunulursa Müşteri tercihine göre (a) kusurun ücretsiz giderilmesini, (b) hizmetin yeniden sunulmasını veya (c) ödemenin ilgili kısmının iadesini talep edebilir.",
+              "Bu politika, kanunda öngörülen zararın tazmini hakkını ortadan kaldırmaz; sorumluluk sınırı kullanım koşullarının 10. bölümünde belirtilmiştir."
+            ]
+          },
+          {
+            "h": "9. Başvuru yöntemi ve süreler",
+            "p": [
+              "Bize WhatsApp'tan +994 50 778 68 87 numarasıyla veya info@cradexagency.com adresinden ulaşın. Başvuruda sipariş numarasını (veya tarihini), paketi, adınızı ve iletişim bilgilerinizi, ödeme yöntemini ve gerekçeyi belirtin.",
+              "Başvurunuza 3 iş günü içinde ilk yanıtı veririz; kararı 10 iş günü içinde bildiririz. Onaylanan tutar, ödemenin yapıldığı yöntemle iade edilir.",
+              "İade, bankanın uyguladığı süre içinde hesabınıza yansır; bu süre bankaya bağlıdır ve genellikle birkaç iş gününden birkaç haftaya kadar değişebilir. Gecikme bizden kaynaklanmıyorsa, banka komisyonu iade edilen tutardan düşülebilir."
             ]
           }
         ]
@@ -3649,7 +3759,7 @@
     "blogPage": {
       "metaTitle": "Blog — web sitesi, teknoloji ve büyüme",
       "metaDescription": "Web sitesi geliştirme, SEO, reklam, yapay zeka araçları ve işletmelerin dijital büyümesi hakkında pratik yazılar.",
-      "title": "Web sitesi, teknoloji ve büyüme üzerine yazılar",
+      "title": "Web sitesi, teknoloji, reklam ve dijital çözümler",
       "text": "Müşterilerin bize sorduğu soruların net cevapları: web sitesi nasıl seçilir, SEO ne zaman sonuç verir, chatbot ne zaman gerekir.",
       "all": "Tümü",
       "latest": "Son yazı",
@@ -5234,7 +5344,6 @@
         "metaLeadForms": "Lead form kampanyası",
         "metaAdvantageShopping": "Advantage+ shopping",
         "metaCatalogRetargeting": "Katalog retargeting",
-        "metaClickToMessage": "WhatsApp / Direct mesaj",
         "metaTraffic": "Web sitesi trafiği",
         "metaReach": "Erişim kampanyası",
         "metaThruPlay": "ThruPlay video izlenme",
@@ -5306,9 +5415,8 @@
         "seoSchema": "Schema / zengin sonuçlar",
         "seoYoutube": "YouTube SEO",
         "seoMultiBranch": "Çok şubeli yerel SEO",
-        "metaWhatsapp": "WhatsApp mesaj kampanyası",
-        "metaDirect": "Instagram Direct kampanyası",
-        "metaAwareness": "Bilinirlik kampanyası"
+        "metaAwareness": "Bilinirlik kampanyası",
+        "metaMessages": "Mesaj kampanyası"
       },
       "sectors": {
         "clinic": "Klinik",
@@ -5555,6 +5663,20 @@
         "Dil kursunun YouTube kanalı için başlık, açıklama ve bölüm optimizasyonu.",
         "Eczane zincirinin 12 şubesi için ayrı yerel sayfalar ve Google profilleri."
       ]
+    },
+    "maps": {
+      "eyebrow": "Haritalarda kayıt",
+      "title": "İşletmenizi Google ve Yandex haritalarına ekleyelim",
+      "text": "Müşteriler sizi haritada bulsun, rota oluştursun ve taksi çağırdıklarında adresiniz doğru çıksın. Google Haritalar ve Yandex Haritalar'da işletme profilinizi açar, doğrular ve eksiksiz doldururuz.",
+      "p1": "Google Haritalar ve Yandex Haritalar'da işletme profili, doğrulama ve eksiksiz bilgi",
+      "p2": "Adresiniz Bolt, Yango ve diğer taksi uygulamalarında da doğru görünür",
+      "p3": "Çalışma saatleri, telefon, fotoğraflar, kategori ve site bağlantısı",
+      "p4": "Yorumlar ve puanlarla yerel aramada daha fazla müşteri",
+      "cta": "Haritaya eklenmek istiyorum",
+      "message": "Merhaba, işletmemi Google Haritalar ve Yandex Haritalar'a eklemek istiyorum",
+      "yandex": "Yandex Haritalar",
+      "verified": "Doğrulanmış işletme",
+      "found": "Adres bulundu"
     }
   }
 }

@@ -149,22 +149,22 @@ export default async function JournalPage({ params, searchParams }: Props) {
             )}
 
             {totalPages > 1 && (
-              <nav aria-label={t('page', { page })} className="mt-16 flex items-center justify-between gap-4">
+              <nav aria-label={t('page', { page })} className="mt-16 flex items-center justify-between gap-2 sm:gap-4">
                 {page > 1 ? (
-                  <Link href={href(page - 1)} className="inline-flex items-center gap-2 text-lg font-semibold text-text-primary hover:text-accent-ink">
-                    <ArrowLeft size={20} aria-hidden="true" /> {t('prev')}
+                  <Link href={href(page - 1)} aria-label={t('prev')} className="inline-flex h-11 shrink-0 items-center gap-2 text-lg font-semibold text-text-primary hover:text-accent-ink">
+                    <ArrowLeft size={20} aria-hidden="true" /> <span className="hidden sm:inline">{t('prev')}</span>
                   </Link>
                 ) : (
                   <span />
                 )}
-                <ol className="flex flex-wrap items-center justify-center gap-2">
+                <ol className="flex min-w-0 items-center justify-center gap-1 sm:gap-2">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
                     <li key={p}>
                       <Link
                         href={href(p)}
                         aria-current={p === page ? 'page' : undefined}
                         className={cn(
-                          'flex h-11 w-11 items-center justify-center rounded-full text-lg font-semibold transition-colors',
+                          'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-base font-semibold tabular-nums transition-colors sm:h-11 sm:w-11 sm:text-lg',
                           p === page ? 'bg-brand-strong text-snow shadow-card' : 'text-text-secondary hover:bg-bg-secondary hover:text-text-primary'
                         )}
                       >
@@ -174,8 +174,8 @@ export default async function JournalPage({ params, searchParams }: Props) {
                   ))}
                 </ol>
                 {page < totalPages ? (
-                  <Link href={href(page + 1)} className="inline-flex items-center gap-2 text-lg font-semibold text-text-primary hover:text-accent-ink">
-                    {t('next')} <ArrowRight size={20} aria-hidden="true" />
+                  <Link href={href(page + 1)} aria-label={t('next')} className="inline-flex h-11 shrink-0 items-center gap-2 text-lg font-semibold text-text-primary hover:text-accent-ink">
+                    <span className="hidden sm:inline">{t('next')}</span> <ArrowRight size={20} aria-hidden="true" />
                   </Link>
                 ) : (
                   <span />

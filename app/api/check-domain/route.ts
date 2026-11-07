@@ -4,6 +4,8 @@
  * A name that resolves in DNS is taken. One that does not is confirmed via
  * RDAP where the registry has it; .az zones have no RDAP, so for them the
  * DNS answer is final. The result is a guide — the registrar has the last word.
+ * With ?stream=1 the answer is NDJSON: first the list of domains, then one
+ * line per domain the moment its registry answers, so the page fills in live.
  *
  * @author Paşa Quliyev — Cradex Agency
  */
@@ -119,12 +121,36 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'invalid' }, { status: 400 })
   }
 
-  const results = await Promise.all(
-    ZONES.map(async (zone) => {
-      const domain = `${label}.${zone}`
-      return { domain, status: await check(domain, zone) }
+  const domains = ZONES.map((zone) => `${label}.${zone}`)
+
+  if (request.nextUrl.searchParams.get('stream') === '1') {
+    const encoder = new TextEncoder()
+    const body = new ReadableStream<Uint8Array>({
+      async start(controller) {
+        // the visitor may leave before every registry answers
+        let open = true
+        request.signal.addEventListener('abort', () => (open = false))
+        const send = (data: unknown) => {
+          if (!open) return
+          try {
+            controller.enqueue(encoder.encode(JSON.stringify(data) + '\n'))
+          } catch {
+            open = false
+          }
+        }
+        send({ name: label, domains })
+        await Promise.all(
+          ZONES.map(async (zone, i) => {
+            send({ domain: domains[i], status: await check(domains[i], zone), source: NO_RDAP.has(zone) ? 'dns' : 'rdap' })
+          })
+        )
+        if (open) controller.close()
+      },
     })
-  )
+    return new Response(body, { headers: { 'Content-Type': 'application/x-ndjson; charset=utf-8', 'Cache-Control': 'no-store' } })
+  }
+
+  const results = await Promise.all(ZONES.map(async (zone, i) => ({ domain: domains[i], status: await check(domains[i], zone) })))
 
   return NextResponse.json(
     { name: label, results },

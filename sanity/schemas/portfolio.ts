@@ -2,12 +2,12 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'portfolio',
-  title: 'Portfolio',
+  title: 'Veb sayt işləri',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Başlıq',
       type: 'object',
       fields: [
         { name: 'az', type: 'string', title: 'Azərbaycan' },
@@ -19,7 +19,7 @@ export default defineType({
     }),
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Link (slug)',
       type: 'slug',
       options: {
         source: 'title.az',
@@ -29,30 +29,21 @@ export default defineType({
     }),
     defineField({
       name: 'client',
-      title: 'Client Name',
+      title: 'Müştəri',
       type: 'string',
     }),
     defineField({
       name: 'category',
-      title: 'Category',
+      title: 'Kateqoriya',
       type: 'string',
-      options: {
-        list: [
-          { title: 'SEO / Rəqəmsal', value: 'digital-marketing' },
-          { title: 'Ənənəvi Marketinq', value: 'traditional-marketing' },
-          { title: 'SMM', value: 'smm' },
-          { title: 'Qrafik Dizayn', value: 'graphic-motion-design' },
-          { title: 'Foto / Video', value: 'photo-video' },
-          { title: 'Brendinq', value: 'branding' },
-          { title: 'Copywriting', value: 'copywriting' },
-          { title: 'Vebsayt', value: 'web-mobile-dev' },
-        ],
-      },
+      initialValue: 'web-mobile-dev',
+      // older entries keep their old value (smm …); those are archived and not shown
+      hidden: true,
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main Image',
+      title: 'Əsas şəkil',
       type: 'image',
       options: {
         hotspot: true,
@@ -61,7 +52,7 @@ export default defineType({
     }),
     defineField({
       name: 'gallery',
-      title: 'Gallery Images',
+      title: 'Qalereya',
       type: 'array',
       of: [
         {
@@ -74,7 +65,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Təsvir',
       type: 'object',
       fields: [
         { name: 'az', type: 'text', title: 'Azərbaycan', rows: 4 },
@@ -85,13 +76,13 @@ export default defineType({
     }),
     defineField({
       name: 'tools',
-      title: 'Tools Used',
+      title: 'İstifadə olunan texnologiyalar',
       type: 'array',
       of: [{ type: 'string' }],
     }),
     defineField({
       name: 'results',
-      title: 'Results',
+      title: 'Nəticələr',
       type: 'object',
       fields: [
         { name: 'az', type: 'text', title: 'Azərbaycan', rows: 3 },
@@ -422,12 +413,12 @@ export default defineType({
     }),
     defineField({
       name: 'completedAt',
-      title: 'Completed At',
+      title: 'Tamamlanma tarixi',
       type: 'date',
     }),
     defineField({
       name: 'featured',
-      title: 'Featured Project',
+      title: 'Seçilmiş layihə',
       type: 'boolean',
       initialValue: false,
     }),

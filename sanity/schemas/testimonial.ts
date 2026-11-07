@@ -9,12 +9,12 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://cradexagency.com'
 
 export default defineType({
   name: 'testimonial',
-  title: 'Testimonials (Müştəri Rəyləri)',
+  title: 'Müştəri rəyi',
   type: 'document',
   fields: [
     defineField({
       name: 'clientName',
-      title: 'Client Name',
+      title: 'Müştərinin adı',
       type: 'object',
       description:
         'Names are transliterated per language — Кенан Акберли in Russian, Kenan Akbarli in English.',
@@ -28,7 +28,7 @@ export default defineType({
     }),
     defineField({
       name: 'clientPosition',
-      title: 'Client Position',
+      title: 'Vəzifəsi',
       type: 'object',
       fields: [
         { name: 'az', type: 'string', title: 'Azərbaycan' },
@@ -39,12 +39,12 @@ export default defineType({
     }),
     defineField({
       name: 'company',
-      title: 'Company',
+      title: 'Şirkət',
       type: 'string',
     }),
     defineField({
       name: 'avatar',
-      title: 'Client Photo',
+      title: 'Şəkil',
       type: 'image',
       description: 'Upload a photo here. Leave empty to keep using the path below.',
       options: {
@@ -53,14 +53,14 @@ export default defineType({
     }),
     defineField({
       name: 'photoPath',
-      title: 'Client Photo — file path',
+      title: 'Şəkil (fayl yolu, köhnə)',
       type: 'string',
       description:
         'Path to an image already in public/, e.g. /images/testimonials/kenan.jpg. Only used when no photo is uploaded above. Lets the existing photos keep working without re-uploading all of them.',
     }),
     defineField({
       name: 'testimonial',
-      title: 'Testimonial',
+      title: 'Rəy',
       type: 'object',
       fields: [
         { name: 'az', type: 'text', title: 'Azərbaycan', rows: 4 },
@@ -85,7 +85,7 @@ export default defineType({
     }),
     defineField({
       name: 'rating',
-      title: 'Rating',
+      title: 'Reytinq',
       type: 'number',
       validation: (Rule) => Rule.required().min(1).max(5),
       initialValue: 5,
@@ -100,7 +100,7 @@ export default defineType({
     }),
     defineField({
       name: 'order',
-      title: 'Display Order',
+      title: 'Sıra',
       type: 'number',
       description: 'Lower numbers appear first',
       initialValue: 0,

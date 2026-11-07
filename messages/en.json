@@ -2541,7 +2541,9 @@
       "limited": "Too many requests. Please try again in a minute.",
       "register": "Register",
       "registerMessage": "Hello, I would like to register the domain {domain}",
-      "note": "The result is for information only. Availability is confirmed one last time at registration."
+      "note": "Results come live from the registries' RDAP servers and DNS. For .az domains the DNS response is used. Final confirmation happens at registration.",
+      "live": "Live check: querying registry servers",
+      "checkedAt": "Checked live: {time}"
     },
     "reviews": {
       "eyebrow": "Client reviews",
@@ -2590,7 +2592,7 @@
       "name": "Cradex Assistant",
       "status": "Online · replies in seconds",
       "teaser": "Have a question? 👋",
-      "hello": "Hello! I'm the Cradex assistant. What are you interested in?",
+      "hello": "Hello! I'm the Cradex Agency assistant. What are you interested in?",
       "q1": "Free demo",
       "a1": "We build a demo of your website in 2 hours, free of charge. If you like it, we launch it with a 100 ₼ initial payment, and the rest is split over 12 months.",
       "q2": "Services",
@@ -2671,71 +2673,124 @@
       "terms": {
         "nav": "Terms of Use",
         "title": "Terms of Use and Public Offer",
-        "intro": "This document sets out the terms of sale of the services and products offered on cradexagency.com. By placing an order or making a payment on the website, you accept these terms.",
+        "intro": "This document sets out the terms on which the services and products available through cradexagency.com are provided and sold. By using the site, placing an order or making a payment you accept these terms. If you do not agree with them, please do not place an order.",
         "sections": [
           {
-            "h": "1. Parties",
+            "h": "1. Parties and definitions",
             "p": [
-              "Sole proprietor Pasha Guliyev (Paşa Quliyev) (Cradex Agency brand), TIN (VÖEN) 5800452582. Address: 55 Rashid Behbudov St, Baku, Azerbaijan. Phone: +994 50 778 68 87. Email: info@cradexagency.com.",
-              "Buyer: an individual or legal entity that places an order or makes a payment on the website."
+              "Seller (Contractor): sole proprietor Pasha Guliyev (Paşa Quliyev), operating under the Cradex Agency brand, taxpayer ID (VÖEN) 5800452582. Address: 55 Rashid Behbudov Street, Baku, Azerbaijan. Phone and WhatsApp: +994 50 778 68 87. E-mail: info@cradexagency.com. Website: cradexagency.com.",
+              "Client: any individual or legal entity that places an order on the site, makes a payment or requests services from the Seller. A Client who is an individual ordering for purposes unrelated to business activity is a \"Consumer\" and is protected by the consumer protection legislation of the Republic of Azerbaijan.",
+              "Services means the work performed and the digital products supplied by the Seller. Combo package means a ready-made social media package for Instagram, TikTok or YouTube sold on the site. Individual project means work carried out under a written offer or agreement."
             ]
           },
           {
-            "h": "2. Services and products",
+            "h": "2. Offer and acceptance",
             "p": [
-              "The Seller provides website and mobile app development, SEO and GEO, digital advertising, technical support, chatbots and social media combo packages.",
-              "Social media combo packages: Instagram Combo Package, TikTok Combo Package and YouTube Combo Package. The contents of each package are shown on the package card on the website."
+              "This document is a public offer addressed to an indefinite group of persons under the Civil Code of the Republic of Azerbaijan. The terms are accepted when the Client submits the order form, makes a payment, or confirms the Seller's proposal in writing (e-mail or WhatsApp).",
+              "If the parties sign a separate written offer or agreement for an individual project, that document prevails over these terms; matters it does not cover are governed by these terms."
             ]
           },
           {
-            "h": "3. Prices",
+            "h": "3. Services",
             "p": [
-              "For payments made from Azerbaijan, prices are shown in manat (AZN): Instagram Combo Package 20 ₼, TikTok Combo Package 20 ₼, YouTube Combo Package 35 ₼.",
-              "For Buyers outside Azerbaijan, prices are shown in US dollars (USD): 15 $, 15 $ and 25 $.",
-              "The price of websites, mobile apps and other custom projects is set in a written proposal according to the scope of the project. Prices include all service fees; there are no hidden charges."
+              "The Seller provides: website development (CMS-based and custom code), mobile apps, SEO and GEO, management of digital advertising (Meta, TikTok, Google, LinkedIn), technical services (site security, technical SEO, backlinks, preparation of official recovery requests for social accounts), an AI chatbot (setup 700 AZN, from 300 AZN per month, about 10 days), CRM and automation, Google Maps and Yandex Maps business listings, and social media combo packages.",
+              "For map listings the Seller prepares and submits the request so that the address can appear in Google Maps and Yandex Maps and in taxi apps that use them, such as Bolt and Yango. Final approval and publication are decided by the platform.",
+              "The scope of each service is stated in its description on the site, in the written offer or in the agreement. Work outside that scope is agreed and charged separately."
             ]
           },
           {
-            "h": "4. Orders and payment",
+            "h": "4. Orders and formation of the contract",
             "p": [
-              "The Buyer must provide accurate account details and contact information in the order form. The Seller is not liable for delays caused by incorrect information.",
-              "Payment is made by bank card on the bank's secure 3D Secure page. Card details are not entered into or stored on the Seller's website.",
-              "Once payment is confirmed, the order is deemed accepted and a notification is sent to the Buyer by email or WhatsApp."
+              "The Client must provide a correct name, e-mail, WhatsApp number and, where needed, the account username or link. The Seller is not responsible for delays or results caused by incorrect or incomplete information.",
+              "The contract is concluded when the Seller confirms the order (by e-mail, WhatsApp or on the site). The Seller may decline an order for a legitimate reason (for example unlawful content, breach of platform rules or impossibility of performance), in which case any payment received is refunded.",
+              "Before ordering a website, the Client may request a free demo site without any obligation. The demo is for presentation only, all rights in it remain with the Seller, and it may not be used commercially before full payment."
             ]
           },
           {
-            "h": "5. Service delivery",
+            "h": "5. Prices, payment and instalments",
             "p": [
-              "Fulfilment of combo packages begins within 24 hours after payment is confirmed and is usually completed within 1–7 days.",
-              "During fulfilment, the privacy setting of the Buyer's account must be \"Public\". If the account is private or closed, fulfilment is suspended.",
-              "If any metrics included in the package decrease, the Seller restores them free of charge under the 7/24 compensation guarantee.",
-              "The timeline and stages of custom projects are specified in the written proposal."
+              "Prices are shown on the site: in Azerbaijani manat (AZN) for orders from Azerbaijan and in US dollars (USD) for orders from other countries. The total is displayed before payment. The Seller may change prices; changes do not affect orders already confirmed.",
+              "Websites can also be ordered on a monthly plan (instalments): for CMS-based sites 25% of the price is paid up front, for custom-code sites 10%, and the remainder is paid in 12 equal monthly instalments. Paying a full year at once gives a 20% discount. The \"100 ₼ up-front payment\" shown on the site relates to the demo stage and is offered on separate terms. The exact amounts and schedule are confirmed at the time of order or in the written offer.",
+              "Real-time card payment is not yet active on the site: confirmation and payment are arranged via WhatsApp or e-mail. When a bank is connected, card payment will take place only on the bank's secure 3D Secure page; card data is never entered on or stored by our site.",
+              "Advertising budgets (Meta, TikTok, Google, LinkedIn) are not part of the service fee. They are paid directly to the platforms or invoiced separately with the Client's consent.",
+              "If a payment is late, the Seller may act under section 12. Taxes and bank fees, if any, are shown separately."
             ]
           },
           {
-            "h": "6. Obligations of the parties",
+            "h": "6. Social media combo packages",
             "p": [
-              "The Seller undertakes to deliver the service on time and as described, and to protect the Buyer's data.",
-              "The Buyer undertakes not to order services for content that violates the rules of the platforms (Instagram, TikTok, YouTube). In that case, the Seller has the right to cancel the order."
+              "Packages: Instagram Combo Package, TikTok Combo Package and YouTube Combo Package (for example 20 ₼ and 35 ₼; shown in USD abroad). The contents of each package are listed on its card. The quantity can be set from 1 to 100 and the total is the price multiplied by the quantity.",
+              "The order must include the account username or link, name, e-mail and a mandatory WhatsApp number. Work starts within 24 hours after payment is confirmed and is normally completed within 1 to 7 days.",
+              "During delivery the account must remain public and its username must not be changed. If the account becomes private or closed, delivery may be suspended, and this is not considered the Seller's fault.",
+              "Combo packages do not guarantee any particular result (growth, views and so on) beyond what the package description states; the free restoration terms are set out in the package description and in the refund policy."
             ]
           },
           {
-            "h": "7. Liability",
+            "h": "7. Obligations of the parties",
             "p": [
-              "The Seller is not liable for changes to the rules and algorithms of third-party platforms (Meta, TikTok, Google).",
-              "Circumstances beyond the control of the parties (force majeure) extend the time for performance of obligations."
+              "The Seller must perform the Services professionally, in line with the description and the agreed timeline, protect the Client's data in accordance with the privacy policy, and reply to progress enquiries within a reasonable time.",
+              "The Client must provide accurate information, supply materials, access and approvals on time, pay the agreed fees when due, and not order anything that breaches the law, third-party rights or platform rules.",
+              "Delays by the Client in providing materials, approvals or replies extend the delivery time by the same period. Changes requested after a project stage has been approved are agreed and charged separately."
             ]
           },
           {
-            "h": "8. Dispute resolution",
+            "h": "8. Client content and intellectual property",
             "p": [
-              "Disputes are resolved first through negotiation. If no agreement is reached, disputes shall be heard in court in accordance with the legislation of the Republic of Azerbaijan."
+              "The Client confirms that it owns, or has the right to use, the texts, images, logos, data and other materials it supplies, and is responsible for any third-party claims arising from them.",
+              "Ownership of, and the right to use, the design and source code created for the project pass to the Client once the agreed fee has been paid in full. Until then the Client has only a limited right to use the work for the project itself. For the subscription (instalment) model, the transfer of rights is described in the written offer.",
+              "General templates, libraries, tools and open-source components used in the Seller's work remain the property of the Seller or of their licensors and are subject to their licence terms.",
+              "The Seller may show completed work in its portfolio and marketing. If the Client objects, it must say so in writing (e-mail or WhatsApp), and the Seller will stop showing the work. Confidential information is never shown."
             ]
           },
           {
-            "h": "9. Contact",
+            "h": "9. Third-party platforms",
             "p": [
-              "For questions: +994 50 778 68 87 (phone and WhatsApp), info@cradexagency.com."
+              "Some Services rely on Meta (Instagram, Facebook), TikTok, YouTube and Google, LinkedIn, Yandex and other platforms. Their rules, algorithms, pricing and decisions (account restrictions, ad rejections, refusal of a listing and the like) are outside the Seller's control.",
+              "For account recovery the Seller uses only the platforms' official procedures and does not guarantee the platform's decision. No unauthorised access, circumvention of rules or unofficial methods are used.",
+              "Advertising budgets are paid to the platforms and are not refunded by the Seller. A platform stopping an ad or blocking an account is not the Seller's fault."
+            ]
+          },
+          {
+            "h": "10. Warranties and limitation of liability",
+            "p": [
+              "The Seller undertakes to perform the Services with due skill but does not guarantee outcomes that depend on third parties and market conditions, such as search rankings, traffic, sales, advertising results, social media metrics or map approval. Forecasts are not commitments.",
+              "Except where the law provides otherwise, the Seller's total liability on any claim is limited to the amount the Client actually paid for the Service concerned and excludes lost profit and indirect or consequential loss. This limit does not apply to intent or gross negligence, or to Consumer rights that cannot be waived.",
+              "For a set period after a website is handed over (stated in the offer), the Client may require defects that do not match the agreed description to be fixed free of charge. This does not cover later changes made by the Client or third parties, or failures of hosting and domain providers."
+            ]
+          },
+          {
+            "h": "11. Force majeure",
+            "p": [
+              "Neither party is liable for failure to perform where it is caused by events beyond its reasonable control (natural disaster, war, strikes, government decisions, power or internet outages, large-scale failures of hosting, cloud or platform services, cyber attacks and similar).",
+              "The affected party must notify the other within a reasonable time. If the event lasts more than one month, either party may terminate the contract, and payment for the part not performed is refunded."
+            ]
+          },
+          {
+            "h": "12. Suspension for non-payment",
+            "p": [
+              "If a payment (including an instalment) is not made on time, the Seller may, after a written reminder and a reasonable additional period, suspend work, technical support for the site or the Service.",
+              "If payment is still not made, the Seller may terminate the contract, claim the fee for the work performed and retain the rights in code and design for a project that has not been paid in full. Statutory Consumer rights remain unaffected."
+            ]
+          },
+          {
+            "h": "13. Changes to these terms",
+            "p": [
+              "The Seller may update these terms. The new version takes effect on the date it is published on the site, shown as the update date at the top of the page. Changes do not apply to the Client's detriment to orders that have already been confirmed.",
+              "If any provision is held invalid, the remaining provisions stay in force."
+            ]
+          },
+          {
+            "h": "14. Governing law and disputes",
+            "p": [
+              "These terms and the relationships arising from them are governed by the law of the Republic of Azerbaijan, including the Civil Code and the laws \"On Consumer Rights Protection\", \"On Electronic Commerce\", \"On Personal Data\" and \"On Information, Informatization and Protection of Information\".",
+              "Disputes are first resolved by written complaint and negotiation; we reply within 30 calendar days. If no agreement is reached, the dispute is heard by the competent courts of the Republic of Azerbaijan. A Consumer may also apply to the competent public authority as provided by law.",
+              "Provisions that limit refunds because of the nature of a digital service (once performance has begun) do not affect any non-waivable rights a Consumer has under the law."
+            ]
+          },
+          {
+            "h": "15. Contact",
+            "p": [
+              "For questions and requests: sole proprietor Pasha Guliyev (Paşa Quliyev), Cradex Agency, 55 Rashid Behbudov Street, Baku; +994 50 778 68 87 (phone and WhatsApp); info@cradexagency.com."
             ]
           }
         ]
@@ -2743,57 +2798,84 @@
       "privacy": {
         "nav": "Privacy Policy",
         "title": "Privacy Policy",
-        "intro": "This policy explains what personal data we collect on cradexagency.com, how we use it and how we protect it. Data is processed in accordance with the Law of the Republic of Azerbaijan on Personal Data.",
+        "intro": "This policy explains which personal data we collect on cradexagency.com, why and for how long we keep it, who we share it with and how you can exercise your rights. Data is processed in accordance with the Law of the Republic of Azerbaijan \"On Personal Data\" and other applicable legislation.",
         "sections": [
           {
-            "h": "1. Data controller",
+            "h": "1. Controller",
             "p": [
-              "Sole proprietor Pasha Guliyev (Paşa Quliyev) (Cradex Agency brand), TIN (VÖEN) 5800452582. Address: 55 Rashid Behbudov St, Baku, Azerbaijan. Phone: +994 50 778 68 87."
+              "The controller of personal data is sole proprietor Pasha Guliyev (Paşa Quliyev), Cradex Agency brand, taxpayer ID (VÖEN) 5800452582. Address: 55 Rashid Behbudov Street, Baku, Azerbaijan. Phone and WhatsApp: +994 50 778 68 87. E-mail: info@cradexagency.com."
             ]
           },
           {
-            "h": "2. What data we collect",
+            "h": "2. Data we process",
             "p": [
-              "When you place an order or submit a request: first and last name, phone number, email address, social media account name or link.",
-              "When you use the website: browser type, device, approximate country and city, pages viewed (through Google Analytics, in anonymous form).",
-              "We do not collect card details: payment is made on the bank's page."
+              "Order data: name, e-mail, WhatsApp number, social media username or link, and the content, quantity, amount and status of the order. It is stored in our content management system (Sanity) under private identifiers.",
+              "Chat assistant: the questions you type and any contact details you give. Questions that cannot be answered from the ready knowledge base are stored in Sanity and e-mailed to us through Resend.",
+              "Contact: messages you send us through WhatsApp or e-mail links. The chatbot order form only opens your WhatsApp or e-mail app; what you enter is not stored on the site.",
+              "Technical data: browser, device, approximate country and pages viewed (through Google Analytics 4, as aggregated statistics). Your country is read from the hosting network header in order to show prices in AZN or USD, and is not stored. Your theme, language and dismissed notices are kept in your browser's local storage.",
+              "We do not collect or store bank card data; when card payment is enabled it will take place only on the bank's 3D Secure page."
             ]
           },
           {
-            "h": "3. Purpose of data use",
+            "h": "3. Purposes and legal bases",
             "p": [
-              "To fulfil orders, contact you, confirm payments, and improve service quality and the website.",
-              "We do not sell your data to third parties for advertising purposes."
+              "To receive and perform your order, keep in touch and confirm payment (basis: performance of a contract and your request). To answer your questions and give support (your request and our legitimate interest).",
+              "To meet accounting, tax and other legal requirements (legal obligation). To improve the site and services and to keep them secure and protected from abuse (legitimate interest; your consent where required for analytics).",
+              "We do not sell your data or pass it to third parties for advertising. It may be disclosed to competent public authorities only where the law requires."
             ]
           },
           {
-            "h": "4. Third parties",
+            "h": "4. Cookies and analytics",
             "p": [
-              "Data is shared only with parties necessary to provide the service: the payment bank, hosting (Vercel), content management system (Sanity), analytics (Google Analytics), WhatsApp."
+              "The site uses Google Analytics 4, which relies on cookies, to collect visit statistics; results are reviewed only in aggregated form. Your language and day/night theme choices are kept in the browser's local storage.",
+              "You can delete or block cookies in your browser settings; some conveniences (remembering your choices) may then stop working. You can also opt out of Google Analytics with the browser add-on Google provides."
             ]
           },
           {
-            "h": "5. Retention period",
+            "h": "5. Processors and cross-border transfer",
             "p": [
-              "Order data is retained for the period required by law; other data is retained for no longer than 2 years after the purpose has been achieved."
+              "To deliver the service we use: hosting (Vercel), content management and database (Sanity), e-mail delivery (Resend), analytics (Google Analytics) and the WhatsApp communication channel. They process data only on our instructions and under their own contract terms.",
+              "These providers' servers may be located outside Azerbaijan, so your data may be transferred across borders. We transfer only what is necessary for the service and take the providers' data protection commitments into account. By placing an order or writing to us you consent to this transfer."
             ]
           },
           {
-            "h": "6. Security",
+            "h": "6. Retention",
             "p": [
-              "The website is encrypted with HTTPS, access to data is restricted, and regular security checks are carried out."
+              "Order and correspondence data is kept for as long as needed to perform the contract and for the statutory period for tax and accounting records. We do not keep chat questions longer than necessary once their purpose is fulfilled.",
+              "Analytics data is kept for the period set in the Google Analytics settings, after which it is deleted or anonymised."
             ]
           },
           {
-            "h": "7. Cookies",
+            "h": "7. Security",
             "p": [
-              "The website uses cookies and local storage to remember your language and light/dark mode choice and to collect anonymous statistics. You can delete or block cookies in your browser settings."
+              "The site runs over HTTPS, access to the admin panel requires authentication, access keys are protected separately and only the people who need it can reach the data. However, no one can guarantee absolute security of transmission over the internet.",
+              "If an unlawful disclosure of data is discovered, we notify affected persons and the competent authority where the law requires."
             ]
           },
           {
-            "h": "8. Your rights",
+            "h": "8. Your rights and how to exercise them",
             "p": [
-              "You have the right to access your data, correct it or request its deletion. To do so, write to info@cradexagency.com."
+              "In line with the law you may find out whether your data is being processed, access it, ask for incorrect data to be corrected, ask for data processed unlawfully or no longer needed to be deleted or blocked, withdraw your consent and object to processing.",
+              "To make a request, write to info@cradexagency.com or contact us on WhatsApp; we may ask for information to confirm your identity. We reply within 10 working days; in complex cases we will tell you and may extend this period as far as the law allows.",
+              "If you believe your rights have been violated, you may apply to the competent public authority or to a court."
+            ]
+          },
+          {
+            "h": "9. Children",
+            "p": [
+              "Our services are not directed at persons under 18. We do not knowingly collect data from minors and will delete any we discover. A parent or guardian can write to us about this."
+            ]
+          },
+          {
+            "h": "10. Changes to this policy",
+            "p": [
+              "We may update this policy to reflect changes in the law or in our services. The new version takes effect on the date it is published on this page, shown above as the update date."
+            ]
+          },
+          {
+            "h": "11. Contact",
+            "p": [
+              "For privacy questions: sole proprietor Pasha Guliyev (Paşa Quliyev), Cradex Agency, 55 Rashid Behbudov Street, Baku; info@cradexagency.com; +994 50 778 68 87."
             ]
           }
         ]
@@ -2801,46 +2883,74 @@
       "refund": {
         "nav": "Refund Policy",
         "title": "Refund Policy",
-        "intro": "This policy defines when and how payments are refunded.",
+        "intro": "This policy sets out when and how payments are refunded. It forms part of the terms of use and does not limit the consumer rights you have under the law.",
         "sections": [
           {
-            "h": "1. Full refund",
+            "h": "1. General rule",
             "p": [
-              "If fulfilment of the order has not started, 100% of the payment is refunded. To request it, simply write to us within 24 hours after payment."
+              "Our services are digital services: once performance has begun, work already delivered cannot be returned. A refund therefore depends on how far performance has progressed. Where the law requires a refund, it prevails over the limits in this policy.",
+              "If a written offer or agreement for an individual project sets a different rule, that rule applies."
             ]
           },
           {
-            "h": "2. Partial refund",
+            "h": "2. Full refund",
             "p": [
-              "If fulfilment has started, the amount corresponding to the part of the package not yet delivered is refunded.",
-              "If the service is not fully delivered within 7 days for reasons attributable to us, the value of the undelivered part is refunded."
+              "If performance has not started, 100% of the payment is refunded. For combo packages work starts within 24 hours after payment is confirmed; if you contact us within that time and work has not started, you receive a full refund.",
+              "If the Seller does not accept the order, withdraws from it or cannot start it, the payment is refunded in full."
             ]
           },
           {
-            "h": "3. Non-refundable cases",
+            "h": "3. Partial refund",
             "p": [
-              "The package has been fully delivered.",
-              "The Buyer provided incorrect account details, or made the account private, closed it or changed the username during fulfilment.",
-              "The account was closed for violating platform rules."
+              "If work has started but is not finished, the value of the undelivered part is refunded. For combo packages the delivered part is deducted from the payment.",
+              "If the service is not fully delivered within the agreed time because of the Seller (7 days for combo packages), the value of the undelivered part is refunded or, at the Client's choice, delivery continues.",
+              "For websites and other individual projects the refund is calculated by stage: the fee for approved and delivered stages is not refunded, the fee for stages not yet begun is."
             ]
           },
           {
-            "h": "4. Compensation (7/24)",
+            "h": "4. Non-refundable cases",
             "p": [
-              "If delivered metrics decrease, they are restored free of charge. Compensation is not an alternative to a refund; it is an additional guarantee."
+              "The service has been fully delivered or the Client has accepted the work.",
+              "The Client gave wrong account details, made the account private or closed it during delivery, changed the username, or did not provide required access or materials.",
+              "An account, ad or listing was restricted or closed for breaching platform rules, or the platform's decision (account not restored, map listing not approved) is outside the Seller's control; the fee for work performed is then not refunded.",
+              "The Client asked for the service to begin and it was performed, for the part already performed. This does not apply where the law makes a refund mandatory."
             ]
           },
           {
-            "h": "5. Custom projects",
+            "h": "5. Social media combo packages",
             "p": [
-              "For websites, mobile apps and other custom projects, refund terms are set by stage in the contract or written proposal. No payment is charged for a free demo."
+              "Full refund applies if work has not started (section 2). Once work has started, the package is a digital service performed at the Client's request: payment for the delivered part is not refunded, and the undelivered part is refunded under section 3.",
+              "If delivered metrics drop on the platform's side, they are restored free of charge within the period stated in the package description. This is an additional guarantee, not an alternative to a refund."
             ]
           },
           {
-            "h": "6. How to submit a request",
+            "h": "6. Advertising budgets and third-party fees",
             "p": [
-              "WhatsApp: +994 50 778 68 87 or info@cradexagency.com. In your request, state the order date, the package and the last 4 digits of the card used for payment.",
-              "An approved refund is transferred to the card used for payment within 5–10 business days. The timing depends on the bank."
+              "Advertising budgets paid to platforms such as Meta, TikTok, Google and LinkedIn, and domain, hosting, licence and platform or map fees, are not refunded by the Seller because the money goes directly to the platform or provider. The platform's own refund rules apply separately.",
+              "The Seller's own management fee may be refunded for the part not performed, under this policy."
+            ]
+          },
+          {
+            "h": "7. Instalment plans and cancellation",
+            "p": [
+              "Under the subscription (instalment) model the initial payment (25% for CMS-based sites, 10% for custom code) covers the costs reserved for starting work and the stage performed; once work has begun it is not refunded. If work has not begun, it is refunded in full.",
+              "The Client may cancel the contract. The fee for work performed and stages delivered up to the cancellation date is then payable; remaining future instalments are not charged. On cancellation, rights in code and design pass only in proportion to what has been paid, by written agreement.",
+              "Monthly instalments already paid are not refunded where the service for that month was provided. If a full year was paid and the contract is cancelled, the amount for unused months is recalculated, taking the discount into account, and refunded."
+            ]
+          },
+          {
+            "h": "8. Compensation if the service is not delivered",
+            "p": [
+              "If the Service is not delivered, or is delivered with a serious defect, because of the Seller, the Client may choose (a) free correction of the defect, (b) the service to be performed again, or (c) a refund of the corresponding part of the payment.",
+              "This policy does not exclude the right to compensation for loss as provided by law; the liability limit is set out in section 10 of the terms of use."
+            ]
+          },
+          {
+            "h": "9. How to request a refund and timelines",
+            "p": [
+              "Contact us on WhatsApp +994 50 778 68 87 or at info@cradexagency.com. Please state the order number (or date), the package, your name and contact details, the payment method and the reason.",
+              "We give an initial reply within 3 working days and notify our decision within 10 working days. The approved amount is returned by the method used to pay.",
+              "The refund reaches your account within the time the bank applies; this depends on the bank and typically ranges from a few working days to a few weeks. Where the delay is not our fault, any bank fee may be deducted from the amount refunded."
             ]
           }
         ]
@@ -3649,7 +3759,7 @@
     "blogPage": {
       "metaTitle": "Blog — Websites, Technology and Growth",
       "metaDescription": "Practical articles on website development, SEO, advertising, AI tools and digital business growth.",
-      "title": "Articles on websites, technology and growth",
+      "title": "Websites, technology, advertising and digital solutions",
       "text": "Clear answers to the questions clients ask us: how to choose a website, when SEO pays off, when you need a chatbot.",
       "all": "All",
       "latest": "Latest article",
@@ -5234,7 +5344,6 @@
         "metaLeadForms": "Lead form campaign",
         "metaAdvantageShopping": "Advantage+ shopping",
         "metaCatalogRetargeting": "Catalog retargeting",
-        "metaClickToMessage": "WhatsApp / Direct messages",
         "metaTraffic": "Website traffic",
         "metaReach": "Reach campaign",
         "metaThruPlay": "ThruPlay video views",
@@ -5306,9 +5415,8 @@
         "seoSchema": "Schema / rich results",
         "seoYoutube": "YouTube SEO",
         "seoMultiBranch": "Multi-branch local SEO",
-        "metaWhatsapp": "WhatsApp message campaign",
-        "metaDirect": "Instagram Direct campaign",
-        "metaAwareness": "Awareness campaign"
+        "metaAwareness": "Awareness campaign",
+        "metaMessages": "Messaging campaign"
       },
       "sectors": {
         "clinic": "Clinic",
@@ -5555,6 +5663,20 @@
         "Title, description and chapter optimization for a language school's YouTube channel.",
         "Separate local pages and Google profiles for 12 branches of a pharmacy chain."
       ]
+    },
+    "maps": {
+      "eyebrow": "Map listings",
+      "title": "Let's put your business on Google and Yandex Maps",
+      "text": "Customers find you on the map, plan a route, and your address shows correctly when they call a taxi. We create, verify and fully complete your business profile on Google Maps and Yandex Maps.",
+      "p1": "Business profile, verification and full details on Google Maps and Yandex Maps",
+      "p2": "Your address also shows correctly in Bolt, Yango and other taxi apps",
+      "p3": "Working hours, phone, photos, category and website link",
+      "p4": "Reviews and ratings that bring more customers in local search",
+      "cta": "Add my business to the map",
+      "message": "Hello, I would like to add my business to Google Maps and Yandex Maps",
+      "yandex": "Yandex Maps",
+      "verified": "Verified business",
+      "found": "Address found"
     }
   }
 }

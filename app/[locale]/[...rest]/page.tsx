@@ -7,6 +7,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 
 // Home page slugs of the old WordPress site that search engines still list,
 // e.g. /ru/ana-səhifə-русский. They go to the home page of that language.
+const LOCALES = ['az', 'en', 'ru', 'tr']
 const OLD_HOME = /^(ana-s[əe]hif[əe]|home|glavnaya|главная|ana-sayfa)(-|$)/i
 
 export default async function UnknownPage({ params }: { params: Promise<{ locale: string; rest: string[] }> }) {
@@ -17,6 +18,7 @@ export default async function UnknownPage({ params }: { params: Promise<{ locale
   } catch {
     // malformed escape: treat as unknown
   }
-  if (rest.length === 1 && OLD_HOME.test(first)) permanentRedirect(`/${locale}`)
+  // the target is only ever one of our own locale paths
+  if (LOCALES.includes(locale) && rest.length === 1 && OLD_HOME.test(first)) permanentRedirect(`/${locale}`)
   notFound()
 }

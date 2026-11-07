@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils/cn'
 import { LEGAL_PAGES, type LegalPageId } from '@/lib/site/navigation'
 
 // Bump when the text changes.
-const UPDATED = '2026-11-04'
+const UPDATED = '2026-11-07'
 
 type Section = { h: string; p: string[] }
 

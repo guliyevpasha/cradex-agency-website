@@ -8,7 +8,7 @@
  */
 import type { StructureBuilder, StructureResolver } from 'sanity/structure'
 import type { Template } from 'sanity'
-import { BookOpen, Briefcase, Globe, Handshake, Inbox, Megaphone, MessageSquareQuote, Package, Search, ShieldCheck, ShoppingBag, Smartphone, Star, Tag } from 'lucide-react'
+import { Archive, BookOpen, Briefcase, Globe, Handshake, Inbox, Megaphone, MessageSquareQuote, Package, Search, ShieldCheck, ShoppingBag, Smartphone, Star, Tag } from 'lucide-react'
 import { ORDER_STATUSES } from './schemas/comboOrder'
 import { AD_PLATFORMS, WORK_CATEGORIES } from './schemas/workCase'
 import { SERVICE_TAGS } from './schemas/locale'
@@ -114,7 +114,17 @@ export const structure: StructureResolver = (S) =>
           S.list()
             .title('İşlərimiz')
             .items([
-              S.listItem().id('work-web').title('Veb saytlar').icon(Globe).child(S.documentTypeList('portfolio').title('Veb saytlar')),
+              S.listItem()
+                .id('work-web')
+                .title('Veb saytlar')
+                .icon(Globe)
+                .child(S.documentList().title('Veb saytlar').schemaType('portfolio').filter('_type == "portfolio" && category == "web-mobile-dev"')),
+              // old SMM cases from the previous site; the site no longer shows them
+              S.listItem()
+                .id('work-archive')
+                .title('Arxiv (köhnə saytdan, görünmür)')
+                .icon(Archive)
+                .child(S.documentList().title('Arxiv').schemaType('portfolio').filter('_type == "portfolio" && category != "web-mobile-dev"')),
               S.divider(),
               ...workItems(S),
             ])
