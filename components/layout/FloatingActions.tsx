@@ -23,6 +23,30 @@ const WELCOME_SHOWN_KEY = 'cradex-welcome-shown'
 type Msg = { from: 'bot' | 'me' | 'admin'; text: string }
 type Pending = { id: string; question: string; at: number }
 
+// Play notification sound
+function playNotificationSound() {
+  try {
+    // Create a simple beep sound using Web Audio API
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+    const oscillator = audioContext.createOscillator()
+    const gainNode = audioContext.createGain()
+    
+    oscillator.connect(gainNode)
+    gainNode.connect(audioContext.destination)
+    
+    oscillator.frequency.value = 800
+    oscillator.type = 'sine'
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime)
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3)
+    
+    oscillator.start(audioContext.currentTime)
+    oscillator.stop(audioContext.currentTime + 0.3)
+  } catch (error) {
+    console.log('Audio notification not available')
+  }
+}
+
 function RobotHead({ small }: { small?: boolean }) {
   return (
     <span className={cn('rb', small && 'rb-sm')} aria-hidden="true">
@@ -126,35 +150,24 @@ export function FloatingActions() {
 
   // Show the teaser once per visit, a few seconds after landing.
   useEffect(() => {
-    let seen = false
-    let welcomeShown = false
-    try {
-      seen = sessionStorage.getItem(TEASER_KEY) === '1'
-      welcomeShown = sessionStorage.getItem(WELCOME_SHOWN_KEY) === '1'
-    } catch {}
+    // Always show teaser after 7 seconds
+    const teaserTimer = setTimeout(() => setTeaser(true), 7000)
     
-    if (!welcomeShown) {
-      const welcomeTimer = setTimeout(() => {
-        setShowWelcomeToast(true)
-        try {
-          sessionStorage.setItem(WELCOME_SHOWN_KEY, '1')
-        } catch {}
-      }, 3000)
-      
-      if (!seen) {
-        const teaserTimer = setTimeout(() => setTeaser(true), 7000)
-        return () => {
-          clearTimeout(welcomeTimer)
-          clearTimeout(teaserTimer)
-        }
-      }
-      
-      return () => clearTimeout(welcomeTimer)
+    // Show welcome notification after 3 seconds
+    const welcomeTimer = setTimeout(() => {
+      setShowWelcomeToast(true)
+    }, 3000)
+    
+    // Play notification sound after 15 seconds
+    const soundTimer = setTimeout(() => {
+      playNotificationSound()
+    }, 15000)
+    
+    return () => {
+      clearTimeout(teaserTimer)
+      clearTimeout(welcomeTimer)
+      clearTimeout(soundTimer)
     }
-    
-    if (seen) return
-    const id = setTimeout(() => setTeaser(true), 4000)
-    return () => clearTimeout(id)
   }, [])
 
   useEffect(() => {
@@ -183,9 +196,10 @@ export function FloatingActions() {
           setMsgs((m) => [...m, { from: 'me', text: p.question }, { from: 'admin', text: data.answer! }])
           setPending((list) => list.filter((x) => x.id !== p.id))
           setUnread(true)
-          // Show notification when reply arrives
+          // Show notification and play sound when reply arrives
           if (!open) {
             setShowReplyToast(true)
+            playNotificationSound()
           }
         } catch {}
       }
@@ -199,14 +213,15 @@ export function FloatingActions() {
   }, [pending, open])
 
   function dismissTeaser() {
-    setTeaser(false)
-    try {
-      sessionStorage.setItem(TEASER_KEY, '1')
-    } catch {}
+    // Don't dismiss teaser anymore - keep it visible
+    // setTeaser(false)
+    // try {
+    //   sessionStorage.setItem(TEASER_KEY, '1')
+    // } catch {}
   }
 
   function toggle() {
-    dismissTeaser()
+    // dismissTeaser() - keep teaser visible
     setUnread(false)
     setOpen((v) => !v)
     if (msgs.length === 0) setMsgs([{ from: 'bot', text: t('hello') }])
