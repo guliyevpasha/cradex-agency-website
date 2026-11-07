@@ -1469,13 +1469,17 @@
     "publishedAt": "Tarix:",
     "categories": {
       "all": "Hamısı",
-      "seo": "SEO",
+      "seo": "SEO və GEO",
       "smm": "SMM",
       "branding": "Brendinq",
       "design": "Dizayn",
       "copywriting": "Kopiraytinq",
-      "web-dev": "Veb proqramlaşdırma",
-      "marketing-strategy": "Marketinq Strategiyası"
+      "web-dev": "Veb sayt",
+      "marketing-strategy": "Marketinq Strategiyası",
+      "mobile": "Mobil tətbiq",
+      "ads": "Rəqəmsal reklam",
+      "support": "Texniki xidmət",
+      "ai": "AI və çatbot"
     },
     "pagination": {
       "previous": "Əvvəlki",

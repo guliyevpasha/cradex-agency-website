@@ -1196,13 +1196,17 @@
     "publishedAt": "Yayın tarihi:",
     "categories": {
       "all": "Tümü",
-      "seo": "SEO",
+      "seo": "SEO ve GEO",
       "smm": "SMM",
       "branding": "Markalama",
       "design": "Tasarım",
       "copywriting": "Metin Yazarlığı",
-      "web-dev": "Web Geliştirme",
-      "marketing-strategy": "Pazarlama Stratejisi"
+      "web-dev": "Web siteleri",
+      "marketing-strategy": "Pazarlama Stratejisi",
+      "mobile": "Mobil uygulamalar",
+      "ads": "Dijital reklam",
+      "support": "Teknik hizmet",
+      "ai": "Yapay zekâ ve chatbot"
     },
     "pagination": {
       "previous": "Önceki",

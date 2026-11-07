@@ -1196,13 +1196,17 @@
     "publishedAt": "Published:",
     "categories": {
       "all": "All",
-      "seo": "SEO",
+      "seo": "SEO & GEO",
       "smm": "SMM",
       "branding": "Branding",
       "design": "Design",
       "copywriting": "Copywriting",
-      "web-dev": "Web Development",
-      "marketing-strategy": "Marketing Strategy"
+      "web-dev": "Websites",
+      "marketing-strategy": "Marketing Strategy",
+      "mobile": "Mobile apps",
+      "ads": "Digital ads",
+      "support": "Technical service",
+      "ai": "AI & chatbots"
     },
     "pagination": {
       "previous": "Previous",

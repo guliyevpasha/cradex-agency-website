@@ -32,8 +32,8 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const article = await getArticleBySlug(slug)
+  const { locale, slug } = await params
+  const article = await getArticleBySlug(slug, locale)
   if (!article) return {}
   return {
     title: article.metaTitleKey || article.titleKey,
@@ -55,7 +55,7 @@ export default async function ArticlePage({
 }) {
   const { locale, slug } = await params
   setRequestLocale(locale)
-  const article = await getArticleBySlug(slug)
+  const article = await getArticleBySlug(slug, locale)
   if (!article) notFound()
   return <ArticleContent article={article} />
 }
@@ -145,15 +145,7 @@ function ArticleContent({ article }: { article: Article }) {
 
           {/* Article body */}
           <ScrollReveal animation="fadeInUp">
-            <div className="prose prose-invert prose-lg max-w-none
-              prose-headings:font-display prose-headings:text-text-primary
-              prose-p:text-text-secondary prose-p:leading-relaxed
-              prose-a:text-accent-primary prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-text-primary
-              prose-code:text-accent-secondary prose-code:bg-bg-tertiary prose-code:px-1 prose-code:rounded
-              prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary
-              prose-ul:text-text-secondary prose-ol:text-text-secondary
-            ">
+            <div className="article-body">
               <ArticleBody content={article.contentKey} />
             </div>
           </ScrollReveal>

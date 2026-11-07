@@ -1196,13 +1196,17 @@
     "publishedAt": "Опубликовано:",
     "categories": {
       "all": "Все",
-      "seo": "SEO",
+      "seo": "SEO и GEO",
       "smm": "SMM",
       "branding": "Брендинг",
       "design": "Дизайн",
       "copywriting": "Копирайтинг",
-      "web-dev": "Веб-разработка",
-      "marketing-strategy": "Маркетинговая стратегия"
+      "web-dev": "Сайты",
+      "marketing-strategy": "Маркетинговая стратегия",
+      "mobile": "Мобильные приложения",
+      "ads": "Цифровая реклама",
+      "support": "Техническая поддержка",
+      "ai": "ИИ и чат-боты"
     },
     "pagination": {
       "previous": "Предыдущая",
