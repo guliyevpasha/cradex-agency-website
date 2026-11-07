@@ -67,6 +67,17 @@ export default async function ServicePage({ params }: { params: Params }) {
   const HeroMock = id === 'ads' ? AdsDashboard : id === 'web' ? null : HERO_MOCKS[id]
   let n = 0
 
+  // Portfolio slug mapping for each service
+  const portfolioSlugMap: Record<ServiceId, string | null> = {
+    web: null, // web service goes to general portfolio page
+    mobile: 'mobil-tetbiq',
+    seo: 'seo-geo',
+    ads: 'reqemsal-reklam',
+    support: 'texniki-xidmet'
+  }
+  const portfolioSlug = portfolioSlugMap[id]
+  const portfolioHref = portfolioSlug ? `/${locale}/portfolio/${portfolioSlug}` : `/${locale}/portfolio`
+
   return (
     <div className="pt-24 lg:pt-28">
       {/* Hero */}
@@ -94,6 +105,13 @@ export default async function ServicePage({ params }: { params: Params }) {
               className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-6 py-3 text-[15px] font-semibold text-text-primary transition-colors hover:bg-text-primary hover:text-bg-primary"
             >
               {t('pricing')}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
+            <Link
+              href={portfolioHref}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-accent-primary px-6 py-3 text-[15px] font-semibold text-accent-primary transition-colors hover:bg-accent-primary hover:text-snow"
+            >
+              {t('viewWork')}
               <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
           </div>
@@ -149,23 +167,6 @@ export default async function ServicePage({ params }: { params: Params }) {
       {id === 'ads' && <AdsPricing />}
       {id === 'web' && <WebIncluded />}
       {id === 'web' && <WorkShowcase />}
-
-      {/* Portfolio Link */}
-      <section className="container-x pb-16">
-        <Reveal className="rv-3d">
-          <div className="flex flex-col items-center justify-center gap-6 rounded-3xl border border-line bg-gradient-to-br from-accent-primary/5 to-transparent p-8 text-center sm:p-12">
-            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-text-primary sm:text-4xl">{t('portfolioTitle')}</h2>
-            <p className="max-w-2xl text-lg text-text-secondary">{t('portfolioText')}</p>
-            <Link
-              href={`/${locale}/portfolio`}
-              className="inline-flex items-center gap-2 rounded-full bg-brand-strong px-8 py-4 text-[15px] font-semibold text-snow shadow-brand transition-transform hover:scale-105"
-            >
-              {t('portfolioCta')}
-              <ArrowUpRight size={17} aria-hidden="true" />
-            </Link>
-          </div>
-        </Reveal>
-      </section>
 
       {/* How we work */}
       <section className="container-x py-16 lg:py-24">
