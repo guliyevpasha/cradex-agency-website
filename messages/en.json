@@ -41,12 +41,6 @@
       "title": "Grow Your Brand with Cradex Agency",
       "subtitle": "We build websites for your business: subscription model, starting from 100 ₼ initial payment, on time, with transparent pricing.",
       "subtitleAccent": "results-driven strategy, measurable growth.",
-      "pricing": {
-        "amount": "25",
-        "currency": "₼",
-        "period": "/ month",
-        "label": "starting"
-      },
       "cta": "Get free consultation",
       "secondaryCta": "Our Services",
       "googleReviews": "Google Reviews",
@@ -2274,7 +2268,13 @@
       "titleAccent": "2 hours,",
       "titleEnd": "not 2 months.",
       "titleFree": "And it's free!",
-      "subtitle": "We build your website with a **subscription model**. We present the site demo first. If you like it, we launch your site **with an initial payment starting from 100 ₼**, and you can pay the remaining amount in installments over 12 months.",
+      "subtitle": "We build your website with a subscription model. We present the site demo first. If you like it, we launch your site with an initial payment starting from 100 ₼, and you can pay the remaining amount in installments over 12 months.",
+      "pricing": {
+        "amount": "25",
+        "currency": "₼",
+        "period": "/ month",
+        "label": "starting"
+      },
       "fine": "The demo is free. If you don't like it, you pay nothing.",
       "card": {
         "building": "Building your demo",

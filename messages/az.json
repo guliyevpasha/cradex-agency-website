@@ -41,12 +41,6 @@
       "title": "Cradex Agency ilə Rəqəmsal Dünyada Güclənin",
       "subtitle": "Biznesiniz üçün sayt hazırlayırıq: abunəlik modeli ilə, 100 ₼-dən başlayan ilkin ödənişlə, vaxtında, şəffaf qiymətlə.",
       "subtitleAccent": "nəticə yönümlü strategiya, ölçülə bilən artım.",
-      "pricing": {
-        "amount": "25",
-        "currency": "₼",
-        "period": "/ ay",
-        "label": "başlanğıc"
-      },
       "cta": "Pulsuz konsultasiya al",
       "secondaryCta": "Xidmətlərimiz",
       "googleReviews": "Google Rəyləri",
@@ -2274,7 +2268,13 @@
       "titleAccent": "2 saata",
       "titleEnd": "əldə edin.",
       "titleFree": "Özü də pulsuz!",
-      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün saytınızı **abunəlik modeli ilə** hazırlayırıq. Əvvəlcə saytın demosunu təqdim edirik. Bəyəndiyiniz halda, **100 ₼-dən başlayan ilkin ödənişlə** saytınızı yayımlayır, qalan məbləği isə 12 ay ərzində hissə-hissə ödəmək imkanı yaradırıq.",
+      "subtitle": "Biznesiniz, şəxsi brendiniz və ya kontent layihəniz üçün saytınızı abunəlik modeli ilə hazırlayırıq. Əvvəlcə saytın demosunu təqdim edirik. Bəyəndiyiniz halda, 100 ₼-dən başlayan ilkin ödənişlə saytınızı yayımlayır, qalan məbləği isə 12 ay ərzində hissə-hissə ödəmək imkanı yaradırıq.",
+      "pricing": {
+        "amount": "25",
+        "currency": "₼",
+        "period": "/ ay",
+        "label": "başlanğıc"
+      },
       "fine": "Demo pulsuzdur. Bəyənməsəniz, ödəniş yoxdur.",
       "card": {
         "building": "Demo hazırlanır",

@@ -41,12 +41,6 @@
       "title": "Cradex Agency ile Markanızı Büyütün",
       "subtitle": "İşiniz için web sitesi yapıyoruz: abonelik modeli ile, 100 ₼'den başlayan ilk ödeme ile, zamanında, şeffaf fiyatlarla.",
       "subtitleAccent": "sonuç odaklı strateji, ölçülebilir büyüme.",
-      "pricing": {
-        "amount": "25",
-        "currency": "₼",
-        "period": "/ ay",
-        "label": "başlangıç"
-      },
       "cta": "Ücretsiz danışmanlık al",
       "secondaryCta": "Hizmetlerimiz",
       "googleReviews": "Google Yorumları",
@@ -2274,7 +2268,13 @@
       "titleAccent": "2 saat içinde",
       "titleEnd": "alın, 2 ay beklemeyin.",
       "titleFree": "Üstelik ücretsiz!",
-      "subtitle": "Web sitenizi **abonelik modeli ile** hazırlıyoruz. Önce sitenin demosunu sunuyoruz. Beğenirseniz, **100 ₼'den başlayan ön ödemeyle** sitenizi yayına alıyoruz, kalan tutarı ise 12 ay boyunca taksitlerle ödeme imkanı yaratıyoruz.",
+      "subtitle": "Web sitenizi abonelik modeli ile hazırlıyoruz. Önce sitenin demosunu sunuyoruz. Beğenirseniz, 100 ₼'den başlayan ön ödemeyle sitenizi yayına alıyoruz, kalan tutarı ise 12 ay boyunca taksitlerle ödeme imkanı yaratıyoruz.",
+      "pricing": {
+        "amount": "25",
+        "currency": "₼",
+        "period": "/ ay",
+        "label": "başlangıç"
+      },
       "fine": "Demo ücretsizdir. Beğenmezseniz ödeme yapmazsınız.",
       "card": {
         "building": "Demo hazırlanıyor",
