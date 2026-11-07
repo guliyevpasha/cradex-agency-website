@@ -2247,7 +2247,8 @@
       "allServices": "All services",
       "allProducts": "All products",
       "mainNav": "Main navigation",
-      "mobileNav": "Mobile navigation"
+      "mobileNav": "Mobile navigation",
+      "demo": "Demo"
     },
     "theme": {
       "toLight": "Switch to light mode",

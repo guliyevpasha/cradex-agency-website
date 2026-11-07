@@ -2247,7 +2247,8 @@
       "allServices": "Tüm hizmetler",
       "allProducts": "Tüm ürünler",
       "mainNav": "Ana gezinme",
-      "mobileNav": "Mobil gezinme"
+      "mobileNav": "Mobil gezinme",
+      "demo": "Demo"
     },
     "theme": {
       "toLight": "Açık moda geç",
