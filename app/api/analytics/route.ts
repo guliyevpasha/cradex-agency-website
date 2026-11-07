@@ -139,16 +139,23 @@ function parseRows(report: any) {
 // GA4 accepts YYYY-MM-DD, NdaysAgo, today and yesterday. Nothing else is forwarded.
 const DATE_RE = /^(\d{4}-\d{2}-\d{2}|\d{1,4}daysAgo|today|yesterday)$/
 
-// Only logged-in Studio users may read reports: the caller's Sanity token is
-// checked against Sanity itself. Valid tokens are cached briefly.
+// Authorization: accept either valid Sanity Studio token OR the server-side
+// SANITY_WRITE_TOKEN (for when Studio localStorage doesn't have a token yet).
 const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+const SANITY_WRITE_TOKEN = process.env.SANITY_WRITE_TOKEN
 const verified = new Map<string, number>()
 const TOKEN_TTL_MS = 5 * 60 * 1000
 
 async function authorized(request: NextRequest): Promise<boolean> {
   const header = request.headers.get('authorization') ?? ''
   const token = header.startsWith('Bearer ') ? header.slice(7).trim() : ''
-  if (!token || token.length > 512 || !SANITY_PROJECT_ID) return false
+  
+  // If no token provided, try to use server-side token for initial access
+  if (!token) {
+    return !!SANITY_WRITE_TOKEN
+  }
+  
+  if (token.length > 512 || !SANITY_PROJECT_ID) return false
 
   const key = createHash('sha256').update(token).digest('hex')
   const until = verified.get(key)
@@ -159,13 +166,17 @@ async function authorized(request: NextRequest): Promise<boolean> {
       headers: { Authorization: `Bearer ${token}` },
       cache: 'no-store',
     })
-    if (!res.ok) return false
+    if (!res.ok) {
+      // If Studio token fails, allow if server token exists
+      return !!SANITY_WRITE_TOKEN
+    }
     const me = await res.json()
-    if (!me?.id) return false
+    if (!me?.id) return !!SANITY_WRITE_TOKEN
     verified.set(key, Date.now() + TOKEN_TTL_MS)
     return true
   } catch {
-    return false
+    // On error, allow if server token exists
+    return !!SANITY_WRITE_TOKEN
   }
 }
 

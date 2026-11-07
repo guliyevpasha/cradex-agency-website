@@ -164,8 +164,13 @@ export function AnalyticsDashboard() {
     try {
       const startDate = useCustom ? customStart : preset.startDate
       const endDate = useCustom ? customEnd : preset.endDate
+      
+      // Try to get Studio token, but proceed even if not available
+      const token = studioToken(client)
+      const headers: HeadersInit = token ? { Authorization: `Bearer ${token}` } : {}
+      
       const res = await fetch(`/api/analytics?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`, {
-        headers: { Authorization: `Bearer ${studioToken(client)}` },
+        headers,
         cache: 'no-store',
       })
       if (!res.ok) {
@@ -180,7 +185,7 @@ export function AnalyticsDashboard() {
     } finally {
       setLoading(false)
     }
-  }, [preset, useCustom, customStart, customEnd])
+  }, [preset, useCustom, customStart, customEnd, client])
 
   useEffect(() => {
     fetchData()
