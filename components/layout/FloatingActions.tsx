@@ -13,7 +13,6 @@ import { ArrowUp, Send, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
-import { Toast } from '@/components/ui/Toast'
 
 const TEASER_KEY = 'cradex-bot-teaser'
 const QUICK = ['1', '2', '3', '4'] as const
@@ -124,8 +123,6 @@ export function FloatingActions() {
   const [contactFor, setContactFor] = useState<string | null>(null)
   const [contact, setContact] = useState('')
   const [unread, setUnread] = useState(false)
-  const [showWelcomeToast, setShowWelcomeToast] = useState(false)
-  const [showReplyToast, setShowReplyToast] = useState(false)
   const listRef = useRef<HTMLDivElement>(null)
   const session = useRef('')
 
@@ -153,11 +150,6 @@ export function FloatingActions() {
     // Always show teaser after 7 seconds
     const teaserTimer = setTimeout(() => setTeaser(true), 7000)
     
-    // Show welcome notification after 3 seconds
-    const welcomeTimer = setTimeout(() => {
-      setShowWelcomeToast(true)
-    }, 3000)
-    
     // Play notification sound after 15 seconds
     const soundTimer = setTimeout(() => {
       playNotificationSound()
@@ -165,7 +157,6 @@ export function FloatingActions() {
     
     return () => {
       clearTimeout(teaserTimer)
-      clearTimeout(welcomeTimer)
       clearTimeout(soundTimer)
     }
   }, [])
@@ -196,9 +187,8 @@ export function FloatingActions() {
           setMsgs((m) => [...m, { from: 'me', text: p.question }, { from: 'admin', text: data.answer! }])
           setPending((list) => list.filter((x) => x.id !== p.id))
           setUnread(true)
-          // Show notification and play sound when reply arrives
+          // Play sound when reply arrives
           if (!open) {
-            setShowReplyToast(true)
             playNotificationSound()
           }
         } catch {}
@@ -422,26 +412,6 @@ export function FloatingActions() {
         {!open && (teaser || unread) && <span className="bot-badge">1</span>}
       </button>
     </div>
-
-      {/* Welcome Toast */}
-      <Toast
-        show={showWelcomeToast && !open}
-        type="success"
-        title={t('notificationWelcome')}
-        message={t('notificationWelcomeMessage')}
-        onClose={() => setShowWelcomeToast(false)}
-        duration={4000}
-      />
-
-      {/* New Reply Toast */}
-      <Toast
-        show={showReplyToast && !open}
-        type="success"
-        title={t('notificationNewReply')}
-        message={t('notificationNewReplyMessage')}
-        onClose={() => setShowReplyToast(false)}
-        duration={5000}
-      />
     </>
   )
 }
