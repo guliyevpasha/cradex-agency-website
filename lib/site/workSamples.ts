@@ -23,7 +23,7 @@ export type SeoSample = {
   line: number[]
 }
 
-// 15 per platform, in the order meta, tiktok, google, linkedin. The third metric is the headline KPI.
+// 15 per platform in the order meta, tiktok, google, linkedin, then the later Meta and TikTok additions. The third metric is the headline KPI.
 export const AD_SAMPLES: AdSample[] = [
   { platform: 'meta', type: 'metaLeadForms', sector: 'clinic', days: 30, metrics: [['spend', '$600'], ['leads', '480'], ['cpl', '$1.25']], bars: [38, 46, 52, 61, 70, 84, 100] },
   { platform: 'meta', type: 'metaAdvantageShopping', sector: 'fashion', days: 45, metrics: [['spend', '$1 200'], ['orders', '212'], ['roas', '4.2×']], bars: [55, 48, 63, 71, 66, 88, 100] },
@@ -85,6 +85,38 @@ export const AD_SAMPLES: AdSample[] = [
   { platform: 'linkedin', type: 'linkedinAbm', sector: 'manufacturing', days: 90, metrics: [['spend', '$2 000'], ['meetings', '11'], ['costPerMeeting', '$181.82']], bars: [55, 48, 63, 71, 66, 88, 100] },
   { platform: 'linkedin', type: 'linkedinRetarget', sector: 'logistics', days: 30, metrics: [['spend', '$400'], ['leads', '24'], ['cpl', '$16.67']], bars: [30, 41, 57, 52, 74, 90, 100] },
   { platform: 'linkedin', type: 'linkedinAwareness', sector: 'insurance', days: 30, metrics: [['spend', '$700'], ['reach', '36 000'], ['cpm', '$17.50']], bars: [62, 70, 58, 77, 85, 92, 100] },
+  // Added later: Meta messages / awareness and TikTok direct / site traffic for local businesses.
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'pawnshop', days: 30, metrics: [['spend', '$250'], ['messages', '410'], ['costPerMessage', '$0.61']], bars: [38, 46, 52, 61, 70, 84, 100] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'coffeeShop', days: 14, metrics: [['spend', '$150'], ['reach', '210 000'], ['cpm', '$0.71']], bars: [55, 48, 63, 71, 66, 88, 100] },
+  { platform: 'meta', type: 'metaDirect', sector: 'restoPub', days: 21, metrics: [['spend', '$200'], ['messages', '380'], ['costPerMessage', '$0.53']], bars: [30, 41, 57, 52, 74, 90, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'loungeRestaurant', days: 30, metrics: [['spend', '$300'], ['messages', '520'], ['costPerMessage', '$0.58']], bars: [62, 70, 58, 77, 85, 92, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'studyAbroad', days: 45, metrics: [['spend', '$600'], ['messages', '640'], ['costPerMessage', '$0.94']], bars: [44, 52, 60, 68, 79, 95, 100] },
+  { platform: 'meta', type: 'metaDirect', sector: 'foreignLanguage', days: 30, metrics: [['spend', '$280'], ['messages', '450'], ['costPerMessage', '$0.62']], bars: [48, 65, 72, 60, 83, 91, 98] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'barber', days: 21, metrics: [['spend', '$120'], ['reach', '160 000'], ['cpm', '$0.75']], bars: [35, 50, 46, 69, 78, 87, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'carDealer', days: 30, metrics: [['spend', '$500'], ['messages', '330'], ['costPerMessage', '$1.52']], bars: [38, 46, 52, 61, 70, 84, 100] },
+  { platform: 'meta', type: 'metaDirect', sector: 'travel', days: 30, metrics: [['spend', '$350'], ['messages', '560'], ['costPerMessage', '$0.63']], bars: [55, 48, 63, 71, 66, 88, 100] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'fitness', days: 30, metrics: [['spend', '$200'], ['reach', '260 000'], ['cpm', '$0.77']], bars: [30, 41, 57, 52, 74, 90, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'flowerShop', days: 14, metrics: [['spend', '$160'], ['messages', '340'], ['costPerMessage', '$0.47']], bars: [62, 70, 58, 77, 85, 92, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'cleaning', days: 30, metrics: [['spend', '$220'], ['messages', '290'], ['costPerMessage', '$0.76']], bars: [44, 52, 60, 68, 79, 95, 100] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'dryCleaning', days: 21, metrics: [['spend', '$130'], ['reach', '175 000'], ['cpm', '$0.74']], bars: [48, 65, 72, 60, 83, 91, 98] },
+  { platform: 'meta', type: 'metaDirect', sector: 'karaoke', days: 21, metrics: [['spend', '$180'], ['messages', '360'], ['costPerMessage', '$0.50']], bars: [35, 50, 46, 69, 78, 87, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'buildingCompany', days: 45, metrics: [['spend', '$700'], ['messages', '260'], ['costPerMessage', '$2.69']], bars: [38, 46, 52, 61, 70, 84, 100] },
+  { platform: 'meta', type: 'metaDirect', sector: 'renovation', days: 30, metrics: [['spend', '$320'], ['messages', '300'], ['costPerMessage', '$1.07']], bars: [55, 48, 63, 71, 66, 88, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'psychology', days: 30, metrics: [['spend', '$240'], ['messages', '210'], ['costPerMessage', '$1.14']], bars: [30, 41, 57, 52, 74, 90, 100] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'eduCenter', days: 30, metrics: [['spend', '$250'], ['reach', '320 000'], ['cpm', '$0.78']], bars: [62, 70, 58, 77, 85, 92, 100] },
+  { platform: 'meta', type: 'metaWhatsapp', sector: 'logistics', days: 30, metrics: [['spend', '$300'], ['messages', '150'], ['costPerMessage', '$2.00']], bars: [44, 52, 60, 68, 79, 95, 100] },
+  { platform: 'meta', type: 'metaDirect', sector: 'legalCenter', days: 30, metrics: [['spend', '$260'], ['messages', '190'], ['costPerMessage', '$1.37']], bars: [48, 65, 72, 60, 83, 91, 98] },
+  { platform: 'meta', type: 'metaAwareness', sector: 'sweetShop', days: 14, metrics: [['spend', '$140'], ['reach', '190 000'], ['cpm', '$0.74']], bars: [35, 50, 46, 69, 78, 87, 100] },
+  { platform: 'tiktok', type: 'tiktokDirect', sector: 'studyAbroad', days: 30, metrics: [['spend', '$300'], ['messages', '410'], ['costPerMessage', '$0.73']], bars: [38, 46, 52, 61, 70, 84, 100] },
+  { platform: 'tiktok', type: 'tiktokTraffic', sector: 'foreignLanguage', days: 21, metrics: [['spend', '$180'], ['clicks', '4 200'], ['cpc', '$0.04']], bars: [55, 48, 63, 71, 66, 88, 100] },
+  { platform: 'tiktok', type: 'tiktokDirect', sector: 'cleaning', days: 21, metrics: [['spend', '$160'], ['messages', '230'], ['costPerMessage', '$0.70']], bars: [30, 41, 57, 52, 74, 90, 100] },
+  { platform: 'tiktok', type: 'tiktokTraffic', sector: 'dryCleaning', days: 14, metrics: [['spend', '$120'], ['clicks', '2 900'], ['cpc', '$0.04']], bars: [62, 70, 58, 77, 85, 92, 100] },
+  { platform: 'tiktok', type: 'tiktokDirect', sector: 'renovation', days: 30, metrics: [['spend', '$260'], ['messages', '240'], ['costPerMessage', '$1.08']], bars: [44, 52, 60, 68, 79, 95, 100] },
+  { platform: 'tiktok', type: 'tiktokTraffic', sector: 'psychology', days: 30, metrics: [['spend', '$200'], ['clicks', '4 600'], ['cpc', '$0.04']], bars: [48, 65, 72, 60, 83, 91, 98] },
+  { platform: 'tiktok', type: 'tiktokDirect', sector: 'eduCenter', days: 30, metrics: [['spend', '$220'], ['messages', '330'], ['costPerMessage', '$0.67']], bars: [35, 50, 46, 69, 78, 87, 100] },
+  { platform: 'tiktok', type: 'tiktokTraffic', sector: 'legalCenter', days: 30, metrics: [['spend', '$240'], ['clicks', '3 800'], ['cpc', '$0.06']], bars: [38, 46, 52, 61, 70, 84, 100] },
+  { platform: 'tiktok', type: 'tiktokDirect', sector: 'accessories', days: 21, metrics: [['spend', '$150'], ['messages', '280'], ['costPerMessage', '$0.54']], bars: [55, 48, 63, 71, 66, 88, 100] },
+  { platform: 'tiktok', type: 'tiktokTraffic', sector: 'petShop', days: 21, metrics: [['spend', '$170'], ['clicks', '4 100'], ['cpc', '$0.04']], bars: [30, 41, 57, 52, 74, 90, 100] },
 ]
 
 export const SEO_SAMPLES: SeoSample[] = [

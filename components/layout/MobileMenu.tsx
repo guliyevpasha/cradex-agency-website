@@ -95,7 +95,7 @@ export function MobileMenu({ isOpen, onClose, section = null }: Props) {
       >
             <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-line px-5">
               <Link href={`/${locale}`} onClick={onClose} aria-label={t('home')}>
-                <Logo className="h-8" />
+                <Logo className="h-10" />
               </Link>
               <button
                 ref={closeRef}

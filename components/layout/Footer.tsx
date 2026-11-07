@@ -34,9 +34,9 @@ export function Footer() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
         <div className="space-y-5">
           <Link href={`/${locale}`} aria-label={tNav('home')} className="inline-block">
-            <Logo className="h-9" />
+            <Logo className="h-11 lg:h-10" />
           </Link>
-          <p className="max-w-xs text-sm leading-relaxed text-text-secondary">{t('tagline')}</p>
+          <p className="max-w-sm text-[13px] leading-relaxed text-text-secondary sm:text-sm lg:max-w-xs">{t('tagline')}</p>
           <ul className="flex gap-2">
             {SOCIAL.map(({ href, icon: Icon, label }) => (
               <li key={label}>

@@ -62,7 +62,7 @@ export function MobileBottomNav({ locale }: { locale: string }) {
           rel="noopener noreferrer"
           className={cn(ITEM, 'text-snow')}
         >
-          <span className="-mt-6 flex h-[52px] w-[52px] items-center justify-center rounded-[18px] bg-brand-strong text-snow shadow-brand ring-4 ring-bg-primary">
+          <span className="-mt-6 mb-1.5 flex h-[52px] w-[52px] items-center justify-center rounded-[18px] bg-brand-strong text-snow shadow-brand ring-4 ring-bg-primary">
             <WhatsAppIcon className="h-6 w-6" />
           </span>
           <span className="w-full truncate text-center">{t('demo')}</span>

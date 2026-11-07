@@ -180,6 +180,14 @@ export default defineType({
       group: 'settings',
     }),
     defineField({
+      name: 'sample',
+      title: 'Nümunə (real nəticə deyil)',
+      description: 'İşarəli olanda kartda "Nümunə" nişanı görünür. Real müştəri işini yazanda bu işarəni götürün.',
+      type: 'boolean',
+      group: 'settings',
+      initialValue: false,
+    }),
+    defineField({
       name: 'published',
       title: 'Saytda göstər',
       type: 'boolean',
@@ -197,13 +205,13 @@ export default defineType({
   ],
   orderings: [{ title: 'Sıra', name: 'orderAsc', by: [{ field: 'order', direction: 'asc' }] }],
   preview: {
-    select: { category: 'category', platform: 'platform', sector: 'sector.az', title: 'title.az', goal: 'goal.az', published: 'published' },
-    prepare({ category, platform, sector, title, goal, published }) {
+    select: { category: 'category', platform: 'platform', sector: 'sector.az', title: 'title.az', goal: 'goal.az', published: 'published', sample: 'sample' },
+    prepare({ category, platform, sector, title, goal, published, sample }) {
       const cat = WORK_CATEGORIES.find((c) => c.value === category)?.title ?? ''
       const plat = AD_PLATFORMS.find((p) => p.value === platform)?.title.split(' (')[0]
       return {
         title: title || sector || 'Adsız iş',
-        subtitle: [published === false ? 'Gizli' : null, plat || cat, goal].filter(Boolean).join(' · '),
+        subtitle: [published === false ? 'Gizli' : null, sample ? 'Nümunə' : null, plat || cat, goal].filter(Boolean).join(' · '),
       }
     },
   },

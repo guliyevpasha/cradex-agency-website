@@ -290,7 +290,7 @@ export function Header() {
       >
         <div className="container-x flex h-[72px] items-center gap-4 xl:max-w-[1440px]">
           <Link href={`/${locale}`} aria-label={t('home')} className="shrink-0">
-            <Logo className="h-8 sm:h-9" />
+            <Logo className="h-10 xl:h-9" />
           </Link>
 
           <nav ref={navRef} aria-label={t('mainNav')} className="hidden flex-1 justify-center xl:flex">

@@ -41,12 +41,13 @@ const DEFAULT_CHART: Record<string, number[]> = {
 const PLATFORMS: AdPlatform[] = ['meta', 'tiktok', 'google', 'linkedin']
 
 const QUERY = `*[_type == "workCase" && category == $c && published != false] | order(order asc, _createdAt desc) {
-  "id": _id, platform, kind, group, title, sector, goal, period, text, problem, solution, result,
+  "id": _id, sample, platform, kind, group, title, sector, goal, period, text, problem, solution, result,
   features, "metrics": metrics[]{ label, value }, chart
 }`
 
 type Raw = {
   id: string
+  sample?: boolean
   platform?: string
   kind?: string
   group?: string
@@ -70,7 +71,8 @@ function fromSanity(r: Raw, category: WorkCategory, locale: string): WorkCase {
   const chart = (r.chart ?? []).filter((n) => Number.isFinite(n)).map((n) => Math.min(100, Math.max(0, n)))
   return {
     id: r.id,
-    sample: false,
+    // ticked in Studio for the imported samples, so they keep their badge
+    sample: r.sample === true,
     platform: PLATFORMS.includes(r.platform as AdPlatform) ? (r.platform as AdPlatform) : category === 'ads' ? 'meta' : undefined,
     kind: r.kind,
     group: r.group === 'social' ? 'social' : 'web',
