@@ -3656,13 +3656,17 @@
       "page": "Sayfa {page}",
       "empty": "Bu kategoride henüz yazı yok.",
       "categories": {
-        "seo": "SEO",
+        "seo": "SEO ve GEO",
         "smm": "Sosyal medya",
         "branding": "Markalaşma",
         "design": "Tasarım",
         "copywriting": "Metin yazarlığı",
-        "web-dev": "Web sitesi",
-        "marketing-strategy": "Strateji"
+        "web-dev": "Web siteleri",
+        "marketing-strategy": "Strateji",
+        "mobile": "Mobil uygulamalar",
+        "ads": "Dijital reklam",
+        "support": "Teknik hizmet",
+        "ai": "Yapay zekâ ve chatbot"
       }
     },
     "pricingPage": {
@@ -5051,14 +5055,18 @@
         "problem": "Sorun",
         "solution": "Ne yaptık",
         "result": "Sonuç",
-        "all": "Tümü"
+        "all": "Tümü",
+        "pages": "sayfalar",
+        "page": "Sayfa {n}",
+        "prev": "Önceki sayfa",
+        "next": "Sonraki sayfa"
       },
       "ads": {
         "metaTitle": "Dijital reklam projelerimiz — Meta, TikTok, Google, LinkedIn | Cradex Agency",
         "metaDescription": "Meta, TikTok, Google ve LinkedIn reklam kampanyalarımız: hedef, bütçe ve sonuçlar tek bakışta.",
         "eyebrow": "Projelerimiz · Dijital Reklam",
         "title": "Bütçe, hedef ve sonuç tek bakışta",
-        "text": "Her platformda kampanyayı hedefe göre kuruyoruz: başvuru, satış, arama veya tanınırlık. Aşağıda platformlara göre kampanya örneklerini görebilirsiniz.",
+        "text": "Her platformda kampanyayı hedefe göre kuruyoruz: başvuru, satış, mesaj, arama, müşteri tabanı oluşturma ve tanınırlık. Aşağıda platformlara göre kampanya örneklerini görebilirsiniz.",
         "message": "Merhaba, reklam kampanyası hakkında konuşmak istiyorum"
       },
       "mobile": {
@@ -5347,7 +5355,11 @@
         "legalCenter": "Hukuk merkezi",
         "sweetShop": "Tatlı evi",
         "accessories": "Aksesuar mağazası",
-        "petShop": "Pet shop"
+        "petShop": "Pet shop",
+        "aestheticClinic": "Estetik klinik merkezi",
+        "dentalClinic": "Diş kliniği",
+        "phoneStore": "Telefon mağazası",
+        "visaCenter": "Vize merkezi"
       },
       "metrics": {
         "spend": "Bütçe",
@@ -5421,7 +5433,7 @@
         "pagesUpdated": "Güncellenen sayfa"
       },
       "ads": [
-        "Klinik için lead form kampanyası: kısa form ve hızlı geri arama ile kaliteli başvurular toplandı.",
+        "Estetik klinik merkezi için lead form kampanyası: kısa form ve hızlı geri arama ile kaliteli başvurular toplandı.",
         "Advantage+ shopping ile moda mağazasının kataloğu yeni alıcılara otomatik olarak gösterildi.",
         "Katalog retargeting: sepete ekleyip almayanlara baktıkları ürünler yeniden gösterildi.",
         "Güzellik salonu için WhatsApp ve Direct odaklı reklam: müşteriler doğrudan yazıp randevu aldı.",
@@ -5447,7 +5459,7 @@
         "Güzellik salonunun hesabı için takipçi kampanyası: doğal içerikle hedefli takipçi artışı.",
         "Smart+ performans kampanyası: kreatif ve kitle seçimi otomatik optimize edildi.",
         "Kuyumcu sitesini ziyaret edip almayanlara TikTok'ta retargeting reklamı gösterildi.",
-        "Kafenin yeni içecek serisinin tanıtımı: 14 günlük geniş erişimli lansman kampanyası.",
+        "Kafenin yeni içecek serisinin tanıtımı: aşamalı, geniş erişimli lansman kampanyası.",
         "Oto servis için TikTok mesaj kampanyası: sürücüler doğrudan fiyat sordu.",
         "Mobilya salonunun LIVE yayını reklamla güçlendirildi: canlı tanıtım ve özel indirimler.",
         "Kreatör videoları (UGC) whitelist ile kreatörün hesabından reklam olarak gösterildi.",
@@ -5482,7 +5494,7 @@
         "Lojistik sitesini ziyaret eden karar vericilere retargeting: talep formu yeniden sunuldu.",
         "Sigorta markasının kurumsal müşteriler arasında tanınması için erişim kampanyası.",
         "Rehinci için WhatsApp kampanyası: insanlar altın ve elektronik fiyatlarını doğrudan yazıp sordu.",
-        "Yeni kahve dükkânı için bilinirlik kampanyası: açılıştan sonraki iki haftada çevre mahallelerde herkes duydu.",
+        "Yeni kahve dükkânı için bilinirlik kampanyası: açılıştan sonraki aylarda çevre mahalleler dükkânı tanıdı.",
         "Restopub için Instagram Direct kampanyası: hafta sonu masa rezervasyonları doğrudan mesajla geldi.",
         "Lounge restoran için WhatsApp reklamı: doğum günü ve kurumsal akşam talepleri tek hatta toplandı.",
         "Yurt dışı eğitim merkezi için WhatsApp kampanyası: veliler ve öğrenciler ülke ve ücret hakkında doğrudan yazdı.",
@@ -5511,7 +5523,16 @@
         "Eğitim merkezi için TikTok mesaj kampanyası: adaylar kurs programı hakkında doğrudan yazdı.",
         "Hukuk merkezi için siteye yönlendirme kampanyası: kısa hukuki tavsiye videoları siteye okuyucu getirdi.",
         "Aksesuar mağazası için TikTok mesaj kampanyası: yeni koleksiyonu görenler fiyatı doğrudan sordu.",
-        "Pet shop için siteye yönlendirme kampanyası: evcil hayvan sahipleri online kataloğa geçti."
+        "Pet shop için siteye yönlendirme kampanyası: evcil hayvan sahipleri online kataloğa geçti.",
+        "Pet shop için Instagram Direct kampanyası: evcil hayvan sahipleri mama ve aksesuar fiyatlarını doğrudan sordu.",
+        "Diş kliniği için potansiyel müşteri formu kampanyası: implant ve ortodonti başvuruları telefon numarasıyla geldi.",
+        "Telefon mağazası için sitede satış kampanyası: yeni modeller ve taksitle alım teklifi doğrudan siparişe dönüştü.",
+        "Vize merkezi için WhatsApp kampanyası: müşteriler ülke, belge listesi ve süre hakkında doğrudan yazdı.",
+        "Pet shop için Performance Max: ürünler Google aramada, Shopping'de ve YouTube'da doğrudan satışa dönüştü.",
+        "Yurt dışı eğitim merkezi için arama kampanyası: \"yurt dışı eğitim\" arayanlar danışmanlık formunu doldurdu.",
+        "Temizlik şirketi için arama kampanyası: \"ev temizliği\" arayanlar reklamdan doğrudan aradı.",
+        "Tadilat ve inşaat şirketi için YouTube in-stream reklamı: öncesi ve sonrası videoları geniş bir kitleye ulaştı.",
+        "Psikoloji merkezi için YouTube Shorts reklamı: kısa tavsiye videoları merkezi tanıttı."
       ],
       "seo": [
         "Diş hekimliği için yerel SEO: Google İşletme Profili, ilçe sayfaları ve yerel yorumlar.",

@@ -4,6 +4,8 @@
  * "Nümunə" so the site keeps the sample badge. Safe to re-run: existing
  * entries are left alone, so edits made in Studio are never overwritten.
  *   node scripts/seed-work-samples.mjs
+ * After the samples change in code, --update rewrites the entries that are
+ * still ticked as samples (real cases and unticked ones are never touched).
  * Needs Node 22.18+ (reads lib/site/workSamples.ts) and a real SANITY_WRITE_TOKEN.
  * @author Paşa Quliyev — Cradex Agency
  */
@@ -53,7 +55,7 @@ AD_SAMPLES.forEach((s, i) =>
     platform: s.platform,
     sector: str(`workSamples.sectors.${s.sector}`),
     goal: str(`workSamples.types.${s.type}`),
-    period: plural('workSamples.days', s.days),
+    period: plural('workSamples.months', s.months),
     text: txt(`workSamples.ads.${i}`),
     metrics: metrics(s.metrics),
     chart: s.bars,
@@ -116,11 +118,18 @@ if (process.argv.includes('--dry')) {
   process.exit(0)
 }
 
-const existing = new Set(await client.fetch(`*[_id in $ids]._id`, { ids: docs.map((d) => d._id) }))
-const fresh = docs.filter((d) => !existing.has(d._id))
-for (let i = 0; i < fresh.length; i += 50) {
+const found = await client.fetch(`*[_id in $ids]{ _id, sample, published }`, { ids: docs.map((d) => d._id) })
+const existing = new Map(found.map((d) => [d._id, d]))
+const update = process.argv.includes('--update')
+const writes = docs.filter((d) => !existing.has(d._id) || (update && existing.get(d._id).sample === true))
+for (let i = 0; i < writes.length; i += 50) {
   const tx = client.transaction()
-  for (const d of fresh.slice(i, i + 50)) tx.createIfNotExists({ _type: 'workCase', sample: true, published: true, ...d })
+  for (const d of writes.slice(i, i + 50)) {
+    // keep the owner's "Saytda göstər" choice on entries that already exist
+    const published = existing.get(d._id)?.published ?? true
+    tx.createOrReplace({ _type: 'workCase', sample: true, published, ...d })
+  }
   await tx.commit()
 }
-console.log(`Done: ${fresh.length} sample(s) created, ${existing.size} already there.`)
+const created = writes.filter((d) => !existing.has(d._id)).length
+console.log(`Done: ${created} created, ${writes.length - created} updated, ${docs.length - writes.length} left as they are.`)

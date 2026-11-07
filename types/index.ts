@@ -131,13 +131,18 @@ export interface PortfolioItem {
 }
 
 // Journal/Blog types
+// The first six follow the services; the rest are kept for older posts.
 export type ArticleCategory =
+  | 'web-dev'
+  | 'mobile'
   | 'seo'
+  | 'ads'
+  | 'support'
+  | 'ai'
   | 'smm'
   | 'branding'
   | 'design'
   | 'copywriting'
-  | 'web-dev'
   | 'marketing-strategy'
 
 export interface ArticleAuthor {

@@ -3656,13 +3656,17 @@
       "page": "Page {page}",
       "empty": "There are no articles in this category yet.",
       "categories": {
-        "seo": "SEO",
+        "seo": "SEO & GEO",
         "smm": "Social media",
         "branding": "Branding",
         "design": "Design",
         "copywriting": "Copywriting",
         "web-dev": "Websites",
-        "marketing-strategy": "Strategy"
+        "marketing-strategy": "Strategy",
+        "mobile": "Mobile apps",
+        "ads": "Digital ads",
+        "support": "Technical service",
+        "ai": "AI & chatbots"
       }
     },
     "pricingPage": {
@@ -5051,14 +5055,18 @@
         "problem": "Problem",
         "solution": "What we did",
         "result": "Result",
-        "all": "All"
+        "all": "All",
+        "pages": "pages",
+        "page": "Page {n}",
+        "prev": "Previous page",
+        "next": "Next page"
       },
       "ads": {
         "metaTitle": "Digital advertising work — Meta, TikTok, Google, LinkedIn | Cradex Agency",
         "metaDescription": "Our Meta, TikTok, Google and LinkedIn ad campaigns: goal, budget and results at a glance.",
         "eyebrow": "Our work · Digital advertising",
         "title": "Budget, goal and result at a glance",
-        "text": "On every platform we build the campaign around the goal: leads, sales, calls or awareness. Below you can see campaign samples by platform.",
+        "text": "On every platform we build the campaign around the goal: leads, sales, messages, calls, customer base building and awareness. Below you can see campaign samples by platform.",
         "message": "Hi, I would like to talk about an ad campaign"
       },
       "mobile": {
@@ -5347,7 +5355,11 @@
         "legalCenter": "Legal center",
         "sweetShop": "Sweet shop",
         "accessories": "Accessories store",
-        "petShop": "Pet store"
+        "petShop": "Pet store",
+        "aestheticClinic": "Aesthetic clinic",
+        "dentalClinic": "Dental clinic",
+        "phoneStore": "Phone store",
+        "visaCenter": "Visa center"
       },
       "metrics": {
         "spend": "Budget",
@@ -5421,7 +5433,7 @@
         "pagesUpdated": "Pages updated"
       },
       "ads": [
-        "Lead form campaign for a clinic: a short form and fast callbacks brought in qualified enquiries.",
+        "Lead form campaign for an aesthetic clinic: a short form and fast callbacks brought in qualified enquiries.",
         "With Advantage+ shopping, a fashion store catalog was shown automatically to new buyers.",
         "Catalog retargeting: shoppers who added to cart without buying saw the products they viewed again.",
         "Ads for a beauty salon sending people to WhatsApp and Direct: clients wrote in and booked directly.",
@@ -5447,7 +5459,7 @@
         "Follower campaign for a beauty salon account: targeted growth with natural content.",
         "Smart+ performance campaign: creative and audience selection were optimized automatically.",
         "Retargeting ads on TikTok for people who visited a jewelry website but did not buy.",
-        "Launch of a cafe's new drinks line: a 14-day campaign with wide reach.",
+        "Launch of a cafe's new drinks line: a phased, wide-reach launch campaign.",
         "TikTok messages campaign for an auto service: drivers asked for prices directly.",
         "A furniture showroom's LIVE stream boosted with ads: live demos and special discounts.",
         "Creator videos (UGC) ran as ads from the creator's own account via whitelisting.",
@@ -5482,7 +5494,7 @@
         "Retargeting decision-makers who visited a logistics website: the enquiry form was offered again.",
         "Reach campaign to build an insurance brand's recognition among corporate clients.",
         "WhatsApp campaign for a pawnshop: people messaged directly to ask about prices for gold and electronics.",
-        "Awareness campaign for a new coffee shop: within two weeks of opening, the surrounding neighborhoods all knew about it.",
+        "Awareness campaign for a new coffee shop: in the months after opening, the surrounding neighborhoods got to know it.",
         "Instagram Direct campaign for a restopub: weekend table reservations came straight through messages.",
         "WhatsApp ads for a lounge restaurant: birthday and corporate evening requests were gathered in a single channel.",
         "WhatsApp campaign for a study abroad center: parents and students wrote directly to ask about countries and tuition.",
@@ -5511,7 +5523,16 @@
         "TikTok messages campaign for an education center: applicants wrote directly about the course schedule.",
         "Website traffic campaign for a legal center: short legal advice videos brought readers to the website.",
         "TikTok messages campaign for an accessories store: people who saw the new collection asked about prices directly.",
-        "Website traffic campaign for a pet store: pet owners moved over to the online catalog."
+        "Website traffic campaign for a pet store: pet owners moved over to the online catalog.",
+        "Instagram Direct campaign for a pet store: pet owners asked directly about food and accessory prices.",
+        "Lead form campaign for a dental clinic: implant and orthodontics inquiries came in with phone numbers.",
+        "On-site sales campaign for a phone store: new models and a pay-by-installment offer turned directly into orders.",
+        "WhatsApp campaign for a visa center: clients wrote directly about countries, document lists and timelines.",
+        "Performance Max for a pet store: products turned into direct sales across Google Search, Shopping and YouTube.",
+        "Search campaign for a study abroad center: people searching \"study abroad\" filled in the consultation form.",
+        "Call campaign for a cleaning company: people searching \"home cleaning\" called straight from the ad.",
+        "YouTube in-stream ads for a renovation and construction company: before-and-after videos reached a wide audience.",
+        "YouTube Shorts ads for a psychology center: short advice videos introduced the center."
       ],
       "seo": [
         "Local SEO for dentistry: Google Business Profile, district pages and local reviews.",

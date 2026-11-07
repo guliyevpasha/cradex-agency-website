@@ -11,13 +11,13 @@ export type ServiceTag = (typeof SERVICE_TAGS)[number]
 
 /** Blog categories that suit a service, used for posts nobody has tagged yet. */
 const BLOG_CATEGORIES: Record<ServiceTag, string[]> = {
-  web: ['web-dev', 'design'],
-  mobile: ['web-dev', 'design'],
-  seo: ['seo', 'copywriting'],
-  ads: ['smm', 'marketing-strategy'],
-  support: ['web-dev', 'seo'],
-  chatbot: ['marketing-strategy', 'web-dev'],
-  combo: ['smm', 'marketing-strategy'],
+  web: ['web-dev'],
+  mobile: ['mobile', 'web-dev'],
+  seo: ['seo'],
+  ads: ['ads', 'smm'],
+  support: ['support', 'seo'],
+  chatbot: ['ai'],
+  combo: ['ads', 'smm'],
 }
 
 type Post = { id: string; category: string; publishedAt?: string; services?: string[] }

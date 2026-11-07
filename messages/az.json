@@ -3656,13 +3656,17 @@
       "page": "Səhifə {page}",
       "empty": "Bu kateqoriyada hələ yazı yoxdur.",
       "categories": {
-        "seo": "SEO",
+        "seo": "SEO və GEO",
         "smm": "Sosial media",
         "branding": "Brendinq",
         "design": "Dizayn",
         "copywriting": "Kopirayterlik",
         "web-dev": "Veb sayt",
-        "marketing-strategy": "Strategiya"
+        "marketing-strategy": "Strategiya",
+        "mobile": "Mobil tətbiq",
+        "ads": "Rəqəmsal reklam",
+        "support": "Texniki xidmət",
+        "ai": "AI və çatbot"
       }
     },
     "pricingPage": {
@@ -5051,14 +5055,18 @@
         "problem": "Problem",
         "solution": "Nə etdik",
         "result": "Nəticə",
-        "all": "Hamısı"
+        "all": "Hamısı",
+        "pages": "səhifələr",
+        "page": "Səhifə {n}",
+        "prev": "Əvvəlki səhifə",
+        "next": "Növbəti səhifə"
       },
       "ads": {
         "metaTitle": "Rəqəmsal reklam işlərimiz — Meta, TikTok, Google, LinkedIn | Cradex Agency",
         "metaDescription": "Meta, TikTok, Google və LinkedIn reklam kampaniyalarımız: hədəf, büdcə və nəticələr bir baxışda.",
         "eyebrow": "İşlərimiz · Rəqəmsal reklam",
         "title": "Büdcə, hədəf və nəticə — bir baxışda",
-        "text": "Hər platformada kampaniyanı hədəfə görə qururuq: müraciət, satış, zəng və ya tanınma. Aşağıda platformalar üzrə kampaniya nümunələrini görə bilərsiniz.",
+        "text": "Hər platformada kampaniyanı hədəfə görə qururuq: müraciət, satış, mesaj, zəng, müştəri bazası toplama və tanınırlıq. Aşağıda platformalar üzrə kampaniya nümunələrini görə bilərsiniz.",
         "message": "Salam, reklam kampaniyası haqqında danışmaq istəyirəm"
       },
       "mobile": {
@@ -5326,7 +5334,7 @@
         "event": "Tədbir",
         "manufacturing": "B2B istehsal",
         "lawFirm": "Hüquq firması",
-        "pharmacy": "Apteka",
+        "pharmacy": "Aptek",
         "electronics": "Elektronika mağazası",
         "kidsStore": "Uşaq mağazası",
         "jewelry": "Zərgərlik",
@@ -5347,7 +5355,11 @@
         "legalCenter": "Hüquq mərkəzi",
         "sweetShop": "Şirniyyat evi",
         "accessories": "Aksesuar mağazası",
-        "petShop": "Zoomağaza"
+        "petShop": "Zoomağaza",
+        "aestheticClinic": "Estetik klinika mərkəzi",
+        "dentalClinic": "Diş klinikası",
+        "phoneStore": "Telefon mağazası",
+        "visaCenter": "Viza mərkəzi"
       },
       "metrics": {
         "spend": "Büdcə",
@@ -5421,7 +5433,7 @@
         "pagesUpdated": "Yenilənən səhifə"
       },
       "ads": [
-        "Klinika üçün lead form kampaniyası: qısa forma və sürətli geri zəng ilə keyfiyyətli müraciətlər toplandı.",
+        "Estetik klinika mərkəzi üçün lead form kampaniyası: qısa forma və sürətli geri zəng ilə keyfiyyətli müraciətlər toplandı.",
         "Advantage+ shopping ilə moda mağazasının kataloqu avtomatik olaraq yeni alıcılara göstərildi.",
         "Kataloq retarqetinqi: səbətə əlavə edib almayanlara baxdıqları məhsullar yenidən göstərildi.",
         "Gözəllik salonu üçün WhatsApp və Direct-ə yönələn reklam: müştərilər birbaşa yazıb vaxt götürdü.",
@@ -5447,7 +5459,7 @@
         "Gözəllik salonunun hesabına izləyici kampaniyası: təbii kontentlə hədəfli izləyici artımı.",
         "Smart+ performans kampaniyası: kreativ və auditoriya seçimi avtomatik optimallaşdırıldı.",
         "Zərgərlik saytını ziyarət edib almayanlara TikTok-da retarqetinq reklamı göstərildi.",
-        "Kafenin yeni içki xəttinin təqdimatı: 14 günlük geniş əhatəli lansman kampaniyası.",
+        "Kafenin yeni içki xəttinin təqdimatı: mərhələli, geniş əhatəli lansman kampaniyası.",
         "Avto servis üçün TikTok mesaj kampaniyası: sürücülər birbaşa qiymət soruşdu.",
         "Mebel salonunun LIVE yayımı reklamla gücləndirildi: canlı nümayiş və xüsusi endirimlər.",
         "Kreator videoları (UGC) whitelist ilə kreatorun hesabından reklam kimi göstərildi.",
@@ -5482,7 +5494,7 @@
         "Logistika saytını ziyarət edən qərarvericilərə retarqetinq: sorğu forması yenidən təklif edildi.",
         "Sığorta brendinin korporativ müştərilər arasında tanınması üçün əhatə kampaniyası.",
         "Lombard üçün WhatsApp kampaniyası: insanlar qızıl və texnika üçün qiyməti birbaşa yazıb soruşdu.",
-        "Yeni kofeşop üçün tanınırlıq kampaniyası: ətraf məhəllələrdə açılışdan iki həftədə hamı xəbər tutdu.",
+        "Yeni kofeşop üçün tanınırlıq kampaniyası: açılışdan sonrakı aylarda ətraf məhəllələr kofeşopu tanıdı.",
         "Restopub üçün Instagram Direct kampaniyası: həftəsonu masa rezervləri birbaşa mesajla gəldi.",
         "Lounge restoran üçün WhatsApp reklamı: ad günü və korporativ axşamlar üçün sorğular bir xətdə toplandı.",
         "Xaricdə təhsil mərkəzi üçün WhatsApp kampaniyası: valideynlər və tələbələr ölkə və qiymət barədə birbaşa yazdı.",
@@ -5511,7 +5523,16 @@
         "Tədris mərkəzi üçün TikTok mesaj kampaniyası: abituriyentlər kurs qrafiki barədə birbaşa yazdı.",
         "Hüquq mərkəzi üçün sayta keçid kampaniyası: qısa hüquqi məsləhət videoları sayta oxucu gətirdi.",
         "Aksesuar mağazası üçün TikTok mesaj kampaniyası: yeni kolleksiyanı görənlər qiyməti birbaşa soruşdu.",
-        "Zoomağaza üçün sayta keçid kampaniyası: ev heyvanı sahibləri onlayn kataloqa keçdi."
+        "Zoomağaza üçün sayta keçid kampaniyası: ev heyvanı sahibləri onlayn kataloqa keçdi.",
+        "Zoomağaza üçün Instagram Direct kampaniyası: ev heyvanı sahibləri yem və aksesuar qiymətlərini birbaşa soruşdu.",
+        "Diş klinikası üçün lead form kampaniyası: implant və ortodontiya üçün müraciətlər telefon nömrəsi ilə gəldi.",
+        "Telefon mağazası üçün saytda satış kampaniyası: yeni modellər və kreditlə alış təklifi birbaşa sifarişə çevrildi.",
+        "Viza mərkəzi üçün WhatsApp kampaniyası: müştərilər ölkə, sənəd siyahısı və müddət barədə birbaşa yazdı.",
+        "Zoomağaza üçün Performance Max: Google axtarış, Shopping və YouTube-da məhsullar birbaşa satışa çevrildi.",
+        "Xaricdə təhsil mərkəzi üçün axtarış kampaniyası: \"xaricdə təhsil\" axtaranlar konsultasiya formasını doldurdu.",
+        "Təmizlik şirkəti üçün zəng kampaniyası: \"ev təmizliyi\" axtaranlar reklamdan birbaşa zəng etdi.",
+        "Təmir və tikinti şirkəti üçün YouTube in-stream reklamı: əvvəl və sonra videoları geniş auditoriyaya çatdı.",
+        "Psixologiya mərkəzi üçün YouTube Shorts reklamı: qısa məsləhət videoları mərkəzi tanıtdı."
       ],
       "seo": [
         "Stomatologiya üçün lokal SEO: Google Biznes profili, rayon səhifələri və yerli rəylər.",

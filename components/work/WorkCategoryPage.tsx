@@ -19,6 +19,7 @@ import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { PagedGrid } from './PagedGrid'
 import { AdCaseCard, BrandIcon, MobileCaseCard, PLATFORMS, SeoCaseCard, SupportCaseCard } from './WorkCards'
 
 type Params = Promise<{ locale: string }>
@@ -26,14 +27,20 @@ type T = Awaited<ReturnType<typeof getTranslations>>
 
 const HEADING = 'text-3xl font-extrabold tracking-[-0.03em] text-text-primary sm:text-4xl'
 
+function Card({ children, i }: { children: React.ReactNode; i: number }) {
+  return (
+    <Reveal className="rv-3d h-full" delay={(i % 2) * 120}>
+      <Tilt max={6} className="h-full" innerClassName="h-full">
+        {children}
+      </Tilt>
+    </Reveal>
+  )
+}
+
 function Cell({ children, i }: { children: React.ReactNode; i: number }) {
   return (
     <li>
-      <Reveal className="rv-3d h-full" delay={(i % 2) * 120}>
-        <Tilt max={6} className="h-full" innerClassName="h-full">
-          {children}
-        </Tilt>
-      </Reveal>
+      <Card i={i}>{children}</Card>
     </li>
   )
 }
@@ -65,15 +72,22 @@ function AdsCases({ cases, c }: { cases: WorkCase[]; c: T }) {
             </span>
             {PLATFORMS[p].name}
           </h2>
-          <ul className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {cases
+          <PagedGrid
+            className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3"
+            labels={{
+              nav: `${PLATFORMS[p].name}: ${c('pages')}`,
+              pages: Array.from({ length: Math.ceil(cases.filter((x) => x.platform === p).length / 5) }, (_, n) => c('page', { n: n + 1 })),
+              prev: c('prev'),
+              next: c('next'),
+            }}
+            items={cases
               .filter((x) => x.platform === p)
               .map((x, i) => (
-                <Cell key={x.id} i={i}>
+                <Card key={x.id} i={i}>
                   <AdCaseCard c={x} sample={c('sample')} />
-                </Cell>
+                </Card>
               ))}
-          </ul>
+          />
         </section>
       ))}
     </>

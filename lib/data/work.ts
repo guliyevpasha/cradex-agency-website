@@ -104,7 +104,7 @@ async function samples(category: WorkCategory, locale: string): Promise<WorkCase
         platform: s.platform,
         sector: t(`sectors.${s.sector}`),
         goal: t(`types.${s.type}`),
-        period: t('days', { n: s.days }),
+        period: t('months', { n: s.months }),
         text: texts[i],
         features: [],
         metrics: s.metrics.map(([k, value]) => ({ label: t(`metrics.${k}`), value })),

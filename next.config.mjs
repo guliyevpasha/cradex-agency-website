@@ -59,11 +59,17 @@ const nextConfig = {
     const L = '/:locale(az|en|ru|tr)'
     // Old service slugs (see archive/services-legacy) point at the new pages.
     const moved = { 'web-mobile-dev': 'veb-sayt-hazirlanmasi', 'digital-marketing': 'reqemsal-reklam' }
+    const renamedPosts = {
+      'yerli-seo-agentliyi-il-brendinizi-google-da-ir-li-c-kin': 'yerli-seo-google-da-irelilemek',
+      'aeo-n-dir-aeo-v-seo-un-f-rqi': 'aeo-nedir-aeo-ve-seo-ferqi',
+    }
     const dropped = ['traditional-marketing', 'smm', 'graphic-motion-design', 'photo-video', 'branding', 'copywriting']
     return [
       { source: `${L}/calculator`, destination: '/:locale/pricing', permanent: false },
       ...Object.entries(moved).map(([from, to]) => ({ source: `${L}/services/${from}`, destination: `/:locale/services/${to}`, permanent: true })),
       ...dropped.map((from) => ({ source: `${L}/services/${from}`, destination: '/:locale/services', permanent: true })),
+      // the first two blog posts were rewritten under cleaner slugs
+      ...Object.entries(renamedPosts).map(([from, to]) => ({ source: `${L}/journal/${from}`, destination: `/:locale/journal/${to}`, permanent: true })),
     ]
   },
   async headers() {

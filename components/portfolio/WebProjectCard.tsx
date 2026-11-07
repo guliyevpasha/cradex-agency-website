@@ -1,6 +1,6 @@
 /**
- * Website project on a laptop and a phone. The card tilts in 3D towards the
- * pointer; laptop and phone sit at different depths, so they separate as it
+ * Website project on a laptop and a phone over a slowly moving stage (aurora,
+ * orbit ring, perspective floor). The card tilts in 3D towards the pointer; laptop and phone sit at different depths, so they separate as it
  * turns. Desktop and mobile screenshots are real captures of the live site
  * (public/images/work); the CMS cover is the fallback.
  * @author Paşa Quliyev — Cradex Agency
@@ -27,9 +27,10 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
   return (
     <div className="relative aspect-[16/11] w-full [container-type:inline-size]">
       {/* backdrop */}
-      <div className="absolute inset-0 overflow-hidden rounded-[32px] bg-gradient-to-br from-[#EEF1F8] via-[#E5EAF5] to-[#D3DCEF] dark:from-[#171C25] dark:via-[#11151C] dark:to-[#0B0E13]">
-        <span aria-hidden="true" className="absolute -right-[12%] -top-[30%] h-[80%] w-[60%] rounded-full bg-snow/70 blur-3xl dark:bg-brand/15" />
-        <span aria-hidden="true" className="absolute -bottom-[30%] -left-[10%] h-[70%] w-[50%] rounded-full bg-brand/10 blur-3xl dark:bg-brand/10" />
+      <div className="dm-stage absolute inset-0 overflow-hidden rounded-[32px] ring-1 ring-line">
+        <span aria-hidden="true" className="dm-aurora" />
+        <span aria-hidden="true" className="dm-floor" />
+        <span aria-hidden="true" className="dm-ring" />
         <span aria-hidden="true" className="absolute bottom-[11%] left-[12%] right-[14%] h-[5%] rounded-[50%] bg-ink/30 blur-xl dark:bg-black/70" />
         <span className="tilt-glare" />
       </div>
@@ -47,6 +48,7 @@ export function DeviceMockup({ shots, alt, priority }: { shots: Shots; alt: stri
               sizes="(min-width: 1024px) 45vw, 92vw"
               className="object-cover object-top"
             />
+            <span aria-hidden="true" className="dm-sheen" />
           </div>
         </div>
         <div className="relative mx-[-7%] h-[2.2cqw] rounded-b-[1.6cqw] bg-gradient-to-b from-[#DDE2EA] to-[#A9B1BD] dark:from-[#3A404A] dark:to-[#1C2026]">
