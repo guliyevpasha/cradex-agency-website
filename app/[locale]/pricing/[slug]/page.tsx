@@ -18,6 +18,7 @@ import { Reveal } from '@/components/ui/Reveal'
 import { Tilt } from '@/components/ui/Tilt'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { ServiceProof } from '@/components/services/ServiceProof'
+import { ogImage } from '@/lib/site/og'
 
 // Hourly, like the home page: Studio publishes also refresh via /api/revalidate.
 export const revalidate = 3600
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: t('metaTitle'),
     description: t('metaDescription'),
     alternates: { canonical: url },
-    openGraph: { title: t('metaTitle'), description: t('metaDescription'), url: `${SITE}${url}`, type: 'website' },
+    openGraph: { title: t('metaTitle'), description: t('metaDescription'), url: `${SITE}${url}`, type: 'website', images: [ogImage(locale)] },
   }
 }
 

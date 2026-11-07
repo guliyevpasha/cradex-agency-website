@@ -16,6 +16,7 @@ import { ArticleBody } from '@/components/journal/ArticleBody'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { formatArticleDate } from '@/lib/utils/formatDate'
 import type { Article } from '@/types'
+import { ogImage } from '@/lib/site/og'
 
 const locales = ['az', 'en', 'ru', 'tr']
 
@@ -41,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title: article.titleKey,
       description: article.excerptKey,
-      images: article.ogImage ? [{ url: article.ogImage }] : [],
+      images: [article.ogImage ? { url: article.ogImage } : ogImage(locale)],
       type: 'article',
       publishedTime: article.publishedAt,
     },

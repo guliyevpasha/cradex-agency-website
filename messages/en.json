@@ -5692,6 +5692,13 @@
       "yandex": "Yandex Maps",
       "verified": "Verified business",
       "found": "Address found"
+    },
+    "og": {
+      "eyebrow": "Websites · Mobile apps · SEO & GEO · Ads",
+      "title": "Professional websites, ads and digital solutions",
+      "badge": "Free website demo in 2 hours",
+      "langs": "languages",
+      "alt": "Cradex Agency — professional websites, ads and digital solutions"
     }
   }
 }

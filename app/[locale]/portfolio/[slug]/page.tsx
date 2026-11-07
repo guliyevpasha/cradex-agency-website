@@ -16,6 +16,7 @@ import { Accordion } from '@/components/ui/Accordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import type { PortfolioItem } from '@/types'
 import { isShown } from '@/lib/site/portfolio'
+import { ogImage } from '@/lib/site/og'
 
 // Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
 export const revalidate = 3600
@@ -32,7 +33,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
   const item = await getPortfolioBySlug(slug)
   if (!item || !isShown(item)) return {}
   return {
@@ -40,7 +41,7 @@ export async function generateMetadata({
     description: item.descriptionKey,
     openGraph: {
       title: item.titleKey,
-      images: item.coverImage ? [{ url: item.coverImage }] : [],
+      images: [item.coverImage ? { url: item.coverImage } : ogImage(locale)],
     },
   }
 }

@@ -14,6 +14,7 @@ import { FloatingActions } from '@/components/layout/FloatingActions'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import { ThemeScript } from '@/components/theme/ThemeScript'
+import { ogImage } from '@/lib/site/og'
 import '@/app/globals.css'
 
 const locales = ['az', 'en', 'ru', 'tr']
@@ -40,6 +41,7 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'site.meta' })
+  const og = await getTranslations({ locale, namespace: 'site.og' })
   return {
     metadataBase: new URL(baseUrl),
     title: { template: '%s | Cradex Agency', default: t('homeTitle') },
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       siteName: 'Cradex Agency',
       locale,
-      images: [{ url: '/api/og', width: 1200, height: 630 }],
+      images: [ogImage(locale, og('alt'))],
     },
     twitter: { card: 'summary_large_image' },
     robots: { index: true, follow: true },
