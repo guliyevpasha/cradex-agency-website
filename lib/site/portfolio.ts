@@ -18,10 +18,21 @@ const CAPTURED = new Set([
   'alov-insaat-mmc',
   'itm-store-mmc',
   'akademi-xaricd-t-hsil-sirk-ti',
+  'elbaer-mmc', // Uses Sanity websiteScreenshots
 ])
 
 export function shotsFor(item: PortfolioItem): { desktop: string; mobile?: string } {
   const slug = cleanSlug(item.slug)
+  
+  // If Sanity websiteScreenshots exist, use them
+  if (item.websiteScreenshots?.desktop) {
+    return {
+      desktop: item.websiteScreenshots.desktop,
+      mobile: item.websiteScreenshots.mobile
+    }
+  }
+  
+  // Otherwise check if local captures exist
   return CAPTURED.has(slug)
     ? { desktop: `/images/work/${slug}-desktop.jpg`, mobile: `/images/work/${slug}-mobile.jpg` }
     : { desktop: item.coverImage }
