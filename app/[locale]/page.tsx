@@ -21,8 +21,9 @@ import { getAllTestimonials } from '@/lib/data/testimonials'
 import { getPartners } from '@/lib/data/partners'
 import { getRecentBlogPosts } from '@/sanity/lib/queries'
 
-// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
-export const revalidate = 3600
+// On-demand revalidation via /api/revalidate webhook + 60 second fallback
+// Content updates within ~60 seconds after publishing in Sanity
+export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params

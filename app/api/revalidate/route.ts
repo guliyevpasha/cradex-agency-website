@@ -1,5 +1,6 @@
 /**
  * Sanity webhook → on-demand ISR.
+ * Automatically revalidates pages when content is published/updated in Sanity.
  * @author Paşa Quliyev — Cradex Agency
  */
 import { revalidatePath } from 'next/cache'
@@ -7,6 +8,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'node:crypto'
 import { PRICING_LINKS, PRODUCT_LINKS, SERVICE_SLUGS } from '@/lib/site/navigation'
 import { WORK_SLUGS } from '@/lib/site/work'
+
+// Optimize runtime for webhook - no cache needed
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+export const maxDuration = 30 // 30 seconds max (Sanity webhooks timeout at 30s)
 
 const LOCALES = ['az', 'en', 'ru', 'tr']
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,120}$/i
@@ -64,12 +70,28 @@ export async function POST(request: NextRequest) {
     } else if (_type === 'workCase') {
       LOCALES.forEach((l) => Object.values(WORK_SLUGS).forEach((w) => add(`/${l}/portfolio/${w}`)))
     } else if (_type === 'portfolio' || _type === 'portfolioItem') {
+      // Portfolio index page (shows all published portfolios)
       LOCALES.forEach((l) => add(`/${l}/portfolio`))
-      // Revalidate current slug
-      if (slug) LOCALES.forEach((l) => add(`/${l}/portfolio/${slug}`))
-      // CRITICAL: Revalidate previous slug if it changed (fixes 404 after slug rename)
-      if (oldSlug && oldSlug !== slug) LOCALES.forEach((l) => add(`/${l}/portfolio/${oldSlug}`))
+      
+      // Current portfolio detail page
+      if (slug) {
+        LOCALES.forEach((l) => add(`/${l}/portfolio/${slug}`))
+      }
+      
+      // CRITICAL: Previous slug (if renamed) to clear 404 cache
+      if (oldSlug && oldSlug !== slug) {
+        LOCALES.forEach((l) => add(`/${l}/portfolio/${oldSlug}`))
+      }
+      
+      // Home page (shows featured portfolios)
       LOCALES.forEach((l) => add(`/${l}`))
+      
+      // Service pages (may show related portfolios)
+      LOCALES.forEach((l) =>
+        Object.values(SERVICE_SLUGS).forEach((s) => add(`/${l}/services/${s}`))
+      )
+      
+      console.log(`[revalidate] Portfolio updated - will refresh in ~60 seconds`)
     } else if (_type === 'testimonial' || _type === 'partner') {
       LOCALES.forEach((l) => add(`/${l}`))
       if (_type === 'testimonial') servicePages()

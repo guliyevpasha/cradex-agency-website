@@ -12,8 +12,9 @@ import { FinalCta } from '@/components/home/FinalCta'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
 
-// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
-export const revalidate = 3600
+// On-demand revalidation via /api/revalidate webhook + 60 second fallback
+// Pages update within ~60 seconds after publishing in Sanity
+export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
