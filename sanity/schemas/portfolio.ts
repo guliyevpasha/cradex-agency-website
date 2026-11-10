@@ -43,7 +43,7 @@ export default defineType({
     }),
     defineField({
       name: 'mainImage',
-      title: 'Əsas şəkil',
+      title: 'Əsas şəkil (Cover)',
       type: 'image',
       options: {
         hotspot: true,
@@ -51,8 +51,35 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'websiteScreenshots',
+      title: 'Veb sayt görüntüləri (Desktop & Mobile)',
+      description: 'Saytın masaüstü və mobil versiyalarının ekran görüntüləri - canlı saytda mockup dizaynında göstəriləcək',
+      type: 'object',
+      hidden: ({ document }) => document?.category !== 'web-mobile-dev',
+      fields: [
+        {
+          name: 'desktop',
+          title: '🖥️ Desktop Screenshot (1920x1080 və ya daha böyük)',
+          type: 'image',
+          description: 'Tam ekran desktop görüntüsü - yüksək keyfiyyətli PNG/WebP',
+          options: {
+            hotspot: true,
+          },
+        },
+        {
+          name: 'mobile',
+          title: '📱 Mobile Screenshot (375x812 və ya mobil ölçü)',
+          type: 'image',
+          description: 'Mobil versiya görüntüsü - şaquli format',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'gallery',
-      title: 'Qalereya',
+      title: 'Qalereya (Əlavə şəkillər)',
       type: 'array',
       of: [
         {

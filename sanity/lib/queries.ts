@@ -131,6 +131,10 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
     "serviceCategory": category,
     "description": description,
     "image": mainImage.asset->url,
+    "websiteScreenshots": {
+      "desktop": websiteScreenshots.desktop.asset->url,
+      "mobile": websiteScreenshots.mobile.asset->url
+    },
     "gallery": gallery[].asset->url,
     "tools": tools,
     "results": results,
@@ -156,6 +160,10 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
     "serviceCategory": category,
     "description": description,
     "image": mainImage.asset->url,
+    "websiteScreenshots": {
+      "desktop": websiteScreenshots.desktop.asset->url,
+      "mobile": websiteScreenshots.mobile.asset->url
+    },
     "gallery": gallery[].asset->url,
     "tools": tools,
     "results": results,
@@ -209,6 +217,10 @@ export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'
     "serviceCategory": category,
     "description": description,
     "image": mainImage.asset->url,
+    "websiteScreenshots": {
+      "desktop": websiteScreenshots.desktop.asset->url,
+      "mobile": websiteScreenshots.mobile.asset->url
+    },
     "gallery": gallery[].asset->url,
     "tools": tools,
     "results": results,
@@ -234,6 +246,10 @@ export async function getPortfolioByCategory(
     "serviceCategory": category,
     "description": description,
     "image": mainImage.asset->url,
+    "websiteScreenshots": {
+      "desktop": websiteScreenshots.desktop.asset->url,
+      "mobile": websiteScreenshots.mobile.asset->url
+    },
     "gallery": gallery[].asset->url,
     "tools": tools,
     "results": results,

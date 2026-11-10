@@ -80,6 +80,10 @@ export interface PortfolioItem {
   serviceCategory: ServiceSlug
   tags: string[]
   coverImage: string
+  websiteScreenshots?: {
+    desktop?: string
+    mobile?: string
+  }
   gallery: string[]
   videoUrl?: string
   projectUrl?: string  // External project URL
