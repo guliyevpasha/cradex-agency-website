@@ -14,6 +14,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { Badge } from '@/components/ui/Badge'
 import { Accordion } from '@/components/ui/Accordion'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { WebsiteScreenshots } from '@/components/portfolio/WebsiteScreenshots'
 import type { PortfolioItem } from '@/types'
 import { isShown } from '@/lib/site/portfolio'
 import { ogImage } from '@/lib/site/og'
@@ -193,6 +194,16 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
           </div>
         </div>
       </section>
+
+      {/* Website Screenshots - Only for website category */}
+      {item.serviceCategory === 'website' && item.websiteScreenshots && (
+        <WebsiteScreenshots
+          desktop={item.websiteScreenshots.desktop}
+          mobile={item.websiteScreenshots.mobile}
+          projectName={title}
+          locale={locale}
+        />
+      )}
 
       {/* Statistics - Only for SMM category */}
       {item.category === 'smm' && item.statistics && item.statistics.length > 0 && (
