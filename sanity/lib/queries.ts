@@ -5,7 +5,8 @@ import type { Article, ArticleCategory, PortfolioItem, ServiceSlug } from '@/typ
 // ─── Blog Queries ────────────────────────────────────────────────────────────
 
 export async function getAllBlogPosts(locale: string = 'az'): Promise<Article[]> {
-  const query = `*[_type == "blog"] | order(publishedAt desc) {
+  // Only fetch published documents (exclude drafts)
+  const query = `*[_type == "blog" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     "id": _id,
     "slug": slug.current,
     "title": title.${locale},
@@ -22,7 +23,8 @@ export async function getAllBlogPosts(locale: string = 'az'): Promise<Article[]>
 }
 
 export async function getBlogPostBySlug(slug: string, locale: string = 'az') {
-  const query = `*[_type == "blog" && slug.current == $slug][0] {
+  // Only fetch published document (exclude draft)
+  const query = `*[_type == "blog" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     "id": _id,
     "slug": slug.current,
     "title": title.${locale},
@@ -43,7 +45,8 @@ export async function getBlogPostsByCategory(
   category: ArticleCategory,
   locale: string = 'az'
 ): Promise<Article[]> {
-  const query = `*[_type == "blog" && category == $category] | order(publishedAt desc) {
+  // Only fetch published documents in this category
+  const query = `*[_type == "blog" && category == $category && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     "id": _id,
     "slug": slug.current,
     "title": title.${locale},
@@ -70,8 +73,9 @@ export async function getPaginatedBlogPosts(
 
   const categoryFilter = category ? `&& category == "${category}"` : ''
 
+  // Only fetch published documents
   const query = `{
-    "posts": *[_type == "blog" ${categoryFilter}] | order(publishedAt desc) [$start...$end] {
+    "posts": *[_type == "blog" ${categoryFilter} && !(_id in path("drafts.**"))] | order(publishedAt desc) [$start...$end] {
       "id": _id,
       "slug": slug.current,
       "title": title.${locale},
@@ -83,7 +87,7 @@ export async function getPaginatedBlogPosts(
       "readingTime": readingTime,
       "image": mainImage.asset->url
     },
-    "total": count(*[_type == "blog" ${categoryFilter}])
+    "total": count(*[_type == "blog" ${categoryFilter} && !(_id in path("drafts.**"))])
   }`
 
   const result = await client.fetch(query, { start, end })
@@ -98,8 +102,8 @@ export async function getPaginatedBlogPosts(
 }
 
 export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az'): Promise<Article[]> {
-  // Posts ticked "Əsas səhifədə göstər" first, then the newest.
-  const query = `*[_type == "blog"] | order(coalesce(featured, false) desc, publishedAt desc) [0...${limit}] {
+  // Posts ticked "Əsas səhifədə göstər" first, then the newest. Only published documents.
+  const query = `*[_type == "blog" && !(_id in path("drafts.**"))] | order(coalesce(featured, false) desc, publishedAt desc) [0...${limit}] {
     "id": _id,
     "slug": slug.current,
     "title": title.${locale},
@@ -118,7 +122,8 @@ export async function getRecentBlogPosts(limit: number = 3, locale: string = 'az
 // ─── Portfolio Queries ───────────────────────────────────────────────────────
 
 export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioItem[]> {
-  const query = `*[_type == "portfolio"] | order(completedAt desc) [0...100] {
+  // Only fetch published documents (exclude drafts and unpublished items)
+  const query = `*[_type == "portfolio" && !(_id in path("drafts.**"))] | order(completedAt desc) [0...100] {
     "id": _id,
     "slug": slug.current,
     "title": title,
@@ -140,7 +145,8 @@ export async function getAllPortfolio(locale: string = 'az'): Promise<PortfolioI
 }
 
 export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
-  const query = `*[_type == "portfolio" && slug.current == $slug][0] {
+  // Only fetch published document (exclude draft)
+  const query = `*[_type == "portfolio" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     "id": _id,
     "slug": slug.current,
     "title": title,
@@ -194,7 +200,8 @@ export async function getPortfolioBySlug(slug: string, locale: string = 'az') {
 export async function getFeaturedPortfolio(limit?: number, locale: string = 'az'): Promise<PortfolioItem[]> {
   const limitClause = limit ? `[0...${limit}]` : ''
 
-  const query = `*[_type == "portfolio" && featured == true] | order(completedAt desc) ${limitClause} {
+  // Only fetch published and featured documents
+  const query = `*[_type == "portfolio" && featured == true && !(_id in path("drafts.**"))] | order(completedAt desc) ${limitClause} {
     "id": _id,
     "slug": slug.current,
     "title": title,
@@ -218,7 +225,8 @@ export async function getPortfolioByCategory(
   category: ServiceSlug,
   locale: string = 'az'
 ): Promise<PortfolioItem[]> {
-  const query = `*[_type == "portfolio" && category == $category] | order(completedAt desc) {
+  // Only fetch published documents in this category
+  const query = `*[_type == "portfolio" && category == $category && !(_id in path("drafts.**"))] | order(completedAt desc) {
     "id": _id,
     "slug": slug.current,
     "title": title,
@@ -249,7 +257,8 @@ export interface Partner {
 }
 
 export async function getAllPartners(): Promise<Partner[]> {
-  const query = `*[_type == "partner" && active == true] | order(order asc) {
+  // Only fetch published and active partners
+  const query = `*[_type == "partner" && active == true && !(_id in path("drafts.**"))] | order(order asc) {
     "id": _id,
     "name": name,
     "logo": logo.asset->url,
@@ -303,11 +312,13 @@ const TESTIMONIAL_FIELDS = `
 `
 
 export async function getAllTestimonials(): Promise<Testimonial[]> {
-  return client.fetch(`*[_type == "testimonial"] | order(order asc) {${TESTIMONIAL_FIELDS}}`)
+  // Only fetch published testimonials
+  return client.fetch(`*[_type == "testimonial" && !(_id in path("drafts.**"))] | order(order asc) {${TESTIMONIAL_FIELDS}}`)
 }
 
 export async function getFeaturedTestimonials(): Promise<Testimonial[]> {
+  // Only fetch published and featured testimonials
   return client.fetch(
-    `*[_type == "testimonial" && featured == true] | order(order asc) {${TESTIMONIAL_FIELDS}}`
+    `*[_type == "testimonial" && featured == true && !(_id in path("drafts.**"))] | order(order asc) {${TESTIMONIAL_FIELDS}}`
   )
 }
