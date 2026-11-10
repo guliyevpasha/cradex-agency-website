@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
         )
       )
 
-    } else if (_type === 'blog' || _type === 'article') {
+    if (_type === 'blog' || _type === 'article') {
       LOCALES.forEach((l) => add(`/${l}/journal`))
       // Revalidate current slug
       if (slug) LOCALES.forEach((l) => add(`/${l}/journal/${slug}`))
