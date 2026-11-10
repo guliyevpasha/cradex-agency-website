@@ -196,7 +196,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
       </section>
 
       {/* Website Screenshots - Only for website category */}
-      {item.serviceCategory === 'website' && item.websiteScreenshots && (
+      {item.serviceCategory === 'web-mobile-dev' && item.websiteScreenshots && (
         <WebsiteScreenshots
           desktop={item.websiteScreenshots.desktop}
           mobile={item.websiteScreenshots.mobile}
