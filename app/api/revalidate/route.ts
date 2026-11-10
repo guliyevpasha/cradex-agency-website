@@ -60,6 +60,7 @@ export async function POST(request: NextRequest) {
       LOCALES.forEach((l) => Object.values(WORK_SLUGS).forEach((w) => add(`/${l}/portfolio/${w}`)))
     } else if (_type === 'portfolio' || _type === 'portfolioItem') {
       LOCALES.forEach((l) => add(`/${l}/portfolio`))
+      if (slug) LOCALES.forEach((l) => add(`/${l}/portfolio/${slug}`))
       LOCALES.forEach((l) => add(`/${l}`))
     } else if (_type === 'testimonial' || _type === 'partner') {
       LOCALES.forEach((l) => add(`/${l}`))
