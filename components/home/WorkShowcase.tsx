@@ -19,8 +19,12 @@ export async function WorkShowcase() {
   const locale = await getLocale()
   const t = await getTranslations('site.work')
   const websites = (await getAllPortfolio(locale)).filter(isWebsite)
+  
+  // CRITICAL: Only show featured portfolios on home page
+  const featuredWebsites = websites.filter(item => item.featured === true)
+  
   // Projects with live captures first: they look best on the devices.
-  const items = [...websites]
+  const items = [...featuredWebsites]
     .sort((a, b) => Number(Boolean(shotsFor(b).mobile)) - Number(Boolean(shotsFor(a).mobile)))
     .slice(0, LIMIT)
   if (items.length === 0) return null
