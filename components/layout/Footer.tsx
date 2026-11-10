@@ -12,7 +12,7 @@ import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS, serviceHref } from '@/lib/site/nav
 // Maps always gets the Azerbaijani address; it geocodes reliably.
 const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=' +
-  encodeURIComponent('Rəşid Behbudov küçəsi 55, Bakı, Azərbaycan')
+  encodeURIComponent('Ceyhun Hacıbəyli küçəsi 63E, Bakı, Azərbaycan')
 
 const SOCIAL = [
   { href: 'https://instagram.com/cradexagency', icon: Instagram, label: 'Instagram' },
