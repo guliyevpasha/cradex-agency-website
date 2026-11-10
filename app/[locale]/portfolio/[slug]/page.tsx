@@ -18,8 +18,9 @@ import type { PortfolioItem } from '@/types'
 import { isShown } from '@/lib/site/portfolio'
 import { ogImage } from '@/lib/site/og'
 
-// Hourly is enough: publishing in Sanity also refreshes pages via /api/revalidate.
-export const revalidate = 3600
+// On-demand revalidation via /api/revalidate webhook + hourly fallback.
+// Set to 60 seconds to ensure slug changes propagate quickly.
+export const revalidate = 60
 
 const locales = ['az', 'en', 'ru', 'tr']
 

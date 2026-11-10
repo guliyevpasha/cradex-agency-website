@@ -27,6 +27,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const _type: unknown = body?._type
     const rawSlug: unknown = body?.slug
+    const previousSlug: unknown = body?.previousSlug
 
     if (!_type || typeof _type !== 'string') {
       return NextResponse.json({ error: 'Missing required field: _type' }, { status: 400 })
@@ -34,6 +35,7 @@ export async function POST(request: NextRequest) {
 
     // Slugs end up in revalidated paths, so anything unusual is dropped.
     const slug = typeof rawSlug === 'string' && SLUG_RE.test(rawSlug) ? rawSlug : null
+    const oldSlug = typeof previousSlug === 'string' && SLUG_RE.test(previousSlug) ? previousSlug : null
     const paths: string[] = []
     const add = (p: string) => {
       revalidatePath(p)
@@ -48,9 +50,12 @@ export async function POST(request: NextRequest) {
         )
       )
 
-    if (_type === 'blog' || _type === 'article') {
+    } else if (_type === 'blog' || _type === 'article') {
       LOCALES.forEach((l) => add(`/${l}/journal`))
+      // Revalidate current slug
       if (slug) LOCALES.forEach((l) => add(`/${l}/journal/${slug}`))
+      // CRITICAL: Revalidate previous slug if it changed (fixes 404 after slug rename)
+      if (oldSlug && oldSlug !== slug) LOCALES.forEach((l) => add(`/${l}/journal/${oldSlug}`))
       LOCALES.forEach((l) => add(`/${l}`))
       servicePages()
     } else if (_type === 'comboPackage') {
@@ -60,7 +65,10 @@ export async function POST(request: NextRequest) {
       LOCALES.forEach((l) => Object.values(WORK_SLUGS).forEach((w) => add(`/${l}/portfolio/${w}`)))
     } else if (_type === 'portfolio' || _type === 'portfolioItem') {
       LOCALES.forEach((l) => add(`/${l}/portfolio`))
+      // Revalidate current slug
       if (slug) LOCALES.forEach((l) => add(`/${l}/portfolio/${slug}`))
+      // CRITICAL: Revalidate previous slug if it changed (fixes 404 after slug rename)
+      if (oldSlug && oldSlug !== slug) LOCALES.forEach((l) => add(`/${l}/portfolio/${oldSlug}`))
       LOCALES.forEach((l) => add(`/${l}`))
     } else if (_type === 'testimonial' || _type === 'partner') {
       LOCALES.forEach((l) => add(`/${l}`))
@@ -68,13 +76,14 @@ export async function POST(request: NextRequest) {
       else LOCALES.forEach((l) => add(`/${l}/clients`))
     }
 
-    console.log(`[revalidate] ${_type}${slug ? `/${slug}` : ''}: ${paths.length} paths`)
+    console.log(`[revalidate] ${_type}${slug ? `/${slug}` : ''}${oldSlug && oldSlug !== slug ? ` (prev: ${oldSlug})` : ''}: ${paths.length} paths`)
 
     return NextResponse.json({
       success: true,
       revalidated: true,
       _type,
       slug,
+      previousSlug: oldSlug || undefined,
       paths,
       timestamp: Date.now(),
     })
