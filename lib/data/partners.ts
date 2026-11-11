@@ -2,6 +2,7 @@
  * Partner logos from Sanity with a static list as fallback.
  * @author Paşa Quliyev — Cradex Agency
  */
+import { logoLook } from '@/lib/site/clientLogos'
 import { getAllPartners as getSanityPartners, type Partner as SanityPartner } from '@/sanity/lib/queries'
 
 export interface PartnerLogo {
@@ -11,6 +12,8 @@ export interface PartnerLogo {
   logo: string
   /** Optional: alternate logo for the second marquee copy (avoids SVG id conflicts) */
   logoB?: string
+  /** size boost for marks that are small inside their image */
+  scale?: number
 }
 
 // Static fallback data
@@ -139,15 +142,19 @@ export async function getPartners(): Promise<PartnerLogo[]> {
       const sanityPartners = await getSanityPartners()
       // An empty CMS should not leave the marquee blank.
       if (sanityPartners.length > 0) {
-        return sanityPartners.map((p: SanityPartner) => ({
-          id: p.id,
-          name: p.name,
-          logo: p.logo,
-          // logoB only existed to give the second marquee copy a file with
-          // different internal SVG ids. The logos render through <img>, which
-          // scopes those ids per document, so one asset serves both copies.
-          logoB: undefined,
-        }))
+        return sanityPartners.map((p: SanityPartner) => {
+          const look = logoLook(p.id)
+          return {
+            id: p.id,
+            name: p.name,
+            logo: look.logo ?? p.logo,
+            scale: look.scale,
+            // logoB only existed to give the second marquee copy a file with
+            // different internal SVG ids. The logos render through <img>, which
+            // scopes those ids per document, so one asset serves both copies.
+            logoB: undefined,
+          }
+        })
       }
     } catch (error) {
       console.error('Failed to fetch partners from Sanity, using fallback data:', error)

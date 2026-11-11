@@ -1,7 +1,7 @@
 /**
- * Every client logo on its own tilting dark card. Logos sit in white until
- * hovered, then get their brand colours back; on touch screens
- * they are always in colour. Styles: ".cl-card" in globals.css.
+ * Every client logo on its own tilting light card, always in its brand
+ * colours (logos made for dark pages have their white turned to ink). Styles:
+ * ".cl-card" in globals.css.
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { PartnerLogo } from '@/lib/data/partners'
@@ -17,12 +17,12 @@ export function ClientsGrid({ partners }: { partners: PartnerLogo[] }) {
           {/* Short stagger per row, so long lists don't trail in for seconds. */}
           <Reveal className="rv-3d h-full" delay={(i % 5) * 70}>
             <Tilt max={10} className="h-full" innerClassName="h-full">
-              <figure className="cl-card group relative flex h-full flex-col items-center justify-center gap-3 rounded-[22px] border px-4 pb-4 pt-6 sm:px-5">
+              <figure className={`cl-card group relative flex h-full flex-col items-center justify-center gap-3 rounded-[22px] border px-3 pb-4 pt-6 sm:px-4`}>
                 <span className="tilt-glare" />
-                <span className="tilt-z2 flex h-14 w-full items-center justify-center sm:h-16">
-                  <ClientLogo partner={p} className="cl-card-img h-9 w-auto max-w-[78%] object-contain sm:h-11" />
+                <span className="tilt-z2 flex h-[5rem] w-full items-center justify-center sm:h-24">
+                  <ClientLogo partner={p} className="cl-card-img w-auto max-w-full object-contain" />
                 </span>
-                <figcaption className="tilt-z1 truncate text-center text-[12.5px] font-semibold text-snow/60 transition-colors group-hover:text-snow">
+                <figcaption className="cl-card-name tilt-z1 truncate text-center text-[12.5px] font-semibold transition-colors">
                   {p.name}
                 </figcaption>
               </figure>

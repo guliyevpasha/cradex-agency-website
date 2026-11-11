@@ -30,7 +30,7 @@ export function ClientsWall({ partners, compact = false }: { partners: PartnerLo
             {[0, 1].map((copy) =>
               col.map((p, i) => (
                 // Every third tile is lit; the pattern repeats per copy so the loop has no seam.
-                <span key={`${copy}-${p.id}`} className={(i + c) % 3 === 1 ? 'cl-tile cl-lit' : 'cl-tile'}>
+                <span key={`${copy}-${p.id}`} className={`cl-tile${(i + c) % 3 === 1 ? ' cl-lit' : ''}`}>
                   <ClientLogo partner={p} decorative className="cl-tile-img" />
                 </span>
               ))

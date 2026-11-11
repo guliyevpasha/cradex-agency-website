@@ -3,13 +3,14 @@
  * Infinite partner logo marquee; pauses on hover.
  * @author Paşa Quliyev — Cradex Agency
  */
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, type CSSProperties } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type { PartnerLogo } from '@/lib/data/partners'
 
-// Logos that have passed the centre get their colour back. The lit state is
-// toggled on the DOM directly so the scroll never re-renders React.
+// Logos keep their own colours; the ones that have passed the centre get the
+// blue glow. The lit state is toggled on the DOM directly so the scroll never
+// re-renders React.
 export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
   const t = useTranslations('home.partners')
   const containerRef = useRef<HTMLDivElement>(null)
@@ -101,11 +102,11 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
 
       {/* Colour-reveal styles — pure CSS class toggle, no React state */}
       <style>{`
-        /* Most partner logos are drawn for dark backgrounds, so the cards
-           stay dark in both themes and the logos keep their own colours. */
+        /* One light card for every logo, in both themes, so each keeps its
+           own colours and stays readable. */
         .lm-card {
-          border-color: rgba(255,255,255,0.08);
-          background: linear-gradient(160deg, #161B23, #0B0D10);
+          border-color: rgba(255,255,255,0.5);
+          background: linear-gradient(160deg, #FFFFFF, #E8EDF4);
           box-shadow: 0 10px 24px -14px rgba(11,13,16,0.55);
           transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
         }
@@ -115,13 +116,10 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
           transform: translateY(-2px);
         }
         .lm-card img {
-          filter: brightness(0) invert(1) grayscale(1);
-          opacity: 0.6;
-          transition: filter 0.4s ease, opacity 0.4s ease;
-        }
-        .lm-card.lm-lit img {
-          filter: none;
-          opacity: 1;
+          height: calc(2rem * min(var(--cl-s, 1), 1.45));
+          width: auto;
+          max-width: 140px;
+          object-fit: contain;
         }
       `}</style>
     </section>
@@ -129,17 +127,19 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
 }
 
 function LogoCard({ partner, logo, uid }: { partner: PartnerLogo; logo: string; uid: string }) {
-  const isSvg = logo.toLowerCase().endsWith('.svg')
+  // files from /public are served as they are (no optimizer pass)
+  const isSvg = logo.toLowerCase().endsWith('.svg') || logo.startsWith('/logos/')
+  const style = { '--cl-s': partner.scale ?? 1 } as CSSProperties
 
   return (
     <div
-      className="lm-card flex items-center justify-center h-14 px-5 rounded-xl shrink-0 border cursor-default"
+      className={`lm-card flex items-center justify-center h-14 px-5 rounded-xl shrink-0 border cursor-default`}
       title={partner.name}
       data-uid={uid}
     >
       {isSvg ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={logo} alt={partner.name} className="h-8 w-auto max-w-[120px]" />
+        <img src={logo} alt={partner.name} style={style} />
       ) : (
         <Image
           quality={85}
@@ -147,7 +147,7 @@ function LogoCard({ partner, logo, uid }: { partner: PartnerLogo; logo: string; 
           alt={partner.name}
           width={120}
           height={32}
-          className="h-8 w-auto max-w-[120px] object-contain"
+          style={style}
         />
       )}
     </div>

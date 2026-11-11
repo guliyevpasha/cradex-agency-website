@@ -187,23 +187,21 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  border: 1px solid rgb(255 255 255 / 0.08);
-  background: linear-gradient(160deg, #18202B, #0E1218);
+  border: 1px solid rgb(255 255 255 / 0.5);
+  background: linear-gradient(160deg, #FFFFFF, #E8EDF4);
   box-shadow: 0 18px 30px -18px rgb(0 0 0 / 0.8);
 }
+/* logos keep their own colours; --cl-s is the per-logo size boost */
 .cl-tile-img {
-  max-width: 68%;
-  max-height: 34px;
+  max-width: 78%;
+  max-height: calc(34px * var(--cl-s, 1));
   width: auto;
   height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.55;
 }
 .cl-lit {
   border-color: rgb(36 160 255 / 0.55);
   box-shadow: 0 0 0 1px rgb(36 160 255 / 0.2), 0 20px 36px -16px rgb(36 160 255 / 0.55);
 }
-.cl-lit .cl-tile-img { filter: none; opacity: 1; }
 .cl-fade {
   position: absolute;
   inset: 0;
@@ -232,30 +230,32 @@
 @media (min-width: 1024px) { .cl-compact { height: 320px; } }
 .cl-compact .cl-plane { inset: -40% -30%; gap: 12px; }
 .cl-compact .cl-tile { height: 70px; margin-bottom: 12px; border-radius: 16px; border-color: rgb(255 255 255 / 0.12); }
-.cl-compact .cl-tile-img { max-height: 26px; }
+.cl-compact .cl-tile-img { max-height: calc(26px * var(--cl-s, 1)); }
 @keyframes cl-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 @keyframes cl-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
 
 .cl-card {
-  border-color: rgb(255 255 255 / 0.08);
-  background: linear-gradient(160deg, #161B23, #0B0D10);
+  border-color: rgb(255 255 255 / 0.5);
+  background: linear-gradient(160deg, #FFFFFF, #E8EDF4);
   box-shadow: 0 16px 32px -18px rgb(11 13 16 / 0.55);
   transition: border-color 0.35s ease, box-shadow 0.35s ease;
 }
+/* the card is dark (or light) in both themes, so the glare is a blue tint,
+   not the white wash the theme default gives, which looked like grey */
+.cl-card .tilt-glare { background: radial-gradient(520px circle at var(--gx) var(--gy), rgb(36 160 255 / 0.16), transparent 50%); }
 .cl-card:hover {
   border-color: rgb(36 160 255 / 0.55);
   box-shadow: 0 0 0 1px rgb(36 160 255 / 0.25), 0 22px 40px -18px rgb(36 160 255 / 0.55);
 }
 .cl-card-img {
-  filter: brightness(0) invert(1);
-  opacity: 0.7;
-  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+  height: calc(2.25rem * var(--cl-s, 1));
+  transition: transform 0.35s ease;
 }
-.cl-card:hover .cl-card-img { filter: none; opacity: 1; transform: scale(1.06); }
-/* no hover on touch screens: show the real colours straight away */
-@media (hover: none) {
-  .cl-card-img { filter: none; opacity: 1; }
-}
+@media (min-width: 640px) { .cl-card-img { height: calc(2.75rem * var(--cl-s, 1)); } }
+.cl-card:hover .cl-card-img { transform: scale(1.05); }
+.cl-card-name { color: rgb(11 13 16 / 0.65); }
+.cl-card:hover .cl-card-name { color: #0B0D10; }
+
 @media (prefers-reduced-motion: reduce) {
   .cl-up, .cl-down { animation: none; }
 }

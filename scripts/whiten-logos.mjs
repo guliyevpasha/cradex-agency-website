@@ -4,7 +4,14 @@
  * screen. Vector sources are rendered at high density first, so nothing is
  * scaled up from a small bitmap.
  *
- *   node scripts/whiten-logos.mjs <logosDir> <outDir> [overrides.json]
+ *   node scripts/whiten-logos.mjs <logosDir> <outDir> [overrides.json] [--colour]
+ *
+ * --colour keeps the logo's own colours on the same cut-out (and sets a
+ * `label` in the icon's main colour) instead of painting it white; the report
+ * then lists `luma`, how light the artwork is (0 black … 1 white).
+ *
+ * override "ink": true (with --colour) turns near-white artwork into dark ink,
+ * for logos drawn white for a dark page.
  *
  * A logo with real transparency keeps its own outline; one on a flat
  * background (JPEG, opaque PNG) is cut out by its distance from that colour.
@@ -21,7 +28,8 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
 
-const [, , inDir, outDir, overridesFile] = process.argv
+const COLOUR = process.argv.includes('--colour')
+const [, , inDir, outDir, overridesFile] = process.argv.filter((a) => a !== '--colour')
 if (!inDir || !outDir) {
   console.error('usage: node scripts/whiten-logos.mjs <logosDir> <outDir>')
   process.exit(1)
@@ -87,17 +95,47 @@ async function whiten(file) {
   }
 
   const white = Buffer.alloc(px * 4, 255)
-  for (let i = 0; i < px; i++) white[i * 4 + 3] = mask[i]
+  for (let i = 0; i < px; i++) {
+    // see-through pixels get black so trim() sees one background
+    if (COLOUR) for (let c = 0; c < 3; c++) white[i * 4 + c] = mask[i] ? data[i * 4 + c] : 0
+    white[i * 4 + 3] = mask[i]
+  }
+  if (COLOUR && o.ink) {
+    // white artwork made for a dark page: its near-white parts become dark ink, colours stay
+    const INK = [22, 32, 43]
+    for (let i = 0; i < px; i++) {
+      if (!mask[i]) continue
+      const lo = Math.min(white[i * 4], white[i * 4 + 1], white[i * 4 + 2])
+      const t = Math.max(0, Math.min(1, (lo - 170) / 60))
+      for (let c = 0; c < 3; c++) white[i * 4 + c] = Math.round(white[i * 4 + c] * (1 - t) + INK[c] * t)
+    }
+  }
 
   const trimmed = await sharp(white, { raw: { width, height, channels: 4 } }).png().trim({ threshold: 1 }).toBuffer({ resolveWithObject: true }).catch(() => null)
   if (!trimmed) return { key, error: 'nothing left after cutting' }
   let art = trimmed.data
+  let luma = 1
+  let ink = '#fff'
+  if (COLOUR) {
+    // average artwork colour: sets the label colour and tells light art from dark
+    const raw = await sharp(art).raw().toBuffer({ resolveWithObject: true })
+    let n = 0
+    const sum = [0, 0, 0]
+    for (let i = 0; i < raw.data.length; i += 4) {
+      if (raw.data[i + 3] < 128) continue
+      n++
+      for (let c = 0; c < 3; c++) sum[c] += raw.data[i + c]
+    }
+    const avg = sum.map((v) => Math.round(v / Math.max(n, 1)))
+    ink = `rgb(${avg.join(',')})`
+    luma = (0.299 * avg[0] + 0.587 * avg[1] + 0.114 * avg[2]) / 255
+  }
   if (o.label) {
     how += ', name set beside the icon'
     const H = 200
     const icon = await sharp(art).resize({ height: H }).toBuffer({ resolveWithObject: true })
     const esc = o.label.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    const text = await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="${H}"><text x="0" y="${H * 0.68}" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="${H * 0.56}" letter-spacing="1" fill="#fff">${esc}</text></svg>`)).png().trim({ threshold: 1 }).toBuffer({ resolveWithObject: true })
+    const text = await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="${H}"><text x="0" y="${H * 0.68}" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="${H * 0.56}" letter-spacing="1" fill="${ink}">${esc}</text></svg>`)).png().trim({ threshold: 1 }).toBuffer({ resolveWithObject: true })
     const gap = Math.round(H * 0.22)
     art = await sharp({ create: { width: icon.info.width + gap + text.info.width, height: H, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
       .composite([{ input: icon.data, left: 0, top: 0 }, { input: text.data, left: icon.info.width + gap, top: Math.round((H - text.info.height) / 2) }])
@@ -116,7 +154,7 @@ async function whiten(file) {
   if (!svg && trimmed.info.height < 90) warnings.push(`small source (${trimmed.info.width}x${trimmed.info.height})`)
   if (fill > 0.72) warnings.push('mostly solid: looks like a filled block')
   if (fill < 0.03) warnings.push('almost empty')
-  return { key, source: `${meta.format} ${meta.width}x${meta.height}`, how, out: `${out.info.width}x${out.info.height}`, fill: Number(fill.toFixed(2)), warnings }
+  return { key, source: `${meta.format} ${meta.width}x${meta.height}`, how, out: `${out.info.width}x${out.info.height}`, fill: Number(fill.toFixed(2)), luma: Number(luma.toFixed(2)), warnings }
 }
 
 const files = (await readdir(inDir)).filter((f) => /\.(svg|png|webp|jpg|gif|avif)$/i.test(f) && !f.endsWith('.shot.png'))
