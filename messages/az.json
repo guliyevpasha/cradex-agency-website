@@ -1495,6 +1495,9 @@
     "visitWebsite": "Sayta Bax",
     "client": "Müştəri",
     "year": "İl",
+    "date": "Hazırlanma tarixi",
+    "field": "Sahə",
+    "tech": "İstifadə olunan texnologiyalar",
     "duration": "Müddət",
     "category": "Kateqoriya",
     "tools": "İstifadə olunan alətlər",
@@ -3770,7 +3773,57 @@
       "title": "Hazırladığımız saytlar",
       "text": "Hər layihə öz biznesinin məqsədinə görə qurulub. Saytları telefonda və kompüterdə necə göründüyü kimi göstəririk.",
       "count": "{count} layihə",
-      "empty": "Layihələr tezliklə əlavə olunacaq."
+      "empty": "Layihələr tezliklə əlavə olunacaq.",
+      "filter": "Sahə üzrə filtr",
+      "all": "Hamısı",
+      "fields": {
+        "construction": "İnşaat",
+        "tourism": "Turizm",
+        "education": "Təhsil",
+        "cleaning": "Təmizlik",
+        "health": "Səhiyyə",
+        "media": "Media",
+        "ecommerce": "E-ticarət",
+        "restaurant": "Restoran",
+        "catalog": "Kataloq",
+        "hotel": "Otel",
+        "auto": "Avtomobil",
+        "consulting": "Konsaltinq",
+        "realestate": "Daşınmaz əmlak"
+      }
+    },
+    "projectBuild": {
+      "eyebrow": "Layihə necə quruldu",
+      "title": "Görülən işlər və texnologiyalar",
+      "tech": "Texnologiyalar və alətlər",
+      "groups": {
+        "lang": "Proqramlaşdırma dilləri",
+        "platform": "Platforma və freymvorklar",
+        "library": "Kitabxanalar",
+        "design": "Dizayn və interfeys",
+        "service": "Servislər və inteqrasiyalar",
+        "hosting": "Server və hostinq",
+        "other": "Digər"
+      },
+      "items": {
+        "design": "UI/UX dizayn",
+        "responsive": "Mobil və planşet uyğunlaşdırma",
+        "frontend": "Frontend proqramlaşdırma",
+        "backend": "Backend və verilənlər bazası",
+        "cms": "İdarəetmə paneli (CMS)",
+        "multilang": "Çoxdilli struktur",
+        "catalog": "Kataloq və filtrlər",
+        "ecommerce": "Səbət və onlayn sifariş",
+        "booking": "Onlayn bron və rezervasiya",
+        "search": "Axtarış sistemi",
+        "forms": "Müraciət formaları",
+        "blog": "Bloq və xəbərlər bölməsi",
+        "gallery": "Layihə və qalereya bölməsi",
+        "animations": "Animasiya və slayderlər",
+        "accounts": "İstifadəçi girişi və kabinet",
+        "integrations": "WhatsApp və sosial inteqrasiyalar",
+        "darkmode": "Gecə / gündüz rejimi"
+      }
     },
     "blogPage": {
       "metaTitle": "Bloq — sayt, texnologiya və böyümə",

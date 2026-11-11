@@ -81,7 +81,8 @@ export const clientName = (item: PortfolioItem, locale: string) =>
 export function shortSummary(item: PortfolioItem, locale: string, max = 90): string {
   let text = (item.description?.[locale as Locale] ?? '').trim()
   if (!text) return ''
-  text = text.split(/(?<=[.!?])\s/)[0]
+  // a short capitalised abbreviation ("Dr.", "No.") does not end the sentence
+  text = text.split(/(?<=[.!?])(?<!(?<!\p{L})\p{Lu}\p{Ll}{0,2}\.)\s/u)[0]
 
   // Drop the longest run of opening words that repeats the client's name
   // (at least two words, so a lone common word is never removed).
@@ -89,7 +90,8 @@ export function shortSummary(item: PortfolioItem, locale: string, max = 90): str
   const words = text.split(/\s+/)
   let n = 0
   while (n < words.length && n < nameWords.length && words[n].toLowerCase() === nameWords[n]) n++
-  if (n >= 2) {
+  // … or the whole name when it is a single word ("CleanBee üçün …")
+  if (n >= 2 || (n > 0 && n === nameWords.length)) {
     text = words
       .slice(n)
       .join(' ')

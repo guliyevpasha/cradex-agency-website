@@ -220,11 +220,14 @@ export interface SanityPortfolioDoc {
   title?: string | { az: string; en: string; ru: string; tr: string }
   client?: string
   category?: string
+  industry?: string
   serviceCategory?: string
   description?: string | { az: string; en: string; ru: string; tr: string }
   image?: string
+  websiteScreenshots?: { desktop?: string | null; tablet?: string | null; mobile?: string | null }
   gallery?: (string | null)[]
   tools?: string[]
+  workDone?: string[]
   tags?: string[]
   results?: string | { az: string; en: string; ru: string; tr: string }
   duration?: string
@@ -301,15 +304,23 @@ export function toPortfolioItem(
     title: getLocalizedObject(doc.title),
     clientName: doc.client ?? '',
     category: doc.category,
+    industry: doc.industry,
     serviceCategory: (doc.serviceCategory as ServiceSlug) || DEFAULT_SERVICE_CATEGORY,
     tags: doc.tags ?? [],
     coverImage: doc.image ?? '',
+    // desktop / phone captures uploaded in Studio; without a desktop one the
+    // cards fall back to the local captures or the cover
+    websiteScreenshots: doc.websiteScreenshots?.desktop
+      ? { desktop: doc.websiteScreenshots.desktop, tablet: doc.websiteScreenshots.tablet ?? undefined, mobile: doc.websiteScreenshots.mobile ?? undefined }
+      : undefined,
     gallery: (doc.gallery ?? []).filter((url): url is string => Boolean(url)),
     videoUrl: doc.videoUrl,
-    projectUrl: doc.projectUrl,
+    // rendered as a link: nothing but a web address gets through
+    projectUrl: doc.projectUrl && /^https?:\/\//i.test(doc.projectUrl) ? doc.projectUrl : undefined,
     descriptionKey: getLocalizedText(doc.description),
     description: getLocalizedObject(doc.description),
     tools: doc.tools ?? [],
+    workDone: doc.workDone ?? [],
     resultsKey: getLocalizedText(doc.results),
     results: getLocalizedObject(doc.results),
     duration: doc.duration,

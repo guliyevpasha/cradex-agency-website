@@ -86,7 +86,7 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
             <div
               ref={trackRef}
               className="marquee-track flex items-center gap-6 w-max"
-              style={{ animation: 'marquee-scroll 28s linear infinite', willChange: 'transform' }}
+              style={{ animation: `marquee-scroll ${Math.max(28, partners.length * 3)}s linear infinite`, willChange: 'transform' }}
             >
               {partners.map((partner) => (
                 <LogoCard key={`a-${partner.id}`} partner={partner} logo={partner.logo} uid={`a-${partner.id}`} />

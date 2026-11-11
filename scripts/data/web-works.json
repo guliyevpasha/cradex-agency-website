@@ -1,0 +1,2231 @@
+[
+  {
+    "key": "onaktravel-com",
+    "url": "https://onaktravel.com/",
+    "date": "2021-05-19",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Swiper",
+      "Lazysizes",
+      "Bootstrap",
+      "Google Fonts",
+      "Bootstrap Icons",
+      "YouTube",
+      "JSON-LD (Schema.org)",
+      "Cloudflare",
+      "LiteSpeed",
+      "jsDelivr"
+    ],
+    "slug": "onak-travel",
+    "client": "Onak Travel",
+    "title": {
+      "az": "Onak Travel",
+      "en": "Onak Travel",
+      "ru": "Onak Travel",
+      "tr": "Onak Travel"
+    },
+    "description": {
+      "az": "Onak Travel üçün Bali, Yaponiya, Zanzibar və digər istiqamətlərə fərdi və qrup turlarını təqdim edən turizm saytı hazırlanıb. Saytda tur axtarışı, Paradiso qrup turları, istiqamətlər bölməsi, əlaqə səhifəsi və altı dilli interfeys var.",
+      "en": "A tourism website for Onak Travel presenting tailor-made and group tours to Bali, Japan, Zanzibar and other destinations. It includes a tour search field, Paradiso group tours, a destinations section, a contact page and a six-language interface.",
+      "ru": "Туристический сайт для Onak Travel с индивидуальными и групповыми турами на Бали, в Японию, на Занзибар и в другие страны. На сайте есть поиск туров, групповые туры Paradiso, раздел направлений, страница контактов и интерфейс на шести языках.",
+      "tr": "Onak Travel için Bali, Japonya, Zanzibar gibi rotalara kişiye özel ve grup turlarını tanıtan bir turizm sitesi hazırlandı. Sitede tur arama, Paradiso grup turları, destinasyonlar bölümü, iletişim sayfası ve altı dilli arayüz bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "search",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "ramservis-az",
+    "url": "https://www.ramservis.az/",
+    "date": "2021-08-15",
+    "industry": "auto",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Webpack",
+      "Supabase",
+      "Node.js",
+      "Swiper",
+      "Three.js",
+      "Tailwind CSS",
+      "Lucide",
+      "Google Maps",
+      "JSON-LD (Schema.org)",
+      "Vercel"
+    ],
+    "slug": "ram-servis",
+    "client": "Ram Servis",
+    "title": {
+      "az": "Ram Servis",
+      "en": "Ram Servis",
+      "ru": "Ram Servis",
+      "tr": "Ram Servis"
+    },
+    "description": {
+      "az": "Ram Servis üçün Bakıda gündəlik, həftəlik və aylıq avtomobil icarəsi təklif edən sayt hazırlanıb. Saytda maşın kataloqu, 6 aylıq korporativ icarə paketləri, avtobuslar bölməsi, xidmətlər səhifəsi və gecə/gündüz rejimi var.",
+      "en": "Ram Servis is a car rental website for customers in Baku who need daily, weekly or monthly rentals. It features a vehicle catalogue, six-month corporate rental packages, a buses section, a services page and a light and dark theme toggle.",
+      "ru": "Для Ram Servis сделан сайт аренды автомобилей в Баку с суточной, недельной и месячной арендой. На сайте есть каталог машин, корпоративные пакеты на 6 месяцев, раздел автобусов, страница услуг и переключатель темы.",
+      "tr": "Ram Servis için Bakü'de günlük, haftalık ve aylık araç kiralama sunan bir site hazırlandı. Sitede araç kataloğu, 6 aylık kurumsal kiralama paketleri, otobüsler bölümü, hizmetler sayfası ve tema değiştirme düğmesi yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "catalog",
+      "forms",
+      "darkmode"
+    ]
+  },
+  {
+    "key": "stomatoloq-az",
+    "url": "https://stomatoloq.az/",
+    "date": "2021-10-17",
+    "industry": "health",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "jQuery",
+      "Owl Carousel",
+      "Bootstrap",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "slug": "dr-farid-zeynalov",
+    "client": "Dr. Fərid Zeynalov",
+    "title": {
+      "az": "Dr. Fərid Zeynalov",
+      "en": "Dr. Fərid Zeynalov",
+      "ru": "Dr. Fərid Zeynalov",
+      "tr": "Dr. Fərid Zeynalov"
+    },
+    "description": {
+      "az": "Dr. Fərid Zeynalov üçün diş həkiminin xidmətlərini tanıdan fərdi təqdimat saytı hazırlanıb. Saytda xidmətlərin təsviri, əvvəl-sonra nəticələri, pasiyent şərhləri, həkim haqqında səhifə və əlaqə bölməsi yer alır.",
+      "en": "This is a personal practice website for dentist Dr. Fərid Zeynalov, presenting his dental services. It features service descriptions, before-and-after results, patient reviews, a page about the doctor and a contact section.",
+      "ru": "Персональный сайт-визитка стоматолога Dr. Fərid Zeynalov с описанием его услуг. На сайте есть описания процедур, раздел «до и после», отзывы пациентов, страница о враче и контакты.",
+      "tr": "Diş hekimi Dr. Fərid Zeynalov için hizmetlerini tanıtan kişisel bir tanıtım sitesi hazırlandı. Sitede hizmet açıklamaları, öncesi-sonrası bölümü, hasta yorumları, doktor hakkında sayfa ve iletişim alanı bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "bmwpartsbaku-az",
+    "url": "https://bmwpartsbaku.az/",
+    "date": "2021-11-07",
+    "industry": "auto",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "WooCommerce",
+      "Elementor",
+      "Contact Form 7",
+      "Rank Math SEO",
+      "Polylang",
+      "MySQL",
+      "jQuery",
+      "jQuery UI",
+      "Slick",
+      "GSAP",
+      "Magnific Popup",
+      "Select2",
+      "Moment.js",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "JSON-LD (Schema.org)",
+      "Hostinger"
+    ],
+    "slug": "bmw-parts-baku",
+    "client": "BMW Parts Baku",
+    "title": {
+      "az": "BMW Parts Baku",
+      "en": "BMW Parts Baku",
+      "ru": "BMW Parts Baku",
+      "tr": "BMW Parts Baku"
+    },
+    "description": {
+      "az": "BMW Parts Baku BMW avtomobilləri üçün ehtiyat hissələri satan onlayn mağaza kimi qurulub. Model və seriya üzrə axtarış filtri, F30, G20, E46 kimi nəsil səhifələri, məhsul kataloqu və bloq bölməsi mövcuddur.",
+      "en": "BMW Parts Baku runs as an online shop for BMW spare parts. It offers a model and series search filter, generation pages such as F30, G20 and E46, a product catalogue and a blog section.",
+      "ru": "BMW Parts Baku — интернет-магазин запчастей для автомобилей BMW. Здесь есть фильтр поиска по серии и модели, страницы поколений вроде F30, G20 и E46, каталог товаров и раздел блога.",
+      "tr": "BMW Parts Baku, BMW araçları için yedek parça satan bir çevrimiçi mağaza olarak kuruldu. Seri ve modele göre arama filtresi, F30, G20, E46 gibi kasa sayfaları, ürün kataloğu ve blog bölümü yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "catalog",
+      "ecommerce",
+      "search",
+      "forms",
+      "blog",
+      "animations",
+      "integrations"
+    ]
+  },
+  {
+    "key": "smartflame-az",
+    "url": "https://smartflame.az/",
+    "date": "2021-11-11",
+    "industry": "catalog",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "React",
+      "React Router",
+      "Vite",
+      "Tailwind CSS",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed"
+    ],
+    "slug": "smart-flame",
+    "client": "Smart Flame",
+    "title": {
+      "az": "Smart Flame",
+      "en": "Smart Flame",
+      "ru": "Smart Flame",
+      "tr": "Smart Flame"
+    },
+    "description": {
+      "az": "Smart Flame üçün elektrik kaminlərin kataloqunu təqdim edən satış saytı hazırlanıb. Saytda smart, buxarlı və 3D kamin növləri, kamin seçimi bölməsi, çatdırılma məlumatı, WhatsApp əlaqəsi və AZ/RU dil seçimi var.",
+      "en": "A product showcase website for Smart Flame, a seller of electric fireplaces. It lists smart, steam and 3D fireplace types, a fireplace selection guide, delivery information, WhatsApp contact and an AZ/RU language switch.",
+      "ru": "Каталожный сайт Smart Flame, компании по продаже электрических каминов. На нём представлены умные, паровые и 3D-камины, раздел подбора камина, информация о доставке, связь через WhatsApp и переключатель языков AZ/RU.",
+      "tr": "Elektrikli şömine satan Smart Flame için ürün vitrini niteliğinde bir site hazırlandı. Akıllı, buharlı ve 3D şömine çeşitleri, şömine seçimi bölümü, teslimat bilgisi, WhatsApp iletişimi ve AZ/RU dil seçeneği sunuluyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "catalog",
+      "forms",
+      "integrations"
+    ]
+  },
+  {
+    "key": "elegancetur-com",
+    "url": "https://www.elegancetur.com/",
+    "date": "2021-11-28",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "ASP.NET",
+      "jQuery",
+      "Owl Carousel",
+      "AOS",
+      "Toastr",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Bootstrap Icons",
+      "Google Analytics",
+      "Google Ads",
+      "JSON-LD (Schema.org)",
+      "jsDelivr",
+      "cdnjs",
+      "unpkg"
+    ],
+    "slug": "elegance-tur",
+    "client": "Elegance Tur",
+    "title": {
+      "az": "Elegance Tur",
+      "en": "Elegance Tur",
+      "ru": "Elegance Tur",
+      "tr": "Elegance Tur"
+    },
+    "description": {
+      "az": "Elegance Tur üçün yurtdışı, yurtiçi, gəmi və vizasız turları toplayan turizm platforması hazırlanıb. Saytda ay üzrə tur axtarışı, endirimli turlar, bayram və yeni il turları, viza əməliyyatları, üzvlük və seçilmişlər bölməsi var.",
+      "en": "Elegance Tur is a tourism platform covering international, domestic, cruise and visa-free tours. It has a tour search by month, discounted tours, holiday and New Year tours, visa services, member login and registration, and a favourites feature.",
+      "ru": "Туристическая платформа для Elegance Tur с зарубежными, внутренними, круизными и безвизовыми турами. На сайте есть поиск туров по месяцам, туры со скидками, праздничные и новогодние программы, визовые услуги, вход и регистрация, избранное.",
+      "tr": "Elegance Tur için yurt dışı, yurt içi, gemi ve vizesiz turları bir araya getiren bir turizm platformu hazırlandı. Aya göre tur arama, indirimli turlar, bayram ve yılbaşı turları, vize işlemleri, üyelik ve favoriler özellikleri bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "search",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "qualident-com-tr",
+    "url": "https://www.qualident.com.tr/tr",
+    "date": "2022-01-05",
+    "industry": "health",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Webpack",
+      "Supabase",
+      "Node.js",
+      "i18next",
+      "Tailwind CSS",
+      "Lucide",
+      "Google Analytics",
+      "Google Tag Manager",
+      "JSON-LD (Schema.org)",
+      "Vercel"
+    ],
+    "slug": "qualident",
+    "client": "Qualident",
+    "title": {
+      "az": "Qualident",
+      "en": "Qualident",
+      "ru": "Qualident",
+      "tr": "Qualident"
+    },
+    "description": {
+      "az": "Qualident üçün İstanbulda fəaliyyət göstərən diş klinikasının pasiyentlərinə yönəlmiş sayt hazırlanıb. Saytda müalicə xidmətləri, klinik hal qalereyası, məqalələr, iş ortaqlığı bölməsi və onlayn görüş qeydiyyatı var.",
+      "en": "Qualident is a website for a dental clinic in Istanbul, aimed at patients looking for implant, orthodontic and cosmetic treatment. It includes treatment descriptions, a clinical case gallery, an articles section, a partnership page and appointment booking.",
+      "ru": "Для Qualident создан сайт стоматологической клиники в Стамбуле, ориентированный на пациентов. На сайте есть описания услуг, галерея клинических случаев, раздел статей, страница сотрудничества и запись на приём.",
+      "tr": "Qualident için İstanbul'daki diş kliniğinin hastalarına yönelik bir site hazırlandı. Sitede tedavi hizmetlerinin tanıtımı, klinik vaka galerisi, makaleler, iş ortaklığı sayfası ve randevu alma bölümü bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "rbacademy-az",
+    "url": "https://rbacademy.az/",
+    "date": "2022-02-14",
+    "industry": "education",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "CodeIgniter",
+      "jQuery",
+      "Swiper",
+      "Owl Carousel",
+      "Slick",
+      "AOS",
+      "Fancybox",
+      "Toastr",
+      "Modernizr",
+      "Popper.js",
+      "Inputmask",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "YouTube",
+      "LiteSpeed",
+      "jsDelivr",
+      "cdnjs",
+      "unpkg"
+    ],
+    "slug": "rb-academy",
+    "client": "RB Academy",
+    "title": {
+      "az": "RB Academy",
+      "en": "RB Academy",
+      "ru": "RB Academy",
+      "tr": "RB Academy"
+    },
+    "description": {
+      "az": "RB Academy üçün riyaziyyat üzrə onlayn dərslər, imtahanlar və sinaqlar təqdim edən təhsil platforması hazırlanıb. Saytda kurslar, oyunlar, onlayn imtahanlar, müəllimlər, məzunlar, kitablar, xəbərlər, qeydiyyat və giriş bölməsi var.",
+      "en": "RB Academy is an online learning platform for mathematics courses, exams and practice tests. The site offers courses, learning games, online exams, teacher and graduate pages, books, news, and user registration and login.",
+      "ru": "Образовательная платформа RB Academy с онлайн-уроками, экзаменами и пробными тестами по математике. На сайте есть курсы, обучающие игры, онлайн-экзамены, страницы преподавателей и выпускников, книги, новости, регистрация и вход.",
+      "tr": "RB Academy için matematik dersleri, çevrimiçi sınavlar ve deneme sınavları sunan bir eğitim platformu hazırlandı. Sitede kurslar, oyunlar, çevrimiçi sınavlar, öğretmenler, mezunlar, kitaplar, haberler ile üyelik ve giriş bölümü yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "forms",
+      "blog",
+      "animations",
+      "accounts"
+    ]
+  },
+  {
+    "key": "butarentalcars-az",
+    "url": "https://butarentalcars.az/",
+    "date": "2022-05-20",
+    "industry": "auto",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "jQuery",
+      "Air Datepicker",
+      "Popper.js",
+      "Bootstrap",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "JSON-LD (Schema.org)",
+      "Cloudflare",
+      "jsDelivr"
+    ],
+    "slug": "buta-rent-a-car",
+    "client": "Buta Rent A Car",
+    "title": {
+      "az": "Buta Rent A Car",
+      "en": "Buta Rent A Car",
+      "ru": "Buta Rent A Car",
+      "tr": "Buta Rent A Car"
+    },
+    "description": {
+      "az": "Buta Rent A Car üçün Bakıda sürücüsüz və sürücü ilə avtomobil icarəsi təklif edən sayt hazırlanıb. Saytda avtomobil parkı, müddətə görə qiymətlər, onlayn bron düyməsi, suallar və cavablar, faydalı materiallar və üç dilli interfeys var.",
+      "en": "A car hire website for Buta Rent A Car in Baku, offering self-drive and chauffeur-driven rentals. It includes a vehicle fleet with prices by rental length, an online booking button, an FAQ, useful articles and a three-language interface.",
+      "ru": "Сайт проката автомобилей Buta Rent A Car в Баку: аренда с водителем и без. Есть автопарк с ценами в зависимости от срока, кнопка онлайн-бронирования, раздел вопросов и ответов, полезные материалы и интерфейс на трёх языках.",
+      "tr": "Buta Rent A Car için Bakü’de şoförlü ve şoförsüz araç kiralama sunan bir site hazırlandı. Araç filosu, kiralama süresine göre fiyatlar, çevrimiçi rezervasyon butonu, sık sorulan sorular, faydalı yazılar ve üç dilli arayüz bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "booking",
+      "forms",
+      "integrations"
+    ]
+  },
+  {
+    "key": "geo-travel-az",
+    "url": "https://geo-travel.az/",
+    "date": "2022-07-10",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "jQuery",
+      "Swiper",
+      "Popper.js",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "LiteSpeed",
+      "jsDelivr"
+    ],
+    "slug": "geo-travel",
+    "client": "Geo Travel",
+    "title": {
+      "az": "Geo Travel",
+      "en": "Geo Travel",
+      "ru": "Geo Travel",
+      "tr": "Geo Travel"
+    },
+    "description": {
+      "az": "Geo Travel üçün Azərbaycan üzrə turları və korporativ səyahətləri təqdim edən turizm saytı hazırlanıb. Saytda tur kataloqu, MICE və nəqliyyat bölmələri, şirkət haqqında səhifə və əlaqə forması var.",
+      "en": "Geo Travel is a tourism website presenting tours and corporate travel services for individual and business travellers. It includes a tour catalogue with prices, separate MICE and Transport sections, an about page and a contact page.",
+      "ru": "Для Geo Travel создан туристический сайт с турами и услугами для корпоративных поездок. На сайте есть каталог туров с ценами, отдельные разделы MICE и транспорта, страница о компании и контакты.",
+      "tr": "Geo Travel için turları ve kurumsal seyahat hizmetlerini tanıtan bir turizm sitesi hazırlandı. Sitede fiyatlı tur kataloğu, MICE ve ulaşım bölümleri, hakkımızda sayfası ve iletişim sayfası bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "catalog",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "elbaer-az",
+    "url": "https://elbaer.az/",
+    "date": "2022-08-08",
+    "industry": "health",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Supabase",
+      "Google Fonts",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed",
+      "jsDelivr"
+    ],
+    "existing": "elbaer-mmc",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "catalog",
+      "search",
+      "blog"
+    ]
+  },
+  {
+    "key": "gitmeklazim-com",
+    "url": "https://www.gitmeklazim.com/",
+    "date": "2022-09-19",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Angular",
+      "Node.js",
+      "Express",
+      "Webpack",
+      "Swiper",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "Meta Pixel",
+      "Microsoft Clarity",
+      "TikTok Pixel",
+      "Facebook SDK",
+      "JSON-LD (Schema.org)",
+      "PWA",
+      "Nginx"
+    ],
+    "slug": "gitmek-lazim",
+    "client": "Gitmek Lazım",
+    "title": {
+      "az": "Gitmek Lazım",
+      "en": "Gitmek Lazım",
+      "ru": "Gitmek Lazım",
+      "tr": "Gitmek Lazım"
+    },
+    "description": {
+      "az": "Gitmek Lazım üçün yurtdışı turlarını bölgə, tur növü və dövrə görə təqdim edən turizm saytı hazırlanıb. Saytda istiqamət və tarix üzrə tur axtarışı, Avropa, Yaponiya, Bali kimi bölgə səhifələri, çay kruizləri, bloq və telefon əlaqəsi var.",
+      "en": "A tourism website for Gitmek Lazım, organising international tours by region, tour type and season. It has a search by destination and date, regional pages such as Europe, Japan and Bali, river cruises, a blog and phone contact.",
+      "ru": "Туристический сайт Gitmek Lazım с зарубежными турами, сгруппированными по регионам, типам и сезонам. Есть поиск по направлению и дате, страницы регионов (Европа, Япония, Бали), речные круизы, блог и телефон для связи.",
+      "tr": "Gitmek Lazım için yurt dışı turlarını bölge, tur tipi ve döneme göre listeleyen bir turizm sitesi hazırlandı. Sitede yön ve tarihe göre tur arama, Avrupa, Japonya, Bali gibi bölge sayfaları, nehir turları, blog ve telefon iletişimi var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "search",
+      "forms",
+      "blog",
+      "animations"
+    ]
+  },
+  {
+    "key": "qafqazxaricdetehsil-az",
+    "url": "https://qafqazxaricdetehsil.az/",
+    "date": "2022-11-25",
+    "industry": "education",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "Elementor",
+      "Contact Form 7",
+      "Yoast SEO",
+      "MySQL",
+      "jQuery",
+      "jQuery UI",
+      "Swiper",
+      "Fancybox",
+      "Select2",
+      "Lazysizes",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "Meta Pixel",
+      "Google Maps",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "slug": "qafqaz-xaricde-tehsil-merkezi",
+    "client": "Qafqaz Xaricdə Təhsil Mərkəzi",
+    "title": {
+      "az": "Qafqaz Xaricdə Təhsil Mərkəzi",
+      "en": "Qafqaz Xaricdə Təhsil Mərkəzi",
+      "ru": "Qafqaz Xaricdə Təhsil Mərkəzi",
+      "tr": "Qafqaz Xaricdə Təhsil Mərkəzi"
+    },
+    "description": {
+      "az": "Qafqaz Xaricdə Təhsil Mərkəzi üçün Türkiyədə və xaricdə təhsil istəyən tələbələrə yönəlmiş məlumat saytı hazırlanıb. Saytda xaricdə təhsil və Türkiyədə təhsil bölmələri, YÖS kursları, qiyabi təhsil haqqında yazılar, xəbərlər və ünvanla əlaqə məlumatı var.",
+      "en": "A website for Qafqaz Xaricdə Təhsil Mərkəzi, an agency helping students study in Turkey and abroad. It has sections on studying abroad and in Turkey, YÖS courses, articles on distance study and living costs, news, and address and phone details.",
+      "ru": "Сайт центра Qafqaz Xaricdə Təhsil Mərkəzi для студентов, желающих учиться в Турции и за рубежом. Есть разделы об обучении за границей и в Турции, курсы YÖS, статьи о заочном обучении и стоимости жизни, новости, адрес и телефон.",
+      "tr": "Qafqaz Xaricdə Təhsil Mərkəzi için Türkiye’de ve yurt dışında eğitim almak isteyen öğrencilere yönelik bir bilgi sitesi hazırlandı. Yurt dışında ve Türkiye’de eğitim bölümleri, YÖS kursları, uzaktan eğitim yazıları, haberler ve adres bilgisi yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "realdent-az",
+    "url": "https://www.realdent.az/",
+    "date": "2022-12-12",
+    "industry": "health",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Wix",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Google Ads",
+      "Meta Pixel",
+      "Yandex Metrica",
+      "Google Maps",
+      "YouTube",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "slug": "realdent",
+    "client": "RealDent",
+    "title": {
+      "az": "RealDent",
+      "en": "RealDent",
+      "ru": "RealDent",
+      "tr": "RealDent"
+    },
+    "description": {
+      "az": "RealDent stomatoloji klinikası üçün xidmətləri və həkim komandasını tanıdan sayt hazırlanıb. Saytda breketlər, implantlar, vinirlər, uşaq stomatologiyası kimi xidmət səhifələri, həkimlərin profilləri, vakansiyalar, bloq və əlaqə bölməsi var.",
+      "en": "A website for the RealDent dental clinic introducing its treatments and team of doctors. It has service pages for braces, implants, veneers and paediatric dentistry, doctor profiles, vacancies, a blog and a contact section.",
+      "ru": "Сайт стоматологической клиники RealDent, представляющий её услуги и команду врачей. Есть страницы услуг — брекеты, импланты, виниры, детская стоматология, профили врачей, вакансии, блог и раздел контактов.",
+      "tr": "RealDent diş kliniği için hizmetleri ve doktor kadrosunu tanıtan bir site hazırlandı. Diş telleri, implantlar, laminalar, çocuk diş hekimliği gibi hizmet sayfaları, doktor profilleri, iş ilanları, blog ve iletişim bölümü bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "cms",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "sibaglobal-com",
+    "url": "https://www.sibaglobal.com/",
+    "date": "2023-02-19",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Google Fonts",
+      "Lucide",
+      "JSON-LD (Schema.org)",
+      "Google Cloud"
+    ],
+    "slug": "siba-global",
+    "client": "SİBA Global",
+    "title": {
+      "az": "SİBA Global",
+      "en": "SİBA Global",
+      "ru": "SİBA Global",
+      "tr": "SİBA Global"
+    },
+    "description": {
+      "az": "SİBA Global üçün sənaye obyektləri üzrə betonarme baca, silo və qüllə tikən mühəndislik şirkətinin korporativ saytı hazırlanıb. Saytda şirkət haqqında, ixtisas sahələri, layihələr, bloq və karyera bölmələri, dörd dil seçimi və əlaqə səhifəsi var.",
+      "en": "SİBA Global is a corporate website for an engineering contractor that builds reinforced concrete chimneys, silos and towers for industry. It has about, expertise, projects, blog and careers sections, a contact page and a four-language switcher.",
+      "ru": "Для SİBA Global создан корпоративный сайт инженерной компании, строящей железобетонные трубы, силосы и башни для промышленности. На сайте есть разделы о компании, специализации, проектов, блога и карьеры, контакты и четыре языка.",
+      "tr": "SİBA Global için sanayi tesislerine betonarme baca, silo ve kule inşa eden mühendislik firmasının kurumsal sitesi hazırlandı. Sitede hakkımızda, uzmanlık, projeler, blog ve kariyer bölümleri, iletişim sayfası ve dört dil seçeneği bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "agora-az",
+    "url": "https://agora.az/",
+    "date": "2023-03-18",
+    "industry": "education",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "WPBakery",
+      "Slider Revolution",
+      "Contact Form 7",
+      "Yoast SEO",
+      "Polylang",
+      "LiteSpeed Cache",
+      "MySQL",
+      "jQuery",
+      "Slick",
+      "GSAP",
+      "ScrollTrigger",
+      "Isotope",
+      "Select2",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Meta Pixel",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed",
+      "Hostinger"
+    ],
+    "slug": "agora-tehsil-merkezi",
+    "client": "Agora Təhsil Mərkəzi",
+    "title": {
+      "az": "Agora Təhsil Mərkəzi",
+      "en": "Agora Təhsil Mərkəzi",
+      "ru": "Agora Təhsil Mərkəzi",
+      "tr": "Agora Təhsil Mərkəzi"
+    },
+    "description": {
+      "az": "Agora Təhsil Mərkəzi üçün xaricdə təhsil proqramlarını tanıdan korporativ sayt hazırlanıb. Saytda Başla, İrəli və Yüksəliş proqramları, xidmətlər, faydalı resurslar, ilkin konsultasiya sorğusu və xəritə ilə əlaqə məlumatı yer alır.",
+      "en": "A corporate website for Agora Təhsil Mərkəzi, an agency supporting students who want to study abroad. It presents the Başla, İrəli and Yüksəliş programmes, services, resources, an initial consultation request and contact details with a map link.",
+      "ru": "Корпоративный сайт центра Agora Təhsil Mərkəzi, помогающего студентам поступать в зарубежные вузы. Представлены программы Başla, İrəli и Yüksəliş, услуги, ресурсы, запрос первичной консультации и контакты со ссылкой на карту.",
+      "tr": "Yurt dışında eğitim danışmanlığı veren Agora Təhsil Mərkəzi için kurumsal bir site hazırlandı. Başla, İrəli ve Yüksəliş programları, hizmetler, kaynaklar, ön danışma talebi ile harita bağlantılı iletişim bilgileri yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "lordconstruction-az",
+    "url": "https://www.lordconstruction.az/",
+    "date": "2023-04-09",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "jQuery",
+      "Owl Carousel",
+      "WOW.js",
+      "Magnific Popup",
+      "SweetAlert2",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Boxicons",
+      "Cloudflare",
+      "LiteSpeed"
+    ],
+    "slug": "lord-construction",
+    "client": "Lord Construction",
+    "title": {
+      "az": "Lord Construction",
+      "en": "Lord Construction",
+      "ru": "Lord Construction",
+      "tr": "Lord Construction"
+    },
+    "description": {
+      "az": "Lord Construction üçün mülki və sənaye inşaatı şirkətinin korporativ saytı hazırlanıb. Saytda şirkət haqqında məlumat, layihələr, xidmətlər, qanunvericilik aktları, əlaqə məlumatları və Azərbaycan, ingilis, rus dil seçimləri var.",
+      "en": "The corporate website of Lord Construction, a civil and industrial construction company. It includes a company profile, projects, services, a section on legislative acts, contact details and Azerbaijani, English and Russian versions.",
+      "ru": "Корпоративный сайт строительной компании Lord Construction, работающей в гражданском и промышленном строительстве. На нём есть информация о компании, проекты, услуги, раздел нормативных актов, контакты и версии на азербайджанском, английском и русском.",
+      "tr": "Sivil ve endüstriyel inşaat alanında çalışan Lord Construction için kurumsal bir site hazırlandı. Şirket tanıtımı, projeler, hizmetler, mevzuat bölümü, iletişim bilgileri ve Azerice, İngilizce, Rusça dil seçenekleri yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "forms",
+      "gallery",
+      "animations"
+    ]
+  },
+  {
+    "key": "flowercleaning-az",
+    "url": "https://flowercleaning.az/",
+    "date": "2023-05-15",
+    "industry": "cleaning",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "Elementor",
+      "MySQL",
+      "jQuery",
+      "jQuery UI",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "LiteSpeed"
+    ],
+    "slug": "flower-cleaning",
+    "client": "Flower Cleaning",
+    "title": {
+      "az": "Flower Cleaning",
+      "en": "Flower Cleaning",
+      "ru": "Flower Cleaning",
+      "tr": "Flower Cleaning"
+    },
+    "description": {
+      "az": "Flower Cleaning üçün peşəkar təmizlik xidmətlərini təqdim edən şirkət saytı hazırlanıb. Saytda bina örtükləri və dərin təmizlik xidmətləri, şirkət haqqında bölmə, tərəfdaşlar, əlaqə səhifəsi və sifariş düyməsi var.",
+      "en": "A company website for Flower Cleaning, presenting its professional cleaning services. It includes building surface and deep cleaning services, an about section, a partners page, a contact page and an order button.",
+      "ru": "Сайт компании Flower Cleaning, представляющий профессиональные услуги по уборке. На нём есть услуги по уходу за покрытиями зданий и глубокой уборке, раздел о компании, партнёры, страница контактов и кнопка заказа.",
+      "tr": "Flower Cleaning için profesyonel temizlik hizmetlerini tanıtan bir şirket sitesi hazırlandı. Bina yüzeyleri ve derin temizlik hizmetleri, hakkımızda bölümü, iş ortakları, iletişim sayfası ve sipariş butonu bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "forms"
+    ]
+  },
+  {
+    "key": "seheryeliturizm-net",
+    "url": "https://seheryeliturizm.net/",
+    "date": "2023-06-21",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Firebase",
+      "Cloud Firestore",
+      "Firebase Authentication",
+      "Tesseract.js",
+      "SheetJS",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Maps",
+      "reCAPTCHA",
+      "Netlify",
+      "jsDelivr",
+      "cdnjs"
+    ],
+    "slug": "seheryeli-turizm",
+    "client": "SeherYeli Turizm",
+    "title": {
+      "az": "SeherYeli Turizm",
+      "en": "SeherYeli Turizm",
+      "ru": "SeherYeli Turizm",
+      "tr": "SeherYeli Turizm"
+    },
+    "description": {
+      "az": "SeherYeli Turizm üçün Mekkə və Mədinəyə umrə turlarını təqdim edən turizm saytı hazırlanıb. Saytda umrə proqramları, Kəbəyə yaxın otellər, Ramazan proqramı, xidmətlər, tanıtım filmi, giriş və rezervasiya bölməsi yer alır.",
+      "en": "A tourism website for SeherYeli Turizm, which offers Umrah tours to Mecca and Medina. It features Umrah programmes, hotels within walking distance of the Kaaba, a Ramadan programme, services, a promo film, member login and a reservation form.",
+      "ru": "Туристический сайт SeherYeli Turizm, организующей туры умра в Мекку и Медину. На сайте есть программы умры, отели в пешей доступности от Каабы, рамадановская программа, услуги, промо-ролик, вход и форма бронирования.",
+      "tr": "SeherYeli Turizm için Mekke ve Medine’ye umre turları sunan bir turizm sitesi hazırlandı. Umre programları, Kabe’ye yürüme mesafesindeki oteller, Ramazan programı, hizmetler, tanıtım filmi, giriş ve rezervasyon bölümü yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "booking",
+      "forms",
+      "accounts"
+    ]
+  },
+  {
+    "key": "aletzade-az",
+    "url": "https://aletzade.az/",
+    "date": "2024-02-16",
+    "industry": "ecommerce",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "WooCommerce",
+      "Yoast SEO",
+      "MySQL",
+      "jQuery",
+      "Lazysizes",
+      "Modernizr",
+      "Bootstrap",
+      "Font Awesome",
+      "YouTube",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed"
+    ],
+    "slug": "aletzade",
+    "client": "Aletzade",
+    "title": {
+      "az": "Aletzade",
+      "en": "Aletzade",
+      "ru": "Aletzade",
+      "tr": "Aletzade"
+    },
+    "description": {
+      "az": "Aletzade üçün generator, dəzgah və elektrik alətlərinin satışı üzrə onlayn mağaza hazırlanıb. Saytda kateqoriyalar və brendlər üzrə məhsullar, qiymətlərlə seçilmiş avadanlıqlar, axtarış, səbət, bloq, qalereya və Çindən sifariş bölməsi var.",
+      "en": "An online shop for Aletzade, selling generators, machine tools and power tools. It has product categories and brands, featured equipment with prices, search, a shopping cart, a blog, a gallery and a section for ordering equipment from China.",
+      "ru": "Интернет-магазин Aletzade по продаже генераторов, станков и электроинструмента. Есть категории и бренды, избранное оборудование с ценами, поиск, корзина, блог, галерея и раздел заказа оборудования из Китая.",
+      "tr": "Aletzade için jeneratör, tezgah ve elektrikli el aletleri satan bir çevrimiçi mağaza hazırlandı. Kategori ve markalara göre ürünler, fiyatlı öne çıkan ekipmanlar, arama, sepet, blog, galeri ve Çin’den sipariş bölümü bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "catalog",
+      "ecommerce",
+      "search",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "dentaluxbaku-com",
+    "url": "https://www.dentaluxbaku.com/",
+    "date": "2024-03-28",
+    "industry": "health",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Astro",
+      "Swiper",
+      "Tailwind CSS",
+      "Elfsight",
+      "Vercel"
+    ],
+    "slug": "dentalux",
+    "client": "Dentalux",
+    "title": {
+      "az": "Dentalux",
+      "en": "Dentalux",
+      "ru": "Dentalux",
+      "tr": "Dentalux"
+    },
+    "description": {
+      "az": "Dentalux üçün Bakıda iki filialı olan diş klinikasının təqdimat saytı hazırlanıb. Saytda xidmətlər, həkim profilləri, filial seçimi, onlayn qəbul sorğusu, bloq, WhatsApp əlaqəsi və Azərbaycan, ingilis, rus dilləri mövcuddur.",
+      "en": "A website for Dentalux, a dental clinic with two branches in Baku. It includes services, doctor profiles, a branch selector, an appointment request, a blog, WhatsApp contact and Azerbaijani, English and Russian versions.",
+      "ru": "Сайт стоматологической клиники Dentalux, имеющей два филиала в Баку. Есть услуги, профили врачей, выбор филиала, запись на приём, блог, связь через WhatsApp и версии на азербайджанском, английском и русском языках.",
+      "tr": "İki şubesi bulunan Bakü’deki diş kliniği Dentalux için tanıtım sitesi hazırlandı. Hizmetler, doktor profilleri, şube seçimi, randevu talebi, blog, WhatsApp iletişimi ile Azerice, İngilizce ve Rusça dil seçenekleri yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "forms",
+      "blog",
+      "gallery",
+      "integrations"
+    ]
+  },
+  {
+    "key": "amberhotel-az",
+    "url": "https://www.amberhotel.az/",
+    "date": "2024-04-19",
+    "industry": "hotel",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "jQuery",
+      "jQuery UI",
+      "Slick",
+      "WOW.js",
+      "Lightcase",
+      "Air Datepicker",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Line Awesome",
+      "YouTube",
+      "Apache"
+    ],
+    "slug": "amber-hotel",
+    "client": "Amber Hotel",
+    "title": {
+      "az": "Amber Hotel",
+      "en": "Amber Hotel",
+      "ru": "Amber Hotel",
+      "tr": "Amber Hotel"
+    },
+    "description": {
+      "az": "Amber Hotel üçün Bakıda yerləşən otelin onlayn rezervasiya saytı hazırlanıb. Saytda otaq növləri və gecəlik qiymətlər, boş otaqların yoxlanması, onlayn rezerv, xəbərlər, tez-tez verilən suallar, qeydiyyat və üç dilli interfeys var.",
+      "en": "An online booking website for Amber Hotel in Baku. Guests can browse room types with nightly rates, check availability, reserve online, read news and FAQs, register an account and use a three-language interface.",
+      "ru": "Сайт онлайн-бронирования для отеля Amber Hotel в Баку. Гости могут смотреть типы номеров с ценами за ночь, проверять свободные номера, бронировать онлайн, читать новости и вопросы-ответы, регистрироваться; интерфейс на трёх языках.",
+      "tr": "Bakü’deki Amber Hotel için çevrimiçi rezervasyon sitesi hazırlandı. Oda tipleri ve gecelik fiyatlar, boş oda sorgulama, çevrimiçi rezervasyon, haberler, sık sorulan sorular, üyelik ve üç dilli arayüz bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "booking",
+      "forms",
+      "blog",
+      "animations",
+      "accounts",
+      "integrations"
+    ]
+  },
+  {
+    "key": "megatravel-az",
+    "url": "https://megatravel.az/",
+    "date": "2024-05-24",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Hostinger Website Builder",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Meta Pixel",
+      "Hotjar",
+      "Facebook SDK",
+      "Hostinger"
+    ],
+    "slug": "mega-travel-agency",
+    "client": "MeGa Travel Agency",
+    "title": {
+      "az": "MeGa Travel Agency",
+      "en": "MeGa Travel Agency",
+      "ru": "MeGa Travel Agency",
+      "tr": "MeGa Travel Agency"
+    },
+    "description": {
+      "az": "MeGa Travel Agency üçün ölkədaxili və ölkəxarici turları təqdim edən turizm saytı hazırlanıb. Saytda xüsusi təkliflər, xarici və daxili turlar, xidmətlər, şirkət haqqında bölmə, bloq, Flightradar24 bölməsi və əlaqə formaları var.",
+      "en": "A tourism website for MeGa Travel Agency, presenting domestic and international tours. It has special offers, foreign and local tours, services, an about section, a blog, a Flightradar24 page and contact options.",
+      "ru": "Туристический сайт MeGa Travel Agency с внутренними и зарубежными турами. Здесь есть специальные предложения, зарубежные и местные туры, услуги, раздел о компании, блог, страница Flightradar24 и способы связи.",
+      "tr": "MeGa Travel Agency için yurt içi ve yurt dışı turları tanıtan bir turizm sitesi hazırlandı. Özel teklifler, yurt dışı ve yurt içi turlar, hizmetler, hakkımızda bölümü, blog, Flightradar24 sayfası ve iletişim seçenekleri bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "cms",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "bakinar-az",
+    "url": "https://bakinar.az/",
+    "date": "2024-06-14",
+    "industry": "consulting",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Swiper",
+      "Tailwind CSS",
+      "Lucide",
+      "Apache",
+      "jsDelivr",
+      "unpkg"
+    ],
+    "slug": "bakinar-konsaltinq",
+    "client": "Bakinar Konsaltinq",
+    "title": {
+      "az": "Bakinar Konsaltinq",
+      "en": "Bakinar Konsaltinq",
+      "ru": "Bakinar Konsaltinq",
+      "tr": "Bakinar Konsaltinq"
+    },
+    "description": {
+      "az": "Bakinar Konsaltinq üçün biznes və texnologiya konsaltinqi göstərən şirkətin təqdimat saytı hazırlanıb. Saytda mühasibat və vergi uçotu, vergi hesabatları, insan resursları və hüquqi dəstək xidmətləri, bloqlar və əlaqə bölməsi var.",
+      "en": "A company website for Bakinar Konsaltinq, a business and technology consultancy. It covers accounting and tax services, tax reporting, human resources and legal support, a blog section and a contact area.",
+      "ru": "Сайт консалтинговой компании Bakinar Konsaltinq, работающей в сфере бизнеса и технологий. На нём описаны бухгалтерский и налоговый учёт, налоговая отчётность, HR и юридическая поддержка, раздел блогов и контакты.",
+      "tr": "İş ve teknoloji danışmanlığı yapan Bakinar Konsaltinq için kurumsal bir tanıtım sitesi hazırlandı. Muhasebe ve vergi uygulamaları, vergi beyannameleri, insan kaynakları ve hukuki destek hizmetleri, blog ve iletişim bölümü yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "search",
+      "forms",
+      "blog",
+      "animations"
+    ]
+  },
+  {
+    "key": "nrjdmc-com",
+    "url": "https://nrjdmc.com/tr",
+    "date": "2024-10-15",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Vite",
+      "Axios",
+      "Tailwind CSS",
+      "Lucide",
+      "Google Analytics",
+      "JSON-LD (Schema.org)",
+      "PWA",
+      "Cloudflare"
+    ],
+    "slug": "nrj-dmc-travel",
+    "client": "NRJ DMC Travel",
+    "title": {
+      "az": "NRJ DMC Travel",
+      "en": "NRJ DMC Travel",
+      "ru": "NRJ DMC Travel",
+      "tr": "NRJ DMC Travel"
+    },
+    "description": {
+      "az": "NRJ DMC Travel üçün korporativ səyahət, VIP concierge və təyinat yönümlü idarəetmə xidmətlərini təqdim edən sayt hazırlanıb. Saytda xidmət bölmələri, TURAGENTAM və GDSBEDS platformaları, tərəfdaşlar, xəbərlər, WhatsApp və təklif sorğusu, dörd dil var.",
+      "en": "NRJ DMC Travel has a corporate site presenting business travel, VIP concierge and destination management services. It offers service pages, sections for the TURAGENTAM and GDSBEDS platforms, partners, news, a quote request, WhatsApp contact and four languages.",
+      "ru": "Для NRJ DMC Travel разработан корпоративный сайт о деловых поездках, VIP-консьерже и управлении направлениями. На сайте есть страницы услуг, разделы платформ TURAGENTAM и GDSBEDS, партнёры, новости, запрос предложения, WhatsApp и четыре языка.",
+      "tr": "NRJ DMC Travel için kurumsal seyahat, VIP concierge ve destinasyon yönetimi hizmetlerini anlatan bir site hazırlandı. Sitede hizmet sayfaları, TURAGENTAM ve GDSBEDS platform bölümleri, partnerler, haberler, teklif formu, WhatsApp ve dört dil seçeneği var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "booking",
+      "search",
+      "forms",
+      "blog",
+      "integrations"
+    ]
+  },
+  {
+    "key": "mts-com-az",
+    "url": "https://mts.com.az/",
+    "date": "2024-11-24",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Google Fonts",
+      "Font Awesome",
+      "Apache",
+      "cdnjs"
+    ],
+    "slug": "mts",
+    "client": "MTS",
+    "title": {
+      "az": "MTS",
+      "en": "MTS",
+      "ru": "MTS",
+      "tr": "MTS"
+    },
+    "description": {
+      "az": "MTS üçün fərdi müştərilərə və bizneslərə tikinti, təmir və texniki xidmət təqdim edən korporativ sayt hazırlanıb. Saytda xidmətlər, layihələr və haqqımızda bölmələri, \"Müraciət et\" düyməsi və üç dilli (AZ, RU, EN) interfeys var.",
+      "en": "The corporate site for MTS presents construction, renovation and technical maintenance to private and business clients. It has service pages for design, building, concrete and drilling work, a projects section, a request button and AZ, RU, EN switching.",
+      "ru": "Корпоративный сайт MTS знакомит частных и корпоративных клиентов со строительными, ремонтными и сервисными услугами компании. На нём есть описания услуг от проектирования до бетонных и буровых работ, раздел проектов, кнопка заявки и переключение AZ, RU и EN.",
+      "tr": "MTS için hazırlanan kurumsal site, bireysel ve kurumsal müşterilere inşaat, tadilat ve teknik servis hizmetlerini tanıtıyor. Sitede tasarım, inşaat, beton ve sondaj hizmet sayfaları, projeler bölümü, başvuru butonu ve AZ, RU, EN dil seçeneği var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "search",
+      "forms",
+      "gallery"
+    ]
+  },
+  {
+    "key": "prime-s-az",
+    "url": "https://www.prime-s.az/az",
+    "date": "2025-02-20",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "jQuery",
+      "Swiper",
+      "GSAP",
+      "ScrollTrigger",
+      "WOW.js",
+      "Magnific Popup",
+      "Isotope",
+      "Toastr",
+      "SlickNav",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Font Awesome",
+      "reCAPTCHA",
+      "JSON-LD (Schema.org)",
+      "Nginx",
+      "cdnjs"
+    ],
+    "slug": "prime-s",
+    "client": "PRIME-S Construction",
+    "title": {
+      "az": "PRIME-S Construction",
+      "en": "PRIME-S Construction",
+      "ru": "PRIME-S Construction",
+      "tr": "PRIME-S Construction"
+    },
+    "description": {
+      "az": "PRIME-S Construction üçün tikinti şirkətinin xidmətlərini və gördüyü işləri təqdim edən çoxdilli təqdimat saytı hazırlanıb. Saytda portfolio, xidmətlər, xəbərlər, müştəri rəyləri, əlaqə üzrə müraciət düyməsi və Azərbaycan, ingilis, rus dil seçimi var.",
+      "en": "Prime-s Construction has a multilingual presentation site that introduces the builder and its finished work. It offers a portfolio, services, news, client testimonials, an application button and a switch between Azerbaijani, English and Russian.",
+      "ru": "Для PRIME-S Construction создан многоязычный сайт-визитка строительной компании с описанием услуг и выполненных работ. На сайте есть портфолио, раздел услуг, новости, отзывы клиентов, кнопка заявки и выбор языка: азербайджанский, английский, русский.",
+      "tr": "PRIME-S Construction için inşaat firmasının hizmetlerini ve işlerini tanıtan çok dilli bir tanıtım sitesi hazırlandı. Sitede portfolyo, hizmetler, haberler, müşteri yorumları, başvuru butonu ile Azerbaycanca, İngilizce, Rusça dil seçeneği var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "forms",
+      "blog",
+      "gallery",
+      "animations"
+    ]
+  },
+  {
+    "key": "makan-az",
+    "url": "https://makan.az/",
+    "date": "2025-06-03",
+    "industry": "realestate",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "Livewire",
+      "Firebase",
+      "jQuery",
+      "Alpine.js",
+      "Swiper",
+      "Select2",
+      "Toastr",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Ads",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "slug": "makan-az",
+    "client": "Makan.az",
+    "title": {
+      "az": "Makan.az",
+      "en": "Makan.az",
+      "ru": "Makan.az",
+      "tr": "Makan.az"
+    },
+    "description": {
+      "az": "Makan.az üçün Azərbaycanda daşınmaz əmlakın satışı və kirayəsi üzrə elan platforması hazırlanıb. Saytda ətraflı filtrlərlə elan axtarışı, yeni tikili və yaşayış kompleksləri, agentliklər, ipoteka və kredit bölmələri, seçilmişlər, giriş və üç dil var.",
+      "en": "Makan.az is a property listing platform for buying, selling and renting real estate in Azerbaijan. It offers listings with detailed search filters, new buildings, residential complexes, agencies, mortgage and credit sections, favourites and three languages.",
+      "ru": "Makan.az — платформа объявлений о покупке, продаже и аренде недвижимости в Азербайджане. На сайте есть поиск объявлений с подробными фильтрами, новостройки и жилые комплексы, агентства, разделы ипотеки и кредита, избранное, вход и три языка.",
+      "tr": "Makan.az için Azerbaycan'da emlak alım, satım ve kiralama ilanlarının yayınlandığı bir platform hazırlandı. Sitede ayrıntılı filtrelerle ilan arama, yeni projeler, konut kompleksleri, acenteler, ipotek ve kredi bölümleri, favoriler, üye girişi ve üç dil var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "search",
+      "forms",
+      "blog",
+      "animations",
+      "accounts"
+    ]
+  },
+  {
+    "key": "goodfinance-az",
+    "url": "https://goodfinance.az/",
+    "date": "2025-10-22",
+    "industry": "consulting",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "WPBakery",
+      "Slider Revolution",
+      "MySQL",
+      "jQuery",
+      "jQuery UI",
+      "Owl Carousel",
+      "Slick",
+      "GSAP",
+      "Isotope",
+      "Chart.js",
+      "Typed.js",
+      "Modernizr",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "LiteSpeed",
+      "Hostinger"
+    ],
+    "slug": "good-finance",
+    "client": "Good Finance",
+    "title": {
+      "az": "Good Finance",
+      "en": "Good Finance",
+      "ru": "Good Finance",
+      "tr": "Good Finance"
+    },
+    "description": {
+      "az": "Good Finance üçün mühasibatlıq, audit və maliyyə konsaltinqi xidmətlərini sahibkarlara təqdim edən korporativ sayt qurulub. Saytda xidmətlər, müştərilər, faydalı məlumatlar, məqalələr, vakansiyalar və əlaqə bölmələri, 1C təlimi haqqında səhifə var.",
+      "en": "Good Finance has a corporate website presenting accounting, audit and financial consulting to business owners. Sections cover services such as payroll records, business setup and 1C training, plus clients, articles, vacancies and contacts.",
+      "ru": "Для Good Finance разработан корпоративный сайт о бухгалтерском учёте, аудите и финансовом консалтинге для предпринимателей. В разделах: услуги (кадровый учёт, открытие бизнеса, обучение 1C), клиенты, статьи, вакансии и контакты.",
+      "tr": "Good Finance için girişimcilere muhasebe, denetim ve finansal danışmanlık hizmetlerini anlatan kurumsal bir site yapıldı. Sitede kadro kaydı, işletme kurulumu, 1C eğitimi gibi hizmetler ile müşteriler, makaleler, boş kadrolar ve iletişim bölümleri var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "search",
+      "forms",
+      "blog",
+      "animations"
+    ]
+  },
+  {
+    "key": "axis-az",
+    "url": "https://www.axis.az/",
+    "date": "2025-11-29",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "ASP.NET",
+      "jQuery",
+      "Owl Carousel",
+      "Magnific Popup",
+      "Isotope",
+      "Select2",
+      "Air Datepicker",
+      "Pace.js",
+      "Modernizr",
+      "Popper.js",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Cloudflare"
+    ],
+    "slug": "axis-travel",
+    "client": "Axis Travel",
+    "title": {
+      "az": "Axis Travel",
+      "en": "Axis Travel",
+      "ru": "Axis Travel",
+      "tr": "Axis Travel"
+    },
+    "description": {
+      "az": "Axis Travel üçün səyahət agentliyinin tur paketlərini və təkliflərini göstərən sayt hazırlanıb. Ana səhifədə kruiz turları və endirimli aviabilet bannerləri, bal ayı və xüsusi endirim paketləri, turlar və əlaqə bölmələri yerləşir.",
+      "en": "Axis Travel is a travel agency site built to show tour packages and offers. The home page features cruise tours and discounted flight banners, honeymoon and special-discount packages, and separate sections for tours, about the agency and contact.",
+      "ru": "Сайт Axis Travel создан для турагентства и показывает его туры и предложения. На главной странице размещены баннеры круизных туров и льготных авиабилетов, пакеты для медового месяца и со специальными скидками, а также разделы туров и контактов.",
+      "tr": "Axis Travel için seyahat acentesinin tur paketlerini ve kampanyalarını gösteren bir site hazırlandı. Ana sayfada kruvaziyer turları ve indirimli uçak bileti bannerları, balayı ve özel indirim paketleri ile turlar ve iletişim bölümleri bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "booking",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "victorytour-az",
+    "url": "https://www.victorytour.az/az",
+    "date": "2025-12-24",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "jQuery",
+      "Magnific Popup",
+      "Modernizr",
+      "Popper.js",
+      "Bootstrap",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Google Maps",
+      "cdnjs"
+    ],
+    "slug": "victory-tour",
+    "client": "Victory Tour",
+    "title": {
+      "az": "Victory Tour",
+      "en": "Victory Tour",
+      "ru": "Victory Tour",
+      "tr": "Victory Tour"
+    },
+    "description": {
+      "az": "Victory Tour üçün Azərbaycanda korporativ və fərdi müştərilərə xidmət göstərən səyahət agentliyinin üç dilli saytı hazırlanıb. Saytda turlar, aviabilet, viza dəstəyi, transfer, sığorta, aeroport xidmətləri, faydalı məlumatlar və müştəri rəyləri bölmələri var.",
+      "en": "The Victory Tour website serves a travel agency working with corporate and individual clients in Azerbaijan, in AZ, RU and EN. It lists tour categories, flights, visa support, transfers, insurance, airport services, traveller tips and customer reviews.",
+      "ru": "Трёхъязычный сайт Victory Tour (AZ, RU, EN) представляет турагентство, работающее в Азербайджане с корпоративными и частными клиентами. В нём туры, авиабилеты, визовая поддержка, трансферы, страхование, услуги в аэропорту, советы туристам и отзывы.",
+      "tr": "Victory Tour için Azerbaycan'da kurumsal ve bireysel müşterilere hizmet veren acentenin AZ, RU, EN dillerinde sitesi hazırlandı. Sitede turlar, uçak bileti, vize desteği, transfer, sigorta, havalimanı hizmetleri, faydalı bilgiler ve müşteri yorumları var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "unied-az",
+    "url": "https://unied.az/az/",
+    "date": "2026-01-16",
+    "industry": "education",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Astro",
+      "Tailwind CSS",
+      "Google Fonts",
+      "Cloudflare"
+    ],
+    "slug": "unied",
+    "client": "United Education",
+    "title": {
+      "az": "United Education",
+      "en": "United Education",
+      "ru": "United Education",
+      "tr": "United Education"
+    },
+    "description": {
+      "az": "United Education üçün Türkiyə, Özbəkistan, Rusiya və digər ölkələrdə təhsil almaq istəyənlərə yönəlmiş xaricdə təhsil mərkəzinin saytı hazırlanıb. Saytda bakalavr, magistr və doktorantura proqramları, uğur hekayələri, bloq və ödənişsiz konsultasiya müraciəti var.",
+      "en": "United Education has a study-abroad centre website aimed at students who want to enrol in Turkey, Uzbekistan, Russia and other countries. It offers pages for bachelor, master and doctoral programmes, success stories, a blog and a free consultation request.",
+      "ru": "Сайт United Education создан для центра обучения за рубежом, ориентированного на поступление в вузы Турции, Узбекистана, России и других стран. Есть страницы бакалавриата, магистратуры и докторантуры, истории успеха, блог и заявка на бесплатную консультацию.",
+      "tr": "United Education için Türkiye, Özbekistan, Rusya ve diğer ülkelerde okumak isteyenlere yönelik yurt dışı eğitim merkezinin sitesi hazırlandı. Sitede lisans, yüksek lisans ve doktora programları, başarı hikâyeleri, blog ve ücretsiz danışmanlık başvurusu bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "intermet-az",
+    "url": "https://intermet.az/en/",
+    "date": "2026-02-22",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "jQuery",
+      "Swiper",
+      "GSAP",
+      "ScrollTrigger",
+      "WOW.js",
+      "Magnific Popup",
+      "SlickNav",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Analytics",
+      "Yandex Metrica",
+      "YouTube",
+      "JSON-LD (Schema.org)",
+      "Nginx"
+    ],
+    "slug": "intermet",
+    "client": "InterMet",
+    "title": {
+      "az": "InterMet",
+      "en": "InterMet",
+      "ru": "InterMet",
+      "tr": "InterMet"
+    },
+    "description": {
+      "az": "InterMet üçün plastik və alüminium pəncərə, qapı və şüşələmə sistemlərini təqdim edən, ölçüyə görə istehsal və quraşdırmanı göstərən sayt qurulub. Saytda məhsul kataloqu, layihələr, WhatsApp ilə əlaqə, qiymət sorğusu, metal şöbəsi və üç dil seçimi var.",
+      "en": "InterMet's website presents uPVC and aluminium windows, doors and glazing made and installed to measure. It includes a product catalogue, a projects section, a price request button, WhatsApp contact, a separate metal division page and AZ, RU and EN versions.",
+      "ru": "Сайт InterMet представляет окна, двери и остекление из ПВХ и алюминия, изготавливаемые и монтируемые по размерам заказчика. В нём каталог продукции, проекты, запрос цены, связь через WhatsApp, страница металлического направления и версии AZ, RU, EN.",
+      "tr": "InterMet için ölçüye göre üretilip monte edilen PVC ve alüminyum pencere, kapı ve cam sistemlerini tanıtan bir site hazırlandı. Sitede ürün kataloğu, projeler, fiyat talebi, WhatsApp ile iletişim, ayrı bir metal bölümü ve AZ, RU, EN dil seçenekleri var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "catalog",
+      "forms",
+      "gallery",
+      "animations",
+      "integrations"
+    ]
+  },
+  {
+    "key": "prolineec-az",
+    "url": "https://prolineec.az/",
+    "date": "2026-03-23",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "React Router",
+      "Vite",
+      "GSAP",
+      "ScrollTrigger",
+      "Tailwind CSS",
+      "Google Fonts",
+      "Cloudflare"
+    ],
+    "slug": "proline-ec",
+    "client": "Proline E.C",
+    "title": {
+      "az": "Proline E.C",
+      "en": "Proline E.C",
+      "ru": "Proline E.C",
+      "tr": "Proline E.C"
+    },
+    "description": {
+      "az": "Proline E.C üçün sənaye, yaşayış və nəqliyyat layihələri həyata keçirən tikinti şirkətinin korporativ saytı hazırlanıb. Saytda xidmətlər, layihələr, karyera, xəbərlər, rəqəmlərlə şirkət göstəriciləri və \"Təklif Al\" müraciəti yer alır.",
+      "en": "The corporate website for Proline E.C introduces a contractor in industrial, residential and transport projects. It has services such as design and engineering, projects, careers, news, animated company counters and a quote request.",
+      "ru": "Корпоративный сайт Proline E.C представляет подрядчика в промышленных, жилых и транспортных проектах. Есть услуги, включая проектирование и инжиниринг, проекты, карьера, новости, анимированные счётчики и запрос предложения.",
+      "tr": "Proline E.C için sanayi, konut ve ulaşım projeleri yürüten firmanın kurumsal sitesi hazırlandı. Sitede tasarım ve mühendislik gibi hizmetler, projeler, kariyer, haberler, animasyonlu sayaçlar ve teklif talebi var."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "draft-az",
+    "url": "https://draft.az/",
+    "date": "2026-04-25",
+    "industry": "realestate",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "React Router",
+      "Vite",
+      "GSAP",
+      "ScrollTrigger",
+      "Google Maps",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed"
+    ],
+    "slug": "draft-construction",
+    "client": "Draft Construction",
+    "title": {
+      "az": "Draft Construction",
+      "en": "Draft Construction",
+      "ru": "Draft Construction",
+      "tr": "Draft Construction"
+    },
+    "description": {
+      "az": "Draft Construction üçün Bakıda yeni tikili mənzillərin və ipotekaya evlərin satışını təqdim edən tikinti şirkətinin saytı hazırlanıb. Saytda layihələr, satış və kredit şərtləri, bloq, şirkət haqqında məlumat, telefon və e-poçt ilə əlaqə bölmələri var.",
+      "en": "The Draft Construction site promotes a Baku developer selling new-build flats and homes on mortgage. It has pages for projects, sales and credit terms, a blog and company history, plus phone and e-mail contacts and a call button.",
+      "ru": "Сайт Draft Construction представляет бакинского застройщика, продающего квартиры в новостройках и жильё в ипотеку. Есть страницы проектов, условий продажи и кредитования, блог, история компании, телефон, e-mail и кнопка звонка.",
+      "tr": "Draft Construction için Bakü'de yeni yapı daireleri ve ipotekli konut satan inşaat firmasının sitesi hazırlandı. Sitede projeler, satış ve kredi koşulları, blog, şirket bilgisi, telefon ve e-posta ile iletişim ve arama butonu yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "catalog",
+      "forms",
+      "blog",
+      "gallery",
+      "animations"
+    ]
+  },
+  {
+    "key": "cleanbee-az",
+    "url": "https://cleanbee.az/az/",
+    "date": "2026-05-19",
+    "industry": "cleaning",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "Yoast SEO",
+      "Polylang",
+      "LiteSpeed Cache",
+      "MySQL",
+      "jQuery",
+      "Font Awesome",
+      "Cloudflare Turnstile",
+      "JSON-LD (Schema.org)",
+      "LiteSpeed",
+      "Hostinger",
+      "cdnjs"
+    ],
+    "slug": "cleanbee",
+    "client": "CleanBee",
+    "title": {
+      "az": "CleanBee",
+      "en": "CleanBee",
+      "ru": "CleanBee",
+      "tr": "CleanBee"
+    },
+    "description": {
+      "az": "CleanBee üçün Bakıda ev, ofis, xalça və təmirdən sonrakı təmizlik xidmətlərini təqdim edən sayt qurulub. Ana səhifədə xidmət növünü seçməklə pulsuz qiymət sorğusu forması, \"necə işləyirik\" bölməsi, xidmətlər siyahısı və telefon nömrəsi var.",
+      "en": "CleanBee runs a site for a Baku cleaning company covering home, office, carpet and post-renovation cleaning. The home page has a free quote form with a service type selector, a how-we-work section, a services list and a direct phone number.",
+      "ru": "Сайт CleanBee создан для клининговой компании в Баку, которая убирает дома, офисы, ковры и помещения после ремонта. На главной странице есть форма бесплатного расчёта с выбором вида услуги, раздел «как мы работаем», список услуг и телефон.",
+      "tr": "CleanBee için Bakü'de ev, ofis, halı ve tadilat sonrası temizlik hizmetleri sunan firmanın sitesi hazırlandı. Ana sayfada hizmet türü seçilen ücretsiz fiyat teklifi formu, nasıl çalışıyoruz bölümü, hizmet listesi ve telefon numarası bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "booking",
+      "forms"
+    ]
+  },
+  {
+    "key": "nesreenmagazine-com",
+    "url": "https://www.nesreenmagazine.com/az",
+    "date": "2026-10-10",
+    "industry": "media",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Firebase",
+      "Cloud Firestore",
+      "Node.js",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "slug": "nesreen-magazine",
+    "client": "Nesreen Magazine",
+    "title": {
+      "az": "Nesreen Magazine",
+      "en": "Nesreen Magazine",
+      "ru": "Nesreen Magazine",
+      "tr": "Nesreen Magazine"
+    },
+    "description": {
+      "az": "Nesreen Magazine üçün qadınlara yönəlik xəbər və həyat tərzi jurnalının çoxdilli saytı hazırlanıb. Saytda gündəm, moda, gözəllik, astrologiya və biznes rubrikaları, müsahibələr, jurnal bölməsi, abunəlik və Azərbaycan, ingilis, rus, türk, ərəb dil seçimi var.",
+      "en": "Nesreen Magazine is a multilingual news and lifestyle magazine site written with women readers in mind. It has sections for current affairs, fashion, beauty, astrology and business, interviews, a magazine page, subscription and five languages including Arabic.",
+      "ru": "Сайт Nesreen Magazine — многоязычный новостной и лайфстайл-журнал, ориентированный на женскую аудиторию. Есть рубрики о событиях, моде, красоте, астрологии и бизнесе, интервью, раздел журнала, подписка и пять языков интерфейса, включая арабский.",
+      "tr": "Nesreen Magazine, kadın okuyuculara yönelik çok dilli bir haber ve yaşam tarzı dergisi sitesidir. Gündem, moda, güzellik, astroloji ve iş dünyası rubrikleri, röportajlar, dergi bölümü, abonelik ve Arapça dahil beş arayüz dili sunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  },
+  {
+    "key": "executive-baku-resto-pub",
+    "url": "https://exe.az/az",
+    "industry": "restaurant",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Node.js",
+      "Tailwind CSS",
+      "Lucide",
+      "Google Maps",
+      "Vercel"
+    ],
+    "existing": "executive-baku-resto-pub",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "forms"
+    ]
+  },
+  {
+    "key": "baku-global-education",
+    "url": "https://bakuglobaledu.com/",
+    "industry": "education",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Firebase",
+      "Cloud Firestore",
+      "Firebase Authentication",
+      "Google Fonts"
+    ],
+    "existing": "baku-global-education",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "search",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "ciao-stellina-resto-pub",
+    "url": "https://ciaostellina.vercel.app/",
+    "industry": "restaurant",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Google Fonts",
+      "Vercel"
+    ],
+    "existing": "ciao-stellina-resto-pub",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "forms"
+    ]
+  },
+  {
+    "key": "sanidez-mmc",
+    "url": "https://sanidez.az/",
+    "industry": "cleaning",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "Vite",
+      "Alpine.js",
+      "Tailwind CSS",
+      "Google Fonts",
+      "Google Analytics",
+      "Google Tag Manager",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "existing": "sanidez-mmc",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "catalog",
+      "forms",
+      "blog"
+    ]
+  },
+  {
+    "key": "saatlar-az",
+    "url": "https://saatlar.az/",
+    "industry": "ecommerce",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "jQuery",
+      "jQuery UI",
+      "Swiper",
+      "Bootstrap",
+      "Font Awesome",
+      "Yandex Metrica",
+      "Facebook SDK",
+      "Cloudflare",
+      "cdnjs"
+    ],
+    "existing": "saatlar-az",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "catalog",
+      "ecommerce",
+      "forms",
+      "animations"
+    ]
+  },
+  {
+    "key": "orien-travel-mmc",
+    "url": "https://orienaz.com/",
+    "industry": "tourism",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Google Fonts",
+      "Font Awesome",
+      "Google Maps",
+      "Nginx",
+      "cdnjs"
+    ],
+    "existing": "orien-travel-mmc",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "forms",
+      "gallery"
+    ]
+  },
+  {
+    "key": "porr-group-insaat-sirk-ti",
+    "url": "https://www.porr-group.com/en/",
+    "industry": "construction",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Yoast SEO",
+      "TYPO3",
+      "Swiper",
+      "Lottie",
+      "Bootstrap",
+      "Google Tag Manager",
+      "JSON-LD (Schema.org)",
+      "BunnyCDN"
+    ],
+    "existing": "porr-group-insaat-sirk-ti",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "cms",
+      "search",
+      "forms",
+      "blog",
+      "gallery",
+      "animations"
+    ]
+  },
+  {
+    "key": "itm-store-mmc",
+    "url": "https://itmstore.az/",
+    "industry": "ecommerce",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Node.js",
+      "Swiper",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Lucide",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Meta Pixel",
+      "JivoChat",
+      "JSON-LD (Schema.org)",
+      "Cloudflare"
+    ],
+    "existing": "itm-store-mmc",
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "catalog",
+      "ecommerce",
+      "forms",
+      "blog",
+      "animations"
+    ]
+  },
+  {
+    "key": "damlamebel-az",
+    "url": "https://damlamebel.az/",
+    "date": "2024-03-12",
+    "industry": "catalog",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "jQuery",
+      "Swiper",
+      "Fancybox",
+      "Axios",
+      "Bootstrap",
+      "Animate.css",
+      "Google Fonts",
+      "Elfsight",
+      "Facebook SDK",
+      "Nginx"
+    ],
+    "slug": "damla-mebel",
+    "client": "Damla Mebel",
+    "title": {
+      "az": "Damla Mebel",
+      "en": "Damla Mebel",
+      "ru": "Damla Mebel",
+      "tr": "Damla Mebel"
+    },
+    "description": {
+      "az": "Damla Mebel üçün mebel fabrikinin məhsullarını təqdim edən kataloq saytı hazırlanıb. Saytda yataq, qonaq, divan, gənc dəstləri və mətbəx kimi kateqoriyalar, ən çox satılan məhsullar, xəbərlər, karyera, tərəfdaşlıq bölmələri və üç dil var.",
+      "en": "A catalogue website for the Damla Mebel furniture factory, presenting its product range. It has categories such as bedrooms, living rooms, sofas, youth sets and kitchens, best-selling products, news, careers and partnership sections, and three languages.",
+      "ru": "Сайт-каталог мебельной фабрики Damla Mebel, представляющий её продукцию. На сайте есть категории — спальни, гостиные, диваны, молодёжные гарнитуры, кухни, — блок самых продаваемых товаров, новости, разделы о карьере и партнёрстве и три языка.",
+      "tr": "Damla Mebel mobilya fabrikasının ürünlerini tanıtan bir katalog sitesi hazırlandı. Sitede yatak odası, misafir odası, koltuk, genç odası ve mutfak gibi kategoriler, en çok satan ürünler, haberler, kariyer ve iş ortaklığı bölümleri ile üç dil seçeneği yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "backend",
+      "multilang",
+      "catalog",
+      "forms",
+      "blog",
+      "animations"
+    ]
+  },
+  {
+    "key": "idealmebel-az",
+    "url": "https://idealmebel.az/",
+    "date": "2026-07-21",
+    "industry": "catalog",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Tailwind CSS",
+      "Google Fonts",
+      "Font Awesome",
+      "Netlify",
+      "cdnjs"
+    ],
+    "slug": "ideal-mebel",
+    "client": "İdeal Mebel",
+    "title": {
+      "az": "İdeal Mebel",
+      "en": "İdeal Mebel",
+      "ru": "İdeal Mebel",
+      "tr": "İdeal Mebel"
+    },
+    "description": {
+      "az": "İdeal Mebel üçün Mingəçevirdəki mebel mağazasının kataloq saytı hazırlanıb. Saytda divan, yumşaq mebel, yataq dəsti, qonaq otağı və mətbəx mebeli üzrə filtrlənən kataloq, pulsuz çatdırılma səhifəsi, bloq və WhatsApp ilə sifariş keçidi var.",
+      "en": "A catalogue website for İdeal Mebel, a furniture shop in Mingachevir. It offers a catalogue filtered by sofas, upholstered furniture, bedroom sets, living room and kitchen furniture, a free delivery page, a blog and a WhatsApp link for orders.",
+      "ru": "Сайт-каталог мебельного магазина İdeal Mebel в Мингячевире. На сайте есть каталог с фильтром по категориям — диваны, мягкая мебель, спальные гарнитуры, гостиные и кухонная мебель, — страница о бесплатной доставке, блог и заказ через WhatsApp.",
+      "tr": "Mingeçevir'deki İdeal Mebel mobilya mağazası için bir katalog sitesi hazırlandı. Sitede koltuk, döşemeli mobilya, yatak odası takımı, misafir odası ve mutfak mobilyasına göre filtrelenen katalog, ücretsiz teslimat sayfası, blog ve WhatsApp sipariş bağlantısı bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "catalog",
+      "forms",
+      "blog",
+      "integrations"
+    ]
+  },
+  {
+    "key": "yeniazerbaycan-com",
+    "url": "https://yeniazerbaycan.com/",
+    "date": "2021-09-05",
+    "industry": "media",
+    "tools": [],
+    "slug": "yeni-azerbaycan",
+    "client": "Yeni Azərbaycan",
+    "title": {
+      "az": "Yeni Azərbaycan",
+      "en": "Yeni Azərbaycan",
+      "ru": "Yeni Azərbaycan",
+      "tr": "Yeni Azərbaycan"
+    },
+    "description": {
+      "az": "Yeni Azərbaycan qəzeti üçün xəbər portalı hazırlanıb. Saytda gündəm, siyasət, iqtisadiyyat, sosial, dünya, media və analitik rubrikaları, xəbər lenti, qəzetin çap nömrəsi, axtarış və üç dil var.",
+      "en": "A news portal for the Yeni Azərbaycan newspaper. It carries sections for current affairs, politics, economy, society, world, media and analysis, a live news ticker, the print edition, search and three languages.",
+      "ru": "Новостной портал газеты Yeni Azərbaycan. На сайте есть рубрики — повестка дня, политика, экономика, общество, мир, медиа и аналитика, — лента новостей, печатный номер газеты, поиск и три языка.",
+      "tr": "Yeni Azərbaycan gazetesi için bir haber portalı hazırlandı. Sitede gündem, siyaset, ekonomi, toplum, dünya, medya ve analiz bölümleri, haber bandı, gazetenin basılı sayısı, arama ve üç dil seçeneği yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "search",
+      "blog"
+    ]
+  },
+  {
+    "key": "delfinhotel-org",
+    "url": "https://delfinhotel.org/",
+    "date": "2023-01-10",
+    "industry": "hotel",
+    "tools": [],
+    "slug": "delfin-hotel",
+    "client": "Delfin Hotel",
+    "title": {
+      "az": "Delfin Hotel",
+      "en": "Delfin Hotel",
+      "ru": "Delfin Hotel",
+      "tr": "Delfin Hotel"
+    },
+    "description": {
+      "az": "Delfin Hotel üçün Gəncədəki otel, restoran və spa kompleksinin saytı hazırlanıb. Saytda otaqlar, xidmətlər və otel haqqında bölmələr, giriş-çıxış tarixi və qonaq sayı ilə onlayn bron forması var.",
+      "en": "A website for Delfin Hotel, a hotel, restaurant and spa complex in Ganja. It has sections for rooms, services and the hotel itself, plus an online booking form with check-in and check-out dates and number of guests.",
+      "ru": "Сайт отеля Delfin Hotel — гостиничного комплекса с рестораном и спа в Гяндже. На сайте есть разделы о номерах, услугах и самом отеле, а также форма онлайн-бронирования с датами заезда и выезда и числом гостей.",
+      "tr": "Gence’deki otel, restoran ve spa kompleksi Delfin Hotel için bir site hazırlandı. Sitede odalar, hizmetler ve otel hakkında bölümler ile giriş-çıkış tarihi ve misafir sayısına göre online rezervasyon formu bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "forms"
+    ]
+  },
+  {
+    "key": "coraltatil-com",
+    "url": "https://www.coraltatil.com/",
+    "date": "2023-01-14",
+    "industry": "tourism",
+    "tools": [],
+    "slug": "coral-travel",
+    "client": "Coral Travel",
+    "title": {
+      "az": "Coral Travel",
+      "en": "Coral Travel",
+      "ru": "Coral Travel",
+      "tr": "Coral Travel"
+    },
+    "description": {
+      "az": "Coral Travel üçün otel və tur satışı saytı hazırlanıb. Saytda tarix və qonaq sayına görə otel və tur axtarışı, Kipr, gəmi turları, Misir və erkən bron bölmələri, kampaniyalar, seçilmişlər və üzv girişi var.",
+      "en": "A hotel and tour booking website for Coral Travel. It offers hotel and tour search by dates and guests, sections for Cyprus, cruises, Egypt and early booking, campaigns, favourites and member sign-in.",
+      "ru": "Сайт Coral Travel для продажи отелей и туров. На сайте есть поиск отелей и туров по датам и числу гостей, разделы о Кипре, круизах, Египте и раннем бронировании, акции, избранное и вход для участников.",
+      "tr": "Coral Travel için otel ve tur satış sitesi hazırlandı. Sitede tarih ve misafir sayısına göre otel ve tur arama, Kıbrıs, gemi turları, Mısır ve erken rezervasyon bölümleri, kampanyalar, favoriler ve üye girişi yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "booking",
+      "search",
+      "accounts"
+    ]
+  },
+  {
+    "key": "turzoom-com",
+    "url": "https://turzoom.com/",
+    "date": "2023-01-24",
+    "industry": "tourism",
+    "tools": [],
+    "slug": "turzoom",
+    "client": "Turzoom",
+    "title": {
+      "az": "Turzoom",
+      "en": "Turzoom",
+      "ru": "Turzoom",
+      "tr": "Turzoom"
+    },
+    "description": {
+      "az": "Turzoom üçün tur, aktivlik və otel satışı platforması hazırlanıb. Saytda istiqamət və dövrə görə axtarış, korporativ bölmə, bloq, dəstək, təklif forması, valyuta və dil seçimi, üzv və agentlik girişi var.",
+      "en": "A booking platform for Turzoom covering tours, activities and hotels. It has search by destination and period, a corporate section, blog, support, a quote request form, currency and language switchers, and member and agency sign-in.",
+      "ru": "Платформа Turzoom для продажи туров, активностей и отелей. На сайте есть поиск по направлению и периоду, корпоративный раздел, блог, поддержка, форма запроса предложения, выбор валюты и языка, вход для клиентов и агентств.",
+      "tr": "Turzoom için tur, aktivite ve otel satış platformu hazırlandı. Sitede bölge ve döneme göre arama, kurumsal bölüm, blog, destek, teklif formu, para birimi ve dil seçimi ile üye ve acente girişi bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "booking",
+      "search",
+      "forms",
+      "blog",
+      "accounts"
+    ]
+  },
+  {
+    "key": "fortis-az",
+    "url": "https://fortis.az/",
+    "date": "2023-03-11",
+    "industry": "construction",
+    "tools": [],
+    "slug": "fortis-construction",
+    "client": "Fortis Construction",
+    "title": {
+      "az": "Fortis Construction",
+      "en": "Fortis Construction",
+      "ru": "Fortis Construction",
+      "tr": "Fortis Construction"
+    },
+    "description": {
+      "az": "Fortis Construction üçün tikinti şirkətinin layihələrini təqdim edən sayt hazırlanıb. Saytda Ganjlik Garden və Fortis Residence kimi yaşayış kompleksləri iri vizuallarla göstərilir, yan menyu və sosial şəbəkə keçidləri var.",
+      "en": "A website for Fortis Construction that presents the developer’s projects. Residential complexes such as Ganjlik Garden and Fortis Residence are shown with large visuals, alongside a side menu and social media links.",
+      "ru": "Сайт строительной компании Fortis Construction, представляющий её проекты. Жилые комплексы, такие как Ganjlik Garden и Fortis Residence, показаны крупными визуалами; есть боковое меню и ссылки на соцсети.",
+      "tr": "Fortis Construction için inşaat şirketinin projelerini tanıtan bir site hazırlandı. Sitede Ganjlik Garden ve Fortis Residence gibi konut projeleri büyük görsellerle sunuluyor; yan menü ve sosyal medya bağlantıları yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "gallery"
+    ]
+  },
+  {
+    "key": "kila-group-com",
+    "url": "https://kila-group.com/",
+    "date": "2024-01-11",
+    "industry": "construction",
+    "tools": [],
+    "slug": "kila-group",
+    "client": "Kila Group",
+    "title": {
+      "az": "Kila Group",
+      "en": "Kila Group",
+      "ru": "Kila Group",
+      "tr": "Kila Group"
+    },
+    "description": {
+      "az": "Kila Group üçün tikinti-mühəndislik şirkətinin korporativ saytı hazırlanıb. Saytda mexanika mühəndisliyi, təmir və tikinti, elektrik mühəndisliyi və rəqəmsal marketinq bölmələri, əlaqə səhifəsi və iki dil var.",
+      "en": "A corporate website for Kila Group, a construction and engineering company. It has sections for mechanical engineering, repair and construction, electrical engineering and digital marketing, a contact page and two languages.",
+      "ru": "Корпоративный сайт строительно-инжиниринговой компании Kila Group. На сайте есть разделы о механическом инжиниринге, ремонте и строительстве, электротехнике и цифровом маркетинге, страница контактов и два языка.",
+      "tr": "İnşaat ve mühendislik şirketi Kila Group için kurumsal site hazırlandı. Sitede makine mühendisliği, tadilat ve inşaat, elektrik mühendisliği ve dijital pazarlama bölümleri, iletişim sayfası ve iki dil seçeneği bulunuyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "forms"
+    ]
+  },
+  {
+    "key": "fgc-az",
+    "url": "https://fgc.az/",
+    "date": "2025-03-26",
+    "industry": "construction",
+    "tools": [],
+    "slug": "f-global-construction",
+    "client": "F-Global Construction",
+    "title": {
+      "az": "F-Global Construction",
+      "en": "F-Global Construction",
+      "ru": "F-Global Construction",
+      "tr": "F-Global Construction"
+    },
+    "description": {
+      "az": "F-Global Construction üçün tikinti şirkətinin korporativ saytı hazırlanıb. Saytda şirkət haqqında, xidmətlər, layihələr və xəbərlər bölmələri, əlaqə səhifəsi, \"Təklif al\" müraciəti və dil seçimi var.",
+      "en": "A corporate website for the construction company F-Global Construction. It has sections about the company, its services, projects and news, a contact page, a \"Get a quote\" request and a language switcher.",
+      "ru": "Корпоративный сайт строительной компании F-Global Construction. На сайте есть разделы о компании, услугах, проектах и новостях, страница контактов, запрос «Получить предложение» и выбор языка.",
+      "tr": "İnşaat şirketi F-Global Construction için kurumsal site hazırlandı. Sitede şirket hakkında, hizmetler, projeler ve haberler bölümleri, iletişim sayfası, \"Teklif al\" başvurusu ve dil seçimi yer alıyor."
+    },
+    "workDone": [
+      "design",
+      "responsive",
+      "frontend",
+      "multilang",
+      "forms",
+      "blog",
+      "gallery"
+    ]
+  }
+]

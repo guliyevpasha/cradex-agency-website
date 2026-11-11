@@ -15,8 +15,10 @@ import { Badge } from '@/components/ui/Badge'
 import { Accordion } from '@/components/ui/Accordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { WebsiteScreenshots } from '@/components/portfolio/WebsiteScreenshots'
+import { ProjectBuild } from '@/components/portfolio/ProjectBuild'
 import type { PortfolioItem } from '@/types'
 import { isShown } from '@/lib/site/portfolio'
+import { isWebField } from '@/lib/site/webCategories'
 import { ogImage } from '@/lib/site/og'
 
 // On-demand revalidation via /api/revalidate webhook + hourly fallback.
@@ -67,13 +69,17 @@ export default async function PortfolioDetailPage({
   const { getAllPortfolio } = await import('@/lib/data/portfolio')
   const allPortfolios = await getAllPortfolio(locale)
   const relatedPortfolios = allPortfolios
-    .filter(p => p.serviceCategory === item.serviceCategory && p.slug !== item.slug)
+    .filter(p => p.serviceCategory === item.serviceCategory && p.slug !== item.slug && isShown(p))
+    // three are enough under a project; the same business field comes first
+    .sort((a, b) => Number(b.industry === item.industry) - Number(a.industry === item.industry))
+    .slice(0, 3)
   
   return <PortfolioDetailContent item={item} relatedPortfolios={relatedPortfolios} />
 }
 
 function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioItem; relatedPortfolios: PortfolioItem[] }) {
   const t = useTranslations('portfolio')
+  const tFields = useTranslations('site.portfolioPage.fields')
   const locale = useLocale() as 'az' | 'en' | 'ru' | 'tr'
 
   // Get localized content - prioritize locale-specific object if available, fallback to string key
@@ -82,6 +88,13 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
   const results = item.results?.[locale] || item.resultsKey
 
   const year = item.publishedAt ? new Date(item.publishedAt).getFullYear() : null
+  // Websites show the day they went live; the date is stored as YYYY-MM-DD.
+  const isWeb = item.serviceCategory === 'web-mobile-dev'
+  const madeOn =
+    isWeb && /^\d{4}-\d{2}-\d{2}/.test(item.publishedAt)
+      ? new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${item.publishedAt.slice(0, 10)}T00:00:00Z`))
+      : null
+  const field = isWeb && isWebField(item.industry) ? item.industry : null
 
   return (
     <>
@@ -121,8 +134,15 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                 {/* Year */}
                 {year && (
                   <div className="space-y-1">
-                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('year')}</span>
-                    <p className="text-text-primary font-semibold">{year}</p>
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{madeOn ? t('date') : t('year')}</span>
+                    <p className="text-text-primary font-semibold">{madeOn ?? year}</p>
+                  </div>
+                )}
+
+                {field && (
+                  <div className="space-y-1">
+                    <span className="text-text-muted text-xs uppercase tracking-wider font-medium">{t('field')}</span>
+                    <p className="text-text-primary font-semibold">{tFields(field)}</p>
                   </div>
                 )}
 
@@ -134,8 +154,8 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                   </div>
                 )}
 
-                {/* Tools - Full width if exists */}
-                {item.tools && item.tools.length > 0 && (
+                {/* Technologies: websites show them in the build section below */}
+                {!isWeb && item.tools && item.tools.length > 0 && (
                   <div className="col-span-2 space-y-2 pt-4 border-t border-white/5">
                     <span className="text-text-muted text-xs uppercase tracking-wider font-medium block">{t('tools')}</span>
                     <div className="flex flex-wrap gap-2">
@@ -145,7 +165,7 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
                     </div>
                   </div>
                 )}
-                
+
                 {/* Results - Full width if exists */}
                 {results && (
                   <div className="col-span-2 space-y-2 pt-4 border-t border-white/5">
@@ -199,11 +219,15 @@ function PortfolioDetailContent({ item, relatedPortfolios }: { item: PortfolioIt
       {item.serviceCategory === 'web-mobile-dev' && item.websiteScreenshots && (
         <WebsiteScreenshots
           desktop={item.websiteScreenshots.desktop}
+          tablet={item.websiteScreenshots.tablet}
           mobile={item.websiteScreenshots.mobile}
           projectName={title}
           locale={locale}
         />
       )}
+
+      {/* What was done and with which technologies */}
+      {isWeb && <ProjectBuild work={item.workDone} tools={item.tools ?? []} locale={locale} />}
 
       {/* Statistics - Only for SMM category */}
       {item.category === 'smm' && item.statistics && item.statistics.length > 0 && (

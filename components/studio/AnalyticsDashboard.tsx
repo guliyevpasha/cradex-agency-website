@@ -8,18 +8,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useClient } from 'sanity'
 
-// Studio keeps the login either in the client config or, when it falls back to
-// token login, in localStorage. The API checks this token with Sanity.
-function studioToken(client: ReturnType<typeof useClient>): string {
-  const fromConfig = client.config().token
-  if (fromConfig) return fromConfig
-  try {
-    const raw = localStorage.getItem(`__studio_auth_token_${client.config().projectId}`)
-    return raw ? (JSON.parse(raw).token ?? '') : ''
-  } catch {
-    return ''
-  }
-}
+import { studioToken } from '../../sanity/lib/studioToken'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -165,7 +154,6 @@ export function AnalyticsDashboard() {
       const startDate = useCustom ? customStart : preset.startDate
       const endDate = useCustom ? customEnd : preset.endDate
       
-      // Try to get Studio token, but proceed even if not available
       const token = studioToken(client)
       const headers: HeadersInit = token ? { Authorization: `Bearer ${token}` } : {}
       
@@ -174,7 +162,15 @@ export function AnalyticsDashboard() {
         cache: 'no-store',
       })
       if (!res.ok) {
-        const err = await res.json()
+        const err = await res.json().catch(() => ({}))
+        // keep the old numbers off the screen: they would look like real zeros
+        setData(null)
+        if (err.code === 'ga_forbidden') {
+          throw new Error(
+            `Google Analytics bu hesaba icazə vermir. GA4 → Admin → Property access management bölməsində ${err.account} ünvanını "Viewer" kimi əlavə edin (Property ID: ${err.property}), sonra "Yenilə" düyməsini basın.`
+          )
+        }
+        if (err.code === 'login') throw new Error('Statistikanı görmək üçün Studio-dan çıxıb yenidən daxil olun.')
         throw new Error(err.error || 'Xəta baş verdi')
       }
       const json = await res.json()

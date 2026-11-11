@@ -12,6 +12,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowUpRight, ChevronRight, Info } from 'lucide-react'
 import { pricingHref, serviceHref } from '@/lib/site/navigation'
 import { WORK_SLUGS, type AdPlatform, type WorkCategory } from '@/lib/site/work'
+import { WORKS_PER_PAGE } from '@/lib/site/webCategories'
 import { getWorkCases, type WorkCase } from '@/lib/data/work'
 import { AdsDashboard } from '@/components/services/AdsDashboard'
 import { HERO_MOCKS } from '@/components/services/HeroMocks'
@@ -76,7 +77,7 @@ function AdsCases({ cases, c }: { cases: WorkCase[]; c: T }) {
             className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3"
             labels={{
               nav: `${PLATFORMS[p].name}: ${c('pages')}`,
-              pages: Array.from({ length: Math.ceil(cases.filter((x) => x.platform === p).length / 5) }, (_, n) => c('page', { n: n + 1 })),
+              pages: Array.from({ length: Math.ceil(cases.filter((x) => x.platform === p).length / WORKS_PER_PAGE) }, (_, n) => c('page', { n: n + 1 })),
               prev: c('prev'),
               next: c('next'),
             }}

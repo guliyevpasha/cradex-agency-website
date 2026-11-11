@@ -1,4 +1,6 @@
 import { defineField, defineType } from 'sanity'
+import { WEB_FIELDS } from '../../lib/site/webCategories'
+import { WORK_ITEMS } from '../../lib/site/webWork'
 
 export default defineType({
   name: 'portfolio',
@@ -42,6 +44,14 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'industry',
+      title: 'Sahə (saytdakı filtr)',
+      description: 'İşlərimiz səhifəsində layihə bu sahənin altında göstərilir.',
+      type: 'string',
+      options: { list: WEB_FIELDS.map((f) => ({ title: f.title, value: f.value })) },
+      hidden: ({ document }) => document?.category !== 'web-mobile-dev',
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Əsas şəkil (Cover)',
       type: 'image',
@@ -62,6 +72,15 @@ export default defineType({
           title: '🖥️ Desktop Screenshot (1920x1080 və ya daha böyük)',
           type: 'image',
           description: 'Tam ekran desktop görüntüsü - yüksək keyfiyyətli PNG/WebP',
+          options: {
+            hotspot: true,
+          },
+        },
+        {
+          name: 'tablet',
+          title: '📱 Tablet Screenshot (820x1093 və ya planşet ölçüsü)',
+          type: 'image',
+          description: 'Planşet görüntüsü - şaquli format. Boş qalsa, layihə səhifəsində planşet göstərilmir',
           options: {
             hotspot: true,
           },
@@ -106,6 +125,15 @@ export default defineType({
       title: 'İstifadə olunan texnologiyalar',
       type: 'array',
       of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'workDone',
+      title: 'Layihədə görülən işlər',
+      description: 'Layihə səhifəsində texnologiyalarla birlikdə göstərilir.',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { list: WORK_ITEMS.map((w) => ({ title: w.title, value: w.value })), layout: 'grid' },
+      hidden: ({ document }) => document?.category !== 'web-mobile-dev',
     }),
     defineField({
       name: 'results',
@@ -454,11 +482,12 @@ export default defineType({
     select: {
       title: 'title.az',
       client: 'client',
+      industry: 'industry',
       media: 'mainImage',
     },
-    prepare(selection) {
-      const { client } = selection
-      return { ...selection, subtitle: client && `Client: ${client}` }
+    prepare({ title, client, industry, media }) {
+      const field = WEB_FIELDS.find((f) => f.value === industry)?.title
+      return { title, media, subtitle: [field, client].filter(Boolean).join(' · ') }
     },
   },
 })

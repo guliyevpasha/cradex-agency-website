@@ -1222,6 +1222,9 @@
     "visitWebsite": "Visit Website",
     "client": "Client",
     "year": "Year",
+    "date": "Date built",
+    "field": "Industry",
+    "tech": "Technologies used",
     "duration": "Duration",
     "category": "Category",
     "tools": "Tools used",
@@ -3770,7 +3773,57 @@
       "title": "Websites we have built",
       "text": "Each project is built around the goals of its business. We show every site as it looks on phone and desktop.",
       "count": "{count} projects",
-      "empty": "Projects will be added soon."
+      "empty": "Projects will be added soon.",
+      "filter": "Filter by industry",
+      "all": "All",
+      "fields": {
+        "construction": "Construction",
+        "tourism": "Tourism",
+        "education": "Education",
+        "cleaning": "Cleaning",
+        "health": "Healthcare",
+        "media": "Media",
+        "ecommerce": "E-commerce",
+        "restaurant": "Restaurant",
+        "catalog": "Catalog",
+        "hotel": "Hotel",
+        "auto": "Automotive",
+        "consulting": "Consulting",
+        "realestate": "Real estate"
+      }
+    },
+    "projectBuild": {
+      "eyebrow": "How the project was built",
+      "title": "Work done and technologies",
+      "tech": "Technologies and tools",
+      "groups": {
+        "lang": "Programming languages",
+        "platform": "Platform and frameworks",
+        "library": "Libraries",
+        "design": "Design and interface",
+        "service": "Services and integrations",
+        "hosting": "Server and hosting",
+        "other": "Other"
+      },
+      "items": {
+        "design": "UI/UX design",
+        "responsive": "Mobile and tablet layouts",
+        "frontend": "Frontend development",
+        "backend": "Backend and database",
+        "cms": "Admin panel (CMS)",
+        "multilang": "Multilingual structure",
+        "catalog": "Catalog and filters",
+        "ecommerce": "Cart and online ordering",
+        "booking": "Online booking and reservations",
+        "search": "Search system",
+        "forms": "Contact forms",
+        "blog": "Blog and news section",
+        "gallery": "Projects and gallery section",
+        "animations": "Animations and sliders",
+        "accounts": "User login and account area",
+        "integrations": "WhatsApp and social integrations",
+        "darkmode": "Light / dark mode"
+      }
     },
     "blogPage": {
       "metaTitle": "Blog — Websites, Technology and Growth",

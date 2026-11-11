@@ -82,6 +82,7 @@ export interface PortfolioItem {
   coverImage: string
   websiteScreenshots?: {
     desktop?: string
+    tablet?: string
     mobile?: string
   }
   gallery: string[]
@@ -90,11 +91,13 @@ export interface PortfolioItem {
   descriptionKey: string
   description?: PortfolioItemTitle
   tools: string[]
+  workDone?: string[]  // ids from lib/site/webWork.ts
   resultsKey: string
   results?: PortfolioItemTitle
   publishedAt: string
   duration?: string  // e.g., "3 ay", "2 həftə", "8 ay" etc.
   category?: string  // e.g., "smm", "digital-marketing", etc.
+  industry?: string  // business field of a website project (lib/site/webCategories.ts)
   featured: boolean
   detailedSections?: Array<{
     title: PortfolioItemTitle

@@ -1222,6 +1222,9 @@
     "visitWebsite": "Siteyi Ziyaret Et",
     "client": "Müşteri",
     "year": "Yıl",
+    "date": "Yapım tarihi",
+    "field": "Sektör",
+    "tech": "Kullanılan teknolojiler",
     "duration": "Süre",
     "category": "Kategori",
     "tools": "Kullanılan araçlar",
@@ -3770,7 +3773,57 @@
       "title": "Hazırladığımız web siteleri",
       "text": "Her proje, işletmesinin hedefine göre kuruldu. Siteleri telefonda ve bilgisayarda göründüğü gibi gösteriyoruz.",
       "count": "{count} proje",
-      "empty": "Projeler yakında eklenecek."
+      "empty": "Projeler yakında eklenecek.",
+      "filter": "Sektöre göre filtrele",
+      "all": "Tümü",
+      "fields": {
+        "construction": "İnşaat",
+        "tourism": "Turizm",
+        "education": "Eğitim",
+        "cleaning": "Temizlik",
+        "health": "Sağlık",
+        "media": "Medya",
+        "ecommerce": "E-ticaret",
+        "restaurant": "Restoran",
+        "catalog": "Katalog",
+        "hotel": "Otel",
+        "auto": "Otomotiv",
+        "consulting": "Danışmanlık",
+        "realestate": "Gayrimenkul"
+      }
+    },
+    "projectBuild": {
+      "eyebrow": "Proje nasıl hayata geçirildi",
+      "title": "Yapılan işler ve teknolojiler",
+      "tech": "Teknolojiler ve araçlar",
+      "groups": {
+        "lang": "Programlama dilleri",
+        "platform": "Platform ve framework'ler",
+        "library": "Kütüphaneler",
+        "design": "Tasarım ve arayüz",
+        "service": "Servisler ve entegrasyonlar",
+        "hosting": "Sunucu ve hosting",
+        "other": "Diğer"
+      },
+      "items": {
+        "design": "UI/UX tasarım",
+        "responsive": "Mobil ve tablet uyumu",
+        "frontend": "Frontend geliştirme",
+        "backend": "Backend ve veritabanı",
+        "cms": "Yönetim paneli (CMS)",
+        "multilang": "Çok dilli yapı",
+        "catalog": "Katalog ve filtreler",
+        "ecommerce": "Sepet ve online sipariş",
+        "booking": "Online rezervasyon",
+        "search": "Arama sistemi",
+        "forms": "İletişim formları",
+        "blog": "Blog ve haberler bölümü",
+        "gallery": "Projeler ve galeri bölümü",
+        "animations": "Animasyon ve slider'lar",
+        "accounts": "Kullanıcı girişi ve hesap paneli",
+        "integrations": "WhatsApp ve sosyal medya entegrasyonları",
+        "darkmode": "Açık / koyu tema"
+      }
     },
     "blogPage": {
       "metaTitle": "Blog — web sitesi, teknoloji ve büyüme",

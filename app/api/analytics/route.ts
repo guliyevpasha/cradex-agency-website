@@ -3,7 +3,7 @@
  * @author Paşa Quliyev — Cradex Agency
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { createHash } from 'node:crypto'
+import { isStudioUser } from '@/lib/server/studioAuth'
 
 const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID ?? ''
 const CLIENT_EMAIL = process.env.GA_SERVICE_ACCOUNT_EMAIL ?? ''
@@ -72,6 +72,20 @@ async function getAccessToken(): Promise<string> {
   return tokenData.access_token
 }
 
+// Google answers a refused report with an error body. Passing that on as an
+// empty report is how the dashboard showed zeros for days without a word.
+class GaError extends Error {
+  constructor(public status: number, public reason: string) {
+    super(`GA4 ${status} ${reason}`)
+  }
+}
+
+async function checked(res: Response) {
+  const json = await res.json().catch(() => null)
+  if (!res.ok || json?.error) throw new GaError(res.status, json?.error?.status ?? 'UNKNOWN')
+  return json
+}
+
 // ─── GA4 Data API helper ──────────────────────────────────────────────────────
 
 async function runReport(
@@ -105,7 +119,7 @@ async function runReport(
     }
   )
 
-  return res.json()
+  return checked(res)
 }
 
 async function runRealtimeReport(token: string) {
@@ -122,7 +136,7 @@ async function runRealtimeReport(token: string) {
       }),
     }
   )
-  return res.json()
+  return checked(res)
 }
 
 // ─── Parse rows ───────────────────────────────────────────────────────────────
@@ -139,53 +153,12 @@ function parseRows(report: any) {
 // GA4 accepts YYYY-MM-DD, NdaysAgo, today and yesterday. Nothing else is forwarded.
 const DATE_RE = /^(\d{4}-\d{2}-\d{2}|\d{1,4}daysAgo|today|yesterday)$/
 
-// Authorization: accept either valid Sanity Studio token OR the server-side
-// SANITY_WRITE_TOKEN (for when Studio localStorage doesn't have a token yet).
-const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const SANITY_WRITE_TOKEN = process.env.SANITY_WRITE_TOKEN
-const verified = new Map<string, number>()
-const TOKEN_TTL_MS = 5 * 60 * 1000
-
-async function authorized(request: NextRequest): Promise<boolean> {
-  const header = request.headers.get('authorization') ?? ''
-  const token = header.startsWith('Bearer ') ? header.slice(7).trim() : ''
-  
-  // If no token provided, try to use server-side token for initial access
-  if (!token) {
-    return !!SANITY_WRITE_TOKEN
-  }
-  
-  if (token.length > 512 || !SANITY_PROJECT_ID) return false
-
-  const key = createHash('sha256').update(token).digest('hex')
-  const until = verified.get(key)
-  if (until && until > Date.now()) return true
-
-  try {
-    const res = await fetch(`https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-06-07/users/me`, {
-      headers: { Authorization: `Bearer ${token}` },
-      cache: 'no-store',
-    })
-    if (!res.ok) {
-      // If Studio token fails, allow if server token exists
-      return !!SANITY_WRITE_TOKEN
-    }
-    const me = await res.json()
-    if (!me?.id) return !!SANITY_WRITE_TOKEN
-    verified.set(key, Date.now() + TOKEN_TTL_MS)
-    return true
-  } catch {
-    // On error, allow if server token exists
-    return !!SANITY_WRITE_TOKEN
-  }
-}
-
 export async function GET(request: NextRequest) {
   if (!GA_PROPERTY_ID || !CLIENT_EMAIL || !PRIVATE_KEY) {
     return NextResponse.json({ error: 'Analytics is not configured' }, { status: 503 })
   }
-  if (!(await authorized(request))) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  if (!(await isStudioUser(request.headers.get('authorization')))) {
+    return NextResponse.json({ error: 'Unauthorized', code: 'login' }, { status: 401 })
   }
   try {
     const { searchParams } = new URL(request.url)
@@ -211,7 +184,7 @@ export async function GET(request: NextRequest) {
       ageReport,
     ] = await Promise.all([
       runReport(token, startDate, endDate, [], ['sessions', 'activeUsers', 'screenPageViews', 'averageSessionDuration', 'bounceRate', 'newUsers']),
-      runRealtimeReport(token),
+      runRealtimeReport(token).catch(() => null),
       runReport(token, startDate, endDate, ['pagePath', 'pageTitle'], ['screenPageViews', 'activeUsers'], 'screenPageViews', 20),
       runReport(token, startDate, endDate, ['sessionDefaultChannelGroup', 'sessionSource'], ['sessions', 'activeUsers'], 'sessions', 20),
       runReport(token, startDate, endDate, ['deviceCategory'], ['sessions', 'activeUsers'], 'sessions', 10),
@@ -219,8 +192,8 @@ export async function GET(request: NextRequest) {
       runReport(token, startDate, endDate, ['country'], ['sessions', 'activeUsers'], 'sessions', 20),
       runReport(token, startDate, endDate, ['city', 'country'], ['sessions', 'activeUsers'], 'sessions', 20),
       runReport(token, startDate, endDate, ['language'], ['sessions', 'activeUsers'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['sessionGoogleAdsKeyword'], ['sessions'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['userAgeBracket'], ['activeUsers'], 'activeUsers', 10),
+      runReport(token, startDate, endDate, ['sessionGoogleAdsKeyword'], ['sessions'], 'sessions', 20).catch(() => null),
+      runReport(token, startDate, endDate, ['userAgeBracket'], ['activeUsers'], 'activeUsers', 10).catch(() => null),
     ])
 
     const overview = overviewReport?.rows?.[0]
@@ -249,6 +222,10 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('[analytics] failed:', error instanceof Error ? error.message : error)
-    return NextResponse.json({ error: 'Analytics data fetch failed' }, { status: 500 })
+    if (error instanceof GaError && error.status === 403) {
+      // the service account is not a user of the GA4 property (or the Data API is off)
+      return NextResponse.json({ error: 'Analytics access denied', code: 'ga_forbidden', account: CLIENT_EMAIL, property: GA_PROPERTY_ID }, { status: 502 })
+    }
+    return NextResponse.json({ error: 'Analytics data fetch failed', code: 'ga_failed' }, { status: 502 })
   }
 }

@@ -81,9 +81,9 @@ export function WebProjectCard({ href, shots, client, summary, tags, className, 
     <Link href={href} className={cn('group block', className)}>
       <Tilt max={6}>
         <DeviceMockup shots={shots} alt={client} priority={priority} />
-        <ul className="tilt-z2 absolute bottom-5 left-5 flex flex-wrap gap-2 sm:bottom-7 sm:left-7">
+        <ul className="tilt-z2 absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5 sm:bottom-7 sm:left-7 sm:right-7 sm:gap-2">
           {tags.map((tag) => (
-            <li key={tag} className="rounded-full bg-snow/95 px-3.5 py-1.5 text-[13px] font-medium text-ink shadow-sm">
+            <li key={tag} className="rounded-full bg-snow/95 px-2.5 py-1 text-[11px] font-medium text-ink shadow-sm sm:px-3.5 sm:py-1.5 sm:text-[13px]">
               {tag}
             </li>
           ))}

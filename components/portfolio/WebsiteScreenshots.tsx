@@ -1,191 +1,102 @@
-'use client'
 /**
- * Website Screenshots Component - Desktop & Mobile Mockups
- * Displays website screenshots in professional device frames (laptop + phone)
+ * A website project on three devices: laptop, tablet and phone, each tilting
+ * in 3D towards the pointer. Captures come from Studio (websiteScreenshots);
+ * a device without a capture is simply left out.
  * @author Paşa Quliyev — Cradex Agency
  */
 import Image from 'next/image'
-import { Monitor, Smartphone } from 'lucide-react'
-import { ScrollReveal } from '@/components/ui/ScrollReveal'
+import { Monitor, Smartphone, Tablet } from 'lucide-react'
+import { cn } from '@/lib/utils/cn'
+import { Reveal } from '@/components/ui/Reveal'
+import { Tilt } from '@/components/ui/Tilt'
 
 interface WebsiteScreenshotsProps {
   desktop?: string
+  tablet?: string
   mobile?: string
   projectName: string
   locale: 'az' | 'en' | 'ru' | 'tr'
 }
 
 const translations = {
-  az: {
-    title: 'Veb Sayt Görünüşü',
-    subtitle: 'Kompüter və mobil cihazlarda responsiv dizayn',
-    desktop: 'Desktop Versiya',
-    mobile: 'Mobil Versiya',
-  },
-  en: {
-    title: 'Website Preview',
-    subtitle: 'Responsive design on desktop and mobile devices',
-    desktop: 'Desktop Version',
-    mobile: 'Mobile Version',
-  },
-  ru: {
-    title: 'Предварительный просмотр сайта',
-    subtitle: 'Адаптивный дизайн на настольных и мобильных устройствах',
-    desktop: 'Десктопная версия',
-    mobile: 'Мобильная версия',
-  },
-  tr: {
-    title: 'Web Sitesi Önizlemesi',
-    subtitle: 'Masaüstü ve mobil cihazlarda responsive tasarım',
-    desktop: 'Masaüstü Sürümü',
-    mobile: 'Mobil Sürüm',
-  },
+  az: { title: 'Sayt bütün ekranlarda', subtitle: 'Kompüter, planşet və telefonda necə göründüyü', desktop: 'Kompüter', tablet: 'Planşet', mobile: 'Telefon' },
+  en: { title: 'The site on every screen', subtitle: 'How it looks on a computer, a tablet and a phone', desktop: 'Desktop', tablet: 'Tablet', mobile: 'Phone' },
+  ru: { title: 'Сайт на всех экранах', subtitle: 'Как он выглядит на компьютере, планшете и телефоне', desktop: 'Компьютер', tablet: 'Планшет', mobile: 'Телефон' },
+  tr: { title: 'Site tüm ekranlarda', subtitle: 'Bilgisayarda, tablette ve telefonda nasıl göründüğü', desktop: 'Bilgisayar', tablet: 'Tablet', mobile: 'Telefon' },
 }
 
-export function WebsiteScreenshots({ desktop, mobile, projectName, locale }: WebsiteScreenshotsProps) {
-  // Don't render if no screenshots provided
-  if (!desktop && !mobile) {
-    return null
-  }
+function Label({ icon: Icon, text }: { icon: typeof Monitor; text: string }) {
+  return (
+    <p className="mb-4 flex items-center gap-2 text-sm font-medium text-text-muted">
+      <Icon className="h-5 w-5 text-accent-primary" aria-hidden="true" />
+      {text}
+    </p>
+  )
+}
 
+export function WebsiteScreenshots({ desktop, tablet, mobile, projectName, locale }: WebsiteScreenshotsProps) {
+  if (!desktop && !tablet && !mobile) return null
   const t = translations[locale]
+  const handhelds = Boolean(tablet || mobile)
 
   return (
-    <section className="py-20 bg-bg-primary overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <ScrollReveal animation="fadeInUp" className="text-center mb-16">
-          <h2 className="text-3xl font-display font-bold text-text-primary mb-3">
-            {t.title}
-          </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
-            {t.subtitle}
-          </p>
-        </ScrollReveal>
+    <section className="overflow-hidden bg-bg-primary py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mb-14 text-center">
+          <h2 className="mb-3 text-3xl font-extrabold tracking-[-0.03em] text-text-primary sm:text-4xl">{t.title}</h2>
+          <p className="mx-auto max-w-2xl text-text-muted">{t.subtitle}</p>
+        </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Desktop Screenshot - Laptop Mockup */}
+        <div className={cn('grid grid-cols-[minmax(0,1fr)] items-end gap-12', handhelds && desktop && 'lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10')}>
           {desktop && (
-            <ScrollReveal animation="fadeInLeft" className="order-2 lg:order-1">
-              <div className="relative group">
-                {/* Label */}
-                <div className="flex items-center gap-2 mb-4 text-text-muted">
-                  <Monitor className="w-5 h-5 text-accent-primary" />
-                  <span className="text-sm font-medium">{t.desktop}</span>
-                </div>
-
-                {/* Laptop Frame with 3D effect */}
-                <div className="relative transform transition-all duration-500 hover:scale-[1.02] hover:-rotate-1">
-                  {/* Laptop screen bezel */}
-                  <div className="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-t-2xl p-3 shadow-2xl border border-white/10">
-                    {/* Webcam notch */}
-                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-950 rounded-full border border-gray-700" />
-                    
-                    {/* Screen with glow effect */}
-                    <div className="relative aspect-video rounded-lg overflow-hidden bg-bg-tertiary shadow-inner">
-                      {/* Glow effect behind screen */}
-                      <div className="absolute -inset-4 bg-gradient-to-r from-accent-primary/30 via-accent-secondary/30 to-accent-primary/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      
-                      {/* Screenshot */}
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={desktop}
-                          alt={`${projectName} - ${t.desktop}`}
-                          fill
-                          className="object-cover object-top"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          quality={90}
-                        />
-                      </div>
-
-                      {/* Screen glare overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none" />
-                    </div>
+            <Reveal className="rv-3d">
+              <Label icon={Monitor} text={t.desktop} />
+              <Tilt max={5}>
+                <div className="tilt-z1 rounded-t-2xl border border-white/10 bg-gradient-to-b from-gray-800 to-gray-900 p-2.5 shadow-2xl sm:p-3">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-bg-tertiary">
+                    <Image src={desktop} alt={`${projectName} — ${t.desktop}`} fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 60vw" quality={85} />
+                    <span aria-hidden="true" className="dm-sheen" />
                   </div>
-
-                  {/* Laptop base/keyboard */}
-                  <div className="relative h-4 bg-gradient-to-b from-gray-700 to-gray-800 rounded-b-2xl shadow-xl">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
-                    {/* Trackpad indicator */}
-                    <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-16 h-1.5 bg-gray-900 rounded-full" />
-                  </div>
-
-                  {/* Shadow beneath laptop */}
-                  <div className="absolute -bottom-6 inset-x-0 h-6 bg-gradient-to-b from-black/20 to-transparent blur-xl" />
                 </div>
-
-                {/* Floating badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-accent-primary to-accent-secondary text-snow px-4 py-2 rounded-full text-xs font-bold shadow-xl animate-pulse">
-                  ✨ Responsive
+                <div className="relative mx-[-3%] h-4 rounded-b-2xl bg-gradient-to-b from-gray-700 to-gray-800 shadow-xl">
+                  <span className="absolute left-1/2 top-0 h-1.5 w-20 -translate-x-1/2 rounded-b-lg bg-gray-900" />
                 </div>
-              </div>
-            </ScrollReveal>
+              </Tilt>
+            </Reveal>
           )}
 
-          {/* Mobile Screenshot - Phone Mockup */}
-          {mobile && (
-            <ScrollReveal animation="fadeInRight" className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative group max-w-xs w-full">
-                {/* Label */}
-                <div className="flex items-center gap-2 mb-4 text-text-muted">
-                  <Smartphone className="w-5 h-5 text-accent-primary" />
-                  <span className="text-sm font-medium">{t.mobile}</span>
-                </div>
-
-                {/* Phone Frame with 3D tilt */}
-                <div className="relative transform transition-all duration-500 hover:scale-105 hover:rotate-2">
-                  {/* Phone bezel */}
-                  <div className="relative bg-gradient-to-b from-gray-900 to-black rounded-[2.5rem] p-3 shadow-2xl border-4 border-gray-800">
-                    {/* Notch */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-b-3xl z-10 border-x-4 border-b-4 border-gray-800" />
-                    
-                    {/* Screen with glow */}
-                    <div className="relative aspect-[9/19.5] rounded-[2rem] overflow-hidden bg-bg-tertiary shadow-inner">
-                      {/* Glow effect behind screen */}
-                      <div className="absolute -inset-6 bg-gradient-to-b from-accent-primary/40 via-accent-secondary/40 to-accent-primary/40 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      
-                      {/* Screenshot */}
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={mobile}
-                          alt={`${projectName} - ${t.mobile}`}
-                          fill
-                          className="object-cover object-top"
-                          sizes="(max-width: 640px) 100vw, 400px"
-                          quality={90}
-                        />
+          {handhelds && (
+            <div className="flex items-end justify-center gap-6 sm:gap-10 lg:gap-7">
+              {tablet && (
+                <Reveal className="rv-3d w-[58%] max-w-[340px]" delay={120}>
+                  <Label icon={Tablet} text={t.tablet} />
+                  <Tilt max={7}>
+                    <div className="tilt-z2 rounded-[1.6rem] border-2 border-gray-800 bg-gradient-to-b from-gray-900 to-black p-2.5 shadow-2xl">
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-[1.1rem] bg-bg-tertiary">
+                        <Image src={tablet} alt={`${projectName} — ${t.tablet}`} fill className="object-cover object-top" sizes="(max-width: 1024px) 58vw, 340px" quality={85} />
+                        <span aria-hidden="true" className="dm-sheen" />
                       </div>
-
-                      {/* Screen glare overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
                     </div>
+                  </Tilt>
+                </Reveal>
+              )}
 
-                    {/* Home indicator (modern iOS style) */}
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-white/30 rounded-full" />
-                  </div>
-
-                  {/* Volume buttons */}
-                  <div className="absolute left-0 top-24 w-1 h-12 bg-gray-700 rounded-l-lg -translate-x-3" />
-                  <div className="absolute left-0 top-40 w-1 h-8 bg-gray-700 rounded-l-lg -translate-x-3" />
-                  
-                  {/* Power button */}
-                  <div className="absolute right-0 top-32 w-1 h-12 bg-gray-700 rounded-r-lg translate-x-3" />
-
-                  {/* Shadow beneath phone */}
-                  <div className="absolute -bottom-8 inset-x-0 h-8 bg-gradient-to-b from-black/30 to-transparent blur-2xl" />
-                </div>
-
-                {/* Floating badge */}
-                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-accent-secondary to-accent-primary text-snow px-4 py-2 rounded-full text-xs font-bold shadow-xl">
-                  📱 Mobile-First
-                </div>
-              </div>
-            </ScrollReveal>
+              {mobile && (
+                <Reveal className={cn('rv-3d', tablet ? 'w-[32%] max-w-[190px]' : 'w-[62%] max-w-[280px]')} delay={240}>
+                  <Label icon={Smartphone} text={t.mobile} />
+                  <Tilt max={9}>
+                    <div className="tilt-z3 relative rounded-[1.7rem] border-2 border-gray-800 bg-gradient-to-b from-gray-900 to-black p-1.5 shadow-2xl sm:rounded-[2rem] sm:p-2">
+                      <span className="absolute left-1/2 top-1.5 z-10 h-3 w-[34%] -translate-x-1/2 rounded-full bg-black sm:top-2 sm:h-4" />
+                      <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.3rem] bg-bg-tertiary sm:rounded-[1.5rem]">
+                        <Image src={mobile} alt={`${projectName} — ${t.mobile}`} fill className="object-cover object-top" sizes="(max-width: 1024px) 60vw, 280px" quality={85} />
+                      </div>
+                    </div>
+                  </Tilt>
+                </Reveal>
+              )}
+            </div>
           )}
         </div>
-
-        {/* Bottom decorative gradient */}
-        <div className="mt-20 h-px bg-gradient-to-r from-transparent via-accent-primary/30 to-transparent" />
       </div>
     </section>
   )

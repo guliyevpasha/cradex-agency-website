@@ -1,13 +1,16 @@
 /**
  * Portfolio: website projects only, as 3D laptop + phone mockups in two
- * staggered columns. Other categories are archived (archive/portfolio-all).
+ * staggered columns, filtered by business field and split into pages
+ * (WebWorksBrowser). Other categories are archived (archive/portfolio-all).
  * @author Paşa Quliyev — Cradex Agency
  */
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getAllPortfolio } from '@/lib/data/portfolio'
 import { clientName, cleanSlug, domainOf, isShown, shortSummary, shotsFor } from '@/lib/site/portfolio'
+import { WEB_FIELDS, isWebField } from '@/lib/site/webCategories'
 import { WebProjectCard } from '@/components/portfolio/WebProjectCard'
+import { WebWorksBrowser } from '@/components/portfolio/WebWorksBrowser'
 import { FinalCta } from '@/components/home/FinalCta'
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -27,27 +30,38 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'site.portfolioPage' })
   const tWork = await getTranslations({ locale, namespace: 'site.work' })
+  const c = await getTranslations({ locale, namespace: 'site.workPages.common' })
 
-  // Projects with live captures first: they look best on the devices.
+  // Newest first; projects without phone captures go last, they look weaker
+  // on the devices.
   const items = (await getAllPortfolio(locale))
     .filter(isShown)
-    .sort((a, b) => Number(Boolean(shotsFor(b).mobile)) - Number(Boolean(shotsFor(a).mobile)))
+    .sort((a, b) => Number(Boolean(shotsFor(b).mobile)) - Number(Boolean(shotsFor(a).mobile)) || (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))
 
   const cards = items.map((item, i) => {
     const domain = domainOf(item.projectUrl)
-    return (
-      <Reveal key={item.id} className="rv-3d" delay={(i % 2) * 140}>
-        <WebProjectCard
-          href={`/${locale}/portfolio/${cleanSlug(item.slug)}`}
-          shots={shotsFor(item)}
-          client={clientName(item, locale)}
-          summary={shortSummary(item, locale)}
-          tags={domain ? [tWork('chip'), domain] : [tWork('chip')]}
-          priority={i < 2}
-        />
-      </Reveal>
-    )
+    const field = isWebField(item.industry) ? item.industry : undefined
+    const year = item.publishedAt ? item.publishedAt.slice(0, 4) : null
+    return {
+      key: item.id,
+      field,
+      node: (
+        <Reveal className="rv-3d" delay={(i % 2) * 140}>
+          <WebProjectCard
+            href={`/${locale}/portfolio/${cleanSlug(item.slug)}`}
+            shots={shotsFor(item)}
+            client={clientName(item, locale)}
+            summary={shortSummary(item, locale)}
+            tags={[field ? t(`fields.${field}`) : tWork('chip'), ...(domain ? [domain] : []), ...(year ? [year] : [])]}
+            priority={i < 2}
+          />
+        </Reveal>
+      ),
+    }
   })
+
+  // Only fields that have a project get a chip.
+  const fields = WEB_FIELDS.map((f) => ({ value: f.value, label: t(`fields.${f.value}`), count: cards.filter((x) => x.field === f.value).length })).filter((f) => f.count > 0)
 
   return (
     <div className="pt-24 lg:pt-28">
@@ -68,14 +82,15 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-text-secondary">{t('text')}</p>
       </section>
 
-      <section className="overflow-hidden py-14 lg:py-20">
+      <section className="pb-14 pt-6 lg:pb-20">
         {items.length === 0 ? (
           <p className="container-x text-text-secondary">{t('empty')}</p>
         ) : (
-          <div className="mx-auto grid w-full max-w-[1680px] gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-x-14 lg:px-12">
-            <div className="flex flex-col gap-14 lg:gap-24">{cards.filter((_, i) => i % 2 === 0)}</div>
-            <div className="flex flex-col gap-14 lg:gap-24 lg:pt-40">{cards.filter((_, i) => i % 2 === 1)}</div>
-          </div>
+          <WebWorksBrowser
+            items={cards}
+            fields={fields}
+            labels={{ filter: t('filter'), all: t('all'), nav: c('pages'), page: c.raw('page'), prev: c('prev'), next: c('next') }}
+          />
         )}
       </section>
 

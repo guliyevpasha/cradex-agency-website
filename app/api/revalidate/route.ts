@@ -8,6 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'node:crypto'
 import { PRICING_LINKS, PRODUCT_LINKS, SERVICE_SLUGS } from '@/lib/site/navigation'
 import { WORK_SLUGS } from '@/lib/site/work'
+import { isStudioUser } from '@/lib/server/studioAuth'
 
 // Optimize runtime for webhook - no cache needed
 export const dynamic = 'force-dynamic'
@@ -25,7 +26,10 @@ function tokenMatches(header: string | null, expected: string | undefined): bool
 }
 
 export async function POST(request: NextRequest) {
-  if (!tokenMatches(request.headers.get('authorization'), process.env.REVALIDATION_TOKEN)) {
+  // The Sanity webhook sends the shared token; the Studio's publish button
+  // sends the editor's own session token.
+  const auth = request.headers.get('authorization')
+  if (!tokenMatches(auth, process.env.REVALIDATION_TOKEN) && !(await isStudioUser(auth))) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
@@ -90,8 +94,6 @@ export async function POST(request: NextRequest) {
       LOCALES.forEach((l) =>
         Object.values(SERVICE_SLUGS).forEach((s) => add(`/${l}/services/${s}`))
       )
-      
-      console.log(`[revalidate] Portfolio updated - will refresh in ~60 seconds`)
     } else if (_type === 'testimonial' || _type === 'partner') {
       LOCALES.forEach((l) => add(`/${l}`))
       if (_type === 'testimonial') servicePages()

@@ -12,9 +12,25 @@ vi.mock('next/cache', () => ({
   revalidatePath: vi.fn(),
 }))
 
+// A Studio session token is checked with Sanity; only "studio-session" passes here.
+vi.mock('@/lib/server/studioAuth', () => ({
+  isStudioUser: vi.fn(async (header: string | null) => header === 'Bearer studio-session'),
+}))
+
 describe('POST /api/revalidate', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+  })
+
+  it('accepts a logged-in Studio editor without the shared token', async () => {
+    const request = new NextRequest('http://localhost:3000/api/revalidate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer studio-session' },
+      body: JSON.stringify({ _type: 'portfolio', slug: 'elbaer-mmc' }),
+    })
+    const response = await POST(request)
+    expect(response.status).toBe(200)
+    expect((await response.json()).paths).toContain('/az/portfolio/elbaer-mmc')
   })
 
   describe('Token Authentication', () => {
@@ -302,16 +318,14 @@ describe('POST /api/revalidate', () => {
       const data = await response.json()
 
       expect(response.status).toBe(200)
-      expect(data.paths).toEqual([
-        '/az/portfolio',
-        '/en/portfolio',
-        '/ru/portfolio',
-        '/tr/portfolio',
-        '/az',
-        '/en',
-        '/ru',
-        '/tr',
-      ])
+      // the list, the project's own page, the home page and every service page
+      for (const l of ['az', 'en', 'ru', 'tr']) {
+        expect(data.paths).toContain(`/${l}/portfolio`)
+        expect(data.paths).toContain(`/${l}/portfolio/project-1`)
+        expect(data.paths).toContain(`/${l}`)
+        expect(data.paths).toContain(`/${l}/services/veb-sayt-hazirlanmasi`)
+      }
+      expect(data.paths).toHaveLength(32)
     })
 
     it('should revalidate homepage and service pages for testimonial content type', async () => {
