@@ -170,6 +170,7 @@ export function AnalyticsDashboard() {
             `Google Analytics bu hesaba icazə vermir. GA4 → Admin → Property access management bölməsində ${err.account} ünvanını "Viewer" kimi əlavə edin (Property ID: ${err.property}), sonra "Yenilə" düyməsini basın.`
           )
         }
+        if (err.code === 'ga_busy') throw new Error('Google Analytics hazırda cavab vermir (Google tərəfində müvəqqəti xəta). Bir neçə dəqiqədən sonra "Yenilə" düyməsini basın.')
         if (err.code === 'login') throw new Error('Statistikanı görmək üçün Studio-dan çıxıb yenidən daxil olun.')
         throw new Error(err.error || 'Xəta baş verdi')
       }

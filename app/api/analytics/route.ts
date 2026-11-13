@@ -88,55 +88,51 @@ async function checked(res: Response) {
 
 // ─── GA4 Data API helper ──────────────────────────────────────────────────────
 
-async function runReport(
-  token: string,
-  startDate: string,
-  endDate: string,
-  dimensions: string[],
-  metrics: string[],
-  orderByMetric?: string,
-  limit = 20
-) {
-  const body: any = {
-    dateRanges: [{ startDate, endDate }],
-    dimensions: dimensions.map((name) => ({ name })),
-    metrics: metrics.map((name) => ({ name })),
-    limit,
-  }
-  if (orderByMetric) {
-    body.orderBys = [{ metric: { metricName: orderByMetric }, desc: true }]
-  }
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
-  const res = await fetch(
-    `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runReport`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
+// GA4 caps concurrent requests per property; eleven parallel calls got 429/502
+// back and one refusal failed the whole dashboard. One retry covers the rest.
+async function gaPost(token: string, method: string, body: object) {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(
+      `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:${method}`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      }
+    )
+    if (attempt < 2 && (res.status === 429 || res.status >= 500)) {
+      await sleep(800 * (attempt + 1))
+      continue
     }
-  )
-
-  return checked(res)
+    return checked(res)
+  }
 }
 
-async function runRealtimeReport(token: string) {
-  const res = await fetch(
-    `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runRealtimeReport`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        metrics: [{ name: 'activeUsers' }],
-      }),
-    }
-  )
-  return checked(res)
+type ReportSpec = { dimensions: string[]; metrics: string[]; orderBy?: string; limit?: number }
+
+const report = (dimensions: string[], metrics: string[], orderBy?: string, limit = 20): ReportSpec =>
+  ({ dimensions, metrics, orderBy, limit })
+
+// batchRunReports takes up to 5 reports in one request
+async function runBatch(token: string, startDate: string, endDate: string, specs: ReportSpec[]) {
+  const requests = specs.map((s) => ({
+    dateRanges: [{ startDate, endDate }],
+    dimensions: s.dimensions.map((name) => ({ name })),
+    metrics: s.metrics.map((name) => ({ name })),
+    limit: s.limit,
+    ...(s.orderBy ? { orderBys: [{ metric: { metricName: s.orderBy }, desc: true }] } : {}),
+  }))
+  const json = await gaPost(token, 'batchRunReports', { requests })
+  return (json?.reports ?? []) as any[]
+}
+
+function runRealtimeReport(token: string) {
+  return gaPost(token, 'runRealtimeReport', { metrics: [{ name: 'activeUsers' }] })
 }
 
 // ─── Parse rows ───────────────────────────────────────────────────────────────
@@ -170,30 +166,31 @@ export async function GET(request: NextRequest) {
 
     const token = await getAccessToken()
 
+    // 4 requests instead of 11; the optional pair sits in its own batch so a
+    // refusal there (no Ads link, no demographics) does not sink the rest
     const [
-      overviewReport,
+      [overviewReport, pagesReport, sourcesReport, devicesReport, osReport],
+      [countriesReport, citiesReport, languagesReport],
+      [keywordsReport, ageReport],
       realtimeReport,
-      pagesReport,
-      sourcesReport,
-      devicesReport,
-      osReport,
-      countriesReport,
-      citiesReport,
-      languagesReport,
-      keywordsReport,
-      ageReport,
     ] = await Promise.all([
-      runReport(token, startDate, endDate, [], ['sessions', 'activeUsers', 'screenPageViews', 'averageSessionDuration', 'bounceRate', 'newUsers']),
+      runBatch(token, startDate, endDate, [
+        report([], ['sessions', 'activeUsers', 'screenPageViews', 'averageSessionDuration', 'bounceRate', 'newUsers']),
+        report(['pagePath', 'pageTitle'], ['screenPageViews', 'activeUsers'], 'screenPageViews'),
+        report(['sessionDefaultChannelGroup', 'sessionSource'], ['sessions', 'activeUsers'], 'sessions'),
+        report(['deviceCategory'], ['sessions', 'activeUsers'], 'sessions', 10),
+        report(['operatingSystem'], ['sessions', 'activeUsers'], 'sessions', 10),
+      ]),
+      runBatch(token, startDate, endDate, [
+        report(['country'], ['sessions', 'activeUsers'], 'sessions'),
+        report(['city', 'country'], ['sessions', 'activeUsers'], 'sessions'),
+        report(['language'], ['sessions', 'activeUsers'], 'sessions'),
+      ]),
+      runBatch(token, startDate, endDate, [
+        report(['sessionGoogleAdsKeyword'], ['sessions'], 'sessions'),
+        report(['userAgeBracket'], ['activeUsers'], 'activeUsers', 10),
+      ]).catch(() => [null, null]),
       runRealtimeReport(token).catch(() => null),
-      runReport(token, startDate, endDate, ['pagePath', 'pageTitle'], ['screenPageViews', 'activeUsers'], 'screenPageViews', 20),
-      runReport(token, startDate, endDate, ['sessionDefaultChannelGroup', 'sessionSource'], ['sessions', 'activeUsers'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['deviceCategory'], ['sessions', 'activeUsers'], 'sessions', 10),
-      runReport(token, startDate, endDate, ['operatingSystem'], ['sessions', 'activeUsers'], 'sessions', 10),
-      runReport(token, startDate, endDate, ['country'], ['sessions', 'activeUsers'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['city', 'country'], ['sessions', 'activeUsers'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['language'], ['sessions', 'activeUsers'], 'sessions', 20),
-      runReport(token, startDate, endDate, ['sessionGoogleAdsKeyword'], ['sessions'], 'sessions', 20).catch(() => null),
-      runReport(token, startDate, endDate, ['userAgeBracket'], ['activeUsers'], 'activeUsers', 10).catch(() => null),
     ])
 
     const overview = overviewReport?.rows?.[0]
@@ -225,6 +222,9 @@ export async function GET(request: NextRequest) {
     if (error instanceof GaError && error.status === 403) {
       // the service account is not a user of the GA4 property (or the Data API is off)
       return NextResponse.json({ error: 'Analytics access denied', code: 'ga_forbidden', account: CLIENT_EMAIL, property: GA_PROPERTY_ID }, { status: 502 })
+    }
+    if (error instanceof GaError && (error.status === 429 || error.status >= 500)) {
+      return NextResponse.json({ error: 'Google Analytics is not answering', code: 'ga_busy' }, { status: 503 })
     }
     return NextResponse.json({ error: 'Analytics data fetch failed', code: 'ga_failed' }, { status: 502 })
   }
