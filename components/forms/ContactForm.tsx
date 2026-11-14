@@ -11,6 +11,7 @@ import { CheckCircle, AlertCircle } from 'lucide-react'
 import { contactSchema, type ContactFormData } from './contactSchema'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils/cn'
+import { track } from '@/lib/analytics/track'
 
 export function ContactForm() {
   const t = useTranslations('contact.form')
@@ -34,6 +35,7 @@ export function ContactForm() {
         body: JSON.stringify(data),
       })
       if (!res.ok) throw new Error('Server error')
+      track('form_submit', { form_name: 'contact' })
       setStatus('success')
       reset()
     } catch {

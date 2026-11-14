@@ -12,6 +12,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { ArrowLeft, AtSign, Bell, Lock, Mail, Minus, Phone, Plus, ShieldCheck, User, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
+import { track } from '@/lib/analytics/track'
 import { MAX_QTY, clampQty, formatAmount, formatPrice, priceOf, validateOrder, type ComboPackage, type FieldError } from '@/lib/site/orders'
 import { useCurrency } from '@/lib/site/useCurrency'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
@@ -113,6 +114,7 @@ export function OrderButton({ pack, title, label, icon, tint }: Props) {
         body: JSON.stringify({ package: pkg, quantity: qty, locale, ...fields }),
       })
       const data = await res.json().catch(() => ({}))
+      if (res.ok) track('form_submit', { form_name: 'combo_order' })
       if (res.ok && data.status === 'redirect' && typeof data.url === 'string') {
         window.location.assign(data.url)
         return

@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
+import { track } from '@/lib/analytics/track'
 
 export const CONTACT_EMAIL = 'info@cradexagency.com'
 
@@ -41,6 +42,7 @@ export function ChatbotForm() {
     e.preventDefault()
     if (!check()) return
     window.open(whatsappUrl(text()), '_blank', 'noopener,noreferrer')
+    track('form_submit', { form_name: 'chatbot' })
     setSent(true)
   }
 
@@ -49,6 +51,7 @@ export function ChatbotForm() {
       e.preventDefault()
       return
     }
+    track('form_submit', { form_name: 'chatbot' })
     e.currentTarget.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(t('formSubject', { name: name.trim() }))}&body=${encodeURIComponent(text())}`
   }
 

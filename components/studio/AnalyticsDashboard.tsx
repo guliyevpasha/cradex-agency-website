@@ -19,6 +19,10 @@ interface OverviewData {
   avgSessionDuration: string
   bounceRate: string
   newUsers: string
+  engagementRate: string
+  pagesPerSession: string
+  avgEngagementTime: string
+  leadUsers: string
   realtimeUsers: string
 }
 
@@ -29,6 +33,9 @@ interface Row {
 
 interface AnalyticsData {
   overview: OverviewData
+  returning: Row[]
+  services: Row[]
+  leads: Row[]
   pages: Row[]
   sources: Row[]
   devices: Row[]
@@ -60,15 +67,52 @@ function fmtNum(val: string) {
   return Number(val).toLocaleString()
 }
 
+// "5d 50s" was read as 5 days; spelled-out units leave no room for that
 function fmtDuration(seconds: string) {
-  const s = Math.round(Number(seconds))
-  const m = Math.floor(s / 60)
+  const s = Math.round(Number(seconds) || 0)
+  const h = Math.floor(s / 3600)
+  const m = Math.floor((s % 3600) / 60)
   const rem = s % 60
-  return `${m}d ${rem}s`
+  if (h > 0) return `${h} saat ${m} dəq`
+  if (m > 0) return `${m} dəq ${rem} san`
+  return `${rem} san`
 }
 
-function fmtPct(val: string) {
+function fmtPct(val: string | number) {
   return (Number(val) * 100).toFixed(1) + '%'
+}
+
+const LEAD_LABELS: Record<string, { label: string; icon: string }> = {
+  whatsapp_click: { label: 'WhatsApp klikləri', icon: '💬' },
+  phone_click: { label: 'Zəng et klikləri', icon: '📞' },
+  email_click: { label: 'E-poçt klikləri', icon: '✉️' },
+  form_submit: { label: 'Form müraciətləri', icon: '📝' },
+}
+
+const SERVICE_LABELS: Record<string, string> = {
+  'veb-sayt-hazirlanmasi': 'Veb sayt',
+  'mobil-tetbiq': 'Mobil tətbiq',
+  'seo-geo': 'SEO və GEO',
+  'reqemsal-reklam': 'Rəqəmsal reklam',
+  'texniki-xidmet': 'Texniki xidmət',
+}
+
+/** Sums /az, /en, /ru, /tr views of the same service into one row. */
+function serviceViews(rows: Row[]) {
+  const totals = new Map<string, number>()
+  for (const row of rows) {
+    const slug = row.dimensions[0].split('/services/')[1]?.split(/[/?#]/)[0]
+    if (!slug) continue
+    totals.set(slug, (totals.get(slug) ?? 0) + Number(row.metrics[0]))
+  }
+  return [...totals].sort((a, b) => b[1] - a[1])
+}
+
+const leadCount = (rows: Row[], name: string) =>
+  Number(rows.find((r) => r.dimensions[0] === name)?.metrics[0] ?? 0)
+
+function returningUsers(rows: Row[]) {
+  return Number(rows.find((r) => r.dimensions[0] === 'returning')?.metrics[0] ?? 0)
 }
 
 function sourceIcon(source: string) {
@@ -195,6 +239,12 @@ export function AnalyticsDashboard() {
   const maxSources = data?.sources?.[0] ? Number(data.sources[0].metrics[0]) : 1
   const maxCountries = data?.countries?.[0] ? Number(data.countries[0].metrics[0]) : 1
   const maxCities = data?.cities?.[0] ? Number(data.cities[0].metrics[0]) : 1
+  const services = data ? serviceViews(data.services ?? []) : []
+  const leads = data?.leads ?? []
+  const users = Number(data?.overview.activeUsers ?? 0)
+  const leadUsers = Number(data?.overview.leadUsers ?? 0)
+  const conversion = users > 0 ? Math.min(leadUsers / users, 1) : 0
+  const returning = data ? returningUsers(data.returning ?? []) : 0
 
   return (
     <div style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', background: '#0f0f1a', minHeight: '100vh', padding: 24, color: '#fff' }}>
@@ -288,9 +338,25 @@ export function AnalyticsDashboard() {
               <StatCard label="Unikal İstifadəçi" value={fmtNum(data.overview.activeUsers)} />
               <StatCard label="Səhifə Baxışı" value={fmtNum(data.overview.pageViews)} />
               <StatCard label="Yeni İstifadəçi" value={fmtNum(data.overview.newUsers)} />
-              <StatCard label="Ort. Sessiya Müddəti" value={fmtDuration(data.overview.avgSessionDuration)} />
+              <StatCard label="Qayıdan İstifadəçi" value={fmtNum(String(returning))} sub={users > 0 ? `${fmtPct(Math.min(returning / users, 1))} istifadəçilərin` : undefined} />
+              <StatCard label="Ort. Sessiya Müddəti" value={fmtDuration(data.overview.avgSessionDuration)} sub={`Aktiv vaxt: ${fmtDuration(data.overview.avgEngagementTime)}`} />
+              <StatCard label="Səhifə / Sessiya" value={Number(data.overview.pagesPerSession).toFixed(1)} />
+              <StatCard label="Engagement Rate" value={fmtPct(data.overview.engagementRate)} />
               <StatCard label="Bounce Rate" value={fmtPct(data.overview.bounceRate)} />
             </div>
+          </Section>
+
+          {/* Leads: visitors who reached out */}
+          <Section title="Potensial Müştərilər">
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <StatCard label="Conversion Rate" value={fmtPct(conversion)} sub={`${fmtNum(String(leadUsers))} / ${fmtNum(String(users))} istifadəçi müraciət etdi`} />
+              {Object.entries(LEAD_LABELS).map(([name, { label, icon }]) => (
+                <StatCard key={name} label={`${icon} ${label}`} value={fmtNum(String(leadCount(leads, name)))} />
+              ))}
+            </div>
+            <p style={{ color: '#888', fontSize: 11, margin: '8px 0 0' }}>
+              Müraciət = WhatsApp, zəng, e-poçt klikləri və ya göndərilən form. Klik izləmə 14.11.2026-dan başlayır; əvvəlki dövrlər üçün 0 görünür.
+            </p>
           </Section>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 20 }}>
@@ -301,6 +367,19 @@ export function AnalyticsDashboard() {
                 {data.pages.slice(0, 10).map((row, i) => (
                   <BarRow key={i} label={row.dimensions[0] || '/'} value={Number(row.metrics[0])} max={maxPages} />
                 ))}
+              </Section>
+            </div>
+
+            {/* Services */}
+            <div style={{ background: '#1a1a2e', border: '1px solid #2a2a4a', borderRadius: 12, padding: 20 }}>
+              <Section title="Ən Çox Baxılan Xidmətlər">
+                {services.length > 0 ? (
+                  services.map(([slug, views]) => (
+                    <BarRow key={slug} label={SERVICE_LABELS[slug] ?? slug} value={views} max={services[0][1]} icon="🧩" />
+                  ))
+                ) : (
+                  <p style={{ color: '#888', fontSize: 12 }}>Bu dövrdə xidmət səhifələrinə baxış yoxdur.</p>
+                )}
               </Section>
             </div>
 

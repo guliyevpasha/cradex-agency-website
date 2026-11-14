@@ -4,6 +4,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { isStudioUser } from '@/lib/server/studioAuth'
+import { LEAD_EVENTS } from '@/lib/analytics/track'
 
 const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID ?? ''
 const CLIENT_EMAIL = process.env.GA_SERVICE_ACCOUNT_EMAIL ?? ''
@@ -113,10 +114,16 @@ async function gaPost(token: string, method: string, body: object) {
   }
 }
 
-type ReportSpec = { dimensions: string[]; metrics: string[]; orderBy?: string; limit?: number }
+type ReportSpec = { dimensions: string[]; metrics: string[]; orderBy?: string; limit?: number; filter?: object }
 
-const report = (dimensions: string[], metrics: string[], orderBy?: string, limit = 20): ReportSpec =>
-  ({ dimensions, metrics, orderBy, limit })
+const report = (dimensions: string[], metrics: string[], orderBy?: string, limit = 20, filter?: object): ReportSpec =>
+  ({ dimensions, metrics, orderBy, limit, filter })
+
+const inList = (fieldName: string, values: readonly string[]) =>
+  ({ filter: { fieldName, inListFilter: { values: [...values] } } })
+
+const contains = (fieldName: string, value: string) =>
+  ({ filter: { fieldName, stringFilter: { matchType: 'CONTAINS', value } } })
 
 // batchRunReports takes up to 5 reports in one request
 async function runBatch(token: string, startDate: string, endDate: string, specs: ReportSpec[]) {
@@ -125,6 +132,7 @@ async function runBatch(token: string, startDate: string, endDate: string, specs
     dimensions: s.dimensions.map((name) => ({ name })),
     metrics: s.metrics.map((name) => ({ name })),
     limit: s.limit,
+    ...(s.filter ? { dimensionFilter: s.filter } : {}),
     ...(s.orderBy ? { orderBys: [{ metric: { metricName: s.orderBy }, desc: true }] } : {}),
   }))
   const json = await gaPost(token, 'batchRunReports', { requests })
@@ -166,17 +174,22 @@ export async function GET(request: NextRequest) {
 
     const token = await getAccessToken()
 
-    // 4 requests instead of 11; the optional pair sits in its own batch so a
+    // 5 requests instead of 14; the optional pair sits in its own batch so a
     // refusal there (no Ads link, no demographics) does not sink the rest
     const [
       [overviewReport, pagesReport, sourcesReport, devicesReport, osReport],
-      [countriesReport, citiesReport, languagesReport],
+      [countriesReport, citiesReport, languagesReport, servicesReport, returningReport],
+      [leadsReport, convertersReport],
       [keywordsReport, ageReport],
       realtimeReport,
     ] = await Promise.all([
       runBatch(token, startDate, endDate, [
-        report([], ['sessions', 'activeUsers', 'screenPageViews', 'averageSessionDuration', 'bounceRate', 'newUsers']),
-        report(['pagePath', 'pageTitle'], ['screenPageViews', 'activeUsers'], 'screenPageViews'),
+        report([], [
+          'sessions', 'activeUsers', 'screenPageViews', 'averageSessionDuration', 'bounceRate', 'newUsers',
+          'engagementRate', 'screenPageViewsPerSession', 'userEngagementDuration',
+        ]),
+        // path only: grouping by title listed /az twice when the title changed
+        report(['pagePath'], ['screenPageViews', 'activeUsers'], 'screenPageViews'),
         report(['sessionDefaultChannelGroup', 'sessionSource'], ['sessions', 'activeUsers'], 'sessions'),
         report(['deviceCategory'], ['sessions', 'activeUsers'], 'sessions', 10),
         report(['operatingSystem'], ['sessions', 'activeUsers'], 'sessions', 10),
@@ -185,6 +198,14 @@ export async function GET(request: NextRequest) {
         report(['country'], ['sessions', 'activeUsers'], 'sessions'),
         report(['city', 'country'], ['sessions', 'activeUsers'], 'sessions'),
         report(['language'], ['sessions', 'activeUsers'], 'sessions'),
+        report(['pagePath'], ['screenPageViews', 'activeUsers'], 'screenPageViews', 100, contains('pagePath', '/services/')),
+        report(['newVsReturning'], ['activeUsers'], 'activeUsers', 5),
+      ]),
+      runBatch(token, startDate, endDate, [
+        // events sent by lib/analytics/track.ts
+        report(['eventName'], ['eventCount', 'totalUsers'], 'eventCount', 10, inList('eventName', LEAD_EVENTS)),
+        // no dimension: one user who clicked WhatsApp and sent a form counts once
+        report([], ['totalUsers'], undefined, 1, inList('eventName', LEAD_EVENTS)),
       ]),
       runBatch(token, startDate, endDate, [
         report(['sessionGoogleAdsKeyword'], ['sessions'], 'sessions'),
@@ -194,18 +215,29 @@ export async function GET(request: NextRequest) {
     ])
 
     const overview = overviewReport?.rows?.[0]
+    const metric = (i: number) => overview?.metricValues?.[i]?.value ?? '0'
     const realtimeUsers = realtimeReport?.rows?.[0]?.metricValues?.[0]?.value ?? '0'
+    const sessions = Number(metric(0))
 
     return NextResponse.json({
       overview: {
-        sessions: overview?.metricValues?.[0]?.value ?? '0',
-        activeUsers: overview?.metricValues?.[1]?.value ?? '0',
-        pageViews: overview?.metricValues?.[2]?.value ?? '0',
-        avgSessionDuration: overview?.metricValues?.[3]?.value ?? '0',
-        bounceRate: overview?.metricValues?.[4]?.value ?? '0',
-        newUsers: overview?.metricValues?.[5]?.value ?? '0',
+        sessions: metric(0),
+        activeUsers: metric(1),
+        pageViews: metric(2),
+        avgSessionDuration: metric(3),
+        bounceRate: metric(4),
+        newUsers: metric(5),
+        engagementRate: metric(6),
+        pagesPerSession: metric(7),
+        // averageSessionDuration runs from first to last hit, tab left open or
+        // not; engagement time only counts while the page is in front
+        avgEngagementTime: String(sessions > 0 ? Number(metric(8)) / sessions : 0),
+        leadUsers: convertersReport?.rows?.[0]?.metricValues?.[0]?.value ?? '0',
         realtimeUsers,
       },
+      returning: parseRows(returningReport),
+      services: parseRows(servicesReport),
+      leads: parseRows(leadsReport),
       pages: parseRows(pagesReport),
       sources: parseRows(sourcesReport),
       devices: parseRows(devicesReport),
