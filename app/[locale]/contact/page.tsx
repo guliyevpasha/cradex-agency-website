@@ -9,6 +9,7 @@ import { MessageCircle, Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { GlassCard } from '@/components/ui/GlassCard'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
+import { SHOW_SOCIAL_LINKS } from '@/lib/site/flags'
 
 export async function generateMetadata({
   params,
@@ -110,7 +111,8 @@ function ContactContent() {
               </a>
             </ScrollReveal>
 
-            {/* Social links — Instagram DM, Facebook Messenger, Gmail */}
+            {/* Social links — Instagram DM, Facebook Messenger, Gmail (archived, see lib/site/flags.ts) */}
+            {SHOW_SOCIAL_LINKS && (
             <ScrollReveal animation="fadeInRight" delay={200}>
               <GlassCard className="p-5">
                 <p className="text-text-muted text-xs mb-4 uppercase tracking-wider">Sosial Media</p>
@@ -168,6 +170,7 @@ function ContactContent() {
                 </div>
               </GlassCard>
             </ScrollReveal>
+            )}
           </div>
         </div>
       </div>

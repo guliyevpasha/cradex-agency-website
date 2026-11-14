@@ -8,6 +8,7 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react
 import { Logo } from '@/components/brand/Logo'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { LEGAL_PAGES, NAV_ITEMS, SERVICE_IDS, serviceHref } from '@/lib/site/navigation'
+import { SHOW_SOCIAL_LINKS } from '@/lib/site/flags'
 
 // Maps always gets the Azerbaijani address; it geocodes reliably.
 const MAPS_URL =
@@ -37,6 +38,7 @@ export function Footer() {
             <Logo className="h-11 lg:h-10" />
           </Link>
           <p className="max-w-sm text-[13px] leading-relaxed text-text-secondary sm:text-sm lg:max-w-xs">{t('tagline')}</p>
+          {SHOW_SOCIAL_LINKS && (
           <ul className="flex gap-2">
             {SOCIAL.map(({ href, icon: Icon, label }) => (
               <li key={label}>
@@ -52,6 +54,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          )}
         </div>
 
         <div>
