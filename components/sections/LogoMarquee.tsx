@@ -61,7 +61,7 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
   }, [])
 
   return (
-    <section className="py-12 border-y border-white/[0.06] dark:border-white/[0.04] overflow-hidden bg-gradient-to-b from-transparent via-white/[0.02] to-transparent dark:via-white/[0.01]">
+    <section className="py-12 border-y border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
 
@@ -100,72 +100,26 @@ export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
         </div>
       </div>
 
-      {/* Premium glassmorphism styles — pure CSS class toggle, no React state */}
+      {/* Colour-reveal styles — pure CSS class toggle, no React state */}
       <style>{`
-        /* Premium glassmorphism effect with theme-aware backdrop */
+        /* One light card for every logo, in both themes, so each keeps its
+           own colours and stays readable. */
         .lm-card {
-          position: relative;
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          background: rgba(255, 255, 255, 0.08);
-          box-shadow: 
-            0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-            0 8px 32px -8px rgba(0, 0, 0, 0.12),
-            0 2px 8px -2px rgba(0, 0, 0, 0.08);
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          border-color: rgba(255,255,255,0.5);
+          background: linear-gradient(160deg, #FFFFFF, #E8EDF4);
+          box-shadow: 0 10px 24px -14px rgba(11,13,16,0.55);
+          transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
         }
-        
-        /* Dark theme adjustments */
-        .dark .lm-card {
-          background: rgba(255, 255, 255, 0.05);
-          border-color: rgba(255, 255, 255, 0.08);
-        }
-        
-        /* Lit state - premium glow effect */
         .lm-card.lm-lit {
-          border-color: rgba(36, 160, 255, 0.4);
-          background: rgba(255, 255, 255, 0.14);
-          box-shadow: 
-            0 0 0 1px rgba(36, 160, 255, 0.2) inset,
-            0 0 24px -4px rgba(36, 160, 255, 0.35),
-            0 12px 32px -8px rgba(36, 160, 255, 0.25),
-            0 4px 16px -4px rgba(0, 0, 0, 0.1);
-          transform: translateY(-3px) scale(1.02);
+          border-color: rgba(36,160,255,0.55);
+          box-shadow: 0 0 0 1px rgba(36,160,255,0.25), 0 12px 28px -12px rgba(36,160,255,0.55);
+          transform: translateY(-2px);
         }
-        
-        .dark .lm-card.lm-lit {
-          background: rgba(255, 255, 255, 0.1);
-          box-shadow: 
-            0 0 0 1px rgba(36, 160, 255, 0.3) inset,
-            0 0 32px -4px rgba(36, 160, 255, 0.5),
-            0 16px 40px -8px rgba(36, 160, 255, 0.35),
-            0 4px 16px -4px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Logo sizing with premium spacing */
         .lm-card img {
           height: calc(2rem * min(var(--cl-s, 1), 1.45));
           width: auto;
           max-width: 140px;
           object-fit: contain;
-          filter: contrast(1.05) brightness(0.98);
-          transition: filter 0.3s ease;
-        }
-        
-        .lm-card.lm-lit img {
-          filter: contrast(1.1) brightness(1.02);
-        }
-        
-        /* Smooth hover enhancement */
-        .lm-card:hover:not(.lm-lit) {
-          background: rgba(255, 255, 255, 0.12);
-          border-color: rgba(255, 255, 255, 0.18);
-          transform: translateY(-1px);
-        }
-        
-        .dark .lm-card:hover:not(.lm-lit) {
-          background: rgba(255, 255, 255, 0.08);
         }
       `}</style>
     </section>
