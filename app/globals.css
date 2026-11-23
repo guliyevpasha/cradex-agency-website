@@ -8,17 +8,24 @@
 
 /* Channels (r g b) so Tailwind opacity modifiers keep working: bg-bg-primary/80 */
 :root {
-  --bg-primary: 255 255 255;
-  --bg-secondary: 246 248 251;
-  --bg-tertiary: 236 241 246;
-  --text-primary: 11 13 16;
-  --text-secondary: 74 82 96;
-  --text-muted: 105 114 127;
-  --accent-primary: 36 160 255;
-  --accent-secondary: 110 196 255;
-  --accent-ink: 10 111 194;
-  --line: 223 228 234;
-  --contrast: 11 13 16;
+  /* Premium off-white backgrounds - soft, not harsh */
+  --bg-primary: 250 251 252;      /* Very soft blue-grey white - main bg */
+  --bg-secondary: 244 246 248;    /* Subtle warm grey - cards/sections */
+  --bg-tertiary: 237 240 244;     /* Slightly deeper - elevated elements */
+  
+  /* High contrast text for readability */
+  --text-primary: 15 23 42;       /* Deep slate - headings */
+  --text-secondary: 71 85 105;    /* Medium slate - body text */
+  --text-muted: 100 116 139;      /* Light slate - supporting text */
+  
+  /* Vibrant accent colors */
+  --accent-primary: 36 160 255;   /* Bright blue - primary actions */
+  --accent-secondary: 110 196 255; /* Light blue - secondary/hover */
+  --accent-ink: 10 111 194;       /* Deep blue - active states */
+  
+  /* Soft borders */
+  --line: 226 232 240;            /* Subtle grey border */
+  --contrast: 15 23 42;           /* For theme-aware contrast */
 
   /* hex aliases for inline styles and third-party widgets */
   --color-bg-primary: rgb(var(--bg-primary));
@@ -69,12 +76,14 @@
   }
 
   ::selection {
-    background: rgb(36 160 255 / 0.25);
+    background: rgb(36 160 255 / 0.15);
+    color: rgb(15 23 42);
   }
 
   :focus-visible {
-    outline: 2px solid #24A0FF;
-    outline-offset: 2px;
+    outline: 2px solid rgb(36 160 255 / 0.6);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
@@ -85,15 +94,17 @@
 
   .glass-card {
     background: rgb(var(--bg-secondary));
-    border: 1px solid rgb(var(--line));
+    border: 1px solid rgb(var(--line) / 0.6);
     border-radius: 16px;
-    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 1px 3px rgb(15 23 42 / 0.03), 0 8px 16px -8px rgb(15 23 42 / 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
-    border-color: rgb(36 160 255 / 0.45);
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px -24px rgb(36 160 255 / 0.55);
+    border-color: rgb(36 160 255 / 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgb(15 23 42 / 0.05), 0 20px 40px -15px rgb(36 160 255 / 0.2);
+    background: rgb(var(--bg-primary));
   }
 
   .gradient-text {

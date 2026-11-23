@@ -51,9 +51,14 @@ const config: Config = {
         'display-md': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.15', letterSpacing: '-0.025em' }],
       },
       boxShadow: {
-        card: '0 1px 2px rgb(11 13 16 / 0.05), 0 18px 40px -22px rgb(11 13 16 / 0.35)',
-        float: '0 2px 4px rgb(11 13 16 / 0.06), 0 30px 60px -28px rgb(11 13 16 / 0.45)',
-        brand: '0 12px 28px -12px rgb(36 160 255 / 0.9)',
+        // Premium soft shadows for depth
+        card: '0 1px 3px rgb(15 23 42 / 0.05), 0 20px 40px -20px rgb(15 23 42 / 0.08)',
+        float: '0 4px 6px rgb(15 23 42 / 0.07), 0 30px 60px -20px rgb(15 23 42 / 0.12)',
+        brand: '0 8px 24px -8px rgb(36 160 255 / 0.4), 0 20px 40px -15px rgb(36 160 255 / 0.25)',
+        // Subtle inner shadows for depth
+        inner: 'inset 0 2px 4px rgb(15 23 42 / 0.06)',
+        // Elevated element shadow
+        elevated: '0 2px 8px rgb(15 23 42 / 0.04), 0 12px 24px -8px rgb(15 23 42 / 0.08)',
       },
       keyframes: {
         float: {
