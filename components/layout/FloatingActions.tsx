@@ -2,7 +2,7 @@
 /**
  * Floating helpers in the bottom-right corner:
  *  - back-to-top button with a scroll-progress ring
- *  - 3D robot assistant: quick answers, free questions answered from the
+ *  - chat assistant (Cradex eye launcher): quick answers, free questions answered from the
  *    site FAQs and Studio; unknown ones go to the owner (see app/api/chat)
  * Styles: ".fab-*" and ".bot-*" in app/globals.css.
  * @author Paşa Quliyev — Cradex Agency
@@ -13,6 +13,7 @@ import { ArrowUp, Send, X } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { whatsappUrl } from '@/lib/site/navigation'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton'
+import { BotIcon } from './BotIcon'
 
 const TEASER_KEY = 'cradex-bot-teaser'
 const QUICK = ['1', '2', '3', '4'] as const
@@ -44,25 +45,6 @@ function playNotificationSound() {
   } catch (error) {
     console.log('Audio notification not available')
   }
-}
-
-function RobotHead({ small }: { small?: boolean }) {
-  return (
-    <span className={cn('rb', small && 'rb-sm')} aria-hidden="true">
-      <span className="rb-antenna" />
-      <span className="rb-ear rb-ear-l" />
-      <span className="rb-ear rb-ear-r" />
-      <span className="rb-helmet">
-        <span className="rb-visor">
-          <span className="rb-eyes">
-            <i />
-            <i />
-          </span>
-          <span className="rb-mouth" />
-        </span>
-      </span>
-    </span>
-  )
 }
 
 function BackToTop({ label }: { label: string }) {
@@ -287,7 +269,7 @@ export function FloatingActions() {
         className={cn('bot-panel', open ? 'bot-panel-in' : 'bot-panel-out')}
       >
         <div className="flex items-center gap-3 border-b border-line bg-ink px-5 py-4 text-snow">
-          <RobotHead small />
+          <span className="bi-head"><BotIcon size={24} /></span>
           <span className="min-w-0 flex-1">
             <span className="block font-bold">{t('name')}</span>
             <span className="flex items-center gap-1.5 text-xs text-[#9AA4B2]">
@@ -402,7 +384,7 @@ export function FloatingActions() {
       <button type="button" onClick={toggle} aria-label={open ? t('close') : t('open')} aria-expanded={open} className="bot-launcher">
         <span className="bot-ring" aria-hidden="true" />
         {!open && <span className="bot-wave" aria-hidden="true" />}
-        <span className="bot-core">{open ? <X size={24} className="text-snow" aria-hidden="true" /> : <RobotHead />}</span>
+        <span className="bot-core">{open ? <X size={24} className="text-snow" aria-hidden="true" /> : <BotIcon />}</span>
         {!open && (teaser || unread) && <span className="bot-badge">1</span>}
       </button>
     </div>
