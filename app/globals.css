@@ -357,6 +357,68 @@
   animation-play-state: paused;
 }
 
+/* ─── Home partner floor (components/sections/LogoMarquee.tsx) ─────────── */
+.fl-stage {
+  position: relative;
+  height: 300px;
+  margin-top: 8px;
+  perspective: 700px;
+  perspective-origin: 50% 0%;
+  overflow: hidden;
+  /* far rows melt into the page, the near edge fades out too */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 30%, #000 78%, transparent 100%);
+}
+@media (min-width: 768px) { .fl-stage { height: 420px; perspective: 900px; } }
+.fl-horizon {
+  position: absolute; left: 50%; top: 18%;
+  width: 70%; height: 160px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgb(36 160 255 / 0.22), transparent);
+  pointer-events: none;
+}
+.fl-plane {
+  position: absolute;
+  left: 50%; top: 0;
+  width: min(1100px, 118%);
+  height: 1400px;
+  transform: translateX(-50%) rotateX(58deg);
+  transform-origin: 50% 0%;
+}
+.fl-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding-bottom: 14px;
+  animation: fl-roll linear infinite;
+}
+@media (min-width: 768px) { .fl-track { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; padding-bottom: 18px; } }
+/* half the track is one full copy, so the jump back is invisible */
+@keyframes fl-roll { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+
+.fl-tile {
+  display: flex; align-items: center; justify-content: center;
+  height: 84px; padding: 0 14px;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.9);
+  box-shadow: inset 0 0 0 1px rgb(11 13 16 / 0.06), 0 14px 24px -16px rgb(10 116 204 / 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+@media (min-width: 768px) { .fl-tile { height: 104px; padding: 0 20px; } }
+.fl-tile:hover { transform: translateZ(14px); box-shadow: inset 0 0 0 1px rgb(36 160 255 / 0.5), 0 24px 34px -16px rgb(36 160 255 / 0.55); }
+.fl-tile img { height: calc(2rem * min(var(--cl-s, 1), 1.45)); width: auto; max-width: 100%; object-fit: contain; }
+@media (min-width: 768px) { .fl-tile img { height: calc(2.5rem * min(var(--cl-s, 1), 1.45)); } }
+
+/* dark: the tiles stay light, since the logos are drawn for light pages;
+   a shade softer than white so they do not glare on the ink background */
+.dark .fl-tile {
+  background: #EEF2F7;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.6), 0 18px 30px -18px rgb(36 160 255 / 0.45);
+}
+.dark .fl-tile:hover { background: #FFFFFF; box-shadow: inset 0 0 0 1px rgb(36 160 255 / 0.6), 0 24px 40px -16px rgb(36 160 255 / 0.6); }
+.dark .fl-horizon { background: radial-gradient(closest-side, rgb(36 160 255 / 0.3), transparent); }
+
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none !important;
