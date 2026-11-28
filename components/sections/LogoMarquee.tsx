@@ -15,8 +15,11 @@ const ROW_UNIT = 12
 
 export function LogoMarquee({ partners }: { partners: PartnerLogo[] }) {
   const t = useTranslations('home.partners')
+  // filler tiles come from the middle of the list: taking them from the start
+  // put the same row twice in a row where one copy meets the next
   const padded = [...partners]
-  for (let i = 0; padded.length % ROW_UNIT !== 0; i++) padded.push(partners[i % partners.length])
+  const mid = Math.floor(partners.length / 2)
+  for (let i = 0; padded.length % ROW_UNIT !== 0; i++) padded.push(partners[(mid + i) % partners.length])
   const duration = `${Math.max(30, (padded.length / 6) * 5)}s`
 
   return (
